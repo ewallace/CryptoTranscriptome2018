@@ -1,0 +1,1967 @@
+---
+title: "Start codon context for Cryptococcus neoformans"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 4 July 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This presents the renewed analysis of Cryptococcus neoformans start codon usage and context. This uses the best-transcript annotation and corresponding start codon position and sequence map made by Corinne Maufrais in June 2018.
+
+It covers both JEC21 and H99 data. First several analyses on JEC21, then the same analyses on H99, then a joint analysis of signals conserved across both strains.
+
+We check consensus sequences for both "narrow" (NNNNNATG) and "wide" (NNNNNNNNNATGNNN) neighbourhoods of the start codon, and find essentially the same results with both, comparing annotated aATGs to downstream dATGs. Then for the following analyses we use the narrow score.
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CryptoATGContext-",
+                      cache.path="cache/CryptoATGContext-")
+library(tidyverse)
+library(cowplot)
+library(ggrepel)
+library(ggseqlogo)
+library(Biostrings)
+
+theme_set(theme_cowplot(font_size=12) + 
+              theme(strip.background = element_blank()) )
+
+
+
+geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
+    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
+}
+
+scientific_10 <- function(x) {
+    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
+    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
+    xout <- gsub("{+", "{", xout,fixed=TRUE)
+    xout <- gsub("{0", "{", xout,fixed=TRUE)
+    xout <- paste(xout,"}",sep="")
+    return(parse(text=xout))
+}
+
+scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
+    breaks10 <- 10^omag
+    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
+}
+
+scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
+    breaks10 <- 10^omag
+    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
+}
+
+scale_loglog <- function(...) {
+    list(scale_x_log10nice(...),scale_y_log10nice(...))
+}
+
+round3 <- function(x) round(x,digits=3)
+
+logmean <- function(x) {
+    lx <- log(x)
+    exp( mean( lx[is.finite(lx)] ) )
+}
+setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+```
+
+
+# JEC21 first
+
+## Expression: RNA abundance and ribosome-protected-fragments
+
+### Load expression data
+
+```{r load_riboviz_JEC21,results="show"}
+ribotbl_JEC21 <- read_tsv("data_in/JEC21_RiboViz_ATG_table_tidy.txt") %>%
+    dplyr::rename(Gene=Gene_name) %>%
+    group_by(Type,Sample) %>%
+    mutate(TPM.ORF = ORFct / ORFlen / sum(ORFct/ORFlen,na.rm=TRUE) * 1000000 ) 
+# ribotbl_JEC21 %>% summarize(TPM.tot = sum(TPM.ORF,na.rm=TRUE))
+
+# ribogen_JEC21 <- 
+#     ribotbl_JEC21 %>% 
+#     select(Gene,Type,Sample, TPM=TPM.ORF) %>%
+#     ungroup() %>%
+#     unite(ST,Sample,Type) %>%
+#     spread(ST,TPM) 
+
+ribosum_JEC21 <-
+    ribotbl_JEC21 %>%
+    select(Gene,Type,Sample, TPM=TPM.ORF) %>%
+    group_by(Gene,Type) %>%
+    summarize(TPM=mean(TPM)) %>%
+    spread(Type,TPM) %>%
+    mutate(TE=RPF/RNA)
+
+cat(
+    "# ribosum_JEC21.txt
+# Summary of ribosome profiling data, C. neoformans serotype D JEC21
+# Mean of 2 quasi-replicates (WT JEC21 and AGO1 deletion mutant)
+# Reads were aligned with hisat2 to transcriptome
+# Then quantified only for 5' ends mapping to annotated ORFs.
+# Note this excludes UTRs and excludes initiating ribosomes.
+#
+# Gene: JEC21 systematic gene name
+# RNA: RNA abundance in mean TPM
+# RPF: Ribosome occupancy, Ribosome protected fragments in mean TPM
+# TE: Translation Efficiency, RPF / RNA
+#
+# Edward Wallace, June 2018
+",
+file="data_out/ribosum_JEC21.txt")
+ribosum_JEC21 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/ribosum_JEC21.txt",
+              append = TRUE,col_names=TRUE)
+
+ribosum_JEC21 %>%
+    arrange(desc(RPF)) 
+
+hiTrans_JEC21 <- ribosum_JEC21 %>%
+    arrange(desc(RPF)) %>%
+    head(n=330) %>%
+    .$Gene
+
+enoughRNA_JEC21 <- ribosum_JEC21 %>%
+    arrange(desc(RNA)) %>%
+    head(n=3315) %>%
+    .$Gene
+```
+
+We also calculated hiTrans_JEC21, the top 5% (330) translated genes by RPF TPM.
+
+### Ribosome occupancy mostly tracks RNA abundance
+
+```{r plot_TE_JEC21,dependson="load_riboviz_JEC21",fig.height=3.9,fig.width=4.1}
+TE_unusual_JEC21 <- 
+    ribosum_JEC21 %>%
+    filter( (RPF > 1e4) |
+                (RPF > 100 & RPF > RNA * 10 ) | 
+                (RNA > 150 & RPF < RNA / 10 )) %>%
+    mutate(Geneshort = str_sub(Gene,start=3L,end=8L))
+
+
+ggplot(data=ribosum_JEC21,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    geom_point(data=TE_unusual_JEC21,aes(colour=Geneshort),size=1) + 
+    geom_text_repel(data=TE_unusual_JEC21,aes(label=Geneshort,colour=Geneshort)) +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of aORF)",
+         y="Ribosome occupancy (TPM of aORF)") +
+    theme(legend.position="none")
+```
+
+## ATG Context
+
+### Load context data
+
+```{r load_context_JEC21,results="show"}
+ctbl_big_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    select_at(1:19)
+ctbl_big_JEC21
+```
+
+### Annotated ATGs have a Kozak consensus sequence
+
+```{r aATG_context_JEC21,fig.width=4,fig.height=1}
+ggseqlogo(data=ctbl_big_JEC21$aATG.context,namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Highly translated Annotated ATGs have a Kozak consensus sequence
+
+That's for hiTrans_JEC21, the top 5% (330) translated genes by RPF TPM.
+
+```{r a_hi_context_JEC21,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+
+### Upstream ATGs don't have a consensus
+
+First upstream ATG.
+
+```{r u1_context_JEC21,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_JEC21,nchar(u1.context) ==24)$u1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Downstream ATGs don't have a consensus
+
+First downstream ATG
+
+```{r d1_context_JEC21,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_JEC21,nchar(d1.context) ==24)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Downstream ATGs in frame and highly translated don't have a consensus
+
+Except for 3rd-codon-position bias.
+
+```{r d1_hi_frame0_context_JEC21,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_JEC21,
+                      nchar(d1.context) == 24,
+                      d1.frame==0,
+                      Gene %in% hiTrans_JEC21)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+## Calculate Information content and scores of consensus motif
+
+### Calculate a wide and a narrow consensus sequence
+
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+
+```{r kozak_consensus_JEC21,fig.width=4,fig.height=1}
+kozak_w_PFM_JEC21 <- filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21) %>%
+    .$aATG.context %>%
+    str_sub(start=4L,end=18L) %>%
+    consensusMatrix() 
+
+kozak_w_PWM_JEC21 <- PWM(kozak_w_PFM_JEC21)
+kozak_n_PWM_JEC21 <- kozak_w_PFM_JEC21[,5:12] %>% PWM()
+```
+
+
+```{r write_PFM_JEC21, dependson="calc_scores_JEC21",results="show"}
+cat(
+    "# PFM_hiTrans_JEC21.txt
+# Position Frequency Matrix for aATGs of 330 highest-translated genes from JEC21
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+",
+file="data_out/PFM_hiTrans_JEC21.txt")
+kozak_w_PFM_JEC21 %>%
+    as.tibble() %>%
+    write_tsv("data_out/PFM_hiTrans_JEC21.txt",
+              append = TRUE,col_names=FALSE)
+```
+
+### Estimate the information content 
+
+Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
+
+```{r kozak_inf_JEC21,fig.width=4,fig.height=1}
+entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
+    counts <- counts + pseudocount
+    ntot = sum(counts)
+    freqs = counts / sum(counts)
+    Hentropy = - sum( freqs * log2(freqs) ) 
+    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
+    information = log2(ssize) - Hentropy
+    return(information)
+}
+
+entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
+    apply(pfm,2,entropy1) %>% sum()
+}
+
+entropytot(kozak_w_PFM_JEC21)
+# entropytot(kozak_w_PFM_JEC21[,5:12])
+entropytot(kozak_w_PFM_JEC21[,-(10:12)])
+entropytot(kozak_w_PFM_JEC21[,5:9])
+```
+
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_JEC21[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
+
+### Calculate scores of aATG, dATG, uATG against Kozak consensus
+
+```{r calc_scores_JEC21, dependson="kozak_consensus_JEC21"}
+
+PWMscore <- function(seqs,pwm,startl) {
+    # calculate scores for a character vector seqs against
+    # pwm from given starting position
+    # after checking strings are non-missing and start with ACTG
+    vapply(str_sub(seqs,start=startl),
+           function(ss) {
+               if ( is.na(ss) ) {
+                   return(NA)
+               } else if ( str_detect(ss,"\\A[ACTG]") ) {
+                   return( PWMscoreStartingAt(pwm,ss) )
+               } else {
+                   return(NA) 
+               } 
+           } ,
+           FUN.VALUE = 0)
+}
+
+PWMscoren <- function(seqs,pwm=kozak_n_PWM_JEC21,startl=8) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+PWMscorew <- function(seqs,pwm=kozak_w_PWM_JEC21,startl=4) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+scores_JEC21 <- 
+    ctbl_big_JEC21 %>%
+    transmute(Gene,
+              aATG.scorekn = PWMscoren(aATG.context),
+              d1.scorekn   = PWMscoren(d1.context),
+              u1.scorekn   = PWMscoren(u1.context),
+              aATG.scorekw = PWMscorew(aATG.context),
+              d1.scorekw   = PWMscorew(d1.context),
+              u1.scorekw   = PWMscorew(u1.context)
+    ) %>%
+    mutate(d1vsan = d1.scorekn - aATG.scorekn,
+           u1vsan = u1.scorekn - aATG.scorekn,
+           d1vsaw = d1.scorekw - aATG.scorekw,
+           u1vsaw = u1.scorekw - aATG.scorekw) 
+
+ribotbl_scoresenough_JEC21 <-
+    ribosum_JEC21 %>%
+    filter(Gene %in% enoughRNA_JEC21) %>%
+    left_join(ribotbl_JEC21,by="Gene") %>% 
+    left_join(scores_JEC21,by="Gene")
+
+```
+
+We calculate scores using Biostrings::PWMscoreStartingAt.
+
+The best description I could find of this method is: https://support.bioconductor.org/p/61520/
+
+It is just the sum of the matrix product of the PWM with the sequence.
+
+
+Write scores to file *scores_kozak_JEC21.txt*.
+
+```{r write_scores_JEC21, dependson="calc_scores_JEC21",results="show"}
+scores_JEC21
+cat(
+    "# scores_kozak_JEC21.txt
+# Scores of ATG context against Kozak sequence, C. neoformans serotype D JEC21
+# Kozak sequence derived from 330 highest-translated genes by RPF
+#
+# Gene: JEC21 systematic gene name
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# d1.scorekn: score of 1st downstream ATG agains narrow
+# u1.scorekn: score of 1st upstream ATG in 5' UTR against narrow
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+#
+# Edward Wallace, June 2018
+",
+file="data_out/scores_kozak_JEC21.txt")
+scores_JEC21 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/scores_kozak_JEC21.txt",
+              append = TRUE,col_names=TRUE)
+```
+
+### Plot against narrow consensus (-5 to ATG)
+
+```{r plot_scores_n_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=u1.scorekn,colour="uATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+                 aes(x=aATG.scorekn,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Plot against wide consensus (-9 to +3 from ATG)
+
+```{r plot_scores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
+
+sbandwidthw = 0.025
+
+ggplot(data=scores_JEC21) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthw) +
+    geom_density(aes(x=d1.scorekw,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthw) +
+    geom_density(aes(x=u1.scorekw,colour="uATG"),
+                 kernel="rectangular",bw=sbandwidthw)  +
+    geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthw) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak score (wide), JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+## Compare aATG and dATG context by gene
+
+### Most dATG scores are less than aATG scores
+
+```{r dvsaATG_scoresdens_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=1.8}
+
+ggplot(data=scores_JEC21) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(aes(x=d1vsan,colour="narrow"),kernel="rectangular") +
+    geom_density(aes(x=d1vsaw,colour="wide"),kernel="rectangular")  +
+    labs(x="difference in score, dATG vs aATG",
+         colour="context") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.position=c(0.8,0.8))
+```
+
+### Most u1ATG scores are less than aATG scores
+
+```{r uvsaATG_scoresdens_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=1.8}
+
+ggplot(data=scores_JEC21) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(aes(x=u1vsan,colour="narrow"),kernel="rectangular") +
+    geom_density(aes(x=u1vsaw,colour="wide"),kernel="rectangular")  +
+    labs(x="difference in score, uATG vs aATG",
+         colour="context") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.position=c(0.8,0.8))
+```
+
+### For highly translated genes, most dATG scores are much less than aATG
+
+```{r dvsaATG_scoresn_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+highdiffn_dvsaATG_JEC21 <- scores_JEC21 %>%
+    arrange(desc(d1vsan)) %>%
+    head(n=330) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffn_dvsaATG_JEC21,
+               colour="red",size=1) +
+    geom_point(data=scores_JEC21 %>% 
+                   filter(Gene %in% hiTrans_JEC21),
+               colour="blue",size=1) +
+    geom_point(data=highdiffn_dvsaATG_JEC21 %>% 
+                   filter(Gene %in% hiTrans_JEC21),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+Red: high dATG vs aATG **Kozak** score.
+Blue: highly translated.
+Purple: both.
+
+```{r dvsaATG_scoresw_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+highdiffw_dvsaATG_JEC21 <- scores_JEC21 %>%
+    arrange(desc(d1vsaw)) %>%
+    head(n=330) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffw_dvsaATG_JEC21,
+               colour="red",size=1) +
+    geom_point(data=scores_JEC21 %>% 
+                   filter(Gene %in% hiTrans_JEC21),
+               colour="blue",size=1) +
+    geom_point(data=highdiffw_dvsaATG_JEC21 %>% 
+                   filter(Gene %in% hiTrans_JEC21),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
+
+## Genes with unusual dATG vs aATG narrow score
+
+Those genes are in this list:
+
+```{r highdiffn_dvsaATG_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
+highdiffn_dvsaATG_JEC21
+```
+
+### dATG vs aATG ribosome occupancy depends on the context
+
+For top 3315 / 50% of genes by mean RNA TPM.
+
+```{r dATG_aATG_occ_JEC21, dependson="calc_scores_JEC21", fig.width=4.5,fig.height=4}
+
+ggplot(data=ribotbl_scoresenough_JEC21 %>%
+           mutate(Type=factor(Type,
+                              levels=c("RPF","RNA"),
+                              labels=c("Ribosome","RNA")
+                              )),
+       aes(x=d1vsan,y=Nxct.wide / Inct.wide)) +
+    geom_point(size=0.5,colour="grey50") +
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,100),
+                  oob=scales::squish) + 
+    labs(x="Kozak score, difference dATG - aATG",
+         y="Ribosome occupancy, ratio dATG / aATG") +
+    facet_grid(Type ~ Sample) +
+    panel_border()
+    
+```
+
+### dATG vs aATG ribosome occupancy depends on the context, geometric mean across reps
+
+```{r dATG_aATG_occ_summ_JEC21, dependson="calc_scores_JEC21", fig.width=3,fig.height=4.4}
+
+ggplot(data=ribotbl_scoresenough_JEC21 %>%
+           group_by(Gene,Type) %>%
+           summarize(d1vsaScore = median(d1vsan),
+                     d1vsaRibo = logmean(Nxct.wide / Inct.wide)) %>%
+           mutate(Type=factor(Type,
+                              levels=c("RPF","RNA"),
+                              labels=c("Ribosome","RNA")
+                              )),
+       aes(x=d1vsaScore,y=d1vsaRibo)) +
+    geom_point(size=0.5,colour="grey50") +
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,50),
+                  oob=scales::squish) + 
+    labs(x="Kozak score,\ndifference dATG - aATG",
+         y="Ribosome occupancy, ratio dATG / aATG") +
+    facet_grid(Type ~ .) +
+    panel_border()
+    
+```
+
+### There is slight enrichment in high-score dATGs in frame near the aATG
+
+```{r dATG_frame_JEC21, dependson="calc_scores_JEC21", fig.width=4,fig.height=3}
+ctbl_bigger_JEC21 <-
+    ctbl_big_JEC21 %>% left_join(scores_JEC21,by="Gene")
+ggplot(data=ctbl_bigger_JEC21 %>%
+           mutate(d1.cutpos=cut(-d1.posATG,breaks=c(0,30,90,600)) ),
+       aes(x=d1.cutpos,
+           colour=factor(d1.frame),y=d1.scorekn)) +
+    geom_violin(aes(group=interaction(d1.cutpos,d1.frame))) +
+    scale_x_discrete("first dATG position in aORF",na.translate = FALSE) +
+    labs(colour="frame",y="dATG narrow score")
+```
+
+## Compare score difference to localization predictions
+
+### Load predictions from mitofates
+
+In input file *JEC21_mitofates_26June2018.txt*.
+
+```{r load_mitofates_JEC21}
+mitofates_JEC21 <- read_tsv("data_in/JEC21_mitofates_26June2018.txt",
+                            comment="#")
+mitocounts_JEC21 <- 
+    mitofates_JEC21 %>% 
+    group_by(Pred_preseq) %>% 
+    count() 
+mitobreaks_JEC21 <- mitocounts_JEC21 %>%
+    mutate(label=paste0(Pred_preseq," (n = ",n,")")) %>%
+    .$label %>%
+    set_names(mitocounts_JEC21$Pred_preseq)
+
+mitopredlist_JEC21 <- mitofates_JEC21 %>%
+    filter(Pred_preseq =="Yes") %>%
+    .$Gene
+```
+
+```{r dvsaATG_scoresn_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=3.5,fig.height=3.5,eval=FALSE}
+# repeat plot coloured by mitochondrial localization; didn't work.
+
+ggplot(data=scores_JEC21 %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           left_join( mitofates_JEC21 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) %>%
+           arrange(Pred_preseq),
+       aes(x=aATG.scorekn,y=d1.scorekn,colour=Pred_preseq,shape=Pred_preseq)) +
+    geom_diagline() +
+    # geom_point(size=0.8) +
+    geom_density_2d() +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_JEC21) + 
+    scale_shape_manual(values=c("Yes"=19,"No"=20)) + 
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow") +
+    theme(legend.position="none")
+```
+
+### Genes with high dATG vs aATG score are enriched in mitochondrial presequences
+
+```{r dvsaATG_scoresdiffn_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+
+ggplot(data=scores_JEC21 %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           left_join( mitofates_JEC21 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(kernel="rectangular",bw=0.025) +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_JEC21)  + 
+    labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### However, mito-localized genes do not have a distinctive aATG context
+
+It's just a subset: the dual-localized ones.
+
+```{r aATG_motif_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=4,fig.height=1}
+
+ggseqlogo(data=ctbl_big_JEC21 %>%
+              filter(Gene %in% mitopredlist_JEC21) %>%
+              .$aATG.context,
+          namespace="TCAG")  + 
+    theme_nothing()
+
+```
+
+
+## uATGs inhibit translation of the main ORF
+
+### uATGs are associated with lower absolute translation
+
+```{r uATG_RPF_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::select(c("Gene",paste0("u",1:56,".posATG"))) %>%
+    gather(key="uATG",value="posaATG",-Gene) %>%
+    group_by(Gene) %>%
+    summarize(uATGCt = sum(!is.na(posaATG))) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=4, "4+") %>%
+               factor(levels=c(0:3,"4+")) )
+
+ribo_uct_JEC21 <- 
+    ribosum_JEC21 %>%
+    filter(Gene %in% enoughRNA_JEC21) %>%
+    left_join(uATG_ct_JEC21)
+
+ggplot(data=ribo_uct_JEC21,
+       aes(x=uATGCtC,y=RPF)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("Ribosome occupancy (TPM of aORF)",
+                      limits=c(1,10000),
+                      oob=scales::squish) +
+    labs(x="number of uATGs")
+```
+
+### uATGs are associated with lower translation efficiency
+
+```{r uATG_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=3.5,fig.height=3.5}
+
+ggplot(data=ribo_uct_JEC21,
+       aes(x=uATGCtC,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),
+                      oob=scales::squish) +
+    labs(x="number of uATGs")
+```
+
+### uATG vs aATG ribosome occupancy depends on the context
+
+For top 3315 / 50% of genes by mean RNA TPM.
+
+```{r uATG_aATG_occ_JEC21, dependson="calc_scores_JEC21", fig.width=4.5,fig.height=4}
+ggplot(data=ribotbl_scoresenough_JEC21 %>%
+           mutate(Type=factor(Type,levels=c("RPF","RNA"))),
+       aes(x=u1vsan,y=Upct.wide / Inct.wide)) +
+    geom_point(size=0.5,colour="grey50") +
+    stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,100),
+                  oob=scales::squish) + 
+    facet_grid(Type ~ Sample) +
+    labs(x="Kozak score, difference uATG - aATG",
+         y="Ribosome occupancy, ratio uATG / aATG") +
+    panel_border()
+```
+
+
+<a href="#top">Back to table of contents</a>
+
+# H99 second
+
+## Expression: RNA abundance and ribosome-protected-fragments
+
+### Load expression data
+
+```{r load_riboviz_H99,results="show"}
+ribotbl_H99 <- read_tsv("data_in/H99_RiboViz_ATG_table_tidy.txt") %>%
+    dplyr::rename(Gene=Gene_name) %>%
+    group_by(Type,Sample) %>%
+    mutate(TPM.ORF = ORFct / ORFlen / sum(ORFct/ORFlen,na.rm=TRUE) * 1000000 ) 
+# ribotbl_H99 %>% summarize(TPM.tot = sum(TPM.ORF,na.rm=TRUE))
+
+# ribogen_H99 <- 
+#     ribotbl_H99 %>% 
+#     select(Gene,Type,Sample, TPM=TPM.ORF) %>%
+#     ungroup() %>%
+#     unite(ST,Sample,Type) %>%
+#     spread(ST,TPM) 
+
+ribosum_H99 <-
+    ribotbl_H99 %>%
+    select(Gene,Type,Sample, TPM=TPM.ORF) %>%
+    group_by(Gene,Type) %>%
+    summarize(TPM=mean(TPM)) %>%
+    spread(Type,TPM) %>%
+    mutate(TE=RPF/RNA)
+
+
+cat(
+    "# ribosum_H99.txt
+# Summary of ribosome profiling data, C. neoformans serotype A H99
+# Mean of 4 quasi-replicates (2x WT H99 and 1x AGO1 deletion, 1x GWO1 deletion)
+# Reads were aligned with hisat2 to transcriptome
+# Then quantified only for 5' ends mapping to annotated ORFs.
+# Note this excludes UTRs and excludes initiating ribosomes.
+#
+# Gene: H99 systematic gene name
+# RNA: RNA abundance in mean TPM
+# RPF: Ribosome occupancy, Ribosome protected fragments in mean TPM
+# TE: Translation Efficiency, RPF / RNA
+#
+# Edward Wallace, June 2018
+",
+file="data_out/ribosum_H99.txt")
+ribosum_H99 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/ribosum_H99.txt",
+              append = TRUE,col_names=TRUE)
+
+ribosum_H99 %>%
+    arrange(desc(RPF)) 
+
+hiTrans_H99 <- ribosum_H99 %>%
+    arrange(desc(RPF)) %>%
+    head(n=330) %>%
+    .$Gene
+
+enoughRNA_H99 <- ribosum_H99 %>%
+    arrange(desc(RNA)) %>%
+    head(n=3315) %>%
+    .$Gene
+```
+
+We also calculated hiTrans_H99, the top 5% (330) translated genes by RPF TPM.
+
+### Ribosome occupancy mostly tracks RNA abundance
+
+```{r plot_TE_H99,dependson="load_riboviz_H99",fig.height=3.9,fig.width=4.1}
+TE_unusual_H99 <- 
+    ribosum_H99 %>%
+    filter( (RPF > 1e4) |
+                (RPF > 100 & RPF > RNA * 10 ) | 
+                (RNA > 100 & RPF < RNA / 5 )) %>%
+    mutate(Geneshort = str_sub(Gene,start=6L,end=10L))
+
+
+ggplot(data=ribosum_H99,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    geom_point(data=TE_unusual_H99,aes(colour=Geneshort),size=1) + 
+    geom_text_repel(data=TE_unusual_H99,aes(label=Geneshort,colour=Geneshort)) +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of aORF)",
+         y="Ribosome occupancy (TPM of aORF)") +
+    theme(legend.position="none")
+```
+
+## ATG Context
+
+### Load context data
+
+```{r load_context_H99,results="show"}
+ctbl_big_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    select_at(1:19)
+ctbl_big_H99
+```
+
+### Annotated ATGs have a Kozak consensus sequence
+
+```{r aATG_context_H99,fig.width=4,fig.height=1}
+ggseqlogo(data=ctbl_big_H99$aATG.context,namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Highly translated Annotated ATGs have a Kozak consensus sequence
+
+That's for hiTrans_H99, the top 5% (330) translated genes by RPF TPM.
+
+```{r a_hi_context_H99,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+
+### Upstream ATGs don't have a consensus
+
+First upstream ATG.
+
+```{r u1_context_H99,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_H99,nchar(u1.context) ==24)$u1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Downstream ATGs don't have a consensus
+
+First downstream ATG
+
+```{r d1_context_H99,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_H99,nchar(d1.context) ==24)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Downstream ATGs in frame and highly translated don't have a consensus
+
+Except for 3rd-codon-position bias.
+
+```{r d1_hi_frame0_context_H99,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_H99,
+                      nchar(d1.context) == 24,
+                      d1.frame==0,
+                      Gene %in% hiTrans_H99)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+## Calculate Information content and scores of consensus motif
+
+### Calculate a wide and a narrow consensus sequence
+
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+
+```{r kozak_consensus_H99,fig.width=4,fig.height=1}
+kozak_w_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
+    .$aATG.context %>%
+    str_sub(start=4L,end=18L) %>%
+    consensusMatrix() 
+
+kozak_w_PWM_H99 <- PWM(kozak_w_PFM_H99)
+kozak_n_PWM_H99 <- kozak_w_PFM_H99[,5:12] %>% PWM()
+```
+
+
+```{r write_PFM_H99, dependson="calc_scores_H99",results="show"}
+cat(
+    "# PFM_hiTrans_H99.txt
+# Position Frequency Matrix for aATGs of 330 highest-translated genes from H99
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+",
+file="data_out/PFM_hiTrans_H99.txt")
+kozak_w_PFM_H99 %>%
+    as.tibble() %>%
+    write_tsv("data_out/PFM_hiTrans_H99.txt",
+              append = TRUE,col_names=FALSE)
+```
+
+### Estimate the information content 
+
+Using the sequence logo details on https://en.wikipedia.org/wiki/Sequence_logo
+
+```{r kozak_inf_H99,fig.width=4,fig.height=1}
+entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
+    counts <- counts + pseudocount
+    ntot = sum(counts)
+    freqs = counts / sum(counts)
+    Hentropy = - sum( freqs * log2(freqs) ) 
+    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
+    information = log2(ssize) - Hentropy
+    return(information)
+}
+
+entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
+    apply(pfm,2,entropy1) %>% sum()
+}
+
+entropytot(kozak_w_PFM_H99)
+# entropytot(kozak_w_PFM_H99[,5:12])
+entropytot(kozak_w_PFM_H99[,-(10:12)])
+entropytot(kozak_w_PFM_H99[,5:9])
+```
+
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_H99[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
+
+### Calculate scores of aATG, dATG, uATG against Kozak consensus
+
+```{r calc_scores_H99, dependson="kozak_consensus_H99"}
+
+PWMscore <- function(seqs,pwm,startl) {
+    # calculate scores for a character vector seqs against
+    # pwm from given starting position
+    # after checking strings are non-missing and start with ACTG
+    vapply(str_sub(seqs,start=startl),
+           function(ss) {
+               if ( is.na(ss) ) {
+                   return(NA)
+               } else if ( str_detect(ss,"\\A[ACTG]") ) {
+                   return( PWMscoreStartingAt(pwm,ss) )
+               } else {
+                   return(NA) 
+               } 
+           } ,
+           FUN.VALUE = 0)
+}
+
+PWMscoren <- function(seqs,pwm=kozak_n_PWM_H99,startl=8) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+PWMscorew <- function(seqs,pwm=kozak_w_PWM_H99,startl=4) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+scores_H99 <- 
+    ctbl_big_H99 %>%
+    transmute(Gene,
+              aATG.scorekn = PWMscoren(aATG.context),
+              d1.scorekn   = PWMscoren(d1.context),
+              u1.scorekn   = PWMscoren(u1.context),
+              aATG.scorekw = PWMscorew(aATG.context),
+              d1.scorekw   = PWMscorew(d1.context),
+              u1.scorekw   = PWMscorew(u1.context)
+    ) %>%
+    mutate(d1vsan = d1.scorekn - aATG.scorekn,
+           u1vsan = u1.scorekn - aATG.scorekn,
+           d1vsaw = d1.scorekw - aATG.scorekw,
+           u1vsaw = u1.scorekw - aATG.scorekw) 
+
+ribotbl_scoresenough_H99 <-
+    ribosum_H99 %>%
+    filter(Gene %in% enoughRNA_H99) %>%
+    left_join(ribotbl_H99,by="Gene") %>% 
+    left_join(scores_H99,by="Gene")
+
+```
+
+Write scores to file *scores_kozak_H99.txt*.
+
+```{r write_scores_H99, dependson="calc_scores_H99",results="show"}
+scores_H99
+cat(
+    "# scores_kozak_H99.txt
+# Scores of ATG context against Kozak sequence, C. neoformans serotype A H99
+# Kozak sequence derived from 330 highest-translated genes by RPF
+#
+# Gene: H99 systematic gene name
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# d1.scorekn: score of 1st downstream ATG agains narrow
+# u1.scorekn: score of 1st upstream ATG in 5' UTR against narrow
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+#
+# Edward Wallace, June 2018
+",
+file="data_out/scores_kozak_H99.txt")
+scores_H99 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/scores_kozak_H99.txt",
+              append = TRUE,col_names=TRUE)
+```
+
+### Plot against narrow consensus (-5 to ATG)
+
+```{r plot_scores_n_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_H99) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=u1.scorekn,colour="uATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores_H99,Gene %in% hiTrans_H99),
+                 aes(x=aATG.scorekn,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak score, H99") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Plot against wide consensus (-9 to +3 from ATG)
+
+```{r plot_scores_w_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
+
+sbandwidthw = 0.025
+
+ggplot(data=scores_H99) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthw) +
+    geom_density(aes(x=d1.scorekw,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthw) +
+    geom_density(aes(x=u1.scorekw,colour="uATG"),
+                 kernel="rectangular",bw=sbandwidthw)  +
+    geom_density(data=filter(scores_H99,Gene %in% hiTrans_H99),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthw) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak score (wide), H99") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+## Compare aATG and dATG context by gene
+
+### Most dATG scores are less than aATG scores
+
+```{r dvsaATG_scoresdens_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=1.8}
+
+ggplot(data=scores_H99) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(aes(x=d1vsan,colour="narrow"),kernel="rectangular") +
+    geom_density(aes(x=d1vsaw,colour="wide"),kernel="rectangular")  +
+    labs(x="Kozak score, difference dATG - aATG",
+         colour="context") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.position=c(0.8,0.8))
+```
+
+### Most u1ATG scores are less than aATG scores
+
+```{r uvsaATG_scoresdens_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=1.8}
+
+ggplot(data=scores_H99) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(aes(x=u1vsan,colour="narrow"),kernel="rectangular") +
+    geom_density(aes(x=u1vsaw,colour="wide"),kernel="rectangular")  +
+    labs(x="difference in Kozak score, uATG vs aATG",
+         colour="context") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.position=c(0.8,0.8))
+```
+
+### For highly translated genes, most dATG scores are much less than aATG
+
+```{r dvsaATG_scoresn_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
+highdiffn_dvsaATG_H99 <- scores_H99 %>%
+    arrange(desc(d1vsan)) %>%
+    head(n=330) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffn_dvsaATG_H99,
+               colour="red",size=1) +
+    geom_point(data=scores_H99 %>% 
+                   filter(Gene %in% hiTrans_H99),
+               colour="blue",size=1) +
+    geom_point(data=highdiffn_dvsaATG_H99 %>% 
+                   filter(Gene %in% hiTrans_H99),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+
+```{r dvsaATG_scoresw_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
+highdiffw_dvsaATG_H99 <- scores_H99 %>%
+    arrange(desc(d1vsaw)) %>%
+    head(n=330) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffw_dvsaATG_H99,
+               colour="red",size=1) +
+    geom_point(data=scores_H99 %>% 
+                   filter(Gene %in% hiTrans_H99),
+               colour="blue",size=1) +
+    geom_point(data=highdiffw_dvsaATG_H99 %>% 
+                   filter(Gene %in% hiTrans_H99),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
+
+## Genes with unusual dATG / aATG narrow score
+
+Those genes are in this list:
+
+```{r highdiffn_dvsaATG_H99,dependson="dvsaATG_scoresn_H99",results="show"}
+highdiffn_dvsaATG_H99
+```
+
+### dATG vs aATG ribosome occupancy depends on the context
+
+For top 3315 / 50% of genes by mean RNA TPM.
+
+```{r dATG_aATG_occ_H99, dependson="calc_scores_H99", fig.width=4.5,fig.height=4}
+
+ggplot(data=ribotbl_scoresenough_H99 %>%
+           filter(Sample %in% c("H99r1","H99r2")) %>%
+           mutate(Type=factor(Type,
+                              levels=c("RPF","RNA"),
+                              labels=c("Ribosome","RNA")
+                              )),
+       aes(x=d1vsan,y=Nxct.wide / Inct.wide)) +
+    geom_point(size=0.5,colour="grey50") +
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,100),
+                  oob=scales::squish) + 
+    labs(x="Kozak score, difference dATG - aATG",
+         y="Ribosome occupancy, ratio dATG / aATG") +
+    facet_grid(Type ~ Sample) +
+    panel_border()
+    
+```
+
+### dATG vs aATG ribosome occupancy and score, geometric mean across reps
+
+```{r dATG_aATG_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
+
+ggplot(data=ribotbl_scoresenough_H99 %>%
+           group_by(Gene,Type) %>%
+           summarize(d1vsaScore = median(d1vsan),
+                     d1vsaRibo = logmean(Nxct.wide / Inct.wide)) %>%
+           mutate(Type=factor(Type,
+                              levels=c("RPF","RNA"),
+                              labels=c("Ribosome","RNA")
+                              )),
+       aes(x=d1vsaScore,y=d1vsaRibo)) +
+    geom_point(size=0.5,colour="grey50") +
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,50),
+                  oob=scales::squish) + 
+    labs(x="Kozak score,\ndifference dATG - aATG",
+         y="Ribosome occupancy, ratio dATG / aATG") +
+    facet_grid(Type ~ .) +
+    panel_border()
+    
+```
+
+
+## Compare score difference to localization predictions
+
+### Load predictions from mitofates
+
+In input file *H99_mitofates_26June2018.txt*.
+
+```{r load_mitofates_H99}
+mitofates_H99 <- read_tsv("data_in/H99_mitofates_26June2018.txt",
+                            comment="#")
+mitocounts_H99 <- 
+    mitofates_H99 %>% 
+    group_by(Pred_preseq) %>% 
+    count() 
+mitobreaks_H99 <- mitocounts_H99 %>%
+    mutate(label=paste0(Pred_preseq," (n = ",n,")")) %>%
+    .$label %>%
+    set_names(mitocounts_H99$Pred_preseq)
+
+mitopredlist_H99 <- mitofates_H99 %>%
+    filter(Pred_preseq =="Yes") %>%
+    .$Gene
+```
+
+```{r dvsaATG_scoresn_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=3.5,fig.height=3.5,eval=FALSE}
+# repeat plot coloured by mitochondrial localization; didn't work.
+
+ggplot(data=scores_H99 %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           left_join( mitofates_H99 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) %>%
+           arrange(Pred_preseq),
+       aes(x=aATG.scorekn,y=d1.scorekn,colour=Pred_preseq,shape=Pred_preseq)) +
+    geom_diagline() +
+    # geom_point(size=0.8) +
+    geom_density_2d() +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_H99) + 
+    scale_shape_manual(values=c("Yes"=19,"No"=20)) + 
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow") +
+    theme(legend.position="none")
+```
+
+### Genes with high dATG vs aATG score are enriched in mitochondrial presequences
+
+```{r dvsaATG_scoresdiffn_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=5,fig.height=1.8}
+
+ggplot(data=scores_H99 %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           left_join( mitofates_H99 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(kernel="rectangular",bw=0.025) +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_H99)  + 
+    labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### However, mito-localized genes do not have a distinctive aATG context
+
+It's just a subset: the dual-localized ones.
+
+```{r aATG_motif_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=4,fig.height=1}
+
+ggseqlogo(data=ctbl_big_H99 %>%
+              filter(Gene %in% mitopredlist_H99) %>%
+              .$aATG.context,
+          namespace="TCAG")  + 
+    theme_nothing()
+
+```
+
+
+
+
+## uATGs inhibit translation of the main aORF
+
+### uATGs are associated with lower absolute translation
+
+```{r uATG_RPF_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
+uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::select(c("Gene",paste0("u",1:55,".posATG"))) %>%
+    gather(key="uATG",value="posaATG",-Gene) %>%
+    group_by(Gene) %>%
+    summarize(uATGCt = sum(!is.na(posaATG))) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=4, "4+") %>%
+               factor(levels=c(0:3,"4+")) )
+
+ribo_uct_H99 <- 
+    ribosum_H99 %>%
+    filter(Gene %in% enoughRNA_H99) %>%
+    left_join(uATG_ct_H99)
+
+ggplot(data=ribo_uct_H99,
+       aes(x=uATGCtC,y=RPF)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("Ribosome occupancy (TPM of aORF)",
+                      limits=c(1,10000),
+                      oob=scales::squish) +
+    labs(x="number of uATGs")
+```
+
+### uATGs are associated with lower translation efficiency
+
+```{r uATG_TE_H99, dependson="uATG_RPF_H99", fig.width=3.5,fig.height=3.5}
+
+ggplot(data=ribo_uct_H99,
+       aes(x=uATGCtC,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),
+                      oob=scales::squish) +
+    labs(x="number of uATGs")
+```
+
+### uATG vs aATG ribosome occupancy depends on the context
+
+For top 3315 / 50% of genes by mean RNA TPM.
+
+```{r uATG_aATG_occ_H99, dependson="calc_scores_H99", fig.width=4.5,fig.height=4}
+ggplot(data=ribotbl_scoresenough_H99 %>%
+           filter(Sample %in% c("H99r1","H99r2")) %>%
+           mutate(Type=factor(Type,levels=c("RPF","RNA"))),
+       aes(x=u1vsan,y=Upct.wide / Inct.wide)) +
+    geom_point(size=0.5,colour="grey50") +
+    stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",
+                span=1) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,100),
+                  oob=scales::squish) + 
+    facet_grid(Type ~ Sample) +
+    labs(x="Kozak score, difference uATG - aATG",
+         y="Ribosome occupancy, ratio uATG / aATG") +
+    panel_border()
+```
+
+<a href="#top">Back to table of contents</a>
+
+
+# Results on conserved genes in H99 and JEC21.
+
+
+## Load list of paralogs
+
+From 2016 Paper.
+
+```{r H99_vs_JEC21, dependson=c("load_riboviz_JEC21","load_riboviz_H99"), results="show"}
+# Load list of orthologs in H99 vs JEC21
+H99JEC21cc <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
+                       comment="#") 
+
+H99JEC21cc
+
+join_H99_JEC21 <- function(tblH99,tblJEC21,concordance=H99JEC21cc) {
+    # join tables of H99 with JEC21 results by orthologs
+    concordance %>%
+        left_join( tblH99 %>% dplyr::rename(H99=Gene),by="H99") %>% 
+        left_join( tblJEC21 %>% dplyr::rename(JEC21=Gene),by="JEC21",
+                   suffix = c(".H99", ".JEC21"))
+}
+
+# conservation of ribosome/RNA abundance summaries
+ribosum_cc <- join_H99_JEC21(ribosum_H99,ribosum_JEC21) 
+```
+
+## Conservation of gene expression
+
+### RNA Abundance
+
+```{r plot_RNA_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
+ggplot(data=ribosum_cc,aes(x=RNA.H99,y=RNA.JEC21)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01))
+```
+
+### Ribosome Occupancy
+
+```{r plot_RPF_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
+ggplot(data=ribosum_cc,aes(x=RPF.H99,y=RPF.JEC21)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01))
+```
+
+### Translation efficiency, no threshold
+
+```{r plot_TE_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
+ggplot(data=ribosum_cc,aes(x=TE.H99,y=TE.JEC21)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    scale_loglog(limits=c(0.05,20),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01))
+```
+
+### Translation efficiency, filtered by top 50% of expression
+
+```{r plot_TE_enoughRNA_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
+ggplot(data=ribosum_cc %>%
+           filter(H99 %in% enoughRNA_H99,
+                  JEC21 %in% enoughRNA_JEC21),
+       aes(x=TE.H99,y=TE.JEC21)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    scale_loglog(limits=c(0.05,20),
+                 oob=scales::squish,
+                 expand=c(0.01,0.01))
+```
+
+## Genes with high translation
+
+```{r hiTrans_cc,dependson="H99_vs_JEC21",results="show"}
+ribosum_cc %>%
+    filter(JEC21 %in% hiTrans_JEC21,
+           H99 %in% hiTrans_H99) %>%
+    arrange(desc(RPF.H99+RPF.JEC21)) %>%
+    head(n=20)
+
+cat(
+    "# hiTrans_cc.txt
+# Genes with high translation efficiency
+# In both H99 and JEC21:
+#   - in top 5% by ribosome occupancy in TPM
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# RNA.xx: mean RNA abundance in TPM of annotated ORF, strain xx
+# RPF.xx: mean ribosome occupancy in TPM of annotated ORF, strain xx
+# TE.xx: translation efficiency, RPF.xx/RNA.xx, strain xx
+#
+# Edward Wallace, June 2018
+",
+file="data_out/hiTrans_cc.txt")
+ribosum_cc  %>%
+    filter(H99 %in% hiTrans_H99,
+           JEC21 %in% hiTrans_JEC21) %>%
+    arrange(desc(RPF.H99+RPF.JEC21)) %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/hiTrans_cc.txt",append = TRUE,col_names=TRUE)
+```
+
+## Genes with high TE
+
+```{r hiTE_cc,dependson="H99_vs_JEC21",results="show"}
+ribosum_cc  %>%
+    filter(H99 %in% enoughRNA_H99,
+           JEC21 %in% enoughRNA_JEC21) %>%
+    arrange(desc(TE.H99+TE.JEC21)) %>%
+    head(n=20)
+
+cat(
+    "# hiTE_cc.txt
+# Genes with high translation efficiency
+# In both H99 and JEC21:
+#   - in top 50% by RNA abundance
+#   - TE > 2 in both H99 and JEC21
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# RNA.xx: mean RNA abundance in TPM of annotated ORF, strain xx
+# RPF.xx: mean ribosome occupancy in TPM of annotated ORF, strain xx
+# TE.xx: translation efficiency, RPF.xx/RNA.xx, strain xx
+#
+# Edward Wallace, June 2018
+",
+file="data_out/hiTE_cc.txt")
+ribosum_cc  %>%
+    filter(H99 %in% enoughRNA_H99,
+           JEC21 %in% enoughRNA_JEC21) %>%
+    filter(TE.H99 > 2,TE.JEC21 > 2) %>%
+    arrange(desc(TE.H99+TE.JEC21)) %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/hiTE_cc.txt",append = TRUE,col_names=TRUE)
+```
+
+## Genes with low TE
+
+To-do: Check which of these have uATGs.
+
+```{r loTE_cc,dependson="H99_vs_JEC21",results="show"}
+ribosum_cc  %>%
+    filter(H99 %in% enoughRNA_H99,
+           JEC21 %in% enoughRNA_JEC21) %>%
+    arrange(TE.H99+TE.JEC21) %>%
+    head(n=20)
+
+cat(
+    "# loTE_cc.txt
+# Genes with low translation efficiency
+# In both H99 and JEC21:
+#   - in top 50% by RNA abundance
+#   - TE < 0.5 (2X) in both H99 and JEC21
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# RNA.xx: mean RNA abundance in TPM of annotated ORF, strain xx
+# RPF.xx: mean ribosome occupancy in TPM of annotated ORF, strain xx
+# TE.xx: translation efficiency, RPF.xx/RNA.xx, strain xx
+#
+# Edward Wallace, June 2018
+",
+file="data_out/loTE_cc.txt")
+ribosum_cc  %>%
+    filter(H99 %in% enoughRNA_H99,
+           JEC21 %in% enoughRNA_JEC21) %>%
+    filter(TE.H99 < 0.5,TE.JEC21 < 0.5) %>%
+    arrange(TE.H99+TE.JEC21) %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/loTE_cc.txt",append = TRUE,col_names=TRUE)
+```
+
+
+## Genes with dATG score high relative to aATG score
+
+We take transcripts where the overall gene expression (RNA abundance in top 50%), the difference in score (dATG > aATG in top 5%), and the dATG frame are all conserved between H99 and JEC21.
+
+```{r scores_cc,dependson=c("H99_vs_JEC21","dvsaATG_scoresn_H99","dvsaATG_scoresn_JEC21"),results="show"}
+ctbl_cc <- join_H99_JEC21(ctbl_big_H99,ctbl_big_JEC21) # conservation of seqs
+scores_cc <- join_H99_JEC21(scores_H99,scores_JEC21) # conservation of scores
+
+d1frame_cc <- ctbl_cc %>% # conservation of d1.ATG frame
+    mutate( d1cons = ( d1.frame.H99 == d1.frame.JEC21 ) ) %>%
+    filter( d1cons ) %>%
+    select( H99, JEC21, d1.frame=d1.frame.H99) 
+
+# conservation of high dATG vs aATG score
+highdiffn_dvsaATG_cc <- scores_cc  %>%
+    filter(H99 %in% enoughRNA_H99,
+           JEC21 %in% enoughRNA_JEC21,
+           H99 %in% highdiffn_dvsaATG_H99$Gene,
+           JEC21 %in% highdiffn_dvsaATG_JEC21$Gene) %>%
+    arrange(aATG.scorekn.H99 - d1.scorekn.H99 +
+                aATG.scorekn.JEC21 - d1.scorekn.JEC21) %>%
+    inner_join(d1frame_cc %>% select(H99, d1.frame) ) 
+# I had to split this instead of piping through with %>%
+# because otherwise I was getting an error with object aATG.scorekn.H99 not found
+# This makes no sense to me (EW).
+highdiffn_dvsaATG_cc <- 
+    highdiffn_dvsaATG_cc %>%	
+    transmute( H99, JEC21, d1.frame,
+            a.skn.H99=round(aATG.scorekn.H99,5),
+            d.skn.H99=round(d1.scorekn.H99,5),
+            a.skn.JEC21=round(aATG.scorekn.JEC21,5),
+            d.skn.JEC21=round(d1.scorekn.JEC21,5)) 
+```
+
+
+### dATG in frame with ATG
+
+Saved to file *dvsaATG_highdiffn_inframe_cc.txt*.
+
+```{r dvsaATG_highdiffn_inframe_cc,dependson="scores_cc",results="show"}
+# print top hits in frame
+highdiffn_dvsaATG_cc %>%
+    filter(d1.frame == 0) %>%
+    select(-d1.frame) %>%
+    print(n=20)
+
+cat(
+    "# dvsaATG_highdiffn_inframe_cc.txt
+# Genes with conserved in-frame high-score dATGs
+# In both H99 and JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# a.skn.xx: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d.skn.xx: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, June 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_cc.txt")
+highdiffn_dvsaATG_cc %>%
+    filter(d1.frame == 0) %>%
+    select(-d1.frame) %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_cc.txt",append = TRUE,col_names=TRUE)
+```
+
+### dATG out of frame
+
+Saved to file *dvsaATG_highdiffn_outframe_cc.txt*.
+
+```{r dvsaATG_highdiffn_outframe_cc,dependson="scores_cc",results="show"}
+# print top hits in frame
+highdiffn_dvsaATG_cc %>%
+    filter(d1.frame != 0) %>%
+    select(-d1.frame) %>%
+    print(n=20)
+
+cat(
+    "# dvsaATG_highdiffn_outframe_cc.txt
+# Genes with conserved out-of-frame high-score dATGs
+# In both H99 and JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out of frame with aATG
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# a.skn.xx: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d.skn.xx: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, June 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_cc.txt")
+highdiffn_dvsaATG_cc %>%
+    filter(d1.frame != 0) %>%
+    select(-d1.frame) %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_cc.txt",append = TRUE,col_names=TRUE)
+```
+
+* CNN00160 two-component-like sensor kinase TCO7 
+* CNB05380 SUI1/eIF1, translation initiation factor.
+* CNC06190 has a domain conserved with eIF2.
+* CNG02120 freqenin calcium-binding protein, FRQ1 homolog
+* CNC05065/CNM00150/CNC04270/CNC06190/CNA07610/CND03900, all hypothetical or uncharacterized.
+* CNC01780 prenyltransferase, COQ2 homolog
+* CNK00690 regulation of meiosis-related, PCH2 homolog
+* CND03590 protein phosphatase I nuclear regulatory subunit, SDS22 homolog
+* CNI00090 farnesyltranstransferase, BTS1 homolog
+* CND03900 has a W2 eIF4-gamma/eIF5/eIF2-epsilon - like domain
+* CNB03280 mRNA transcription modulator, CCR4-NOT ubiquitin ligase subunit MOT2 homolog.
+
+
+
+
+
+
+## Conserved non-canonical aATG context in tRNA related enzymes
+
+### Non-canonical aATG motif from the 9 tRNA synthetases with poor Kozak score and in-frame high-score dATG
+
+```{r utRS_motif,dependson="scores_cc",fig.width=4,fig.height=1,results="show"}
+unusual_tRNAsynth_JEC21 <-
+    c("CNI03160","CNB05640","CNB00480","CNF02520","CNF00730",
+      "CNJ00430","CNB01880","CNC06400","CNB00900")
+
+ggseqlogo(data=ctbl_big_JEC21 %>%
+              filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
+              .$aATG.context,
+          namespace="TCAG")  + 
+    theme_nothing()
+
+utRS_w_PFM <- ctbl_big_JEC21 %>%
+    filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
+    .$aATG.context %>%
+    str_sub(start=4L,end=18L) %>%
+    consensusMatrix()
+
+utRS_w_PWM <- PWM(utRS_w_PFM)
+utRS_n_PWM <- utRS_w_PFM[,5:12] %>% PWM()
+```
+
+
+```{r write_PFM_utRS, dependson="scores_cc",results="show"}
+cat(
+    "# PFM_utRS_cc.txt
+# Position Frequency Matrix for aATGs of 9 unusual tRNA synthetases
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# These nucleotides are very highly conserved between JEC21 and H99; JEC21 scores shown.
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+",
+file="data_out/PFM_utRS_cc.txt")
+utRS_w_PFM %>%
+    as.tibble() %>%
+    write_tsv("data_out/PFM_utRS_cc.txt",
+              append = TRUE,col_names=FALSE)
+```
+
+### dATG motif is canonical from those 9 tRNA synthetases 
+
+```{r utRS_dATG,dependson="utRS_motif",fig.width=4,fig.height=1,results="show"}
+ggseqlogo(data=ctbl_big_JEC21 %>%
+              filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
+              .$d1.context,
+          namespace="TCAG")  + 
+    theme_nothing()
+
+```
+
+### Calculate unusual tRNA synthetase scores and consensus table
+
+Output to file *scores_kozak_unusual_mito_cc.txt*.
+
+```{r calc_utRS_scores_cc, dependson=c("utRS_motif","scores_cc","load_mitofates_H99","load_mitofates_JEC21"), results="show"}
+utRS_scores_JEC21 <- 
+    ctbl_big_JEC21 %>% 
+    transmute(Gene,
+              aATG.scoreUn=PWMscoren(aATG.context,
+                                     pwm=utRS_n_PWM)) 
+# utRS_scores_JEC21
+utRS_scores_H99 <- 
+    ctbl_big_H99 %>% 
+    transmute(Gene,
+              aATG.scoreUn=PWMscoren(aATG.context,
+                                     pwm=utRS_n_PWM))
+
+utRS_scores_cc <- join_H99_JEC21(utRS_scores_H99,utRS_scores_JEC21)
+
+mitopred_cc <- join_H99_JEC21(mitofates_H99 %>% 
+                                  select(Gene,
+                                         Prob_mito=Prob_preseq,
+                                         Pred_mito=Pred_preseq),
+                              mitofates_JEC21 %>% 
+                                  select(Gene,
+                                         Prob_mito=Prob_preseq,
+                                         Pred_mito=Pred_preseq)
+                              )
+
+scores_kozak_unusual_mito_cc <- 
+scores_cc %>%
+    select(H99,JEC21,
+           aATG.scorekn.H99,d1.scorekn.H99,u1.scorekn.H99,
+           aATG.scorekn.JEC21,d1.scorekn.JEC21,u1.scorekn.JEC21
+           ) %>%
+    left_join(utRS_scores_cc) %>%
+    left_join(mitopred_cc)
+scores_kozak_unusual_mito_cc
+
+cat(
+    "# scores_kozak_unusual_mito_cc.txt
+# Scores of ATG context against Kozak and unusual tRS seq, and mito predictions
+# Conserved in H99 and JEC21
+#
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# aATG.scorekn.xx: score of annotated ATG against narrow Kozak sequence (NNNNNATG), strain xx
+# d1.scorekn.xx: score of 1st downstream ATG against narrow Kozak sequence, strain xx
+# u1.scorekn.xx: score of 1st upstream ATG in 5' UTR against narrow Kozak sequence, strain xx
+# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNNATG), strain xx
+# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNNATG), strain xx
+# Prob_mito.xx: Probability of mitochondrial presequence from mitofates, strain xx
+# Pred_mito.xx: Prediction from mitofates, strain xx
+#
+# Edward Wallace, June 2018
+",
+file="data_out/scores_kozak_unusual_mito_cc.txt")
+scores_kozak_unusual_mito_cc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/scores_kozak_unusual_mito_cc.txt",
+              append = TRUE,col_names=TRUE)
+```
+
+### Genes with high score against utRS motif are often dual-localized.
+
+
+```{r utRS_hiscores,dependson=c("utRS_motif","calc_scores_JEC21"),results="show"}
+
+highdiffn_dvsaATG_cc %>%
+    filter(d1.frame == 0) %>%
+    select(Gene=JEC21,
+           a.scorekn=a.skn.JEC21,d.scorekn=d.skn.JEC21) %>%
+    left_join(ctbl_big_JEC21 %>% 
+                  transmute(Gene,
+                            a.scoreUn=PWMscoren(aATG.context,
+                                                pwm=utRS_n_PWM),
+                            aATG.context) 
+              ) %>%
+    left_join(mitofates_JEC21 %>% select(Gene,Prob_preseq)) %>%
+    filter(a.scoreUn > 0.9)
+
+```
+
+These genes are:
+
+    - CNB01880, valine tRNA-ligase*
+    - CNA01530, S-methyl-5-thioadenosine phosphorylase MEU1 homolog
+    - CNE00210, inorganic diphosphatase IPP1 homolog
+    - CNL06190, putative aldo-keto reductase GCY1/YCR1 homolog
+    - CNC06400, histidine-tRNA ligase*
+    - CNI03160, lysine-tRNA ligase*
+    - CNF02520, alanine-tRNA ligase*
+    - CNC04930, YchF-family translational regulator, OLA1 homolog
+    - CNB04810, guanosine-diphosphatase, GDA1 homolog
+    - CNG01890, NAD+ diphosphatase, NPY1 homolog
+    - CNA00760, tRNA (guanine-N2-)-methyltransferase, TRM1 homolog
+    - CNJ00430, tryptophan-tRNA ligase*
+    - CNB00900, cysteine-tRNA ligase*
+    - CNB05640, proline-tRNA ligase*
+    - CNB01800, macrolide-binding protein FKBP12, FPR1 homolog
+    - CNB04990, Methionine-R-sulfoxide reductase, MXR2 homolog
+    - CNB01775, hypothetical Acylphosphatase family protein
+    - CNB04910, putative aminopeptidase, AAP1/APE2 homolog
+    - CND00900, DEAH-box RNA helicase, PRP22 homolog
+
+\* these genes were used to construct the consensus sequence.
+
+In S. cerevisiae: 
+TRM1 is dual-localized to mito and cyto. APE2 is dual mito/cyto localized. GDA1 is golgi-localized. NPY1 is peroxisome and cyto localized. GCY1 and YCR1 are nucleus/cytoplasm localized. FPR1 is multiply localized. MXR2 is mito localized.
+
+CND00900 has two adjacent ATGs to start (GCTTTT**ATG**ATGTCC), the 2nd of which gives the good context score due to the A in the first.
+
+### aATG motif scores, comparing Kozak vs non-canonical tRS 
+
+
+```{r aATG_scoreskvsu_JEC21, dependson=c("calc_scores_JEC21","utRS_motif"), fig.width=3.5,fig.height=3.5}
+scores_kvsu_JEC21 <-
+    scores_JEC21 %>%
+    left_join(ctbl_big_JEC21 %>% 
+                  transmute(Gene,
+                            aATG.scoreun=PWMscoren(aATG.context,
+                                                pwm=utRS_n_PWM)
+                  ) )
+
+
+ggplot(data=scores_kvsu_JEC21,
+       aes(x=aATG.scorekn,y=aATG.scoreun)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=scores_kvsu_JEC21 %>%
+                   filter(Gene %in% highdiffn_dvsaATG_JEC21$Gene),
+               colour="red",size=1) +
+    geom_point(data=scores_kvsu_JEC21 %>%
+                   filter(Gene %in% hiTrans_JEC21),
+               colour="blue",size=1) +
+    geom_point(data=scores_kvsu_JEC21 %>%
+                   filter(Gene %in% hiTrans_JEC21,
+                          Gene %in% highdiffn_dvsaATG_JEC21$Gene),
+               colour="purple4",size=1.3) +
+    labs(x="aATG Kozak score, narrow",
+         y="aATG utRS score, narrow")
+```
+
+In JEC21 only.
+Red: high dATG vs aATG **Kozak** score.
+Blue: highly translated.
+Purple: both.
+
+Note that many points are overplotted at the same y-values because the score is mostly quantized on a small number of values.
+
+
+```{r aATG_scoreskvsu_mitofates_JEC21, dependson=c("aATG_scoreskvsu_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+
+ggplot(data=scores_kvsu_JEC21 %>% 
+           left_join( mitofates_JEC21 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,     aes(x=aATG.scoreun-aATG.scorekn,colour=Pred_preseq)) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(kernel="rectangular",bw=0.025) +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50")) + 
+    labs(x="difference in aATG score, utRS vs Kozak", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### To-do: Analysis of other tRNA synthetases
+
+For example, CNM01290, Leucine-tRNA synthetase, was on a previous version of this list. It has good kozak score at aATG and conserved out-of-frame dATG.
+
+```{r tRS_other,eval=FALSE}
+highdiffn_dvsaATG_cc %>% filter(JEC21 %in% unusual_tRNAsynth_JEC21)
+scores_JEC21 %>% 
+    filter(Gene %in% unusual_tRNAsynth_JEC21) %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    left_join( ctbl_big_JEC21 %>% select(Gene, d1.frame) ) 
+```
+
+## GO analysis of conserved genelists
+
+This was done on 25th June, with values generated by CryptoATGcontext then. Not a reproducible analysis here!
+
+I performed GO analysis with PANTHER.db on JEC21 gene names. PANTHER version 13.1 Released 2018-02-03, Overrepresentation test on GOslim terms.
+
+Link: http://www.pantherdb.org/tools/compareToRefList.jsp
+
+
+
+### dATG score high compared aATG and dATG out of frame, 14 genes
+
+File *dvsaATG_highdiffn_outframe_cc.txt*.
+
+No significant GO terms.
+
+### dATG score high compared aATG and dATG in frame, 44 genes
+
+File *dvsaATG_highdiffn_inframe_cc.txt*.
+
+Enriched in Biological processes:
+
+* tRNA aminoacylation for protein translation\< translation \< protein metabolic process \< primary metabolic process \< metabolic process
+* tRNA metabolic process \< RNA metabolic process \< nucleobase-containing compound metabolic process
+* Unclassified
+
+Molecular Function:
+
+* aminoacyl-tRNA ligase activity \< ligase activity \< catalytic activity
+
+Cellular Component:
+
+* cytosol \< cytoplasm \< intracellular \< cell part
+
+### Highly translated, 291 genes
+
+File *hiTrans_cc.txt*.
+
+Enriched BPs include: 
+
+* oxidative phosphorylation
+* glycolysis
+* translation
+* protein folding
+* cation transport
+* mitochondrial transport
+
+Enriched MFs include:
+
+* transmembrane transporter activity
+* structural constituent of ribosome
+* translation elongation factor activity
+
+Enriched CCs include:
+
+* proton-transporting ATP synthase complex
+* ribosome
+* mitochondrial inner membrane
+
+### High translation efficiency, 174 genes
+
+File *hiTE_cc.txt*.
+
+Enriched BPs include: 
+
+* pentose-phosphate shunt \< monosaccharide metabolic process
+* tRNA aminoacylation for protein translation \< translation
+* acyl-CoA metabolic process
+* tricarboxylic acid cycle
+* cellular amino acid biosynthetic process
+* nuclear transport
+
+Enriched MFs include:
+
+* translation elongation factor activity
+* translation initiation factor activity
+* aminoacyl-tRNA ligase activity
+
+Enriched CCs include:
+
+* cytosol \< cytoplasm
+
+
+### Low translation efficiency, 284 genes
+
+File *loTE_cc.txt*.
+
+Enriched BPs include: 
+
+* anion transport
+
+Enriched MFs, no sig. results.
+
+Enriched CCs, no sig. results.
+
+<a href="#top">Back to table of contents</a>
