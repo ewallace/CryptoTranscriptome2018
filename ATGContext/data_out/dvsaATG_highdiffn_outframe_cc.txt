@@ -1,0 +1,28 @@
+# dvsaATG_highdiffn_outframe_cc.txt
+# Genes with conserved out-of-frame high-score dATGs
+# In both H99 and JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out of frame with aATG
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# a.skn.xx: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d.skn.xx: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, June 2018
+H99	JEC21	a.skn.H99	d.skn.H99	a.skn.JEC21	d.skn.JEC21
+CNAG_06278	CNN00160	0.699	0.991	0.724	0.989
+CNAG_04054	CNB05380	0.717	0.978	0.723	0.978
+CNAG_02894	CNC05065	0.783	0.978	0.798	0.978
+CNAG_06006	CNM00150	0.715	0.934	0.781	0.933
+CNAG_02809	CNC04270	0.801	0.978	0.792	0.978
+CNAG_03008	CNC06190	0.827	0.999	0.817	1
+CNAG_03370	CNG02120	0.803	0.969	0.795	0.968
+CNAG_01667	CNC01780	0.842	0.99	0.837	0.99
+CNAG_00784	CNA07610	0.692	0.842	0.696	0.837
+CNAG_02578	CNK00690	0.826	0.945	0.791	0.944
+CNAG_01241	CND03590	0.757	0.883	0.761	0.897
+CNAG_07780	CNI00090	0.876	0.999	0.867	1
+CNAG_01270	CND03900	0.668	0.791	0.675	0.791
+CNAG_03839	CNB03280	0.824	0.941	0.822	0.942

@@ -1,0 +1,10 @@
+# PFM_hiTrans_JEC21.txt
+# Position Frequency Matrix for aATGs of 330 highest-translated genes from JEC21
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+114	87	142	99	80	91	289	171	202	330	0	0	34	29	16
+96	137	89	68	114	194	10	120	88	0	0	0	55	206	170
+32	14	34	65	25	16	22	11	28	0	0	330	130	32	23
+88	92	65	98	111	29	9	28	12	0	330	0	111	63	121

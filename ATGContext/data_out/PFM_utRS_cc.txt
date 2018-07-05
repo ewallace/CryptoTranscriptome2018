@@ -1,0 +1,11 @@
+# PFM_utRS_cc.txt
+# Position Frequency Matrix for aATGs of 9 unusual tRNA synthetases
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# These nucleotides are very highly conserved between JEC21 and H99; JEC21 scores shown.
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+3	3	4	4	2	2	0	0	0	9	0	0	0	0	1
+3	1	5	3	2	3	1	1	4	0	0	0	8	2	8
+2	4	0	0	3	2	0	6	0	0	0	9	1	0	0
+1	1	0	2	2	2	8	2	5	0	9	0	0	7	0
