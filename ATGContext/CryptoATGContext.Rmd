@@ -68,7 +68,7 @@ logmean <- function(x) {
     lx <- log(x)
     exp( mean( lx[is.finite(lx)] ) )
 }
-setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
 ```
 
 
@@ -1851,8 +1851,52 @@ ggplot(data=scores_kvsu_JEC21 %>%
                       ) ,     aes(x=aATG.scoreun-aATG.scorekn,colour=Pred_preseq)) +
     geom_vline(xintercept=0,size=0.3) +
     geom_density(kernel="rectangular",bw=0.025) +
-    scale_colour_manual(values=c("Yes"="magenta","No"="grey50")) + 
+        scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_JEC21)  +
     labs(x="difference in aATG score, utRS vs Kozak", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### High utRS score is enriched in mito-localized genes
+
+Note we do not control for expression or any other potential factor affecting ATG context.
+
+#### in JEC21
+
+```{r aATG_scoresu_mitofates_JEC21, dependson=c("aATG_scoreskvsu_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+
+ggplot(data=scores_kvsu_JEC21 %>% 
+           left_join( mitofates_JEC21 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,     aes(x=aATG.scoreun,colour=Pred_preseq)) +
+    geom_density(kernel="rectangular",bw=0.025) +
+        scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_JEC21)  +
+    labs(x="utRS aATG score", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+#### in H99
+
+```{r aATG_scoresu_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=5,fig.height=1.8}
+scores_kvsu_H99 <-
+    scores_H99 %>%
+    left_join(ctbl_big_H99 %>% 
+                  transmute(Gene,
+                            aATG.scoreun=PWMscoren(aATG.context,
+                                                pwm=utRS_n_PWM)
+                  ) )
+
+ggplot(data=scores_kvsu_H99 %>% 
+           left_join( mitofates_H99 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,     aes(x=aATG.scoreun,colour=Pred_preseq)) +
+    geom_density(kernel="rectangular",bw=0.025) +
+        scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_H99)  +
+    labs(x="utRS aATG score", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
