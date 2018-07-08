@@ -1,0 +1,146 @@
+>YKL194C  | Saccharomyces cerevisiae S288c | mitochondrial threonine--tRNA ligase MST1 | genomic | BK006944 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGTCTCGCAATATGAAAATACAA
+>ASPBRDRAFT_39596  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878681 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAATTCCACCATGCGTCGACTG
+>P170DRAFT_440896  | Aspergillus steynii IBT 23096 | threonyl-tRNA synthetase | genomic | MSFO01000009 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCCTGGACGATGCGTCGACTA
+>ASPACDRAFT_1892686  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878970 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGCTCCTTACCATGCGACAACTA
+>YALI0_A09427g  | Yarrowia lipolytica CLIB122 | YALI0A09427p | genomic | CR382127 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACGAGAAAAAATGCTGAGAACG
+>NFIA_009230  | Aspergillus fischeri NRRL 181 | threonyl-tRNA synthetase | genomic | DS027688 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCAACCAACCATGCGGCGATTA
+>ASPWEDRAFT_51081  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878212 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCCCATCAACCATGCGTCGATTA
+>AFLA_083340  | Aspergillus flavus NRRL3357 | threonyl-tRNA synthetase | genomic | EQ963472 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCCAGCAACCATGCGTCGATTA
+>AFUB_015550  | Aspergillus fumigatus A1163 | Has domain(s) with predicted threonine-tRNA ligase, ATP binding activity, role in threonyl-tRNA aminoacylation and cytoplasm localization | genomic | scf_000001_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATTCCTTGCCATGAATCAACCA
+>FOZG_01854  | Fusarium oxysporum Fo47 | threonyl-tRNA synthetase | genomic | JH717896.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTCG
+>PCH_Pc21g23230  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c21 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATCTTCAACCATGCGCTCACTG
+>AN0936  | Aspergillus nidulans FGSC A4 | Ortholog(s) have threonine-tRNA ligase activity and mitochondrion localization | genomic | ChrVIII_A_nidulans_FGSC_A4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCAAAGCCAACATGCGCCGAATT
+>HCAG_02216  | Histoplasma capsulatum NAm1 | hypothetical protein | genomic | CH476656 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCCACCACACATGAGGCCGCCC
+>ASPTUDRAFT_54819  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878198 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAAGTTCCACCATGCGTCGACTG
+>TRIREDRAFT_64327  | Trichoderma reesei QM6a | predicted protein | genomic | GL985068 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCCACATGCCATGATCCGCTCG
+>NEUTE1DRAFT_126151  | Neurospora tetrasperma FGSC 2508 | threonyl-tRNA synthetase mitochondrial precursor | genomic | GL891382 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAACAGGAGAGATGGGTGTGTTC
+>ASPVEDRAFT_121684  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878125 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCAAGTCAACATGCGTCGGATA
+>ACLA_019350  | Aspergillus clavatus NRRL 1 | threonyl-tRNA synthetase | genomic | DS027059 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCAACCAACAATGCGGCGGATC
+>HCDG_07741  | Histoplasma capsulatum H143 | threonyl-tRNA synthetase | genomic | GG692432 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCCGCCACACATGAGGCCGCCC
+>ASPNIDRAFT_55296  | Aspergillus niger ATCC 1015 | threonyl-tRNA synthetase kinase | genomic | ACJE01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAGATCCCACCATGCGTCGACTG
+>NCU03129  | Neurospora crassa OR74A | threonyl-tRNA synthetase | genomic | CM002236 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCGACGGGAGGATGCTCTCTCCA
+>P174DRAFT_440969  | Aspergillus novofumigatus IBT 16806 | threonyl-tRNA synthetase | genomic | MSZS01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCAAACCAACCATGCGGAGATTA
+>CPAG_08694  | Coccidioides posadasii RMSCC 3488 | threonyl-tRNA synthetase | genomic | DS268114 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCACGCAAGATGCGGCCGAAC
+>An01g10990  | Aspergillus niger CBS 513.88 | Ortholog(s) have threonine-tRNA ligase activity and mitochondrion localization | genomic | An01_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAGATCCCACCATGCGTCGACTG
+>ATEG_05183  | Aspergillus terreus NIH2624 | threonyl-tRNA synthetase, mitochondrial precursor | genomic | CH476600 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTCGCGGCGCCATGGGCGAGACG
+>NEUDI_81509  | Neurospora discreta FGSC 8579 | Threonyl-tRNA synthetase | genomic | NdisFGSC8579_SC007 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCGACGGGAGGATGCTCTCTCCA
+>C1_02930C_B  | Candida albicans SC5314_B | have role in mitochondrial threonyl-tRNA aminoacylation and mitochondrion localization | genomic | Ca22chr1B_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGTTCACTCTAATGTTAATACTG
+>B9J08_003256  | Candida auris strain B8441 | threonine-tRNA ligase | genomic | PEKT02000007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCTGGGCTAAATGTTTCTAGGA
+>PABG_06071  | Paracoccidioides brasiliensis Pb03 | threonine-tRNA ligase | genomic | KN305540 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCAACACACATGCGGCCGCCC
+>P168DRAFT_32742  | Aspergillus campestris IBT 28561 | class II aaRS and biotin synthetase | genomic | MSFM01000001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCTCCTCACTATGCGTCGATTA
+>FOC1_g10016391  | Fusarium oxysporum f. sp. cubense race 1 | Putative threonyl-tRNA synthetase, mitochondrial | genomic | KB731261 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTCG
+>M_BR32_EuGene_00008891  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAACGTTAGCAAATGCACCGTACG
+>SMAC_02860  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546211 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCGACGGGAGGATGCTCTCTCAA
+>SOCG_01667  | Schizosaccharomyces octosporus yFS286 | threonine-tRNA ligase | genomic | KE503208 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATAAGTTAGTATGCTGTTGTCA
+>Afu1g16210  | Aspergillus fumigatus Af293 | Ortholog(s) have threonine-tRNA ligase activity and mitochondrion localization | genomic | Chr1_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATTCCTTGCCATGAATCAACCA
+>AO090005001088  | Aspergillus oryzae RIB40 | Ortholog(s) have threonine-tRNA ligase activity, role in mitochondrial threonyl-tRNA aminoacylation and mitochondrion localization | genomic | Chr1_A_oryzae_RIB40 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCCAGCAACCATGCGTCGATTA
+>C1_02930C_A  | Candida albicans SC5314 | have role in mitochondrial threonyl-tRNA aminoacylation and mitochondrion localization | genomic | Ca22chr1A_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGTTCACTCTAATGTTAATACTG
+>PAAG_05289  | Paracoccidioides lutzii Pb01 | threonyl-tRNA synthetase | genomic | KN294005 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCCAACACACATGCGGCCGCCC
+>HCEG_03353  | Histoplasma capsulatum H88 | threonyl-tRNA synthetase | genomic | DS990638 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCCGCCACACATGAGGCCGCCC
+>FOXG_01080  | Fusarium oxysporum f. sp. lycopersici 4287 | threonyl-tRNA synthetase | genomic | CM000589.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTCG
+>AMAG_10991  | Allomyces macrogynus ATCC 38327 | threonine-tRNA ligase | genomic | GG745347 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACCACCACCATGTCGCGCCTT
+>CAGL0D03542g  | Candida glabrata CBS 138 | Ortholog(s) have threonine-tRNA ligase activity, role in mitochondrial threonyl-tRNA aminoacylation and mitochondrion localization | genomic | ChrD_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGAGGACCTTTATGCTTTGCAAT
+>ASPGLDRAFT_117869  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878890 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCCTAACAACAATGTGTCGATTA
+>FOIG_13171  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658300.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTTG
+>sr14717  | Sporisorium reilianum SRZ2 | probable MST1-threonine--tRNA ligase, mitochondrial | genomic | FQ311431 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCAGCGAAACATGAGCCGCCGC
+>HCBG_01309  | Histoplasma capsulatum G186AR | threonyl-tRNA synthetase | genomic | GG663364 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCCACCACACATGAGGCCGCCC
+>SJAG_03585  | Schizosaccharomyces japonicus yFS275 | threonine-tRNA ligase | genomic | KE651167 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAAGGAGAAGTATGCTTTCAGCA
+>FGRAMPH1_01G01891  | Fusarium graminearum PH-1 | threonyl-tRNA synthetase | genomic | HG970332 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCGAAGGAGTCATGATACGCTCA
+>AMAG_11593  | Allomyces macrogynus ATCC 38327 | threonine-tRNA ligase | genomic | GG745350 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACTACCACCATGTCGCGCCTT
+>ASPSYDRAFT_141913  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878582 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTAAATCAACATGCGTCGGATA
+>BC1G_13078  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC114 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAGGTGCACGCATGTTTAAAGCA
+>ASPFODRAFT_42933  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878238 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAAAATCCACCATGCGTCGACTG
+>FOC4_g10014358  | Fusarium oxysporum f. sp. cubense race 4 | Putative threonyl-tRNA synthetase, mitochondrial | genomic | KB726996 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTTG
+>ASPZODRAFT_68399  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878344 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGCTGGCACGATGAGACCGCTG
+>CPSG_04306  | Coccidioides posadasii str. Silveira | threonyl-tRNA synthetase | genomic | GL636491 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCACGCAAGATGCGGCCGAAC
+>AGR95_003730  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_AZ.Contig47 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGCACCTCATCATGACACCTATT
+>SPAC24C9.09  | Schizosaccharomyces pombe 972h- | mitochondrial threonine-tRNA ligase (predicted)  | genomic | Spom972h_chrI forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGATTTAACGAATGATGAAATTA
+>UREG_02868  | Uncinocarpus reesii 1704 | threonyl-tRNA synthetase | genomic | CH476615 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGCGGGACGCCATGACGATACCA
+>PADG_06637  | Paracoccidioides brasiliensis Pb18 | threonine-tRNA ligase | genomic | KN275965 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCAACACACATGCGGCGGCCC
+>UMAG_03815  | Ustilago maydis 521 | putative threonine--tRNA ligase | genomic | CM003149 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCTCAGCACCATGAGCCGTCGC
+>FVEG_00434  | Fusarium verticillioides 7600 | threonyl-tRNA synthetase | genomic | CM000578.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCTGCTCA
+>PNEJI1_002289  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000201 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTTTGTAAAAATGAACAAAATA
+>MGG_15672  | Magnaporthe oryzae 70-15 | threonyl-tRNA synthetase | genomic | CM001232 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACACCACCAAATGTTGCCATTA
+>CIMG_11054  | Coccidioides immitis RS | threonine-tRNA ligase | genomic | GG704916 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCACGCAAGATGCGGCCGAAC
+>PMAA_066270  | Talaromyces marneffei ATCC 18224 | threonyl-tRNA synthetase | genomic | DS995900 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAAAACGCGCCATGCGCCCAACA
+>FOMG_01867  | Fusarium oxysporum f. sp. melonis 26406 | threonyl-tRNA synthetase | genomic | JH659329.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTCG
+>TSTA_086300  | Talaromyces stipitatus ATCC 10500 | threonyl-tRNA synthetase | genomic | EQ962653 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGCAACCAGCCATGCGACCAACA
+>SS1G_05805  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476627 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATTATCGTGATGGTCTCCTCT
+>CLUG_04456  | Clavispora lusitaniae ATCC 42720 | conserved hypothetical protein | genomic | CH408080 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGAAAGCTTCATGCTCAATAAA
+>CPC735_010540  | Coccidioides posadasii C735 delta SOWgp | threonyl-tRNA synthetase, putative | genomic | ACFW01000030 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCACGCAAGATGCGGCCGAAC
+>CIHG_00118  | Coccidioides immitis H538.4 | threonyl-tRNA synthetase | genomic | DS016981 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTCGGCAAGCCATGGCCGCGGCC
+>FFUJ_00488  | Fusarium fujikuroi IMI 58289 | related to threonine--tRNA ligase | genomic | HF679023 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGAAGTGGCCATGATCCGCTCG
+>ASPCADRAFT_207766  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907500 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCTATTCCACTATGCGTCGACTT

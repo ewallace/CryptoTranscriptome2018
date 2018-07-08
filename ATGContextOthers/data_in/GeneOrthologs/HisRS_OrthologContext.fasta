@@ -1,0 +1,290 @@
+>P168DRAFT_279445  | Aspergillus campestris IBT 28561 | histidyl-tRNA synthetase mitochondrial precursor | genomic | MSFM01000002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTAGACACAATGGGCAAGGAT
+>PABG_03030  | Paracoccidioides brasiliensis Pb03 | hypothetical protein | genomic | KN305534 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATAGTAGCCATGGGCAAGGAG
+>TREMEDRAFT_40885  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711541 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATACTTCACCATGTCTTCGGAA
+>QYA_152967  | Mucor circinelloides f. lusitanicus CBS 277.49 | Histidyl-tRNA synthetase | genomic | McirCBS277-49_SC04 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCATGATAGATATGCGTGCAGAG
+>PITG_03398  | Phytophthora infestans T30-4 | histidyl-tRNA synthetase, putative | genomic | DS028121 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGGCTGACGGATGCGGGGTCTG
+>PYU1_G008853  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC1239 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCATCAACCATGTCGAGTGCC
+>AGR95_044900  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_DM.Contig93 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTCAAACACAATGGGGAAGGAA
+>HCBG_04162  | Histoplasma capsulatum G186AR | histidyl-tRNA synthetase | genomic | GG663367 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTCAAACACAATGGGGAAGGAA
+>YALI0_E13123g  | Yarrowia lipolytica CLIB122 | YALI0E13123p | genomic | CR382131 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTCAGTCATACATGCTGCGGAGA
+>BDEG_05049  | Batrachochytrium dendrobatidis JEL423 | histidyl-tRNA synthetase | genomic | BdenJEL423_SC06 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTGGTCTAGTCATGAGTGATCTG
+>AO090009000295  | Aspergillus oryzae RIB40 | Ortholog(s) have cytosol localization | genomic | Chr1_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTGTCTTGGATGAAGTCTACT
+>BC1G_07247  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC40 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGAACTAAACATGGCTAAAGGA
+>ASPNIDRAFT_51854  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTCTCCACCATGCCCAAAGAA
+>SPRG_08065  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583221 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTTGCATCATCATGGCCAACAAG
+>PAR_G002389  | Pythium arrhenomanes ATCC 12531 | Histidyl-tRNA synthetase. | genomic | ParrATCC12531_SC00222 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTTGCGGCTCATGCTCGAGAGC
+>ZTRI_4.738  | Zymoseptoria tritici IPO323 | similar to histidyl-trna synthetase | genomic | Ztri_chr_4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACTCATTTGCATGAATCACTGC
+>ASPCADRAFT_47857  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907499 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTGTCCACCATGCCCAAAGAA
+>SPRG_15024  | Saprolegnia parasitica CBS 223.65 | histidyl-tRNA synthetase | genomic | KK583370 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAGTCGCAGGATGAAGCAAGCC
+>FGRAMPH1_01G23401  | Fusarium graminearum PH-1 | histidyl-trna synthetase | genomic | HG970335 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGTAGAGAGGGATGAAGCCAAGA
+>ASPVEDRAFT_48284  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878125 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCGTTATTCATGCGTTTTTTA
+>CAGL0K05313g  | Candida glabrata CBS 138 | Ortholog(s) have aminoacyl-tRNA ligase activity, mRNA binding activity, role in histidyl-tRNA aminoacylation, mitochondrial translation and cytosol, mitochondrion localization | genomic | ChrK_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATTATACACAATGTCTGCAGAA
+>NEUTE1DRAFT_46170  | Neurospora tetrasperma FGSC 2508 | histidyl-tRNA synthetase mitochondrial precursor | genomic | GL891306 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACCGACACCATGGCCGACAAC
+>ALNC14_020550  | Albugo laibachii Nc14 | unspecified product | genomic | FR824061 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATCGAAATAAATGGCGTCCAAA
+>Afu4g12920  | Aspergillus fumigatus Af293 | Putative mitochondrial histidyl-tRNA synthetase | genomic | Chr4_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAATCCCTTGGATGAAGTTCAAC
+>PPTG_14817  | Phytophthora parasitica INRA-310 | histidine-tRNA ligase, histidine-tRNA ligase, variant 1, histidine-tRNA ligase, variant 2 | genomic | KI669601 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGGCTGACGAATGCTGGGGCTG
+>CPAG_02252  | Coccidioides posadasii RMSCC 3488 | histidyl-tRNA synthetase | genomic | DS268109 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGCTTTTTGGATGAAGGCCCTG
+>CIHG_07317  | Coccidioides immitis H538.4 | histidyl-tRNA synthetase | genomic | DS017013 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGCTTTTTGGATGAAGGCCCTG
+>AN0046  | Aspergillus nidulans FGSC A4 | Putative histidyl-tRNA synthetase with a predicted role in tRNA aminoacylation | genomic | ChrVIII_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTGTTATCTTCATGCGGTTGATT
+>AGR57_13807  | Phanerochaete chrysosporium RP-78 | histidyl-tRNA synthetase | genomic | PchrRP-78_SC018 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTACACGAAACATGGCGACAGTC
+>TRIREDRAFT_121051  | Trichoderma reesei QM6a | histidyl-tRNA synthetase, class IIa | genomic | GL985060 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCCTGTCGAAATGGCTCCCAAG
+>C5_05490C_A  | Candida albicans SC5314 | Putative tRNA-His synthetase; downregulated upon phagocytosis by murine macrophage; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr5A_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCACATCTCCATGATCAAACGA
+>ASPACDRAFT_31660  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878981 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGACAGCACAATGCCTAAGGAC
+>SPBC2G2.12  | Schizosaccharomyces pombe 972h- | mitochondrial and cytoplasmic histidine-tRNA ligase Hrs1 (predicted)  | genomic | Spom972h_chrII forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCAGTTAGTGCATGTTTGTTTTT
+>PNEJI1_001556  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000187 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATACTTTTATGGATGCTTGTATGG
+>PIW_G006211  | Pythium iwayamai DAOM BR242034 | Histidyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC00895 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCTCGTAGGCATGTTCTCGGCC
+>FOC4_g10011510  | Fusarium oxysporum f. sp. cubense race 4 | Histidyl-tRNA synthetase | genomic | KB726990 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCACTCGAAATGGCGCCCAAG
+>CPSG_09229  | Coccidioides posadasii str. Silveira | histidyl-tRNA synthetase | genomic | GL636508 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGCTTTTTGGATGAAGGCCCTG
+>CNBG_3892  | Cryptococcus deuterogattii R265 | histidyl-tRNA synthetase | genomic | KQ410566 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>PAR_G005129  | Pythium arrhenomanes ATCC 12531 | Histidyl-tRNA synthetase. | genomic | ParrATCC12531_SC00685 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCGTTCGGGCCATGCAGGAAATC
+>PITG_03399  | Phytophthora infestans T30-4 | histidyl-tRNA synthetase, putative | genomic | DS028121 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTGCAATGTTATGACCGTCGGC
+>NCU06914  | Neurospora crassa OR74A | histidyl-tRNA synthetase | genomic | CM002242 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCCGTAGCGGCATGCTGAATTTG
+>I306_00588  | Cryptococcus gattii EJB2 | histidyl-tRNA synthetase | genomic | KN848571 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>C5_05490C_B  | Candida albicans SC5314_B | Putative tRNA-His synthetase; downregulated upon phagocytosis by murine macrophage; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr5B_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCACATCTCCATGATCAAACGA
+>CKF44_001371  | Cryptococcus neoformans var. grubii KN99 | histidyl-tRNA synthetase | genomic | CP022331.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>PHYCA_534052  | Phytophthora capsici LT1534 |  Histidyl-tRNA synthetase | genomic | PcapLT1534_SC020 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTTTGTCATCATGGCGTCTGCG
+>FOXG_01944  | Fusarium oxysporum f. sp. lycopersici 4287 | histidyl-tRNA synthetase | genomic | CM000593.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGGGAAAGGATATGGTTATCCGT
+>HpaG804451  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0029 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTGCTACGGCCATGGCGTCTACG
+>ASPBRDRAFT_119964  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878681 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAATTCCTTGAATGCACCCCTCA
+>PGTG_06265  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | histidyl-tRNA synthetase | genomic | DS178275 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCACCACGAAGAATGGCATCTCAA
+>P170DRAFT_345429  | Aspergillus steynii IBT 23096 | histidyl-tRNA synthetase | genomic | MSFO01000001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCGATATCACAATGGGTGCCAAG
+>PAAG_07028  | Paracoccidioides lutzii Pb01 | histidyl-tRNA synthetase | genomic | KN294012 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATAGTAACCATGGGCAAGGAG
+>PADG_01558  | Paracoccidioides brasiliensis Pb18 | hypothetical protein | genomic | KN275958 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATAGTAGCCATGGGCAAGGAG
+>AFLA_051710  | Aspergillus flavus NRRL3357 | histidyl-tRNA synthetase, mitochondrial precursor | genomic | EQ963483 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTGTCTTGGATGAAGTCTACT
+>AMAG_13049  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745356 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCTCCTATTTCATGCCGACGCGC
+>CNC06400  | Cryptococcus neoformans var. neoformans JEC21 | histidine-tRNA ligase, putative | genomic | AE017343.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>PAG1_G005761  | Pythium aphanidermatum DAOM BR444 | Histidyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0224 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACATGATGAGGATGCTGCGTCGC
+>QYA_153687  | Mucor circinelloides f. lusitanicus CBS 277.49 | Histidyl-tRNA synthetase | genomic | McirCBS277-49_SC06 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTCGAGCATCATGGCTACTCAA
+>PMAA_039820  | Talaromyces marneffei ATCC 18224 | histidyl-tRNA synthetase, mitochondrial precursor | genomic | DS995904 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGAGGACATATATGCAGGCCACT
+>ASPTUDRAFT_27697  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878187 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGCTCTCCACCATGCCTAAAGAA
+>PPTG_19379  | Phytophthora parasitica INRA-310 | histidine-tRNA ligase | genomic | KI669674 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTCCAAAGCCATGGCGTCTGCA
+>PIR_G002612  | Pythium irregulare DAOM BR486 | Histidyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0110 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCTCGGCGTCGATGTCCAGCGCT
+>PIR_G005304  | Pythium irregulare DAOM BR486 | Histidyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0316 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCGAATTGACCATGGCGACTACA
+>H310_06227  | Aphanomyces invadans NJM9701 | histidine-tRNA ligase | genomic | KI913962 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTCTCGGAATATGGCGAACCGC
+>FFUJ_06487  | Fusarium fujikuroi IMI 58289 | probable histidine--tRNA ligase, mitochondrial | genomic | HF679028 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCTAGCAACATGCCAGCAAAT
+>PIW_G001040  | Pythium iwayamai DAOM BR242034 | Histidyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC00070 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATGTGCAGCAGCAGCAGCAGTG
+>M_BR32_EuGene_00031961  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCACCGCAGTCATGGGGAAGAAG
+>MGL_3918  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000016 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCCGTCGTCAAATGGAGGCACAA
+>evm.TU.AC2VRR_s00022g176  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC022 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTAGGTCCTGATGATGGCTGAC
+>SPPG_02997  | Spizellomyces punctatus DAOM BR117 | histidine-tRNA ligase | genomic | KQ257453 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACAACTGTCAAATGACCGTAGAC
+>I314_00722  | Cryptococcus gattii CA1873 | histidyl-tRNA synthetase | genomic | KN848889 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGTAGCTTTATGCTCCGTCCT
+>FOIG_12202  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | KK036128.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGGGAAAGGATATGGTTATCCGT
+>PVE_G000205  | Pythium vexans DAOM BR484 | Histidyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0005 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGGCGATCCCGATGGCTTCCGCC
+>SJAG_00103  | Schizosaccharomyces japonicus yFS275 | cytoplasmic histidine-tRNA ligase Hrs1 | genomic | KE651166 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATAGAAGAGCAATGTCTACCGTT
+>SMAC_05873  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546171 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACACCGACATCATGGCTGACAAC
+>FOMG_05130  | Fusarium oxysporum f. sp. melonis 26406 | histidyl-tRNA synthetase | genomic | JH659331.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGATAAGGAGATGAGGCCAAAA
+>AMAG_17223  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745386 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCTCTTATTTGATGCCGACGCGC
+>PSURA_82549  | Phytophthora ramorum strain Pr102 | Histidyl-tRNA synthetase | genomic | PramPr-102_SC0073 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGTAGTGGCCATGGCGTCTGCG
+>PHYBL_135135  | Phycomyces blakesleeanus NRRL 1555(-) | Histidyl-tRNA synthetase | genomic | PblaNRRL1555-_SC18 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGACAGCAAGCCATGTCTGACCGT
+>CC1G_13798  | Coprinopsis cinerea okayama7#130 | histidine-tRNA ligase | genomic | AACS02000001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGAAGAGAACGATGAGCTCTACA
+>CNBC0810  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000042 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>PUG3_G004754  | Pythium ultimum var. sporangiiferum BR650 | Histidyl-tRNA synthetase | genomic | PultBR650_SC0290 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCTTCAGCTATGTCGAGTGCC
+>RO3G_16958  | Rhizopus delemar RA 99-880 | histidyl-tRNA synthetase | genomic | GG669511 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGATAAAGAAATGGCTGTTCGT
+>TSTA_078910  | Talaromyces stipitatus ATCC 10500 | histidyl-tRNA synthetase, mitochondrial precursor | genomic | EQ962652 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTATCGTCGTGGATGCAGGCCACT
+>SPRG_10824  | Saprolegnia parasitica CBS 223.65 | histidyl-tRNA synthetase | genomic | KK583246 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAGTCGCAGGATGAAGCAAGCC
+>CGB_C1120C  | Cryptococcus gattii WM276 | histidine-tRNA ligase, putative | genomic | CP000288 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>B9J08_000788  | Candida auris strain B8441 | histidine-tRNA ligase | genomic | PEKT02000002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGCCCGAGCCATGTCCACAGAA
+>PCH_Pc22g02880  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c22 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCAATCACAATGGGGAAAGAC
+>RO3G_01784  | Rhizopus delemar RA 99-880 | histidyl-tRNA synthetase | genomic | CH476732 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTAAAAAAAAATGTCAGAGAAT
+>CIMG_00621  | Coccidioides immitis RS | histidyl-tRNA synthetase | genomic | GG704911 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGCTTTTTGGATGAAGGCCCTG
+>NEUDI_26049  | Neurospora discreta FGSC 8579 | Histidyl-tRNA synthetase | genomic | NdisFGSC8579_SC008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACCGACGCCATGGCCGACAAC
+>ALNC14_016120  | Albugo laibachii Nc14 | unspecified product | genomic | FR824057 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATTGTAGTCATGTACTCGAAT
+>FVEG_05104  | Fusarium verticillioides 7600 | histidyl-tRNA synthetase | genomic | CM000580.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGATAGGGAGATGAGGCCAAAA
+>ASPSYDRAFT_144709  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878583 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCGTTATTCATGCGTTTTTTA
+>M_BR32_EuGene_00031951  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATCTTTTAGATGCCCTGGGAG
+>PITG_21886  | Phytophthora infestans T30-4 | histidyl-tRNA synthetase | genomic | GG688692 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTCTCCAAGCCATGGCGTCTACG
+>ASPWEDRAFT_47270  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878209 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGATAGACACAATGCCCAAGGAT
+>PHYSODRAFT_477153  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159151 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTTCGTTTGAAATGGTTAGCCTC
+>PHYCI_403872  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGATCATTGCGATGGCTGCTGAC
+>ACLA_051910  | Aspergillus clavatus NRRL 1 | histidyl-tRNA synthetase, mitochondrial precursor | genomic | DS027054 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATCTTCTTGGATGAAGCCTATC
+>ASPZODRAFT_64905  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878341 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTAAATCAGAGATGGTGGGAAAG
+>PYU1_G000804  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2023 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGGCAGCAAAAATGTGGGCGGCA
+>FOC1_g10013822  | Fusarium oxysporum f. sp. cubense race 1 | Histidyl-tRNA synthetase | genomic | KB730528 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCACTCGAAATGGCGCCCAAG
+>PUG3_G003582  | Pythium ultimum var. sporangiiferum BR650 | Histidyl-tRNA synthetase | genomic | PultBR650_SC0194 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCCGAGGTCATGCAGGTGGAC
+>CLUG_01156  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408076 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTCCTGGAATCATGTTCAGGCGC
+>PHYSODRAFT_559658  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159154 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAGTGGTTCCCATGGCGTCTGCG
+>ASPFODRAFT_120568  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878236 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAATTCCTTGAATGCACCCCTCA
+>PHYCA_507398  | Phytophthora capsici LT1534 |  hisS gene product  | genomic | PcapLT1534_SC027 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGGGGCTGAGGATGCGGCCTGCG
+>SDRG_04638  | Saprolegnia diclina VS20 | histidyl-tRNA synthetase | genomic | JH767142 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAGTGGCAGGATGAAGCAAGCC
+>FOZG_05302  | Fusarium oxysporum Fo47 | histidyl-tRNA synthetase | genomic | JH717898.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGATAAGGAGATGAGGCCAAAA
+>ATEG_03174  | Aspergillus terreus NIH2624 | histidyl-tRNA synthetase, mitochondrial precursor | genomic | CH476597 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAGACGCCACCATGCCCAAGGAG
+>sr16652  | Sporisorium reilianum SRZ2 | probable HTS1-histidine--tRNA ligase, mitochondrial | genomic | FQ311443 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCGTCCCTTTCATGTCACTCTTG
+>P174DRAFT_504635  | Aspergillus novofumigatus IBT 16806 | histidyl-tRNA synthetase mitochondrial precursor | genomic | MSZS01000005 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGGTAGACACGATGCCAAAGGAT
+>An01g08490  | Aspergillus niger CBS 513.88 | Ortholog(s) have cytosol localization | genomic | An01_A_niger_CBS_513_88 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAATTCCTTGAATGCACCCCTCA
+>PHYCI_403832  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGAGGCTGGCGATGCTGGGGCCA
+>PUG3_G003648  | Pythium ultimum var. sporangiiferum BR650 | Histidyl-tRNA synthetase | genomic | PultBR650_SC0198 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGGCAGCAAAAATGTGGGCGGTA
+>PHYSODRAFT_475569  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159151 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGAGGCTGACGATGCTGGGGCTA
+>PAG1_G005564  | Pythium aphanidermatum DAOM BR444 | Histidyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0212 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGATCGAACAATGGCGACCAAG
+>HpaG806629  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0053 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGTCGGGGAGATGGCACGGATG
+>UMAG_06027  | Ustilago maydis 521 | putative histidine--tRNA ligase | genomic | CM003160 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGCATCTTTTGATGTTCCTCTTG
+>AFUB_069820  | Aspergillus fumigatus A1163 | Ortholog(s) have intracellular localization | genomic | scf_000005_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAATCCCTTGGATGAAGTTCAAC
+>UREG_00624  | Uncinocarpus reesii 1704 | histidyl-tRNA synthetase | genomic | CH476615 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAAGGACAAAATGGCACGCATG
+>HCEG_00733  | Histoplasma capsulatum H88 | histidyl-tRNA synthetase | genomic | DS990636 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTCAAACACAATGGGGAAGGAA
+>I308_02586  | Cryptococcus gattii VGIV IND107 | histidyl-tRNA synthetase | genomic | KN848860 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>PHYBL_138952  | Phycomyces blakesleeanus NRRL 1555(-) | Histidyl-tRNA synthetase | genomic | PblaNRRL1555-_SC01 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTAACTCATTCTATGCTTGAAGAT
+>PSURA_42378  | Phytophthora ramorum strain Pr102 | unspecified product | genomic | PramPr-102_SC0016 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTAAGGCGAAGGCCATCAGCCGT
+>SS1G_09999  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476634 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGAGTTAAACATGGCGAAAGGA
+>ASPGLDRAFT_27478  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878903 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTTAGACACCATGCCGAAGGAT
+>HpaG804452  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0029 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGCTGAGGTCAATGGCCTTGTGC
+>evm.TU.AC2VRR_s00137g149  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC137 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCGTAAAATAAATGGCGTCCAAT
+>H310_09577  | Aphanomyces invadans NJM9701 | histidine-tRNA ligase | genomic | KI913972 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGCGGGAGCAATGGCAATGAAG
+>CNAG_01544  | Cryptococcus neoformans var. grubii H99 | histidyl-tRNA synthetase | genomic | CP003830.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGCAGCTTTATGCTCCGTCCT
+>HCDG_01004  | Histoplasma capsulatum H143 | histidyl-tRNA synthetase | genomic | GG692419 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTCAAACACAATGGGGAAGGAA
+>SOCG_01804  | Schizosaccharomyces octosporus yFS286 | cytoplasmic histidine-tRNA ligase Hrs1 | genomic | KE503208 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAACTTCCCTTATGTTCACCTTC
+>PVE_G002365  | Pythium vexans DAOM BR484 | Histidine--tRNA ligase | genomic | PvexDAOMBR484_SC0086 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGCGTGCAGGCGCCGCGCGAGCC
+>PHYCI_232371  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Histidyl-tRNA synthetase | genomic | PcinCBS144-22_SC0072 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTCCTCGTTCCATGGCGTCTGCG
+>FFUJ_02992  | Fusarium fujikuroi IMI 58289 | probable HTS1-histidine--tRNA ligase, mitochondrial | genomic | HF679025 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCACTCGAAATGGCACCCAAG
+>ASPCADRAFT_207047  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907499 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTGTCCACCATGCCCAAAGAA
+>H257_11349  | Aphanomyces astaci strain APO3 | histidine-tRNA ligase | genomic | KI913146 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACTATTGCAATGGCAACCAAG
+>CPC735_056330  | Coccidioides posadasii C735 delta SOWgp | Histidyl-tRNA synthetase, putative | genomic | ACFW01000049 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGCTTTTTGGATGAAGGCCCTG
+>H257_16482  | Aphanomyces astaci strain APO3 | histidine-tRNA ligase | genomic | KI913200 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCAGCGTAGAAATGTCGAACCGC
+>NFIA_103420  | Aspergillus fischeri NRRL 181 | histidyl-tRNA synthetase, mitochondrial precursor | genomic | DS027685 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAATCCCTTGGATGAAGTTCAAA
+>MGG_15290  | Magnaporthe oryzae 70-15 | histidyl-tRNA synthetase | genomic | CM001234 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGCTAGCCTTCATGCAGCCTCCA
+>SDRG_03260  | Saprolegnia diclina VS20 | hypothetical protein | genomic | JH767139 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTTGCATCATCATGGCCAACAAG
+>FVEG_01700  | Fusarium verticillioides 7600 | histidyl-tRNA synthetase | genomic | CM000583.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCTAGCAAAATGCCCCAATCT
+>MELLADRAFT_37940  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883123 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTAAATCCATCATGTCCGATCCA

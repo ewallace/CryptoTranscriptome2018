@@ -1,0 +1,284 @@
+>YDR037W  | Saccharomyces cerevisiae S288c | lysine--tRNA ligase KRS1 | genomic | BK006938 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCAATAGCATAATGTCTCAACAA
+>TREMEDRAFT_41611  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711528 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCTCCCTTTGTATGCTCAAAGCT
+>ASPACDRAFT_76801  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878973 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTGATTCATCATGGCCGACAAC
+>PITG_08714  | Phytophthora infestans T30-4 | lysyl-tRNA synthetase | genomic | DS028133 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGAATAGGACGATGAGCACTCCA
+>HpaG806722  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0054 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTAACTGATGCCATGCAACGGTTC
+>PABG_07397  | Paracoccidioides brasiliensis Pb03 | lysine-tRNA ligase | genomic | KN305549 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGATTAAACGATGGCGGGACCA
+>AMAG_07796  | Allomyces macrogynus ATCC 38327 | lysine-tRNA ligase | genomic | GG745340 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTTGCCCGCAATGATATCCAGG
+>PNEJI1_000149  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000279 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAACGATAAAAATGCAGGAAGCT
+>ASPVEDRAFT_147654  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878126 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCCTTCCACTATGACTGATTCC
+>PUG3_G004389  | Pythium ultimum var. sporangiiferum BR650 | Lysyl-tRNA synthetase | genomic | PultBR650_SC0258 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCCGCGGATATGGAGTGTGTG
+>PYU1_G013793  | Pythium ultimum DAOM BR144 | Lysine--tRNA ligase | genomic | PultDAOMBR144_SC2017 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACCAGCAAATATGAACCCACCA
+>ALNC14_091230  | Albugo laibachii Nc14 | unspecified product | genomic | FR824219 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATCATTGGTTATGAGCGCCGCG
+>BC1G_06223  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC31 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAACCGCAATCATGTCGGCACCA
+>SPPG_03684  | Spizellomyces punctatus DAOM BR117 | lysine-tRNA ligase | genomic | KQ257454 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTCCATTCGGCATGCTTCGCCGA
+>ASPNIDRAFT_47873  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000019 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCCATCACCATGGCTGATAAC
+>HCDG_04089  | Histoplasma capsulatum H143 | lysyl-tRNA synthetase | genomic | GG692423 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGCGAATTGAGATGATCCCTGCC
+>SDRG_03094  | Saprolegnia diclina VS20 | lysyl-tRNA synthetase | genomic | JH767138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCGAAAGCCATGATGCTTCAG
+>CPAG_01546  | Coccidioides posadasii RMSCC 3488 | lysyl-tRNA synthetase | genomic | DS268109 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAGCACACAATGCCTGAGCAA
+>AO090003000186  | Aspergillus oryzae RIB40 | Ortholog(s) have lysine-tRNA ligase activity, mRNA binding activity, role in lysyl-tRNA aminoacylation and cytoplasm localization | genomic | Chr2_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTATTCCACCATGTCGGAAGCT
+>UMAG_10176  | Ustilago maydis 521 | putative lysine--tRNA ligase | genomic | CM003143 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGATCCGCAGTATGTCTTCCACG
+>NEUDI_25042  | Neurospora discreta FGSC 8579 | Lysyl-tRNA synthetase (class II) | genomic | NdisFGSC8579_SC006 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAATTACAACCATGGCGGATTCG
+>SMAC_01083  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546225 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACGATAACCATGGCCGATTCG
+>PGTG_01514  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | lysyl-tRNA synthetase, class II | genomic | DS178263 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCCGGCGTTGAATGCTCAAGACA
+>ASPWEDRAFT_72889  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878217 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACATTCTCATCATGACGGACAAC
+>AN1913  | Aspergillus nidulans FGSC A4 | Putative lysyl-tRNA synthetase with a predicted role in lysine metabolism | genomic | ChrVII_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTATTTCACTATGACCGACTCC
+>TSTA_065320  | Talaromyces stipitatus ATCC 10500 | lysyl-tRNA synthetase | genomic | EQ962652 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATTTTCACCATGGCCGACTCT
+>PVE_G005737  | Pythium vexans DAOM BR484 | Lysyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0339 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCGACAGCAAGATGCGCTTGGCG
+>I308_01507  | Cryptococcus gattii VGIV IND107 | lysine-tRNA ligase | genomic | KN848857 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTTAGAGCC
+>I314_03341  | Cryptococcus gattii CA1873 | lysine-tRNA ligase | genomic | KN848896 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTTAGAGCC
+>PUG3_G001640  | Pythium ultimum var. sporangiiferum BR650 | Lysyl-tRNA synthetase | genomic | PultBR650_SC0067 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGAGAGGCGCGATGATGCGCATG
+>SPRG_17749  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583939 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTGCACAGCTATGGAGTACGGC
+>ASPFODRAFT_52555  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878252 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCCATCACCATGGCTGATAAC
+>PITG_06222  | Phytophthora infestans T30-4 | lysyl-tRNA synthetase | genomic | DS028125 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAATTTCAATAATGCTACGCAAC
+>SPRG_09468  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583234 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAGTCGACACGATGAGCTCTGAA
+>QYA_107357  | Mucor circinelloides f. lusitanicus CBS 277.49 | Lysyl-tRNA synthetase (class II) | genomic | McirCBS277-49_SC02 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGTTTATCCCATGACAACACAA
+>RO3G_17031  | Rhizopus delemar RA 99-880 | hypothetical protein | genomic | CH476755 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAAAAACTTATATGAAACAAGCC
+>ASPTUDRAFT_685699  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878204 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCCATCACCATGGCTGATAAT
+>AMAG_06626  | Allomyces macrogynus ATCC 38327 | lysine-tRNA ligase | genomic | GG745337 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGCAGACACCATGGAGAAGACG
+>PIR_G007636  | Pythium irregulare DAOM BR486 | Lysyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0609 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGTAGTCAAGATGAACCCACCA
+>PAG1_G008352  | Pythium aphanidermatum DAOM BR444 | Lysyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0458 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTAGACAAGCATGTCGTCGCCA
+>AMAG_09700  | Allomyces macrogynus ATCC 38327 | lysine-tRNA ligase | genomic | GG745348 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCGTGCAGGTCATGGCGTCCAAG
+>ACLA_081800  | Aspergillus clavatus NRRL 1 | lysyl-tRNA synthetase | genomic | DS027060 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCGATTCAGCATGACGGATTCC
+>NFIA_053310  | Aspergillus fischeri NRRL 181 | lysyl-tRNA synthetase | genomic | DS027698 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTGATTCAACATGGCGGATTCC
+>P174DRAFT_404438  | Aspergillus novofumigatus IBT 16806 | lysyl-tRNA synthetase | genomic | MSZS01000003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTGATTTAACATGGCAGATTCC
+>FOMG_11116  | Fusarium oxysporum f. sp. melonis 26406 | lysyl-tRNA synthetase | genomic | JH659336.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACGCAATCATGGCTGACGCT
+>SOCG_02580  | Schizosaccharomyces octosporus yFS286 | cytoplasmic lysine-tRNA ligase Krs1 | genomic | KE503206 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCAGGGCAAAATGAGTGCTGAA
+>CIMG_01307  | Coccidioides immitis RS | lysyl-tRNA synthetase | genomic | GG704911 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAGCACACAATGCCTGAGCAA
+>ATEG_05906  | Aspergillus terreus NIH2624 | lysyl-tRNA synthetase | genomic | CH476601 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTGTTCCTACCATGGCTGATAAC
+>PHYBL_154757  | Phycomyces blakesleeanus NRRL 1555(-) | Lysyl-tRNA synthetase (class II) | genomic | PblaNRRL1555-_SC05 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATGGTCATTTCATGACCGTCAAG
+>MGG_04966  | Magnaporthe oryzae 70-15 | lysyl-tRNA synthetase | genomic | CM001233 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTATCACAAACATGGCGGACTCT
+>UREG_01233  | Uncinocarpus reesii 1704 | lysyl-tRNA synthetase | genomic | CH476615 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCACCTACAATGTCTGATCAG
+>PAG1_G002947  | Pythium aphanidermatum DAOM BR444 | Lysyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0082 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGCGGATGAAGATGCTGGCGCTC
+>CGB_H5060W  | Cryptococcus gattii WM276 | lysine-tRNA ligase | genomic | CP000293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGATTGTGCATGCTTAGAGCC
+>HCEG_08521  | Histoplasma capsulatum H88 | lysyl-tRNA synthetase | genomic | DS990643 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTACCAACACAATGGGGGGACCA
+>Afu6g07640  | Aspergillus fumigatus Af293 | Has domain(s) with predicted ATP binding, aminoacyl-tRNA ligase activity, lysine-tRNA ligase activity, nucleic acid binding activity, role in lysyl-tRNA aminoacylation, tRNA aminoacylation for protein translation and cytoplasm localization | genomic | Chr6_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTGATTCAACATGGCGGATTCC
+>CPC735_051040  | Coccidioides posadasii C735 delta SOWgp | Lysyl-tRNA synthetase, putative | genomic | ACFW01000049 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAGCACACAATGCCTGAGCAA
+>An11g02400  | Aspergillus niger CBS 513.88 | Has domain(s) with predicted ATP binding, aminoacyl-tRNA ligase activity, lysine-tRNA ligase activity, nucleic acid binding activity, role in lysyl-tRNA aminoacylation, tRNA aminoacylation for protein translation and cytoplasm localization | genomic | An11_A_niger_CBS_513_88 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCCATCACCATGGCTGATAAC
+>H257_10418  | Aphanomyces astaci strain APO3 | lysine-tRNA ligase | genomic | KI913141 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGACTAACTATCATGGCTGACCGT
+>SDRG_02674  | Saprolegnia diclina VS20 | lysyl-tRNA synthetase, class II | genomic | JH767137 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAGTCGACACGATGAGCTCTGAA
+>H257_19384  | Aphanomyces astaci strain APO3 | hypothetical protein, hypothetical protein, variant | genomic | KI913654 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGCGCATTTCGATGGTGGCGGAA
+>H257_09426  | Aphanomyces astaci strain APO3 | lysine-tRNA ligase | genomic | KI913136 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGTGGAAGATAATGATGCTGCAG
+>ASPCADRAFT_204765  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907495 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCATCACCACCATGGCCGATAAC
+>FOIG_01994  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658273.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACGCAATCATGGCTGACGCT
+>evm.TU.AC2VRR_s00021g28  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC021 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATCATTGGTTATGAGCGCCGCA
+>CNBH3030  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000047 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTCAGAGCC
+>SJAG_00488  | Schizosaccharomyces japonicus yFS275 | cytoplasmic lysine-tRNA ligase Krs1 | genomic | KE651166 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCACAAACAGGCATGAGCGAGGAA
+>P170DRAFT_375299  | Aspergillus steynii IBT 23096 | lysyl-tRNA synthetase | genomic | MSFO01000001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCATCCAACCATGACGGAACCT
+>PCH_Pc12g09250  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c12 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACCACACATCATGGCGGATTCC
+>PHYSODRAFT_305108  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159159 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATCAATTGCAATGATGCTGCGC
+>AMAG_12784  | Allomyces macrogynus ATCC 38327 | lysine-tRNA ligase | genomic | GG745357 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCAGCGAGTTCATGTTCCCCTCG
+>AFLA_036270  | Aspergillus flavus NRRL3357 | lysyl-tRNA synthetase | genomic | EQ963473 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTATTCCACCATGTCGGAAGCT
+>PHYCA_508572  | Phytophthora capsici LT1534 |  hypothetical protein KAFR_0A01050  | genomic | PcapLT1534_SC036 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTCGGACAATAATGAGCTCTCCT
+>PSURA_71183  | Phytophthora ramorum strain Pr102 | Lysyl-tRNA synthetase (class II) | genomic | PramPr-102_SC0007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCCTCGGATCATGAGCAGCACG
+>CNI03160  | Cryptococcus neoformans var. neoformans JEC21 | lysine-tRNA ligase, putative | genomic | AE017349.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTCAGAGCC
+>YALI0_F16291g  | Yarrowia lipolytica CLIB122 | YALI0F16291p | genomic | CR382132 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCACCACACCATGTCTGATATT
+>evm.TU.AC2VRR_s00116g84  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC116 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAAAAGTATGATGAAGCCATTC
+>I306_01682  | Cryptococcus gattii EJB2 | lysine-tRNA ligase | genomic | KN848606 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAGATTGTGCATGCTTAGAGCC
+>H310_13326  | Aphanomyces invadans NJM9701 | lysine-tRNA ligase, lysine-tRNA ligase, variant | genomic | KI914000 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGAAGATAGATCATGTTGCTGCTG
+>PMAA_032290  | Talaromyces marneffei ATCC 18224 | lysyl-tRNA synthetase | genomic | DS995899 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGATCTACACCATGGCCGACTCC
+>CAGL0K12012g  | Candida glabrata CBS 138 | Lysyl-tRNA synthetase | genomic | ChrK_C_glabrata_CBS138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATAAAATAAAATGTCTCAGGAA
+>ASPBRDRAFT_36867  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878679 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGTCCATCACCATGGCTGATAAC
+>PHYCI_304980  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0017 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATCAATCGCAATGATGCTGCGC
+>PHYBL_125504  | Phycomyces blakesleeanus NRRL 1555(-) | Lysyl-tRNA synthetase (class II) | genomic | PblaNRRL1555-_SC13 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAAATAGAAAAATGTCCACTGTT
+>CLUG_03680  | Clavispora lusitaniae ATCC 42720 | conserved hypothetical protein | genomic | CH408079 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCAAACAAACCATGTCTGACCCA
+>B9J08_001878  | Candida auris strain B8441 | lysine-tRNA ligase, cytoplasmic | genomic | PEKT02000004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTATCTTTATCCATGTCTGACCCA
+>PHYCA_105148  | Phytophthora capsici LT1534 |  lysyl-tRNA synthetase  | genomic | PcapLT1534_SC010 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGACTGAAGCCATGACGCGCTTC
+>CIHG_01538  | Coccidioides immitis H538.4 | lysyl-tRNA synthetase | genomic | DS016983 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAGCACACAATGCCTGAGCAA
+>MGL_1659  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAACCAGTACTATGAGATGCGCA
+>FOZG_09089  | Fusarium oxysporum Fo47 | lysyl-tRNA synthetase | genomic | JH717900.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACGCAATCATGGCTGACGCT
+>PHYSODRAFT_551244  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159165 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCACCGCACTATGAGCAGCCCC
+>FOXG_03018  | Fusarium oxysporum f. sp. lycopersici 4287 | lysyl-tRNA synthetase | genomic | CM000596.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACGCAATCATGGCTGACGCT
+>QYA_142881  | Mucor circinelloides f. lusitanicus CBS 277.49 | Lysyl-tRNA synthetase (class II) | genomic | McirCBS277-49_SC04 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGACTGATTTGATGGTCCCTGTG
+>M_BR32_EuGene_00047761  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTATCACAAACATGGCGGACTCT
+>HpaG814349  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0584 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTCTCTAGAATGAGCAGCCCC
+>AFUB_073600  | Aspergillus fumigatus A1163 | Has domain(s) with predicted lysine-tRNA ligase, nucleic acid binding, ATP binding activity, role in lysyl-tRNA aminoacylation and cytoplasm localization | genomic | scf_000006_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTGATTCAACATGGCGGATTCC
+>SPBC17G9.03c  | Schizosaccharomyces pombe 972h- | cytoplasmic lysine-tRNA ligase Krs1 (predicted)  | genomic | Spom972h_chrII reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGTAAGCTAAAATGAGTGAGGAA
+>SS1G_02152  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476623 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAATCGTAATCATGTCGGCGCCA
+>ASPGLDRAFT_44972  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878893 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTAATTAATCATGACGGACAAC
+>FFUJ_06295  | Fusarium fujikuroi IMI 58289 | probable lysine-tRNA ligase | genomic | HF679028 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACGCAATCATGGCTGACGCT
+>P168DRAFT_255370  | Aspergillus campestris IBT 28561 | lysyl-tRNA synthetase | genomic | MSFM01000008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTAATTTTCACCATGGCTGATCCC
+>C3_07410C_B  | Candida albicans SC5314_B | Putative tRNA-Lys synthetase; repressed upon phagocytosis by murine macrophages; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr3B_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCACAATCATTATGTCTGAAGAA
+>AGR57_6166  | Phanerochaete chrysosporium RP-78 | lysyl-tRNA synthetase | genomic | PchrRP-78_SC006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGTGAACGAGGATGACCTCAACC
+>BDEG_05628  | Batrachochytrium dendrobatidis JEL423 | lysyl-tRNA synthetase | genomic | BdenJEL423_SC08 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTCAGTCTGGCATGTGGCTAGAC
+>RO3G_14000  | Rhizopus delemar RA 99-880 | lysyl-tRNA synthetase | genomic | CH476744 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTTTTTGTCATGTCTGAATCT
+>PAR_G004879  | Pythium arrhenomanes ATCC 12531 | Lysyl-tRNA synthetase. | genomic | ParrATCC12531_SC00633 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTCCAGTCTCCATGACGATCCAT
+>TRIREDRAFT_72615  | Trichoderma reesei QM6a | Lysyl-tRNA synthetase, class II | genomic | GL985058 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCGCAAACCATGGCCGACAAC
+>PIR_G000997  | Pythium irregulare DAOM BR486 | Lysyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0031 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGAGACGAGCGATGAAGCTGGGG
+>H310_07920  | Aphanomyces invadans NJM9701 | lysine-tRNA ligase | genomic | KI913966 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACTGCCTTGGCATGGCTGACCGC
+>CPSG_01881  | Coccidioides posadasii str. Silveira | lysyl-tRNA synthetase | genomic | GL636487 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAGCACACAATGCCTGAGCAA
+>PAAG_08172  | Paracoccidioides lutzii Pb01 | lysyl-tRNA synthetase | genomic | KN294021 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGATTAAACGATGGCGGGACCA
+>HCAG_05713  | Histoplasma capsulatum NAm1 | lysyl-tRNA synthetase | genomic | CH476661 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTACCGACACAATGGGGGGACCA
+>SPRG_01764  | Saprolegnia parasitica CBS 223.65 | lysyl-tRNA synthetase | genomic | KK583192 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCGAAAGCCATGATGCTTCAG
+>ZTRI_4.376  | Zymoseptoria tritici IPO323 | similar to lysyl-trna synthetase | genomic | Ztri_chr_4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAACCTCAACATGGCGGCCGAG
+>PPTG_14082  | Phytophthora parasitica INRA-310 | lysine-tRNA ligase | genomic | KI669600 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATCAATCGCGATGATGCTGCGG
+>ASPSYDRAFT_26345  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878582 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCTTCCACAATGACCGATTCC
+>PHYCI_95539  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Lysyl-tRNA synthetase (class II) | genomic | PcinCBS144-22_SC0096 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCGGATCAGCATGAGCAGCCCC
+>PVE_G007744  | Pythium vexans DAOM BR484 | Lysyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0569 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGAGCAGCAGCATGAACCCTCCG
+>AGR95_099850  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_GL.Contig296 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTACCAACACAATGGGGGGACCA
+>FOC1_g10014998  | Fusarium oxysporum f. sp. cubense race 1 | Lysyl-tRNA synthetase, cytoplasmic | genomic | KB731260 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACGCAATCATGGCTGACGCT
+>MELLADRAFT_104502  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883098 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATATTCAATCAATGGCAGACAAA
+>evm.TU.AC2VRR_s00116g83  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC116 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTATTTTCGGAAATGGATGATAGA
+>PIW_G003466  | Pythium iwayamai DAOM BR242034 | Lysyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC00378 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAATCCCAAAGATGAACCCACCA
+>sr13025  | Sporisorium reilianum SRZ2 | probable lysyl-tRNA synthetase, cytosolic | genomic | FQ311463 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCACTCCGCACCATGTCTTCCACC
+>ALNC14_123860  | Albugo laibachii Nc14 | unspecified product | genomic | FR824405 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACTTAAAGTATGCTCAAGCCA
+>SPPG_05517  | Spizellomyces punctatus DAOM BR117 | lysine-tRNA ligase | genomic | KQ257458 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGCCCTTATCATGACCGAAGAC
+>CNAG_04179  | Cryptococcus neoformans var. grubii H99 | lysine-tRNA ligase | genomic | CP003828.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTCAGAGCC
+>FGRAMPH1_01G10757  | Fusarium graminearum PH-1 | lysyl-tRNA synthetase | genomic | HG970333 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATACGCAATTATGGCTGACGCT
+>NEUTE1DRAFT_87826  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891307 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCATAACCATGGCGGATTCG
+>PIW_G010386  | Pythium iwayamai DAOM BR242034 | Lysyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC02355 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAACCTGAACGAATGATCATGAGA
+>CC1G_02312  | Coprinopsis cinerea okayama7#130 | lysine-tRNA ligase | genomic | AACS02000003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCTTTAGAAAGATGGCGACAGAG
+>PYU1_G012549  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2015 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGTGGTGATAGGAAATCCGATTC
+>HCBG_03034  | Histoplasma capsulatum G186AR | lysyl-tRNA synthetase | genomic | GG663365 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTACCAACACAATGGGGGGACCA
+>PAR_G004234  | Pythium arrhenomanes ATCC 12531 | Lysyl-tRNA synthetase. | genomic | ParrATCC12531_SC00506 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+NNNNNNNNNAAGAAGGCCGGCCCG
+>CKF44_003744  | Cryptococcus neoformans var. grubii KN99 | lysine-tRNA ligase | genomic | CP022329.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTCAGAGCC
+>NCU04020  | Neurospora crassa OR74A | lysyl-tRNA synthetase | genomic | CM002241 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCATAACCATGGCGGATTCG
+>FVEG_01874  | Fusarium verticillioides 7600 | lysyl-tRNA synthetase | genomic | CM000583.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACACAATCATGGCTGACGCT
+>HCDG_04088  | Histoplasma capsulatum H143 | lysyl-tRNA synthetase | genomic | GG692423 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTACCAACACAATGGGGGGACCA
+>PPTG_06467  | Phytophthora parasitica INRA-310 | lysine-tRNA ligase | genomic | KI669569 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAGGGAAAATGAGTACTCCA
+>ASPZODRAFT_134135  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878345 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGCACACACAATGGCCGACAAC
+>PADG_08472  | Paracoccidioides brasiliensis Pb18 | lysine-tRNA ligase | genomic | KN275974 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGATTAAACGATGGCGGGACCA
+>CNBG_2865  | Cryptococcus deuterogattii R265 | lysine-tRNA ligase | genomic | KQ410562 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGATTGTGCATGCTTAGAGCC
+>C3_07410C_A  | Candida albicans SC5314 | Putative tRNA-Lys synthetase; repressed upon phagocytosis by murine macrophages; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr3A_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCACAATCATTATGTCTGAAGAA

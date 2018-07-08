@@ -1,0 +1,430 @@
+>CNAG_06699  | Cryptococcus neoformans var. grubii H99 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CP003826.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTCGTCAAG
+>ASPCADRAFT_4795  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907498 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTAAACAATGGCTCCTAAG
+>AMAG_14169  | Allomyces macrogynus ATCC 38327 | glyceraldehyde-3-phosphate dehydrogenase | genomic | GG745361 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGCTTCCACCATGACCGTCAAG
+>AFLA_042390  | Aspergillus flavus NRRL3357 | glyceraldehyde 3-phosphate dehydrogenase, putative | genomic | EQ963476 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGAAGAACACAATGACCGCTAAA
+>HCBG_05811  | Histoplasma capsulatum G186AR | glyceraldehyde-3-phosphate dehydrogenase | genomic | GG663370 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCCAGCAAACATGGTCGTCAAG
+>PAG1_G001458  | Pythium aphanidermatum DAOM BR444 | Glyceraldehyde-3-phosphate dehydrogenase. | genomic | PaphDAOMBR444_SC0030 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTCCCGACACCATGCCAGAGCAG
+>FVEG_04927  | Fusarium verticillioides 7600 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CM000581.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATAATCAAAATGGCTCCCATC
+>SPRG_00090  | Saprolegnia parasitica CBS 223.65 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KK583189 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCACCACCCTCATGGCGCCCATC
+>SDRG_11491  | Saprolegnia diclina VS20 | glyceraldehyde 3-phosphate dehydrogenase | genomic | JH767173 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCGAAGGTCCGATGGCCGGCATC
+>PUG3_G002120  | Pythium ultimum var. sporangiiferum BR650 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | PultBR650_SC0094 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGACCCATTCATGGACCTGGAC
+>HpaG806535  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0051 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTCAATCCCCATGGCATTCCGT
+>CLUG_03423  | Clavispora lusitaniae ATCC 42720 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CH408079 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTTTCCATCAATGACCCATTCA
+>CNBF1640  | Cryptococcus neoformans var. neoformans B-3501A | glyceraldehyde-3-phosphate dehydrogenase | genomic | CM000045 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTCGTCAAG
+>Afu5g01030  | Aspergillus fumigatus Af293 | Putative glyceraldehyde 3-phosphate dehydrogenase | genomic | Chr5_A_fumigatus_Af293 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACAAGCAGAAATGACGGTGAAA
+>HpaG810730  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0135 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCTCCAATCATGTCAGACCAA
+>SPRG_06186  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583208 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGAAGGCTCCATGGCCGGCATC
+>YJR009C  | Saccharomyces cerevisiae S288c | glyceraldehyde-3-phosphate dehydrogenase (phosphorylating) TDH2 | genomic | BK006943 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACAAAACAAAATGGTTAGAGTT
+>SS1G_07798  | Sclerotinia sclerotiorum 1980 UF-70 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CH476630 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCATCTAGAATGGCTCCTACT
+>PITG_01940  | Phytophthora infestans T30-4 | triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase, putative | genomic | DS028119 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCTCTCATCATGTCAGAGGTC
+>PHYSODRAFT_285408  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159153 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGTAGTGACCATGGCCTTCCGT
+>PSURA_71507  | Phytophthora ramorum strain Pr102 | unspecified product | genomic | PramPr-102_SC0023 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACAACTAGCCATGTCGGAGCAA
+>PPTG_20359  | Phytophthora parasitica INRA-310 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI670093 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCTGCAAACCATGGTTAACGTT
+>CC1G_09116  | Coprinopsis cinerea okayama7#130 | glyceraldehyde-3-phosphate dehydrogenase | genomic | AACS02000010 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATACATCACAATGGTACGTCCC
+>QYA_155844  | Mucor circinelloides f. lusitanicus CBS 277.49 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | McirCBS277-49_SC03 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAATTCTAACAATGGTTGTTCAA
+>PHYSODRAFT_334149  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159155 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCGTACTCCATGGACCTCGTA
+>SOCG_04749  | Schizosaccharomyces octosporus yFS286 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE503208 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATAGAGGCAGATGAGAGTCCAT
+>RO3G_13188  | Rhizopus delemar RA 99-880 | glyceraldehyde-3-phosphate dehydrogenase 1 | genomic | CH476742 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCAATTCAACATGGTTAAAATC
+>SPBC354.12  | Schizosaccharomyces pombe 972h- | glyceraldehyde 3-phosphate dehydrogenase Gpd3  | genomic | Spom972h_chrII forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTCAGATAACAATGGCAATTCCT
+>QYA_168026  | Mucor circinelloides f. lusitanicus CBS 277.49 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | McirCBS277-49_SC12 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTCTTCAATATGTCTACTATC
+>SJAG_06621  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651168 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTCTTTAACAATGGCTGCTCCT
+>PHYBL_131929  | Phycomyces blakesleeanus NRRL 1555(-) | Glyceraldehyde 3-phosphate dehydrogenase | genomic | PblaNRRL1555-_SC05 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTATTCACATCATGGTTGTCAAC
+>TRIREDRAFT_119735  | Trichoderma reesei QM6a | glyceraldehyde-3-phosphate dehydrogenase | genomic | GL985056 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCAGATACAAAATGGCTCCCATC
+>PHYSODRAFT_329236  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159153 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTACTTCCAACCATGCCTGAGCAA
+>AO090011000414  | Aspergillus oryzae RIB40 | Ortholog(s) have glyceraldehyde-3-phosphate dehydrogenase (NAD+) (phosphorylating) activity and extracellular region, intracellular, membrane localization | genomic | Chr7_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAAGAACACAATGACCGCTAAA
+>YALI0_C06369g  | Yarrowia lipolytica CLIB122 | YALI0C06369p | genomic | CR382129 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACATCAACAATGGCCATCAAA
+>P168DRAFT_278227  | Aspergillus campestris IBT 28561 | glyceraldehyde-3-phosphate dehydrogenase | genomic | MSFM01000001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACCACAACAATGGCCCCCCAG
+>PVE_G011950  | Pythium vexans DAOM BR484 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | PvexDAOMBR484_SC3659 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACCAACTACCATGCCTGAGCAA
+>ATEG_09817  | Aspergillus terreus NIH2624 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CH476608 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCGTCAGTCCATGTCGCTGCCT
+>CLUG_03499  | Clavispora lusitaniae ATCC 42720 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CH408079 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACTATCAATCATGGCTATCACT
+>PPTG_20358  | Phytophthora parasitica INRA-310 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI670093 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+NNNGAGAACGAGATGAAGGGAATT
+>PGTG_04956  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | glyceraldehyde-3-phosphate dehydrogenase | genomic | DS178271 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTAAAACAAAATGCCAGTCAAA
+>PITG_19495  | Phytophthora infestans T30-4 | glyceraldehyde-3-phosphate dehydrogenase, putative | genomic | DS028224 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTGAGAACGAGATGAAGGGCATT
+>HCAG_04910  | Histoplasma capsulatum NAm1 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CH476659 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCCAGCAAACATGGTCGTCAAG
+>ASPTUDRAFT_29690  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878203 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTACACAATGGCTCCCAAG
+>H310_06803  | Aphanomyces invadans NJM9701 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI913963 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCAAGCGCCATGACCAAGCAA
+>C3_06870W_A  | Candida albicans SC5314 | NAD-linked glyceraldehyde-3-phosphate dehydrogenase; binds fibronectin, laminin; at cell surface; antigenic in infection; farnesol-repressed; stationary phase-enriched; GlcNAc-induced; flow model biofilm induced; Spider biofilm repressed | genomic | Ca22chr3A_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTAATTAACAATGGCTATTAAA
+>PSURA_71061  | Phytophthora ramorum strain Pr102 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | PramPr-102_SC0002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACGCGCGCCATGAGCTCGAGC
+>SPRG_03794  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583198 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCTTCCAACATGGCTGTCACC
+>FOIG_03322  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658275.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATAATCAAAATGGCTCCCATC
+>ASPZODRAFT_18770  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878349 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCTGCAAACATGTCTCTTCCT
+>PITG_16047  | Phytophthora infestans T30-4 | triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase, putative | genomic | DS028158 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTAGAGCGCAATGGTAAACGTG
+>HCDG_00024  | Histoplasma capsulatum H143 | glyceraldehyde-3-phosphate dehydrogenase | genomic | GG692419 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+NNNNNNNNNNNGATGCCCCCATGT
+>TSTA_079090  | Talaromyces stipitatus ATCC 10500 | glyceraldehyde 3-phosphate dehydrogenase GpdA | genomic | EQ962652 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACCGCAATCATGGTTACCAAG
+>AFUB_050490  | Aspergillus fumigatus A1163 | Ortholog(s) have glyceraldehyde-3-phosphate dehydrogenase (NAD+) (phosphorylating) activity and intracellular, extracellular region, membrane localization | genomic | scf_000004_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAATCTACACAATGGCCACTCCC
+>evm.TU.AC2VRR_s00037g49  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC037 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGAAAAACAAAATGTCTGACAAG
+>AFLA_025100  | Aspergillus flavus NRRL3357 | glyceraldehyde 3-phosphate dehydrogenase GpdA | genomic | EQ963473 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTAAACAATGGCTACCCCC
+>SPRG_19528  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583198 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCTTAACACTATGGCTGTCACC
+>I308_05466  | Cryptococcus gattii VGIV IND107 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KN848871 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTTGTCAAG
+>PHYCI_110226  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0270 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCCCCTCACCATGACTGAAGTC
+>PHYCI_21101  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0382 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGGAGGGTCTGATGACGACCGTG
+>PPTG_01098  | Phytophthora parasitica INRA-310 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI669561 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAGATCCATGCATGGCCGGCCGG
+>PIR_G000893  | Pythium irregulare DAOM BR486 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | PirrDAOMBR486_SC0026 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCGTCTCTACAATGGCTGATCAG
+>PIR_G000143  | Pythium irregulare DAOM BR486 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | PirrDAOMBR486_SC0003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACGCGCGCCATGAGCTCCAGC
+>PAR_G008986  | Pythium arrhenomanes ATCC 12531 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase. | genomic | ParrATCC12531_SC01978 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTCGTCCATCATGGCTGCGATC
+>ALNC14_001020  | Albugo laibachii Nc14 | unspecified product | genomic | FR824046 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCAAACGAAGAATGTCGGAAAAG
+>PHYCA_49822  | Phytophthora capsici LT1534 |  glyceraldehyde-3-phosphate dehydrogenase  | genomic | PcapLT1534_SC304 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTACTAACCATGCCTGAGCAA
+>FGRAMPH1_01G19883  | Fusarium graminearum PH-1 | glyceraldehyde 3-phosphate dehydrogenase | genomic | HG970334 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGAGAAAGCCATGGATTTCGAT
+>ASPSYDRAFT_47875  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878590 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACATCCAAACAATGGCTCCCAAG
+>AMAG_11280  | Allomyces macrogynus ATCC 38327 | glyceraldehyde 3-phosphate dehydrogenase, testis-specific | genomic | GG745351 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCAAGTCATCATGGTCGTCAAG
+>AGR95_065690  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_DM.Contig940 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCCAGAAAACATGGTCGTCAAG
+>RO3G_05836  | Rhizopus delemar RA 99-880 | glyceraldehyde-3-phosphate dehydrogenase 3 | genomic | CH476735 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATTTTAAACATGACTGTCAAC
+>PHYCI_18284  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0225 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGCCACTTATTATGGACGTCATC
+>SJAG_03828  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651167 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTCTTTAACAATGGCTGCTCCT
+>QYA_154682  | Mucor circinelloides f. lusitanicus CBS 277.49 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | McirCBS277-49_SC01 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTATATAAAAATGGTTACTCAA
+>AGR57_9217  | Phanerochaete chrysosporium RP-78 | glyceraldehyde-3-phosphate dehydrogenase | genomic | PchrRP-78_SC009 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTACTTGAACATGCCGGTCAGT
+>PPTG_20848  | Phytophthora parasitica INRA-310 | glyceraldehyde-3-phosphate dehydrogenase, glyceraldehyde-3-phosphate dehydrogenase, variant | genomic | KI669561 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCACCATCAACAATGTCTGAGCAA
+>RO3G_15197  | Rhizopus delemar RA 99-880 | glyceraldehyde-3-phosphate dehydrogenase 2 | genomic | CH476746 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCAATTACTATGGTTGCTCAA
+>CIHG_00792  | Coccidioides immitis H538.4 | glyceraldehyde-3-phosphate dehydrogenase | genomic | DS016982 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCCCCGCTGAAATGGATCCCTTT
+>SJAG_06622  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651168 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAATTATCGCAATGGCAGTTCCT
+>PYU1_G005818  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC1402 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAACCTCTGAAGATGGTGGACCAA
+>SJAG_02135  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651166 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTCTTTAACAATGGCTGCTCCT
+>PHYSODRAFT_557387  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159153 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTACTTCCAACCATGCCTGAGCAA
+>sr10940.2  | Sporisorium reilianum SRZ2 | probable Gapd-Glyceraldehyde 3-phosphate dehydrogenase | genomic | FQ311442 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTTTGCTCAAAATGTCCCAGGTC
+>PHYCI_381243  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0159 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTACTACAGTCATGCCTGAGCAA
+>PITG_20970  | Phytophthora infestans T30-4 | triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase, putative | genomic | DS028315 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGACACTGACCATGCCTGAGCAA
+>PHYCA_103586  | Phytophthora capsici LT1534 |  glycerol 3-phosphate dehydrogenase  | genomic | PcapLT1534_SC008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTACTAACCATGCCTGAGCAA
+>ACLA_003290  | Aspergillus clavatus NRRL 1 | glyceraldehyde 3-phosphate dehydrogenase GpdA | genomic | DS027004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACTCTTCACAATGGCTCTTCCT
+>CPC735_029060  | Coccidioides posadasii C735 delta SOWgp | Glyceraldehyde 3-phosphate dehydrogenase | genomic | ACFW01000025 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTCGCAGCCATGGTCGTCAAG
+>ZTRI_2.354  | Zymoseptoria tritici IPO323 | similar to glyceraldehyde 3-phosphate dehydrogenase | genomic | Ztri_chr_2 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGCAATCATGGTCGTCAAC
+>SMAC_11105  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003542270 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATGTCGTATCGATGCCATGCTGG
+>PVE_G011911  | Pythium vexans DAOM BR484 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | PvexDAOMBR484_SC3541 reverse | (geneCodeStart-12 to geneCodeStart+11) | WARNING: Partial sequence retrieved | length=14
+CGTACGACGGCTCG
+>H257_01467  | Aphanomyces astaci strain APO3 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI913115 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCTTCTCACCATGACCCAACAA
+>PHYCI_17514  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0200 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCATTTCCGAAATGACGAGCCAT
+>PPTG_20357  | Phytophthora parasitica INRA-310 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI670093 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATCGGCTCACATGAAGAACGGT
+>PHYCI_88610  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0795 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTTTGACGGTATGGTGGGGCAA
+>PVE_G011040  | Pythium vexans DAOM BR484 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | PvexDAOMBR484_SC1784 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTTTGTCGCCATGCCTGAAGTC
+>NEUTE1DRAFT_95191  | Neurospora tetrasperma FGSC 2508 | glyceraldehyde 3-phosphate dehydrogenase | genomic | GL891305 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACAGTCAACATGGTCGTCAAG
+>FOXG_08006  | Fusarium oxysporum f. sp. lycopersici 4287 | glyceraldehyde 3-phosphate dehydrogenase | genomic | CM000592.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCGATGCTCCCATGTACGTCGTC
+>ASPACDRAFT_1878028  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878970 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTACACAATGGCTCCCAAG
+>SJAG_03903  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651167 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTCTTTAACAATGGCTGCTCCT
+>HCEG_09258  | Histoplasma capsulatum H88 | glyceraldehyde-3-phosphate dehydrogenase | genomic | DS990644 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCCAGCAAACATGGTCGTCAAG
+>UREG_04000  | Uncinocarpus reesii 1704 | glyceraldehyde-3-phosphate dehydrogenase, type I | genomic | CH476616 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAATTCGCTACAATGGTCGTCAAG
+>FOC4_g10012943  | Fusarium oxysporum f. sp. cubense race 4 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | KB726554 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATAATCAAAATGGCTCCCATC
+>PHYBL_156799  | Phycomyces blakesleeanus NRRL 1555(-) | Glyceraldehyde 3-phosphate dehydrogenase | genomic | PblaNRRL1555-_SC43 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTGAATTTACTATGACTGTTAAA
+>PAR_G000759  | Pythium arrhenomanes ATCC 12531 | Glyceraldehyde-3-phosphate dehydrogenase. | genomic | ParrATCC12531_SC00049 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCTCGCGCCATGGCTGACCAG
+>ASPFODRAFT_46401  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878241 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTACACAATGGCTCCCAAG
+>ASPWEDRAFT_174205  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878214 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACTCATTCAAAATGGTCGGCCCC
+>ASPGLDRAFT_30368  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878927 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACTATTCACAATGGCCCCCAAG
+>NFIA_041130  | Aspergillus fischeri NRRL 181 | glyceraldehyde 3-phosphate dehydrogenase | genomic | DS027686 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACAAGTAAGGATGACTGTGAAA
+>PHYSODRAFT_323988  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159151 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCTACGATAGCATGAGCGATGGC
+>Afu5g01970  | Aspergillus fumigatus Af293 | glyceraldehyde-3-phosphate dehydrogenase | genomic | Chr5_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAATCTACACAATGGCCACTCCC
+>AMAG_12934  | Allomyces macrogynus ATCC 38327 | glyceraldehyde 3-phosphate dehydrogenase, testis-specific | genomic | GG745356 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCGCTTCCACCATGACCGTCAAA
+>An16g01830  | Aspergillus niger CBS 513.88 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | An16_A_niger_CBS_513_88 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTAAACAATGGCTCCCAAG
+>MGG_01084  | Magnaporthe oryzae 70-15 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CM001235 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCTGCCCATCATGGTCAAGTGT
+>P174DRAFT_457166  | Aspergillus novofumigatus IBT 16806 | glyceraldehyde 3-phosphate dehydrogenase | genomic | MSZS01000002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACAAGTAAGAATGACTGTGAAA
+>PVE_G007814  | Pythium vexans DAOM BR484 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | PvexDAOMBR484_SC0580 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATATACCAAGATGGCCGCGCTC
+>MELLADRAFT_46086  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883179 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATATATCCATCATGACCGTCCGA
+>CKF44_006000  | Cryptococcus neoformans var. grubii KN99 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CP022327.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTCGTCAAG
+>AMAG_15122  | Allomyces macrogynus ATCC 38327 | glyceraldehyde 3-phosphate dehydrogenase, testis-specific | genomic | GG745364 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACAAGTCACCATGGTCGTTAAG
+>ACLA_064170  | Aspergillus clavatus NRRL 1 | glyceraldehyde 3-phosphate dehydrogenase | genomic | DS027050 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAGGAAAAGAGATGGTCATCAAG
+>SPPG_01243  | Spizellomyces punctatus DAOM BR117 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KQ257451 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCCACACAAACATGACCGTCAAA
+>I314_05806  | Cryptococcus gattii CA1873 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KN848906 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTTGTCAAG
+>H257_00986  | Aphanomyces astaci strain APO3 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI913115 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACATCACACCATGGCCTTCACT
+>B9J08_001227  | Candida auris strain B8441 | glyceraldehyde-3-phosphate dehydrogenase | genomic | PEKT02000003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTTATACAACATGGCTATTAAC
+>PITG_01939  | Phytophthora infestans T30-4 | glyceraldehyde-3-phosphate dehydrogenase, putative | genomic | DS028119 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCGGCCAAAAAATGGTGGCCATC
+>PHYCA_510737  | Phytophthora capsici LT1534 | unspecified product | genomic | PcapLT1534_SC066 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATATAAATCGACATGGTTAACGTC
+>PPTG_09645  | Phytophthora parasitica INRA-310 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI669578 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCATATCCACAATGGCCTTCCGT
+>YGR192C  | Saccharomyces cerevisiae S288c | glyceraldehyde-3-phosphate dehydrogenase (phosphorylating) TDH3 | genomic | BK006941 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAACAAACAAAATGGTTAGAGTT
+>PUG3_G005298  | Pythium ultimum var. sporangiiferum BR650 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | PultBR650_SC0342 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCGGCCGAGATGTTGAAGGAC
+>PSURA_45077  | Phytophthora ramorum strain Pr102 | unspecified product | genomic | PramPr-102_SC0023 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGTCGGAGCAAGTCGCCATCGGT
+>PIW_G010863  | Pythium iwayamai DAOM BR242034 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | PiwaDAOMBR242034_SC02663 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCGGCCGAGATGCTCAAGGAC
+>YJL052W  | Saccharomyces cerevisiae S288c | glyceraldehyde-3-phosphate dehydrogenase (phosphorylating) TDH1 | genomic | BK006943 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACAAAACAAAATGATCAGAATT
+>UMAG_02491  | Ustilago maydis 521 | glyceraldehyde 3-phosphate dehydrogenase (isoform A), glyceraldehyde 3-phosphate dehydrogenase (isoform B) | genomic | CM003144 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTCTTCCATAATGTCTCAGGTC
+>NFIA_040150  | Aspergillus fischeri NRRL 181 | glyceraldehyde 3-phosphate dehydrogenase GpdA | genomic | DS027686 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAATCTACACAATGGCCACTCCC
+>CLUG_04409  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408080 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGGAAGGTTTGATGACCACTGTC
+>B9J08_003306  | Candida auris strain B8441 | glyceraldehyde-3-phosphate dehydrogenase | genomic | PEKT02000007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATAATTTCAACATGGTCTCTATT
+>PCH_Pc21g14560  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c21 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTAAACGCAATCATGGTTGTCCAG
+>SDRG_09208  | Saprolegnia diclina VS20 | glyceraldehyde-3-phosphate dehydrogenase | genomic | JH767160 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCTTCCACAATGGCGCAAGTC
+>PHYCA_510736  | Phytophthora capsici LT1534 | unspecified product | genomic | PcapLT1534_SC066 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCAATTCATCATGGCCTTCCGT
+>PHYSODRAFT_333509  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159155 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCTACGATAGCATGAGCGATGGC
+>ACLA_004210  | Aspergillus clavatus NRRL 1 | glyceraldehyde 3-phosphate dehydrogenase | genomic | DS027004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTCCCAGATGATGCCTGTCCTT
+>PITG_19493  | Phytophthora infestans T30-4 | triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase | genomic | DS028224 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCACCAAGTACATGGAATACATG
+>PSURA_71506  | Phytophthora ramorum strain Pr102 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | PramPr-102_SC0023 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCCCACAAACCATGTCTGAAGTC
+>PHYCI_12514  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | PcinCBS144-22_SC0100 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGGAGGGTTTGATGACGACTGTA
+>NEUDI_18702  | Neurospora discreta FGSC 8579 | Glyceraldehyde 3-phosphate dehydrogenase | genomic | NdisFGSC8579_SC010 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAACAGTCAACATGGTCGTCAAG
+>PHYCA_20530  | Phytophthora capsici LT1534 | unspecified product | genomic | PcapLT1534_SC066 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATATAAATCGCCATGGTTAACGTC
+>AO090003001322  | Aspergillus oryzae RIB40 | Predicted glyceraldehyde-3-phosphate dehydrogenase with role in glycolysis | genomic | Chr2_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTAAACAATGGCTACCCCC
+>RO3G_08033  | Rhizopus delemar RA 99-880 | glyceraldehyde-3-phosphate dehydrogenase 2 | genomic | CH476737 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATATAATTAAAAATGGTTGTTCAA
+>PITG_22103  | Phytophthora infestans T30-4 | triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase, putative | genomic | DS029233 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTAGAGCGCAATGGTAAACGTG
+>SPRG_15410  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583407 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCCCTTCGCCATGCAAGCCGCC
+>C3_06870W_B  | Candida albicans SC5314_B | NAD-linked glyceraldehyde-3-phosphate dehydrogenase; binds fibronectin, laminin; at cell surface; antigenic in infection; farnesol-repressed; stationary phase-enriched; GlcNAc-induced; flow model biofilm induced; Spider biofilm repressed | genomic | Ca22chr3B_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTAATTAACAATGGCTATTAAA
+>SJAG_02945  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651167 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTCTTTAACAATGGCTGCTCCT
+>SMAC_06203  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546168 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACAGTCAAAATGGTCGTCAAG
+>PIW_G008687  | Pythium iwayamai DAOM BR242034 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | PiwaDAOMBR242034_SC01599 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGCTCACGGGCATGGCGTTCCGC
+>PHYCI_17268  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0193 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATTATTTGCTATGAGCTGCCTG
+>PHYCA_504523  | Phytophthora capsici LT1534 |  glyceraldehyde 3-phosphate dehydrogenase  | genomic | PcapLT1534_SC008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTACTAACCATGCCTGAGCAA
+>SPBC32F12.11  | Schizosaccharomyces pombe 972h- | glyceraldehyde-3-phosphate dehydrogenase Tdh1  | genomic | Spom972h_chrII forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTTGATTCAAAATGGCAATTCCT
+>FFUJ_13490  | Fusarium fujikuroi IMI 58289 | probable glyceraldehyde 3-phosphate dehydrogenase (ccg-7) | genomic | HF679026 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAATAATCAAAATGGCTCCCATC
+>CNBG_1866  | Cryptococcus deuterogattii R265 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KQ410560 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTTGTCAAG
+>FOMG_03769  | Fusarium oxysporum f. sp. melonis 26406 | glyceraldehyde 3-phosphate dehydrogenase | genomic | JH659330.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATAATCAAAATGGCTCCCATC
+>PHYSODRAFT_354375  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159153 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTACTGCAACCATGCCTGAGCAA
+>ATEG_10199  | Aspergillus terreus NIH2624 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CH476609 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAATAGAGCAAATGCCCGCTAAA
+>AN8041  | Aspergillus nidulans FGSC A4 | Glyceraldehyde-3-phosphate dehydrogenase with a predicted role in gluconeogenesis and glycolysis | genomic | ChrII_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAGACATCACAATGGCTCCCAAG
+>CC1G_09117  | Coprinopsis cinerea okayama7#130 | glyceraldehyde 3-phosphate dehydrogenase | genomic | AACS02000010 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCAGGTCTACATGTTCAAATAC
+>PAAG_08468  | Paracoccidioides lutzii Pb01 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KN294026 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAACAGCTATAATGGTCGTCAAG
+>PHYCI_293986  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0270 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTACTACAGCCATGCCTGAGCAA
+>CAGL0J00451g  | Candida glabrata CBS 138 | Putative glyceraldehyde-3-phosphate dehydrogenase; protein differentially expressed in azole resistant strain; expression downregulated in biofilm vs planktonic cell culture | genomic | ChrJ_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTAACTTCAAAAATGGTCAGAGTT
+>MELLADRAFT_76055  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883172 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATATATCCATCATGACCGTCCGA
+>PPTG_17072  | Phytophthora parasitica INRA-310 | hypothetical protein | genomic | KI669624 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACGCTTCCGGATGGCCTTCTTG
+>PITG_19961  | Phytophthora infestans T30-4 | glyceraldehyde-3-phosphate dehydrogenase | genomic | DS028252 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGGAGAGTCTGATGACGACGGTG
+>PMAA_039680  | Talaromyces marneffei ATCC 18224 | glyceraldehyde 3-phosphate dehydrogenase GpdA | genomic | DS995904 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACCGCAATCATGGTTACCAAG
+>H310_00363  | Aphanomyces invadans NJM9701 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KI913952 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCGATCCACCATGGCCTTCTCT
+>CAGL0G09383g  | Candida glabrata CBS 138 | Putative glyceraldehyde-3-phosphate dehydrogenase; increased protein abundance in azole resistant strain; expression upregulated in biofilm vs planktonic cell culture; upregulated in hypoxia | genomic | ChrG_C_glabrata_CBS138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAACATCAAAAATGGTTAGAATT
+>PHYCI_17267  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0193 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATTATTTGCAATGAGCTGCCTG
+>FOZG_03691  | Fusarium oxysporum Fo47 | glyceraldehyde 3-phosphate dehydrogenase | genomic | JH717897.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAATAATCAAAATGGCTCCCATC
+>FOC1_g10014196  | Fusarium oxysporum f. sp. cubense race 1 | Glyceraldehyde-3-phosphate dehydrogenase | genomic | KB730248 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTACAATCAAAATGGCTCCCATC
+>PITG_01938  | Phytophthora infestans T30-4 | glyceraldehyde-3-phosphate dehydrogenase | genomic | DS028119 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGACCCGTTCATGGACCTGGAG
+>ASPNIDRAFT_56485  | Aspergillus niger ATCC 1015 | GPDA glyceraldehyde 3-phosphate dehydrogenase | genomic | ACJE01000013 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTAAACAATGGCTCCCAAG
+>TREMEDRAFT_46109  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711546 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCACTCTCACCATGGTCGTCAAA
+>M_BR32_EuGene_00029811  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCTGCCCATCATGGTCAAGTGT
+>NCU01528  | Neurospora crassa OR74A | glyceraldehyde 3-phosphate-dehydrogenase | genomic | CM002237 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACAGTCAACATGGTCGTCAAG
+>AFUB_049500  | Aspergillus fumigatus A1163 | Ortholog(s) have glyceraldehyde-3-phosphate dehydrogenase (NAD+) (phosphorylating) activity and intracellular, extracellular region, membrane localization | genomic | scf_000004_A_fumigatus_A1163 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACAAGCAGAAATGACGGTGAAA
+>SDRG_15694  | Saprolegnia diclina VS20 | glyceraldehyde 3-phosphate dehydrogenase | genomic | JH767229 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCCCTTCGCCATGCAAGCCGCC
+>MGL_0961  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGACAGACATAATGGTGAACGTG
+>PHYSODRAFT_285407  | Phytophthora sojae strain P6497 | glyceraldehyde-3-phosphate dehydrogenase | genomic | JH159153 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAGCCTAGCCATGGTCAACGTC
+>PHYBL_76956  | Phycomyces blakesleeanus NRRL 1555(-) | Glyceraldehyde 3-phosphate dehydrogenase | genomic | PblaNRRL1555-_SC03 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAATTTCTAACATGCCTATCAAC
+>CNF03160  | Cryptococcus neoformans var. neoformans JEC21 | glyceraldehyde-3-phosphate dehydrogenase | genomic | AE017346.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTCGTCAAG
+>PSURA_71508  | Phytophthora ramorum strain Pr102 | unspecified product | genomic | PramPr-102_SC0023 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACAACTAGCCATGTCGGAGCAA
+>CPSG_00670  | Coccidioides posadasii str. Silveira | glyceraldehyde-3-phosphate dehydrogenase | genomic | GL636486 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTCGCAGCCATGGTCGTCAAG
+>BDEG_06666  | Batrachochytrium dendrobatidis JEL423 | glyceraldehyde-3-phosphate dehydrogenase | genomic | BdenJEL423_SC10 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAACATCGCAATGGTCGTTCAA
+>PHYCI_231014  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0066 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGGCGCGCCACATGAGCTCCGGC
+>PAG1_G006623  | Pythium aphanidermatum DAOM BR444 | Triosephosphate isomerase/glyceraldehyde-3-phosphate dehydrogenase. | genomic | PaphDAOMBR444_SC0289 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCCTCCTCCCAATGGCTGCCATC
+>ALNC14_111410  | Albugo laibachii Nc14 | unspecified product | genomic | FR824314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACACTTGTAAAATGTATTCCTTT
+>PABG_00022  | Paracoccidioides brasiliensis Pb03 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KN305531 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAACAGCTATCATGGTCGTCAAG
+>CGB_F2310W  | Cryptococcus gattii WM276 | glyceraldehyde-3-phosphate dehydrogenase | genomic | CP000291 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTTGTCAAG
+>I306_00181  | Cryptococcus gattii EJB2 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KN848550 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCATAAATACAATGGTTGTCAAG
+>CIMG_06404  | Coccidioides immitis RS | glyceraldehyde-3-phosphate dehydrogenase | genomic | GG704912 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTCGCAGCCATGGTCGTCAAG
+>CPAG_03767  | Coccidioides posadasii RMSCC 3488 | glyceraldehyde-3-phosphate dehydrogenase | genomic | DS268110 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTCGCAGCCATGGTCGTCAAG
+>PHYSODRAFT_383924  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159159 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGCGCTCCAGGTCGTGCACGACG
+>PHYSODRAFT_285579  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159153 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTACTGCAACCATGCCTGAGCAA
+>PHYCA_103655  | Phytophthora capsici LT1534 |  glyceraldehyde-3-phosphate dehydogenase  | genomic | PcapLT1534_SC008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCTACACCGAGGAGGCTGTCGTT
+>BC1G_11968  | Botrytis cinerea B05.10 | glyceraldehyde 3-phosphate dehydrogenase | genomic | BcinB05-10_SC92 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCGTTCTCAGAATGGCTCCTACT
+>ASPVEDRAFT_45548  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878134 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACATCCAAACAATGGCTCCCAAG
+>SDRG_11466  | Saprolegnia diclina VS20 | glyceraldehyde 3-phosphate dehydrogenase | genomic | JH767173 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACAGCACGCCCATGTACGTCATG
+>PHYCI_231000  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0066 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGTTTTTTAAGTTGGCTACACG
+>P170DRAFT_453634  | Aspergillus steynii IBT 23096 | glyceraldehyde 3-phosphate dehydrogenase | genomic | MSFO01000002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACCATCACAATGGCCACCAAG
+>PYU1_G009416  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2025 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCGATCCACGATGGCTGCCATC
+>PITG_16048  | Phytophthora infestans T30-4 | triosephosphate isomerase | genomic | DS028158 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATATCTATAATGTCTTTCCGT
+>PHYCA_504528  | Phytophthora capsici LT1534 |  glyceraldehyde-3-phosphate dehydrogenase  | genomic | PcapLT1534_SC008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTACTAACCATGCCTGAGCAA
+>ASPBRDRAFT_196232  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878684 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCTAAACAATGGCTCCCAAG
+>SDRG_09213  | Saprolegnia diclina VS20 | glyceraldehyde 3-phosphate dehydrogenase | genomic | JH767160 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGCTCACGGGCATGGCGTTCCGC
+>P174DRAFT_509684  | Aspergillus novofumigatus IBT 16806 | glyceraldehyde-3-phosphate dehydrogenase | genomic | MSZS01000002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAATCTACACAATGGCCACTCCC
+>SJAG_00027  | Schizosaccharomyces japonicus yFS275 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE651166 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCAGATTAACAATGGCTGCTCCT
+>PADG_02411  | Paracoccidioides brasiliensis Pb18 | glyceraldehyde-3-phosphate dehydrogenase | genomic | KN275959 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAACAGCTATCATGGTCGTCAAG
+>SOCG_04474  | Schizosaccharomyces octosporus yFS286 | glyceraldehyde-3-phosphate dehydrogenase Tdh1 | genomic | KE503206 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAACATTCATCATGGCAATTCCT

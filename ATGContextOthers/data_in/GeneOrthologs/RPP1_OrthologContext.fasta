@@ -1,0 +1,302 @@
+>CNAG_00655  | Cryptococcus neoformans var. grubii H99 | large subunit acidic ribosomal protein P1 | genomic | CP003820.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGTATCAAAAATGGTGAGCATG
+>AMAG_06195  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745338 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCCAACAACATGTCGCAGTCG
+>PAR_G009008  | Pythium arrhenomanes ATCC 12531 | Ribosomal protein P1. | genomic | ParrATCC12531_SC01992 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGCACCCGACCATGGCGATCTCC
+>SPAC644.15  | Schizosaccharomyces pombe 972h- | 60S acidic ribosomal protein A1  | genomic | Spom972h_chrI forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACTGGTCAAAATGTCTGCATCT
+>YALI0_B21252g  | Yarrowia lipolytica CLIB122 | YALI0B21252p | genomic | CR382128 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACACAACAATAATGTCACAGTCT
+>UREG_01946  | Uncinocarpus reesii 1704 | predicted protein | genomic | CH476615 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGCAATTGATGATGCGCCGTGAA
+>PNEJI1_002076  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000128 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAATAACAATAGATGTCAGCGGAA
+>CPAG_09639  | Coccidioides posadasii RMSCC 3488 | hypothetical protein | genomic | DS268114 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCATCTTCAAAATGTCTAACCCT
+>NEUTE1DRAFT_119411  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891302 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACCATCAAAATGTCTACTGCT
+>HCDG_01694  | Histoplasma capsulatum H143 | hypothetical protein | genomic | GG692420 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCTCTCGCAATGTCTACCGCC
+>CNBG_1274  | Cryptococcus deuterogattii R265 | conserved hypothetical protein | genomic | KQ410559 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGTATCAAAAATGGTGAGCAAA
+>YDL130W  | Saccharomyces cerevisiae S288c | ribosomal protein P1B | genomic | BK006938 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTAAGAAGAAAATGTCTGACTCT
+>YALI0_B12804g  | Yarrowia lipolytica CLIB122 | YALI0B12804p | genomic | CR382128 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACAAACGAAAATGTCTGCTGAC
+>PIW_G001714  | Pythium iwayamai DAOM BR242034 | 60S acidic ribosomal protein p1 | genomic | PiwaDAOMBR242034_SC00143 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTTTGAAACCATGTCTTTCGCC
+>PAR_G001940  | Pythium arrhenomanes ATCC 12531 | 60S acidic ribosomal protein p1. | genomic | ParrATCC12531_SC00167 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTTTGAAACCATGGTGGCCATC
+>NEUDI_160035  | Neurospora discreta FGSC 8579 | unspecified product | genomic | NdisFGSC8579_SC001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACCATCAAAATGTCTACTGCT
+>C1_03010W_A  | Candida albicans SC5314 | Conserved acidic ribosomal protein; likely role in regulation of translation elongation; interacts with Rpp2B; 1 of 4 similar C. albicans ribosomal proteins (Rpp1A, Rpp1Bp, Rpp2A, Rpp2B); Hap43-induced; Spider biofilm repressed | genomic | Ca22chr1A_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCTTATTACAATGTCTACTGAA
+>P170DRAFT_511586  | Aspergillus steynii IBT 23096 | hypothetical protein | genomic | MSFO01000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCATCATGTCTACTGCT
+>FVEG_03101  | Fusarium verticillioides 7600 | 60S acidic ribosomal protein P1 | genomic | CM000582.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>QYA_134221  | Mucor circinelloides f. lusitanicus CBS 277.49 | 60s acidic ribosomal protein P1 | genomic | McirCBS277-49_SC05 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTAGCATGTCTGCTGAACTCGCT
+>FOMG_06384  | Fusarium oxysporum f. sp. melonis 26406 | 60S acidic ribosomal protein P1 | genomic | JH659332.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>ASPBRDRAFT_44955  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878686 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>PIR_G007642  | Pythium irregulare DAOM BR486 | 60S acidic ribosomal protein P1 | genomic | PirrDAOMBR486_SC0610 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAAAAGCCATCATGTCTATCAGC
+>AN5719  | Aspergillus nidulans FGSC A4 | Ortholog(s) have protein kinase activator activity, structural constituent of ribosome activity, role in cytoplasmic translation, positive regulation of protein kinase activity and cytosolic large ribosomal subunit localization | genomic | ChrV_A_nidulans_FGSC_A4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCATCGACACCATGTCTACCGCC
+>PITG_03486  | Phytophthora infestans T30-4 | conserved hypothetical protein | genomic | DS028121 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGACGCAACCATGTCCTTCGCC
+>NFIA_017860  | Aspergillus fischeri NRRL 181 | 60S acidic ribosomal protein P1 | genomic | DS027688 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>ASPTUDRAFT_72297  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878176 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>H257_10853  | Aphanomyces astaci strain APO3 | hypothetical protein | genomic | KI913143 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCACTCGGTGTAGGAACCAACCG
+>QYA_175932  | Mucor circinelloides f. lusitanicus CBS 277.49 | 60s acidic ribosomal protein P1 | genomic | McirCBS277-49_SC01 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCTACATAGTATGTCTGCCGAA
+>ZTRI_12.270  | Zymoseptoria tritici IPO323 | hypothetical protein | genomic | Ztri_chr_12 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGCCTGAGGCATGAGATCTACG
+>RO3G_12617  | Rhizopus delemar RA 99-880 | 60S acidic ribosomal protein P1 | genomic | CH476741 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACTATTTAGTATGTCTGCCGAA
+>ASPSYDRAFT_43714  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878585 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCGACCACCATGTCTAACGCC
+>An18g05860  | Aspergillus niger CBS 513.88 | Ortholog(s) have protein kinase activator activity, structural constituent of ribosome activity, role in cytoplasmic translation, positive regulation of protein kinase activity and cytosolic large ribosomal subunit localization | genomic | An18_A_niger_CBS_513_88 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>PYU1_G007826  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2020 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAAAAGCCATCATGTCTATGAGC
+>ASPNIDRAFT_202653  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000020 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>PHYCI_99907  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | 60s acidic ribosomal protein P1 | genomic | PcinCBS144-22_SC0752 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGAAAGGAAGAATGTCGACGATC
+>PHYBL_178444  | Phycomyces blakesleeanus NRRL 1555(-) | 60s acidic ribosomal protein P1 | genomic | PblaNRRL1555-_SC37 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCATCCATCATGTCTGCCGAA
+>SJAG_04020  | Schizosaccharomyces japonicus yFS275 | 60S acidic ribosomal protein Rpp1-1 | genomic | KE651167 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACCACCAGTATGTCTGCTTCT
+>FOZG_10775  | Fusarium oxysporum Fo47 | 60S acidic ribosomal protein P1 | genomic | JH717902.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>CIMG_04018  | Coccidioides immitis RS | 60S acidic ribosomal protein P1 | genomic | GG704916 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCATCTTCAAAATGTCTAACCCT
+>PGTG_15249  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | large subunit ribosomal protein LP1 | genomic | DS178322 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTACCCATTCCAATGGCCGAATTA
+>NCU08960  | Neurospora crassa OR74A | hypothetical protein | genomic | CM002240 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACCATCAAAATGTCTACTGCT
+>RO3G_13540  | Rhizopus delemar RA 99-880 | 60S acidic ribosomal protein P1 | genomic | CH476743 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTTATTATAGCATGTCTGCCGAA
+>AO090001000485  | Aspergillus oryzae RIB40 | Ortholog(s) have protein kinase activator activity, structural constituent of ribosome activity, role in cytoplasmic translation, positive regulation of protein kinase activity and cytosolic large ribosomal subunit, nucleus localization | genomic | Chr2_A_oryzae_RIB40 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCGACCACCATGTCTACTGCC
+>P174DRAFT_370658  | Aspergillus novofumigatus IBT 16806 | ribosomal protein 60S | genomic | MSZS01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>FOC4_g10013434  | Fusarium oxysporum f. sp. cubense race 4 | 60S acidic ribosomal protein P1 | genomic | KB726993 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>HpaG802028  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0010 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTGACGCACCATGTCCTTCGCC
+>PVE_G000351  | Pythium vexans DAOM BR484 | Acidic ribosomal protein P1 | genomic | PvexDAOMBR484_SC0008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTTTAGCACCATGTCGTTCGCT
+>PYU1_G002236  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCTGAAACCATGTCTTTCGCC
+>evm.TU.AC2VRR_s00187g81  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC187 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTATCTGCGGTAATGCCTCTGTCC
+>SPCP1E11.09c  | Schizosaccharomyces pombe 972h- | 60S acidic ribosomal protein Rpp1-3  | genomic | Spom972h_chrIII reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAGGCGTTAAGATGTCTGCTTCT
+>HCAG_05533  | Histoplasma capsulatum NAm1 | predicted protein | genomic | CH476659 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCTCTCGCAATGTCTACCGCC
+>AGR57_15123  | Phanerochaete chrysosporium RP-78 | Ribosomal protein 60S | genomic | PchrRP-78_SC028 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGACGATTCCAAATGGTGAGACGC
+>PADG_08244  | Paracoccidioides brasiliensis Pb18 | 60S acidic ribosomal protein P1 | genomic | KN275971 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCTCTCACAATGTCTAACTCC
+>PVE_G005917  | Pythium vexans DAOM BR484 | Ribosomal protein P1 | genomic | PvexDAOMBR484_SC0356 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTTCTTCACCATGCACCACCAC
+>I314_00209  | Cryptococcus gattii CA1873 | 60S acidic ribosomal protein P1 | genomic | KN848889 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGTTGTCGAAAATGCCGATCCAT
+>SPBC3B9.13c  | Schizosaccharomyces pombe 972h- | 60S acidic ribosomal protein A3  | genomic | Spom972h_chrII reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCAACACCAAAATGTCTGCCTCC
+>PAAG_07841  | Paracoccidioides lutzii Pb01 | hypothetical protein | genomic | KN294018 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCTCTCACAATGTCTAACTCC
+>ACLA_027740  | Aspergillus clavatus NRRL 1 | 60S acidic ribosomal protein P1 | genomic | DS027059 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCCGACCACCATGTCTACTGCC
+>CNBA6160  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000040 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCCTGTCGAAAATGCCGATCCAG
+>CLUG_04463  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408080 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTAGTTCAAAATGTCTACTGAA
+>SPRG_00459  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583189 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAAGAACGATGGCTTTGACC
+>PHYBL_132288  | Phycomyces blakesleeanus NRRL 1555(-) | 60s acidic ribosomal protein P1 | genomic | PblaNRRL1555-_SC06 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCTTGTAGCATGTCTGCCGAA
+>SMAC_05520  | Sordaria macrospora k-hell | 60S acidic ribosomal protein P1 | genomic | NW_003546220 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACCATCAAAATGTCTACTGCT
+>H310_08026  | Aphanomyces invadans NJM9701 | hypothetical protein | genomic | KI913967 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTGATTTAGTATGTCGATCGCT
+>PABG_07751  | Paracoccidioides brasiliensis Pb03 | 60S acidic ribosomal protein P1 | genomic | KN305558 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCTCTCACAATGTCTAACTCC
+>YDL081C  | Saccharomyces cerevisiae S288c | ribosomal protein P1A | genomic | BK006938 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACAAGAAGAAATGTCTACTGAA
+>HpaG802692  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0014 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGAACGAACGGAATGGCGACGACG
+>SPPG_08261  | Spizellomyces punctatus DAOM BR117 | hypothetical protein | genomic | KQ257469 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGTCTTTTGAAATGTCTTTCAAC
+>PPTG_14724  | Phytophthora parasitica INRA-310 | hypothetical protein | genomic | KI669601 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGACGCAACCATGTCCTTCGCC
+>PHYCI_405562  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGACGCGACCATGTCCTTCGCC
+>P168DRAFT_304422  | Aspergillus campestris IBT 28561 | hypothetical protein | genomic | MSFM01000006 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCCGACACCATGTCTACTGCC
+>SS1G_10627  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476636 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGATATTCAAAATGTCTAACGCA
+>SDRG_03437  | Saprolegnia diclina VS20 | hypothetical protein | genomic | JH767139 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGGATGACACAATGGGCGAGAGC
+>RO3G_07886  | Rhizopus delemar RA 99-880 | 60S acidic ribosomal protein P1 | genomic | CH476736 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTACTTTAGCATGTCCGCCGAA
+>PITG_15638  | Phytophthora infestans T30-4 | conserved hypothetical protein | genomic | DS028157 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAGCGGAAGAATGTCGACGATC
+>CC1G_11842  | Coprinopsis cinerea okayama7#130 | 60s acidic ribosomal protein | genomic | AACS02000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGACCTGCCACCATGTCGACCCGC
+>PUG3_G009213  | Pythium ultimum var. sporangiiferum BR650 | unspecified product | genomic | PultBR650_SC0930 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCTGAAACCATGTCTTTCGCC
+>CGB_A7140C  | Cryptococcus gattii WM276 | hypothetical protein | genomic | CP000286 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGTGTCGAAAATGCCGATCCAT
+>ASPFODRAFT_167942  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878245 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>FGRAMPH1_01G07931  | Fusarium graminearum PH-1 | 60s acidic ribosomal p1 | genomic | HG970332 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCATTCACAATGTCTCACGCC
+>AMAG_06166  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745336 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCAAATCAACATGTCCGACATC
+>PHYCA_100241  | Phytophthora capsici LT1534 |  60S acidic ribosomal protein P1  | genomic | PcapLT1534_SC004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGACGCAACCATGTCCTTCGCC
+>PHYCA_502594  | Phytophthora capsici LT1534 |  ribosomal protein P1  | genomic | PcapLT1534_SC001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAGCGGAAGAATGTCGACGATC
+>HCBG_02411  | Histoplasma capsulatum G186AR | hypothetical protein | genomic | GG663365 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCTCTCGCAATGTCTACCGCC
+>AFUB_007210  | Aspergillus fumigatus A1163 | Has domain(s) with predicted structural constituent of ribosome activity, role in translational elongation and ribosome localization | genomic | scf_000001_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>AFLA_127860  | Aspergillus flavus NRRL3357 | 60S acidic ribosomal protein P1 | genomic | EQ963481 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCGACCACCATGTCTACTGCC
+>CNA06350  | Cryptococcus neoformans var. neoformans JEC21 | PRCDNA35, putative | genomic | AE017341.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGTATCAAAAATGGTGAGCGTC
+>SOCG_00639  | Schizosaccharomyces octosporus yFS286 | 60S acidic ribosomal protein Rpp1-1 | genomic | KE503207 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACTGGTCAAAATGTCTGCCTCT
+>C7_03920C_B  | Candida albicans SC5314_B | Conserved acidic ribosomal protein, likely involved in regulation of translation elongation; interacts with Rpp2A; 1 of 4 similar C. albicans ribosomal proteins (Rpp1A, Rpp1B, Rpp2A, Rpp2B); induced by Tbf1; Spider biofilm repressed | genomic | Ca22chr7B_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAGAATAACAATGTCTACTGAA
+>Afu1g06830  | Aspergillus fumigatus Af293 | Putative 60s acidic ribosomal protein superfamily member | genomic | Chr1_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCACCATGTCTACTGCC
+>B9J08_000209  | Candida auris strain B8441 | 60S acidic ribosomal protein P1-B | genomic | PEKT02000001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCATATATAATGTCTGCTGAA
+>MGG_06185  | Magnaporthe oryzae 70-15 | hypothetical protein | genomic | CM001233 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACAATCAAAATGTCTACCTCC
+>ASPZODRAFT_63322  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878340 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCGACCACCATGTCTACCGCC
+>CPSG_03257  | Coccidioides posadasii str. Silveira | hypothetical protein | genomic | GL636489 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCATCTTCAAAATGTCTAACCCT
+>AMAG_11714  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745350 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCCAACAACATGTCGCAGTCG
+>TREMEDRAFT_73662  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711531 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTGCCGTTACGATGGTGAGTGCC
+>QYA_80744  | Mucor circinelloides f. lusitanicus CBS 277.49 | 60s acidic ribosomal protein P1 | genomic | McirCBS277-49_SC04 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATCATAATCATGTCTGCCGAA
+>RO3G_08629  | Rhizopus delemar RA 99-880 | 60S acidic ribosomal protein P1 | genomic | CH476737 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGAAGTTGATCATGTCTGCCGAA
+>PIW_G003653  | Pythium iwayamai DAOM BR242034 | 60S acidic ribosomal protein P1 | genomic | PiwaDAOMBR242034_SC00409 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAAAGCCATCATGCCTATCAGC
+>CAGL0J06374g  | Candida glabrata CBS 138 | Ortholog(s) have structural constituent of ribosome activity, role in cytoplasmic translation and cytosolic large ribosomal subunit localization | genomic | ChrJ_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATAAGAAGAAATGTCTGACGCT
+>PIR_G001719  | Pythium irregulare DAOM BR486 | unspecified product | genomic | PirrDAOMBR486_SC0062 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTTTGAAACCATGTCTTTCGCC
+>CPC735_003630  | Coccidioides posadasii C735 delta SOWgp | 60S acidic ribosomal protein P1, putative | genomic | ACFW01000030 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCATCTTCAAAATGTCTAACCCT
+>CAGL0I00814g  | Candida glabrata CBS 138 | Ortholog(s) have protein kinase activator activity, structural constituent of ribosome activity, role in cytoplasmic translation, positive regulation of protein kinase activity and cytosolic large ribosomal subunit localization | genomic | ChrI_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAATTAAAGAAATGTCTACTGAA
+>ASPWEDRAFT_26156  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878211 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCGACCACCATGTCTACCGCC
+>CIHG_06538  | Coccidioides immitis H538.4 | 60S acidic ribosomal protein P1 | genomic | DS017006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCATCTTCAAAATGTCTAACCCT
+>TRIREDRAFT_123850  | Trichoderma reesei QM6a | ribosomal protein P1 | genomic | GL985082 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACCACACACAATGTCTACCGCC
+>C7_03920C_A  | Candida albicans SC5314 | Conserved acidic ribosomal protein, likely involved in regulation of translation elongation; interacts with Rpp2A; 1 of 4 similar C. albicans ribosomal proteins (Rpp1A, Rpp1B, Rpp2A, Rpp2B); induced by Tbf1; Spider biofilm repressed | genomic | Ca22chr7A_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAGAATAACAATGTCTACTGAA
+>H310_05609  | Aphanomyces invadans NJM9701 | hypothetical protein | genomic | KI913960 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTAAAGGGAGCTATGGCCATCACC
+>ASPCADRAFT_205818  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907497 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCATCATGTCTACTGCC
+>B9J08_003250  | Candida auris strain B8441 | 60S acidic ribosomal protein P1-A | genomic | PEKT02000007 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGTTATTCGTGATGTCTACTGAA
+>TSTA_072360  | Talaromyces stipitatus ATCC 10500 | 60S acidic ribosomal protein P1 | genomic | EQ962652 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACCGACCACCATGTCTACCGCC
+>AMAG_09207  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745344 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCATCATCACCATGTCCGGCATC
+>ATEG_02935  | Aspergillus terreus NIH2624 | predicted protein | genomic | CH476597 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCATCGACACAATGTCTACTGCT
+>HCEG_01554  | Histoplasma capsulatum H88 | hypothetical protein | genomic | DS990636 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCTCTCGCAATGTCTACCGCC
+>FOIG_09266  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658286.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>FFUJ_07078  | Fusarium fujikuroi IMI 58289 | probable RPP1A-60S large subunit acidic ribosomal protein a1 | genomic | HF679027 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>AGR95_023220  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_ZT.Contig181 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCTCTCGCAATGTCTACCGCC
+>SOCG_02721  | Schizosaccharomyces octosporus yFS286 | 60S acidic ribosomal protein Rpp1-3 | genomic | KE503206 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGCAATTAAAATGTCTGCCTCC
+>PCH_Pc13g03050  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c13 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCACCCGTCGACATGTCTACCGCC
+>UMAG_10956  | Ustilago maydis 521 | putative ribosomal protein P1 | genomic | CM003140 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCATAGTCAAAATGGCTTCCTCG
+>PSURA_75051  | Phytophthora ramorum strain Pr102 | unspecified product | genomic | PramPr-102_SC0011 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAAGCGGAAGAATGTCGACCATC
+>I308_02870  | Cryptococcus gattii VGIV IND107 | 60S acidic ribosomal protein P1 | genomic | KN848861 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAGTGTCGAAAATGCCGATCCAT
+>FOC1_g10010871  | Fusarium oxysporum f. sp. cubense race 1 | 60S acidic ribosomal protein P1 | genomic | KB730323 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>PMAA_026430  | Talaromyces marneffei ATCC 18224 | 60S acidic ribosomal protein P1 | genomic | DS995899 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCGACCACCATGTCTACCGCC
+>SJAG_01411  | Schizosaccharomyces japonicus yFS275 | 60S acidic ribosomal protein Rpp1-1 | genomic | KE651168 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGGAAGTCAAAATGTCTGCCTCT
+>CKF44_000565  | Cryptococcus neoformans var. grubii KN99 | large subunit acidic ribosomal protein P1 | genomic | CP022321.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGTATCAAAAATGGTGAGCATG
+>PHYSODRAFT_286543  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159156 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAAAAGGAAGAATGTCGACGATC
+>RO3G_15191  | Rhizopus delemar RA 99-880 | 60S acidic ribosomal protein P1 | genomic | CH476746 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACAAATTAATCATGTCTGCCGAA
+>PHYSODRAFT_284244  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159151 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGACGCAACCATGTCCTTCGCC
+>BDEG_05297  | Batrachochytrium dendrobatidis JEL423 | hypothetical protein | genomic | BdenJEL423_SC07 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTCACGTGACATGGTGCACTTG
+>ASPGLDRAFT_78716  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878888 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGGAGACGATGATGGCATCGCAG
+>M_BR32_EuGene_00044271  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACAATCAAAATGTCTACCTCC
+>sr11598  | Sporisorium reilianum SRZ2 | probable RPP1A-60S large subunit acidic ribosomal protein a1 | genomic | FQ311430 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATATCCGTCAAAATGGCTTCTTCG
+>SPRG_10789  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583252 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATTTAGTAGTATGTCGATCGCT
+>MGL_0657  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTAATCAAAAGAATGAGGACTCAC
+>PHYBL_75684  | Phycomyces blakesleeanus NRRL 1555(-) | 60s acidic ribosomal protein P1 | genomic | PblaNRRL1555-_SC02 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTATATACAGCATGTCCGCCGAA
+>C1_03010W_B  | Candida albicans SC5314_B | Conserved acidic ribosomal protein; likely role in regulation of translation elongation; interacts with Rpp2B; 1 of 4 similar C. albicans ribosomal proteins (Rpp1A, Rpp1Bp, Rpp2A, Rpp2B); Hap43-induced; Spider biofilm repressed | genomic | Ca22chr1B_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCTTATTACAATGTCTACTGAA
+>SPPG_00048  | Spizellomyces punctatus DAOM BR117 | 60S acidic ribosomal protein P1 | genomic | KQ257450 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCATCCGTCATGTCTTTGTCC
+>H257_07798  | Aphanomyces astaci strain APO3 | hypothetical protein | genomic | KI913129 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTGATTTAGTATGTCGATCGCT
+>PAG1_G002256  | Pythium aphanidermatum DAOM BR444 | 60S acidic ribosomal protein P1-2. | genomic | PaphDAOMBR444_SC0055 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCGGACCATCATGGTGCTCAGC
+>I306_03400  | Cryptococcus gattii EJB2 | 60S acidic ribosomal protein P1 | genomic | KN848681 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGTGTCGAAAATGCCGATCCAT
+>PPTG_07299  | Phytophthora parasitica INRA-310 | hypothetical protein | genomic | KI669571 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAAGCGGAAGAATGTCGACGATC
+>MELLADRAFT_70870  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883093 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTTCTAGTACAATGGCCGACCTT
+>CLUG_05370  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408082 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACATAAATAATGTCCGAAGCT
+>ASPACDRAFT_78470  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878976 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTCGACCATCATGTCTACTGCT
+>ALNC14_087380  | Albugo laibachii Nc14 | unspecified product | genomic | FR824205 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTATTAGCGGTAATGCCTCTGTCT
+>ASPVEDRAFT_42428  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878129 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCGACCACCATGTCTAACGCC
+>PUG3_G012853  | Pythium ultimum var. sporangiiferum BR650 | Ribosomal protein P1 | genomic | PultBR650_SC2661 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAAAAGCCATCATGTCTATGAGC
+>FOXG_05032  | Fusarium oxysporum f. sp. lycopersici 4287 | 60S acidic ribosomal protein P1 | genomic | CM000595.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCATTCACAATGTCTCACGCC
+>PAG1_G002389  | Pythium aphanidermatum DAOM BR444 | 60S ribosomal protein P1. | genomic | PaphDAOMBR444_SC0061 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTCTGAAACCATGGCCATCGCT

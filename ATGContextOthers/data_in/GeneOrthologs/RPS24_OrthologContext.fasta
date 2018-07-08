@@ -1,0 +1,230 @@
+>CNAG_01332  | Cryptococcus neoformans var. grubii H99 | small subunit ribosomal protein S24e | genomic | CP003824.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>PHYCI_243298  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | 40S ribosomal protein S24 | genomic | PcinCBS144-22_SC0138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAACAAGCATGGCTGACAAG
+>H310_10518  | Aphanomyces invadans NJM9701 | 40S ribosomal protein | genomic | KI913977 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCCCAGAAAAATGTCTGCCCCC
+>FOIG_04591  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658276.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>ATEG_01848  | Aspergillus terreus NIH2624 | 40S ribosomal protein S24 | genomic | CH476595 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCCGCAATCATGGCCGACACT
+>C3_00090W_A  | Candida albicans SC5314 | Predicted ribosomal protein; hyphal downregulated; repressed upon phagocytosis by murine macrophage; transcriptionally activated by Tbf1; Spider biofilm repressed | genomic | Ca22chr3A_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAAATCAACAATGAGTGACGCC
+>CNBG_0896  | Cryptococcus deuterogattii R265 | 40S ribosomal protein S24 | genomic | KQ410558 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>CND04480  | Cryptococcus neoformans var. neoformans JEC21 | structural constituent of ribosome, putative | genomic | AE017344.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>PNEJI1_001339  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000252 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGATATTTATTATGTCAGATTCA
+>SOCG_00405  | Schizosaccharomyces octosporus yFS286 | 40S ribosomal protein S24 | genomic | KE503207 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCAAGACCAATATGAGTGAGGCG
+>SJAG_00468  | Schizosaccharomyces japonicus yFS275 | 40S ribosomal protein S24 | genomic | KE651166 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCGTAGTGAAAATGAGTGAGGCC
+>M_BR32_EuGene_00140421  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00036 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAGTCGCAAACATGGCCGACGAT
+>PGTG_09616  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | small subunit ribosomal protein S24e | genomic | DS178288 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTCCTTCAACATGGTATGTCTC
+>FOXG_13739  | Fusarium oxysporum f. sp. lycopersici 4287 | 30S ribosomal protein S24e | genomic | CM000598.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>CPAG_05751  | Coccidioides posadasii RMSCC 3488 | 40S ribosomal protein S24-A | genomic | DS268111 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACCCGCAACCATGGCTGACGCT
+>PHYBL_124718  | Phycomyces blakesleeanus NRRL 1555(-) | 40S ribosomal protein S24 | genomic | PblaNRRL1555-_SC10 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTTGATCAGAATGGTATGTAGG
+>P174DRAFT_445235  | Aspergillus novofumigatus IBT 16806 | 40S ribosomal protein S24 | genomic | MSZS01000008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCACCGCAATCATGGCCGACACT
+>ASPBRDRAFT_48888  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878698 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTTCAACAGGGATGTCCTCCAC
+>ASPGLDRAFT_47632  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878898 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCGACAACCATGGCCGACGCT
+>FOMG_10129  | Fusarium oxysporum f. sp. melonis 26406 | 30S ribosomal protein S24e | genomic | JH659335.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>AGR57_10909  | Phanerochaete chrysosporium RP-78 | 40S ribosomal protein S24 | genomic | PchrRP-78_SC011 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCCAGCAAACCATGGTGAGCACA
+>CIHG_05595  | Coccidioides immitis H538.4 | 40S ribosomal protein S24-A | genomic | DS017000 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACCCGCAACCATGGCTGACGCT
+>UMAG_11411  | Ustilago maydis 521 | ribosomal 40S subunit protein S24 | genomic | CM003145 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATTCGTCAAGATGGTGAGTATG
+>CGB_D7490W  | Cryptococcus gattii WM276 | structural constituent of ribosome | genomic | CP000289 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>BDEG_03370  | Batrachochytrium dendrobatidis JEL423 | 40S ribosomal protein S24 | genomic | BdenJEL423_SC04 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCGCAAGCAGATGGTTGTTGAT
+>UREG_02115  | Uncinocarpus reesii 1704 | 40S ribosomal protein S24-A | genomic | CH476615 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCTCCGCAACCATGGCTGACACT
+>PVE_G003853  | Pythium vexans DAOM BR484 | 40S ribosomal protein S24 | genomic | PvexDAOMBR484_SC0174 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAACGGACATCATGGCTGACAAG
+>CAGL0J03234g  | Candida glabrata CBS 138 | Ortholog(s) have role in maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) and cytosol, nucleolus localization | genomic | ChrJ_C_glabrata_CBS138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACAGCCGAAATGGTATGTTTT
+>AMAG_04977  | Allomyces macrogynus ATCC 38327 | 40S ribosomal protein S24 | genomic | GG745332 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGTTTGCCAAAATGGTCTGTAAC
+>NEUTE1DRAFT_115606  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891302 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGACACCAAGATGGCTGACTCC
+>FGRAMPH1_01G15393  | Fusarium graminearum PH-1 | 40S ribosomal S24 | genomic | HG970333 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>YER074W  | Saccharomyces cerevisiae S288c | ribosomal 40S subunit protein S24A | genomic | BK006939 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATTAAGCAGAAATGGTATGTTAA
+>PUG3_G003294  | Pythium ultimum var. sporangiiferum BR650 | 40S ribosomal protein S24 | genomic | PultBR650_SC0172 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGCGTCGCCAAATGGTAAGCGAT
+>CPC735_042120  | Coccidioides posadasii C735 delta SOWgp | 40S ribosomal protein S24, putative | genomic | ACFW01000035 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACCCGCAACCATGGCTGACGCT
+>HCAG_04418  | Histoplasma capsulatum NAm1 | 40S ribosomal protein S24 | genomic | CH476658 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCTGCAACCATGGCTGAACCT
+>FOC4_g10006223  | Fusarium oxysporum f. sp. cubense race 4 | 40S ribosomal protein S24-B | genomic | KB726995 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>HCEG_05055  | Histoplasma capsulatum H88 | 40S ribosomal protein S24 | genomic | DS990639 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCTGCAACCATGGCTGAACCT
+>NCU07182  | Neurospora crassa OR74A | 40S ribosomal protein S24 | genomic | CM002240 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGACACCAAGATGGCTGACTCC
+>SPBC17G9.07  | Schizosaccharomyces pombe 972h- | 40S ribosomal protein S24 (predicted)  | genomic | Spom972h_chrII forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAATTTCTAAAATGAGTGAGGCC
+>sr10965.2  | Sporisorium reilianum SRZ2 | probable 40S RIBOSOMAL PROTEIN S24 | genomic | FQ311471 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATTCGTCAAGATGGTGAGTACG
+>TSTA_006580  | Talaromyces stipitatus ATCC 10500 | 37S ribosomal protein S24 | genomic | EQ962660 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACCGTTATCATGGCCGACGCT
+>SPRG_03622  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583197 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCCCAATTAAAATGTCCGACAAG
+>PCH_Pc21g12010  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c21 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACACACCAAAATGGCCGACACT
+>An12g00510  | Aspergillus niger CBS 513.88 | Ortholog(s) have role in maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) and cytosol, mitochondrion, nucleolus localization | genomic | An12_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACCTGCAACCATGGCCGACGCT
+>PAR_G001663  | Pythium arrhenomanes ATCC 12531 | 40S ribosomal protein S24. | genomic | ParrATCC12531_SC00135 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGTAGTAAACATGTCTGACAAG
+>PHYSODRAFT_285079  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159152 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAACAAGCATGGCTGACAAG
+>SS1G_00951  | Sclerotinia sclerotiorum 1980 UF-70 | 40S ribosomal protein S24 | genomic | CH476621 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAATCGCAAAAATGGCCGACAAT
+>ASPTUDRAFT_61300  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878179 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACCTGCAACCATGGCCGACGCT
+>ZTRI_3.1043  | Zymoseptoria tritici IPO323 | similar to 40s ribosomal protein s24 | genomic | Ztri_chr_3 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACCGCAATCATGTCGGACTCC
+>I308_00210  | Cryptococcus gattii VGIV IND107 | 30S small subunit ribosomal protein S24e | genomic | KN848855 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>CNBD1840  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000043 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCACAAACAAACATGAACAAACTC
+>SOCG_02584  | Schizosaccharomyces octosporus yFS286 | 40S ribosomal protein S24 | genomic | KE503206 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGTTGCTAAAATGAGTGAGGCC
+>HCBG_00329  | Histoplasma capsulatum G186AR | 40S ribosomal protein S24 | genomic | GG663363 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCTGCAACCATGGCTGAACCT
+>Afu7g02140  | Aspergillus fumigatus Af293 | 40S ribosomal protein S24 | genomic | Chr7_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCACCGCAATCATGGCCGACACT
+>AFUB_088700  | Aspergillus fumigatus A1163 | Has domain(s) with predicted structural constituent of ribosome, nucleotide binding activity, role in translation and ribosome localization | genomic | scf_000008_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCACCGCAATCATGGCCGACACT
+>FOC1_g10005062  | Fusarium oxysporum f. sp. cubense race 1 | 40S ribosomal protein S24-B | genomic | KB730180 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>HCDG_00061  | Histoplasma capsulatum H143 | 40S ribosomal protein S24 | genomic | GG692419 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCTGCAACCATGGCTGAACCT
+>CIMG_07765  | Coccidioides immitis RS | 40S ribosomal protein S24 | genomic | GG704913 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACCCGCAACCATGGCTGACGCT
+>PAAG_06882  | Paracoccidioides lutzii Pb01 | 40S ribosomal protein S24 | genomic | KN294011 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCTGCAATCATGGCTGACGCT
+>C3_00090W_B  | Candida albicans SC5314_B | Predicted ribosomal protein; hyphal downregulated; repressed upon phagocytosis by murine macrophage; transcriptionally activated by Tbf1; Spider biofilm repressed | genomic | Ca22chr3B_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCAAATCAACAATGAGTGACGCC
+>ASPSYDRAFT_161348  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878595 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCACAATAATGGCCGACGCT
+>I306_02406  | Cryptococcus gattii EJB2 | 30S small subunit ribosomal protein S24e | genomic | KN848631 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>CKF44_001184  | Cryptococcus neoformans var. grubii KN99 | small subunit ribosomal protein S24e | genomic | CP022325.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>H257_05331  | Aphanomyces astaci strain APO3 | 40S ribosomal protein | genomic | KI913123 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCCCAGAAAAATGTCTGATAAA
+>PADG_04315  | Paracoccidioides brasiliensis Pb18 | hypothetical protein | genomic | KN275960 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTATTTTGGAGATGGTTAAAAAT
+>PPTG_11004  | Phytophthora parasitica INRA-310 | hypothetical protein | genomic | KI669586 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAACAAGCATGGCTGACAAG
+>MELLADRAFT_92979  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883143 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCTTTTCATCATGGTTAGTCTT
+>ASPNIDRAFT_203246  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000005 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACCTGCAACCATGGCCGACGCT
+>ASPFODRAFT_51838  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878250 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACCTGCAACCATGGCCGACGCT
+>TREMEDRAFT_40258  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711537 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTCGCCCAGTATGGTGAGTGTT
+>I314_01122  | Cryptococcus gattii CA1873 | 30S small subunit ribosomal protein S24e | genomic | KN848890 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGCCCAGCATGGTGAGTTTG
+>FOZG_16213  | Fusarium oxysporum Fo47 | 30S ribosomal protein S24e | genomic | JH717910.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>PHYCA_510887  | Phytophthora capsici LT1534 |  predicted protein  | genomic | PcapLT1534_SC070 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAACAAGCATGGCTGACAAG
+>P170DRAFT_437178  | Aspergillus steynii IBT 23096 | 40S ribosomal protein S24 | genomic | MSFO01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTCCCGCAACAATGGCCGACACT
+>ASPWEDRAFT_112778  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878213 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCACCGCAATCATGGCCGACACT
+>FFUJ_09962  | Fusarium fujikuroi IMI 58289 | probable 40S RIBOSOMAL PROTEIN S24 | genomic | HF679031 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>B9J08_003089  | Candida auris strain B8441 | 40S ribosomal protein S24-A | genomic | PEKT02000007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTATCAACAAGATGGTATGTGAA
+>SPPG_06692  | Spizellomyces punctatus DAOM BR117 | 40S ribosomal protein S24 | genomic | KQ257461 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCAGTACAAGATGGTACGCATG
+>PHYBL_137004  | Phycomyces blakesleeanus NRRL 1555(-) | 40S ribosomal protein S24 | genomic | PblaNRRL1555-_SC30 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTACTGACCATAATGGTATGTGCG
+>ALNC14_093680  | Albugo laibachii Nc14 | unspecified product | genomic | FR824231 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACTTGCAAACATGGCGGAAAAA
+>ASPACDRAFT_63621  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878986 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTTCCAACCATGGCCGACGCT
+>SJAG_02585  | Schizosaccharomyces japonicus yFS275 | 40S ribosomal protein S24 | genomic | KE651166 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCAAGACCAACATGAGTGAGGCA
+>CPSG_09331  | Coccidioides posadasii str. Silveira | 40S ribosomal protein S24-A | genomic | GL636509 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACCCGCAACCATGGCTGACGCT
+>PAG1_G000137  | Pythium aphanidermatum DAOM BR444 | 40S ribosomal protein S24. | genomic | PaphDAOMBR444_SC0002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGTAGTAAACATGGCTGATAAG
+>TRIREDRAFT_81713  | Trichoderma reesei QM6a | hypothetical protein | genomic | GL985082 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCACAGCAACCATGGCGGATAAC
+>FVEG_11169  | Fusarium verticillioides 7600 | 30S ribosomal protein S24e | genomic | CM000586.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGGCAAAAATGGCGGACAAC
+>MGG_10680  | Magnaporthe oryzae 70-15 | 40S ribosomal protein S24 | genomic | CM001234 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAGTCGCAAACATGGCCGACGAT
+>PIW_G010453  | Pythium iwayamai DAOM BR242034 | 40S ribosomal protein S24 | genomic | PiwaDAOMBR242034_SC02393 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCTACTACAGATGTACAAGGTG
+>P168DRAFT_293473  | Aspergillus campestris IBT 28561 | 40S ribosomal protein S24 | genomic | MSFM01000014 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACCGCAACCATGGCCGATACT
+>PIR_G001992  | Pythium irregulare DAOM BR486 | 40S ribosomal protein S24 | genomic | PirrDAOMBR486_SC0076 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACAGAAACTATGGCTGATAAG
+>PSURA_72230  | Phytophthora ramorum strain Pr102 | 40S ribosomal protein S24 | genomic | PramPr-102_SC0113 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAACAAGCATGGCTGACAAG
+>ASPZODRAFT_130027  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878339 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCTGCAACCATGGCCGACACT
+>BC1G_10011  | Botrytis cinerea B05.10 | 40S ribosomal protein S24 | genomic | BcinB05-10_SC68 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAATCGCAAAAATGGCCGACAAT
+>NEUDI_165322  | Neurospora discreta FGSC 8579 | unspecified product | genomic | NdisFGSC8579_SC001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGACACCAAGATGGCTGACTCC
+>PITG_06771  | Phytophthora infestans T30-4 | 40S ribosomal protein S24, putative | genomic | DS028127 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGACAACAAGCATGGCTGACAAG
+>NFIA_114870  | Aspergillus fischeri NRRL 181 | 37S ribosomal protein S24 | genomic | DS027692 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCACCGCAATCATGGCCGACACT
+>PMAA_010580  | Talaromyces marneffei ATCC 18224 | 37S ribosomal protein S24 | genomic | DS995906 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACCTTCATCATGGCCGACGCT
+>ASPVEDRAFT_47842  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878140 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCACAACAATGGCCGACGCT
+>AFLA_071320  | Aspergillus flavus NRRL3357 | 37S ribosomal protein S24 | genomic | EQ963479 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTACCGCAAAAATGGCCGACACT
+>AN9097  | Aspergillus nidulans FGSC A4 | Ortholog(s) have role in maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) and cytosol, mitochondrion, nucleolus localization | genomic | ChrVI_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCACAACCATGGCCGACGCT
+>YALI0_D13728g  | Yarrowia lipolytica CLIB122 | YALI0D13728p | genomic | CR382130 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACTATACAAAATGGTGAGTGAG
+>SPAC17G6.06  | Schizosaccharomyces pombe 972h- | 40S ribosomal protein S24 (predicted)  | genomic | Spom972h_chrI forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTAAGACCAATATGAGTGAGGCG
+>ASPCADRAFT_211618  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907513 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACCTGCAACCATGGCCGACGCT
+>SMAC_06911  | Sordaria macrospora k-hell | 40S ribosomal protein S24 | genomic | NW_003546142 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGACACCAAGATGGCTGACTCC
+>PABG_01154  | Paracoccidioides brasiliensis Pb03 | hypothetical protein | genomic | KN305532 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTATTTTGGAGATGGTTAAAAAT
+>PYU1_G010428  | Pythium ultimum DAOM BR144 | 40S ribosomal protein S24 | genomic | PultDAOMBR144_SC1981 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACAGAAACTATGGCTGATAAG
+>MGL_2960  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000010 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTATCGGATTATGTTCTTATGG
+>ACLA_065380  | Aspergillus clavatus NRRL 1 | 37S ribosomal protein S24 | genomic | DS027053 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCACCTGCAATCATGTCCGACGCT
+>AGR95_034780  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_ZL.Contig1161 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCTGCAACCATGGCTGAACCT
+>HpaG811083  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0145 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAACAACAAGCATGGCTGACAAG
+>AMAG_03660  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745334 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCGCAAGCAGATGGTCGTGGAC
+>YIL069C  | Saccharomyces cerevisiae S288c | ribosomal 40S subunit protein S24B | genomic | BK006942 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGATCAATAAAAATGGTATGTCGA
+>SDRG_10151  | Saprolegnia diclina VS20 | 30S ribosomal protein S24e | genomic | JH767164 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCCCAATTAAAATGTCCGACAAG
+>PHYBL_128586  | Phycomyces blakesleeanus NRRL 1555(-) | 40S ribosomal protein S24 | genomic | PblaNRRL1555-_SC37 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAATCATCAAAATGGTACGTAAG
+>AO090038000592  | Aspergillus oryzae RIB40 | Ortholog(s) have role in maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) and cytosol, mitochondrion, nucleolus localization | genomic | Chr6_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTACCGCAAAAATGGCCGACACT

@@ -1,0 +1,296 @@
+>YIL078W  | Saccharomyces cerevisiae S288c | cytoplasmic threonine--tRNA ligase THS1 | genomic | BK006942 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATAAAACGGAGATGAGTGCTAGT
+>ASPBRDRAFT_171794  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878681 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGGATACAAAATGTCTTCTGAA
+>CPSG_06536  | Coccidioides posadasii str. Silveira | threonyl-tRNA synthetase | genomic | GL636496 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGGTTCTCAACATGGCTGGAGAA
+>PAR_G005610  | Pythium arrhenomanes ATCC 12531 | Threonyl-tRNA synthetase. | genomic | ParrATCC12531_SC00800 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGATCGATATCATGATTACCGAT
+>AN5662  | Aspergillus nidulans FGSC A4 | Ortholog(s) have cytosol localization | genomic | ChrV_A_nidulans_FGSC_A4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGGTGCAATTATGGCTTCTGAT
+>ASPSYDRAFT_864694  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878585 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGAGTATAACTATGGCTTCCGAC
+>sr15723  | Sporisorium reilianum SRZ2 | probable THS1-threonyl tRNA synthetase, cytosolic | genomic | FQ311438 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGATTGCGATCATGTCGTCGTCA
+>UREG_05490  | Uncinocarpus reesii 1704 | threonyl-tRNA synthetase | genomic | CH476617 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGCTATCGATATGGGCGAAGAA
+>PYU1_G006265  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2028 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGCAGGAAGGATGTTGCGCCAC
+>CNB00480  | Cryptococcus neoformans var. neoformans JEC21 | threonine-tRNA ligase, putative | genomic | AE017342.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGTATGCTCCGCAGG
+>PHYCI_325290  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0194 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCACAGCCAGCATGAGCAGCGAG
+>SPRG_15995  | Saprolegnia parasitica CBS 223.65 | threonyl-tRNA synthetase | genomic | KK583409 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCGCTCTCTGCATGGCCGGCCGC
+>QYA_73796  | Mucor circinelloides f. lusitanicus CBS 277.49 | Threonyl-tRNA synthetase | genomic | McirCBS277-49_SC04 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCTATTACAAATGTTCTCTCGT
+>PPTG_01341  | Phytophthora parasitica INRA-310 | threonine-tRNA ligase, threonine-tRNA ligase, variant 1, threonine-tRNA ligase, variant 2, threonine-tRNA ligase, variant 3 | genomic | KI669563 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACCGAGCTGCATGTCATTGCTC
+>PUG3_G004147  | Pythium ultimum var. sporangiiferum BR650 | Threonyl-tRNA synthetase | genomic | PultBR650_SC0237 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCAACCTCGCATGACTGTGCCG
+>MGG_03551  | Magnaporthe oryzae 70-15 | threonyl-tRNA synthetase | genomic | CM001234 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGCTCACAATATGGAGGCCGCG
+>C5_00110C_A  | Candida albicans SC5314 | Putative threonyl-tRNA synthetase; transcript regulated by Mig1 and Tup1; repressed upon phagocytosis by murine macrophages; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr5A_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACTATCAACAATGTCTGAAGTT
+>PAR_G001281  | Pythium arrhenomanes ATCC 12531 | Threonyl-tRNA synthetase. | genomic | ParrATCC12531_SC00099 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGGAGAAGCGATGAAGGCGCTG
+>P170DRAFT_405161  | Aspergillus steynii IBT 23096 | putative threonyl-tRNA synthetase | genomic | MSFO01000003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGATACAATCATGGCTTCCGAA
+>ASPWEDRAFT_100625  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878209 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGATACAGCCATGGCTTCCGAA
+>CAGL0M12991g  | Candida glabrata CBS 138 | Ortholog(s) have threonine-tRNA ligase activity, role in cytoplasmic translation, threonyl-tRNA aminoacylation and cytosol, mitochondrion localization | genomic | ChrM_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAAAGACTATAATGAGTGCTGGA
+>FOMG_00790  | Fusarium oxysporum f. sp. melonis 26406 | threonyl-tRNA synthetase | genomic | JH659329.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTCGTGTTTAATGCCCCTTGTG
+>CIHG_05873  | Coccidioides immitis H538.4 | threonyl-tRNA synthetase | genomic | DS017002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGGTTCTCAACATGGCTGGAGAA
+>FOC1_g10015417  | Fusarium oxysporum f. sp. cubense race 1 | Threonyl-tRNA synthetase, cytoplasmic | genomic | KB731261 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGTTCTCAACATGTCGTCCGAT
+>HpaG800383  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGACTGAAACCTATGAACTGTCCA
+>AMAG_00770  | Allomyces macrogynus ATCC 38327 | threonine-tRNA ligase | genomic | GG745328 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACCAACATCATGCCCGGCAAG
+>AFLA_052550  | Aspergillus flavus NRRL3357 | threonyl-tRNA synthetase, putative | genomic | EQ963483 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGATACAGTCATGGCTTCTGAG
+>PHYCI_101314  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Threonyl-tRNA synthetase | genomic | PcinCBS144-22_SC0007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATTCGTCAAGATGCTGTCAAGT
+>SS1G_10975  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476637 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCCAAACACCATGGAACAGGCA
+>evm.TU.AC2VRR_s00016g199  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC016 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAAGCTGAAATGAAATCCTGG
+>FOIG_00607  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658272.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTCGTGTTTAATGCCCCTTGTG
+>PIW_G012115  | Pythium iwayamai DAOM BR242034 | Threonyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC03650 forward | (geneCodeStart-12 to geneCodeStart+11) | WARNING: Partial sequence retrieved | length=14
+CTGCTGCAGCGGCG
+>FOC4_g10000094  | Fusarium oxysporum f. sp. cubense race 4 | Threonyl-tRNA synthetase, cytoplasmic | genomic | KB726983 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGTTCTCAACATGTCGTCCGAT
+>HCEG_01765  | Histoplasma capsulatum H88 | threonyl-tRNA synthetase | genomic | DS990636 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGACCAGCTATGGACGCCCAC
+>CNBB5220  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000041 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGTATGCTCCGCAGG
+>SPRG_02215  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583193 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGACAGAGGAATGGCTGACGCG
+>CNBG_6135  | Cryptococcus deuterogattii R265 | threonine-tRNA ligase | genomic | KQ410578 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGGTATATCGCATGCTCCGCAGG
+>PHYBL_178242  | Phycomyces blakesleeanus NRRL 1555(-) | Threonyl-tRNA synthetase | genomic | PblaNRRL1555-_SC26 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATATTAGACCATGCTGGCAAGA
+>SPPG_07532  | Spizellomyces punctatus DAOM BR117 | threonine-tRNA ligase | genomic | KQ257465 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCAACCTGCAAATGAAACGGCTT
+>AFUB_070610  | Aspergillus fumigatus A1163 | Has domain(s) with predicted threonine-tRNA ligase, ATP binding activity, role in threonyl-tRNA aminoacylation and cytoplasm localization | genomic | scf_000005_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGGATACAGCCATGGCTTCTGAA
+>HpaG809508  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0103 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGCCCTCGCCATGAGTACCGAC
+>PHYSODRAFT_354589  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159154 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACGTTTTCGCATGCATCTTGTT
+>CGB_B9280W  | Cryptococcus gattii WM276 | threonine-tRNA ligase | genomic | CP000287 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGCATGCTCCGCAGG
+>MGL_2041  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTGCGCGCACCATGCTTGTCCCG
+>PUG3_G003999  | Pythium ultimum var. sporangiiferum BR650 | Threonyl-tRNA synthetase | genomic | PultBR650_SC0225 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTGAGGGCAAGATGGTGTTCTGG
+>PIW_G007799  | Pythium iwayamai DAOM BR242034 | Threonyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC01318 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCCACCAACAATGATGCTCTTG
+>ATEG_03251  | Aspergillus terreus NIH2624 | threonyl-tRNA synthetase | genomic | CH476597 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGGACACACCATGGCTGCTGAA
+>NCU02380  | Neurospora crassa OR74A | threonyl-tRNA synthetase, threonyl-tRNA synthetase, variant 1, threonyl-tRNA synthetase, variant 2 | genomic | CM002242 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACATTTCAACATGGAGCAGGTT
+>ASPCADRAFT_207665  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907500 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGATACAGCCATGGCTTCTGAA
+>PAG1_G011524  | Pythium aphanidermatum DAOM BR444 | Threonyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC1097 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGAAGGGAAACATGAGCAGCGAG
+>AO090009000201  | Aspergillus oryzae RIB40 | Ortholog(s) have cytosol localization | genomic | Chr1_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGATACAGTCATGGCTTCTGAG
+>ASPNIDRAFT_51819  | Aspergillus niger ATCC 1015 | threonyl-tRNA synthetase kinase | genomic | ACJE01000004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGGATACAAAATGTCTTCTGAA
+>PAAG_05103  | Paracoccidioides lutzii Pb01 | threonyl-tRNA synthetase | genomic | KN294004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTGTACCAATATGGCTGGAGAT
+>M_BR32_EuGene_00034301  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGCTCACAATATGGAGGCCGCG
+>SDRG_10967  | Saprolegnia diclina VS20 | threonyl-tRNA synthetase | genomic | JH767169 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTGACAGAGGAATGGCTGACGCG
+>ASPVEDRAFT_132119  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878129 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGAGTACGACTATGGCTTCCGAC
+>AGR95_072270  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_ZT.Contig1089 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGAACCATAATGGGTGAAGAT
+>PSURA_79358  | Phytophthora ramorum strain Pr102 | Threonyl-tRNA synthetase | genomic | PramPr-102_SC0039 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGAGAAGAGTCATGAGTGAGCCC
+>BC1G_11336  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC77 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTCTGAACACCATGGAACAGGCA
+>H310_07572  | Aphanomyces invadans NJM9701 | threonine-tRNA ligase, threonine-tRNA ligase, variant | genomic | KI913965 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATCACGATGGATGCCGCTCACA
+>ASPGLDRAFT_49011  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878901 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGGCTACAGAGATGACTGCTGAA
+>AGR57_5555  | Phanerochaete chrysosporium RP-78 | threonyl-tRNA synthetase | genomic | PchrRP-78_SC005 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCTCAGAACAATGTCGTCTCTC
+>NFIA_102690  | Aspergillus fischeri NRRL 181 | threonyl-tRNA synthetase, putative | genomic | DS027685 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGGATACAGCCATGGCTTCTGAA
+>PHYSODRAFT_346310  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159154 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGCGAGCAGCATGAGCAGCGAG
+>ALNC14_141510  | Albugo laibachii Nc14 | unspecified product | genomic | FR824812 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTAACGCGCAAAATGGATGGCTGC
+>FVEG_01380  | Fusarium verticillioides 7600 | threonyl-tRNA synthetase | genomic | CM000578.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGTTCTCAATATGTCGTCCGAT
+>PVE_G001344  | Pythium vexans DAOM BR484 | Threonyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0040 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGAGTGGCATGATGCTGCGTCGC
+>ASPTUDRAFT_187964  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878187 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGGATACAAAATGTCTTCCGAA
+>ASPZODRAFT_60275  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878338 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGCAACGACGATGGCATCTGAG
+>PVE_G005558  | Pythium vexans DAOM BR484 | Threonyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0321 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGACCGCGTGATGGAGCGCCAG
+>CIMG_01793  | Coccidioides immitis RS | threonine-tRNA ligase | genomic | GG704911 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGGTTCTCAACATGGCTGGAGAA
+>BDEG_00391  | Batrachochytrium dendrobatidis JEL423 | threonyl-tRNA synthetase | genomic | BdenJEL423_SC01 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCGACATACGAATGGAGCCCACA
+>PITG_17153  | Phytophthora infestans T30-4 | threonyl-tRNA synthetase | genomic | DS028167 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATTGCTCAAGATGTTGTCTCGA
+>PPTG_06869  | Phytophthora parasitica INRA-310 | threonine-tRNA ligase | genomic | KI669570 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCAGCAGCATCATGAGCAGCGAA
+>AMAG_02273  | Allomyces macrogynus ATCC 38327 | threonine-tRNA ligase | genomic | GG745330 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACCAACACCATGCCCGGCAAG
+>evm.TU.AC2VRR_s00106g3  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC106 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTACCAAGAACTATGAGCGACAAT
+>Afu4g13700  | Aspergillus fumigatus Af293 | Ortholog(s) have cytosol localization | genomic | Chr4_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGGATACAGCCATGGCTTCTGAA
+>MELLADRAFT_37217  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883116 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATTCCTTTAGTTAGATCCACCT
+>PYU1_G003666  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2041 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGATTGGCAGGATGAGCGCAGCC
+>BDEG_01136  | Batrachochytrium dendrobatidis JEL423 | hypothetical protein similar to threonyl-tRNA synthetase | genomic | BdenJEL423_SC01 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTGCAGAAAAATGCTGTTTTTG
+>ALNC14_144710  | Albugo laibachii Nc14 | unspecified product | genomic | FR825437 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAATTCGCAAATGAAATCCTGG
+>SPBC25H2.02  | Schizosaccharomyces pombe 972h- | cytoplasmic threonine-tRNA ligase Trs1 (predicted)  | genomic | Spom972h_chrII reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAATTTTCACCATGAGCGCAGCT
+>PMAA_080350  | Talaromyces marneffei ATCC 18224 | threonyl-tRNA synthetase, putative | genomic | DS995901 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTGAGGCATCAATGGCTTCGGAA
+>TSTA_114880  | Talaromyces stipitatus ATCC 10500 | threonyl-tRNA synthetase, putative | genomic | EQ962655 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTGAGGCATCAATGGCTTCGGAA
+>PHYSODRAFT_551631  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159174 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGCGAGCAGCATGAGCAGCGAG
+>H310_00286  | Aphanomyces invadans NJM9701 | threonine-tRNA ligase | genomic | KI913952 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTTACCTCGACATGGCTGACGCC
+>HpaG812801  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0218 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATGACATGTTCATGGTTTCTCAA
+>PADG_04949  | Paracoccidioides brasiliensis Pb18 | threonine-tRNA ligase | genomic | KN275961 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTGTACCAATATGGCTGGAGAT
+>SDRG_14918  | Saprolegnia diclina VS20 | threonyl-tRNA synthetase | genomic | JH767211 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTGGACGGAAGATGCTGCGCTCT
+>RO3G_06614  | Rhizopus delemar RA 99-880 | hypothetical protein | genomic | CH476735 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACACACACAATGTCGGCTGCC
+>CKF44_006049  | Cryptococcus neoformans var. grubii KN99 | threonine-tRNA ligase | genomic | CP022322.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGTATGCTCCGCAGG
+>FGRAMPH1_01G03087  | Fusarium graminearum PH-1 | threonyl-tRNA synthetase | genomic | HG970332 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGGTTCTCATCATGTCGTCCGAT
+>CNAG_06755  | Cryptococcus neoformans var. grubii H99 | threonine-tRNA ligase | genomic | CP003821.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGTATGCTCCGCAGG
+>PABG_04551  | Paracoccidioides brasiliensis Pb03 | threonine-tRNA ligase | genomic | KN305536 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGTGTACCAATATGGCTGGAGAT
+>YALI0_F11231g  | Yarrowia lipolytica CLIB122 | YALI0F11231p | genomic | CR382132 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCACGCGAAAATGGCTGAACTC
+>HpaG809520  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0103 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAACCAAAATAATGGATATTCTT
+>ASPACDRAFT_80079  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878981 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGCTACAGTCATGGCTTCCGAG
+>TREMEDRAFT_30035  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711531 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCGCTCGAGCCATGTCTACAGCA
+>CC1G_12107  | Coprinopsis cinerea okayama7#130 | tars protein | genomic | AACS02000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAAACCATACAATGGCGACACCA
+>I308_06304  | Cryptococcus gattii VGIV IND107 | threonine-tRNA ligase | genomic | KN848876 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGCATGCTCCGCAGG
+>PGTG_10847  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | threonyl-tRNA synthetase | genomic | DS178291 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCCAAATCCCAATGAGAAGGTGG
+>HCDG_02186  | Histoplasma capsulatum H143 | threonyl-tRNA synthetase | genomic | GG692420 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGACCAGCTATGGACGCCCAC
+>NEUTE1DRAFT_86026  | Neurospora tetrasperma FGSC 2508 | threonyl-tRNA synthetase | genomic | GL891306 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACATTTCAACATGGAGCAGGTT
+>PCH_Pc22g03830  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c22 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGTTTTTAATGATGGCATCTGAA
+>PHYCA_510195  | Phytophthora capsici LT1534 |  unnamed protein product  | genomic | PcapLT1534_SC055 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTGAGCGCATGATGGCCATCCTG
+>UMAG_04848  | Ustilago maydis 521 | putative threonine--tRNA ligase THS1 | genomic | CM003156 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGCAATCATGTCGTCGTCA
+>FFUJ_01444  | Fusarium fujikuroi IMI 58289 | probable THS1-threonyl tRNA synthetase, cytosolic | genomic | HF679023 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGTTCTCAACATGTCGTCCGAT
+>TRIREDRAFT_49197  | Trichoderma reesei QM6a | hypothetical protein | genomic | GL985067 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCGATCGCCATGTCTTCCGAC
+>PIR_G010841  | Pythium irregulare DAOM BR486 | Threonyl-tRNA synthetase | genomic | PirrDAOMBR486_SC1475 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCACGAACGATGCTGCGTGCG
+>PITG_21071  | Phytophthora infestans T30-4 | threonyl-tRNA synthetase | genomic | DS028376 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCCAGAAGAGATGAGCAGTGAA
+>CLUG_05804  | Clavispora lusitaniae ATCC 42720 | conserved hypothetical protein | genomic | CH408083 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATCAACGCAATGGCCGAAGTT
+>FOZG_00786  | Fusarium oxysporum Fo47 | threonyl-tRNA synthetase | genomic | JH717896.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTCGTGTTTAATGCCCCTTGTG
+>ALNC14_089200  | Albugo laibachii Nc14 | unspecified product | genomic | FR824212 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTCACTCACCATGAGCGACAAT
+>H257_07352  | Aphanomyces astaci strain APO3 | threonine-tRNA ligase | genomic | KI913128 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCATCAACGCAATGTTGACGCTT
+>C5_00110C_B  | Candida albicans SC5314_B | Putative threonyl-tRNA synthetase; transcript regulated by Mig1 and Tup1; repressed upon phagocytosis by murine macrophages; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr5B_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACTATCAACAATGTCTGAAGTT
+>PNEJI1_002545  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000145 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTATGAGCAGATAAGGAACATGTT
+>SPPG_03953  | Spizellomyces punctatus DAOM BR117 | threonine-tRNA ligase | genomic | KQ257455 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTTTGTACAAAATGGCGAGCAAC
+>B9J08_002778  | Candida auris strain B8441 | threonine-tRNA ligase, cytoplasmic | genomic | PEKT02000007 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTCTGTTCGACATGGCCGAGGTC
+>FOXG_00137  | Fusarium oxysporum f. sp. lycopersici 4287 | threonyl-tRNA synthetase | genomic | CM000589.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTCGTGTTTAATGCCCCTTGTG
+>QYA_168698  | Mucor circinelloides f. lusitanicus CBS 277.49 | Threonyl-tRNA synthetase | genomic | McirCBS277-49_SC01 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCGTATCGACATGTTTGACAAG
+>ACLA_052650  | Aspergillus clavatus NRRL 1 | threonyl-tRNA synthetase, putative | genomic | DS027054 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGGATACAAACATGGCTTCCGAA
+>PIR_G001530  | Pythium irregulare DAOM BR486 | Threonyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0053 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCTTATCAGCATGAGCGCCGCC
+>PHYCA_511466  | Phytophthora capsici LT1534 |  hypothetical protein MELLADRAFT_37217  | genomic | PcapLT1534_SC086 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGACCGGATTATGGAGGGTCAG
+>RO3G_05049  | Rhizopus delemar RA 99-880 | threonyl-tRNA synthetase | genomic | CH476734 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCTTTATTCATGATTCATCCT
+>PHYCA_553726  | Phytophthora capsici LT1534 |  threonyl-tRNA synthetase  | genomic | PcapLT1534_SC055 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTACTTAAGAAGATGCAGGAGCTG
+>SPRG_12877  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583283 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTGGACGGAAGATGCTGCGCTCT
+>P168DRAFT_324805  | Aspergillus campestris IBT 28561 | threonyl-tRNA synthetase | genomic | MSFM01000002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGGCTTCAAATATGGCAGCGGAA
+>SMAC_03505  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546233 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACATTTCAACATGGAGCAGGTT
+>P174DRAFT_442255  | Aspergillus novofumigatus IBT 16806 | putative threonyl-tRNA synthetase | genomic | MSZS01000005 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGGATACAGCCATGGCTCCCGAA
+>CPAG_01011  | Coccidioides posadasii RMSCC 3488 | threonyl-tRNA synthetase | genomic | DS268109 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGGTTCTCAACATGGCTGGAGAA
+>MGL_3288  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000011 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAACTTCTCCGATGGACATTGCA
+>PHYBL_106919  | Phycomyces blakesleeanus NRRL 1555(-) | Threonyl-tRNA synthetase | genomic | PblaNRRL1555-_SC02 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACTTGCTGCCATGAGCGTCAAG
+>ASPGLDRAFT_75742  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878903 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTGAAAATGGAATGCCGTGGATG
+>ZTRI_11.87  | Zymoseptoria tritici IPO323 | similar to threonyl-trna synthetase | genomic | Ztri_chr_11 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCTCTGCTGTATGCTTCTGCCC
+>H257_06793  | Aphanomyces astaci strain APO3 | threonine-tRNA ligase | genomic | KI913126 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTTTCTTCAACATGGCTGACGCC
+>CPC735_046990  | Coccidioides posadasii C735 delta SOWgp | threonyl-tRNA synthetase, cytoplasmic, putative | genomic | ACFW01000049 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGGTTCTCAACATGGCTGGAGAA
+>SOCG_00122  | Schizosaccharomyces octosporus yFS286 | cytoplasmic threonine-tRNA ligase Trs1 | genomic | KE503207 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATTTTAGAGAATGAGTGCAGCT
+>PIW_G014081  | Pythium iwayamai DAOM BR242034 | Threonyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC07198 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGACAGTAGCGATGAGCGCCAAG
+>NEUDI_168211  | Neurospora discreta FGSC 8579 | unspecified product | genomic | NdisFGSC8579_SC009 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACATTTCAACATGGAGCAGGTT
+>ASPFODRAFT_39456  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878236 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGGATACAAAATGTCTTCTGAA
+>I306_06187  | Cryptococcus gattii EJB2 | threonine-tRNA ligase | genomic | KN848771 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGCATGCTCCGCAGG
+>PAG1_G002116  | Pythium aphanidermatum DAOM BR444 | Threonyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0051 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGATCACCAGCATGCGTCAGTGG
+>SJAG_01235  | Schizosaccharomyces japonicus yFS275 | cytoplasmic threonine-tRNA ligase Trs1 | genomic | KE651168 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTAGAGGAAATGGCTTCGGTG
+>I314_06447  | Cryptococcus gattii CA1873 | threonine-tRNA ligase | genomic | KN848910 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGTATATCGCATGCTCCGCAGG
+>HCBG_02621  | Histoplasma capsulatum G186AR | threonyl-tRNA synthetase | genomic | GG663365 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGACCAGCTATGGACGCCCAC
+>HCAG_05316  | Histoplasma capsulatum NAm1 | threonyl-tRNA synthetase | genomic | CH476659 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGACCAGTTATGGACGCCCAC
+>An01g09500  | Aspergillus niger CBS 513.88 | Ortholog(s) have cytosol localization | genomic | An01_A_niger_CBS_513_88 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGGATACAAAATGTCTTCTGAA
+>AMAG_18841  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745340 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTCGCGGTCCATGACCGACTAC

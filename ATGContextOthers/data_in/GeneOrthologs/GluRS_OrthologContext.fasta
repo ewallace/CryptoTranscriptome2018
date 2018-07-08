@@ -1,0 +1,254 @@
+>YGL245W  | Saccharomyces cerevisiae S288c | glutamate--tRNA ligase GUS1 | genomic | BK006941 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGGGATCAAGATGCCATCTACC
+>AFLA_006370  | Aspergillus flavus NRRL3357 | glutamyl-tRNA synthetase | genomic | EQ963482 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATTGAGTCAAATGCCCCTCCAA
+>AMAG_05531  | Allomyces macrogynus ATCC 38327 | glutamine-tRNA ligase | genomic | GG745335 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTGCCGGCACCATGGCGCCCATC
+>ZTRI_8.359  | Zymoseptoria tritici IPO323 | hypothetical protein | genomic | Ztri_chr_8 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGCTCGGCAAGATGTGGCGCAGG
+>P170DRAFT_479389  | Aspergillus steynii IBT 23096 | hypothetical protein | genomic | MSFO01000008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAATAGAGAAAATGGCTATTCTC
+>PPTG_17398  | Phytophthora parasitica INRA-310 | glutamate-tRNA ligase | genomic | KI669628 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATCACAAACCATGGCGACGGAG
+>HCDG_03898  | Histoplasma capsulatum H143 | glutamyl-tRNA synthetase | genomic | GG692422 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGACGAAGGAGATGTCTCAACTC
+>PNEJI1_000727  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000275 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATATATATAAATGAATCAAAGT
+>FOC1_g10003059  | Fusarium oxysporum f. sp. cubense race 1 | Putative glutamyl-tRNA synthetase, cytoplasmic | genomic | KB729949 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>PCH_Pc21g15760  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c21 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTTCTGCGCAATGTCTGAATAC
+>UREG_07507  | Uncinocarpus reesii 1704 | glutamyl-tRNA synthetase | genomic | CH476619 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGGCATGTAGATGGTGCTTTTT
+>ATEG_08056  | Aspergillus terreus NIH2624 | glutamyl-tRNA synthetase | genomic | CH476605 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCGAGCATCATGTCGGACATG
+>FOMG_10027  | Fusarium oxysporum f. sp. melonis 26406 | glutamyl-tRNA synthetase | genomic | JH659335.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>RO3G_09309  | Rhizopus delemar RA 99-880 | hypothetical protein | genomic | CH476738 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTTTGGTTAACATGAGTCCTATT
+>NEUDI_104456  | Neurospora discreta FGSC 8579 | Glutamyl-tRNA synthetase | genomic | NdisFGSC8579_SC014 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCCATCACCATGAAGCTGGAC
+>M_BR32_EuGene_00076411  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00008 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAACTGCAACCATGAAGGCTGAG
+>PGTG_17719  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | glutamyl-tRNA synthetase | genomic | DS178347 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGAAAGCAAGCGATGGCGGCTTCA
+>An09g05970  | Aspergillus niger CBS 513.88 | Ortholog(s) have cytosol, nucleus localization | genomic | An09_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCTTTGGAACGATGTCGCAGTTT
+>ASPFODRAFT_144189  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878248 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCTTTGAAACGATGTCGCAGTTC
+>P174DRAFT_438436  | Aspergillus novofumigatus IBT 16806 | glutamyl-tRNA synthetase | genomic | MSZS01000002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGGGCCGCAATGTCTCAGTAT
+>P170DRAFT_351035  | Aspergillus steynii IBT 23096 | glutamyl-tRNA synthetase | genomic | MSFO01000002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCACGCATTATGTCGGACATG
+>FOC4_g10006332  | Fusarium oxysporum f. sp. cubense race 4 | Putative glutamyl-tRNA synthetase, cytoplasmic | genomic | KB726995 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>PSURA_47657  | Phytophthora ramorum strain Pr102 | Glutamyl-tRNA synthetase | genomic | PramPr-102_SC0034 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGGCCGTGGTGCCCACGCTCACG
+>PABG_02322  | Paracoccidioides brasiliensis Pb03 | glutamate-tRNA ligase | genomic | KN305533 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCGCACCAAGATGTCACAATTG
+>MGL_3314  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000011 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTAATTTGTGATGTCGGCTGGA
+>P168DRAFT_330385  | Aspergillus campestris IBT 28561 | glutamyl-tRNA synthetase | genomic | MSFM01000014 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATACCATAAGCAATGGCTACCCTC
+>ATEG_01178  | Aspergillus terreus NIH2624 | glutamyl-tRNA synthetase | genomic | CH476595 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACAAGATAGACATGCAAACCATT
+>SPRG_19636  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583201 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCCGGAAATCCATGGACGCGGCG
+>CC1G_01078  | Coprinopsis cinerea okayama7#130 | glutamate-tRNA ligase | genomic | AACS02000002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCATTTCTACCATGGCCGCCGCC
+>BC1G_14312  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC146 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATACCAAAAAAAATGAAGTCCGAA
+>CNBG_1586  | Cryptococcus deuterogattii R265 | glutamate-tRNA ligase | genomic | KQ410560 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAATTACAAGATGCCCGACGTT
+>SDRG_09754  | Saprolegnia diclina VS20 | hypothetical protein | genomic | JH767162 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCCGGACGTTTATGCGGACAGTC
+>ASPVEDRAFT_890057  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878130 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTCTCTTTTCGATGACAATGGCC
+>ALNC14_131070  | Albugo laibachii Nc14 | unspecified product | genomic | FR824479 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCCCTTCAAGATGAGCAACAGC
+>PHYBL_121302  | Phycomyces blakesleeanus NRRL 1555(-) | Glutamyl-tRNA synthetase | genomic | PblaNRRL1555-_SC02 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCACAGTTGACATGTCCATCCAA
+>CIMG_03776  | Coccidioides immitis RS | glutamate-tRNA ligase | genomic | GG704916 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAAAGTTTAGATGGCGCTGCTC
+>I308_03147  | Cryptococcus gattii VGIV IND107 | glutamate-tRNA ligase | genomic | KN848862 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGTTACAAGATGCCCGACGTT
+>PIW_G009680  | Pythium iwayamai DAOM BR242034 | Glutamyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC02005 reverse | (geneCodeStart-12 to geneCodeStart+11) | WARNING: Partial sequence retrieved | length=23
+CGGCGGTCAAGAGCGGCGACGTG
+>PAAG_02071  | Paracoccidioides lutzii Pb01 | glutamyl-tRNA synthetase | genomic | KN293995 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCCCGCCAAGATGTCCCAATTG
+>TRIREDRAFT_121420  | Trichoderma reesei QM6a | hypothetical protein | genomic | GL985062 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGCCGACAAAATGAAGCACGAG
+>ASPTUDRAFT_184652  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878180 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCTTTGGAACGATGTCGCAGTTC
+>C7_00620W_A  | Candida albicans SC5314 | Putative glutamine-tRNA ligase; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr7A_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTGAACCAAAGATGTCATTCAAA
+>C7_00620W_B  | Candida albicans SC5314_B | Putative glutamine-tRNA ligase; stationary phase enriched protein; Spider biofilm repressed | genomic | Ca22chr7B_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTGAACCAAAGATGTCATTCAAA
+>PVE_G001550  | Pythium vexans DAOM BR484 | Glutamyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0049 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGGACGAGGCGATGGCGACGCGC
+>SMAC_05130  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546186 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATCCATCACCATGAAGCTGGAC
+>HCBG_03755  | Histoplasma capsulatum G186AR | glutamyl-tRNA synthetase | genomic | GG663366 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGACGAAGGAGATGTCTCAACTC
+>AFLA_043520  | Aspergillus flavus NRRL3357 | glutamyl-tRNA synthetase, putative | genomic | EQ963476 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAATTCCAAGAGATGTATGAGGCA
+>CGB_F6540C  | Cryptococcus gattii WM276 | glutamate-tRNA ligase | genomic | CP000291 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGCTACAAGATGCCCGACATT
+>PADG_00821  | Paracoccidioides brasiliensis Pb18 | glutamate-tRNA ligase | genomic | KN275957 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCGCACCAAGATGTCACAATTG
+>I306_00489  | Cryptococcus gattii EJB2 | glutamate-tRNA ligase | genomic | KN848565 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAGCTACAAGATGCCCGACATT
+>PHYSODRAFT_284659  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159152 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCAAGGCCTGCATGCTGAACAAC
+>ASPACDRAFT_36370  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878989 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAAGAAGAGAGATGTCGCAGTTT
+>H310_14048  | Aphanomyces invadans NJM9701 | glutamate-tRNA ligase | genomic | KI914011 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGTTTGGTCCAATGGATTCCCCG
+>I314_02651  | Cryptococcus gattii CA1873 | glutamate-tRNA ligase | genomic | KN848894 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACAGTTACAAGATGCCCGACGTT
+>CNF00070  | Cryptococcus neoformans var. neoformans JEC21 | glutamate-tRNA ligase, putative | genomic | AE017346.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATAGTTATAAAATGCCCGACGTT
+>ASPGLDRAFT_28677  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878909 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCGTCGTCAGGATGTCTTGTCGG
+>NFIA_038550  | Aspergillus fischeri NRRL 181 | glutamyl-tRNA synthetase | genomic | DS027686 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGGGCCGCAATGTCTCAGTAT
+>CPAG_09395  | Coccidioides posadasii RMSCC 3488 | glutamyl-tRNA synthetase | genomic | DS268114 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAAAGTTTAGATGGCGCTGCTC
+>QYA_186695  | Mucor circinelloides f. lusitanicus CBS 277.49 | Glutamyl-tRNA synthetase | genomic | McirCBS277-49_SC03 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCACATTATCATGAGTGCTATT
+>evm.TU.AC2VRR_s00237g136  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC237 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTATTGAAATATGAGTTTGAAA
+>CNAG_05978  | Cryptococcus neoformans var. grubii H99 | glutamate-tRNA ligase | genomic | CP003826.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTACAGTTACAAATGCCCGACGTT
+>PMAA_082670  | Talaromyces marneffei ATCC 18224 | glutamyl-tRNA synthetase | genomic | DS995901 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAAATCCAATATGGCTTGCAAA
+>FVEG_11066  | Fusarium verticillioides 7600 | glutamyl-tRNA synthetase | genomic | CM000586.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>ASPWEDRAFT_53076  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878214 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCGAGAGCAAAATGTCGCAATTC
+>CLUG_04603  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408080 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATTTCTGGAAATGCTTTCCCAT
+>SOCG_01510  | Schizosaccharomyces octosporus yFS286 | glutamate-tRNA ligase | genomic | KE503208 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGACACTCAAGAATGTCGCTCACG
+>PAG1_G010074  | Pythium aphanidermatum DAOM BR444 | Glutamyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0693 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGAAGCAAAAGCATGGCGACTGAG
+>AN8224  | Aspergillus nidulans FGSC A4 | Ortholog(s) have cytosol, nucleus localization | genomic | ChrII_A_nidulans_FGSC_A4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCGCTGCAATATGTCTCAATTC
+>RO3G_04323  | Rhizopus delemar RA 99-880 | hypothetical protein | genomic | CH476734 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTTTTAAACATGAGTCCTATT
+>H257_17677  | Aphanomyces astaci strain APO3 | glutamate-tRNA ligase | genomic | KI913228 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGTTTGGTCCAATGGATTCACCA
+>P170DRAFT_364117  | Aspergillus steynii IBT 23096 | glutamyl-tRNA synthetase | genomic | MSFO01000007 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCTCATCTACATGGCTGCCCTT
+>FOIG_11346  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658291.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>FOXG_13642  | Fusarium oxysporum f. sp. lycopersici 4287 | glutamyl-tRNA synthetase | genomic | CM000598.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>ASPZODRAFT_140791  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878339 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGGCTCTAGGATGTCTCAATTT
+>AO090102000566  | Aspergillus oryzae RIB40 | Ortholog(s) have cytosol, nucleus localization | genomic | Chr4_A_oryzae_RIB40 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATTGAGTCAAATGCCCCTCCAA
+>ASPCADRAFT_212175  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907572 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTCAAAACACCATGATTTCTCTT
+>PITG_14456  | Phytophthora infestans T30-4 | glutamyl-tRNA synthetase, putative | genomic | DS028151 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCACTCAAATATGGCAACCGAG
+>BDEG_00554  | Batrachochytrium dendrobatidis JEL423 | glutamyl-tRNA synthetase | genomic | BdenJEL423_SC01 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCTATGCTCTGATGGCCATTCGT
+>ASPBRDRAFT_157151  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878688 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCTTTTAGAAGATGTCGCAGTTC
+>AGR57_134  | Phanerochaete chrysosporium RP-78 | glutamate-tRNA ligase | genomic | PchrRP-78_SC001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACTATCCAGAAATGCCCGGAGTG
+>SPAC17A5.15c  | Schizosaccharomyces pombe 972h- | cytoplasmic glutamate-tRNA ligase gus1 (predicted)  | genomic | Spom972h_chrI reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTTTTGGGAAAATGTCAGTTAGT
+>ASPSYDRAFT_47230  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878589 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAACACCGAGAATGGAAATTGTT
+>SS1G_03799  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476624 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATATTGACAAAATGAAGACCGAG
+>FGRAMPH1_01G15631  | Fusarium graminearum PH-1 | glutamyl-trna synthetase | genomic | HG970333 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATACCGCCGTCATGACTTTCGAC
+>ASPVEDRAFT_203236  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCACTTCAAGATGTCTCAGTTC
+>MELLADRAFT_76403  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883090 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCAAGACAAAAATGTCAGATCCA
+>ASPCADRAFT_149793  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907502 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGATTGAAAGATGTCGTTCCAG
+>B9J08_001156  | Candida auris strain B8441 | glutamate-tRNA ligase | genomic | PEKT02000003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCTTCATCCCCATGGCTACCGTT
+>CKF44_005364  | Cryptococcus neoformans var. grubii KN99 | glutamate-tRNA ligase | genomic | CP022327.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTACAGTTACAAATGCCCGACGTT
+>sr15655  | Sporisorium reilianum SRZ2 | probable GUS1-Glutamyl-tRNA synthetase | genomic | FQ311438 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCTCACAACCATGGCTACTCCC
+>YALI0_E28468g  | Yarrowia lipolytica CLIB122 | YALI0E28468p | genomic | CR382131 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATACAAAAAAATGTCTATTCAG
+>NEUTE1DRAFT_128097  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891302 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCCATCACCATGAAGCTGGAC
+>PHYCA_98712  | Phytophthora capsici LT1534 |  bifunctional aminoacyl-tRNA synthetase  | genomic | PcapLT1534_SC003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTTGTCCGCCTCTAAAGGGTGCT
+>HpaG803014  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0016 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATTGGCATCTATGGGTACAGAA
+>MGG_05956  | Magnaporthe oryzae 70-15 | glutamyl-tRNA synthetase | genomic | CM001233 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAACTGCAACCATGAAGGCTGAG
+>PHYCI_245145  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Glutamyl-tRNA synthetase | genomic | PcinCBS144-22_SC0153 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACCAGCCGACCATGGCCACGGAG
+>ASPNIDRAFT_56891  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCTTTGGAACGATGTCGCAGTTT
+>HCAG_01919  | Histoplasma capsulatum NAm1 | conserved hypothetical protein | genomic | CH476655 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGACGGAGAAGATGTCTCAACTC
+>AGR95_021210  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_BI.Contig285 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGACGCAGGAGATGTCTCAACTC
+>CPSG_03508  | Coccidioides posadasii str. Silveira | glutamyl-tRNA synthetase | genomic | GL636489 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAAAGTTTAGATGGCGCTGCTC
+>SPPG_02786  | Spizellomyces punctatus DAOM BR117 | glutamine-tRNA ligase | genomic | KQ257453 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAATTCCCAACATGGCCGCCAAA
+>FOZG_16311  | Fusarium oxysporum Fo47 | glutamyl-tRNA synthetase | genomic | JH717910.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>CNBF4640  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000045 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATAGTTATAAAATGCCCGACGTT
+>ASPSYDRAFT_72723  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878596 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCACTTCAAGATGTCTCAATTC
+>SJAG_03277  | Schizosaccharomyces japonicus yFS275 | glutamate-tRNA ligase | genomic | KE651167 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGATTGTCAAAATGTTGGTATCC
+>TREMEDRAFT_45902  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711544 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGCCACCCAACATGCCCACTCTC
+>Afu5g03560  | Aspergillus fumigatus Af293 | Putative glutamyl-tRNA synthetase | genomic | Chr5_A_fumigatus_Af293 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGGGCCGCAATGTCTCAGTAT
+>AMAG_01337  | Allomyces macrogynus ATCC 38327 | glutamine-tRNA ligase | genomic | GG745329 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTGCCGGCACCATGGCGCCCATC
+>PIR_G005406  | Pythium irregulare DAOM BR486 | Glutamyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0326 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGATTAGAGCGATGGCGACGGAG
+>PAR_G006713  | Pythium arrhenomanes ATCC 12531 | Glutamyl-tRNA synthetase. | genomic | ParrATCC12531_SC01089 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGCGGAAGACCATGGCGACGGCG
+>CPC735_005360  | Coccidioides posadasii C735 delta SOWgp | Glutamyl-tRNA synthetase, cytoplasmic, putative | genomic | ACFW01000030 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAAAGTTTAGATGGCGCTGCTC
+>PYU1_G013816  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC1980 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACAGAGAAGATGGCGGCGACG
+>TSTA_117480  | Talaromyces stipitatus ATCC 10500 | glutamyl-tRNA synthetase | genomic | EQ962655 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAACCCCCAACATGGCGACCTGC
+>PCH_Pc12g15880  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c12 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGTCTGTGACGATCTCCGTTGAT
+>UMAG_04782  | Ustilago maydis 521 | putative glutamyl-tRNA synthetase | genomic | CM003156 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACATACGAATATGGCTACTCCC
+>P168DRAFT_327925  | Aspergillus campestris IBT 28561 | glutamyl-tRNA synthetase | genomic | MSFM01000007 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGAATTCAGTCATGTCGAACGTC
+>PUG3_G005093  | Pythium ultimum var. sporangiiferum BR650 | Glutamyl-tRNA synthetase | genomic | PultBR650_SC0322 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACAGAGAAGATGGCGGCGACG
+>CIHG_02993  | Coccidioides immitis H538.4 | glutamyl-tRNA synthetase | genomic | DS016987 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACAAAGTTTAGATGGCGCTGCTC
+>AO090011000526  | Aspergillus oryzae RIB40 | Has domain(s) with predicted ATP binding, aminoacyl-tRNA ligase activity, glutamate-tRNA ligase activity, ligase activity, forming aminoacyl-tRNA and related compounds activity | genomic | Chr7_A_oryzae_RIB40 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGGGCACCATAATGGCGGTTCTC
+>ACLA_001610  | Aspergillus clavatus NRRL 1 | glutamyl-tRNA synthetase | genomic | DS027004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGGTTCACTATGGCTCAGTAC
+>HCEG_02718  | Histoplasma capsulatum H88 | glutamyl-tRNA synthetase | genomic | DS990637 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGACGAAGGAGATGTCTCAACTC
+>AFUB_052080  | Aspergillus fumigatus A1163 | Has domain(s) with predicted ATP binding, glutamate-tRNA ligase activity, role in glutamyl-tRNA aminoacylation and cytoplasm localization | genomic | scf_000004_A_fumigatus_A1163 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGGGCCGCAATGTCTCAGTAT
+>PCH_Pc16g08240  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c16 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCCGGGATATATGGATGCCCTA
+>FFUJ_10071  | Fusarium fujikuroi IMI 58289 | probable glutamate--tRNA ligase | genomic | HF679031 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCCCGCCATCATGAGCTTCGAC
+>NCU08894  | Neurospora crassa OR74A | glutamyl-tRNA synthetase | genomic | CM002240 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATCCATCACCATGAAGCTGGAC
+>SPRG_07589  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583220 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAACGACTAGTATGCCCGCGCGT
+>CAGL0C01947g  | Candida glabrata CBS 138 | Ortholog(s) have glutamate-tRNA ligase activity, mRNA binding activity, role in glutamyl-tRNA aminoacylation and cytosol, methionyl glutamyl tRNA synthetase complex, mitochondrion, nucleus localization | genomic | ChrC_C_glabrata_CBS138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGTAAGAATTATGAGTTCTACT

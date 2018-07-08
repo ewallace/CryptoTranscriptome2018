@@ -1,0 +1,198 @@
+>YER087W  | Saccharomyces cerevisiae S288c | putative mitochondrial proline--tRNA ligase AIM10 | genomic | BK006939 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCACATAGCCATGTTGAAATAT
+>PHYCI_89621  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Prolyl-tRNA synthetase | genomic | PcinCBS144-22_SC0005 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCTGGTCAAAGATGTGGGCGGTC
+>PABG_00500  | Paracoccidioides brasiliensis Pb03 | proline-tRNA ligase | genomic | KN305531 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGCTCCTATGAATGTCTCCTTGT
+>ASPACDRAFT_52079  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878976 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTAACTAGTCATGCTGTCAGAC
+>ASPSYDRAFT_38037  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878582 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAATTTTTGGATGCCGACGGAA
+>NEUDI_106376  | Neurospora discreta FGSC 8579 | Prolyl-tRNA synthetase | genomic | NdisFGSC8579_SC029 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACAGGTTGTCGATGTTATCATCT
+>ASPNIDRAFT_121206  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000021 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTGGATTCCGACGGGCGGCATT
+>PNEJI1_001805  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000202 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCAAAAATAGAAAAGGAATAGAA
+>An08g02860  | Aspergillus niger CBS 513.88 | Ortholog(s) have mitochondrion localization | genomic | An08_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGATATTCCATATGCTGCCTCTG
+>FOZG_00687  | Fusarium oxysporum Fo47 | prolyl-tRNA synthetase | genomic | JH717896.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAACCATGATTGGCACA
+>AN1201  | Aspergillus nidulans FGSC A4 | Has domain(s) with predicted ATP binding, proline-tRNA ligase activity, role in prolyl-tRNA aminoacylation and cytoplasm localization | genomic | ChrVIII_A_nidulans_FGSC_A4 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGAATTCATCATGAAGGATCTC
+>PHYCA_548122  | Phytophthora capsici LT1534 |  prolyl-tRNA synthetase | genomic | PcapLT1534_SC027 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTGTCAATCCGATGTGGGCGGTC
+>CAGL0I05104g  | Candida glabrata CBS 138 | Ortholog(s) have mitochondrion localization | genomic | ChrI_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATTCAAGACAATGCTAAAATTT
+>H310_07551  | Aphanomyces invadans NJM9701 | proline-tRNA ligase | genomic | KI913965 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGCTTCAAAAAATGTGGCGGTCG
+>SOCG_00296  | Schizosaccharomyces octosporus yFS286 | proline-tRNA ligase | genomic | KE503207 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTTGAACGGTATGCTGCAATTT
+>PIR_G004516  | Pythium irregulare DAOM BR486 | Prolyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0244 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGACAAAAGCCATGAGCAGCATG
+>HpaG806100  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0046 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAGATGAAGAGATGGCCAATATT
+>UREG_05936  | Uncinocarpus reesii 1704 | predicted protein | genomic | CH476617 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCATATTTGCATATGGAATCCGTA
+>FOIG_00508  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658272.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAACCATGATTGGCACA
+>FVEG_01465  | Fusarium verticillioides 7600 | prolyl-tRNA synthetase | genomic | CM000578.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTCAAAATCATGATAGGAAAA
+>FFUJ_01529  | Fusarium fujikuroi IMI 58289 | related to E.coli prolyl-tRNA synthetase | genomic | HF679023 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAGTCATGATTGGAAAA
+>PIW_G007630  | Pythium iwayamai DAOM BR242034 | Prolyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC01271 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGCCGGAACTCATGACCTTCGCC
+>PIW_G009377  | Pythium iwayamai DAOM BR242034 | Prolyl-tRNA synthetase | genomic | PiwaDAOMBR242034_SC01874 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAATGAGCAGCATGTGGCTGGCG
+>PCH_Pc16g07440  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c16 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATCTTGATCGATGATTTCTAGG
+>PPTG_16043  | Phytophthora parasitica INRA-310 | proline-tRNA ligase | genomic | KI669613 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCTGGTCAAAATGTGGGCGGTT
+>PAG1_G009746  | Pythium aphanidermatum DAOM BR444 | Prolyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0639 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCAAGGTCCAATGCACGTTGCC
+>QYA_32820  | Mucor circinelloides f. lusitanicus CBS 277.49 | Prolyl-tRNA synthetase | genomic | McirCBS277-49_SC01 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTCTCCCTGGATGTGGGTATCA
+>CPAG_04290  | Coccidioides posadasii RMSCC 3488 | prolyl-tRNA synthetase | genomic | DS268110 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATTGCTGATTATGTCTGGTTCT
+>PSURA_76190  | Phytophthora ramorum strain Pr102 | unspecified product | genomic | PramPr-102_SC0016 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCGCTGCTCATGTGGGCTGCT
+>ACLA_024770  | Aspergillus clavatus NRRL 1 | prolyl-tRNA synthetase | genomic | DS027059 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGAATATTCCATATGCTACCACTT
+>FOC1_g10003129  | Fusarium oxysporum f. sp. cubense race 1 | Prolyl-tRNA synthetase | genomic | KB730134 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAACCATGATTGGCACA
+>PHYSODRAFT_467769  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159151 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGGTCAAAAGATGTGGGCGGTC
+>PUG3_G002508  | Pythium ultimum var. sporangiiferum BR650 | Prolyl-tRNA synthetase | genomic | PultBR650_SC0119 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCGAGTTCATCATGAAGGACATG
+>PAR_G012568  | Pythium arrhenomanes ATCC 12531 | Prolyl-tRNA synthetase. | genomic | ParrATCC12531_SC06032 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTTGGGCACCAATGCTGCGCCGG
+>PVE_G004663  | Pythium vexans DAOM BR484 | Prolyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0238 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATTCGAGCACAATGTGGGCGAAT
+>P174DRAFT_420844  | Aspergillus novofumigatus IBT 16806 | prolyl-tRNA synthetase | genomic | MSZS01000004 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGAGCTCAGAAATGCGCGTTTCA
+>RO3G_16029  | Rhizopus delemar RA 99-880 | hypothetical protein | genomic | CH476749 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAGAATTCATTATGAAGGATTTA
+>PITG_03322  | Phytophthora infestans T30-4 | prolyl-tRNA synthetase, putative | genomic | DS028121 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCTGGTCAAAATGTGGGCGGTT
+>HCAG_01736  | Histoplasma capsulatum NAm1 | predicted protein | genomic | CH476655 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGGTATTTCATATGCTTCCCCTT
+>SPPG_07878  | Spizellomyces punctatus DAOM BR117 | proline-tRNA ligase | genomic | KQ257467 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTAGCGCATCATGTTTCGACCC
+>H257_07343  | Aphanomyces astaci strain APO3 | proline-tRNA ligase | genomic | KI913128 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGTCGTCTAAAATGTGGCGGTCG
+>SDRG_13434  | Saprolegnia diclina VS20 | hypothetical protein | genomic | JH767191 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGATCGGTGGCATGTGGCGCAGC
+>evm.TU.AC2VRR_s00060g128  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC060 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTTATACCGGTATGCTCGGTATA
+>ASPWEDRAFT_49036  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878210 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCTTAATTCATGGTTTTGGGG
+>PYU1_G009291  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2035 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTGGGCAGCAGGTGCAAGCAGGC
+>BC1G_09681  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC56 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGAATTCGTCATGAAAGATCTT
+>HCBG_03574  | Histoplasma capsulatum G186AR | prolyl-tRNA synthetase | genomic | GG663366 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGGTATTTCATATGCTTCCCCTT
+>AFUB_010170  | Aspergillus fumigatus A1163 | Has domain(s) with predicted proline-tRNA ligase, ATP binding activity, role in prolyl-tRNA aminoacylation and cytoplasm localization | genomic | scf_000001_A_fumigatus_A1163 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTTGTTAATTCATGATTTCTGGG
+>TRIREDRAFT_2790  | Trichoderma reesei QM6a | Hypothetical protein | genomic | GL985059 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGTCCAAGATATGGGTTCCCAC
+>P170DRAFT_468589  | Aspergillus steynii IBT 23096 | prolyl-tRNA synthetase | genomic | MSFO01000010 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCGCGATTCATGATCTCTGGG
+>ASPFODRAFT_184422  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878239 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGCCCGGCCTCATGATTTCCGGG
+>M_BR32_EuGene_00043481  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCGTCGCCAGAATGCCCTCGCCA
+>PHYBL_22752  | Phycomyces blakesleeanus NRRL 1555(-) | Prolyl-tRNA synthetase | genomic | PblaNRRL1555-_SC09 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGCTCGATTTATGCCACTCACT
+>sr11296  | Sporisorium reilianum SRZ2 | related to prolyl-tRNA synthetase | genomic | FQ311444 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGACGGCCAAGATGGCACATCGA
+>NEUTE1DRAFT_91576  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891382 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATGTGAAAATCATGCTGCCGCGT
+>SMAC_08454  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546189 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGTGAAAACGATGCTGCCGCGT
+>CPSG_09567  | Coccidioides posadasii str. Silveira | prolyl-tRNA synthetase | genomic | GL636510 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATTGCTGATTATGTCTGGTTCT
+>NCU09892  | Neurospora crassa OR74A | Prolyl-tRNA synthetase | genomic | CM002236 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATGTGAAAATCATGCTGCCGCGT
+>TSTA_074960  | Talaromyces stipitatus ATCC 10500 | prolyl-tRNA synthetase | genomic | EQ962652 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTGGAGCTAGATGTTTATAAAG
+>PMAA_042430  | Talaromyces marneffei ATCC 18224 | prolyl-tRNA synthetase | genomic | DS995904 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTTGGTTAGATGTTTGCAAAG
+>MGG_06345  | Magnaporthe oryzae 70-15 | prolyl-tRNA synthetase 1 | genomic | CM001234 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTTTGGGGAGATGATGCAAAGA
+>B9J08_003501  | Candida auris strain B8441 | proline-tRNA ligase | genomic | PEKT02000007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTTACTTTGGGATGATCCCACTG
+>ASPCADRAFT_202871  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907493 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATCAGACCTCATGATAACCGGG
+>CIMG_06909  | Coccidioides immitis RS | proline-tRNA ligase | genomic | GG704912 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATTGCTGATTATGTCTGGTTCT
+>ALNC14_096370  | Albugo laibachii Nc14 | unspecified product | genomic | FR824241 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCCATATATTATGAGATGTCAT
+>MELLADRAFT_42095  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883094 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGATCGAAGGTGATGATGAACAAA
+>CR_01480W_B  | Candida albicans SC5314_B | Putative prolyl-tRNA synthetase; monofunctional Class II synthetase; gene is constitutively expressed | genomic | Ca22chrRB_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTTCTCAGTAATGATTATTATT
+>AO090038000342  | Aspergillus oryzae RIB40 | Ortholog(s) have mitochondrion localization | genomic | Chr6_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCATTAATTCATGATATCCGGC
+>ASPBRDRAFT_64514  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878682 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTCCGGCCTCATGATCTCCGGG
+>YALI0_D15620g  | Yarrowia lipolytica CLIB122 | YALI0D15620p | genomic | CR382130 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCTTAAGGAAATGCTTCCCCGA
+>ASPZODRAFT_128218  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878337 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTATTCAATCCATGGTGTTTGCG
+>PAR_G013201  | Pythium arrhenomanes ATCC 12531 | Prolyl-tRNA synthetase. | genomic | ParrATCC12531_SC07912 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGAGGCAGAAAGGAAGCCCTCT
+>AFLA_068880  | Aspergillus flavus NRRL3357 | prolyl-tRNA synthetase | genomic | EQ963479 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCATTAATTCATGATATCCGGC
+>FGRAMPH1_01G03291  | Fusarium graminearum PH-1 | prolyl-trna synthetase | genomic | HG970332 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCTTGGAAATCATGGTCCTCTCA
+>UMAG_06184  | Ustilago maydis 521 | hypothetical protein | genomic | CM003161 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTCTAGCCATGATGGCATTTCCA
+>ZTRI_1.1627  | Zymoseptoria tritici IPO323 | similar to prolyl-trna synthetase | genomic | Ztri_chr_1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGATTGTCCGGATGCACTCGCGC
+>CPC735_032990  | Coccidioides posadasii C735 delta SOWgp | prolyl-tRNA synthetase, putative | genomic | ACFW01000025 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATTGCTGATTATGTCTGGTTCT
+>ASPVEDRAFT_79173  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878125 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACGAATCATCCATGATATCCGGG
+>ASPGLDRAFT_151182  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878899 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCCCACATTCATGGTGTTCGGG
+>ATEG_00267  | Aspergillus terreus NIH2624 | conserved hypothetical protein | genomic | CH476594 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTCCAAGAAGAATGTACAAGGAG
+>FOXG_00051  | Fusarium oxysporum f. sp. lycopersici 4287 | prolyl-tRNA synthetase | genomic | CM000589.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAACCATGATTGGCACA
+>MGL_2745  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000009 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTACAAAACGTCATGCGTCCGATG
+>AGR95_054130  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_ZZ.Contig127 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGAGGTATTACATGACACTCAAA
+>PAAG_03048  | Paracoccidioides lutzii Pb01 | prolyl-tRNA synthetase | genomic | KN293999 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGCTCCTATGAATGTCACCTTGT
+>P168DRAFT_308740  | Aspergillus campestris IBT 28561 | prolyl-tRNA synthetase | genomic | MSFM01000001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCCCCTGATCCATGCTACTTGGG
+>CR_01480W_A  | Candida albicans SC5314 | Putative prolyl-tRNA synthetase; monofunctional Class II synthetase; gene is constitutively expressed | genomic | Ca22chrRA_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTTCTCAGTAATGATTATTATT
+>FOMG_00690  | Fusarium oxysporum f. sp. melonis 26406 | prolyl-tRNA synthetase | genomic | JH659329.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAACCATGATTGGCACA
+>NFIA_014890  | Aspergillus fischeri NRRL 181 | prolyl-tRNA synthetase | genomic | DS027688 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGAGAGTTCCTTATGAAGGATCTC
+>HCEG_02533  | Histoplasma capsulatum H88 | prolyl-tRNA synthetase | genomic | DS990637 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGGTATTTCATATGCTTCCCCTT
+>SS1G_14384  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476653 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCTATGAAGATGTTCGCAAAG
+>ASPTUDRAFT_37553  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878176 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTCCGGCCTCATGATTTCCGGG
+>SPRG_12504  | Saprolegnia parasitica CBS 223.65 | prolyl-tRNA synthetase | genomic | KK583287 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGATCGGTGGCATGTGGCGCAGC
+>CLUG_00285  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408076 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCACAAGACTATGATTCTTCTT
+>SJAG_02236  | Schizosaccharomyces japonicus yFS275 | proline-tRNA ligase | genomic | KE651166 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCATCTTAAAATGATCAAGTTT
+>HCDG_05860  | Histoplasma capsulatum H143 | prolyl-tRNA synthetase | genomic | GG692428 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGGGTATTTCATATGCTTCCCCTT
+>Afu1g10750  | Aspergillus fumigatus Af293 | Ortholog(s) have mitochondrion localization | genomic | Chr1_A_fumigatus_Af293 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTTGTTAATCCATGATTTCTGGG
+>SPBC24C6.03  | Schizosaccharomyces pombe 972h- | mitochondrial proline-tRNA ligase (predicted)  | genomic | Spom972h_chrII forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATGTTTAAAAAATGCTACAACAT
+>PADG_02918  | Paracoccidioides brasiliensis Pb18 | proline-tRNA ligase | genomic | KN275959 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGCTCCTATGAATGTCTCCTTGT
+>FOC4_g10003083  | Fusarium oxysporum f. sp. cubense race 4 | Prolyl-tRNA synthetase | genomic | KB726987 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAAAACCATGATTGGCACA

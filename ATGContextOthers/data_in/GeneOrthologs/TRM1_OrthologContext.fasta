@@ -1,0 +1,242 @@
+>YDR120C  | Saccharomyces cerevisiae S288c | tRNA (guanine26-N2)-dimethyltransferase | genomic | BK006938 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TACAATGTAGATATGGAAGGTTTC
+>PAAG_01526  | Paracoccidioides lutzii Pb01 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KN293994 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCGATCTGCAATGGCGGAGACT
+>PVE_G005811  | Pythium vexans DAOM BR484 | N(2),N(2)-dimethylguanosine tRNA methyltransferase | genomic | PvexDAOMBR484_SC0346 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCGGCCGGTACATGCGCGTTGGA
+>Afu3g04200  | Aspergillus fumigatus Af293 | Ortholog(s) have tRNA (guanine-N2-)-methyltransferase activity, role in tRNA N2-guanine methylation and mitochondrion, nuclear inner membrane localization | genomic | Chr3_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCCCGAAGCCGATGTGGATGAGT
+>ACLA_060600  | Aspergillus clavatus NRRL 1 | N2,N2-dimethylguanosine tRNA methyltransferase, putative | genomic | DS027050 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTTGTACACAATGCAGGCTCCC
+>SDRG_09218  | Saprolegnia diclina VS20 | hypothetical protein | genomic | JH767160 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCAAGTGTCCATGATGTTACAT
+>SJAG_00886  | Schizosaccharomyces japonicus yFS275 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KE651166 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTCGTTCGCCATGACTGAGTCA
+>P170DRAFT_440913  | Aspergillus steynii IBT 23096 | putative N2,N2-dimethylguanosine tRNA methyltransferase | genomic | MSFO01000009 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCTCCCTCAGAATGGAGGAATCT
+>ASPGLDRAFT_50591  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878907 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGGGCTCGTAGATGCGATCGATC
+>CNA00760  | Cryptococcus neoformans var. neoformans JEC21 | tRNA (guanine-N2-)-methyltransferase, putative | genomic | AE017341.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACATCTTTGCATGCCTCGCCCA
+>BC1G_05850  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC28 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAGTCCCAATCATGGAATCAACT
+>CLUG_03044  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408078 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGCGAAAAATTATGCTCAAGAGA
+>B9J08_003485  | Candida auris strain B8441 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | PEKT02000007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAACACAAAGAATGACGATAAAT
+>CPAG_05139  | Coccidioides posadasii RMSCC 3488 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | DS268111 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCACACGCAGAATGGCTTCGCAG
+>AMAG_01709  | Allomyces macrogynus ATCC 38327 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GG745329 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCCATTCCATCATGGCGGCACTC
+>UREG_02551  | Uncinocarpus reesii 1704 | conserved hypothetical protein | genomic | CH476615 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCTGCGCAAAATGGCTTCGGAC
+>PPTG_11891  | Phytophthora parasitica INRA-310 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KI669585 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGACCATTGTGCATGCTCCTTGGC
+>AFLA_089180  | Aspergillus flavus NRRL3357 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | EQ963480 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATCATCAAATATGGAGGCAGAA
+>CNAG_00086  | Cryptococcus neoformans var. grubii H99 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | CP003820.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACATCTTTGCATGCCTCGCCCA
+>NEUDI_22354  | Neurospora discreta FGSC 8579 | tRNA methyltransferase | genomic | NdisFGSC8579_SC003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTTCCGCGCAATGGCTTCCGAA
+>AGR95_071690  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_ZE.Contig158 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATGGAACGTCGATGTACCCAATT
+>MGL_0389  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCACTTTCTATATGGGCCTTGTG
+>ASPZODRAFT_153176  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878345 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATCTTTGCGCCATGCATGATCCA
+>NFIA_006470  | Aspergillus fischeri NRRL 181 | N2,N2-dimethylguanosine tRNA methyltransferase, putative | genomic | DS027697 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATCTTCACTCATGGACGATCCA
+>ASPWEDRAFT_51731  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878212 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGAATTCCTCCATGGAAAATGCT
+>ASPTUDRAFT_167515  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878187 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTTTTGAGCCATGGCTGCCTCG
+>AMAG_02457  | Allomyces macrogynus ATCC 38327 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GG745330 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGGCCAAACCAATGCCTGCTGCG
+>FFUJ_04799  | Fusarium fujikuroi IMI 58289 | probable N2,N2-dimethylguanosine tRNA methyltransferase | genomic | HF679024 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCTCTCGAGCCATGAAGGTTCTT
+>TREMEDRAFT_68241  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711530 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCCAACACACGATGACCGCTTCC
+>H310_06800  | Aphanomyces invadans NJM9701 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KI913963 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCTCCAGTGCATGTTGTTGCGC
+>MGG_01448  | Magnaporthe oryzae 70-15 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | CM001232 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCCGCAGACCAATGACCACCACG
+>PAG1_G002273  | Pythium aphanidermatum DAOM BR444 | N(2),N(2)-dimethylguanosine tRNA methyltransferase. | genomic | PaphDAOMBR444_SC0056 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCATCGCGTGGATGCTCCTTGGC
+>CR_00900W_B  | Candida albicans SC5314_B | Putative N2,N2-dimethylguanine tRNA methyltransferase; induced upon adherence to polystyrene | genomic | Ca22chrRB_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTTTTAATCAATGATTAAAAGA
+>sr15094  | Sporisorium reilianum SRZ2 | related to N2,N2-dimethylguanosine tRNA methyltransferase | genomic | FQ311433 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGATACTTCAGCATGGCACCGACA
+>CPSG_08232  | Coccidioides posadasii str. Silveira | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GL636502 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCACACGCAGAATGGCTTCGCAG
+>SPRG_03801  | Saprolegnia parasitica CBS 223.65 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KK583198 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCCGCCGCAGCATGAGCACTGAC
+>FVEG_06310  | Fusarium verticillioides 7600 | hypothetical protein | genomic | CM000579.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGTGGAGGAA
+>SDRG_13444  | Saprolegnia diclina VS20 | hypothetical protein, hypothetical protein, variant | genomic | JH767191 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGATTGATTGGCATGGCAGCCCAT
+>H257_01464  | Aphanomyces astaci strain APO3 | N2,N2-dimethylguanosine tRNA methyltransferase, N2,N2-dimethylguanosine tRNA methyltransferase, variant 1, N2,N2-dimethylguanosine tRNA methyltransferase, variant 2, N2,N2-dimethylguanosine tRNA methyltransferase, variant 3, N2,N2-dimethylguanosine tRNA methyltransferase, variant 4 | genomic | KI913115 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTAATTCCGTGCATGCTGTTGCGC
+>FGRAMPH1_01G26477  | Fusarium graminearum PH-1 | n -dimethylguanosine trna mitochondrial | genomic | HG970335 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGTCGCTAGCCATGCAAACTCTT
+>PHYSODRAFT_488933  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159153 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCCGCTCCGCCATGTCGACGTCC
+>CIHG_08368  | Coccidioides immitis H538.4 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | DS017022 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTAAATGGATGATGGCCCCCTTT
+>PNEJI1_001134  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000211 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTTTTGGAAGATGAATGAAGTT
+>PITG_10166  | Phytophthora infestans T30-4 | N(2),N(2)-dimethylguanosine tRNA methyltransferase, putative | genomic | DS028134 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAAACAGAGCCATGCCTTCGTCA
+>CIMG_08475  | Coccidioides immitis RS | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GG704913 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCAGGCAGCCAATGTTTCGACTC
+>AGR57_513  | Phanerochaete chrysosporium RP-78 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | PchrRP-78_SC001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCCACAACAGCATGTCCACAGCA
+>AMAG_04199  | Allomyces macrogynus ATCC 38327 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GG745333 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTCATTCTACCATGGCGGCACAC
+>CAGL0B01881g  | Candida glabrata CBS 138 | Ortholog(s) have tRNA (guanine-N2-)-methyltransferase activity, role in tRNA N2-guanine methylation and mitochondrion, nuclear inner membrane localization | genomic | ChrB_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTGTCGCAACCATGTCTGCTATG
+>RO3G_14126  | Rhizopus delemar RA 99-880 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | CH476744 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGTTAAAGCTATGTCTGCAACC
+>HCDG_00425  | Histoplasma capsulatum H143 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GG692419 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAAGCTGCAATGGCTCAGACG
+>NCU06336  | Neurospora crassa OR74A | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | CM002239 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCACCCTTCTATATGCGCGCCCTT
+>CNBG_0468  | Cryptococcus deuterogattii R265 | tRNA (guanine-N2-)-methyltransferase | genomic | KQ410557 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCGCGTAAAATGACCACTCAG
+>PYU1_G005769  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC1402 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGACGACCGATATGAGCCTGATC
+>HpaG807376  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0063 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTATGCTGCATATGATTGGAGGA
+>BDEG_03124  | Batrachochytrium dendrobatidis JEL423 | N(2),N(2)-dimethylguanosine tRNA methyltransferase | genomic | BdenJEL423_SC03 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTATCAACAAAATGACTACCGTC
+>SS1G_12965  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476643 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCCTCCACCATGGATGCTACT
+>FOC4_g10011725  | Fusarium oxysporum f. sp. cubense race 4 | N(2),N(2)-dimethylguanosine tRNA methyltransferase, mitochondrial | genomic | KB726997 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGCGGAGAAA
+>QYA_152482  | Mucor circinelloides f. lusitanicus CBS 277.49 | tRNA methyltransferase | genomic | McirCBS277-49_SC03 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTGCTAAAATCATGTCTACTGCA
+>SPRG_16864  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583638 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCGACACGGACATGCACACGCTT
+>PADG_00253  | Paracoccidioides brasiliensis Pb18 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KN275957 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCCGATCTGCAATGGCGGAGACT
+>UMAG_04209  | Ustilago maydis 521 | hypothetical protein | genomic | CM003151 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGCTATTCATCATGGCGCCGACG
+>FOMG_12297  | Fusarium oxysporum f. sp. melonis 26406 | hypothetical protein | genomic | JH659338.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGCGGAGGAA
+>SOCG_01333  | Schizosaccharomyces octosporus yFS286 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KE503208 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATGCATATTTGATGTTGAAAAAT
+>H310_07541  | Aphanomyces invadans NJM9701 | N2,N2-dimethylguanosine tRNA methyltransferase, N2,N2-dimethylguanosine tRNA methyltransferase, variant 1, N2,N2-dimethylguanosine tRNA methyltransferase, variant 2 | genomic | KI913965 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGAATTTCTCATGAGCTGGCGC
+>FOZG_06883  | Fusarium oxysporum Fo47 | hypothetical protein | genomic | JH717899.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGCGGAGGAA
+>ALNC14_025370  | Albugo laibachii Nc14 | unspecified product | genomic | FR824066 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGTCCGTGACCATGAGTGCACCG
+>CGB_B0790W  | Cryptococcus gattii WM276 | tRNA (guanine-N2-)-methyltransferase, putative | genomic | CP000287 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCGCACGTAAAATGAGCACTCAG
+>MELLADRAFT_113527  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883176 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAACATTCTCAATGTCAACTACT
+>MGL_0388  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGGACGAATGGATGCACATGGAT
+>CPC735_061430  | Coccidioides posadasii C735 delta SOWgp | N2,N2-dimethylguanosine tRNA methyltransferase family protein | genomic | ACFW01000015 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCACACGCAGAATGGCTTCGCAG
+>SPPG_00593  | Spizellomyces punctatus DAOM BR117 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KQ257450 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAGAAGAAACCATGACCACCATG
+>P168DRAFT_300170  | Aspergillus campestris IBT 28561 | TRM-domain-containing protein | genomic | MSFM01000015 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATACACAACGCATGGATTCTATA
+>NEUTE1DRAFT_60425  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891303 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTTCCGCGCAATGGCTTCCGAA
+>ASPVEDRAFT_48089  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878141 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTGGACATTTATGAACCGAATT
+>PIW_G006097  | Pythium iwayamai DAOM BR242034 | N(2),N(2)-dimethylguanosine tRNA methyltransferase | genomic | PiwaDAOMBR242034_SC00868 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACTCCAGTTGATGCGCATTGGC
+>SPBC25D12.05  | Schizosaccharomyces pombe 972h- | tRNA (guanine-N2-)-methyltransferase Trm1  | genomic | Spom972h_chrII forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATTCGTATTAAATGTATGAAGCC
+>PCH_Pc14g00720  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c14 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTTCTAGAGCCATGGAGGATCCT
+>SMAC_01012  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546225 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTTCCGCACAATGGCTTCCGAA
+>PABG_03587  | Paracoccidioides brasiliensis Pb03 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KN305535 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCCGATCTGCAATGGCGGAGACT
+>evm.TU.AC2VRR_s00018g122  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC018 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCTTTCGACTATGAGCGCGCCA
+>FOC1_g10010147  | Fusarium oxysporum f. sp. cubense race 1 | N(2),N(2)-dimethylguanosine tRNA methyltransferase, mitochondrial | genomic | KB730233 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGCGGAGGAA
+>ASPCADRAFT_208138  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907501 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGGCCACGGACATGTCTGAGCAA
+>FOIG_08298  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658283.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGCGGAGAAA
+>M_BR32_EuGene_00010481  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00001 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCCGCAGACCAATGACCACCACG
+>AO090124000082  | Aspergillus oryzae RIB40 | Ortholog(s) have tRNA (guanine-N2-)-methyltransferase activity, role in tRNA N2-guanine methylation and mitochondrion, nucleus localization | genomic | Chr5_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATACCGGAGCCGATGAGCTTGAGC
+>ASPFODRAFT_40455  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878236 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGTCCGGGTCCATGAGCCCACAC
+>TSTA_104190  | Talaromyces stipitatus ATCC 10500 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | EQ962658 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGCGAGCACTCATGGCCAGAACA
+>PGTG_07571  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | hypothetical protein | genomic | DS178281 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATTTTTCTCAGATGAACCACATC
+>HCEG_04692  | Histoplasma capsulatum H88 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | DS990639 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAAGCTGCAATGGCTCAGACG
+>PAR_G000773  | Pythium arrhenomanes ATCC 12531 | N(2),N(2)-dimethylguanosine tRNA methyltransferase. | genomic | ParrATCC12531_SC00051 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCTCGCTGCATGCGCTTTGGC
+>CNBA0740  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000040 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCACGCAAAATGACCACTCAG
+>ATEG_04260  | Aspergillus terreus NIH2624 | conserved hypothetical protein | genomic | CH476599 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCTCCGCCACCATGGCGCCTTCA
+>AN9406  | Aspergillus nidulans FGSC A4 | Putative 2,N2-dimethylguanosine tRNA methyltransferase | genomic | ChrVIII_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATTCATACACCATGGCTTCGAAA
+>PMAA_005590  | Talaromyces marneffei ATCC 18224 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | DS995905 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGACAGTCAATCATGGCCAGACCA
+>ASPNIDRAFT_46885  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCTGCGGAGATGGCTGAACAA
+>I308_01598  | Cryptococcus gattii VGIV IND107 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KN848858 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCACGTAAAATGGCCACTCAG
+>RO3G_02596  | Rhizopus delemar RA 99-880 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | CH476733 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCAACCGTGACATGTCTATTGCT
+>SPRG_12516  | Saprolegnia parasitica CBS 223.65 | hypothetical protein | genomic | KK583287 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATTGATTGGCATGGCAGCCCAC
+>ASPSYDRAFT_51661  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878599 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTCACACTCCATGACTTCAATT
+>HCBG_08364  | Histoplasma capsulatum G186AR | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | GG663377 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TATGGAACGTCAATGCACCCAATT
+>CR_00900W_A  | Candida albicans SC5314 | Putative N2,N2-dimethylguanine tRNA methyltransferase; induced upon adherence to polystyrene | genomic | Ca22chrRA_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTTTTAATCAATGATTAAAAGA
+>CC1G_12013  | Coprinopsis cinerea okayama7#130 | tRNA (guanine-N2-)-methyltransferase | genomic | AACS02000002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTACACGGACGATGGCATCGACA
+>I314_02342  | Cryptococcus gattii CA1873 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KN848893 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCACGTAAAATGACCACTCAG
+>ZTRI_3.108.1  | Zymoseptoria tritici IPO323 | unspecified product | genomic | Ztri_chr_3 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGTGAAAGCCAATGCTCAAGGTG
+>PHYCI_89819  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | tRNA methyltransferase | genomic | PcinCBS144-22_SC0006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCTCGCGCCATGGCCACGTCG
+>HCAG_07635  | Histoplasma capsulatum NAm1 | conserved hypothetical protein | genomic | CH476663 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAAAAGCTGCAATGGCTGAGACG
+>P174DRAFT_443505  | Aspergillus novofumigatus IBT 16806 | putative N2,N2-dimethylguanosine tRNA methyltransferase | genomic | MSZS01000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATCTTCAGTCATGGACGATCCA
+>YALI0_E30723g  | Yarrowia lipolytica CLIB122 | YALI0E30723p | genomic | CR382131 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAAAAGTCGCCATGACCGACGCC
+>PHYBL_180886  | Phycomyces blakesleeanus NRRL 1555(-) | tRNA methyltransferase | genomic | PblaNRRL1555-_SC08 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCCCATTAACAATGTCTGCTTCC
+>H257_07334  | Aphanomyces astaci strain APO3 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KI913128 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACGATCGGGAGATGCCAGGGTCG
+>CKF44_000082  | Cryptococcus neoformans var. grubii KN99 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | CP022321.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACATCTTTGCATGCCTCGCCCA
+>I306_05624  | Cryptococcus gattii EJB2 | N2,N2-dimethylguanosine tRNA methyltransferase | genomic | KN848752 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCGCACGTAAAATGAGCACTCAG
+>ASPACDRAFT_121662  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878979 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAGTTCGCGCCATGGACACCTCG
+>FOXG_08363  | Fusarium oxysporum f. sp. lycopersici 4287 | hypothetical protein | genomic | CM000590.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACAGCAAAAATGGCGGAGGAA
+>PIR_G000614  | Pythium irregulare DAOM BR486 | N(2),N(2)-dimethylguanosine tRNA methyltransferase | genomic | PirrDAOMBR486_SC0017 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACCGCCAGTTGATGCGCATTGGT
+>An01g00070  | Aspergillus niger CBS 513.88 | Ortholog(s) have tRNA (guanine-N2-)-methyltransferase activity, role in tRNA N2-guanine methylation and mitochondrion, nuclear inner membrane localization | genomic | An01_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCTGCGGAGATGGCTGAACAA
+>PHYCA_103580  | Phytophthora capsici LT1534 |  hypothetical protein OsI_33196  | genomic | PcapLT1534_SC008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCACCGAGCCATGTCTTCATCT
+>PUG3_G010235  | Pythium ultimum var. sporangiiferum BR650 | N(2),N(2)-dimethylguanosine tRNA methyltransferase | genomic | PultBR650_SC1189 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGCAATGGCGTGATGATCTTCCCC
+>AFUB_043780  | Aspergillus fumigatus A1163 | Ortholog(s) have nucleus localization | genomic | scf_000003_A_fumigatus_A1163 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCCCGAAGCCGATGTGGATGAGT
+>TRIREDRAFT_55790  | Trichoderma reesei QM6a | hypothetical protein | genomic | GL985057 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGTTGCGCCAATGGCAGGCACC
+>ASPBRDRAFT_173324  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878681 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTTTAGAGACATGGCCGCCTCG

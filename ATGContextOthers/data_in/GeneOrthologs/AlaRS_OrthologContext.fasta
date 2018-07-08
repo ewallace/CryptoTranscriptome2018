@@ -1,0 +1,288 @@
+>YOR335C  | Saccharomyces cerevisiae S288c | alanine--tRNA ligase | genomic | BK006948 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTAGAACCATAATGACGATCGGT
+>CLUG_04644  | Clavispora lusitaniae ATCC 42720 | hypothetical protein | genomic | CH408080 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCCTTCTTTGAATGCTAAAGAGT
+>PYU1_G002652  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2031 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGCTTTTTAGGTACGGAGCAGCGT
+>FGRAMPH1_01G02279  | Fusarium graminearum PH-1 | alanyl-tRNA synthetase | genomic | HG970332 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGCGCGACCATGGCTGAGTCG
+>ASPCADRAFT_206421  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907498 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGATCATCAAGTATGGCTTCTGAT
+>ASPACDRAFT_128261  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV879013 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTTCTTTGAAATGCTCGGTAAC
+>NEUTE1DRAFT_126487  | Neurospora tetrasperma FGSC 2508 | hypothetical protein | genomic | GL891382 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCTGCCCGTCATGGCTTCTGAT
+>AGR95_024280  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_DU.Contig190 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCTCGTTTGGATGGGAATAGGA
+>FFUJ_00728  | Fusarium fujikuroi IMI 58289 | probable alanine--tRNA ligase, cytosolic | genomic | HF679023 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGCACGACCATGGCCGAGTCG
+>PAR_G003721  | Pythium arrhenomanes ATCC 12531 | Alanyl-tRNA synthetase. | genomic | ParrATCC12531_SC00419 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCGGCCTCATCATGCGCGTCGTG
+>BDEG_03571  | Batrachochytrium dendrobatidis JEL423 | conserved hypothetical protein | genomic | BdenJEL423_SC04 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATACGATAACATGGAGCCAGTC
+>HCEG_02656  | Histoplasma capsulatum H88 | alanyl-tRNA synthetase | genomic | DS990637 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCTTCCAAGATGGCTTCGGCG
+>AFUB_083700  | Aspergillus fumigatus A1163 | Has domain(s) with predicted nucleic acid binding, ATP binding, alanine-tRNA ligase activity, role in alanyl-tRNA aminoacylation and cytoplasm localization | genomic | scf_000007_A_fumigatus_A1163 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACATTCACTTGATGCGAATTTCC
+>SPPG_05939  | Spizellomyces punctatus DAOM BR117 | alanine-tRNA ligase | genomic | KQ257459 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTGACGGGTGATGCATGGGATC
+>PAG1_G007220  | Pythium aphanidermatum DAOM BR444 | Alanyl-tRNA synthetase. | genomic | PaphDAOMBR444_SC0342 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCGACGGCCATGGCGTCGCAG
+>CIHG_07165  | Coccidioides immitis H538.4 | alanyl-tRNA synthetase | genomic | DS017012 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTGATACTGGTATGGGATACGAG
+>ATEG_03525  | Aspergillus terreus NIH2624 | hypothetical protein | genomic | CH476597 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCCAATTCGCATGAATCACACC
+>CIMG_02281  | Coccidioides immitis RS | alanine-tRNA ligase | genomic | GG704911 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGTCGGTTTGAATGTTGAGTGGG
+>PHYBL_556  | Phycomyces blakesleeanus NRRL 1555(-) | Alanyl-tRNA synthetase | genomic | PblaNRRL1555-_SC06 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTAACTTCTCCTGAGCTACGTGCT
+>PHYCI_4814  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Alanyl-tRNA synthetase | genomic | PcinCBS144-22_SC0021 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGCGAGAAGCATGAGCGGACTG
+>I314_02906  | Cryptococcus gattii CA1873 | alanine-tRNA ligase | genomic | KN848894 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCGGCATTGTATGCTCCTTAGC
+>AMAG_19879  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745360 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGCACCGCATCATGGCCGACCAC
+>PHYSODRAFT_473521  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159151 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAGTCAGAAGCATGAGCAACGTG
+>PSURA_50293  | Phytophthora ramorum strain Pr102 | Alanyl-tRNA synthetase | genomic | PramPr-102_SC0051 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGTGGAGAACTGGCCGGCCGCG
+>MGG_03607  | Magnaporthe oryzae 70-15 | alanyl-tRNA synthetase | genomic | CM001234 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTGTTGAAGTAATGAGGTGGTGT
+>FOMG_01637  | Fusarium oxysporum f. sp. melonis 26406 | alanyl-tRNA synthetase | genomic | JH659329.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGTTGCCCTTGATGTGGGCGTGC
+>PABG_03816  | Paracoccidioides brasiliensis Pb03 | alanyl-tRNA synthetase | genomic | KN305535 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATCCGTTTGGATGGGAGTAGGA
+>SDRG_15032  | Saprolegnia diclina VS20 | alanyl-tRNA synthetase | genomic | JH767214 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCCATCAACGATGACGCAGATG
+>PIR_G008208  | Pythium irregulare DAOM BR486 | Alanyl-tRNA synthetase | genomic | PirrDAOMBR486_SC0703 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGAGAAGAAACGATGCGCATGCTG
+>SOCG_04361  | Schizosaccharomyces octosporus yFS286 | cytoplasmic alanine-tRNA ligase Ala1 | genomic | KE503208 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCCACCACGGATGTTTGAATAT
+>CNF02520  | Cryptococcus neoformans var. neoformans JEC21 | alanine-tRNA ligase, putative | genomic | AE017346.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACGACATTGTATGCTCTTTGGC
+>HCAG_01871  | Histoplasma capsulatum NAm1 | hypothetical protein | genomic | CH476655 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCTTTCAAGATGGCTTCGGCG
+>HCBG_03698  | Histoplasma capsulatum G186AR | alanyl-tRNA synthetase | genomic | GG663366 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCTCGTTTGGATGGGAATAGGA
+>I308_03398  | Cryptococcus gattii VGIV IND107 | alanine-tRNA ligase | genomic | KN848862 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCGACATTGTATGCTCCTTAGC
+>YALI0_B04180g  | Yarrowia lipolytica CLIB122 | YALI0B04180p | genomic | CR382128 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTTTCAGCACCATGCCCCTTAAT
+>H310_03489  | Aphanomyces invadans NJM9701 | alanine-tRNA ligase | genomic | KI913956 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCATCGACAGGATGCAACATCGG
+>ASPVEDRAFT_49674  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878126 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACCATTGACAATGCCTTCGACT
+>CIHG_07164  | Coccidioides immitis H538.4 | ala-tRNA synthetase | genomic | DS017012 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGGTGGGACGCATGTCAAAAACT
+>PHYSODRAFT_534864  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159169 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGCTCTTGGCGATGCTGCGTCTA
+>ASPTUDRAFT_56224  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878203 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATAAAACTGGATGTTACAACCG
+>PGTG_10205  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | alanyl-tRNA synthetase | genomic | DS178290 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGTCGAGCTGAATGAAACCAGTG
+>PPTG_18707  | Phytophthora parasitica INRA-310 | alanine-tRNA ligase | genomic | KI669652 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGAATCAAGCCATGAGCGGACTA
+>PVE_G005771  | Pythium vexans DAOM BR484 | Alanyl-tRNA synthetase, mitochondrial | genomic | PvexDAOMBR484_SC0342 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGGGAAAAAGCATGAGCGGGCTG
+>PSURA_40975  | Phytophthora ramorum strain Pr102 | Alanyl-tRNA synthetase | genomic | PramPr-102_SC0013 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACTCGCTGCCATCTGCGGAGCTG
+>NFIA_096580  | Aspergillus fischeri NRRL 181 | alanyl-tRNA synthetase, putative | genomic | DS027694 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGACACTTCAGAATGACTTCAGAC
+>CNAG_05722  | Cryptococcus neoformans var. grubii H99 | alanine-tRNA ligase | genomic | CP003826.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCGATATTGTATGCTCTTTAGC
+>RO3G_07558  | Rhizopus delemar RA 99-880 | alanyl-tRNA synthetase | genomic | CH476736 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGTATTAAAAAATGACCGAGTGG
+>An16g09320  | Aspergillus niger CBS 513.88 | Ortholog(s) have alanine-tRNA ligase activity, role in alanyl-tRNA aminoacylation and cytosol, mitochondrion localization | genomic | An16_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGTAAAACTGGATGTTACAACCG
+>BC1G_01538  | Botrytis cinerea B05.10 | hypothetical protein | genomic | BcinB05-10_SC04 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGTCGAGAATTATGGCGAGCTCT
+>AO090103000001  | Aspergillus oryzae RIB40 | Ortholog(s) have cytosol localization | genomic | Chr8_A_oryzae_RIB40 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCATCCTCCCGATGAAGGGTATT
+>CGB_F3270W  | Cryptococcus gattii WM276 | alanine-tRNA ligase | genomic | CP000291 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCGACATTGTATGCTCCTTAGC
+>TREMEDRAFT_34057  | Tremella mesenterica DSM 1558 | hypothetical protein | genomic | JH711539 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCACCTCAATATGGGAGCCGAC
+>QYA_144749  | Mucor circinelloides f. lusitanicus CBS 277.49 | Alanyl-tRNA synthetase | genomic | McirCBS277-49_SC05 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACGTACGCTACATGCAACAATTG
+>evm.TU.AC2VRR_s00149g49  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC149 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGAGGTACAAAATGGCCCTCGAT
+>PITG_10110  | Phytophthora infestans T30-4 | alanyl-tRNA synthetase | genomic | DS028134 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGACGAGACGGATGCTGCGTCTT
+>PYU1_G000237  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2039 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGGAAACAGGAATGGACCAGATG
+>PHYCA_545598  | Phytophthora capsici LT1534 |  C. briggsae CBR-ARS-2 protein  | genomic | PcapLT1534_SC018 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAATCAACGCTATGAGCGGACTA
+>UREG_01456  | Uncinocarpus reesii 1704 | alanyl-tRNA synthetase | genomic | CH476615 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGCAGTTCAAAATGGCCTCGTCT
+>AMAG_14023  | Allomyces macrogynus ATCC 38327 | alanine-tRNA ligase | genomic | GG745359 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGCAGCCAATATGTCGGCCGCT
+>PHYCA_571146  | Phytophthora capsici LT1534 |  alanyl-tRNA synthetase  | genomic | PcapLT1534_SC040 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACTCAAGCCCAATGCTGCGTCTA
+>CPSG_00133  | Coccidioides posadasii str. Silveira | alanyl-tRNA synthetase | genomic | GL636486 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGCTGCTCAAAATGGCGTCCTCT
+>M_BR32_EuGene_00033481  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAACCGCCAACATGGCCACCGAG
+>SPRG_08221  | Saprolegnia parasitica CBS 223.65 | alanyl-tRNA synthetase | genomic | KK583224 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTGTAGCATCGATGGACTCGCTC
+>CC1G_11540  | Coprinopsis cinerea okayama7#130 | tRNA synthetase class II | genomic | AACS02000003 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGCTGGCAACAATGTCCTCAAAT
+>PADG_00002  | Paracoccidioides brasiliensis Pb18 | alanyl-tRNA synthetase | genomic | KN275957 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATCCGTTTGGATGGGAGTAGGA
+>PVE_G008734  | Pythium vexans DAOM BR484 | Alanyl-tRNA synthetase | genomic | PvexDAOMBR484_SC0731 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGAGGGTCGGGATGGTACGCGTG
+>PCH_Pc22g10240  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c22 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATTCGACAGGATGGCTTCTCCC
+>NEUDI_124150  | Neurospora discreta FGSC 8579 | Alanyl-tRNA synthetase | genomic | NdisFGSC8579_SC002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACTGCCCGTCATGGCTCCTGCC
+>CPAG_00578  | Coccidioides posadasii RMSCC 3488 | alanyl-tRNA synthetase | genomic | DS268109 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATTCTTTCTATGTCGTTTGAA
+>RO3G_06365  | Rhizopus delemar RA 99-880 | alanyl-tRNA synthetase | genomic | CH476735 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTGCTCTTTACATGAACCAAACA
+>MELLADRAFT_48072  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883104 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGTTCAGATTCATGTCAAACTCA
+>FVEG_00675  | Fusarium verticillioides 7600 | alanyl-tRNA synthetase | genomic | CM000578.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTCGAGGCTCGATGTGGGCGTGC
+>FOXG_00879  | Fusarium oxysporum f. sp. lycopersici 4287 | alanyl-tRNA synthetase | genomic | CM000589.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGTTGCCCTTGATGTGGGCGTGC
+>ALNC14_003760  | Albugo laibachii Nc14 | unspecified product | genomic | FR824047 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGAGCTACAGGATGGCCCACGAT
+>SPRG_04234  | Saprolegnia parasitica CBS 223.65 | alanyl-tRNA synthetase | genomic | KK583199 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGCCATCACCGATGACGCAGATG
+>HCDG_03838  | Histoplasma capsulatum H143 | alanyl-tRNA synthetase | genomic | GG692422 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCGGCTTCCAAGATGGCTTCGGCA
+>FOIG_01424  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658272.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCAATGCTGGCATGAACCAGTTC
+>PIW_G010690  | Pythium iwayamai DAOM BR242034 | Alanyl-tRNA synthetase, mitochondrial | genomic | PiwaDAOMBR242034_SC02542 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGGACACAGGAATGGCGCACACG
+>ACLA_057200  | Aspergillus clavatus NRRL 1 | alanyl-tRNA synthetase, putative | genomic | DS026990 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGACACTTCATGATGACTCTGGAC
+>SPAC23C11.09  | Schizosaccharomyces pombe 972h- | mitochondrial and cytoplasmic alanine-tRNA ligase Ala1 (predicted)  | genomic | Spom972h_chrI forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCAGAGACCTCATGACCGCCGAA
+>P168DRAFT_330709  | Aspergillus campestris IBT 28561 | putative alanyl-tRNA synthetase | genomic | MSFM01000016 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGGTTGACTTGATGCGGGCTCTC
+>FOC1_g10016183  | Fusarium oxysporum f. sp. cubense race 1 | Alanyl-tRNA synthetase | genomic | KB731261 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGCGCGACCATGGCCGAGTCG
+>PITG_12961  | Phytophthora infestans T30-4 | alanyl-tRNA synthetase, mitochondrial precursor | genomic | DS028142 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGAATCAAGCCATGAGCGGACTA
+>ASPZODRAFT_2103593  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878343 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCATGTCCCTTCATGCGAGTTCCA
+>ASPCADRAFT_46375  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907498 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGATCATCAAGTATGGCTTCTGAT
+>B9J08_001122  | Candida auris strain B8441 | alanine-tRNA ligase | genomic | PEKT02000003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCAAGCACACCATGACAACCTGG
+>P170DRAFT_264210  | Aspergillus steynii IBT 23096 | hypothetical protein | genomic | MSFO01000008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTTCTTTGAAATGCTCGGGAAC
+>ASPSYDRAFT_1169380  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878583 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAACACCTGGCAATGGCTTCCACT
+>C6_03720W_A  | Candida albicans SC5314 | Alanyl-tRNA synthetase; translational regulation generates cytoplasmic and mitochondrial forms; Gcn4p-regulated; repressed by amino acid starvation (3-AT); translation-related genes downregulated upon phagocytosis by murine macrophages | genomic | Ca22chr6A_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTATTAGGTATATGATAAAGACA
+>ASPWEDRAFT_117659  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878215 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGGGTCACTTGATGCGAGTATCG
+>H310_04414  | Aphanomyces invadans NJM9701 | alanine-tRNA ligase | genomic | KI913958 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGTCCGTCCAACATGGAAGACTTG
+>FOC4_g10014588  | Fusarium oxysporum f. sp. cubense race 4 | Alanyl-tRNA synthetase | genomic | KB726996 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCAGCGCGACCATGGCCGAGTCG
+>I306_00236  | Cryptococcus gattii EJB2 | alanine-tRNA ligase | genomic | KN848557 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCCCGACATTGTATGCTCCTTAGC
+>P174DRAFT_463051  | Aspergillus novofumigatus IBT 16806 | putative alanyl-tRNA synthetase | genomic | MSZS01000007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACCTTCACTTGATGCGAATTTCC
+>SMAC_11731  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003543531 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACCGCGACGGCATGCGCGGCGGC
+>SJAG_01797  | Schizosaccharomyces japonicus yFS275 | cytoplasmic alanine-tRNA ligase Ala1 | genomic | KE651168 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAAATTCACCCATGTCTACGACG
+>PPTG_04650  | Phytophthora parasitica INRA-310 | alanine-tRNA ligase | genomic | KI669565 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCAGCAAGGCCGATGCTGCGTCTT
+>PIW_G003511  | Pythium iwayamai DAOM BR242034 | Anaphase-promoting complex subunit | genomic | PiwaDAOMBR242034_SC00386 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGAACGCCGGCATGGTGCCGTTC
+>PUG3_G005843  | Pythium ultimum var. sporangiiferum BR650 | Alanyl-tRNA synthetase, mitochondrial | genomic | PultBR650_SC0400 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCAACGCCGGCATGAACCAGTAC
+>HpaG803308  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0019 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACCAGAGACGATGATGCTGCGT
+>CAGL0E05390g  | Candida glabrata CBS 138 | Ortholog(s) have alanine-tRNA ligase activity, role in alanyl-tRNA aminoacylation and cytosol, mitochondrion localization | genomic | ChrE_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCAAGAGCAAGATGACTATTGGA
+>ASPBRDRAFT_54822  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878684 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGTAAAACTGAATGTTGCAACCG
+>HpaG808283  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0077 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCTCCAGCCCATGGCCAAGCTC
+>SMAC_05794  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546179 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACTGCCCGCCATGGCTTCCGAT
+>H257_16634  | Aphanomyces astaci strain APO3 | alanine-tRNA ligase, alanine-tRNA ligase, variant | genomic | KI913202 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCTGCTCAAGATGGAAGACTTG
+>QYA_105829  | Mucor circinelloides f. lusitanicus CBS 277.49 | Alanyl-tRNA synthetase | genomic | McirCBS277-49_SC01 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTACAATCATTATGGCTGGACAA
+>CNBG_1819  | Cryptococcus deuterogattii R265 | alanine-tRNA ligase | genomic | KQ410560 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCAAAGAAAATGGGTGCCAAC
+>CNBF2180  | Cryptococcus neoformans var. neoformans B-3501A | unspecified product | genomic | CM000045 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACGACATTGTATGCTCTTTGGC
+>MGL_1729  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAAAGTTGTCTATGTCGAATTCA
+>TRIREDRAFT_4537  | Trichoderma reesei QM6a | predicted protein | genomic | GL985068 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCTCGCAAGAATGGCGGGCAAC
+>SS1G_06001  | Sclerotinia sclerotiorum 1980 UF-70 | hypothetical protein | genomic | CH476627 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTCAAGAATTATGGCGACTTCT
+>NCU02566  | Neurospora crassa OR74A | alanyl-tRNA synthetase | genomic | CM002236 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCGGTAAAGAATGAAGAGTCTT
+>Afu8g03880  | Aspergillus fumigatus Af293 | Putative alanyl-tRNA synthetase | genomic | Chr8_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACATTCACTTGATGCGAATTTCC
+>TSTA_011040  | Talaromyces stipitatus ATCC 10500 | alanyl-tRNA synthetase, putative | genomic | EQ962656 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTTGTGAGGGATGATGGGGTCG
+>PHYCI_93897  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | unspecified product | genomic | PcinCBS144-22_SC0060 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTTGGCTCTGATGCTGCGTCTA
+>ZTRI_5.367  | Zymoseptoria tritici IPO323 | similar to alanyl-tRNA synthetase | genomic | Ztri_chr_5 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCATTCGCACAATGGCCTCCACC
+>P170DRAFT_439928  | Aspergillus steynii IBT 23096 | hypothetical protein | genomic | MSFO01000008 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCCAACTGATTGATGGTTGCCACT
+>PMAA_060490  | Talaromyces marneffei ATCC 18224 | alanyl-tRNA synthetase, putative | genomic | DS995903 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGTGAGGGACGATGGGGTCGCCA
+>AMAG_13579  | Allomyces macrogynus ATCC 38327 | alanine-tRNA ligase | genomic | GG745360 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTGAAGTCAAAATGTCGGCCGCT
+>FOZG_01627  | Fusarium oxysporum Fo47 | alanyl-tRNA synthetase | genomic | JH717896.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGGTTGCCCTTGATGTGGGCGTGC
+>PAAG_01777  | Paracoccidioides lutzii Pb01 | alanyl-tRNA synthetase | genomic | KN293994 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATCCGTTTGGATGGGAGTAGGG
+>ASPNIDRAFT_51231  | Aspergillus niger ATCC 1015 | hypothetical protein | genomic | ACJE01000014 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCCTATCATTGATGTCATATTCG
+>sr13143  | Sporisorium reilianum SRZ2 | probable ALA1-alanyl-tRNA synthetase, cytosolic | genomic | FQ311463 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCTCGTCCACCATGACCGAACCG
+>PHYBL_188133  | Phycomyces blakesleeanus NRRL 1555(-) | Alanyl-tRNA synthetase | genomic | PblaNRRL1555-_SC20 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGCACCCACCATGACTGAACAA
+>CPC735_039370  | Coccidioides posadasii C735 delta SOWgp | Alanyl-tRNA synthetase, cytoplasmic , putative | genomic | ACFW01000014 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATGTCGGTTTGAATGTTGAGTGGG
+>UMAG_05233  | Ustilago maydis 521 | putative alanine--tRNA ligase | genomic | CM003143 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACATCCACCATGACTGACTCG
+>PAR_G003694  | Pythium arrhenomanes ATCC 12531 | Alanyl-tRNA synthetase, mitochondrial. | genomic | ParrATCC12531_SC00415 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTCCTTCTTCCATGGCGTCGCCG
+>CKF44_005140  | Cryptococcus neoformans var. grubii KN99 | alanine-tRNA ligase | genomic | CP022327.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCCGATATTGTATGCTCTTTAGC
+>PNEJI1_000399  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000248 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGCAAAAAAAGATGAAGAATGCT
+>PAG1_G003591  | Pythium aphanidermatum DAOM BR444 | Alanyl-tRNA synthetase, mitochondrial. | genomic | PaphDAOMBR444_SC0108 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCCCGCACACGATGTACCCATCG
+>PITG_04918  | Phytophthora infestans T30-4 | alanyl-tRNA synthetase, putative | genomic | DS028123 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGGACGAGACGGATGCTGCGTCTT
+>PIR_G003514  | Pythium irregulare DAOM BR486 | Alanyl-tRNA synthetase, mitochondrial | genomic | PirrDAOMBR486_SC0166 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGGAAACAGGAATGGCGCAGACG
+>ATEG_00008  | Aspergillus terreus NIH2624 | alanyl-tRNA synthetase | genomic | CH476594 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCACCCTTTAGGATGAGTTCCGAT
+>CIHG_07166  | Coccidioides immitis H538.4 | alanyl tRNA Synthetase family protein | genomic | DS017012 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGGCTGCTCAAAATGGCGTCCTCT
+>PAR_G006470  | Pythium arrhenomanes ATCC 12531 | Alanyl-tRNA synthetase, mitochondrial. | genomic | ParrATCC12531_SC01019 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACGAGGTCAAGGCGGGCGACTAT
+>AMAG_02011  | Allomyces macrogynus ATCC 38327 | alanine-tRNA ligase | genomic | GG745330 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGCCAACACCATGCCGCCCAAG
+>C6_03720W_B  | Candida albicans SC5314_B | Alanyl-tRNA synthetase; translational regulation generates cytoplasmic and mitochondrial forms; Gcn4p-regulated; repressed by amino acid starvation (3-AT); translation-related genes downregulated upon phagocytosis by murine macrophages | genomic | Ca22chr6B_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTTATTAGGTATATGATAAAGACA
+>ASPGLDRAFT_22375  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878889 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAATTGCACACATGAAACAGACT
+>AGR57_6799  | Phanerochaete chrysosporium RP-78 | hypothetical protein | genomic | PchrRP-78_SC006 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGTTCGCCAGAATGTCTAGCTCC
+>SDRG_04867  | Saprolegnia diclina VS20 | alanyl-tRNA synthetase | genomic | JH767143 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGATTTGCATCGATGGACTCGCTC
+>AN9419  | Aspergillus nidulans FGSC A4 | Ortholog(s) have alanine-tRNA ligase activity, role in alanyl-tRNA aminoacylation and cytosol, mitochondrion localization | genomic | ChrVII_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGTGTCGCTTAATGCTCGGAGCG
+>H257_02123  | Aphanomyces astaci strain APO3 | alanine-tRNA ligase | genomic | KI913116 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGACAGACAGCATGCAGCATCGC
+>AMAG_00498  | Allomyces macrogynus ATCC 38327 | alanine-tRNA ligase | genomic | GG745328 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCTGCCAACACCATGCCGCCCAAG
+>ASPFODRAFT_60258  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878241 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATAAAACTGGATGTTACAACCG

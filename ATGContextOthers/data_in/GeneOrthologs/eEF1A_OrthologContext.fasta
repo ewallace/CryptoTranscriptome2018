@@ -1,0 +1,348 @@
+>BDEG_02107  | Batrachochytrium dendrobatidis JEL423 | elongation factor 1-alpha, unspecified product | genomic | BdenJEL423_SC02 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTACTAGAAAACATGGGTAAGGAA
+>AMAG_05371  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745335 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAAGCAATGCCATGCTTTTTCAT
+>ASPWEDRAFT_45323  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878216 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACACTCGTTATGTAAGTCTAT
+>CNBG_4834  | Cryptococcus deuterogattii R265 | elongation factor 1-alpha | genomic | KQ410569 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAG
+>sr12221  | Sporisorium reilianum SRZ2 | probable translation elongation factor eEF-1 alpha chain | genomic | FQ311441 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCATCCAAAATGGGTAAAGAG
+>QYA_156163  | Mucor circinelloides f. lusitanicus CBS 277.49 | Translation elongation factor EF-1 alpha/Tu | genomic | McirCBS277-49_SC04 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGTTATTCAAAATGGGTAAAGAG
+>PSURA_71250  | Phytophthora ramorum strain Pr102 | Translation elongation factor EF-1 alpha/Tu | genomic | PramPr-102_SC0010 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATAACTCAACCATGGGCAAGGAA
+>FFUJ_05795  | Fusarium fujikuroi IMI 58289 | translation elongation factor 1 alpha | genomic | HF679028 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>CNM01300  | Cryptococcus neoformans var. neoformans JEC21 | translation elongation factor EF1-alpha, putative | genomic | AE017353.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAC
+>MELLADRAFT_73378  | Melampsora larici-populina 98AG31 | hypothetical protein | genomic | GL883158 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAATCAATCATCATGGGTAAAGAA
+>PITG_22657  | Phytophthora infestans T30-4 | elongation factor 1-alpha, putative | genomic | GG692339 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTGTTTGCAGCTAACTATGGGC
+>RO3G_08488  | Rhizopus delemar RA 99-880 | elongation factor 1-alpha | genomic | CH476737 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCATCATAGCCATGGGTAAAGAT
+>CNAG_06125  | Cryptococcus neoformans var. grubii H99 | elongation factor 1-alpha | genomic | CP003831.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAC
+>BC1G_09492  | Botrytis cinerea B05.10 | elongation factor 1-alpha | genomic | BcinB05-10_SC63 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCATCAAAATGGGGTAAGTC
+>SJAG_01851  | Schizosaccharomyces japonicus yFS275 | translation elongation factor EF-1 alpha Ef1a-c | genomic | KE651168 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACACAATCAACATGGGAAAGGAA
+>CKF44_005484  | Cryptococcus neoformans var. grubii KN99 | elongation factor 1-alpha | genomic | CP022332.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAC
+>PUG3_G002369  | Pythium ultimum var. sporangiiferum BR650 | Elongation factor 1-alpha | genomic | PultBR650_SC0109 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GCGTATTCAAATATGCAATCAAGG
+>HCBG_06718  | Histoplasma capsulatum G186AR | translation elongation factor eEF-1 alpha | genomic | GG663372 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCCGCCACCATGGGGTAAGCA
+>AMAG_13011  | Allomyces macrogynus ATCC 38327 | translation elongation factor Tu | genomic | GG745356 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCTATTCACCATGTCGCAGGGC
+>SS1G_05520  | Sclerotinia sclerotiorum 1980 UF-70 | elongation factor 1-alpha | genomic | CH476626 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCTTCAAAATGGGGTAAGTT
+>SPBC839.15c  | Schizosaccharomyces pombe 972h- | translation elongation factor EF-1 alpha Ef1a-c  | genomic | Spom972h_chrII reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATTAAACAAAAATGGGAAAGGAA
+>TREMEDRAFT_66877  | Tremella mesenterica DSM 1558 | translation elongation factor 2 | genomic | JH711528 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAGTCGCCAAAATGGGTAAAGTG
+>NEUTE1DRAFT_118521  | Neurospora tetrasperma FGSC 2508 | translation elongation factor eEF-1 alpha chain | genomic | GL891382 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAACCGTCAAAATGGGGTACGTT
+>ASPZODRAFT_131123  | Aspergillus zonatus CBS 506.65 | hypothetical protein | genomic | KV878340 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGCCACCATGGGGTACGTT
+>SDRG_05272  | Saprolegnia diclina VS20 | elongation factor 1-alpha 1 | genomic | JH767145 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAAGCCACAAGATGCCCAAGGAA
+>RO3G_10090  | Rhizopus delemar RA 99-880 | elongation factor 1-alpha | genomic | CH476738 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGTTATTAGCCATGGGTAAAGAT
+>YPR080W  | Saccharomyces cerevisiae S288c | translation elongation factor EF-1 alpha | genomic | BK006949 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTAATTACAAAATGGGTAAAGAG
+>CLUG_00476  | Clavispora lusitaniae ATCC 42720 | elongation factor 1-alpha | genomic | CH408076 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAACATACACAATGGGTAAGGAG
+>AFUB_006770  | Aspergillus fumigatus A1163 | Ortholog(s) have intracellular, extracellular region localization | genomic | scf_000001_A_fumigatus_A1163 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTACCCCTCCATGCCCAATGAT
+>RO3G_15047  | Rhizopus delemar RA 99-880 | elongation factor 1-alpha | genomic | CH476746 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAGTAGTCAAAATGGGTAAAGAT
+>ASPCADRAFT_404332  | Aspergillus carbonarius ITEM 5010 | hypothetical protein | genomic | KV907497 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCACCATGGGGTAGGTC
+>PAR_G010999  | Pythium arrhenomanes ATCC 12531 | Translation elongation factor alpha. | genomic | ParrATCC12531_SC03439 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCTCCAACAATGGCGGAAAAG
+>CPAG_09332  | Coccidioides posadasii RMSCC 3488 | elongation factor 1-alpha | genomic | DS268114 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCCTTCACAATGGGGTAAGTG
+>SOCG_03734  | Schizosaccharomyces octosporus yFS286 | translation elongation factor EF-1 alpha Ef1a-c | genomic | KE503207 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCAATAACAAAATGGGCAAGGAA
+>PIR_G013562  | Pythium irregulare DAOM BR486 | Elongation factor 1-alpha | genomic | PirrDAOMBR486_SC5067 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAGTCCGAGAACATGGCCTGGTAC
+>PYU1_G010490  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC1981 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGCTCAACTAGCATGCCGTGGTAC
+>ASPWEDRAFT_38228  | Aspergillus wentii DTO 134E9 | hypothetical protein | genomic | KV878211 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAACCATTCAAAATGGGGTATGTG
+>PYU1_G000425  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2039 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGTTCGCAATGGCTGAAACT
+>PCH_Pc13g02940  | Penicillium rubens Wisconsin 54-1255 | unspecified product | genomic | Pc00c13 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACCGTCATCATGGGGTATGTG
+>C1_08380W_A  | Candida albicans SC5314 | Translation elongation factor 1-alpha; genes encoding ribosomal subunits, translation factors, and tRNA synthetases are downregulated upon phagocytosis by murine macrophage | genomic | Ca22chr1A_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATATAATCAATCATGGGTAAAGAA
+>P174DRAFT_431545  | Aspergillus novofumigatus IBT 16806 | putative translation elongation factor EF-1 alpha subunit | genomic | MSZS01000004 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAACCGTCAAAATGGGGTGAGTG
+>ASPTUDRAFT_37041  | Aspergillus tubingensis CBS 134.48 | hypothetical protein | genomic | KV878176 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCATCATGGGGTAGGTT
+>AMAG_11300  | Allomyces macrogynus ATCC 38327 | translation elongation factor Tu | genomic | GG745351 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACCTTCACCATGTCGCAGGGC
+>RO3G_15351  | Rhizopus delemar RA 99-880 | elongation factor 1-alpha | genomic | CH476747 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGTTATTCGCTATGGGTAAAGAT
+>M_BR32_EuGene_00033031  | Magnaporthe oryzae BR32 | unspecified product | genomic | BR32_scaffold00003 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAACCGCCAAAATGGGTAACAAG
+>SJAG_02180  | Schizosaccharomyces japonicus yFS275 | translation elongation factor EF-1 alpha Ef1a-c | genomic | KE651166 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGACTAGTCAACATGGGAAAGGAA
+>ZTRI_4.605  | Zymoseptoria tritici IPO323 | similar to translation elongation factor 1-alpha | genomic | Ztri_chr_4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGCCATCATGGGGTACGTT
+>H257_12162  | Aphanomyces astaci strain APO3 | elongation factor 1-alpha | genomic | KI913152 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGGAATTCAACATGCCTAAAGAA
+>FGRAMPH1_01G10877  | Fusarium graminearum PH-1 | elongation factor 1-alpha | genomic | HG970333 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>AMAG_14104  | Allomyces macrogynus ATCC 38327 | translation elongation factor Tu | genomic | GG745361 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACCTATTCACCATGTCGCAGGGC
+>PSURA_71257  | Phytophthora ramorum strain Pr102 | Translation elongation factor EF-1 alpha/Tu | genomic | PramPr-102_SC0010 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGCAGTTAACCATGGGCAAGGAA
+>PABG_11509  | Paracoccidioides brasiliensis Pb03 | elongation factor 1-alpha | genomic | KN305533 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCTTTGTCTAATGACTCGCAAC
+>C2_08370C_A  | Candida albicans SC5314 | Translation elongation factor 1-alpha; at cell surface; binds human plasminogen; macrophage/pseudohyphal-induced; induced in RHE model of oral candidiasis, in clinical oral candidiasis isolates; possibly essential; Spider biofilm repressed | genomic | Ca22chr2A_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATAATCAATCATGGGTAAAGAA
+>PHYBL_171631  | Phycomyces blakesleeanus NRRL 1555(-) | Translation elongation factor EF-1 alpha/Tu | genomic | PblaNRRL1555-_SC19 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAGATATCAACCATGGGTAAAGAA
+>PIW_G011229  | Pythium iwayamai DAOM BR242034 | Elongation factor | genomic | PiwaDAOMBR242034_SC02920 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCTCCCAGACGCTCCTCTGCGT
+>AN4218  | Aspergillus nidulans FGSC A4 | Ortholog(s) have GDP binding, GTP binding, calmodulin binding, translation elongation factor activity and role in cytoplasmic translational elongation, interaction with host, tRNA export from nucleus | genomic | ChrII_A_nidulans_FGSC_A4 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCTTCACCATGGGGTACGTT
+>PAR_G001100  | Pythium arrhenomanes ATCC 12531 | Elongation factor 1-alpha. | genomic | ParrATCC12531_SC00081 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCTGGAGAAGCATGGTGCTGGTG
+>NFIA_018320  | Aspergillus fischeri NRRL 181 | translation elongation factor EF-1 alpha subunit, putative | genomic | DS027688 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTAACCGTCAAAATGGGGTGAGTG
+>PAG1_G000097  | Pythium aphanidermatum DAOM BR444 | Elongation factor 1-alpha. | genomic | PaphDAOMBR444_SC0002 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTGCGGTCGAGCATGGAGGATTTT
+>YALI0_C09141g  | Yarrowia lipolytica CLIB122 | YALI0C09141p | genomic | CR382129 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAATCATTCAAAATGGTGAGTTTC
+>PIW_G014026  | Pythium iwayamai DAOM BR242034 | Translation elongation factor alpha | genomic | PiwaDAOMBR242034_SC07032 reverse | (geneCodeStart-12 to geneCodeStart+11) | WARNING: Partial sequence retrieved | length=12
+ATGGCTGAAGCT
+>NCU02003  | Neurospora crassa OR74A | elongation factor 1 alpha | genomic | CM002236 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAACCGTCAAAATGGGGTACGTT
+>PPTG_11158  | Phytophthora parasitica INRA-310 | elongation factor 1-alpha | genomic | KI669586 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTACAGTTAACTATGGGCAAGGAA
+>HpaG812972  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0231 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATCACGGAGAAGATGGACCGTCGT
+>ATEG_03010  | Aspergillus terreus NIH2624 | elongation factor 1-alpha | genomic | CH476597 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTATCTCCATCATGACTCGAGGC
+>I314_05037  | Cryptococcus gattii CA1873 | elongation factor 1-alpha | genomic | KN848902 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAG
+>I306_04108  | Cryptococcus gattii EJB2 | elongation factor 1-alpha | genomic | KN848704 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAG
+>SOCG_03014  | Schizosaccharomyces octosporus yFS286 | translation elongation factor EF-1 alpha Ef1a-c | genomic | KE503206 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTATTACAACATGGGTAAAGAA
+>QYA_156860  | Mucor circinelloides f. lusitanicus CBS 277.49 | Translation elongation factor EF-1 alpha/Tu | genomic | McirCBS277-49_SC07 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTATAGTCGCAATGGGTAAGGAG
+>H310_08935  | Aphanomyces invadans NJM9701 | elongation factor 1-alpha | genomic | KI913970 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAGGAATTCAACATGCCCAAGGAA
+>CPSG_03569  | Coccidioides posadasii str. Silveira | elongation factor 1-alpha | genomic | GL636489 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCCTTCACAATGGGGTAAGTG
+>PAG1_G002762  | Pythium aphanidermatum DAOM BR444 | Elongation factor. | genomic | PaphDAOMBR444_SC0075 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCCAGTCACCATGGCGGAACAG
+>PADG_00692  | Paracoccidioides brasiliensis Pb18 | elongation factor 1-alpha | genomic | KN275957 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATACCTTCACAATGGGGTAAAAT
+>ASPSYDRAFT_46869  | Aspergillus sydowii CBS 593.65 | hypothetical protein | genomic | KV878588 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCTTCAAAATGGGGTAAGTT
+>PIR_G013248  | Pythium irregulare DAOM BR486 | Elongation factor | genomic | PirrDAOMBR486_SC4208 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTGGCGTGCCGTATGACCGCGATC
+>CC1G_06744  | Coprinopsis cinerea okayama7#130 | translation elongation factor 1 alpha | genomic | AACS02000001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCCTAACAAAAATGGGAAAGGAA
+>FOIG_13083  | Fusarium oxysporum f. sp. cubense tropical race 4 54006 | unspecified product | genomic | JH658299.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>ASPGLDRAFT_140429  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878888 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAAACCTTCATCATGGGGTAAGCC
+>AFLA_090780  | Aspergillus flavus NRRL3357 | translation elongation factor EF-1 alpha subunit, putative | genomic | EQ963480 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACCTTCAAAATGGGGTAAGTT
+>PVE_G011386  | Pythium vexans DAOM BR484 | Elongation factor 1-alpha | genomic | PvexDAOMBR484_SC2310 reverse | (geneCodeStart-12 to geneCodeStart+11) | WARNING: Partial sequence retrieved | length=13
+CATGGGCAAGGAA
+>ACLA_028450  | Aspergillus clavatus NRRL 1 | translation elongation factor EF-1 alpha subunit, putative | genomic | DS027059 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAACCGTCACAATGGGGTGAGTG
+>CLUG_00178  | Clavispora lusitaniae ATCC 42720 | elongation factor 1-alpha | genomic | CH408076 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTATCAATCACAATGGGTAAGGAG
+>PYU1_G010487  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC1981 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACTCGCTCACAATGGCTGAAACT
+>HpaG812971  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0231 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTCAACTCAAGAATGGGCAAGGAA
+>UREG_07557  | Uncinocarpus reesii 1704 | translation elongation factor EF-1, subunit alpha | genomic | CH476619 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAATCCTTCACAATGGGGTACGTT
+>ASPBRDRAFT_180763  | Aspergillus brasiliensis CBS 101740 | hypothetical protein | genomic | KV878686 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCATCATGGGGTGAGTC
+>H310_10332  | Aphanomyces invadans NJM9701 | elongation factor 1-alpha | genomic | KI913976 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GTTTGATTCAACATGCCCAAAGAA
+>PHYBL_107160  | Phycomyces blakesleeanus NRRL 1555(-) | Translation elongation factor EF-1 alpha/Tu | genomic | PblaNRRL1555-_SC03 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGTCTCTTTCATGATACTATTGAT
+>HCAG_08798  | Histoplasma capsulatum NAm1 | translation elongation factor 1-alpha | genomic | CH476666 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCCGCCACCATGGGGTAAGCA
+>evm.TU.AC2VRR_s00232g257  | Albugo candida 2VRR | unspecified product | genomic | Acan2VRR_SC232 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCAATAACAAAATGGGAAAGGAA
+>PAR_G010521  | Pythium arrhenomanes ATCC 12531 | Elongation factor 1-alpha. | genomic | ParrATCC12531_SC03012 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTCCCTTCGCCATGCCAGCACCT
+>CPC735_005790  | Coccidioides posadasii C735 delta SOWgp | elongation factor 1-alpha | genomic | ACFW01000030 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCCTTCACAATGGGGTAAGTG
+>CIHG_02904  | Coccidioides immitis H538.4 | elongation factor 1-alpha | genomic | DS016987 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCCTTCACAATGGGGTAAGTG
+>PYU1_G000423  | Pythium ultimum DAOM BR144 | unspecified product | genomic | PultDAOMBR144_SC2039 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGTTCGCAATGGCTGAAACT
+>QYA_156959  | Mucor circinelloides f. lusitanicus CBS 277.49 | Translation elongation factor EF-1 alpha/Tu | genomic | McirCBS277-49_SC07 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTCTATAGCAATGGGTAAAGAG
+>NEUDI_160296  | Neurospora discreta FGSC 8579 | unspecified product | genomic | NdisFGSC8579_SC002 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAACCGTCAAAATGGGGTACGTT
+>P170DRAFT_438612  | Aspergillus steynii IBT 23096 | translation elongation factor | genomic | MSFO01000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCCAGCCAAAATGGGGTAAGTT
+>PIR_G013723  | Pythium irregulare DAOM BR486 | Translation elongation factor alpha | genomic | PirrDAOMBR486_SC5640 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GACTCGATCACCATGGCTGACGCT
+>UMAG_00924  | Ustilago maydis 521 | putative translation elongation factor EF-1 alpha | genomic | CM003141 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCATCGAAAATGGGTAAAGAA
+>B9J08_004579  | Candida auris strain B8441 | elongation factor 1-alpha 2 | genomic | PEKT02000009 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATCAATTAAACATGGGTAAAGAG
+>FOMG_12957  | Fusarium oxysporum f. sp. melonis 26406 | elongation factor 1-alpha | genomic | JH659339.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>C2_08370C_B  | Candida albicans SC5314_B | Translation elongation factor 1-alpha; at cell surface; binds human plasminogen; macrophage/pseudohyphal-induced; induced in RHE model of oral candidiasis, in clinical oral candidiasis isolates; possibly essential; Spider biofilm repressed | genomic | Ca22chr2B_C_albicans_SC5314 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCATAATCAATCATGGGTAAAGAA
+>PMAA_024010  | Talaromyces marneffei ATCC 18224 | translation elongation factor EF-1 alpha subunit, putative | genomic | DS995899 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCTTCACCATGGGGTGCGTT
+>PIW_G010339  | Pythium iwayamai DAOM BR242034 | Elongation factor | genomic | PiwaDAOMBR242034_SC02331 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CGTCTCCCAGACGCTCCTCTCCGT
+>PGTG_14858  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | elongation factor 1-alpha | genomic | DS178315 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTACTTCTACAATGGGTAAAGAG
+>SPPG_08407  | Spizellomyces punctatus DAOM BR117 | translation elongation factor Tu | genomic | KQ257470 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CACATCAGCGCAATGTCCGGTGAG
+>ASPFODRAFT_63075  | Aspergillus luchuensis CBS 106.47 | hypothetical protein | genomic | KV878245 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCATCATGGGGTAGGTT
+>PAR_G012179  | Pythium arrhenomanes ATCC 12531 | Elongation factor. | genomic | ParrATCC12531_SC05196 reverse | (geneCodeStart-12 to geneCodeStart+11) | WARNING: Partial sequence retrieved | length=12
+GAGAAGTCGGAC
+>PHYCI_249650  | Phytophthora cinnamomi var. cinnamomi CBS 144.22 | Translation elongation factor EF-1 alpha/Tu | genomic | PcinCBS144-22_SC0199 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATAACAGAACCATGGGCAAGGAA
+>SDRG_02800  | Saprolegnia diclina VS20 | elongation factor 1-alpha 1 | genomic | JH767137 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAACCCACAAGATGCCCAAGGAA
+>PIW_G008738  | Pythium iwayamai DAOM BR242034 | Elongation factor 1-alpha | genomic | PiwaDAOMBR242034_SC01614 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGACTGCGCACCATGACTTCCTCC
+>FOC1_g10008336  | Fusarium oxysporum f. sp. cubense race 1 | Elongation factor 1-alpha | genomic | KB730167 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>AGR57_10941  | Phanerochaete chrysosporium RP-78 | translation elongation factor 1a | genomic | PchrRP-78_SC011 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCTTCAAAAAAATGGGAAAGGAG
+>SPAC23A1.10  | Schizosaccharomyces pombe 972h- | translation elongation factor EF-1 alpha Ef1a-b  | genomic | Spom972h_chrI forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGATTAATCAAAATGGGCAAAGAA
+>AO090120000080  | Aspergillus oryzae RIB40 | Translation elongation factor EF-1-alpha; predominantly expressed in the hyphal tip region | genomic | Chr5_A_oryzae_RIB40 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCACCTTCAAAATGGGGTAAGTT
+>SOCG_04454  | Schizosaccharomyces octosporus yFS286 | translation elongation factor EF-1 alpha Ef1a-c | genomic | KE503206 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAAAGTATCAAAATGGGCAAGGAA
+>ASPGLDRAFT_182045  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878928 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACACGTCGAGATGACGACGTAC
+>ASPACDRAFT_1879088  | Aspergillus aculeatus ATCC 16872 | hypothetical protein | genomic | KV878972 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AACACCGTCACCATGGGGTAAGTC
+>SPCC794.09c  | Schizosaccharomyces pombe 972h- | translation elongation factor EF-1 alpha Ef1a-a  | genomic | Spom972h_chrIII reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TAATTGTAAAAAATGGGCAAGGAA
+>CGB_M1520C  | Cryptococcus gattii WM276 | elongation factor 1-alpha | genomic | CP000298 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAG
+>FOXG_03515  | Fusarium oxysporum f. sp. lycopersici 4287 | elongation factor 1-alpha | genomic | CM000596.1 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CTCTCCTCGACAATGAGCTTATCT
+>ASPGLDRAFT_182519  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878934 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACACACGTCGAGATGACGACGTAC
+>Afu1g06390  | Aspergillus fumigatus Af293 | Putative translation elongation factor EF-1 alpha subunit | genomic | Chr1_A_fumigatus_Af293 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATTTACCCCTCCATGCCCAATGAT
+>HpaG809424  | Hyaloperonospora arabidopsidis Emoy2 | unspecified product | genomic | HaraEmoy2_SC0101 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCACTGGCTAGAATGCGTCGCTCG
+>FVEG_02381  | Fusarium verticillioides 7600 | elongation factor 1-alpha | genomic | CM000583.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>PPTG_22908  | Phytophthora parasitica INRA-310 | elongation factor 1-alpha | genomic | KI669586 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCAAGTCACAATGAAGCTCAGC
+>AMAG_15142  | Allomyces macrogynus ATCC 38327 | translation elongation factor Tu | genomic | GG745364 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCAACCTTCACCATGTCGCAGGGC
+>PHYSODRAFT_354065  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159152 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GATAACAAAACCATGGGCAAGGAA
+>SPPG_06491  | Spizellomyces punctatus DAOM BR117 | translation elongation factor EF-1, subunit alpha | genomic | KQ257461 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGACTAAAACAATGAAAACTCAT
+>PIW_G002463  | Pythium iwayamai DAOM BR242034 | Elongation factor 1-alpha | genomic | PiwaDAOMBR242034_SC00233 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTCACATCAGCATGAGCGCGGCG
+>PAG1_G004181  | Pythium aphanidermatum DAOM BR444 | Elongation factor 1-alpha. | genomic | PaphDAOMBR444_SC0135 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCCGGCCAGCATGGAAGAACTC
+>H257_08783  | Aphanomyces astaci strain APO3 | elongation factor 1-alpha | genomic | KI913133 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGACTCGCTACCATGCCTAAGGAA
+>PHYBL_142761  | Phycomyces blakesleeanus NRRL 1555(-) | Translation elongation factor EF-1 alpha/Tu | genomic | PblaNRRL1555-_SC06 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTTTGTAGCCATGGGTAAGGAA
+>MGL_0087  | Malassezia globosa CBS 7966 | hypothetical protein | genomic | AAYY01000001 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCACTCTTCACAATGGGAAAGGAG
+>PAAG_11418  | Paracoccidioides lutzii Pb01 | elongation factor 1-alpha | genomic | KN293995 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CATATTTGTCTAATGACTCGCAAC
+>SJAG_04157  | Schizosaccharomyces japonicus yFS275 | translation elongation factor EF-1 alpha Ef1a-c | genomic | KE651167 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGCATCACAAAAATGGGAAAGGAA
+>TRIREDRAFT_46958  | Trichoderma reesei QM6a | translation elongation factor 1a | genomic | GL985061 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAACCGTCAAAATGGGTAAGGAG
+>AGR95_079530  | Histoplasma capsulatum G217B | unspecified product | genomic | HISTO_JG.Contig206 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCCGCCACCATGGGGTAAGCA
+>SMAC_05446  | Sordaria macrospora k-hell | hypothetical protein | genomic | NW_003546191 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCAACCGTCAAAATGGGGTATGTT
+>ALNC14_088690  | Albugo laibachii Nc14 | unspecified product | genomic | FR824211 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TGAATAACAAATATGGGAAAGGAG
+>PHYBL_183390  | Phycomyces blakesleeanus NRRL 1555(-) | Translation elongation factor EF-1 alpha/Tu | genomic | PblaNRRL1555-_SC27 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATTATAGAAATGGGTAAGGAA
+>CIMG_03708  | Coccidioides immitis RS | elongation factor 1-alpha | genomic | GG704916 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACATCCTTCACAATGGGGTAAGTG
+>MGG_03641  | Magnaporthe oryzae 70-15 | elongation factor 1-alpha | genomic | CM001234 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAAACCGCCAAAATGGGTAACAAG
+>CAGL0D01188g  | Candida glabrata CBS 138 | Translation elongation factor eEF1 alpha-A chain | genomic | ChrD_C_glabrata_CBS138 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACTAATATAGCAATGGGTAAGGAC
+>PHYBL_116135  | Phycomyces blakesleeanus NRRL 1555(-) | Translation elongation factor EF-1 alpha/Tu | genomic | PblaNRRL1555-_SC21 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTCTTATAGAAAATGGGTAAGGAA
+>P168DRAFT_268930  | Aspergillus campestris IBT 28561 | translation elongation factor | genomic | MSFM01000006 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTACCTTCACAATGGGGTACGTT
+>I308_04903  | Cryptococcus gattii VGIV IND107 | elongation factor 1-alpha | genomic | KN848868 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAG
+>PIR_G001817  | Pythium irregulare DAOM BR486 | Elongation factor 1-alpha | genomic | PirrDAOMBR486_SC0067 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCATCGAAGCAATGGCGATGGCG
+>PHYCA_504383  | Phytophthora capsici LT1534 |  translation elongation factor 1 alpha  | genomic | PcapLT1534_SC007 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTTAGTTAAACATGGGCAAGGAA
+>YPR080W  | Saccharomyces cerevisiae S288c | translation elongation factor EF-1 alpha | genomic | BK006949 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTTAATTACAAAATGGGTAAAGAG
+>PNEJI1_001886  | Pneumocystis jirovecii SE8 | unspecified product | genomic | CAKM01000130 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATATATTAAGGATGGCAAAAGAT
+>PITG_06722  | Phytophthora infestans T30-4 | translation elongation factor 1-alpha, putative | genomic | DS028127 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTAATTCAACCATGGGCAAGGAA
+>TSTA_032460  | Talaromyces stipitatus ATCC 10500 | translation elongation factor EF-1 alpha subunit, putative | genomic | EQ962654 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATAACCGTCACCATGGGGTTCGTT
+>ASPVEDRAFT_44999  | Aspergillus versicolor CBS 583.65 | hypothetical protein | genomic | KV878133 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCTTCAAAATGGGGTAAGTT
+>An18g04840  | Aspergillus niger CBS 513.88 | Protein similar to elongation factor 1 alpha | genomic | An18_A_niger_CBS_513_88 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCATCATGGGGTGAGTT
+>SPRG_10439  | Saprolegnia parasitica CBS 223.65 | elongation factor 1-alpha 1 | genomic | KK583243 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AGAACCCACAAGATGCCCAAGGAA
+>FOZG_08502  | Fusarium oxysporum Fo47 | elongation factor 1-alpha | genomic | JH717900.1 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAACCGTCAAAATGGGTAAGGAG
+>ASPGLDRAFT_24326  | Aspergillus glaucus CBS 516.65 | hypothetical protein | genomic | KV878893 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAGAATTTCACAATGGGGTGAAAT
+>HCDG_08556  | Histoplasma capsulatum H143 | elongation factor 1 alpha | genomic | GG692436 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCCGCCACCATGGGGTAAGCA
+>PHYBL_164420  | Phycomyces blakesleeanus NRRL 1555(-) | Translation elongation factor EF-1 alpha/Tu | genomic | PblaNRRL1555-_SC04 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCTTTTGTAGCCATGGGTAAGGAA
+>CAGL0K07832g  | Candida glabrata CBS 138 | Ortholog(s) have role in cytoplasmic translational elongation and cytosol, extracellular region, nucleus localization | genomic | ChrK_C_glabrata_CBS138 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATAATCAACAATGGGTAAGGAC
+>PHYCA_510859  | Phytophthora capsici LT1534 | AF361822_1 At1g07930/T6D22_3  | genomic | PcapLT1534_SC070 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GGTAAATCAACAATGGGCAAGGAA
+>CNBM1160  | Cryptococcus neoformans var. neoformans B-3501A | elongation factor 1-alpha | genomic | CM000052 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+GAAAACTTCAAAATGGGTAAGGAC
+>PITG_04640  | Phytophthora infestans T30-4 | translation elongation factor 1-alpha, putative | genomic | DS028123 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TTGCAGCTAACTATGGGCAAGGAA
+>HCEG_00158  | Histoplasma capsulatum H88 | elongation factor 1-alpha | genomic | DS990636 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AATCCCGCCACCATGGGGTAAGCA
+>PUG3_G012709  | Pythium ultimum var. sporangiiferum BR650 | Translation elongation factor alpha | genomic | PultBR650_SC2495 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CAATCGTTCGCAATGGCTGAAACT
+>PAG1_G005868  | Pythium aphanidermatum DAOM BR444 | Translation elongation factor alpha. | genomic | PaphDAOMBR444_SC0232 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACCTAGTCAACAATGGCGGAACAG
+>B9J08_003610  | Candida auris strain B8441 | elongation factor 1-alpha 2 | genomic | PEKT02000007 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+AAACTAACAAAAATGGGTAAAGAG
+>PHYSODRAFT_354062  | Phytophthora sojae strain P6497 | hypothetical protein | genomic | JH159152 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCGCAGTTAACCATGGGCAAGGAA
+>RO3G_11153  | Rhizopus delemar RA 99-880 | elongation factor 1-alpha | genomic | CH476740 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+CCTTAGACTAAAATGGGTAAAGAT
+>AMAG_02240  | Allomyces macrogynus ATCC 38327 | translation elongation factor EF-1, subunit alpha | genomic | GG745330 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+TCCCGAACTCCAATGACGACGCCT
+>PIR_G006627  | Pythium irregulare DAOM BR486 | Elongation factor 1-alpha | genomic | PirrDAOMBR486_SC0466 reverse | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACAGTCTAAAGAATGAAGGCGATG
+>C1_08380W_B  | Candida albicans SC5314_B | Translation elongation factor 1-alpha; genes encoding ribosomal subunits, translation factors, and tRNA synthetases are downregulated upon phagocytosis by murine macrophage | genomic | Ca22chr1B_C_albicans_SC5314 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ATATAATCAATCATGGGTAAAGAA
+>AMAG_01187  | Allomyces macrogynus ATCC 38327 | hypothetical protein | genomic | GG745329 forward | (geneCodeStart-12 to geneCodeStart+11) | length=24
+ACGCGGTACCCCATGTCCCCGACG
