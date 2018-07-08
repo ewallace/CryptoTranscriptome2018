@@ -1,0 +1,123 @@
+---
+title: "Start codon context for fungal orthologs"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 8 July 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+ATG context for groups of fungal orthologs.
+
+This confirms that good Kozak start context is clearly conserved in fungi for some genes (eEF1a, abundant ribosomal proteins, abundant glycolytic enzymes). Poor start context is conserved for eIF1/Sui1, as is known.
+
+Some tRNA synthetases that a cytoplasmic-only have quite good start codon context.  Conserved mitochondrial-only do not. Most dual-localized tRNA synthetases do not have conserved start codon context. However, the difference between cyto- and dual-localized groups is not particularly clear.
+
+## Potential problems
+
+1. These are generated only for fungal genomes in fungidb, where orthology is detected with OrthoMCL.
+2. Some orthology is missing or misleading, e.g. OrthoMCL has the 
+3. Some genes may be lost or gained.
+4. This does not account for
+    - splice sites near start codons (genomic sequence is different from transcript)
+    - start codon annotations being wrong (e.g. non-ATG start codons)
+
+        
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/ATGContextOrthologs-",
+                      cache.path="cache/ATGContextOrthologs-")
+library(tidyverse)
+library(cowplot)
+library(ggrepel)
+library(ggseqlogo)
+library(Biostrings)
+
+theme_set(theme_cowplot(font_size=12) + 
+              theme(strip.background = element_blank()) )
+
+logofromfasta <- function(file,gtitle=NULL,nc=24) {
+    sset <- readDNAStringSet(file) 
+    sstrs <- sset[nchar(sset)==nc] %>% as.character()
+    ggseqlogo(data=sstrs,namespace="TCAG") + 
+        theme_nothing() %+replace% theme(plot.title=element_text()) +
+        labs(title=gtitle) +
+        expand_limits(y=c(0,2))
+}
+
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+## eEF1a, eIF1, PGK1, GAPDH
+
+```{r aATG_eEF1,fig.width=4,fig.height=1}
+
+logofromfasta("data_in/GeneOrthologs/eEF1A_OrthologContext.fasta",gtitle="eEF1A")
+logofromfasta("data_in/GeneOrthologs/eIF1_OrthologContext.fasta",gtitle="eIF1")
+logofromfasta("data_in/GeneOrthologs/PGK1_OrthologContext.fasta",gtitle="PGK")
+logofromfasta("data_in/GeneOrthologs/GAPDH_OrthologContext.fasta",gtitle="GAPDH")
+```
+
+eIF1/SUI1 is selected for a poor start context due to auto-regulation.
+
+## Some Ribosomal proteins
+
+```{r aATG_RPs,fig.width=4,fig.height=1}
+
+logofromfasta("data_in/GeneOrthologs/RPL19_OrthologContext.fasta",gtitle="RPL19")
+logofromfasta("data_in/GeneOrthologs/RPL27_OrthologContext.fasta",gtitle="RPL27")
+logofromfasta("data_in/GeneOrthologs/RPP1_OrthologContext.fasta",gtitle="RPP1")
+logofromfasta("data_in/GeneOrthologs/RPS24_OrthologContext.fasta",gtitle="RPS24")
+```
+
+
+## Cytoplasmic vs Mitochondrial-only tRNA synthetases
+
+```{r aATG_CytovsMito,fig.width=4,fig.height=1}
+
+logofromfasta("data_in/GeneOrthologs/LeuRS_OrthologContext.fasta",gtitle="cyto-LeuRS")
+logofromfasta("data_in/GeneOrthologs/mtLeuRS_OrthologContext.fasta",gtitle="mito-LeuRS")
+logofromfasta("data_in/GeneOrthologs/ProRS_OrthologContext.fasta",gtitle="cyto-ProRS")
+logofromfasta("data_in/GeneOrthologs/mtProRS_OrthologContext.fasta",gtitle="mito-ProRS")
+logofromfasta("data_in/GeneOrthologs/ThrRS_OrthologContext.fasta",gtitle="cyto-ThrRS")
+logofromfasta("data_in/GeneOrthologs/mtThrRS_OrthologContext.fasta",gtitle="mito-ThrRS")
+
+```
+
+
+## Dual-localized tRNA synthetases
+
+```{r aATG_dual,fig.width=4,fig.height=1}
+
+logofromfasta("data_in/GeneOrthologs/AlaRS_OrthologContext.fasta",gtitle="AlaRS")
+logofromfasta("data_in/GeneOrthologs/CysRS_OrthologContext.fasta",gtitle="CysRS")
+
+logofromfasta("data_in/GeneOrthologs/GlyRS_OrthologContext.fasta",gtitle="GlyRS")
+logofromfasta("data_in/GeneOrthologs/HisRS_OrthologContext.fasta",gtitle="HisRS")
+
+logofromfasta("data_in/GeneOrthologs/TrpRS_OrthologContext.fasta",gtitle="TrpRS")
+logofromfasta("data_in/GeneOrthologs/ValRS_OrthologContext.fasta",gtitle="ValRS")
+```
+
+## Lysine-tRNA synthetase
+
+This has predicted dual-localization in C. neoformans, but S. cerevisiae has a separate mitochondrial gene MSK1.
+
+```{r aATG_LysRS,fig.width=4,fig.height=1}
+logofromfasta("data_in/GeneOrthologs/LysRS_OrthologContext.fasta",gtitle="LysRS")
+```
+
+## tRNA methyl-transferase
+
+This has predicted dual-localization in C. neoformans, validated in S. cerevisiae.
+
+```{r aATG_TRM1,fig.width=4,fig.height=1}
+logofromfasta("data_in/GeneOrthologs/TRM1_OrthologContext.fasta",gtitle="TRM1")
+```
