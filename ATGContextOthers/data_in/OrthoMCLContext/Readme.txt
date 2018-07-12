@@ -1,4 +1,4 @@
-CryptoTranscriptome2018/ATGContextOthers/data_in/GeneOrthologs/Readme.txt
+CryptoTranscriptome2018/ATGContextOthers/data_in/OrthoMCLContext/Readme.txt
 Edward Wallace, 8th July 2018
 
 ATG context sequences for orthologs of selected genes
