@@ -1,0 +1,244 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	72359	Trachipleistophora hominis	72359:00061c	L7JYN6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:00020f	Q5KF97	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:000426	C5P2Y5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:000170	J4U2J7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	227321	Aspergillus nidulans FGSC A4	227321:0002b9	ala1	Alanyl-tRNA synthetase
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	229533	Fusarium graminearum PH-1	229533:001750	I1RBI1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	235443	Cryptococcus neoformans var. grubii H99	235443:0001dd	J9VWG2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	237561	Candida albicans SC5314	237561:00030d	Q5A8K2-2	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	237561	Candida albicans SC5314	237561:00030c	ALA1	Alanyl-tRNA synthetase
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	237631	Ustilago maydis 521	237631:0001bc	Q4P3T0	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	240176	Coprinopsis cinerea okayama7#130	240176:00065a	A8N6S6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	242507	Magnaporthe oryzae 70-15	242507:000777	G4N7B3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	246409	Rhizopus delemar RA 99-880	246409:000990	I1BZN0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	246409	Rhizopus delemar RA 99-880	246409:00038d	I1C323	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	246410	Coccidioides immitis RS	246410:000247	J3KLD6	YEATS
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:0003fb	F5HE46	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:000715	Q6CLJ9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284591	Yarrowia lipolytica CLIB122	284591:0003a5	Q6CFS9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284592	Debaryomyces hansenii CBS767	284592:0005fa	Q6BZ68	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284593	Candida glabrata CBS 138	284593:000625	Q6FV21	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284811	Eremothecium gossypii ATCC 10895	284811:00072d	Q759B4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c71	ala1	Alanyl-tRNA synthetase
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	284813	Encephalitozoon cuniculi GB-M1	284813:0002a2	Q8SSD4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:000404	B3LJZ4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:000357	A5DAB8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	294747	Candida tropicalis MYA-3404	294747:00052d	C5M8K8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	294748	Candida albicans WO-1	294748:000115	C4YSD8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	306901	Chaetomium globosum CBS 148.51	306901:000765	Q2HFV2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000199	C4Y8W6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	307796	Saccharomyces cerevisiae YJM789	307796:0001da	A6ZPG5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	321614	Parastagonospora nodorum SN15	321614:000820	Q0UU60	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	322104	Scheffersomyces stipitis CBS 6054	322104:0004de	A3LRI3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	330879	Aspergillus fumigatus Af293	330879:0009a1	Q4WCM7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	331117	Neosartorya fischeri NRRL 181	331117:0009c9	A1DAZ6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	336722	Zymoseptoria tritici IPO323	336722:000633	F9XC87	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	336963	Uncinocarpus reesii 1704	336963:0002ef	C4JI31	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	339724	Histoplasma capsulatum NAm1	339724:0001e6	A6QWW4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	341663	Aspergillus terreus NIH2624	341663:0003a8	Q0D226	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	344612	Aspergillus clavatus NRRL 1	344612:000959	A1C3S4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	367110	Neurospora crassa OR74A	367110:000fbc	Q7SHP9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	367775	Cryptococcus gattii WM276	367775:0003c2	E6R844	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000ac0	A5E5L5	Alanyl-tRNA synthetase, class IIc, core domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:0002a1	A5E5L6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	380704	Aspergillus niger ATCC 1015	380704:000638	G3Y706	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:0004ba	M2ZJD7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	402676	Schizosaccharomyces japonicus yFS275	402676:000269	B6JYX5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	413071	Trichoderma virens Gv29-8	413071:000435	G9MID0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:000424	E3KJL0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	425011	Aspergillus niger CBS 513.88	425011:001cea	A2R938	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	425265	Malassezia globosa CBS 7966	425265:000052	A8PYV2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:0003ee	B2WCE6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:00051b	J9MDD0	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	431241	Trichoderma reesei QM6a	431241:000699	G0RMS9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:0001b0	A7TPK2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:000153	A7TRK4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	441959	Talaromyces stipitatus ATCC 10500	441959:00044a	B8MHK7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	441960	Talaromyces marneffei ATCC 18224	441960:00016b	B6QMI2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	443226	Coccidioides posadasii str. Silveira	443226:00026b	E9CU45	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	447093	Histoplasma capsulatum G186AR	447093:00053e	C0NKL8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	451804	Aspergillus fumigatus A1163	451804:0009bc	B0YA78	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	452589	Trichoderma atroviride IMI 206040	452589:0002e3	G9P9S0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	481877	Enterocytozoon bieneusi H348	481877:00010e	A9CSX8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000324	C0S7L6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	483514	Schizosaccharomyces octosporus yFS286	483514:000695	S9QWC7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	486041	Laccaria bicolor S238N-H82	486041:000208	B0D0A1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	498257	Verticillium dahliae VdLs.17	498257:000011	G2WT14	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:000146	B6HVA4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	502779	Paracoccidioides lutzii Pb01	502779:00035e	C1GTD2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	502780	Paracoccidioides brasiliensis Pb18	502780:0005b1	C1FZG2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	510516	Aspergillus oryzae RIB40	510516:000904	Q2TZ34	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	510951	Neurospora tetrasperma FGSC 2508	510951:0004d6	F8N1C1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	510952	Neurospora tetrasperma FGSC 2509	510952:000500	G4UBN0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	515849	Podospora anserina S mat+	515849:00053a	B2AYJ3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	526221	Verticillium alfalfae VaMs.102	526221:0002a9	C9SH01	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	535722	Microsporum gypseum CBS 118893	535722:000186	E4UXZ9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	544711	Histoplasma capsulatum H88	544711:000346	F0UD15	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	544712	Histoplasma capsulatum H143	544712:0002c7	C6HAV6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:000501	B5VSL3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:000267	N1JLT7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	554155	Arthroderma otae CBS 113480	554155:0001b1	C5FX97	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	554373	Moniliophthora perniciosa FA553	554373:001a32	E2LP98	Alanyl-tRNA synthetase, class IIc, core domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	554373	Moniliophthora perniciosa FA553	554373:000c05	E2M6N6	Alanyl-tRNA synthetase, class IIc, N-terminal
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559292	Saccharomyces cerevisiae S288c	559292:0010ec	P40825-2	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559292	Saccharomyces cerevisiae S288c	559292:0010eb	ALA1	Alanyl-tRNA synthetase
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559295	Lachancea thermotolerans CBS 6340	559295:000563	C5DG24	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559297	Blastomyces dermatitidis ER-3	559297:00022d	C5GV97	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559298	Blastomyces gilchristii SLH14081	559298:00047a	C5JCH2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559304	Millerozyma farinosa CBS 7064	559304:000e29	G8YEH0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559304	Millerozyma farinosa CBS 7064	559304:000cc4	G8YC20	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559305	Trichophyton rubrum CBS 118892	559305:0001f9	F2SIM2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:000088	C5DV71	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	559882	Trichophyton equinum CBS 127.97	559882:0001dd	F2PH18	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	561896	Postia placenta Mad-698-R	561896:0010b8	B8PJ55	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	561896	Postia placenta Mad-698-R	561896:000dfd	B8PE21	Transmembrane:Helical
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	561896	Postia placenta Mad-698-R	561896:000772	B8PHF3	Transmembrane:Helical
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:0001cd	R9XDI6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	573729	Myceliophthora thermophila ATCC 42464	573729:000a50	G2Q0H7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	573826	Candida dubliniensis CD36	573826:000463	B9WJ73	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	574961	Saccharomyces cerevisiae JAY291	574961:0001c6	C7GNT1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	578454	Candida parapsilosis CDC317	578454:00025c	G8B512	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	578455	Thielavia terrestris NRRL 8126	578455:000719	G2R3R5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:0001f2	F8NTT9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	578458	Schizophyllum commune H4-8	578458:0004df	D8Q8F8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	578460	Nosema ceranae BRL01	578460:000756	C4VB46	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	578461	Nosema bombycis CQ1	578461:00007b	R0MLV6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	590646	Candida tenuis ATCC 10573	590646:0004b5	G3BA92	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:0001be	K5W261	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:000087	G3AUQ5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:000518	J3Q656	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	643680	Saccharomyces cerevisiae EC1118	643680:000149	C8ZH87	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	644223	Komagataella pastoris GS115	644223:000472	C4R4M5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000603	J3NI92	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:000070	M4G549	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	645133	Colletotrichum graminicola M1.001	645133:00051d	E3Q396	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	647933	Trichophyton tonsurans CBS 112818	647933:000008	F2RX71	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:000544	K5W5G5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:0003e8	F2T595	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	653667	Schizosaccharomyces cryophilus OY26	653667:000453	S9VVE2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	655819	Beauveria bassiana ARSEF 2860	655819:000130	J4WLN2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	655827	Metarhizium acridum CQMa 102	655827:001097	E9EFS4	Alanine-tRNA ligase, class IIc, anti-codon-binding domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	655827	Metarhizium acridum CQMa 102	655827:000648	E9EC01	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	655844	Metarhizium robertsii ARSEF 23	655844:0002b6	E9EMG2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	655863	Grosmannia clavigera kw1407	655863:0005b6	F0XN21	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	656061	Tuber melanosporum Mel28	656061:000096	D5GHQ8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000021	L8FZC3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	660025	Fusarium oxysporum Fo5176	660025:000269	F9FU27	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	660122	Nectria haematococca mpVI 77-13-4	660122:000766	C7YI88	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	663202	Trichophyton verrucosum HKI 0517	663202:000517	D4D1V0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	663331	Arthroderma benhamiae CBS 112371	663331:000413	D4AQA4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	665024	Bipolaris maydis ATCC 48331	665024:000076	N4X7H2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:00070b	A7EL04	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	665912	Bipolaris sorokiniana ND90Pr	665912:000463	M2SXB4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	671144	Wallemia mellicola CBS 633.66	671144:00027f	I4YID4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	671987	Setosphaeria turcica Et28A	671987:0018fd	R0IWD8	DHHA1 domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	671987	Setosphaeria turcica Et28A	671987:000753	R0KLV7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	675120	Dothistroma septosporum NZE10	675120:000223	N1PNM8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:000638	U5H8H2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:000441	F4NW20	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	692275	Sphaerulina musiva SO2202	692275:00039a	N1QK38	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	701091	Bipolaris maydis C5	701091:0009d8	M2V395	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	717646	Baudoinia panamericana UAMH 10762	717646:000662	M2N8U1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	717982	Auricularia delicata TFB-10046 SS5	717982:000ab9	J0WWP9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:0002e2	G2WNJ7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:0035a0	S8E422	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	747089	Rhizophagus irregularis DAOM 181602	747089:0016f9	U9SGY1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	747676	Melampsora larici-populina 98AG31	747676:000162	F4RJH2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:0003c0	G1XB03	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:000070	G0SF58	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	759273	Colletotrichum higginsianum IMI 349063	759273:000aa2	H1UX72	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764097	Saccharomyces cerevisiae AWRI796	764097:00035d	E7KIL1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:00040f	E7KUR9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764099	Saccharomyces cerevisiae Vin13	764099:0002ee	E7M0T2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764100	Saccharomyces cerevisiae VL3	764100:0001fb	E7QL36	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764101	Saccharomyces cerevisiae FostersO	764101:0001a8	E7NMU6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764102	Saccharomyces cerevisiae FostersB	764102:0000e4	E7Q9K9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	764103	Mixia osmundae IAM 14324	764103:000139	G7DVS8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	771870	Sordaria macrospora k-hell	771870:0004f2	F7VT94	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:0005fa	H6C6T8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	861557	Pyrenophora teres f. teres 0-1	861557:0005dd	E3S4A0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	871575	Ogataea parapolymorpha DL-1	871575:000a9f	E7RAS2	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	876142	Encephalitozoon intestinalis ATCC 50506	876142:00008e	E0S607	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	881290	Nematocida parisii ERTm1	881290:0000db	I3ESG5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:00062d	N1NW84	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	907965	Encephalitozoon hellem ATCC 50504	907965:000022	I6UBG4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	914234	Gelatoporia subvermispora B	914234:0000de	M2QKB9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	935791	Nematocida parisii ERTm3	935791:00009c	I3EH76	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	936046	Agaricus bisporus var. bisporus H97	936046:000153	K9I306	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:000578	F8PVR6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	944018	Nematocida sp. 1 ERTm2	944018:000043	H8ZDD7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	948595	Vavraia culicis subsp. floridensis	948595:00058a	L2GUT5	Alanyl-tRNA synthetase, class IIc, core domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	948595	Vavraia culicis subsp. floridensis	948595:000551	L2GQD0	Alanyl-tRNA synthetase, class IIc, N-terminal
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	948595	Vavraia culicis subsp. floridensis	948595:0000d8	L2GX50	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	981350	Komagataella pastoris CBS 7435	981350:0003f1	F2QWC2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	983506	Rhizoctonia solani AG-1 IA	983506:000167	L8WRC3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	983644	Cordyceps militaris CM01	983644:0001b6	G3JJY0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	985895	Leptosphaeria maculans JN3	985895:00022f	E4ZJS6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	985895	Leptosphaeria maculans JN3	985895:0001c1	E4ZXC7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	993615	Vittaforma corneae ATCC 50505	993615:0000d3	L2GPX3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	999809	Sporisorium reilianum SRZ2	999809:000154	E6ZYX8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	999810	Botrytis cinerea T4	999810:0005dc	G2Y1S3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1001064	Rhodotorula glutinis ATCC 204091	1001064:00009d	G0SZ41	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1003232	Edhazardia aedis USNM 41457	1003232:000019	J9DQX9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1028729	Fusarium pseudograminearum CS3096	1028729:0004ce	K3UC82	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1033177	Aspergillus kawachii IFO 4308	1033177:0003e5	G7XQY3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1064592	Naumovozyma castellii CBS 4309	1064592:00021c	G0VFN2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1069680	Pneumocystis murina B123	1069680:000358	M7NW79	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1069680	Pneumocystis murina B123	1069680:0001b0	M7PBX8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:000425	G0WBT0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000257	I2GVV0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:000324	G8C0Z7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:0001c7	G8BWM7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1071382	Kazachstania africana CBS 2517	1071382:00020d	H2AVJ2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1071383	Kazachstania naganishii CBS 8797	1071383:00021a	J7R629	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:0004fd	K1WZN1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:00017f	G9A058	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1076935	Pyronema omphalodes CBS 100304	1076935:0013b8	U4L9F5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:000546	J4ICG5	
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1097556	Taphrina deformans PYCC 5710	1097556:0003e1	R4XD30	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1104152	Glarea lozoyensis 74030	1104152:0000b8	H0EVK8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:001f0a	M5BSB1	Alanyl-tRNA synthetase, class IIc, core domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:001e5a	M5BQJ1	Alanyl-tRNA synthetase, class IIc, core domain
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1109443	Piriformospora indica DSM 11827	1109443:000353	G4TN57	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1111077	Claviceps purpurea 20.1	1111077:00054d	M1WDZ0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:000920	S3CCD1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1126212	Macrophomina phaseolina MS6	1126212:000861	K2T0G9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1128400	Ustilago hordei Uh4857-4	1128400:00014c	I2FS04	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1130832	Rhodosporidium toruloides NP11	1130832:0003fa	M7X1R6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1136231	Candida orthopsilosis Co 90-125	1136231:00013a	H8X8H4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1143189	Magnaporthe oryzae Y34	1143189:00058d	L7I005	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1143193	Magnaporthe oryzae P131	1143193:00060f	L7IWT3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1151754	Pseudozyma antarctica T-34	1151754:000489	M9MA75	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1160506	Aspergillus oryzae 3.042	1160506:00089a	I8TIY7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1160507	Saccharomyces arboricola H-6	1160507:000321	J8PYK4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1168221	Coniosporium apollinis CBS 100218	1168221:0005f2	R7YRI7	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1170229	Penicillium digitatum PHI26	1170229:000353	K9FC29	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1170230	Penicillium digitatum Pd1	1170230:000051	K9FAB2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1178016	Encephalitozoon romaleae SJ-2008	1178016:00011f	I7ADE1	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:00002a	J4ULR0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0003d5	K0K939	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1209962	Pneumocystis jirovecii SE8	1209962:000083	L0PDQ4	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:000874	N4UNH9	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:000b24	L2FET3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:0003d8	K1VQ07	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:0005da	S2JVU0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:0000cf	S2JEJ8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:000aa0	N4TFT3	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:00051a	N1R8W2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:0002f3	M5ES72	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:000588	T0K8C5	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1245528	Candida maltosa Xu316	1245528:0003e0	M3K4E8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:000697	S3CU48	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:0000ef	S0DQ40	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:000426	S8ACE0	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1286976	Togninia minima UCRPA7	1286976:000297	R8BN33	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:0008de	R1GF32	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1287681	Eutypa lata UCREL1	1287681:0005ce	M7T9M6	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1290391	Botrytis cinerea BcDW1	1290391:000511	M7TU49	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:0003a8	R9AP02	Similarity:Contains 1 SH3 domain.
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0001f0	R9NWN2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1356009	Byssochlamys spectabilis No. 5	1356009:002023	V5G938	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1358809	Spraguea lophii 42_110	1358809:000145	S7XVZ2	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1381753	Moniliophthora roreri MCA 2997	1381753:001480	V2XKE8	Alanine-tRNA ligase, class IIc
+EOG092C0P21	Alanine-tRNA ligase, class IIc	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:001900	U7Q568	Alanine-tRNA ligase, class IIc

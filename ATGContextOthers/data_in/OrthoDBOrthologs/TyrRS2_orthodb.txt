@@ -1,0 +1,211 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:000412	Q5KPW6	Tyrosyl-tRNA synthetase
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:00023c	C5PIS5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:000294	J5Q1P4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	227321	Aspergillus nidulans FGSC A4	227321:001147	Q5B3Z1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	229533	Fusarium graminearum PH-1	229533:0029d3	I1RYJ7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	235443	Cryptococcus neoformans var. grubii H99	235443:0001ba	J9VKS0	Aminoacyl-tRNA synthetase, class Ic
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	237561	Candida albicans SC5314	237561:00150e	Q5AAK5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	237631	Ustilago maydis 521	237631:00045e	Q4P587	
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	240176	Coprinopsis cinerea okayama7#130	240176:000595	A8NAD6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	242507	Magnaporthe oryzae 70-15	242507:00083e	G4NKV5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	246409	Rhizopus delemar RA 99-880	246409:000274	I1BR14	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	246410	Coccidioides immitis RS	246410:000128	J3KGZ6	Histone-fold
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:00050f	Q560W5	Tyrosyl-tRNA synthetase
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0006e2	Q6CUK3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	284591	Yarrowia lipolytica CLIB122	284591:000485	Q6C3Q2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	284592	Debaryomyces hansenii CBS767	284592:000315	Q6BVX8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	284593	Candida glabrata CBS 138	284593:000593	Q6FQQ2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	284811	Eremothecium gossypii ATCC 10895	284811:000609	Q756N3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	284812	Schizosaccharomyces pombe 972h-	284812:00091b	ade7	SAICAR synthetase
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:0002dc	B3LUT3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:00051c	A5DGA4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	294747	Candida tropicalis MYA-3404	294747:000095	C5M5C6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	294748	Candida albicans WO-1	294748:00052a	C4YNF1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	306901	Chaetomium globosum CBS 148.51	306901:000ece	Q2GR92	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000104	C4YAK0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	307796	Saccharomyces cerevisiae YJM789	307796:000482	A7A0H3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	321614	Parastagonospora nodorum SN15	321614:000275	Q0V6H4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	322104	Scheffersomyces stipitis CBS 6054	322104:00038b	A3LZN7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	330879	Aspergillus fumigatus Af293	330879:000882	Q4WWK6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	331117	Neosartorya fischeri NRRL 181	331117:000497	A1D890	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	332952	Aspergillus flavus NRRL3357	332952:000167	B8NTT7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	336722	Zymoseptoria tritici IPO323	336722:000732	F9XQ30	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	336963	Uncinocarpus reesii 1704	336963:0005b7	C4JE35	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	339724	Histoplasma capsulatum NAm1	339724:000256	A6QUX0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	341663	Aspergillus terreus NIH2624	341663:000a1b	Q0CBX7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	344612	Aspergillus clavatus NRRL 1	344612:0001aa	A1CJ89	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	367110	Neurospora crassa OR74A	367110:0017c1	Q1K910	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	367775	Cryptococcus gattii WM276	367775:00054d	E6R023	Tyrosyl-tRNA synthetase
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000100	A5E7V6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	380704	Aspergillus niger ATCC 1015	380704:00034c	G3YBR8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:000553	M3AQM5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	402676	Schizosaccharomyces japonicus yFS275	402676:00039b	B6K296	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	413071	Trichoderma virens Gv29-8	413071:0005f4	G9MKR2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:000354	E3JXV4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	425011	Aspergillus niger CBS 513.88	425011:001307	A5ABR4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	425265	Malassezia globosa CBS 7966	425265:00027b	A8PZZ7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:000400	B2WAL4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:000dc4	J9MTB0	
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	431241	Trichoderma reesei QM6a	431241:000319	G0R6Q4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:00025a	A7TJV0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	441959	Talaromyces stipitatus ATCC 10500	441959:000219	B8MNE3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	441960	Talaromyces marneffei ATCC 18224	441960:0006f9	B6QT78	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	443226	Coccidioides posadasii str. Silveira	443226:00275c	E9D4P9	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	447093	Histoplasma capsulatum G186AR	447093:000607	C0NQ40	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	451804	Aspergillus fumigatus A1163	451804:000561	B0XZ19	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	452589	Trichoderma atroviride IMI 206040	452589:00060b	G9NMG1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000186	C0SDL7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	483514	Schizosaccharomyces octosporus yFS286	483514:0005ad	S9R7N2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	486041	Laccaria bicolor S238N-H82	486041:000831	B0CSM3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	498257	Verticillium dahliae VdLs.17	498257:0001f6	G2WVS2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:0001aa	B6HDE6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	502779	Paracoccidioides lutzii Pb01	502779:000240	C1H539	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	502780	Paracoccidioides brasiliensis Pb18	502780:0004ec	C1GFS6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	510951	Neurospora tetrasperma FGSC 2508	510951:001998	F8N404	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	510952	Neurospora tetrasperma FGSC 2509	510952:0012fc	G4U7I1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	515849	Podospora anserina S mat+	515849:000f70	B2ATV7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	526221	Verticillium alfalfae VaMs.102	526221:000980	C9SBK2	SAICAR synthetase/ADE2, N-terminal
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	535722	Microsporum gypseum CBS 118893	535722:00055d	E4UWD8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	544711	Histoplasma capsulatum H88	544711:001838	F0UPT4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	544712	Histoplasma capsulatum H143	544712:0004aa	C6HLS5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:00030d	B5VDM5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:000314	N1JFD2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	554155	Arthroderma otae CBS 113480	554155:000480	C5FZF7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	554373	Moniliophthora perniciosa FA553	554373:000034	E2LWG4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559292	Saccharomyces cerevisiae S288c	559292:000c7d	ADE1	SAICAR synthetase
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559295	Lachancea thermotolerans CBS 6340	559295:000486	C5DIY2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559297	Blastomyces dermatitidis ER-3	559297:0005d7	C5GPS1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559298	Blastomyces gilchristii SLH14081	559298:00040d	C5JV61	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559304	Millerozyma farinosa CBS 7064	559304:000de5	G8YR18	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559304	Millerozyma farinosa CBS 7064	559304:000d3d	G8YPK8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559305	Trichophyton rubrum CBS 118892	559305:0000a4	F2SH09	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:00010d	C5DPQ1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	559882	Trichophyton equinum CBS 127.97	559882:001643	F2PVF1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	561896	Postia placenta Mad-698-R	561896:0000bd	B8PB86	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:000074	R9XFA1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	573729	Myceliophthora thermophila ATCC 42464	573729:000345	G2PZM2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	573826	Candida dubliniensis CD36	573826:0004ac	B9WKP8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	574961	Saccharomyces cerevisiae JAY291	574961:0005f3	C7GUF6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	578454	Candida parapsilosis CDC317	578454:0002be	G8BH69	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	578455	Thielavia terrestris NRRL 8126	578455:000268	G2QVP9	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:000611	F8NG93	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	578458	Schizophyllum commune H4-8	578458:0000cd	D8Q108	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	590646	Candida tenuis ATCC 10573	590646:000906	G3B6J9	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	590646	Candida tenuis ATCC 10573	590646:00062a	G3B6J8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:000383	K5WSV7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:00023e	G3AF47	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:000450	J3PNM2	
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	643680	Saccharomyces cerevisiae EC1118	643680:0002cd	C8Z3I5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	644223	Komagataella pastoris GS115	644223:000337	C4QYH8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:00075d	J3P9Z6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:00012e	M4FR64	
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	645133	Colletotrichum graminicola M1.001	645133:0007d3	E3QP87	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	647933	Trichophyton tonsurans CBS 112818	647933:0000da	F2RW66	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:0003b7	K5VFX5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:000542	F2T6K3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	653667	Schizosaccharomyces cryophilus OY26	653667:000495	S9WXH4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	655819	Beauveria bassiana ARSEF 2860	655819:0006f0	J4UNU8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	655827	Metarhizium acridum CQMa 102	655827:0007db	E9E4V1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	655844	Metarhizium robertsii ARSEF 23	655844:0004a1	E9F9Y0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	655863	Grosmannia clavigera kw1407	655863:000595	F0XK21	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	656061	Tuber melanosporum Mel28	656061:000498	D5G882	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000481	L8FQF1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	660025	Fusarium oxysporum Fo5176	660025:000124	F9FGL1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	660122	Nectria haematococca mpVI 77-13-4	660122:0000e0	C7Z534	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	663202	Trichophyton verrucosum HKI 0517	663202:0001f9	D4D4M5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	663331	Arthroderma benhamiae CBS 112371	663331:000283	D4ASU6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	665024	Bipolaris maydis ATCC 48331	665024:00050e	N4XMD8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:0008a7	A7EFA7	SAICAR synthetase/ADE2, N-terminal
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	665912	Bipolaris sorokiniana ND90Pr	665912:000266	M2T951	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	671144	Wallemia mellicola CBS 633.66	671144:000128	I4Y610	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	671987	Setosphaeria turcica Et28A	671987:00024f	R0I7B5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	675120	Dothistroma septosporum NZE10	675120:000117	M2YJ33	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:0004fd	F4P6Y1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	692275	Sphaerulina musiva SO2202	692275:0003f5	M3CVM9	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	701091	Bipolaris maydis C5	701091:000839	M2TTX3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	717646	Baudoinia panamericana UAMH 10762	717646:000314	M2N2K5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:000343	G2W8N6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:000a17	S8E7J6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	747089	Rhizophagus irregularis DAOM 181602	747089:00654a	U9U732	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	747089	Rhizophagus irregularis DAOM 181602	747089:00350e	U9U2M8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	747676	Melampsora larici-populina 98AG31	747676:0005c6	F4RHN0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:000539	G1X4M3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:000055	G0SEP7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	759273	Colletotrichum higginsianum IMI 349063	759273:000aa0	H1UWU9	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764097	Saccharomyces cerevisiae AWRI796	764097:000202	E7K967	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:00037f	E7KJY5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764099	Saccharomyces cerevisiae Vin13	764099:00069c	E7LR17	SAICAR synthetase/ADE2, N-terminal
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764100	Saccharomyces cerevisiae VL3	764100:000152	E7QB52	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764101	Saccharomyces cerevisiae FostersO	764101:000514	E7NEK0	SAICAR synthetase/ADE2, N-terminal
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764102	Saccharomyces cerevisiae FostersB	764102:000259	E7Q0L7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	764103	Mixia osmundae IAM 14324	764103:000403	G7EAW8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	771870	Sordaria macrospora k-hell	771870:000057	F7VXS2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:00061a	H6CAS6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	861557	Pyrenophora teres f. teres 0-1	861557:000457	E3RS24	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	871575	Ogataea parapolymorpha DL-1	871575:000d96	E7R1U9	
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:0003ba	N1P7M3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:0002bc	I6ND77	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	936046	Agaricus bisporus var. bisporus H97	936046:000591	K9HYI7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:000580	F8QF03	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	981350	Komagataella pastoris CBS 7435	981350:0002fb	F2QPP1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	983506	Rhizoctonia solani AG-1 IA	983506:000491	L8WZ28	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	983644	Cordyceps militaris CM01	983644:0023ff	G3JTJ8	SAICAR synthetase/ADE2, N-terminal
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	983644	Cordyceps militaris CM01	983644:000578	G3JB55	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	985895	Leptosphaeria maculans JN3	985895:00049f	E4ZUF7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	999809	Sporisorium reilianum SRZ2	999809:000035	E6ZR28	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	999810	Botrytis cinerea T4	999810:0002af	G2YTH8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1001064	Rhodotorula glutinis ATCC 204091	1001064:0001dc	G0T0U5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1028729	Fusarium pseudograminearum CS3096	1028729:0007a2	K3VH28	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1033177	Aspergillus kawachii IFO 4308	1033177:000925	G7XFP4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1064592	Naumovozyma castellii CBS 4309	1064592:00050c	G0VK19	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1069680	Pneumocystis murina B123	1069680:00010a	M7NQH4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:00002b	G0W4R1	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:00033f	I2H6M6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:000273	G8BWY0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1071382	Kazachstania africana CBS 2517	1071382:0003a7	H2AWS6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1071383	Kazachstania naganishii CBS 8797	1071383:0001de	J7SAX0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:000768	K1WTM0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:0004b5	G8ZTT4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1076935	Pyronema omphalodes CBS 100304	1076935:000738	U4LFU4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:0005bd	J4IAB2	
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1097556	Taphrina deformans PYCC 5710	1097556:0000c8	R4XH09	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1104152	Glarea lozoyensis 74030	1104152:000337	H0EVD8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:000240	M5BU15	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1109443	Piriformospora indica DSM 11827	1109443:000233	G4TFJ4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1111077	Claviceps purpurea 20.1	1111077:00028f	M1WFD0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:00045d	S3D488	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1126212	Macrophomina phaseolina MS6	1126212:0001fe	K2RFF3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1128400	Ustilago hordei Uh4857-4	1128400:00029a	I2FQK0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1130832	Rhodosporidium toruloides NP11	1130832:000678	M7XHL0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1136231	Candida orthopsilosis Co 90-125	1136231:000336	H8WZ84	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1143189	Magnaporthe oryzae Y34	1143189:0006dc	L7IF16	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1143193	Magnaporthe oryzae P131	1143193:0003fb	L7J4Q4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1151754	Pseudozyma antarctica T-34	1151754:00005d	M9MJ19	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1160507	Saccharomyces arboricola H-6	1160507:00023a	J8PRU8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1168221	Coniosporium apollinis CBS 100218	1168221:00044e	R7YPR5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1170229	Penicillium digitatum PHI26	1170229:000638	K9G5E7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1170230	Penicillium digitatum Pd1	1170230:00058d	K9HAK3	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:00021b	J6F825	Aminoacyl-tRNA synthetase, class Ic
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0005b5	K0KHA6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1209962	Pneumocystis jirovecii SE8	1209962:00028e	L0PFN8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:00077d	N4VYC6	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:000929	L2FWN8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:000559	K1W246	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00048b	S2JAV7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:000464	N4UV41	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:0001ce	M5E7A4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:000276	T0LWY7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1245528	Candida maltosa Xu316	1245528:000406	M3K378	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:000298	S3CC93	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:000b27	S0DVD7	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:0002e5	S8BPJ5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1286976	Togninia minima UCRPA7	1286976:0003a8	R8BHJ9	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:0005ef	R1ELC0	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1287681	Eutypa lata UCREL1	1287681:0017fb	M7SI66	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1290391	Botrytis cinerea BcDW1	1290391:00049f	M7TJU5	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:000329	R9AE68	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0005fa	R9PAB8	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1356009	Byssochlamys spectabilis No. 5	1356009:00004b	V5FRB2	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1381753	Moniliophthora roreri MCA 2997	1381753:000cef	V2X5N4	ATP-grasp fold, subdomain 2
+EOG092C0M3M	SAICAR synthetase/ADE2, N-terminal	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:00213d	U7PVC2	ATP-grasp fold, subdomain 2

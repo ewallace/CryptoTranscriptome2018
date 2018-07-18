@@ -1,0 +1,293 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C0Z3M	Arginine-tRNA ligase	4751	72359	Trachipleistophora hominis	72359:0005d2	L7JYF7	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:0017e7	Q5KE92	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:0004df	C5PBV3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	227321	Aspergillus nidulans FGSC A4	227321:0009ac	Q5AZB2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	229533	Fusarium graminearum PH-1	229533:002b6b	I1S4Q4	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	229533	Fusarium graminearum PH-1	229533:0029c1	I1RR64	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	235443	Cryptococcus neoformans var. grubii H99	235443:000e78	J9VQC3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	237561	Candida albicans SC5314	237561:00063d	Q5A8Z3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	237631	Ustilago maydis 521	237631:000c9f	Q4PEJ1	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	240176	Coprinopsis cinerea okayama7#130	240176:001b33	A8NRC3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	242507	Magnaporthe oryzae 70-15	242507:0003c9	G4MZT1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	246409	Rhizopus delemar RA 99-880	246409:000219	I1CSZ3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	246410	Coccidioides immitis RS	246410:000391	J3KFT5	Transmembrane:Helical
+EOG092C0Z3M	Arginine-tRNA ligase	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:0015f4	F5HCC7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:000460	Q6CXM7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284591	Yarrowia lipolytica CLIB122	284591:00032a	Q6C5H6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284592	Debaryomyces hansenii CBS767	284592:0004f3	Q6BIU4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284593	Candida glabrata CBS 138	284593:000569	Q6FY43	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284593	Candida glabrata CBS 138	284593:00044b	Q6FY18	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284811	Eremothecium gossypii ATCC 10895	284811:000649	Q755M0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c90	mrs1	Arginyl-tRNA synthetase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	284813	Encephalitozoon cuniculi GB-M1	284813:0000f4	Q8SRD8	Arginyl-tRNA synthetase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:000df2	B3LSK9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:00016f	B3LFV7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:000158	A5DHS8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	294747	Candida tropicalis MYA-3404	294747:0007e7	C5MEF6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	294748	Candida albicans WO-1	294748:0013f9	C4YFA9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	306901	Chaetomium globosum CBS 148.51	306901:002399	Q2H7Y6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	306901	Chaetomium globosum CBS 148.51	306901:000d54	Q2GVM3	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000361	C4Y641	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	307796	Saccharomyces cerevisiae YJM789	307796:000cd8	MSR1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	307796	Saccharomyces cerevisiae YJM789	307796:000536	A6ZYU2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	321614	Parastagonospora nodorum SN15	321614:002309	Q0UWZ6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	321614	Parastagonospora nodorum SN15	321614:000f4e	Q0U008	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	322104	Scheffersomyces stipitis CBS 6054	322104:00054d	SYR1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	330879	Aspergillus fumigatus Af293	330879:000b2f	Q4X0B7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	331117	Neosartorya fischeri NRRL 181	331117:0004dc	A1DHV9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	332952	Aspergillus flavus NRRL3357	332952:00310f	B8NG44	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	332952	Aspergillus flavus NRRL3357	332952:000b67	B8NGS8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	336722	Zymoseptoria tritici IPO323	336722:0013ee	F9X5W5	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	336963	Uncinocarpus reesii 1704	336963:00181c	C4JXH9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	339724	Histoplasma capsulatum NAm1	339724:001804	A6R2K8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	339724	Histoplasma capsulatum NAm1	339724:000e78	A6R2M4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	341663	Aspergillus terreus NIH2624	341663:00063c	Q0CY40	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	344612	Aspergillus clavatus NRRL 1	344612:000342	A1C7F1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	367110	Neurospora crassa OR74A	367110:0007ff	Q7S3P2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	367775	Cryptococcus gattii WM276	367775:000cfb	E6R9T2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000496	A5DVN7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	380704	Aspergillus niger ATCC 1015	380704:000d24	G3Y314	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:001ccb	M3B3R7	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	402676	Schizosaccharomyces japonicus yFS275	402676:00006c	B6JW82	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	413071	Trichoderma virens Gv29-8	413071:001aa6	G9N8X0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:001df7	E3K2Q7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	425011	Aspergillus niger CBS 513.88	425011:001fd4	A2QCV6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	425265	Malassezia globosa CBS 7966	425265:0005fa	A8PTQ3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:002ecc	B2VZN1	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:002aeb	B2VTH6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:003f3d	J9MDY9	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:0002fb	J9MHM5	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	431241	Trichoderma reesei QM6a	431241:000298	G0RDD0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:0003d5	A7TN43	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	441959	Talaromyces stipitatus ATCC 10500	441959:00241a	B8M5G8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	441960	Talaromyces marneffei ATCC 18224	441960:002379	B6QSG6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	441960	Talaromyces marneffei ATCC 18224	441960:0014db	B6Q4Y5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	443226	Coccidioides posadasii str. Silveira	443226:00021e	E9D883	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	447093	Histoplasma capsulatum G186AR	447093:001ebd	C0ND66	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	447093	Histoplasma capsulatum G186AR	447093:001e45	C0ND88	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	451804	Aspergillus fumigatus A1163	451804:00033b	B0XTR4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	452589	Trichoderma atroviride IMI 206040	452589:001f48	G9NHJ2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	481877	Enterocytozoon bieneusi H348	481877:000467	B7XJ06	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	482561	Paracoccidioides brasiliensis Pb03	482561:001e1d	C0S7X5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	482561	Paracoccidioides brasiliensis Pb03	482561:001df8	C0SBW8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	483514	Schizosaccharomyces octosporus yFS286	483514:000356	S9R7B0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	486041	Laccaria bicolor S238N-H82	486041:002b97	B0D7N6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	486041	Laccaria bicolor S238N-H82	486041:00102b	B0DX17	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	498257	Verticillium dahliae VdLs.17	498257:0003fa	G2X1P0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:0001fc	B6GYZ5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	502779	Paracoccidioides lutzii Pb01	502779:002288	C1GNQ5	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	502779	Paracoccidioides lutzii Pb01	502779:001dd0	C1H019	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	502780	Paracoccidioides brasiliensis Pb18	502780:00128c	C1GIL9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	502780	Paracoccidioides brasiliensis Pb18	502780:0011ae	C1GJE2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	510516	Aspergillus oryzae RIB40	510516:0009b4	Q2UE56	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	510516	Aspergillus oryzae RIB40	510516:000270	Q2UFN1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	510951	Neurospora tetrasperma FGSC 2508	510951:001f3f	F8ML11	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	510952	Neurospora tetrasperma FGSC 2509	510952:0017bc	G4URF5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	515849	Podospora anserina S mat+	515849:000be3	B2AV10	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	526221	Verticillium alfalfae VaMs.102	526221:00101e	C9SEN2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	535722	Microsporum gypseum CBS 118893	535722:001023	E4UVL6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	535722	Microsporum gypseum CBS 118893	535722:000752	E4URH5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	544711	Histoplasma capsulatum H88	544711:001be1	F0UJS7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	544711	Histoplasma capsulatum H88	544711:000df4	F0UJK3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	544712	Histoplasma capsulatum H143	544712:002400	C6HK29	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	544712	Histoplasma capsulatum H143	544712:0007cb	C6HK09	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:001112	B5VK21	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:00155e	N1JD97	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	554155	Arthroderma otae CBS 113480	554155:001437	C5FH94	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	554155	Arthroderma otae CBS 113480	554155:00084b	C5FP58	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	554373	Moniliophthora perniciosa FA553	554373:0017e6	E2L6R0	Arginine-tRNA ligase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559292	Saccharomyces cerevisiae S288c	559292:00110f	MSR1	Arginyl-tRNA synthetase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559292	Saccharomyces cerevisiae S288c	559292:00110e	Q05506	Arginyl-tRNA synthetase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559295	Lachancea thermotolerans CBS 6340	559295:0000ac	C5DHB0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559297	Blastomyces dermatitidis ER-3	559297:001bd1	C5GE09	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559297	Blastomyces dermatitidis ER-3	559297:0010c7	C5GJ92	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559298	Blastomyces gilchristii SLH14081	559298:001ca2	C5JSD9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559298	Blastomyces gilchristii SLH14081	559298:001054	C5JG76	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559304	Millerozyma farinosa CBS 7064	559304:000e87	Piso0_000927	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559304	Millerozyma farinosa CBS 7064	559304:000984	Piso0_000927	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559305	Trichophyton rubrum CBS 118892	559305:0017db	F2SGA4	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559305	Trichophyton rubrum CBS 118892	559305:000a35	F2SLC7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:00022b	C5DPW6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559882	Trichophyton equinum CBS 127.97	559882:0020af	F2Q2W6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	559882	Trichophyton equinum CBS 127.97	559882:000049	F2Q529	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:000399	R9XNB9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	573729	Myceliophthora thermophila ATCC 42464	573729:0010e7	G2QGM2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	573826	Candida dubliniensis CD36	573826:001521	B9W6U6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	574961	Saccharomyces cerevisiae JAY291	574961:000848	MSR1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	574961	Saccharomyces cerevisiae JAY291	574961:000113	C7GVV2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578454	Candida parapsilosis CDC317	578454:000239	G8B5W2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578455	Thielavia terrestris NRRL 8126	578455:001cc4	G2R9G3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578455	Thielavia terrestris NRRL 8126	578455:001881	G2R937	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:000d17	F8NIT6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578458	Schizophyllum commune H4-8	578458:0017f7	D8Q801	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578460	Nosema ceranae BRL01	578460:000488	C4VAL9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578461	Nosema bombycis CQ1	578461:001090	SYRC	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	578461	Nosema bombycis CQ1	578461:000d49	R0KN26	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	590646	Candida tenuis ATCC 10573	590646:0005f1	G3AW44	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:000705	K5XBG7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:000b7d	G3ADW0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:000ab2	J3Q182	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	643680	Saccharomyces cerevisiae EC1118	643680:000a37	C8Z9N6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	643680	Saccharomyces cerevisiae EC1118	643680:0003f4	C8Z5Q2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	644223	Komagataella pastoris GS115	644223:0000e9	C4R3Q6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000938	GGTG_12820	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:000673	M4G9E4	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	645133	Colletotrichum graminicola M1.001	645133:001265	E3QPR6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	645133	Colletotrichum graminicola M1.001	645133:000df5	E3QUJ3	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	647933	Trichophyton tonsurans CBS 112818	647933:001960	F2SB68	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	647933	Trichophyton tonsurans CBS 112818	647933:0003dd	F2RR69	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:000c93	K5W1J1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:002012	F2T3B7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:0016de	F2TMC6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	653667	Schizosaccharomyces cryophilus OY26	653667:000575	S9W819	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655819	Beauveria bassiana ARSEF 2860	655819:0008cd	J4UU43	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655827	Metarhizium acridum CQMa 102	655827:00260d	E9E3M0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655827	Metarhizium acridum CQMa 102	655827:002385	E9EIF0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655827	Metarhizium acridum CQMa 102	655827:0013c9	E9E400	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655844	Metarhizium robertsii ARSEF 23	655844:001c7f	E9FDT0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655844	Metarhizium robertsii ARSEF 23	655844:000161	E9EL85	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655863	Grosmannia clavigera kw1407	655863:001cc9	F0X879	Arginine-tRNA ligase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655863	Grosmannia clavigera kw1407	655863:001425	F0XPE8	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	655863	Grosmannia clavigera kw1407	655863:000e31	F0XIB0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	656061	Tuber melanosporum Mel28	656061:0000a3	D5GNX3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	658429	Pseudogymnoascus destructans 20631-21	658429:00028e	L8FU52	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	660025	Fusarium oxysporum Fo5176	660025:003d07	F9F1X6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	660025	Fusarium oxysporum Fo5176	660025:001a4b	F9F1X5	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	660025	Fusarium oxysporum Fo5176	660025:000440	F9FWY4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	660122	Nectria haematococca mpVI 77-13-4	660122:003d36	C7ZL68	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	660122	Nectria haematococca mpVI 77-13-4	660122:002209	C7YIN3	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	660122	Nectria haematococca mpVI 77-13-4	660122:000c98	C7Z7T4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	663202	Trichophyton verrucosum HKI 0517	663202:001642	D4DCI3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	663202	Trichophyton verrucosum HKI 0517	663202:000e9c	D4D8Q2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	663331	Arthroderma benhamiae CBS 112371	663331:001ce3	D4B1U1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	663331	Arthroderma benhamiae CBS 112371	663331:000ec2	D4AM29	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	665024	Bipolaris maydis ATCC 48331	665024:001603	N4X6W7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	665024	Bipolaris maydis ATCC 48331	665024:000ee7	N4X2P9	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:0006cf	A7EM60	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	665912	Bipolaris sorokiniana ND90Pr	665912:002bbf	M2TDD1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	665912	Bipolaris sorokiniana ND90Pr	665912:00191e	M2SYW6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	671144	Wallemia mellicola CBS 633.66	671144:000c37	I4Y534	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	671987	Setosphaeria turcica Et28A	671987:000ef1	R0JUH2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	671987	Setosphaeria turcica Et28A	671987:000abd	R0I5J1	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	675120	Dothistroma septosporum NZE10	675120:000e3c	N1PRR2	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:001467	U5H3T6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:001859	F4NRZ2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	692275	Sphaerulina musiva SO2202	692275:00081d	N1QIG1	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	701091	Bipolaris maydis C5	701091:00273c	M2UB88	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	701091	Bipolaris maydis C5	701091:002002	M2UUZ3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	717646	Baudoinia panamericana UAMH 10762	717646:001f70	M2N5W8	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:00101c	K7_MSR1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:0004f3	K7_YDR341C	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:002718	S8FVF7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	747089	Rhizophagus irregularis DAOM 181602	747089:001549	U9U203	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	747676	Melampsora larici-populina 98AG31	747676:000cd6	F4S286	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:0004b5	G1WYG1	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:00029f	G0S8Q1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	759273	Colletotrichum higginsianum IMI 349063	759273:001d89	H1VGZ7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	759273	Colletotrichum higginsianum IMI 349063	759273:0019c7	H1VCA1	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764097	Saccharomyces cerevisiae AWRI796	764097:00015c	E7KAW7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:000a8d	E7KPE3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:0002ea	E7KM09	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764101	Saccharomyces cerevisiae FostersO	764101:000858	E7NIJ6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764101	Saccharomyces cerevisiae FostersO	764101:0002f7	E7NG43	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764102	Saccharomyces cerevisiae FostersB	764102:000336	E7Q2K9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	764103	Mixia osmundae IAM 14324	764103:00178d	Mo05866	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	771870	Sordaria macrospora k-hell	771870:00084b	F7VY78	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:002362	H6BZD0	Arginine-tRNA ligase
+EOG092C0Z3M	Arginine-tRNA ligase	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:00058c	H6C966	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	861557	Pyrenophora teres f. teres 0-1	861557:0014b2	E3RXB0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	871575	Ogataea parapolymorpha DL-1	871575:0007da	E7R8K0	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	876142	Encephalitozoon intestinalis ATCC 50506	876142:0001f8	E0S8J0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	881290	Nematocida parisii ERTm1	881290:000a4d	I3EQX4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:00120b	N1P4L2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:0005cb	N1P779	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	907965	Encephalitozoon hellem ATCC 50504	907965:0006c7	I6UMT6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	914234	Gelatoporia subvermispora B	914234:0019b9	M2R1T7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:0003a3	G8JN89	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	935791	Nematocida parisii ERTm3	935791:00041c	I3EJX4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	936046	Agaricus bisporus var. bisporus H97	936046:001666	K9HNW6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:000772	F8PIY1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	944018	Nematocida sp. 1 ERTm2	944018:00094f	H8Z9M5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	948595	Vavraia culicis subsp. floridensis	948595:00069f	L2GTR5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	981350	Komagataella pastoris CBS 7435	981350:000518	RRS1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	983506	Rhizoctonia solani AG-1 IA	983506:0025a2	L8WYX6	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	983644	Cordyceps militaris CM01	983644:00057e	G3J751	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	985895	Leptosphaeria maculans JN3	985895:00175d	E5AD29	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	993615	Vittaforma corneae ATCC 50505	993615:000337	L2GP99	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	999809	Sporisorium reilianum SRZ2	999809:000886	E6ZWS3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	999810	Botrytis cinerea T4	999810:000446	G2YN02	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1003232	Edhazardia aedis USNM 41457	1003232:0003ae	J9DLF1	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1028729	Fusarium pseudograminearum CS3096	1028729:002a1d	K3V082	Transmembrane:Helical
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1028729	Fusarium pseudograminearum CS3096	1028729:0006b5	K3VRK1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1033177	Aspergillus kawachii IFO 4308	1033177:00123b	G7X560	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1064592	Naumovozyma castellii CBS 4309	1064592:00048f	NCAS0H01870	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1069680	Pneumocystis murina B123	1069680:000151	M7NTH8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:000458	NDAI0C01760	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000452	TBLA0H01730	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:00032a	TBLA0A03380	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:00018c	TPHA0E01970	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071382	Kazachstania africana CBS 2517	1071382:0004d9	KAFR0A05540	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071382	Kazachstania africana CBS 2517	1071382:00019c	KAFR0D04890	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071383	Kazachstania naganishii CBS 8797	1071383:000326	KNAG0C05260	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1071383	Kazachstania naganishii CBS 8797	1071383:00021b	KNAG0B04380	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:000123	K1X816	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:0000de	TDEL0E02320	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1076935	Pyronema omphalodes CBS 100304	1076935:002bc3	U4LPH6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:0009d6	J4I8D4	
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1097556	Taphrina deformans PYCC 5710	1097556:00024f	R4X7M2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1104152	Glarea lozoyensis 74030	1104152:000186	H0ENM6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:0026da	RRS1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1109443	Piriformospora indica DSM 11827	1109443:001302	G4TU70	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1111077	Claviceps purpurea 20.1	1111077:001333	M1VUS9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:00096b	S3D774	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1126212	Macrophomina phaseolina MS6	1126212:00028d	K2QYR9	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1128400	Ustilago hordei Uh4857-4	1128400:001427	I2G365	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1130832	Rhodosporidium toruloides NP11	1130832:001b20	M7X4A4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1136231	Candida orthopsilosis Co 90-125	1136231:0014b2	H8X219	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1143189	Magnaporthe oryzae Y34	1143189:0007cb	L7HVH9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1143193	Magnaporthe oryzae P131	1143193:0003b3	L7JDG4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1151754	Pseudozyma antarctica T-34	1151754:0012b1	M9LS86	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1160506	Aspergillus oryzae 3.042	1160506:001e71	I8IFL6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1160506	Aspergillus oryzae 3.042	1160506:0012e5	I8IRJ8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1160507	Saccharomyces arboricola H-6	1160507:0003e1	J8LMX0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1160507	Saccharomyces arboricola H-6	1160507:0002ab	J8Q0X0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1168221	Coniosporium apollinis CBS 100218	1168221:0001d3	R7YUP3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1170229	Penicillium digitatum PHI26	1170229:0009af	K9FGN1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1170230	Penicillium digitatum Pd1	1170230:0021bb	K9FEH6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1178016	Encephalitozoon romaleae SJ-2008	1178016:000188	I7AFH5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:001da3	J6ESV0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0005ec	SYR1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1209962	Pneumocystis jirovecii SE8	1209962:0009b4	L0PCW8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:002dd3	N4V764	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:001d26	N4VJ69	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:00396a	L2FLJ2	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:002d42	L2GB60	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:001352	K1VKR3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:002f1e	S2KIN5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:001864	S2IUU6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00039d	S2J614	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:0037fc	N4TE84	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:000228	N4UM77	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:000e43	N1RAX3	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:0005df	N1RCL7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:000cfd	M5EM54	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:003cb4	T0KR21	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:00008f	T0JX84	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1245528	Candida maltosa Xu316	1245528:000147	M3HH57	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:00068f	S3BXZ6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:001253	S0DKJ7	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:000ad1	S0DW61	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:002048	S7ZZ77	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1286976	Togninia minima UCRPA7	1286976:001f60	R8BK54	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1286976	Togninia minima UCRPA7	1286976:000e90	R8BUX9	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:00005d	R1GQ18	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1287681	Eutypa lata UCREL1	1287681:002a80	M7TI93	Aminoacyl-tRNA synthetase, class 1a, anticodon-binding
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1287681	Eutypa lata UCREL1	1287681:0029ac	M7SN76	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1290391	Botrytis cinerea BcDW1	1290391:0008b8	M7ULX9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0016b7	R9PEJ0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1356009	Byssochlamys spectabilis No. 5	1356009:00065f	V5FF64	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1358809	Spraguea lophii 42_110	1358809:00014a	S7XRE4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1381753	Moniliophthora roreri MCA 2997	1381753:001cd5	V2XNC0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:0021d0	U7PSM7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C0Z3M	Arginine-tRNA ligase	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:0003b3	U7PS90	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.

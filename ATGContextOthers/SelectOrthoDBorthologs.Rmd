@@ -1,0 +1,162 @@
+---
+title: "Select Orthodb orthologs"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 16 July 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/SelectOrthoDB-",
+                      cache.path="cache/SelectOrthoDB-")
+library(tidyverse)
+library(Biostrings)
+
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+```{r species}
+fungi_keep <- c(Scer="Saccharomyces cerevisiae S288c",
+             Cneo="Cryptococcus neoformans var. neoformans JEC21",
+             Cgru="Cryptococcus neoformans var. grubii H99",
+             Cgat="Cryptococcus gattii WM276",
+             Calb="Candida albicans SC5314",
+             Umay="Ustilago maydis 521",
+             Rdel="Rhizopus delemar RA 99-880",
+             Klac="Kluyveromyces lactis NRRL Y-1140",
+             Ylip="Yarrowia lipolytica CLIB122",
+             Spom="Schizosaccharomyces pombe 972h-",
+             Anid="Aspergillus nidulans FGSC A4",
+             Cgla="Candida glabrata CBS 138",
+             Afum="Aspergillus fumigatus Af293",
+             Hcap="Histoplasma capsulatum H88",
+             Ncra="Neurospora crassa OR74A",
+             Pgra="Puccinia graminis f. sp. tritici CRL 75-36-700-3",
+             Zrou="Zygosaccharomyces rouxii CBS 732",
+             Sscl="Sclerotinia sclerotiorum 1980 UF-70",
+             Opar="Ogataea parapolymorpha DL-1",
+             Tbla="Tetrapisispora blattae CBS 6284")
+
+fungi_shorten <- names(fungi_keep) %>% set_names(fungi_keep)
+
+fungi_keep3 <- fungi_keep[c("Cneo","Scer","Spom")]
+fungi_keep5 <- fungi_keep[c("Cneo","Scer","Spom","Ncra","Calb")]
+```
+
+```{r load_GlyRS,eval=FALSE}
+GlyRS_list <- read_tsv("data_in/OrthoDBOrthologs/GlyRS_orthodb.txt")
+
+GlyRS_select <- GlyRS_list %>%
+    filter(organism_name %in% og_keep) 
+
+GlyRS_seq <- readAAStringSet("data_in/OrthoDBOrthologs/GlyRS_orthodb.fasta")
+names(GlyRS_seq) <- str_extract(names(GlyRS_seq),"[\\w:]+") 
+GlyRS_selectseq <- GlyRS_seq[ GlyRS_select$int_prot_id ] 
+names(GlyRS_selectseq) <- paste(og_shorten[GlyRS_select$organism_name],
+                                GlyRS_select$int_prot_id)
+                       
+# writeXStringSet(GlyRS_selectseq,
+#                 "data_in/OrthoDBOrthologs/select/GlyRS_orthodb_sel.fasta")
+```
+
+```{r make_select_seq}
+make_select_seqs <- function(filestem,og_keep=fungi_keep,writeout=TRUE) {
+    
+    og_shorten <- names(og_keep) %>% set_names(og_keep)
+    orth_list <- read_tsv(paste0(filestem,".txt"))
+    
+    orth_select <- orth_list %>%
+        filter(organism_name %in% og_keep) 
+    
+    orth_seq <- readAAStringSet(paste0(filestem,".fasta"))
+    names(orth_seq) <- str_extract(names(orth_seq),"[\\w:]+") 
+    select_seq <- orth_seq[ orth_select$int_prot_id ] 
+    names(select_seq) <- paste(og_shorten[orth_select$organism_name],
+                              orth_select$int_prot_id)
+    if(writeout) {
+        writeXStringSet(select_seq,
+                        paste0(filestem,"_sel.fasta"))
+    }
+    return(select_seq)
+}
+# debugonce(make_select_seqs)
+make_select_seqs("data_in/OrthoDBOrthologs/AlaRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/CysRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/GlyRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/HisRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/TrpRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/mtTrpRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/ValRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/LeuRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/mtLeuRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/ProRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/mtProRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/TyrRS_orthodb")
+make_select_seqs("data_in/OrthoDBOrthologs/mtTyrRS_orthodb")
+```
+
+```{r make_select_smlist}
+make_select_smlist <- function(filen,og_keep=fungi_keep3) {
+    og_shorten <- names(og_keep) %>% set_names(og_keep)
+    orth_list <- read_tsv(filen)
+    
+    orth_list %>%
+        filter(organism_name %in% og_keep) %>%
+        transmute(pub_og_id,organism_taxid,
+                  org=og_shorten[organism_name],
+                  int_prot_id,pub_gene_id)
+}
+
+make_aa_smlist <- function(AA,fstem,loc="?",og_keep=fungi_keep5,
+                           dir="data_in/OrthoDBOrthologs",
+                           fend="_orthodb.txt") {
+    make_select_smlist(filen=paste0(dir,"/",fstem,fend),
+                       og_keep) %>%
+        mutate(AA=AA)
+}
+
+aa_smlist_all <- 
+bind_rows(make_aa_smlist("Ala","AlaRS"),
+          make_aa_smlist("Arg","ArgRS"),
+          make_aa_smlist("Asn","AsnRS"),
+          make_aa_smlist("Asp","AspRS"),
+          make_aa_smlist("Cys","CysRS"),
+          make_aa_smlist("Gln","GlnRS"),
+          make_aa_smlist("Glu","GluRS"),
+          make_aa_smlist("Gly","GlyRS"),
+          make_aa_smlist("His","HisRS"),
+          make_aa_smlist("Ile","IleRS"),
+          make_aa_smlist("Leu","LeuRS"),
+          make_aa_smlist("Lys","LysRS"),
+          make_aa_smlist("Met","MetRS"),
+          make_aa_smlist("Phe","PheRS1"),
+          make_aa_smlist("Phe","PheRS2"),
+          make_aa_smlist("Pro","ProRS"),
+          make_aa_smlist("Ser","SerRS"),
+          make_aa_smlist("Thr","ThrRS"),
+          make_aa_smlist("Trp","TrpRS"),
+          make_aa_smlist("Tyr","TyrRS"),
+          make_aa_smlist("Val","ValRS"),
+          make_aa_smlist("Asp","mtAspRS"),
+          make_aa_smlist("Glu","mtGluRS"),
+          make_aa_smlist("Ile","mtIleRS"),
+          make_aa_smlist("Leu","mtLeuRS"),
+          make_aa_smlist("Met","mtMetRS"),
+          make_aa_smlist("Phe","mtPheRS"),
+          make_aa_smlist("Pro","mtProRS"),
+          make_aa_smlist("Trp","mtTrpRS"),
+          make_aa_smlist("Tyr","mtTyrRS"),
+          make_aa_smlist("Tyr","TyrRS2")
+          )
+
+write_tsv(aa_smlist_all,"data_in/OrthoDBOrthologs/select/aaRS_smlist_all_5fungi.txt")
+```

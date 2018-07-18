@@ -1,0 +1,602 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	72359	Trachipleistophora hominis	72359:000058	L7JWY4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:00056f	Q5KHS3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:000369	Q5KMV4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:000e94	C5P7X6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:000666	C5PA59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:00005b	C5P7X7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:0002e4	YHR011W	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:0002e1	YDR023W	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	227321	Aspergillus nidulans FGSC A4	227321:001d6a	C8VIL4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	227321	Aspergillus nidulans FGSC A4	227321:0010a0	Q5AS62	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	227321	Aspergillus nidulans FGSC A4	227321:000740	Q5AS63	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	229533	Fusarium graminearum PH-1	229533:000bff	I1RTG9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	229533	Fusarium graminearum PH-1	229533:000606	I1RK15	Aminoacyl-tRNA synthetase, class II
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	235443	Cryptococcus neoformans var. grubii H99	235443:000586	J9VKD0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	235443	Cryptococcus neoformans var. grubii H99	235443:000268	J9VFB5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:0016ab	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:001480	Q5ANA9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:000997	DIA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:00030f	SES1	Seryl-tRNA(Ser/Sec) synthetase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237631	Ustilago maydis 521	237631:000c8d	Q4P2K9	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237631	Ustilago maydis 521	237631:0001e5	Q4PG98	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	237631	Ustilago maydis 521	237631:0001ad	Q4P8R1	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	240176	Coprinopsis cinerea okayama7#130	240176:001185	A8NXD0	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	240176	Coprinopsis cinerea okayama7#130	240176:000744	A8N2E9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	240176	Coprinopsis cinerea okayama7#130	240176:000307	A8NZQ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	242507	Magnaporthe oryzae 70-15	242507:000cf8	G4MN14	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	242507	Magnaporthe oryzae 70-15	242507:00093a	G4N9X8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	242507	Magnaporthe oryzae 70-15	242507:0007ab	G4MN13	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:0013f7	I1C994	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:0009c0	I1BZF3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:000572	I1CQK9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:000508	I1CGM8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:00016d	I1CAL4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246410	Coccidioides immitis RS	246410:000d06	J3K8I4	Rho GTPase activating protein
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246410	Coccidioides immitis RS	246410:0006b0	J3KBM1	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	246410	Coccidioides immitis RS	246410:0005a3	J3K8I5	Succinate dehydrogenase 
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:0005c5	F5HH88	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:00018c	F5HGY7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:001278	Q6CX47	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0004f8	Q6CX75	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0004aa	Q6CPP0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284591	Yarrowia lipolytica CLIB122	284591:000781	Q6C400	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284591	Yarrowia lipolytica CLIB122	284591:000539	Q6CFL2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284591	Yarrowia lipolytica CLIB122	284591:0004bf	Q6C350	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284592	Debaryomyces hansenii CBS767	284592:001388	Q6BYE8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284592	Debaryomyces hansenii CBS767	284592:0002e9	Q6BJK7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284592	Debaryomyces hansenii CBS767	284592:0002e5	Q6BJ59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284593	Candida glabrata CBS 138	284593:000556	Q6FV65	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284593	Candida glabrata CBS 138	284593:00045c	Q6FM19	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284811	Eremothecium gossypii ATCC 10895	284811:0006da	Q75DW1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284811	Eremothecium gossypii ATCC 10895	284811:000537	Q753B2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c92	dia4	Seryl-tRNA(Ser/Sec) synthetase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c91	O14018	Seryl-tRNA(Ser/Sec) synthetase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284812	Schizosaccharomyces pombe 972h-	284812:0009a5	rhb1	GTP-binding protein Rheb homolog
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	284813	Encephalitozoon cuniculi GB-M1	284813:0000f5	Q8SS48	Seryl-tRNA(Ser/Sec) synthetase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:00058d	B3LSD2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:0000ff	B3LGP1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:000b46	A5DFE0	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:000593	A5DI44	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:00034b	A5DBN6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294747	Candida tropicalis MYA-3404	294747:000f53	C5M7Z8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294747	Candida tropicalis MYA-3404	294747:000368	C5M9C9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294747	Candida tropicalis MYA-3404	294747:000141	C5M834	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294748	Candida albicans WO-1	294748:001333	C4YNP8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	294748	Candida albicans WO-1	294748:00022b	C4YQ44	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	306901	Chaetomium globosum CBS 148.51	306901:000cf3	Q2GW58	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	306901	Chaetomium globosum CBS 148.51	306901:000440	Q2GUU5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	306901	Chaetomium globosum CBS 148.51	306901:000348	Q2GW59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	306902	Clavispora lusitaniae ATCC 42720	306902:001692	C4Y992	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000413	C4Y028	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	306902	Clavispora lusitaniae ATCC 42720	306902:00027e	C4Y432	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	307796	Saccharomyces cerevisiae YJM789	307796:00051e	DIA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	307796	Saccharomyces cerevisiae YJM789	307796:000247	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	321614	Parastagonospora nodorum SN15	321614:0024ac	Q0UFN5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	321614	Parastagonospora nodorum SN15	321614:0006a9	Q0UP57	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	321614	Parastagonospora nodorum SN15	321614:000418	Q0UFN4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	322104	Scheffersomyces stipitis CBS 6054	322104:001418	A3LZT1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	322104	Scheffersomyces stipitis CBS 6054	322104:0004b6	DIA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	322104	Scheffersomyces stipitis CBS 6054	322104:000393	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	330879	Aspergillus fumigatus Af293	330879:0006e6	Q4WTN3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	330879	Aspergillus fumigatus Af293	330879:0006c8	Q4WYD4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	330879	Aspergillus fumigatus Af293	330879:00042d	E9R5S0	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	331117	Neosartorya fischeri NRRL 181	331117:001d92	A1CZL4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	331117	Neosartorya fischeri NRRL 181	331117:0005f3	A1CZL3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	331117	Neosartorya fischeri NRRL 181	331117:0004e8	A1D6F8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	332952	Aspergillus flavus NRRL3357	332952:002743	B8NSD7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	332952	Aspergillus flavus NRRL3357	332952:000a3c	B8MY20	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	332952	Aspergillus flavus NRRL3357	332952:000950	B8NSD8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336722	Zymoseptoria tritici IPO323	336722:0018af	F9XH20	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336722	Zymoseptoria tritici IPO323	336722:000671	F9WYW0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336722	Zymoseptoria tritici IPO323	336722:00054e	F9XHS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336963	Uncinocarpus reesii 1704	336963:001cd9	C4JYJ9	Aminoacyl-tRNA synthetase, class II (G/ P/ S/T)
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336963	Uncinocarpus reesii 1704	336963:001511	C4JMI9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336963	Uncinocarpus reesii 1704	336963:000f16	C4JYJ8	Serine-tRNA ligase, type1
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	336963	Uncinocarpus reesii 1704	336963:000078	C4JMI8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	339724	Histoplasma capsulatum NAm1	339724:00184d	A6R8K4	Serine-tRNA ligase, type1
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	339724	Histoplasma capsulatum NAm1	339724:001065	A6R0F8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	339724	Histoplasma capsulatum NAm1	339724:000389	A6R0F5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	341663	Aspergillus terreus NIH2624	341663:0025e6	Q0CA04	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	341663	Aspergillus terreus NIH2624	341663:00046e	Q0CA05	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	341663	Aspergillus terreus NIH2624	341663:000249	Q0CQA1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	344612	Aspergillus clavatus NRRL 1	344612:001e9f	A1C4P1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	344612	Aspergillus clavatus NRRL 1	344612:00086f	A1CL07	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	344612	Aspergillus clavatus NRRL 1	344612:00023d	A1C9P1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:001d1c	Q7SBY2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:00189a	Q7RWF9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:000e20	Q1K4R5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	367775	Cryptococcus gattii WM276	367775:000185	E6R1G0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	367775	Cryptococcus gattii WM276	367775:000141	E6RBW4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000cfc	A5DZS5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000313	A5DXQ3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:0002a9	A5E4V4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	380704	Aspergillus niger ATCC 1015	380704:001836	G3Y4V3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	380704	Aspergillus niger ATCC 1015	380704:00083c	G3Y4V2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	380704	Aspergillus niger ATCC 1015	380704:000269	G3Y0P9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:000e1a	M3AAG3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:0000c9	M2Z0T0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:000098	M2ZTW1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	402676	Schizosaccharomyces japonicus yFS275	402676:000883	B6K0P7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	402676	Schizosaccharomyces japonicus yFS275	402676:0003ff	B6K7P5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	402676	Schizosaccharomyces japonicus yFS275	402676:0001b1	B6K2Z8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	413071	Trichoderma virens Gv29-8	413071:002e54	G9NDN1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	413071	Trichoderma virens Gv29-8	413071:0005b6	G9NDM8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	413071	Trichoderma virens Gv29-8	413071:0004f2	G9N344	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:0006d4	E3JS04	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:00054c	E3KTL5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:000021	E3KSN6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	425011	Aspergillus niger CBS 513.88	425011:002298	A2R9R7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	425011	Aspergillus niger CBS 513.88	425011:001e4d	A2QDX2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	425011	Aspergillus niger CBS 513.88	425011:00021c	A2R9R6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	425265	Malassezia globosa CBS 7966	425265:000d7f	A8QD68	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	425265	Malassezia globosa CBS 7966	425265:00031c	A8Q8W6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	425265	Malassezia globosa CBS 7966	425265:00002d	A8Q2Y7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:000923	B2VUD8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:0004e4	B2VUD7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:000227	B2VWA9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:00299f	J9MEW7	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:000d0c	J9MX28	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:000b7e	J9NF76	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:0004a8	J9N8B6	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	431241	Trichoderma reesei QM6a	431241:000a81	G0RR77	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	431241	Trichoderma reesei QM6a	431241:000680	G0RR79	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	431241	Trichoderma reesei QM6a	431241:000678	G0RS29	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:0004bb	A7TK01	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:0001d5	A7TFT2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	441959	Talaromyces stipitatus ATCC 10500	441959:0030b3	B8MBY1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	441959	Talaromyces stipitatus ATCC 10500	441959:000605	B8MBY0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	441959	Talaromyces stipitatus ATCC 10500	441959:000345	B8M7Y3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	441960	Talaromyces marneffei ATCC 18224	441960:002559	B6QGR8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	441960	Talaromyces marneffei ATCC 18224	441960:00071e	B6QGR7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	441960	Talaromyces marneffei ATCC 18224	441960:000407	B6Q5C1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	443226	Coccidioides posadasii str. Silveira	443226:000f18	E9CT13	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	443226	Coccidioides posadasii str. Silveira	443226:00045e	E9CT12	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	443226	Coccidioides posadasii str. Silveira	443226:00003b	E9CXK5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	447093	Histoplasma capsulatum G186AR	447093:0018fb	C0NLA2	Aminoacyl-tRNA synthetase, class II (G/ P/ S/T)
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	447093	Histoplasma capsulatum G186AR	447093:00144c	C0NE92	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	447093	Histoplasma capsulatum G186AR	447093:000116	C0NE91	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	451804	Aspergillus fumigatus A1163	451804:00118b	B0Y359	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	451804	Aspergillus fumigatus A1163	451804:000743	B0XWV3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	451804	Aspergillus fumigatus A1163	451804:0006e5	B0Y360	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	452589	Trichoderma atroviride IMI 206040	452589:00277b	G9NHU8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	452589	Trichoderma atroviride IMI 206040	452589:000876	G9NHV0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	452589	Trichoderma atroviride IMI 206040	452589:00037d	G9NU91	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	481877	Enterocytozoon bieneusi H348	481877:00015c	B7XIZ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000bc9	C0SD26	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000461	C0S472	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000398	C0SD25	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	483514	Schizosaccharomyces octosporus yFS286	483514:00056a	S9PZ67	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	483514	Schizosaccharomyces octosporus yFS286	483514:00049c	S9R636	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	483514	Schizosaccharomyces octosporus yFS286	483514:0002d2	S9Q182	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	486041	Laccaria bicolor S238N-H82	486041:003a31	B0DFK9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	486041	Laccaria bicolor S238N-H82	486041:002499	B0D7S8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	486041	Laccaria bicolor S238N-H82	486041:000536	B0D435	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	486041	Laccaria bicolor S238N-H82	486041:00022b	B0CR97	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	498257	Verticillium dahliae VdLs.17	498257:001e57	G2XDR7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	498257	Verticillium dahliae VdLs.17	498257:0003d3	G2X1D5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	498257	Verticillium dahliae VdLs.17	498257:0002df	G2X2F8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:001a3c	B6HFN7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:000870	B6HFN8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:0006f2	B6H4K9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	502779	Paracoccidioides lutzii Pb01	502779:001711	C1HD62	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	502779	Paracoccidioides lutzii Pb01	502779:000590	C1HD61	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	502779	Paracoccidioides lutzii Pb01	502779:00030c	C1H8Q4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	502780	Paracoccidioides brasiliensis Pb18	502780:001077	C1FYN2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	502780	Paracoccidioides brasiliensis Pb18	502780:000b58	C1GF62	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	502780	Paracoccidioides brasiliensis Pb18	502780:0005d3	C1GF61	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510516	Aspergillus oryzae RIB40	510516:001a6f	Q2UTJ0	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510516	Aspergillus oryzae RIB40	510516:000930	Q2UTJ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510516	Aspergillus oryzae RIB40	510516:0002a3	Q2URS6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510951	Neurospora tetrasperma FGSC 2508	510951:001849	F8MCN8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510951	Neurospora tetrasperma FGSC 2508	510951:000350	F8MCN7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510951	Neurospora tetrasperma FGSC 2508	510951:000060	F8MPK2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510952	Neurospora tetrasperma FGSC 2509	510952:002636	G4UHQ6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510952	Neurospora tetrasperma FGSC 2509	510952:000639	G4UT66	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	510952	Neurospora tetrasperma FGSC 2509	510952:000063	G4UHQ7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:00272e	B2B5Q1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:00040a	B2B5Q2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:00014f	B2B1X8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	526221	Verticillium alfalfae VaMs.102	526221:0025a1	C9S893	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	526221	Verticillium alfalfae VaMs.102	526221:0004c0	C9SIQ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	526221	Verticillium alfalfae VaMs.102	526221:000187	C9SAA7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	535722	Microsporum gypseum CBS 118893	535722:0010c2	E4UV22	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	535722	Microsporum gypseum CBS 118893	535722:00043d	E4UV21	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	535722	Microsporum gypseum CBS 118893	535722:000281	E5R2V1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	544711	Histoplasma capsulatum H88	544711:001e65	F0UG01	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	544711	Histoplasma capsulatum H88	544711:0004cb	F0UG02	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	544711	Histoplasma capsulatum H88	544711:0001de	F0UAI1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	544712	Histoplasma capsulatum H143	544712:000fb5	C6HG99	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	544712	Histoplasma capsulatum H143	544712:0001c2	C6HG98	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	544712	Histoplasma capsulatum H143	544712:000111	C6HCC0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:000502	B5VJT6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:000227	B5VFT0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0017b2	N1JG08	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0004da	N1JCG9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0000a7	N1JFQ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	554155	Arthroderma otae CBS 113480	554155:001a6f	C5FID1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	554155	Arthroderma otae CBS 113480	554155:000321	C5FC28	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	554155	Arthroderma otae CBS 113480	554155:000084	C5FID2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	554373	Moniliophthora perniciosa FA553	554373:00226d	E2M4Z7	Aminoacyl-tRNA synthetase, class II (G/ P/ S/T)
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	554373	Moniliophthora perniciosa FA553	554373:0002f3	E2LVP2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559292	Saccharomyces cerevisiae S288c	559292:001112	DIA4	Digs into agar protein 4
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559292	Saccharomyces cerevisiae S288c	559292:001111	SES1	Seryl-tRNA(Ser/Sec) synthetase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559295	Lachancea thermotolerans CBS 6340	559295:0004a1	C5DM24	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559295	Lachancea thermotolerans CBS 6340	559295:00016b	C5DEB8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559297	Blastomyces dermatitidis ER-3	559297:001aaf	C5GM14	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559297	Blastomyces dermatitidis ER-3	559297:0003e8	C5GM13	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559297	Blastomyces dermatitidis ER-3	559297:0001f8	C5GA64	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559298	Blastomyces gilchristii SLH14081	559298:001fa7	C5JYN1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559298	Blastomyces gilchristii SLH14081	559298:000742	C5JK96	Serine-tRNA ligase, type1
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559298	Blastomyces gilchristii SLH14081	559298:00039b	C5JYN2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:001e8d	G8YN12	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:00125f	G8YKN1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:000dd7	Piso0_004834	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:000d0b	Piso0_004834	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:000195	Piso0_001035	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559305	Trichophyton rubrum CBS 118892	559305:001400	F2SNG1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559305	Trichophyton rubrum CBS 118892	559305:00056b	F2SNG0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559305	Trichophyton rubrum CBS 118892	559305:000383	F2SD71	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:00035c	C5DPH5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:000203	C5DT94	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559882	Trichophyton equinum CBS 127.97	559882:00082a	F2PQG2	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559882	Trichophyton equinum CBS 127.97	559882:0005c2	F2PQG3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	559882	Trichophyton equinum CBS 127.97	559882:00038e	F2PJK7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	561896	Postia placenta Mad-698-R	561896:002084	B8PI07	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:00015e	R9XF27	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:000058	R9XAC5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	573729	Myceliophthora thermophila ATCC 42464	573729:001897	G2Q9B3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	573729	Myceliophthora thermophila ATCC 42464	573729:001447	G2QP02	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	573729	Myceliophthora thermophila ATCC 42464	573729:000098	G2Q9B4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	573826	Candida dubliniensis CD36	573826:000db9	B9WEA7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	573826	Candida dubliniensis CD36	573826:0005c1	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	573826	Candida dubliniensis CD36	573826:000510	B9WIC4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	574961	Saccharomyces cerevisiae JAY291	574961:00021a	DIA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	574961	Saccharomyces cerevisiae JAY291	574961:0000ba	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578454	Candida parapsilosis CDC317	578454:000f5c	G8BJC2	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578454	Candida parapsilosis CDC317	578454:000472	G8B5P4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578454	Candida parapsilosis CDC317	578454:000412	G8B6U6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578455	Thielavia terrestris NRRL 8126	578455:000f4e	G2QTV1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578455	Thielavia terrestris NRRL 8126	578455:0006d5	G2RGL9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578455	Thielavia terrestris NRRL 8126	578455:0002a4	G2QTV2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:000372	F8NFB5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:00035a	F8NRG1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578458	Schizophyllum commune H4-8	578458:0023f7	D8PRM1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578458	Schizophyllum commune H4-8	578458:001514	D8QGA9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578458	Schizophyllum commune H4-8	578458:000519	D8Q7P3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578458	Schizophyllum commune H4-8	578458:000068	D8PSA5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578460	Nosema ceranae BRL01	578460:0000bb	C4V7S0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	578461	Nosema bombycis CQ1	578461:0000aa	SYSC	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:000ffd	G3B2Y2	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:0003f8	G3B6T4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:0000a1	G3B251	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:0017be	K5X0G8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:00043b	K5XKU8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:000a27	G3AQ54	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:0003c1	G3AQE9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:00022c	G3ATQ5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:001cb3	J3PWT7	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:001a41	J3QJ93	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:000bbb	J3PW85	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:000550	J3PPX3	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	643680	Saccharomyces cerevisiae EC1118	643680:0003a7	C8ZA78	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	643680	Saccharomyces cerevisiae EC1118	643680:000182	C8Z4U3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644223	Komagataella pastoris GS115	644223:000716	C4R346	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644223	Komagataella pastoris GS115	644223:00049a	C4QYJ2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644223	Komagataella pastoris GS115	644223:00046c	C4QXG0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000714	J3NY28	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000140	GGTG_11229	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000010	GGTG_06184	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:001642	M4FUZ6	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:000704	M4FUZ5	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:00006c	M4FL80	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	645133	Colletotrichum graminicola M1.001	645133:00266a	E3QBC7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	645133	Colletotrichum graminicola M1.001	645133:00087a	E3QMS4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	645133	Colletotrichum graminicola M1.001	645133:000691	E3QBU8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	647933	Trichophyton tonsurans CBS 112818	647933:001562	F2RNK3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	647933	Trichophyton tonsurans CBS 112818	647933:000561	F2RTY6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	647933	Trichophyton tonsurans CBS 112818	647933:0000bc	F2RNK2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:0001aa	K5WD22	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:000ac5	F2TSY2	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:00026d	F2TPF5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:00024a	F2TSY3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	653667	Schizosaccharomyces cryophilus OY26	653667:000332	S9VYX7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	653667	Schizosaccharomyces cryophilus OY26	653667:000297	S9WZT9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	653667	Schizosaccharomyces cryophilus OY26	653667:0000ce	S9XBF4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655819	Beauveria bassiana ARSEF 2860	655819:00058c	J4KN61	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655819	Beauveria bassiana ARSEF 2860	655819:0000ba	J4W092	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655827	Metarhizium acridum CQMa 102	655827:00210b	E9DXP3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655827	Metarhizium acridum CQMa 102	655827:0002ac	E9DXP4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655827	Metarhizium acridum CQMa 102	655827:000267	E9DW24	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655844	Metarhizium robertsii ARSEF 23	655844:0008c9	E9EZC2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655844	Metarhizium robertsii ARSEF 23	655844:000184	E9F3T4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655863	Grosmannia clavigera kw1407	655863:001798	F0XM26	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655863	Grosmannia clavigera kw1407	655863:000577	F0XM27	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	655863	Grosmannia clavigera kw1407	655863:000444	F0XA28	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:0006fa	D5GA68	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:0004de	D5GAV0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:000389	D5GFP5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:0001d1	D5GDG0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000383	L8G5T0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000054	L8GBV4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000013	L8GAW4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:000c75	F9F767	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:0008d5	F9FLN0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:0008c3	F9FPZ4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:0005ff	F9G7K8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660122	Nectria haematococca mpVI 77-13-4	660122:002792	C7YTE1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660122	Nectria haematococca mpVI 77-13-4	660122:000bdd	C7YZJ6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	660122	Nectria haematococca mpVI 77-13-4	660122:000af7	C7Z958	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	663202	Trichophyton verrucosum HKI 0517	663202:001712	D4CZF8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	663202	Trichophyton verrucosum HKI 0517	663202:00060e	D4D741	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	663202	Trichophyton verrucosum HKI 0517	663202:00012c	D4CZF6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	663331	Arthroderma benhamiae CBS 112371	663331:001723	D4AXG7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	663331	Arthroderma benhamiae CBS 112371	663331:000665	D4AUC9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	663331	Arthroderma benhamiae CBS 112371	663331:000319	D4AXG6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	665024	Bipolaris maydis ATCC 48331	665024:002866	N4WQ41	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	665024	Bipolaris maydis ATCC 48331	665024:00087b	N4X622	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:000870	A7E4G6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:000641	A7F0X9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	665912	Bipolaris sorokiniana ND90Pr	665912:001a3e	M2RM47	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	665912	Bipolaris sorokiniana ND90Pr	665912:000399	M2TFW6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	671144	Wallemia mellicola CBS 633.66	671144:0013ef	I4Y878	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	671144	Wallemia mellicola CBS 633.66	671144:000470	I4YBZ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	671144	Wallemia mellicola CBS 633.66	671144:000107	I4YGT6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	671987	Setosphaeria turcica Et28A	671987:002852	R0KJH9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	671987	Setosphaeria turcica Et28A	671987:000300	R0KVS9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	675120	Dothistroma septosporum NZE10	675120:002061	M2Y4R7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	675120	Dothistroma septosporum NZE10	675120:00024a	N1PT59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	675120	Dothistroma septosporum NZE10	675120:00015e	M2Y5A9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:001c14	MVLG_01888	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:000492	MVLG_01008	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:0001ac	U5HIA8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:00156e	F4NVR2	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:0004fe	F4P924	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:000420	F4P566	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	692275	Sphaerulina musiva SO2202	692275:001075	N1QFX5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	692275	Sphaerulina musiva SO2202	692275:0004b6	N1QKC4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	692275	Sphaerulina musiva SO2202	692275:000252	M3D952	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	701091	Bipolaris maydis C5	701091:002da6	M2UVW1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	701091	Bipolaris maydis C5	701091:0008f9	M2V0I3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	717646	Baudoinia panamericana UAMH 10762	717646:001b97	M2N0F3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	717646	Baudoinia panamericana UAMH 10762	717646:0002b4	M2NEZ0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	717646	Baudoinia panamericana UAMH 10762	717646:00017a	M2NMQ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	717982	Auricularia delicata TFB-10046 SS5	717982:001153	J0D7B3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	717982	Auricularia delicata TFB-10046 SS5	717982:000e75	J0CR24	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:0000f8	K7_DIA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:000033	K7_SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:001e9c	S8EE88	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:001cf6	S8EHA1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:000dbd	S8EAI0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:00491d	U9T4S3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:002e99	U9TSD9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:00012a	U9V755	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	747676	Melampsora larici-populina 98AG31	747676:00295b	F4S5R6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	747676	Melampsora larici-populina 98AG31	747676:00035d	F4RNG5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	747676	Melampsora larici-populina 98AG31	747676:000163	F4R4X7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:000bc8	G1XT27	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:000395	G1XKF9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:000169	G1XUF9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:000690	G0S7G1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:00040f	G0RYP4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:0001bb	G0S7G2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:00392d	H1UYX9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:000486	H1V7Q3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:0002f2	H1VTS5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764097	Saccharomyces cerevisiae AWRI796	764097:0000bd	E7KDB2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764097	Saccharomyces cerevisiae AWRI796	764097:000031	E7KAL1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:0002f3	E7KP76	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764099	Saccharomyces cerevisiae Vin13	764099:0003be	E7LSI1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764099	Saccharomyces cerevisiae Vin13	764099:0001a4	E7LV78	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764100	Saccharomyces cerevisiae VL3	764100:000176	E7QCP5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764100	Saccharomyces cerevisiae VL3	764100:000033	E7QFI0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764101	Saccharomyces cerevisiae FostersO	764101:0007f7	E7NIF4	Serine-tRNA ligase, type1
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764101	Saccharomyces cerevisiae FostersO	764101:0001dc	E7NGN8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764102	Saccharomyces cerevisiae FostersB	764102:000234	E7Q222	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764103	Mixia osmundae IAM 14324	764103:00177a	G7E4F9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764103	Mixia osmundae IAM 14324	764103:0004d5	Mo06584	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	764103	Mixia osmundae IAM 14324	764103:00027b	Mo05399	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	771870	Sordaria macrospora k-hell	771870:001f80	F7W6U6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	771870	Sordaria macrospora k-hell	771870:00066c	F7W7Z5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	771870	Sordaria macrospora k-hell	771870:00025c	F7W6U5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:001ddb	H6BYD6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:00064c	H6BYE1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:0002a0	H6BTA7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	861557	Pyrenophora teres f. teres 0-1	861557:00265f	E3S2A0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	861557	Pyrenophora teres f. teres 0-1	861557:0000c2	E3S726	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	871575	Ogataea parapolymorpha DL-1	871575:000ee6	E7R153	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	871575	Ogataea parapolymorpha DL-1	871575:000490	E7R1F6	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	871575	Ogataea parapolymorpha DL-1	871575:000236	E7RB86	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	876142	Encephalitozoon intestinalis ATCC 50506	876142:0000f4	E0S6M5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	881290	Nematocida parisii ERTm1	881290:0000b2	I3EM49	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:000b00	N1P2Q8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:0000e4	N1P628	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	907965	Encephalitozoon hellem ATCC 50504	907965:000133	I6TU57	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	914234	Gelatoporia subvermispora B	914234:00068e	M2PYA3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	914234	Gelatoporia subvermispora B	914234:000314	M2PL35	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:00034a	I6NCX7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:0000bc	G8JU64	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	935791	Nematocida parisii ERTm3	935791:0000b6	I3EET0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	936046	Agaricus bisporus var. bisporus H97	936046:000f6c	K9HC77	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	936046	Agaricus bisporus var. bisporus H97	936046:000104	K9IB58	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:0003b0	F8PG12	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:000162	F8PTV2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	944018	Nematocida sp. 1 ERTm2	944018:000090	H8ZF71	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	948595	Vavraia culicis subsp. floridensis	948595:00002d	L2GQX2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	981350	Komagataella pastoris CBS 7435	981350:0012cd	F2QQN3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	981350	Komagataella pastoris CBS 7435	981350:000522	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	981350	Komagataella pastoris CBS 7435	981350:000128	DIA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983506	Rhizoctonia solani AG-1 IA	983506:001fe2	L8WWN8	Transmembrane:Helical
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983506	Rhizoctonia solani AG-1 IA	983506:001b41	L8WJP4	AT hook, DNA-binding motif
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983506	Rhizoctonia solani AG-1 IA	983506:000394	L8WKA9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983506	Rhizoctonia solani AG-1 IA	983506:0001e0	L8WJW7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983644	Cordyceps militaris CM01	983644:000fd3	G3JD94	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983644	Cordyceps militaris CM01	983644:00057c	G3JD95	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	983644	Cordyceps militaris CM01	983644:000168	G3J7F1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	985895	Leptosphaeria maculans JN3	985895:00166f	E5ABJ5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	985895	Leptosphaeria maculans JN3	985895:00071d	E5ABJ4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	985895	Leptosphaeria maculans JN3	985895:000706	E5AEU4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	993615	Vittaforma corneae ATCC 50505	993615:0000d2	L2GR64	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	999809	Sporisorium reilianum SRZ2	999809:000c37	E6ZQP4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	999809	Sporisorium reilianum SRZ2	999809:0005ba	E7A2Y2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	999809	Sporisorium reilianum SRZ2	999809:0004dd	E6ZSP9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	999810	Botrytis cinerea T4	999810:002f63	G2YIA8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	999810	Botrytis cinerea T4	999810:0004f2	G2XPB6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	999810	Botrytis cinerea T4	999810:000319	G2YIA7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1001064	Rhodotorula glutinis ATCC 204091	1001064:0007e0	G0SVQ5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1001064	Rhodotorula glutinis ATCC 204091	1001064:00004b	G0SWK1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1003232	Edhazardia aedis USNM 41457	1003232:000118	J9DR88	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1028729	Fusarium pseudograminearum CS3096	1028729:001f8e	K3VDA7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1028729	Fusarium pseudograminearum CS3096	1028729:00082f	K3V4J4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1028729	Fusarium pseudograminearum CS3096	1028729:000280	K3UD17	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1033177	Aspergillus kawachii IFO 4308	1033177:0008bc	G7XPU5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1033177	Aspergillus kawachii IFO 4308	1033177:0007ed	G7XS95	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1064592	Naumovozyma castellii CBS 4309	1064592:0004ef	NCAS0A10450	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1064592	Naumovozyma castellii CBS 4309	1064592:0003f7	NCAS0G00920	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1069680	Pneumocystis murina B123	1069680:000955	M7NV65	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1069680	Pneumocystis murina B123	1069680:0001fe	M7NTS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1069680	Pneumocystis murina B123	1069680:0000cf	M7NNK8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:000504	NDAI0F01060	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:0000f1	NDAI0A05840	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000b85	I2GXY2	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:00031d	TBLA0E02740	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:0002d2	TBLA0G03020	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:0004d9	TPHA0K00150	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:0003de	TPHA0A04080	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071382	Kazachstania africana CBS 2517	1071382:0014e0	H2AU01	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071382	Kazachstania africana CBS 2517	1071382:000041	KAFR0C05760	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071382	Kazachstania africana CBS 2517	1071382:000031	KAFR0E01170	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071383	Kazachstania naganishii CBS 8797	1071383:000198	KNAG0B03300	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1071383	Kazachstania naganishii CBS 8797	1071383:00016c	KNAG0H01350	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:0011ad	K1WY39	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:000620	K1XM51	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:00026e	K1WNP5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:0003e0	TDEL0D03740	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:00025c	TDEL0A04640	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1076935	Pyronema omphalodes CBS 100304	1076935:002d15	U4KX38	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1076935	Pyronema omphalodes CBS 100304	1076935:001e23	U4LKS4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1076935	Pyronema omphalodes CBS 100304	1076935:0008ef	U4L6K5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:00174b	J4GSD3	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:000137	J7S5N3	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:0000df	J4H0W6	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1097556	Taphrina deformans PYCC 5710	1097556:000c69	R4XF39	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1097556	Taphrina deformans PYCC 5710	1097556:00028b	R4X8M0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1104152	Glarea lozoyensis 74030	1104152:00030f	H0EIH2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:0005a3	M5C5I3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:000364	M5C6J0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:000145	M5BTM4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1109443	Piriformospora indica DSM 11827	1109443:001bb1	G4T707	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1109443	Piriformospora indica DSM 11827	1109443:000204	G4T9T4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1109443	Piriformospora indica DSM 11827	1109443:000075	G4U2R9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1111077	Claviceps purpurea 20.1	1111077:00063f	M1WCB3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1111077	Claviceps purpurea 20.1	1111077:0003cd	M1VVR5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:00258d	S3DPM9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:0005e4	S3D635	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:0002ea	S3D8F9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1126212	Macrophomina phaseolina MS6	1126212:002b78	K2R0Z0	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1126212	Macrophomina phaseolina MS6	1126212:0006e4	K2S1X9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1126212	Macrophomina phaseolina MS6	1126212:0000e5	K2RLV4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1128400	Ustilago hordei Uh4857-4	1128400:000e9b	I2FR36	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1128400	Ustilago hordei Uh4857-4	1128400:00055c	I2G735	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1128400	Ustilago hordei Uh4857-4	1128400:000262	I2FWY3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1130832	Rhodosporidium toruloides NP11	1130832:00185f	M7X0R3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1130832	Rhodosporidium toruloides NP11	1130832:00057c	M7XES9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1130832	Rhodosporidium toruloides NP11	1130832:0002d8	M7WTD9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1136231	Candida orthopsilosis Co 90-125	1136231:000d2c	H8X2Z6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1136231	Candida orthopsilosis Co 90-125	1136231:00053f	H8X9K9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1136231	Candida orthopsilosis Co 90-125	1136231:00038b	H8X115	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1143189	Magnaporthe oryzae Y34	1143189:001f3c	L7IK97	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1143189	Magnaporthe oryzae Y34	1143189:0003f3	L7IL14	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1143189	Magnaporthe oryzae Y34	1143189:000331	L7HU54	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1143193	Magnaporthe oryzae P131	1143193:00144c	L7JH80	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1143193	Magnaporthe oryzae P131	1143193:0006cd	L7JI49	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1143193	Magnaporthe oryzae P131	1143193:000003	L7IXU1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1151754	Pseudozyma antarctica T-34	1151754:0018d3	M9MGM9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1151754	Pseudozyma antarctica T-34	1151754:0003d9	M9MDV9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1160506	Aspergillus oryzae 3.042	1160506:0025b3	I7ZJZ8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1160506	Aspergillus oryzae 3.042	1160506:0009a7	I8I9Y8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1160506	Aspergillus oryzae 3.042	1160506:000521	I8TE42	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1160507	Saccharomyces arboricola H-6	1160507:0000db	J8PN17	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1160507	Saccharomyces arboricola H-6	1160507:000091	J8Q3Q2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1168221	Coniosporium apollinis CBS 100218	1168221:0008ff	R7YXE9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1168221	Coniosporium apollinis CBS 100218	1168221:000687	R7Z0E0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1168221	Coniosporium apollinis CBS 100218	1168221:00059d	R7YXJ5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1170229	Penicillium digitatum PHI26	1170229:002199	K9FW48	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1170229	Penicillium digitatum PHI26	1170229:0006b8	K9FT95	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1170229	Penicillium digitatum PHI26	1170229:000082	K9FB68	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1170230	Penicillium digitatum Pd1	1170230:0015fb	K9GFJ4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1170230	Penicillium digitatum Pd1	1170230:00071a	K9GXL8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1170230	Penicillium digitatum Pd1	1170230:000059	K9GCU2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1178016	Encephalitozoon romaleae SJ-2008	1178016:000095	I7AR59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:0004cf	J4UDZ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:000135	J5RDZ8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:001001	K0KNY4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0005e6	SES1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0002af	K0KP50	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1209962	Pneumocystis jirovecii SE8	1209962:0005c5	L0PDJ7	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1209962	Pneumocystis jirovecii SE8	1209962:000255	L0PAU1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1209962	Pneumocystis jirovecii SE8	1209962:000200	L0P9N8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:001680	N4VR59	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:0008a9	N4VUI1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:000364	N4V3X7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:00042a	L2FBH0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:000298	L2FKC9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:00047d	K1W9K7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:00030e	K1VS68	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:002498	S2JAW6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00126c	S2JBD3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:000903	S2IXF9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00060a	S2JE05	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:000561	S2J5Y8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:0008e6	N4V287	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:000707	N4UVF5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:000052	N4UNU5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:001a74	N1REA4	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:000b1c	N1RQ42	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:000752	N1RPJ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:00041f	N1R8G5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:000ccc	M5E7R9	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:000269	M5E9G0	
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:000060	M5E9F3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:000f08	T0LDC2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:0009cb	T0KGE0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1245528	Candida maltosa Xu316	1245528:00085a	M3IUS5	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1245528	Candida maltosa Xu316	1245528:00053e	M3JSJ5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1245528	Candida maltosa Xu316	1245528:0001d0	M3J5A2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:001298	S3CCG8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:0007e7	S3BTJ2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:0002ef	S3D8A4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:0030e2	S0DST3	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:00093c	S0EHE8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:00072e	S0EIA2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:000968	S8ACH6	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:0008ea	S8BZ23	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:0003f8	S8BQY1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1286976	Togninia minima UCRPA7	1286976:000f26	R8BA15	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1286976	Togninia minima UCRPA7	1286976:00034e	R8BW15	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1286976	Togninia minima UCRPA7	1286976:00029a	R8BAF0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:00004c	R1EYX6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:000023	R1ER42	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1287681	Eutypa lata UCREL1	1287681:000b87	M7S761	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1287681	Eutypa lata UCREL1	1287681:0005df	M7SCK2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1287681	Eutypa lata UCREL1	1287681:000092	M7SDB8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1290391	Botrytis cinerea BcDW1	1290391:001c75	M7UDN1	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1290391	Botrytis cinerea BcDW1	1290391:000ae4	M7TIW7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1290391	Botrytis cinerea BcDW1	1290391:000635	M7TUE7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:000f58	R9AIA8	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:000205	R9AQ43	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:000075	R9ANP3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1305764	Pseudozyma hubeiensis SY62	1305764:000761	R9P077	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0005ed	R9PC83	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0003ae	R9P6U3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1356009	Byssochlamys spectabilis No. 5	1356009:001992	V5I074	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1356009	Byssochlamys spectabilis No. 5	1356009:0012bc	V5G1D3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1356009	Byssochlamys spectabilis No. 5	1356009:00084f	V5G3Z0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1358809	Spraguea lophii 42_110	1358809:000154	S7W7W2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1381753	Moniliophthora roreri MCA 2997	1381753:003b71	V2YJ23	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1381753	Moniliophthora roreri MCA 2997	1381753:003b6b	V2XV44	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1381753	Moniliophthora roreri MCA 2997	1381753:001f0b	V2XZX7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1381753	Moniliophthora roreri MCA 2997	1381753:0009e6	V2YF74	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:001d08	U7Q399	P-loop containing nucleoside triphosphate hydrolase
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:00073e	U7PZH5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C513S	Aminoacyl-tRNA synthetase, class II	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:00068e	U7Q359	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.

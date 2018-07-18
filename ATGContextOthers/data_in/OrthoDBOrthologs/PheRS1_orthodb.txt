@@ -1,0 +1,231 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	72359	Trachipleistophora hominis	72359:000b6f	L7JWI5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	72359	Trachipleistophora hominis	72359:0003a8	L7JWN6	Phenylalanyl-tRNA synthetase
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:00185f	Q5KK90	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:001199	C5P957	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:000727	J6EH87	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	227321	Aspergillus nidulans FGSC A4	227321:00255e	C8V5C4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	229533	Fusarium graminearum PH-1	229533:001c10	I1RGT0	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	235443	Cryptococcus neoformans var. grubii H99	235443:001414	J9VMY0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	237561	Candida albicans SC5314	237561:0011e8	Q5A993	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	237631	Ustilago maydis 521	237631:0012b7	Q4P6T7	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	240176	Coprinopsis cinerea okayama7#130	240176:000a04	A8NXV2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	242507	Magnaporthe oryzae 70-15	242507:000d4b	G4NDS1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	246409	Rhizopus delemar RA 99-880	246409:001b20	I1CK86	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	246410	Coccidioides immitis RS	246410:00244e	J3KCR7	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:00199f	Q55W01	hypothetical protein
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:001308	Q6CS00	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284591	Yarrowia lipolytica CLIB122	284591:00136b	Q6C4X4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284592	Debaryomyces hansenii CBS767	284592:000bfd	Q6BM83	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284593	Candida glabrata CBS 138	284593:000898	Q6FUP8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284811	Eremothecium gossypii ATCC 10895	284811:0011c9	Q75BQ2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c7b	frs1	Phenylalanyl-tRNA synthetase beta subunit
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	284813	Encephalitozoon cuniculi GB-M1	284813:0000ea	Q8SS40	Phenylalanyl-tRNA synthetase beta subunit
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:000944	B3LT31	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:001075	A5DDT7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	294747	Candida tropicalis MYA-3404	294747:0012c6	C5M464	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	294748	Candida albicans WO-1	294748:000ce1	C4YL12	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	306901	Chaetomium globosum CBS 148.51	306901:0028d7	Q2GWP3	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000b04	C4Y8P7	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000801	C4Y8Q0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	307796	Saccharomyces cerevisiae YJM789	307796:0015ed	A7A0W6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	321614	Parastagonospora nodorum SN15	321614:0038ee	Q0U8J6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	322104	Scheffersomyces stipitis CBS 6054	322104:000c6d	A3LV88	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	330879	Aspergillus fumigatus Af293	330879:001713	Q4WJK9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	331117	Neosartorya fischeri NRRL 181	331117:0002f0	A1D468	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	332952	Aspergillus flavus NRRL3357	332952:0000fe	B8NRV2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	336722	Zymoseptoria tritici IPO323	336722:002121	F9X8W0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	336963	Uncinocarpus reesii 1704	336963:00069b	C4JK75	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	339724	Histoplasma capsulatum NAm1	339724:001c7f	A6QS59	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	341663	Aspergillus terreus NIH2624	341663:000615	Q0CTB9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	344612	Aspergillus clavatus NRRL 1	344612:0002aa	A1CRA4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	367110	Neurospora crassa OR74A	367110:001e8e	Q1K6A2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	367775	Cryptococcus gattii WM276	367775:000b3b	E6R1M2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:0007ae	A5DRZ4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	380704	Aspergillus niger ATCC 1015	380704:0016a5	G3YDX1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:002585	N1Q5V4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	402676	Schizosaccharomyces japonicus yFS275	402676:000b8b	B6K1U5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	413071	Trichoderma virens Gv29-8	413071:0026a7	G9MWC3	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:001181	E3JTG0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	425011	Aspergillus niger CBS 513.88	425011:000ae4	A2RAI8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	425265	Malassezia globosa CBS 7966	425265:000f1c	A8QED3	Putative DNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	425265	Malassezia globosa CBS 7966	425265:000260	A8PX34	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:001912	B2VRN1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:001f50	J9N2R3	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	431241	Trichoderma reesei QM6a	431241:0007a1	G0R9F0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:000f35	A7TKK7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	441959	Talaromyces stipitatus ATCC 10500	441959:002267	B8M5V4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	441960	Talaromyces marneffei ATCC 18224	441960:000b05	B6Q6J3	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	447093	Histoplasma capsulatum G186AR	447093:001b2e	C0NUD1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	451804	Aspergillus fumigatus A1163	451804:000942	B0XP54	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	452589	Trichoderma atroviride IMI 206040	452589:0021c0	G9NQC1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	481877	Enterocytozoon bieneusi H348	481877:000011	A9CS50	Phenylalanyl-tRNA synthetase beta subunit
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000aca	C0S652	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	483514	Schizosaccharomyces octosporus yFS286	483514:0011d9	S9RIF5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	486041	Laccaria bicolor S238N-H82	486041:00455d	B0CYN7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	498257	Verticillium dahliae VdLs.17	498257:0013ee	G2X7C2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:001d3f	B6HCR2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	502779	Paracoccidioides lutzii Pb01	502779:001621	C1GTE1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	502780	Paracoccidioides brasiliensis Pb18	502780:001dca	C1G390	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	510516	Aspergillus oryzae RIB40	510516:000428	Q2UUB8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	510951	Neurospora tetrasperma FGSC 2508	510951:001d0f	F8MXX0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	510952	Neurospora tetrasperma FGSC 2509	510952:000e33	G4UG37	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	515849	Podospora anserina S mat+	515849:000a35	B2B632	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	526221	Verticillium alfalfae VaMs.102	526221:001be3	C9SUZ4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	535722	Microsporum gypseum CBS 118893	535722:000c7d	E5QYF2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	544711	Histoplasma capsulatum H88	544711:00188b	F0U990	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	544712	Histoplasma capsulatum H143	544712:00171c	C6H1S9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:000f07	B5VMZ5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:00190c	N1JK59	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	554155	Arthroderma otae CBS 113480	554155:002065	C5FDY9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	554373	Moniliophthora perniciosa FA553	554373:00000d	E2LC87	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559292	Saccharomyces cerevisiae S288c	559292:0010f6	FRS1	Phenylalanyl-tRNA synthetase beta subunit
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559295	Lachancea thermotolerans CBS 6340	559295:0013a8	C5DNN8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559297	Blastomyces dermatitidis ER-3	559297:001f13	C5G8G2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559298	Blastomyces gilchristii SLH14081	559298:001fd3	C5JPT2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559304	Millerozyma farinosa CBS 7064	559304:000705	G8Y740	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559305	Trichophyton rubrum CBS 118892	559305:001285	F2SBK0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:0011ae	C5DX84	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	559882	Trichophyton equinum CBS 127.97	559882:001e6c	F2PKK0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:000da5	R9XBC5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	573729	Myceliophthora thermophila ATCC 42464	573729:001149	G2Q9R7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	573826	Candida dubliniensis CD36	573826:000729	B9WL03	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	574961	Saccharomyces cerevisiae JAY291	574961:000ee4	C7GQN7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578454	Candida parapsilosis CDC317	578454:001506	G8BBL6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578455	Thielavia terrestris NRRL 8126	578455:0007e8	G2QVJ9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:003193	F8NM40	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578458	Schizophyllum commune H4-8	578458:002ac0	D8PPH2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578460	Nosema ceranae BRL01	578460:00000b	C4VA52	Phenylalanyl-tRNA synthetase beta subunit
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578461	Nosema bombycis CQ1	578461:0009a5	R0MFE0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	578461	Nosema bombycis CQ1	578461:000803	R0KPN2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	590646	Candida tenuis ATCC 10573	590646:0000fd	G3BCF0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:001039	K5W071	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:00120d	G3AII1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:002b68	J3PPL8	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:00093f	J3QCZ1	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	643680	Saccharomyces cerevisiae EC1118	643680:0008ce	C8ZD32	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	644223	Komagataella pastoris GS115	644223:000f2d	C4R3N8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:001b5a	J3NWY2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:000ac9	M4FVE7	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	645133	Colletotrichum graminicola M1.001	645133:0013d4	E3QC97	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	647933	Trichophyton tonsurans CBS 112818	647933:0020e9	F2RU54	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:001ca6	K5X8Z9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:0025fe	F2TA20	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	653667	Schizosaccharomyces cryophilus OY26	653667:001099	S9VYZ6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	655819	Beauveria bassiana ARSEF 2860	655819:001d1a	J4UHW0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	655827	Metarhizium acridum CQMa 102	655827:001323	E9EEP7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	655844	Metarhizium robertsii ARSEF 23	655844:000e2a	E9EU80	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	655863	Grosmannia clavigera kw1407	655863:000c81	F0XSN3	Transmembrane:Helical
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	656061	Tuber melanosporum Mel28	656061:000c5f	D5G4M7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	658429	Pseudogymnoascus destructans 20631-21	658429:0020bc	L8GB54	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	660025	Fusarium oxysporum Fo5176	660025:0026fd	F9G256	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	660122	Nectria haematococca mpVI 77-13-4	660122:003576	C7YZ13	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	663202	Trichophyton verrucosum HKI 0517	663202:0009e9	D4DEH0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	663331	Arthroderma benhamiae CBS 112371	663331:000fd7	D4AN32	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	665024	Bipolaris maydis ATCC 48331	665024:0010d9	N4XL25	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:003541	A7EP71	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	665912	Bipolaris sorokiniana ND90Pr	665912:002925	M2RZD0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	671144	Wallemia mellicola CBS 633.66	671144:000957	I4YGI9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	671987	Setosphaeria turcica Et28A	671987:000c30	R0KMB2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	675120	Dothistroma septosporum NZE10	675120:001730	N1Q1G2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:001544	U5H6P7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:000a75	F4P082	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	692275	Sphaerulina musiva SO2202	692275:00079c	N1QM17	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	701091	Bipolaris maydis C5	701091:00249d	M2TV86	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	717646	Baudoinia panamericana UAMH 10762	717646:000873	M2NME1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:0012e4	G2WIQ3	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:000a0d	S8DIW7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	747089	Rhizophagus irregularis DAOM 181602	747089:004f10	U9U901	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	747676	Melampsora larici-populina 98AG31	747676:0037ee	F4R921	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:000dd9	G1X618	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:00091f	G0S5P2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	759273	Colletotrichum higginsianum IMI 349063	759273:0037cb	H1VLY2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764097	Saccharomyces cerevisiae AWRI796	764097:0005e6	E7KFF5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:000b02	E7KRK0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764099	Saccharomyces cerevisiae Vin13	764099:000f04	E7LXE8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764100	Saccharomyces cerevisiae VL3	764100:00087f	E7QHT4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764101	Saccharomyces cerevisiae FostersO	764101:0009cf	E7NKM7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764102	Saccharomyces cerevisiae FostersB	764102:0007b4	E7Q6I5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	764103	Mixia osmundae IAM 14324	764103:001968	G7E4A6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	771870	Sordaria macrospora k-hell	771870:000d0b	F7W2R1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:001bc1	H6BJY7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	861557	Pyrenophora teres f. teres 0-1	861557:0027d6	E3RTR1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	871575	Ogataea parapolymorpha DL-1	871575:000886	E7R0R3	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	876142	Encephalitozoon intestinalis ATCC 50506	876142:00026f	E0S6P0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	881290	Nematocida parisii ERTm1	881290:000267	I3EMZ8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:00137c	N1NZH0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	907965	Encephalitozoon hellem ATCC 50504	907965:0001a6	I6TU67	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	914234	Gelatoporia subvermispora B	914234:000784	M2PV96	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:0008c0	G8JMR8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	935791	Nematocida parisii ERTm3	935791:000562	I3EIZ7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	936046	Agaricus bisporus var. bisporus H97	936046:00238a	K9I463	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:0029ae	F8QF35	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	944018	Nematocida sp. 1 ERTm2	944018:000346	H8ZAN1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	948595	Vavraia culicis subsp. floridensis	948595:000795	L2GV06	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	981350	Komagataella pastoris CBS 7435	981350:000868	F2QXA7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	983506	Rhizoctonia solani AG-1 IA	983506:0025e3	L8WHV3	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	983506	Rhizoctonia solani AG-1 IA	983506:0009ef	L8WE50	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	983644	Cordyceps militaris CM01	983644:00198f	G3JPQ0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	985895	Leptosphaeria maculans JN3	985895:001465	E5AAE1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	993615	Vittaforma corneae ATCC 50505	993615:0002d5	L2GN56	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	999809	Sporisorium reilianum SRZ2	999809:0018b9	E6ZNC1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	999810	Botrytis cinerea T4	999810:002996	G2YGM1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1001064	Rhodotorula glutinis ATCC 204091	1001064:000680	G0SYY7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1003232	Edhazardia aedis USNM 41457	1003232:0008ad	J9D3S5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1028729	Fusarium pseudograminearum CS3096	1028729:002756	K3UUY5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1033177	Aspergillus kawachii IFO 4308	1033177:000ede	G7X8Z3	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1064592	Naumovozyma castellii CBS 4309	1064592:0011d2	G0VD05	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1069680	Pneumocystis murina B123	1069680:000455	M7NTP7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:000816	G0WE76	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000aa9	I2H7D0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:0013ef	G8BS58	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1071382	Kazachstania africana CBS 2517	1071382:000d21	H2ASJ5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1071383	Kazachstania naganishii CBS 8797	1071383:001161	J7RM10	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:002112	K1XHH1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:0008b0	G8ZR05	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1076935	Pyronema omphalodes CBS 100304	1076935:002b5f	U4LSZ9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:001321	J4H2L3	
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1097556	Taphrina deformans PYCC 5710	1097556:0004d0	R4X9W2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1104152	Glarea lozoyensis 74030	1104152:000bb1	H0EYW7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:001b5e	M5BRJ6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1109443	Piriformospora indica DSM 11827	1109443:0023a6	G4TIU8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1111077	Claviceps purpurea 20.1	1111077:001226	M1VX17	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:001696	S3D5R5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1126212	Macrophomina phaseolina MS6	1126212:00187a	K2RWL8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1128400	Ustilago hordei Uh4857-4	1128400:000908	I2FUW0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1130832	Rhodosporidium toruloides NP11	1130832:000a60	M7XK91	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1136231	Candida orthopsilosis Co 90-125	1136231:000955	H8WVK8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1143189	Magnaporthe oryzae Y34	1143189:0012b1	L7IKW4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1143193	Magnaporthe oryzae P131	1143193:000887	L7JFK5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1151754	Pseudozyma antarctica T-34	1151754:000aec	M9MH51	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1160506	Aspergillus oryzae 3.042	1160506:000f54	I8TFZ6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1160507	Saccharomyces arboricola H-6	1160507:000954	J8PZJ4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1168221	Coniosporium apollinis CBS 100218	1168221:000797	R7YP10	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1170229	Penicillium digitatum PHI26	1170229:001165	K9G753	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1170230	Penicillium digitatum Pd1	1170230:001104	K9FXT2	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1178016	Encephalitozoon romaleae SJ-2008	1178016:0004cc	I7AR69	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:001d3f	J5Q5K7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0007a2	K0KRG0	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1209962	Pneumocystis jirovecii SE8	1209962:00043f	L0P9X7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:0021a0	N4URD9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:0021d7	L2G983	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:000df9	K1VU25	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:002b3c	S2IWX7	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:0030ed	N4USP5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:0017d6	N1RWR4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:000a22	M5EJU5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:00392f	T0LKC6	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1245528	Candida maltosa Xu316	1245528:001573	M3K171	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:001d59	S3D983	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:000e7b	S0EC39	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:000fc4	S8BXL8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1286976	Togninia minima UCRPA7	1286976:002032	R8BFJ8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:000ae9	R1EAQ9	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1287681	Eutypa lata UCREL1	1287681:002803	M7SIY8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1290391	Botrytis cinerea BcDW1	1290391:0007ef	M7TN36	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:000ff4	R9AR51	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0007ee	R9P9Y8	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1356009	Byssochlamys spectabilis No. 5	1356009:0014b5	V5FIW5	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1358809	Spraguea lophii 42_110	1358809:000856	S7XUQ4	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1381753	Moniliophthora roreri MCA 2997	1381753:003a0e	V2XQX1	B3/B4 tRNA-binding domain
+EOG092C0WBD	B3/B4 tRNA-binding domain	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:000ea4	U7Q1R8	B3/B4 tRNA-binding domain

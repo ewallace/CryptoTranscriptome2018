@@ -1,0 +1,229 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	72359	Trachipleistophora hominis	72359:000076	L7JV29	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:0006c8	Q5KAB8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:00055d	C5P1N1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	227321	Aspergillus nidulans FGSC A4	227321:0003f9	Q5B6K6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	229533	Fusarium graminearum PH-1	229533:0019d1	I1RC05	Aminoacyl-tRNA synthetase, class II
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	235443	Cryptococcus neoformans var. grubii H99	235443:0003db	J9VVK6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	237561	Candida albicans SC5314	237561:0005fe	FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	237631	Ustilago maydis 521	237631:0003d6	Q4PED3	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	240176	Coprinopsis cinerea okayama7#130	240176:000546	A8NXV8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	242507	Magnaporthe oryzae 70-15	242507:000a11	G4MZF6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	246409	Rhizopus delemar RA 99-880	246409:000780	I1CEP6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	246410	Coccidioides immitis RS	246410:0002b8	J3KE22	Transmembrane:Helical
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:00050d	F5H9L0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0005c4	Q6CIN4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284591	Yarrowia lipolytica CLIB122	284591:000478	Q6C8V7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284592	Debaryomyces hansenii CBS767	284592:000633	Q6BVN2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284593	Candida glabrata CBS 138	284593:000407	Q6FMJ0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284811	Eremothecium gossypii ATCC 10895	284811:000476	Q752Q7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c7a	frs2	Phenylalanyl-tRNA synthetase alpha subunit
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	284813	Encephalitozoon cuniculi GB-M1	284813:0000e9	Q8SRG9	Phenylalanyl-tRNA synthetase alpha subunit
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:0005f3	B3LUI8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:0001b2	A5DD27	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	294747	Candida tropicalis MYA-3404	294747:000115	C5MF27	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	294748	Candida albicans WO-1	294748:000257	C4YF03	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	306901	Chaetomium globosum CBS 148.51	306901:0006de	Q2H9R4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000237	C4Y0F6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	307796	Saccharomyces cerevisiae YJM789	307796:00037c	FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	321614	Parastagonospora nodorum SN15	321614:000249	Q0V5X2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	322104	Scheffersomyces stipitis CBS 6054	322104:000186	FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	330879	Aspergillus fumigatus Af293	330879:00056f	Q4WI02	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	331117	Neosartorya fischeri NRRL 181	331117:00030e	A1CZ52	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	332952	Aspergillus flavus NRRL3357	332952:000b87	B8NLJ7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	336722	Zymoseptoria tritici IPO323	336722:00050f	F9WYT8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	336963	Uncinocarpus reesii 1704	336963:00021f	C4JJB2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	339724	Histoplasma capsulatum NAm1	339724:000097	A6R4E1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	341663	Aspergillus terreus NIH2624	341663:000960	Q0C9V1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	344612	Aspergillus clavatus NRRL 1	344612:000911	A1CEV0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	367110	Neurospora crassa OR74A	367110:001498	Q1K5N8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	367775	Cryptococcus gattii WM276	367775:00035c	E6RC94	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000466	A5DW72	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	380704	Aspergillus niger ATCC 1015	380704:0007cc	G3XZC3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:00039b	M2ZU57	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	402676	Schizosaccharomyces japonicus yFS275	402676:000527	B6K4R4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	413071	Trichoderma virens Gv29-8	413071:000626	G9MRX4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:000628	E3KM21	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:0000cc	E3KJB6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	425011	Aspergillus niger CBS 513.88	425011:000f35	A2QP43	Phenylalanyl-tRNA synthetase
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	425265	Malassezia globosa CBS 7966	425265:0001b9	A8QB23	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:0003f5	B2WL90	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:0007f3	J9MBP1	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	431241	Trichoderma reesei QM6a	431241:000174	G0RFK5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:000491	A7TQX1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	441959	Talaromyces stipitatus ATCC 10500	441959:0003d9	B8M8D2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	441960	Talaromyces marneffei ATCC 18224	441960:00057a	B6QNX9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	443226	Coccidioides posadasii str. Silveira	443226:0003ef	E9D938	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	447093	Histoplasma capsulatum G186AR	447093:000604	C0NBD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	451804	Aspergillus fumigatus A1163	451804:0007e0	B0XUN1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	452589	Trichoderma atroviride IMI 206040	452589:000628	G9P254	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	481877	Enterocytozoon bieneusi H348	481877:000010	B7XI98	Phenylalanyl-tRNA synthetase alpha subunit
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000452	C0SFB6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	483514	Schizosaccharomyces octosporus yFS286	483514:0003df	S9PQ87	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	486041	Laccaria bicolor S238N-H82	486041:00077e	B0CYP2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	498257	Verticillium dahliae VdLs.17	498257:0001c5	G2X2Y8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:000762	B6HC26	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	502779	Paracoccidioides lutzii Pb01	502779:0000db	C1H4W5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	502780	Paracoccidioides brasiliensis Pb18	502780:000249	C1GJZ6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	510516	Aspergillus oryzae RIB40	510516:0004c7	Q2U6I2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	510951	Neurospora tetrasperma FGSC 2508	510951:00015b	F8MVY4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	510952	Neurospora tetrasperma FGSC 2509	510952:00044a	G4V0I6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	515849	Podospora anserina S mat+	515849:0001dd	B2AWK3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	526221	Verticillium alfalfae VaMs.102	526221:000330	C9SHV6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	535722	Microsporum gypseum CBS 118893	535722:000076	E4UNZ0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	544711	Histoplasma capsulatum H88	544711:0005d7	F0UKI4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	544712	Histoplasma capsulatum H143	544712:0001b1	C6H9M1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:00043a	B5VI09	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0003f5	N1JJ81	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	554155	Arthroderma otae CBS 113480	554155:000464	C5FSI8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	554373	Moniliophthora perniciosa FA553	554373:0001bc	E2M5M7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559292	Saccharomyces cerevisiae S288c	559292:0010f5	FRS2	Phenylalanyl-tRNA synthetase alpha subunit
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559295	Lachancea thermotolerans CBS 6340	559295:00054c	C5DBJ3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559297	Blastomyces dermatitidis ER-3	559297:0005a2	C5GBV0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559298	Blastomyces gilchristii SLH14081	559298:000086	C5JR64	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559304	Millerozyma farinosa CBS 7064	559304:000ba9	Piso0_002866	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559304	Millerozyma farinosa CBS 7064	559304:000a1d	Piso0_002866	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559305	Trichophyton rubrum CBS 118892	559305:000515	F2SWC4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:000136	C5DXA4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	559882	Trichophyton equinum CBS 127.97	559882:00018d	F2PI79	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	561896	Postia placenta Mad-698-R	561896:00018a	B8P378	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	561896	Postia placenta Mad-698-R	561896:000116	B8PK59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:0000bb	R9XEV5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	573729	Myceliophthora thermophila ATCC 42464	573729:000bf4	G2QEQ8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	573826	Candida dubliniensis CD36	573826:000458	B9W752	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	574961	Saccharomyces cerevisiae JAY291	574961:000338	FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	578454	Candida parapsilosis CDC317	578454:000026	G8B835	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	578455	Thielavia terrestris NRRL 8126	578455:0001eb	G2RBH7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:000540	F8NM54	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	578458	Schizophyllum commune H4-8	578458:000653	D8PPG6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	578460	Nosema ceranae BRL01	578460:00000a	C4V6K5	Phenylalanyl-tRNA synthetase alpha subunit
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	578461	Nosema bombycis CQ1	578461:000253	SYFA	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	590646	Candida tenuis ATCC 10573	590646:0000ce	G3BFU1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:0003ba	K5XAA6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:0002ee	G3AF86	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:0005a2	J3Q9G9	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	643680	Saccharomyces cerevisiae EC1118	643680:00048d	C8Z7R1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	644223	Komagataella pastoris GS115	644223:0004e4	C4R7D5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000252	GGTG_10254	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:0005b7	M4FT11	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	645133	Colletotrichum graminicola M1.001	645133:000271	E3Q6A2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	647933	Trichophyton tonsurans CBS 112818	647933:00044a	F2S3R9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:0006ae	K5WJP8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:00021d	F2TLY2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	653667	Schizosaccharomyces cryophilus OY26	653667:0005d3	S9W4F3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	655819	Beauveria bassiana ARSEF 2860	655819:00015a	J5JA67	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	655827	Metarhizium acridum CQMa 102	655827:0003d0	E9EHZ0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	655844	Metarhizium robertsii ARSEF 23	655844:00001c	E9EX98	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	655863	Grosmannia clavigera kw1407	655863:000641	F0XMY0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	656061	Tuber melanosporum Mel28	656061:0003c6	D5G5C2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	658429	Pseudogymnoascus destructans 20631-21	658429:0002f6	L8GCS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	660025	Fusarium oxysporum Fo5176	660025:000225	F9FQI6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	660122	Nectria haematococca mpVI 77-13-4	660122:00052f	C7YKM3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	663202	Trichophyton verrucosum HKI 0517	663202:000247	D4DI52	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	663331	Arthroderma benhamiae CBS 112371	663331:0005ab	D4AVS1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	665024	Bipolaris maydis ATCC 48331	665024:0007d0	N4XPN5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:0000d8	A7EGJ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	665912	Bipolaris sorokiniana ND90Pr	665912:000477	M2TL59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	671144	Wallemia mellicola CBS 633.66	671144:00040e	I4Y871	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	671987	Setosphaeria turcica Et28A	671987:000786	R0IP23	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	675120	Dothistroma septosporum NZE10	675120:000146	N1PV45	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:000cb0	MVLG_05979	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:000082	F4P4W0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	692275	Sphaerulina musiva SO2202	692275:0000ab	M3B469	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	701091	Bipolaris maydis C5	701091:000326	M2UAV6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	717646	Baudoinia panamericana UAMH 10762	717646:00019f	M2LXQ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	717982	Auricularia delicata TFB-10046 SS5	717982:00138b	J0CUK5	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	717982	Auricularia delicata TFB-10046 SS5	717982:000e52	J0WX35	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:00016e	K7_FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:0017f0	S8DIW0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	747089	Rhizophagus irregularis DAOM 181602	747089:000ba4	U9SLQ2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	747676	Melampsora larici-populina 98AG31	747676:0003d6	F4RZ08	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:0002f6	G1X522	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:000530	G0S6W7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	759273	Colletotrichum higginsianum IMI 349063	759273:000932	H1UXH8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764097	Saccharomyces cerevisiae AWRI796	764097:00020f	E7KC23	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:00009f	E7KMZ2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764099	Saccharomyces cerevisiae Vin13	764099:00024c	E7LTY4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764100	Saccharomyces cerevisiae VL3	764100:0000af	E7QE87	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764101	Saccharomyces cerevisiae FostersO	764101:00006e	E7NH74	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764102	Saccharomyces cerevisiae FostersB	764102:000276	E7Q3E2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	764103	Mixia osmundae IAM 14324	764103:000272	Mo01371	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	771870	Sordaria macrospora k-hell	771870:00006f	F7W474	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:0000be	H6BYZ2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	861557	Pyrenophora teres f. teres 0-1	861557:0002d5	E3S911	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	871575	Ogataea parapolymorpha DL-1	871575:000034	E7R0J9	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	876142	Encephalitozoon intestinalis ATCC 50506	876142:000083	E0S887	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	881290	Nematocida parisii ERTm1	881290:000121	I3ER98	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:000075	N1P357	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	907965	Encephalitozoon hellem ATCC 50504	907965:0000ec	I6UQ02	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	914234	Gelatoporia subvermispora B	914234:0005ec	M2RP85	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:000426	G8JMG8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	935791	Nematocida parisii ERTm3	935791:0000af	I3EJJ9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	936046	Agaricus bisporus var. bisporus H97	936046:00012a	K9HMH4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:00067f	F8QF45	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	944018	Nematocida sp. 1 ERTm2	944018:00001c	H8Z9Z9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	948595	Vavraia culicis subsp. floridensis	948595:000045	L2GWY9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	981350	Komagataella pastoris CBS 7435	981350:000017	FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	983506	Rhizoctonia solani AG-1 IA	983506:0004b2	L8X9H5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	983644	Cordyceps militaris CM01	983644:00080c	G3JJ96	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	985895	Leptosphaeria maculans JN3	985895:0000e6	E4ZJY8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	993615	Vittaforma corneae ATCC 50505	993615:0000ad	L2GL15	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	999809	Sporisorium reilianum SRZ2	999809:000311	E6ZWY9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	999810	Botrytis cinerea T4	999810:000182	G2XYF6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1003232	Edhazardia aedis USNM 41457	1003232:000154	J8ZYS9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1028729	Fusarium pseudograminearum CS3096	1028729:000907	K3VAK0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1033177	Aspergillus kawachii IFO 4308	1033177:000265	G7XE46	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1069680	Pneumocystis murina B123	1069680:00029e	M7NHK4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:00023d	NDAI0G03230	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000036	TBLA0A04530	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:00040d	TPHA0D00500	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1071382	Kazachstania africana CBS 2517	1071382:00023b	KAFR0C03400	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1071383	Kazachstania naganishii CBS 8797	1071383:00008e	KNAG0E03350	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:00053a	K1Y6A9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:0001ee	TDEL0C00780	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1076935	Pyronema omphalodes CBS 100304	1076935:000cf9	U4L3X9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:00005e	J4GU14	
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1097556	Taphrina deformans PYCC 5710	1097556:000319	R4XEK0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1104152	Glarea lozoyensis 74030	1104152:00020f	H0EDX1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:000325	M5BIM6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1109443	Piriformospora indica DSM 11827	1109443:00036e	G4TPT8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1111077	Claviceps purpurea 20.1	1111077:0005c8	M1W1X0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:00023f	S3DB84	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1126212	Macrophomina phaseolina MS6	1126212:000517	K2RSH8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1128400	Ustilago hordei Uh4857-4	1128400:000542	I2G3D3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1130832	Rhodosporidium toruloides NP11	1130832:0004fc	M7X2Z7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1136231	Candida orthopsilosis Co 90-125	1136231:000267	H8X1T0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1143189	Magnaporthe oryzae Y34	1143189:0001d4	L7HV77	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1143193	Magnaporthe oryzae P131	1143193:0000c0	L7J0D6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1151754	Pseudozyma antarctica T-34	1151754:000273	M9LS99	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1160506	Aspergillus oryzae 3.042	1160506:000324	I8IIQ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1160507	Saccharomyces arboricola H-6	1160507:000138	J8Q5K3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1168221	Coniosporium apollinis CBS 100218	1168221:0003e4	R7Z0B0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1170229	Penicillium digitatum PHI26	1170229:000107	K9G8J1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1170230	Penicillium digitatum Pd1	1170230:000344	K9FZ49	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1178016	Encephalitozoon romaleae SJ-2008	1178016:0000ab	I7ANP9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:000281	J4U811	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0005a7	FRS2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1209962	Pneumocystis jirovecii SE8	1209962:00026a	L0PER3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:0000ff	N4VJY7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:0005c4	L2FZE4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:000509	K1VVI2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00008a	S2JTH4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:0004ff	N4TC18	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:0009b0	N1RA19	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:0002f2	M5EPH2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:0001b7	T0LNR9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1245528	Candida maltosa Xu316	1245528:0001b9	M3HH96	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:00011e	S3BWD5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:000792	S0DLC7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:0009cd	S8BLQ7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1286976	Togninia minima UCRPA7	1286976:0000b1	R8BRU8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:0005b2	R1GR98	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1287681	Eutypa lata UCREL1	1287681:0008ba	M7TNA0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1290391	Botrytis cinerea BcDW1	1290391:000688	M7UH30	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:0002e1	R9AIB1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1305764	Pseudozyma hubeiensis SY62	1305764:0003e2	R9P513	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1356009	Byssochlamys spectabilis No. 5	1356009:0009f3	V5FS06	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1358809	Spraguea lophii 42_110	1358809:0000df	S7WA80	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1381753	Moniliophthora roreri MCA 2997	1381753:0031cd	V2YRV2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C1U6R	Phenylalanyl-tRNA synthetase, class IIc, alpha subunit	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:000518	U7PSH9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
