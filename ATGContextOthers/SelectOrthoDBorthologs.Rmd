@@ -158,5 +158,5 @@ bind_rows(make_aa_smlist("Ala","AlaRS"),
           make_aa_smlist("Tyr","TyrRS2")
           )
 
-write_tsv(aa_smlist_all,"data_in/OrthoDBOrthologs/select/aaRS_smlist_all_5fungi.txt")
+write_tsv(aa_smlist_all,"data_out/OrthoDBOrthologs/aaRS_smlist_all_5fungi.txt")
 ```
