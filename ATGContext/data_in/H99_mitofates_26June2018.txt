@@ -1,5 +1,6 @@
 # H99_mitofates_26June2018
 # H99 mitofates predictions from http://mitf.cbrc.jp/MitoFates/
+# applied to first 120aa of protein sequences, which gives DIFFERENT predictions from full-length protein
 # Edward Wallace, 26th June 2018
 # 
 # Sequence ID	Probability of presequence	Prediction	Cleavage site (processing enzyme)	Net charge	Positions for TOM20 recognition motif (deliminated by comma)	Position of amphypathic alpha-helix	BHHPPP	BPHBHH	HBHHBb	HBHHbB	HHBHHB	HHBPHB	HHBPHH	HHBPHP	HHHBBH	HHHBPH	HHHHBB	HHPBHH	HPBHHP	PHHBPH
