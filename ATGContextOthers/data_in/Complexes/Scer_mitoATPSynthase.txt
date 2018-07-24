@@ -1,0 +1,17 @@
+# S.cerevisiae mitochondrial ATP synthase
+# Core factors only, no inhibitory factors
+# Edited from http://www.yeastgenome.org/  GO:0000276
+# E. Wallace, 23 July 2018.
+gene	orf
+ATP6	Q0085
+ATP8	Q0080
+OLI1	Q0130
+ATP4	YPL078C
+ATP5	YDR298C
+ATP7	YKL016C
+ATP17	YDR377W
+ATP14	YLR295C
+ATP18	YML081C-A
+TIM11	YDR322C-A
+ATP20	YPR020W
+ATP19	YOL077W-A
