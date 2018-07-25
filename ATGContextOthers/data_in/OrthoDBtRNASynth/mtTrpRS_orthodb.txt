@@ -1,0 +1,212 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:000053	C5P2F6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	227321	Aspergillus nidulans FGSC A4	227321:001d4f	C8V0B1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	229533	Fusarium graminearum PH-1	229533:001780	I1RFW4	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	237561	Candida albicans SC5314	237561:00081a	MSW1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	237631	Ustilago maydis 521	237631:001878	Q4P9F4	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	240176	Coprinopsis cinerea okayama7#130	240176:0005a3	A8P9W8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	242507	Magnaporthe oryzae 70-15	242507:000a46	G4NC02	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	246409	Rhizopus delemar RA 99-880	246409:002104	I1BR71	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	246410	Coccidioides immitis RS	246410:00023a	J3KM19	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0008a6	Q6CMA0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	284591	Yarrowia lipolytica CLIB122	284591:000413	Q6CBI6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	284592	Debaryomyces hansenii CBS767	284592:00070e	Q6BIR5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	284593	Candida glabrata CBS 138	284593:001206	Q6FJ74	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	284811	Eremothecium gossypii ATCC 10895	284811:000e0d	Q75C28	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c98	msw1	Tryptophanyl-tRNA synthetase
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:000852	B3LG22	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:0016a2	A5DHD6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	294747	Candida tropicalis MYA-3404	294747:000bb2	C5MIT8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	294748	Candida albicans WO-1	294748:001144	C4YRG1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	306901	Chaetomium globosum CBS 148.51	306901:000304	Q2H8T4	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	306902	Clavispora lusitaniae ATCC 42720	306902:0008d2	C4Y6J0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	307796	Saccharomyces cerevisiae YJM789	307796:000d60	MSW1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	321614	Parastagonospora nodorum SN15	321614:003765	Q0UGL4	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	322104	Scheffersomyces stipitis CBS 6054	322104:0005c3	MSW1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	330879	Aspergillus fumigatus Af293	330879:0002c1	Q4WDN3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	331117	Neosartorya fischeri NRRL 181	331117:000e77	A1DM25	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	332952	Aspergillus flavus NRRL3357	332952:000819	B8NCZ6	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	336722	Zymoseptoria tritici IPO323	336722:0007c3	F9XIH5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	336963	Uncinocarpus reesii 1704	336963:000885	C4JPK0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	339724	Histoplasma capsulatum NAm1	339724:001c6d	A6R9B5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	341663	Aspergillus terreus NIH2624	341663:0003c8	Q0CL05	Transmembrane:Helical
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	344612	Aspergillus clavatus NRRL 1	344612:00059a	A1CM02	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	367110	Neurospora crassa OR74A	367110:000f7c	U9W8A6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000c40	A5E2R2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	380704	Aspergillus niger ATCC 1015	380704:000927	G3XXA8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:000462	M3AW36	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	402676	Schizosaccharomyces japonicus yFS275	402676:0003a0	B6K7W6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	413071	Trichoderma virens Gv29-8	413071:002e7f	G9MX98	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:0003ca	E3K592	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	425265	Malassezia globosa CBS 7966	425265:0009f9	A8Q6D1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:0015cc	B2VU43	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:002ded	J9N5W4	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	431241	Trichoderma reesei QM6a	431241:0003df	G0RWV6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:0003cb	A7TLU4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	441959	Talaromyces stipitatus ATCC 10500	441959:000b78	B8MTR8	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	441960	Talaromyces marneffei ATCC 18224	441960:000532	B6QV78	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	443226	Coccidioides posadasii str. Silveira	443226:00035f	E9CS05	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	447093	Histoplasma capsulatum G186AR	447093:001a90	C0P041	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	451804	Aspergillus fumigatus A1163	451804:000930	B0YCR6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	452589	Trichoderma atroviride IMI 206040	452589:0019b1	G9NEF3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	482561	Paracoccidioides brasiliensis Pb03	482561:000ed9	C0SBS8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	483514	Schizosaccharomyces octosporus yFS286	483514:000253	S9RB89	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	486041	Laccaria bicolor S238N-H82	486041:0003a5	B0D2R9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	498257	Verticillium dahliae VdLs.17	498257:0018c2	G2X8W9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:002875	B6GY74	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	502779	Paracoccidioides lutzii Pb01	502779:001317	C1GNL2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	502780	Paracoccidioides brasiliensis Pb18	502780:000864	C1GIR9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	510516	Aspergillus oryzae RIB40	510516:000870	Q2U9J8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	515849	Podospora anserina S mat+	515849:001376	B2AVN1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	515849	Podospora anserina S mat+	515849:000650	B2AVN0	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	526221	Verticillium alfalfae VaMs.102	526221:001b58	C9SR43	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	535722	Microsporum gypseum CBS 118893	535722:00149a	E4UYZ1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	544711	Histoplasma capsulatum H88	544711:002446	F0UQV4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	544712	Histoplasma capsulatum H143	544712:001545	C6HGP1	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	544712	Histoplasma capsulatum H143	544712:0011c1	C6HGP0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:00106c	B5VGF2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0017c3	N1JD38	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0009b2	N1JAA0	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	554155	Arthroderma otae CBS 113480	554155:000602	C5FRF2	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	554373	Moniliophthora perniciosa FA553	554373:002151	E2LXE1	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559292	Saccharomyces cerevisiae S288c	559292:001119	MSW1	Tryptophanyl-tRNA synthetase
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559295	Lachancea thermotolerans CBS 6340	559295:0013d6	C5DJJ0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559297	Blastomyces dermatitidis ER-3	559297:0005e5	C5GXI7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559298	Blastomyces gilchristii SLH14081	559298:000239	C5K3K7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559304	Millerozyma farinosa CBS 7064	559304:000b8c	Piso0_000901	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559304	Millerozyma farinosa CBS 7064	559304:000b51	Piso0_000901	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559305	Trichophyton rubrum CBS 118892	559305:0009c0	F2STY5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:0008ca	C5DTU0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	559882	Trichophyton equinum CBS 127.97	559882:001653	F2PZF4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:000867	R9XAZ3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	573729	Myceliophthora thermophila ATCC 42464	573729:0011f8	G2QCF0	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	573826	Candida dubliniensis CD36	573826:000902	B9WHJ6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	574961	Saccharomyces cerevisiae JAY291	574961:000ffb	MSW1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	578454	Candida parapsilosis CDC317	578454:0010d6	G8BHN9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	578455	Thielavia terrestris NRRL 8126	578455:000486	G2RB33	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:0028f3	F8P5Q9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	578458	Schizophyllum commune H4-8	578458:000730	D8QCX2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	578461	Nosema bombycis CQ1	578461:00034b	R0KNU7	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	590646	Candida tenuis ATCC 10573	590646:000d61	G3AZ17	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:00185d	K5XK73	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:00024e	G3APS0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:002b90	J3QA40	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	643680	Saccharomyces cerevisiae EC1118	643680:00086e	C8Z5I1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	644223	Komagataella pastoris GS115	644223:000d1b	C4R2E5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:001d26	GGTG_01391	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	645133	Colletotrichum graminicola M1.001	645133:00227a	E3QCU2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	647933	Trichophyton tonsurans CBS 112818	647933:001c85	F2RY58	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:0001e7	K5WA45	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:00246f	F2TS38	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	653667	Schizosaccharomyces cryophilus OY26	653667:0000fb	S9W4E6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	655819	Beauveria bassiana ARSEF 2860	655819:002282	J4KKU6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	655827	Metarhizium acridum CQMa 102	655827:001e6d	E9E9B3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	655844	Metarhizium robertsii ARSEF 23	655844:001a16	E9EUE5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	655863	Grosmannia clavigera kw1407	655863:0001d5	F0XQ07	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	656061	Tuber melanosporum Mel28	656061:000549	D5GIP7	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	656061	Tuber melanosporum Mel28	656061:0002a6	D5GH95	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	658429	Pseudogymnoascus destructans 20631-21	658429:001fab	L8GE64	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000315	L8GB52	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	660025	Fusarium oxysporum Fo5176	660025:0039eb	F9FDY4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	660122	Nectria haematococca mpVI 77-13-4	660122:003733	C7Z9Z9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	663202	Trichophyton verrucosum HKI 0517	663202:001600	D4D3R9	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	663331	Arthroderma benhamiae CBS 112371	663331:000719	D4AJ16	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	665024	Bipolaris maydis ATCC 48331	665024:0003ee	N4X2C4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:001098	A7E4G5	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:000283	A7E4G4	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	665912	Bipolaris sorokiniana ND90Pr	665912:00003e	M2SZA2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	671144	Wallemia mellicola CBS 633.66	671144:000c69	I4YHC4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	671987	Setosphaeria turcica Et28A	671987:00195d	R0KJC7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	675120	Dothistroma septosporum NZE10	675120:0007c8	M2XKQ2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:001b08	U5H320	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:000196	F4NSB0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	692275	Sphaerulina musiva SO2202	692275:000138	N1QG48	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	701091	Bipolaris maydis C5	701091:0004e8	M2UVM5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	717646	Baudoinia panamericana UAMH 10762	717646:0004bb	M2MLJ1	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	717646	Baudoinia panamericana UAMH 10762	717646:00040a	M2NE18	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:000a3e	K7_MSW1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:002999	S8E4S2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	747089	Rhizophagus irregularis DAOM 181602	747089:001921	U9U4W9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	747676	Melampsora larici-populina 98AG31	747676:0000f0	F4S633	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:001d54	G1XUD1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:000372	G0S4E2	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	759273	Colletotrichum higginsianum IMI 349063	759273:003805	H1VQH6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764097	Saccharomyces cerevisiae AWRI796	764097:000c38	E7KB36	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:000680	E7KLW0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764099	Saccharomyces cerevisiae Vin13	764099:000775	E7LT07	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764100	Saccharomyces cerevisiae VL3	764100:00078c	E7QD48	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764101	Saccharomyces cerevisiae FostersO	764101:000987	E7NFZ9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764102	Saccharomyces cerevisiae FostersB	764102:0009de	E7Q2D5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	764103	Mixia osmundae IAM 14324	764103:000220	Mo04881	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	771870	Sordaria macrospora k-hell	771870:0005cd	F7W9H5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:002425	H6BYD8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	861557	Pyrenophora teres f. teres 0-1	861557:000884	E3S3D0	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	871575	Ogataea parapolymorpha DL-1	871575:00046e	E7R6Z8	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:00062c	N1PAG7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	914234	Gelatoporia subvermispora B	914234:000576	M2PEJ6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:000c52	I6NDV0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	936046	Agaricus bisporus var. bisporus H97	936046:002674	K9H962	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:0029dd	F8Q5D5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	981350	Komagataella pastoris CBS 7435	981350:000ea9	MSW1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	983506	Rhizoctonia solani AG-1 IA	983506:001fac	L8X0Q8	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	983644	Cordyceps militaris CM01	983644:0013e5	G3JHA7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	985895	Leptosphaeria maculans JN3	985895:000445	E5ABB5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	999809	Sporisorium reilianum SRZ2	999809:0004aa	E7A2F0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	999810	Botrytis cinerea T4	999810:00267a	G2YIA5	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	999810	Botrytis cinerea T4	999810:00057c	G2YIA4	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1001064	Rhodotorula glutinis ATCC 204091	1001064:000277	G0SXX2	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1028729	Fusarium pseudograminearum CS3096	1028729:000ead	K3V7V3	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1033177	Aspergillus kawachii IFO 4308	1033177:002be6	G7XZA8	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1064592	Naumovozyma castellii CBS 4309	1064592:000ce6	NCAS0C05320	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1069680	Pneumocystis murina B123	1069680:0003f9	M7NP21	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:000f0e	NDAI0H00810	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000a13	TBLA0A09590	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:000505	TPHA0C00300	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1071382	Kazachstania africana CBS 2517	1071382:000dda	KAFR0H00540	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1071383	Kazachstania naganishii CBS 8797	1071383:000f00	KNAG0C06250	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:001901	K1XYT5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:000325	K1WJX6	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:001039	TDEL0A04990	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1076935	Pyronema omphalodes CBS 100304	1076935:00282a	U4LMT9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:0005b3	J4HZL5	
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1097556	Taphrina deformans PYCC 5710	1097556:000390	R4XC21	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1097556	Taphrina deformans PYCC 5710	1097556:000073	R4X7L5	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1104152	Glarea lozoyensis 74030	1104152:000ef6	H0EIF6	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1109443	Piriformospora indica DSM 11827	1109443:001311	G4TCK4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1111077	Claviceps purpurea 20.1	1111077:000862	M1W5X4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:0004a4	S3E6Q8	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1126212	Macrophomina phaseolina MS6	1126212:002dbe	K2SGD1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1126212	Macrophomina phaseolina MS6	1126212:00254c	K2S0V4	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1128400	Ustilago hordei Uh4857-4	1128400:0001fa	I2FYH0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1130832	Rhodosporidium toruloides NP11	1130832:001364	M7X5Q7	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1136231	Candida orthopsilosis Co 90-125	1136231:000f63	H8X0N4	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1143189	Magnaporthe oryzae Y34	1143189:001576	L7II15	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1143193	Magnaporthe oryzae P131	1143193:001ef6	L7JKH6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1151754	Pseudozyma antarctica T-34	1151754:000129	M9MEC0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1160506	Aspergillus oryzae 3.042	1160506:00007b	I8A6U9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1160507	Saccharomyces arboricola H-6	1160507:000a55	J8Q0S1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1168221	Coniosporium apollinis CBS 100218	1168221:000694	R7YXI9	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1168221	Coniosporium apollinis CBS 100218	1168221:000685	R7YXD1	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1170229	Penicillium digitatum PHI26	1170229:000743	K9FSE4	Similarity:Belongs to the peptidase A1 family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1170230	Penicillium digitatum Pd1	1170230:00022b	K9GDW6	Similarity:Belongs to the peptidase A1 family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:000fe4	K0KR86	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1209962	Pneumocystis jirovecii SE8	1209962:0007ac	L0PAG8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:002b22	N4VSD7	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:0006ef	S2JIP6	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:002b51	N4V0K5	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:001ddd	N1S7S0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:0027de	T0JIN4	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1245528	Candida maltosa Xu316	1245528:000b6b	M3K008	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:001f19	S3D198	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:001d1d	S0E5L9	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:000229	S8BNZ0	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1286976	Togninia minima UCRPA7	1286976:0008a8	R8BUT8	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:001f3b	R1G529	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:0008eb	R1GJ99	Ribosomal protein S10
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1287681	Eutypa lata UCREL1	1287681:000ee8	M7TDV1	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1290391	Botrytis cinerea BcDW1	1290391:0009bf	M7TU61	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:00120e	R9AHI7	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1305764	Pseudozyma hubeiensis SY62	1305764:000593	R9PCG2	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1356009	Byssochlamys spectabilis No. 5	1356009:00093b	V5GH48	Aminoacyl-tRNA synthetase, class Ic
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1381753	Moniliophthora roreri MCA 2997	1381753:002864	V2X765	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.
+EOG092C3VLE	Tryptophan-tRNA ligase	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:00034d	U7Q460	Similarity:Belongs to the class-I aminoacyl-tRNA synthetase family.

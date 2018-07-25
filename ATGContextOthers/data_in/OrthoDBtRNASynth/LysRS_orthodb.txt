@@ -1,0 +1,399 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	72359	Trachipleistophora hominis	72359:00005c	L7JRB0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:00028b	Q5KBB1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:000cc4	C5P0R0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:0002d8	C5PGT1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:000857	YNL073W	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:0000b1	YDR037W	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	227321	Aspergillus nidulans FGSC A4	227321:0011dc	Q5BGA2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	227321	Aspergillus nidulans FGSC A4	227321:00083c	Q5BC17	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	229533	Fusarium graminearum PH-1	229533:0031df	I1RBF6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	235443	Cryptococcus neoformans var. grubii H99	235443:000344	J9VU49	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:0008d9	KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:000449	MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	237631	Ustilago maydis 521	237631:000599	Q4P442	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	240176	Coprinopsis cinerea okayama7#130	240176:0005b9	A8N7Q5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	242507	Magnaporthe oryzae 70-15	242507:001e7f	G4NE53	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	242507	Magnaporthe oryzae 70-15	242507:0005a0	G4N3I0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:003f9f	I1CUU4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:00098f	I1CLF9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	246410	Coccidioides immitis RS	246410:001659	J3KF15	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	246410	Coccidioides immitis RS	246410:00012f	J3KJ50	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:0002e9	F5HIF6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0010bf	Q6CL92	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0003cf	Q6CJI5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284591	Yarrowia lipolytica CLIB122	284591:000c4c	Q6C814	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284591	Yarrowia lipolytica CLIB122	284591:000309	Q6C1H2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284592	Debaryomyces hansenii CBS767	284592:000f40	Q6BZ12	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284592	Debaryomyces hansenii CBS767	284592:00053e	Q6BMB5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284593	Candida glabrata CBS 138	284593:0011d1	Q6FNN8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284593	Candida glabrata CBS 138	284593:000439	Q6FM07	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284811	Eremothecium gossypii ATCC 10895	284811:000f97	Q756A5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284811	Eremothecium gossypii ATCC 10895	284811:0006f2	Q750C0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c85	msk1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c84	krs1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	284813	Encephalitozoon cuniculi GB-M1	284813:0000ee	Q8SS56	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:000c39	B3LNT2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:0002a8	B3LGM8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:000e91	A5DA52	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:0005ea	A5DDQ7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	294747	Candida tropicalis MYA-3404	294747:00184e	C5MGC1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	294747	Candida tropicalis MYA-3404	294747:000381	C5MHR2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	294748	Candida albicans WO-1	294748:00116d	C4YTP3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	294748	Candida albicans WO-1	294748:000077	C4YPA1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	306901	Chaetomium globosum CBS 148.51	306901:0017ae	Q2HCZ0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	306901	Chaetomium globosum CBS 148.51	306901:00058b	Q2GS25	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	306902	Clavispora lusitaniae ATCC 42720	306902:001421	C4Y2V9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	306902	Clavispora lusitaniae ATCC 42720	306902:000101	C4Y696	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	307796	Saccharomyces cerevisiae YJM789	307796:000c66	MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	307796	Saccharomyces cerevisiae YJM789	307796:000410	KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	321614	Parastagonospora nodorum SN15	321614:001271	Q0UA27	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	321614	Parastagonospora nodorum SN15	321614:000493	Q0UFC6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	322104	Scheffersomyces stipitis CBS 6054	322104:0015df	MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	322104	Scheffersomyces stipitis CBS 6054	322104:00043b	KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	330879	Aspergillus fumigatus Af293	330879:00218d	Q4WJX6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	330879	Aspergillus fumigatus Af293	330879:0009db	Q4WN47	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	331117	Neosartorya fischeri NRRL 181	331117:001dbd	A1D4H7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	331117	Neosartorya fischeri NRRL 181	331117:0006db	A1DMG4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	332952	Aspergillus flavus NRRL3357	332952:001b9a	B8N185	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	332952	Aspergillus flavus NRRL3357	332952:000917	B8N2E2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	336722	Zymoseptoria tritici IPO323	336722:001e7a	F9WZ13	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	336722	Zymoseptoria tritici IPO323	336722:000618	F9X9K6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	336963	Uncinocarpus reesii 1704	336963:000c31	C4JGY2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	339724	Histoplasma capsulatum NAm1	339724:00083e	A6R1T2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	339724	Histoplasma capsulatum NAm1	339724:0000c1	A6R9S5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	341663	Aspergillus terreus NIH2624	341663:0025f9	Q0CUL5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	341663	Aspergillus terreus NIH2624	341663:000554	Q0CK78	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	344612	Aspergillus clavatus NRRL 1	344612:000dbf	A1CRL6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	344612	Aspergillus clavatus NRRL 1	344612:0008d2	A1CT53	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:00263d	Q1K609	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:000aed	V5IQZ1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:000a36	V5IRA4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	367775	Cryptococcus gattii WM276	367775:000384	E6RBA6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000dee	A5E5W3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:000146	A5E000	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	380704	Aspergillus niger ATCC 1015	380704:000ebe	G3XRU0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	380704	Aspergillus niger ATCC 1015	380704:00022d	G3YCB9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:001a73	M3B0G8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:00032d	N1QCR3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	402676	Schizosaccharomyces japonicus yFS275	402676:0009b2	B6K6S1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	402676	Schizosaccharomyces japonicus yFS275	402676:000394	B6JVS2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	413071	Trichoderma virens Gv29-8	413071:00176b	G9MII2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	413071	Trichoderma virens Gv29-8	413071:000421	G9N5T3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	418459	Puccinia graminis f. sp. tritici CRL 75-36-700-3	418459:003cb5	E3JS50	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	425011	Aspergillus niger CBS 513.88	425011:002459	A2QVR8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	425011	Aspergillus niger CBS 513.88	425011:000a87	A2Q8A6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	425265	Malassezia globosa CBS 7966	425265:0000c6	A8PYG7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:001b26	B2W4U3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:0000fb	B2WN02	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:00112b	J9MD86	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:000533	J9MJF3	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	431241	Trichoderma reesei QM6a	431241:0008cb	G0RNQ3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	431241	Trichoderma reesei QM6a	431241:000402	G0RBX5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:000f40	A7TLV9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:00043c	A7TM32	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	441959	Talaromyces stipitatus ATCC 10500	441959:002dad	B8MGQ8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	441959	Talaromyces stipitatus ATCC 10500	441959:0009c4	B8LTJ8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	441960	Talaromyces marneffei ATCC 18224	441960:00283b	B6QKJ0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	441960	Talaromyces marneffei ATCC 18224	441960:0005e0	B6Q598	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	443226	Coccidioides posadasii str. Silveira	443226:0022ae	E9DFB4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	443226	Coccidioides posadasii str. Silveira	443226:00041e	E9CWP8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	447093	Histoplasma capsulatum G186AR	447093:001564	C0NCD9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	447093	Histoplasma capsulatum G186AR	447093:000410	C0NI62	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	451804	Aspergillus fumigatus A1163	451804:00217d	B0XNM5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	451804	Aspergillus fumigatus A1163	451804:000399	B0Y7F2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	452589	Trichoderma atroviride IMI 206040	452589:0016fa	G9P9V0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	452589	Trichoderma atroviride IMI 206040	452589:000288	G9NGP5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	481877	Enterocytozoon bieneusi H348	481877:000013	A9CS74	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	482561	Paracoccidioides brasiliensis Pb03	482561:001caf	C0S132	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	482561	Paracoccidioides brasiliensis Pb03	482561:0004a3	C0SII3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	483514	Schizosaccharomyces octosporus yFS286	483514:00051c	S9PX24	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	483514	Schizosaccharomyces octosporus yFS286	483514:00039b	S9RMG2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	486041	Laccaria bicolor S238N-H82	486041:00034c	B0D1I7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	498257	Verticillium dahliae VdLs.17	498257:0028a5	G2X9M2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	498257	Verticillium dahliae VdLs.17	498257:00246c	G2WSD6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:000f48	B6H8C9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:00072e	B6GZ85	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	502779	Paracoccidioides lutzii Pb01	502779:001df9	C1GR01	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	502779	Paracoccidioides lutzii Pb01	502779:00040f	C1HBN1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	502780	Paracoccidioides brasiliensis Pb18	502780:000786	C1G9E5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	502780	Paracoccidioides brasiliensis Pb18	502780:000410	C1GMI6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	510516	Aspergillus oryzae RIB40	510516:002e9e	Q2UKC4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	510516	Aspergillus oryzae RIB40	510516:000973	Q2UM12	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	510951	Neurospora tetrasperma FGSC 2508	510951:001520	F8N0M0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	510951	Neurospora tetrasperma FGSC 2508	510951:000425	F8MXK0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	510952	Neurospora tetrasperma FGSC 2509	510952:001c93	G4UAB4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	510952	Neurospora tetrasperma FGSC 2509	510952:0000c0	G4UYZ4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:001334	B2A9T4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:00018e	B2ARK0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	526221	Verticillium alfalfae VaMs.102	526221:000815	C9SQI1	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	526221	Verticillium alfalfae VaMs.102	526221:000565	C9ST18	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	535722	Microsporum gypseum CBS 118893	535722:001ddc	E4V350	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	535722	Microsporum gypseum CBS 118893	535722:0006a9	E5R0W8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	544711	Histoplasma capsulatum H88	544711:00085f	F0UI05	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	544711	Histoplasma capsulatum H88	544711:000393	F0UTS9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	544712	Histoplasma capsulatum H143	544712:0024e5	C6HD08	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	544712	Histoplasma capsulatum H143	544712:00113e	C6HAP1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:00153a	B5VQX2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:0001fa	B5VFU1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:000620	N1JDR4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:000488	N1J8E9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	554155	Arthroderma otae CBS 113480	554155:001103	C5FFS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	554155	Arthroderma otae CBS 113480	554155:000725	C5FCU9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	554373	Moniliophthora perniciosa FA553	554373:0033a6	E2LMM2	Aminoacyl-tRNA synthetase, class II (D/K/N)-like
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	554373	Moniliophthora perniciosa FA553	554373:0009dd	E2M538	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559292	Saccharomyces cerevisiae S288c	559292:001102	MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559292	Saccharomyces cerevisiae S288c	559292:001101	KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559295	Lachancea thermotolerans CBS 6340	559295:000daf	C5DMH3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559295	Lachancea thermotolerans CBS 6340	559295:00008d	C5DE02	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559297	Blastomyces dermatitidis ER-3	559297:0019c1	C5GCR1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559297	Blastomyces dermatitidis ER-3	559297:000309	C5GTM1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559298	Blastomyces gilchristii SLH14081	559298:000ad7	C5K2Q9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559298	Blastomyces gilchristii SLH14081	559298:00004b	C5JL70	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:002159	Piso0_000773	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:001220	Piso0_000773	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:000bb0	Piso0_002653	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:000a7e	Piso0_002653	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559305	Trichophyton rubrum CBS 118892	559305:001dcb	F2STI3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559305	Trichophyton rubrum CBS 118892	559305:000349	F2SDN0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:000da5	C5DP75	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:0003fc	C5E4K7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559882	Trichophyton equinum CBS 127.97	559882:0013e1	F2PY48	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	559882	Trichophyton equinum CBS 127.97	559882:00062c	F2Q135	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:000e84	R9XL33	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:0000b3	R9XJZ9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	573729	Myceliophthora thermophila ATCC 42464	573729:0022bb	G2PZQ1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	573729	Myceliophthora thermophila ATCC 42464	573729:001679	G2QHB6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	573826	Candida dubliniensis CD36	573826:000c91	B9WK70	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	573826	Candida dubliniensis CD36	573826:0000da	B9WEW5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	574961	Saccharomyces cerevisiae JAY291	574961:000caa	MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	574961	Saccharomyces cerevisiae JAY291	574961:000497	KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578454	Candida parapsilosis CDC317	578454:0008ac	G8BAB0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578454	Candida parapsilosis CDC317	578454:000089	G8BB06	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578455	Thielavia terrestris NRRL 8126	578455:000dc0	G2RDS4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578455	Thielavia terrestris NRRL 8126	578455:0005ae	G2QXI1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:00066e	F8NUS5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578458	Schizophyllum commune H4-8	578458:000528	D8QBE7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578460	Nosema ceranae BRL01	578460:00000e	C4V8R9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	578461	Nosema bombycis CQ1	578461:0001c6	SYK	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:001457	G3BAN9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:000aa1	G3BAN8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:00006b	G3BCP8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	597362	Agaricus bisporus var. burnettii JB137-S8	597362:0002cf	K5XM25	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:0007ce	G3AVL4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:000455	G3ARZ6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	630390	Puccinia triticina 1-1 BBBD Race 1	630390:000113	J3Q7H4	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	643680	Saccharomyces cerevisiae EC1118	643680:000e77	C8ZGF7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	643680	Saccharomyces cerevisiae EC1118	643680:0005d4	C8Z4V9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644223	Komagataella pastoris GS115	644223:000e57	C4QVY2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644223	Komagataella pastoris GS115	644223:0004fa	C4R624	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:000856	GGTG_03991	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:0001fe	GGTG_13735	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:00220a	M4FKE2	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:00166d	M4FKE1	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:00034d	M4FZF6	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	645133	Colletotrichum graminicola M1.001	645133:002a32	E3Q3I1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	645133	Colletotrichum graminicola M1.001	645133:000830	E3QHE1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	647933	Trichophyton tonsurans CBS 112818	647933:00088f	F2S4X0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	647933	Trichophyton tonsurans CBS 112818	647933:000338	F2S5V1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:0019cd	K5W6T9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:000cc8	K5W6S8	Aminoacyl-tRNA synthetase, class II (D/K/N)-like
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:00047a	K5WWL3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:00096f	F2TJ42	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:000329	F2THU2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	653667	Schizosaccharomyces cryophilus OY26	653667:0004f4	S9VZJ8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	653667	Schizosaccharomyces cryophilus OY26	653667:0001e0	S9X6Y3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655819	Beauveria bassiana ARSEF 2860	655819:000e99	J5K2T5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655819	Beauveria bassiana ARSEF 2860	655819:0007da	J5K1T7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655827	Metarhizium acridum CQMa 102	655827:001d23	E9E8L4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655827	Metarhizium acridum CQMa 102	655827:000155	E9EC84	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655844	Metarhizium robertsii ARSEF 23	655844:001177	E9EMJ8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655844	Metarhizium robertsii ARSEF 23	655844:000328	E9F5C0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655863	Grosmannia clavigera kw1407	655863:0010d5	F0XU68	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	655863	Grosmannia clavigera kw1407	655863:000025	F0X987	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:0006f5	D5G9V0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:00008d	D5G820	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000da2	L8G2P0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000256	L8FXN9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:002a2a	F9G060	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:00059b	F9FEG8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	660122	Nectria haematococca mpVI 77-13-4	660122:003a38	C7YIC2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	660122	Nectria haematococca mpVI 77-13-4	660122:000bef	C7YM15	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	663202	Trichophyton verrucosum HKI 0517	663202:00129e	D4D9K2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	663202	Trichophyton verrucosum HKI 0517	663202:0000f4	D4DCA4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	663331	Arthroderma benhamiae CBS 112371	663331:001b3f	D4API8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	663331	Arthroderma benhamiae CBS 112371	663331:0000b1	D4B0G1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	665024	Bipolaris maydis ATCC 48331	665024:0022fc	N4XG92	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	665024	Bipolaris maydis ATCC 48331	665024:0003b6	N4WZM5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:001109	A7ELW4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:0006b0	A7EA22	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	665912	Bipolaris sorokiniana ND90Pr	665912:001911	M2SAS0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	665912	Bipolaris sorokiniana ND90Pr	665912:0005bf	M2S836	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	671144	Wallemia mellicola CBS 633.66	671144:000339	I4YCY1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	671987	Setosphaeria turcica Et28A	671987:001d6e	R0KQI0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	671987	Setosphaeria turcica Et28A	671987:000064	R0K1P7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	675120	Dothistroma septosporum NZE10	675120:00123e	N1PRS2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	675120	Dothistroma septosporum NZE10	675120:00007a	N1Q5C2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	683840	Microbotryum violaceum p1A1 Lamole	683840:000abc	MVLG_05101	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:0001d1	F4P7H1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	684364	Batrachochytrium dendrobatidis JAM81	684364:0000d1	F4P357	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	692275	Sphaerulina musiva SO2202	692275:002645	M3C1W4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	692275	Sphaerulina musiva SO2202	692275:00026a	N1QHB0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	701091	Bipolaris maydis C5	701091:00287b	M2TYG5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	701091	Bipolaris maydis C5	701091:000483	M2UCQ2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	717646	Baudoinia panamericana UAMH 10762	717646:00227e	M2LVC2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	717646	Baudoinia panamericana UAMH 10762	717646:00059c	M2NJW0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:0011c8	K7_MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:0001ac	K7_KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:002cd1	S8DX32	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:003200	U9T4W6	Aminoacyl-tRNA synthetase, class II (D/K/N)-like
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:002d21	U9SY06	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:0022ef	U9U0F5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	747676	Melampsora larici-populina 98AG31	747676:00031c	F4REX0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:001e20	G1XRE9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:000516	G1XSH3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:0008f4	G0SHW1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:000062	G0S934	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:0038cd	H1V0I6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:000234	H1V8F6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764097	Saccharomyces cerevisiae AWRI796	764097:000a67	E7KH70	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:000c26	E7KL75	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:000b9b	E7KW74	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764098	Saccharomyces cerevisiae Lalvin QA23	764098:000577	E7KTK7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764099	Saccharomyces cerevisiae Vin13	764099:0007d2	E7LZI6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764100	Saccharomyces cerevisiae VL3	764100:000b92	E7QCQ2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764100	Saccharomyces cerevisiae VL3	764100:000699	E7QK00	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764101	Saccharomyces cerevisiae FostersO	764101:000c10	E7NMB6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764101	Saccharomyces cerevisiae FostersO	764101:00006b	E7NGP6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764102	Saccharomyces cerevisiae FostersB	764102:000d20	E7Q8L8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764102	Saccharomyces cerevisiae FostersB	764102:000695	E7Q228	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	764103	Mixia osmundae IAM 14324	764103:000036	Mo04320	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	771870	Sordaria macrospora k-hell	771870:0007fd	F7VKG6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	771870	Sordaria macrospora k-hell	771870:00057d	F7VNY0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:00132b	H6C247	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:00062a	H6C3I2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	861557	Pyrenophora teres f. teres 0-1	861557:001760	E3S5S5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	861557	Pyrenophora teres f. teres 0-1	861557:000096	E3S7H0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	871575	Ogataea parapolymorpha DL-1	871575:000d8f	E7R7K5	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	871575	Ogataea parapolymorpha DL-1	871575:000b59	E7R5L9	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	876142	Encephalitozoon intestinalis ATCC 50506	876142:00010a	E0S6K8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	881290	Nematocida parisii ERTm1	881290:000130	I3ELR5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:0003b9	N1PAC0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:0001db	N1NWM2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	907965	Encephalitozoon hellem ATCC 50504	907965:00016b	I6UKZ8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	914234	Gelatoporia subvermispora B	914234:00027a	M2R4F5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:000f38	I6NDK2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	935791	Nematocida parisii ERTm3	935791:000003	I3EEE8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	936046	Agaricus bisporus var. bisporus H97	936046:000114	K9HSW9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:000477	F8PWP8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	944018	Nematocida sp. 1 ERTm2	944018:0000e3	H8ZFB4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	948595	Vavraia culicis subsp. floridensis	948595:00009f	L2GXY5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	981350	Komagataella pastoris CBS 7435	981350:000eca	MSK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	981350	Komagataella pastoris CBS 7435	981350:0004b2	kars	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	983506	Rhizoctonia solani AG-1 IA	983506:000142	L8WWY9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	983644	Cordyceps militaris CM01	983644:0024b1	G3JJN6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	983644	Cordyceps militaris CM01	983644:000051	G3J6C9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	985895	Leptosphaeria maculans JN3	985895:002d87	E4ZWA8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	985895	Leptosphaeria maculans JN3	985895:002475	E5A1Q6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	993615	Vittaforma corneae ATCC 50505	993615:000155	L2GNI5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	999809	Sporisorium reilianum SRZ2	999809:00005a	E6ZYL0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	999810	Botrytis cinerea T4	999810:001b74	G2Y8K1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	999810	Botrytis cinerea T4	999810:000620	G2YA13	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1003232	Edhazardia aedis USNM 41457	1003232:00002a	J9D9S2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1028729	Fusarium pseudograminearum CS3096	1028729:0012b1	K3V5H3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1028729	Fusarium pseudograminearum CS3096	1028729:000408	K3VZB7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1033177	Aspergillus kawachii IFO 4308	1033177:001c2e	G7XPE4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1033177	Aspergillus kawachii IFO 4308	1033177:00019a	G7XAR1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1064592	Naumovozyma castellii CBS 4309	1064592:001126	NCAS0I02090	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1064592	Naumovozyma castellii CBS 4309	1064592:0002b3	NCAS0A10600	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1069680	Pneumocystis murina B123	1069680:0006a2	M7NTX4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1069680	Pneumocystis murina B123	1069680:0002ed	M7NSD9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:00144c	NDAI0A06670	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:00023e	NDAI0A05690	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000843	TBLA0E03680	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:000223	TBLA0E02610	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:00136b	TPHA0C03010	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:0002ae	TPHA0A04020	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071382	Kazachstania africana CBS 2517	1071382:000a5c	KAFR0J00840	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071382	Kazachstania africana CBS 2517	1071382:000316	KAFR0A01050	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071383	Kazachstania naganishii CBS 8797	1071383:00103d	KNAG0M01970	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1071383	Kazachstania naganishii CBS 8797	1071383:000409	KNAG0H01210	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:001559	K1WK87	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:000516	K1WUJ8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:000518	TDEL0C04400	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:000300	TDEL0D03500	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1076935	Pyronema omphalodes CBS 100304	1076935:000d37	U4LXR3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1076935	Pyronema omphalodes CBS 100304	1076935:00040b	U4L8L8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:00056c	J7RV41	
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1097556	Taphrina deformans PYCC 5710	1097556:000db2	R4XF40	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1097556	Taphrina deformans PYCC 5710	1097556:0001ce	R4XJT2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1104152	Glarea lozoyensis 74030	1104152:001a7f	H0EZ01	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1104152	Glarea lozoyensis 74030	1104152:000232	H0EWD3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:0026a8	AGR037Cp	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:00108d	GCD5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1109443	Piriformospora indica DSM 11827	1109443:000324	G4T516	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1111077	Claviceps purpurea 20.1	1111077:0004af	M1W4L7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:001d90	S3D3Q3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:00035d	S3CFK6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1126212	Macrophomina phaseolina MS6	1126212:002f9e	K2RDX8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1126212	Macrophomina phaseolina MS6	1126212:0026c6	K2SMZ9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1128400	Ustilago hordei Uh4857-4	1128400:000401	I2FRN0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1130832	Rhodosporidium toruloides NP11	1130832:00026b	M7X137	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1136231	Candida orthopsilosis Co 90-125	1136231:000817	H8XB32	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1136231	Candida orthopsilosis Co 90-125	1136231:00035c	H8X2G4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1143189	Magnaporthe oryzae Y34	1143189:000845	L7IE71	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1143189	Magnaporthe oryzae Y34	1143189:00079f	L7IN21	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1143193	Magnaporthe oryzae P131	1143193:002259	L7JC42	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1143193	Magnaporthe oryzae P131	1143193:000226	L7JJ21	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1160506	Aspergillus oryzae 3.042	1160506:0011c4	I8TS07	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1160506	Aspergillus oryzae 3.042	1160506:0006f6	I7ZN38	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1160507	Saccharomyces arboricola H-6	1160507:000a74	J8PZV2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1168221	Coniosporium apollinis CBS 100218	1168221:00231f	R7Z6U8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1168221	Coniosporium apollinis CBS 100218	1168221:0005e2	R7Z2I0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1170229	Penicillium digitatum PHI26	1170229:001cbd	K9FQ35	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1170229	Penicillium digitatum PHI26	1170229:00078b	K9GBQ7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1170230	Penicillium digitatum Pd1	1170230:001fec	K9GDF8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1170230	Penicillium digitatum Pd1	1170230:0003d9	K9G5W6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1178016	Encephalitozoon romaleae SJ-2008	1178016:000080	I7ADY8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:00035c	J5R5B0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:001118	K0KBR2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:000631	KRS1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1209962	Pneumocystis jirovecii SE8	1209962:000ab0	L0PC46	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1209962	Pneumocystis jirovecii SE8	1209962:0002f2	L0PFG7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:002bcc	N4V1C4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:00053b	N4VCJ4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:00225f	L2G0B8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:0007b7	L2GFI9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:000193	K1VMK1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00052b	S2J6S9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:00037b	S2JFJ5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:001a7c	N4TXK3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:00055d	N4TWK8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:001929	N1R6Y4	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:0002b8	M5EB03	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:000a42	T0LYK5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:000749	T0L2G8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1245528	Candida maltosa Xu316	1245528:0008a6	M3IMN5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1245528	Candida maltosa Xu316	1245528:00012f	M3IRH8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:0014d9	S3C7V0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:00023c	S3C9T9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:001bff	S0DJK3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:000760	S0EED0	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:00010b	S8A9Y7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:000090	S8AFZ4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1286976	Togninia minima UCRPA7	1286976:001ecd	R8BGW9	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1286976	Togninia minima UCRPA7	1286976:0004de	R8BK84	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:001fc6	R1G8S1	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:00003c	R1G8P8	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1287681	Eutypa lata UCREL1	1287681:002336	M7TMB2	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1287681	Eutypa lata UCREL1	1287681:000623	M7SYC6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1290391	Botrytis cinerea BcDW1	1290391:0014f2	M7UKJ8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1290391	Botrytis cinerea BcDW1	1290391:0007d8	M7TWK6	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:0000df	R9AEY3	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1305764	Pseudozyma hubeiensis SY62	1305764:00007a	R9PCE5	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1356009	Byssochlamys spectabilis No. 5	1356009:00220e	V5FW23	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1356009	Byssochlamys spectabilis No. 5	1356009:002053	V5I3A7	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1358809	Spraguea lophii 42_110	1358809:0000aa	S7W581	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1381753	Moniliophthora roreri MCA 2997	1381753:0006b4	V2X850	Lysyl-tRNA synthetase
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:0017ff	U7PQ71	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C0ZU5	Aminoacyl-tRNA synthetase, class II	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:000766	U7PNM9	Lysyl-tRNA synthetase

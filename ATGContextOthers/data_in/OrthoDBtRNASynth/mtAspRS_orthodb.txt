@@ -1,0 +1,207 @@
+pub_og_id	og_name	level_taxid	organism_taxid	organism_name	int_prot_id	pub_gene_id	description
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	214684	Cryptococcus neoformans var. neoformans JEC21	214684:000b6d	Q5K9D3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	222929	Coccidioides posadasii C735 delta SOWgp	222929:001af7	C5P465	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	226230	Saccharomyces kudriavzevii IFO 1802	226230:000959	YPL104W	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	227321	Aspergillus nidulans FGSC A4	227321:00247d	C8VNW0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	229533	Fusarium graminearum PH-1	229533:001a81	I1RLW4	Aminoacyl-tRNA synthetase, class II
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	235443	Cryptococcus neoformans var. grubii H99	235443:000fd0	J9W1W1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	237561	Candida albicans SC5314	237561:0009ad	MSD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	237631	Ustilago maydis 521	237631:000ecb	Q4P0F2	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	240176	Coprinopsis cinerea okayama7#130	240176:002f09	A8NWQ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	242507	Magnaporthe oryzae 70-15	242507:0017e4	G4N7B7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	246409	Rhizopus delemar RA 99-880	246409:0012b1	I1BM44	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	246410	Coccidioides immitis RS	246410:0013c2	J3K1N8	Glutamine synthetase
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	283643	Cryptococcus neoformans var. neoformans B-3501A	283643:0018b5	Q55K66	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	284590	Kluyveromyces lactis NRRL Y-1140	284590:0008e1	Q6CLY6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	284591	Yarrowia lipolytica CLIB122	284591:000e3b	Q6C0A5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	284592	Debaryomyces hansenii CBS767	284592:0012fb	Q6BRH4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	284593	Candida glabrata CBS 138	284593:0013f7	Q6FRU1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	284811	Eremothecium gossypii ATCC 10895	284811:0005b9	Q74ZW3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	284812	Schizosaccharomyces pombe 972h-	284812:000c75	msd1	Aspartyl-tRNA synthetase
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	285006	Saccharomyces cerevisiae RM11-1a	285006:001218	B3LKW9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	294746	Meyerozyma guilliermondii ATCC 6260	294746:000645	A5DBF3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	294747	Candida tropicalis MYA-3404	294747:000bf7	C5MFB5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	294748	Candida albicans WO-1	294748:000f9f	C4YEN3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	306901	Chaetomium globosum CBS 148.51	306901:001d17	Q2HFV8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	306902	Clavispora lusitaniae ATCC 42720	306902:00113b	C4Y3N9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	307796	Saccharomyces cerevisiae YJM789	307796:000cc7	MSD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	321614	Parastagonospora nodorum SN15	321614:001bf2	Q0V5M0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	322104	Scheffersomyces stipitis CBS 6054	322104:0015bd	MSD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	330879	Aspergillus fumigatus Af293	330879:001fb1	Q4WP80	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	331117	Neosartorya fischeri NRRL 181	331117:000baa	A1CXD9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	332952	Aspergillus flavus NRRL3357	332952:001ec3	B8N9I7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	336722	Zymoseptoria tritici IPO323	336722:0014a3	F9X8V8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	336963	Uncinocarpus reesii 1704	336963:001540	C4JHP4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	339724	Histoplasma capsulatum NAm1	339724:001a30	A6RB94	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	341663	Aspergillus terreus NIH2624	341663:0019ef	Q0CLS1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	344612	Aspergillus clavatus NRRL 1	344612:0010aa	A1CHE6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	367110	Neurospora crassa OR74A	367110:001b83	Q7SHN3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	367775	Cryptococcus gattii WM276	367775:000fc4	E6RDE2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	379508	Lodderomyces elongisporus NRRL YB-4239	379508:001413	A5DWG2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	380704	Aspergillus niger ATCC 1015	380704:00234e	G3Y8W6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	383855	Pseudocercospora fijiensis CIRAD86	383855:0028a7	N1Q8Z5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	402676	Schizosaccharomyces japonicus yFS275	402676:000fc2	B6K5W9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	413071	Trichoderma virens Gv29-8	413071:0020b1	G9MIZ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	425011	Aspergillus niger CBS 513.88	425011:000d3c	A2QID2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	425265	Malassezia globosa CBS 7966	425265:000e1e	A8QD39	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	426418	Pyrenophora tritici-repentis Pt-1C-BFP	426418:000eb6	B2WAC5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	426428	Fusarium oxysporum f. sp. lycopersici 4287	426428:0022cf	J9MS04	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	431241	Trichoderma reesei QM6a	431241:000da9	G0RTF8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	436907	Vanderwaltozyma polyspora DSM 70294	436907:0012a0	A7TGK1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	441959	Talaromyces stipitatus ATCC 10500	441959:001690	B8M8A1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	441960	Talaromyces marneffei ATCC 18224	441960:0026c0	B6QS83	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	443226	Coccidioides posadasii str. Silveira	443226:00129b	E9D6F8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	447093	Histoplasma capsulatum G186AR	447093:001ae4	C0NMK9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	451804	Aspergillus fumigatus A1163	451804:002011	B0Y627	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	452589	Trichoderma atroviride IMI 206040	452589:002b3d	G9PBJ0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	482561	Paracoccidioides brasiliensis Pb03	482561:0007e5	C0RYY2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	483514	Schizosaccharomyces octosporus yFS286	483514:0005ab	S9QZZ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	486041	Laccaria bicolor S238N-H82	486041:003d4c	B0CUT9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	498257	Verticillium dahliae VdLs.17	498257:001c0e	G2X9J7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	500485	Penicillium rubens Wisconsin 54-1255	500485:001d64	B6H496	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	502779	Paracoccidioides lutzii Pb01	502779:001729	C1GYN3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	502780	Paracoccidioides brasiliensis Pb18	502780:0012a9	C1G7B7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	510516	Aspergillus oryzae RIB40	510516:002625	Q2UGS8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	510951	Neurospora tetrasperma FGSC 2508	510951:0016ad	F8N144	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	510952	Neurospora tetrasperma FGSC 2509	510952:00191b	G4UBK7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:001da1	B2AYI2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	515849	Podospora anserina S mat+	515849:000ef7	B2AYI3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	526221	Verticillium alfalfae VaMs.102	526221:001764	C9SQF7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	535722	Microsporum gypseum CBS 118893	535722:00087a	E4UP74	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	544711	Histoplasma capsulatum H88	544711:001ab0	F0U4J8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	544712	Histoplasma capsulatum H143	544712:001f8b	C6H250	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	545124	Saccharomyces cerevisiae AWRI1631	545124:00145a	B5VT59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:00167f	N1J561	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	546991	Blumeria graminis f. sp. hordei DH14	546991:0010b3	N1J6M3	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	554155	Arthroderma otae CBS 113480	554155:0017b9	C5FSN6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	554373	Moniliophthora perniciosa FA553	554373:002403	E2L8Y0	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559292	Saccharomyces cerevisiae S288c	559292:0010f0	MSD1	Aspartyl-tRNA synthetase
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559295	Lachancea thermotolerans CBS 6340	559295:001065	C5DIL8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559297	Blastomyces dermatitidis ER-3	559297:001672	C5GDG3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559298	Blastomyces gilchristii SLH14081	559298:000ee9	C5JIW2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:001a24	Piso0_001238	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559304	Millerozyma farinosa CBS 7064	559304:0019fc	Piso0_001238	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559305	Trichophyton rubrum CBS 118892	559305:0014ee	F2SWH3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559307	Zygosaccharomyces rouxii CBS 732	559307:00095c	C5DYQ6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	559882	Trichophyton equinum CBS 127.97	559882:001b77	F2PIC6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	566037	Saccharomycetaceae sp. Ashbya aceri	566037:001032	R9XJX2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	573729	Myceliophthora thermophila ATCC 42464	573729:000ebd	G2Q0I6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	573826	Candida dubliniensis CD36	573826:001444	B9W7H8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	574961	Saccharomyces cerevisiae JAY291	574961:001330	MSD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	578454	Candida parapsilosis CDC317	578454:0005a5	G8B8A2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	578455	Thielavia terrestris NRRL 8126	578455:0024f1	G2R3F1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	578457	Serpula lacrymans var. lacrymans S7.9	578457:00284e	F8NMH4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	578458	Schizophyllum commune H4-8	578458:000a30	D8PKF4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	590646	Candida tenuis ATCC 10573	590646:0009df	G3BFA3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	619300	Spathaspora passalidarum NRRL Y-27907	619300:001499	G3AFK1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	643680	Saccharomyces cerevisiae EC1118	643680:000a8a	C8ZIS6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	644223	Komagataella pastoris GS115	644223:001038	C4R6V2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	644352	Gaeumannomyces graminis var. tritici R3-111a-1	644352:0003fa	GGTG_00957	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	644358	Magnaporthiopsis poae ATCC 64411	644358:001d8b	M4G530	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	645133	Colletotrichum graminicola M1.001	645133:0027d9	E3QIX1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	647933	Trichophyton tonsurans CBS 112818	647933:0014ee	F2S0X6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	650164	Phanerochaete carnosa HHB-10118-sp	650164:001108	K5WJX2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	653446	Blastomyces dermatitidis ATCC 18188	653446:00114b	F2T8P2	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	653667	Schizosaccharomyces cryophilus OY26	653667:000082	S9VPY2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	655819	Beauveria bassiana ARSEF 2860	655819:000dee	J4KNW8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	655827	Metarhizium acridum CQMa 102	655827:001085	E9E2B2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	655844	Metarhizium robertsii ARSEF 23	655844:0017b6	E9F748	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	655863	Grosmannia clavigera kw1407	655863:001cb2	F0XN25	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	656061	Tuber melanosporum Mel28	656061:0012e6	D5GIM2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	658429	Pseudogymnoascus destructans 20631-21	658429:000d48	L8FVD8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	660025	Fusarium oxysporum Fo5176	660025:00413a	F9FVN0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	660122	Nectria haematococca mpVI 77-13-4	660122:001657	C7YJE7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	663202	Trichophyton verrucosum HKI 0517	663202:000fb3	D4DDL9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	663331	Arthroderma benhamiae CBS 112371	663331:0012b1	D4AVM4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	665024	Bipolaris maydis ATCC 48331	665024:002588	N4XEE3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	665079	Sclerotinia sclerotiorum 1980 UF-70	665079:0029fb	A7EHC3	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	665912	Bipolaris sorokiniana ND90Pr	665912:001c9d	M2T9X7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	671144	Wallemia mellicola CBS 633.66	671144:000c7e	I4YAX3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	671987	Setosphaeria turcica Et28A	671987:00258f	R0JZA7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	675120	Dothistroma septosporum NZE10	675120:0013b3	N1Q4C0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	692275	Sphaerulina musiva SO2202	692275:0020b2	N1QNH6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	701091	Bipolaris maydis C5	701091:001cc1	M2UP45	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	717646	Baudoinia panamericana UAMH 10762	717646:00217d	M2ME66	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	717982	Auricularia delicata TFB-10046 SS5	717982:001408	J0D2T9	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	721032	Saccharomyces cerevisiae Kyokai no. 7	721032:00070c	K7_MSD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	743788	Fomitopsis pinicola FP-58527 SS1	743788:0028a6	S8EHW0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	747089	Rhizophagus irregularis DAOM 181602	747089:000a44	U9U5P8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	756982	Arthrobotrys oligospora ATCC 24927	756982:001831	G1WY10	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	759272	Chaetomium thermophilum var. thermophilum DSM 1495	759272:00163f	G0SF50	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:003cf9	H1V2P6	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	759273	Colletotrichum higginsianum IMI 349063	759273:00152e	H1UYV2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	764097	Saccharomyces cerevisiae AWRI796	764097:000c93	E7KJ23	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	764099	Saccharomyces cerevisiae Vin13	764099:000844	E7M1E1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	764101	Saccharomyces cerevisiae FostersO	764101:0006c7	E7NNU4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	764102	Saccharomyces cerevisiae FostersB	764102:0005a8	E7QAC2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	771870	Sordaria macrospora k-hell	771870:001040	F7VT78	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	858893	Exophiala dermatitidis NIH/UT8656	858893:001838	H6BKD8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	861557	Pyrenophora teres f. teres 0-1	861557:001546	E3RWQ1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	871575	Ogataea parapolymorpha DL-1	871575:000b72	E7R134	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	889517	Saccharomyces cerevisiae CEN.PK113-7D	889517:000b44	N1NVG9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	914234	Gelatoporia subvermispora B	914234:002188	M2R9E6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	931890	Eremothecium cymbalariae DBVPG#7215	931890:00049e	G8JVR5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	936046	Agaricus bisporus var. bisporus H97	936046:000d7e	K9HPX1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	936435	Serpula lacrymans var. lacrymans S7.3	936435:002699	F8PNK5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	981350	Komagataella pastoris CBS 7435	981350:000e6c	MSD1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	983506	Rhizoctonia solani AG-1 IA	983506:00198e	L8X2B0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	983644	Cordyceps militaris CM01	983644:001514	G3J357	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	985895	Leptosphaeria maculans JN3	985895:00089f	E4ZST8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	999809	Sporisorium reilianum SRZ2	999809:00190e	E6ZWJ0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	999810	Botrytis cinerea T4	999810:00370b	G2XZP7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1028729	Fusarium pseudograminearum CS3096	1028729:00142c	K3VM95	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1033177	Aspergillus kawachii IFO 4308	1033177:000d6f	G7X7K0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1064592	Naumovozyma castellii CBS 4309	1064592:00117a	NCAS0C01890	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1069680	Pneumocystis murina B123	1069680:00045d	M7NLX9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1071378	Naumovozyma dairenensis CBS 421	1071378:001314	NDAI0E02610	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1071380	Tetrapisispora blattae CBS 6284	1071380:0006e6	TBLA0B04400	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1071381	Tetrapisispora phaffii CBS 4417	1071381:000d07	TPHA0I01700	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1071382	Kazachstania africana CBS 2517	1071382:000914	KAFR0E00690	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1071383	Kazachstania naganishii CBS 8797	1071383:00078e	KNAG0A01720	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1072389	Marssonina brunnea f. sp. multigermtubi MB_m1	1072389:001f06	K1X9U5	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1076872	Torulaspora delbrueckii CBS 1146	1076872:000f79	TDEL0A05280	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1076935	Pyronema omphalodes CBS 100304	1076935:000809	U4LJC3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1078123	Fibroporia radiculosa TFFH 294	1078123:00218f	J4H3K4	
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1097556	Taphrina deformans PYCC 5710	1097556:000a92	R4ZY50	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1097556	Taphrina deformans PYCC 5710	1097556:000880	R4XAD6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1104152	Glarea lozoyensis 74030	1104152:0006dc	H0EK47	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1108050	Rhizoctonia solani AG-1 IB	1108050:002200	maspS	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1109443	Piriformospora indica DSM 11827	1109443:00208d	G4TC65	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1111077	Claviceps purpurea 20.1	1111077:000da5	M1W2S8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1116229	Glarea lozoyensis ATCC 20868	1116229:002ef7	S3DA42	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1126212	Macrophomina phaseolina MS6	1126212:0030c0	K2RRP6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1128400	Ustilago hordei Uh4857-4	1128400:00138d	I2FND2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1136231	Candida orthopsilosis Co 90-125	1136231:0009f1	H8X036	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1143189	Magnaporthe oryzae Y34	1143189:001b6c	L7I065	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1143193	Magnaporthe oryzae P131	1143193:0021c9	L7IXM7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1151754	Pseudozyma antarctica T-34	1151754:000cfa	M9MBV2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1160506	Aspergillus oryzae 3.042	1160506:000c02	I8A0W1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1160507	Saccharomyces arboricola H-6	1160507:000e0b	J8PH35	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1168221	Coniosporium apollinis CBS 100218	1168221:000fc5	R7YL51	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1170229	Penicillium digitatum PHI26	1170229:00197c	K9GVR8	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1170230	Penicillium digitatum Pd1	1170230:001ea6	K9FTA9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1186058	Trichosporon asahii var. asahii CBS 2479	1186058:00130b	J6EVB6	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1206466	Wickerhamomyces ciferrii NRRL Y-1031	1206466:0007f1	K0KV60	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1209962	Pneumocystis jirovecii SE8	1209962:000ba6	L0P8W4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:0032c6	N4VK57	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1213857	Colletotrichum orbiculare MAFF 240422	1213857:002810	N4VP88	Aminoacyl-tRNA synthetase, class II (D/K/N)
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1213859	Colletotrichum gloeosporioides Nara gc5	1213859:001384	L2G497	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1220162	Trichosporon asahii var. asahii CBS 8904	1220162:001478	K1W652	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1220926	Mucor circinelloides f. circinelloides 1006PhL	1220926:001d1e	S2K4D0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1229664	Fusarium oxysporum f. sp. cubense race 1	1229664:002e8c	N4TJ27	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1229665	Fusarium oxysporum f. sp. cubense race 4	1229665:002469	N1S0U7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1230383	Malassezia sympodialis ATCC 42132	1230383:0004e5	M5E7N3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1237896	Colletotrichum gloeosporioides Cg-14	1237896:0002e7	T0JYX0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1245528	Candida maltosa Xu316	1245528:000f57	M3JWW1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1262450	Ophiostoma piceae UAMH 11346	1262450:000d33	S3CBG7	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1279085	Fusarium fujikuroi IMI 58289	1279085:00269b	S0DX60	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1284197	Dactylellina haptotyla CBS 200.50	1284197:00098f	S8AGW1	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1286976	Togninia minima UCRPA7	1286976:0009dd	R8BN59	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1287680	Neofusicoccum parvum UCRNP2	1287680:00259a	R1GME4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1287681	Eutypa lata UCREL1	1287681:000d6a	M7T377	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1290391	Botrytis cinerea BcDW1	1290391:002a17	M7U1S0	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1299270	Wallemia ichthyophaga EXF-994	1299270:0012ab	R9ARI9	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1305764	Pseudozyma hubeiensis SY62	1305764:000f39	R9P1J2	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1356009	Byssochlamys spectabilis No. 5	1356009:001b7f	V5FBH4	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1381753	Moniliophthora roreri MCA 2997	1381753:000dc6	V2XX95	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
+EOG092C13C7	Aminoacyl-tRNA synthetase, class II	4751	1391915	Sporothrix schenckii ATCC 58251	1391915:000351	U7Q4U3	Similarity:Belongs to the class-II aminoacyl-tRNA synthetase family.
