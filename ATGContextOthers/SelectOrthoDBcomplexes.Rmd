@@ -1,0 +1,373 @@
+---
+title: "Select Orthodb complexes"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 16 July 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+
+We want to get a list of fungal orthologs for proteins in some complexes:
+    * cytoplasmic ribosome
+    * mitochondrial ribosome
+    * mitochondrial ATP synthase
+
+working from manually curated lists of the S. cerevisiae complex members. 
+
+This will then be used to estimate the translation output of these genes in selected favourite fungi. 
+
+OrthoDB ran into several problems:
+    * orthodb generated a few non-least-dependent-orthologs rather than the conservative list I aimed for
+    * orthodb doesn't report consistent gene name sources. some are uniprot, some are not
+    * biomaRt/ensemblfungi doesn't have uniprot annotations for N. crassa and C. neoformans
+    * biomaRt/ensemblfungi doesn't have C. albicans at all
+
+PANTHER.db, however, worked to find least diverged orthologs. An earlier attempt with PANTHER from GO annotations hadn't worked as those are patchy in other fungi.
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="show",
+                      fig.path="figure/SelectOrthoDBcx-",
+                      cache.path="cache/SelectOrthoDBcx-")
+library(tidyverse)
+library(Biostrings)
+library(biomaRt)
+library(PANTHER.db)
+
+ensemblscer <- 
+    useMart(biomart = "fungi_mart",
+            dataset = "scerevisiae_eg_gene",
+            host = "fungi.ensembl.org" )
+
+
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+# OrthoDB
+
+```{r orthodb_species}
+fungi_keep <- c(Scer="Saccharomyces cerevisiae S288c",
+             Cneo="Cryptococcus neoformans var. neoformans JEC21",
+             Cgru="Cryptococcus neoformans var. grubii H99",
+             Cgat="Cryptococcus gattii WM276",
+             Calb="Candida albicans SC5314",
+             Umay="Ustilago maydis 521",
+             Rdel="Rhizopus delemar RA 99-880",
+             Klac="Kluyveromyces lactis NRRL Y-1140",
+             Ylip="Yarrowia lipolytica CLIB122",
+             Spom="Schizosaccharomyces pombe 972h-",
+             Anid="Aspergillus nidulans FGSC A4",
+             Cgla="Candida glabrata CBS 138",
+             Afum="Aspergillus fumigatus Af293",
+             Hcap="Histoplasma capsulatum H88",
+             Ncra="Neurospora crassa OR74A",
+             Pgra="Puccinia graminis f. sp. tritici CRL 75-36-700-3",
+             Zrou="Zygosaccharomyces rouxii CBS 732",
+             Sscl="Sclerotinia sclerotiorum 1980 UF-70",
+             Opar="Ogataea parapolymorpha DL-1",
+             Tbla="Tetrapisispora blattae CBS 6284")
+
+fungi_shorten <- names(fungi_keep) %>% set_names(fungi_keep)
+
+fungi_keep3 <- fungi_keep[c("Cneo","Scer","Spom")]
+fungi_keep5 <- fungi_keep[c("Cneo","Scer","Spom","Ncra","Calb")]
+
+# NCBI taxonomy ids
+level_fungi <- 4751
+level_dikarya <- 451864
+level_Scer  <- 4932
+# level_S288C  <- 559292
+level_CneoH99  <- 1298968
+level_CneoJEC21  <- 214684
+```
+
+```{r orthoDB_functions,eval=FALSE}
+orthodb_q <- function(query,level=level_dikarya,CMD='tab') {
+    paste0('http://www.orthodb.org/',CMD,
+           '?query="',query,
+           '"&level=',level) %>%
+    read_tsv()
+}
+# orthodb_q("YDR064W")
+orthodb_q("YDR064W",level=level_Scer)
+# http://www.orthodb.org/tab?query="YPL078C"&level=4751
+orthodb_qlist <- function(qlist,level=level_dikarya,CMD='tab') {
+    map_dfr(qlist,orthodb_q,level,CMD) %>%
+        distinct()
+}
+# orthodb_qlist(c("YDR064W","YGL103W"),level=level_Scer)
+# orthodb_qlist(c("YHR021C"),level=level_fungi)
+
+make_select_smlist <- function(orth_list,og_keep=fungi_keep3) {
+    og_shorten <- names(og_keep) %>% set_names(og_keep)
+    orth_list %>%
+        filter(organism_name %in% og_keep) %>%
+        transmute(pub_og_id,organism_taxid,
+                  org=og_shorten[organism_name],
+                  int_prot_id,pub_gene_id)
+}
+
+
+listMarts(host="fungi.ensembl.org")
+# listDatasets(ensemblf)
+
+ensemblspom=useMart(biomart = "fungi_mart",
+                 dataset = "spombe_eg_gene",
+                 host = "fungi.ensembl.org" )
+
+ensemblcneo=useMart(biomart = "fungi_mart",
+                 dataset = "cneoformans_eg_gene",
+                 host = "fungi.ensembl.org" )
+
+ensemblncra=useMart(biomart = "fungi_mart",
+                 dataset = "ncrassa_eg_gene",
+                 host = "fungi.ensembl.org" )
+
+make_select_scer <- function(orth_list,og="Saccharomyces cerevisiae S288c" ) {
+    select_bit <- 
+        orth_list %>%
+        filter(organism_name == og) %>%
+        transmute(orthodb_id=int_prot_id,external_gene_name=pub_gene_id)
+
+    goodnames <- getBM(attributes = c("ensembl_gene_id",
+                                      "external_gene_name",
+                                      "uniprotswissprot"),
+                       filters = 'external_gene_name',
+                       values = select_bit$external_gene_name,
+                       mart = ensemblscer)
+    left_join(select_bit,goodnames)
+}
+
+make_select_spom <- function(orth_list,og="Schizosaccharomyces pombe 972h-") {
+    select_bit <- 
+        orth_list %>%
+        filter(organism_name == og) %>%
+        transmute(orthodb_id=int_prot_id,external_gene_name=pub_gene_id)
+
+    goodnames <- getBM(attributes = c("ensembl_gene_id",
+                                      "external_gene_name",
+                                      "uniprotswissprot"),
+                       filters = 'external_gene_name',
+                       values = select_bit$external_gene_name,
+                       mart = ensemblspom)
+    left_join(select_bit,goodnames)
+}
+
+make_select_cneo <- function(orth_list,
+                             og="Cryptococcus neoformans var. neoformans JEC21") {
+    print("UNIPROT ANNOTATIONS NOT HERE")
+    return(NULL)
+    select_bit <- 
+        orth_list %>%
+        filter(organism_name == og) %>%
+        transmute(orthodb_id=int_prot_id,uniprotswissprot=pub_gene_id)
+
+    goodnames <- getBM(attributes = c("ensembl_gene_id",
+                                      "external_gene_name",
+                                      "uniprotswissprot"),
+                       filters = 'uniprotswissprot',
+                       values = select_bit$uniprotswissprot,
+                       mart = ensemblcneo)
+    left_join(select_bit,goodnames)
+}
+
+make_select_ncra <- function(orth_list,og="Neurospora crassa OR74A") {
+    select_bit <- 
+        orth_list %>%
+        filter(organism_name == og) %>%
+        transmute(orthodb_id=int_prot_id,uniprotswissprot=pub_gene_id)
+
+    goodnames <- getBM(attributes = c("ensembl_gene_id",
+                                      "external_gene_name",
+                                      "uniprotswissprot"),
+                       filters = 'uniprotswissprot',
+                       values = select_bit$uniprotswissprot,
+                       mart = ensemblncra)
+    left_join(select_bit,goodnames)
+}
+```
+
+```{r orthodb_cytoribosome,eval=FALSE}
+cytoribosome_Scer <- read_tsv("data_in/Complexes/Scer_cytoribosomalproteins.txt",
+                              comment="#")
+
+cytoribosome_Scer_uniprot <- 
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'ensembl_gene_id', 
+          values = cytoribosome_Scer$orf, 
+          mart = ensemblscer)
+
+cytoribosome_orth <- orthodb_qlist(cytoribosome_Scer_uniprot$uniprotswissprot)
+write_tsv(cytoribosome_orth,"data_out/ComplexOrthologs/cytoribosome_orthodb.txt")
+
+cytoribosome_sel <- make_select_smlist5(cytoribosome_orth,og_keep = fungi_keep5)
+write_tsv(cytoribosome_sel,"data_out/ComplexOrthologs/cytoribosome_5fungi.txt")
+
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'external_gene_name',
+          values = "rpl1902",
+          mart = ensemblspom)
+
+
+# make_select_scer(cytoribosome_orth)
+# make_select_spom(cytoribosome_orth)
+# make_select_cneo(cytoribosome_orth)
+# make_select_ncra(cytoribosome_orth)
+```
+
+
+```{r orthodb_mitoribosome,eval=FALSE}
+mitoribosome_Scer <- read_tsv("data_in/Complexes/Scer_mitoribosomalproteins.txt",
+                              comment="#")
+
+mitoribosome_Scer_uniprot <- 
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'ensembl_gene_id', 
+          values = mitoribosome_Scer$orf, 
+          mart = ensemblscer)
+
+mitoribosome_orth <- orthodb_qlist(mitoribosome_Scer_uniprot$uniprotswissprot)
+write_tsv(mitoribosome_orth,"data_out/ComplexOrthologs/mitoribosome_orthodb.txt")
+
+mitoribosome_sel <- make_select_smlist(mitoribosome_orth,og_keep = fungi_keep5)
+write_tsv(mitoribosome_sel,"data_out/ComplexOrthologs/mitoribosome_5fungi.txt")
+
+make_select_scer(mitoribosome_orth)
+make_select_spom(mitoribosome_orth)
+# make_select_cneo(mitoribosome_orth)
+# make_select_ncra(mitoribosome_orth)
+```
+
+```{r orthodb_mitoATPsynthase,eval=FALSE}
+mitoATPsynthase_Scer <- read_tsv("data_in/Complexes/Scer_mitoATPSynthase.txt",
+                              comment="#")
+
+mitoATPsynthase_Scer_uniprot <- 
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'ensembl_gene_id', 
+          values = mitoATPsynthase_Scer$orf, 
+          mart = ensemblscer)
+
+mitoATPsynthase_orth <- orthodb_qlist(mitoATPsynthase_Scer_uniprot$uniprotswissprot)
+write_tsv(mitoATPsynthase_orth,"data_out/ComplexOrthologs/mitoATPsynthase_orthodb.txt")
+
+mitoATPsynthase_sel <- make_select_smlist(mitoATPsynthase_orth,og_keep = fungi_keep5)
+write_tsv(mitoATPsynthase_sel,"data_out/ComplexOrthologs/mitoATPsynthase_5fungi.txt")
+
+make_select_scer(mitoATPsynthase_orth)
+make_select_spom(mitoATPsynthase_orth)
+# make_select_cneo(mitoATPsynthase_orth)
+# make_select_ncra(mitoATPsynthase_orth)
+```
+
+# PANTHER
+
+```{r PANTHERfunctions}
+Pfungi <- c("YEAST","SCHPO","ASHGO","BATDJ","CRYNJ","CANAL","ASPFU","EMENI",
+           "NEUCR","PUCGT","SCLS1","USTMA","YARLI")
+Pfungi5 <- c("YEAST","SCHPO","CRYNJ","CANAL","NEUCR")
+
+
+getSameFamily <- function(my_uid,org="CRYNJ",orgs=Pfungi,keytype="UNIPROT") {
+    # get family id from org/CRYNJ id
+    pthOrganisms(PANTHER.db) <- org
+    fam <- select(PANTHER.db,
+                  keys=my_uid, 
+                  columns=c("FAMILY_ID"),
+                  keytype=keytype)
+    # get all fungal members of family id
+    fam_id <- fam$FAMILY_ID[1]
+    resetPthOrganisms(PANTHER.db)
+    select(PANTHER.db,keys=fam_id,
+           columns=c("SPECIES","UNIPROT","ENTREZ"),
+           keytype="FAMILY_ID") %>%
+        filter(SPECIES %in% Pfungi)
+}
+
+```
+
+## Cyto Ribosome
+
+```{r PTHcytoribosome}
+cytoribosome_Scer <- read_tsv("data_in/Complexes/Scer_cytoribosomalproteins.txt",
+                              comment="#")
+
+cytoribosome_Scer_uniprot <- 
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'ensembl_gene_id', 
+          values = cytoribosome_Scer$orf, 
+          mart = ensemblscer)
+
+cytoribosome_somefungi <- 
+    cytoribosome_Scer_uniprot$uniprotswissprot %>%
+    map_dfr(getSameFamily,org="YEAST") %>%
+    distinct()
+
+cytoribosome_somefungi
+
+write_tsv(cytoribosome_somefungi,
+          "data_out/ComplexOrthologs/cytoribosome_PANTHERfungi.txt")
+
+write_tsv(cytoribosome_somefungi %>%
+              filter(SPECIES %in% Pfungi5),
+          "data_out/ComplexOrthologs/cytoribosome_PANTHERfungi5.txt")
+
+```
+
+## Mito Ribosome
+
+```{r PTHmitoribosome}
+mitoribosome_Scer <- read_tsv("data_in/Complexes/Scer_mitoribosomalproteins.txt",
+                              comment="#")
+
+mitoribosome_Scer_uniprot <- 
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'ensembl_gene_id', 
+          values = mitoribosome_Scer$orf, 
+          mart = ensemblscer)
+
+mitoribosome_somefungi <- 
+    mitoribosome_Scer_uniprot$uniprotswissprot %>%
+    map_dfr(getSameFamily,org="YEAST") %>%
+    distinct()
+
+mitoribosome_somefungi
+
+write_tsv(mitoribosome_somefungi,
+          "data_out/ComplexOrthologs/mitoribosome_PANTHERfungi.txt")
+write_tsv(mitoribosome_somefungi  %>%
+              filter(SPECIES %in% Pfungi5),
+          "data_out/ComplexOrthologs/mitoribosome_PANTHERfungi5.txt")
+
+```
+
+# Mito ATP Synthase
+
+```{r PTHmitoATPsynthase}
+mitoATPsynthase_Scer <- read_tsv("data_in/Complexes/Scer_mitoATPSynthase.txt",
+                              comment="#")
+
+mitoATPsynthase_Scer_uniprot <- 
+    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+          filters = 'ensembl_gene_id', 
+          values = mitoATPsynthase_Scer$orf, 
+          mart = ensemblscer)
+
+mitoATPsynthase_somefungi <- 
+    mitoATPsynthase_Scer_uniprot$uniprotswissprot %>%
+    map_dfr(getSameFamily,org="YEAST") %>%
+    distinct()
+
+mitoATPsynthase_somefungi
+
+write_tsv(mitoATPsynthase_somefungi,
+          "data_out/ComplexOrthologs/mitoATPsynthase_PANTHERfungi.txt")
+
+```
