@@ -1,3 +1,9 @@
+# Cytoplasmic ribosome orthologs from core fungi of interest	
+# Core factors only	
+# Component names from A new system for naming ribosomal proteins Ban et al 2014	
+# orthologs from PANTHER.db	
+# E. Wallace 30 July 2018.	
+#
 COMPONENT	SUBUNIT	FAMILY_ID	SPECIES	ENSEMBL	UNIPROT	ENTREZ
 uS2	S	PTHR11489:SF9	YEAST	YLR048W	P46654	850737
 uS2	S	PTHR11489:SF9	YEAST	YGR214W	P32905	853128
