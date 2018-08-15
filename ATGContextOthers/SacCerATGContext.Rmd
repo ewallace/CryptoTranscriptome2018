@@ -1,7 +1,7 @@
 ---
 title: "Start codon context for Saccharomyces cerevisiae"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 1 Aug 2018
+date: 16 Aug 2018
 output:
   # html_notebook: default
   html_document:
@@ -398,7 +398,7 @@ highdiffn_dvsaATG_Sc
 ```
 
 * SRL2 / YLR082C unknown function, localized to nucleus and cytoplasm
-* HSF1 / YGL073W heat shock transcription factor 1, known to chuttle between nucleus and cytoplasm, weird reported mitochondrial localization
+* HSF1 / YGL073W heat shock transcription factor 1, known to shuttle between nucleus and cytoplasm, weird reported mitochondrial localization
 * YER156C, unknown function,  localizes to the nucleus and cytoplasm in a large-scale study
 * INP1 / YMR204C, peripheral membrane protein of peroxisomes
 * CIN8 / YEL061C, kinesin motor protein involved in mitosis. Reported mitochondrial localization.
@@ -421,16 +421,16 @@ highdiffn_dvsaATG_Sc %>%
 
 There is no clear pattern in these.
 
-## Compare score difference to localization predictions  - not done!
+## Compare score difference to localization predictions
 
 We need to put the corresponding SacCer proteome through mitofates in order to run these analyses.
 
 ### Load predictions from mitofates
 
-In input file *Sc_mitofates_26June2018.txt*.
+In input file *SacCer_mitofates_parsed.table.txt*.
 
-```{r load_mitofates_Sc,eval=FALSE}
-mitofates_Sc <- read_tsv("data_in/Sc_mitofates_26June2018.txt",
+```{r load_mitofates_Sc}
+mitofates_Sc <- read_tsv("data_in/SacCer_mitofates_parsed.table.txt",
                             comment="#")
 mitocounts_Sc <- 
     mitofates_Sc %>% 
@@ -446,30 +446,10 @@ mitopredlist_Sc <- mitofates_Sc %>%
     .$Gene
 ```
 
-```{r dvsaATG_scoresn_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=3.5,fig.height=3.5,eval=FALSE}
-# repeat plot coloured by mitochondrial localization; didn't work.
 
-ggplot(data=scores_Sc %>% 
-           filter(!is.na(d1.scorekn)) %>%
-           left_join( mitofates_Sc %>% 
-                          select(Gene,Prob_preseq,Pred_preseq)
-                      ) %>%
-           arrange(Pred_preseq),
-       aes(x=aATG.scorekn,y=d1.scorekn,colour=Pred_preseq,shape=Pred_preseq)) +
-    geom_diagline() +
-    # geom_point(size=0.8) +
-    geom_density_2d() +
-    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
-                        labels=mitobreaks_Sc) + 
-    scale_shape_manual(values=c("Yes"=19,"No"=20)) + 
-    labs(x="aATG score, narrow",
-         y="dATG score, narrow") +
-    theme(legend.position="none")
-```
+### SacCer Genes with high dATG vs aATG score are not enriched in mitochondrial presequences
 
-### Genes with high dATG vs aATG score are enriched in mitochondrial presequences
-
-```{r dvsaATG_scoresdiffn_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=5,fig.height=1.8,eval=FALSE}
+```{r dvsaATG_scoresdiffn_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=5,fig.height=1.8}
 
 ggplot(data=scores_Sc %>% 
            filter(!is.na(d1.scorekn)) %>%
@@ -486,11 +466,11 @@ ggplot(data=scores_Sc %>%
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
 
-### However, mito-localized genes do not have a distinctive aATG context
+### SacCer mito-localized genes also do not have a distinctive aATG context
 
-It's just a subset: the dual-localized ones.
+Although the +5 T is striking.
 
-```{r aATG_motif_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=4,fig.height=1,eval=FALSE}
+```{r aATG_motif_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=4,fig.height=1}
 
 ggseqlogo(data=ctbl_big_Sc %>%
               filter(Gene %in% mitopredlist_Sc) %>%
