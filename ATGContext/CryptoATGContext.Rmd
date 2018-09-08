@@ -68,6 +68,26 @@ logmean <- function(x) {
     lx <- log(x)
     exp( mean( lx[is.finite(lx)] ) )
 }
+
+read_mitofates <- function(mffile,              
+                           mitofates_colnames = 
+                               c("Gene", "Prob_preseq", "Pred_preseq", 
+                                 "CSite_enzyme", "Net_charge", "Pos_TOM20", "Pos_afhelix", 
+                                 "BHHPPP","BPHBHH", "HBHHBb", "HBHHbB", 
+                                 "HHBHHB", "HHBPHB", "HHBPHH", "HHBPHP",
+                                 "HHHBBH", "HHHBPH", "HHHHBB", "HHPBHH",
+                                 "HPBHHP", "PHHBPH","trail")
+) {
+    read_tsv(mffile,comment="#",skip=1,
+             col_names=mitofates_colnames) %>%
+        select(-trail) %>%
+        mutate(Pred_preseq=factor(Pred_preseq,
+                                  levels=c("No mitochondrial presequence",
+                                           "Possessing mitochondrial presequence"),
+                                  labels=c("No","Yes")))
+}
+
+
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
 ```
 
@@ -578,8 +598,11 @@ ggplot(data=ctbl_bigger_JEC21 %>%
 In input file *JEC21_mitofates_26June2018.txt*.
 
 ```{r load_mitofates_JEC21}
-mitofates_JEC21 <- read_tsv("data_in/JEC21_mitofates_26June2018.txt",
-                            comment="#")
+
+
+mitofates_JEC21 <- read_mitofates("data_in/JEC21_10p_up12dwn9_mitofates.txt") %>%
+    mutate(Gene=str_remove(Gene," Protein"))
+
 mitocounts_JEC21 <- 
     mitofates_JEC21 %>% 
     group_by(Pred_preseq) %>% 
@@ -1199,8 +1222,10 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
 In input file *H99_mitofates_26June2018.txt*.
 
 ```{r load_mitofates_H99}
-mitofates_H99 <- read_tsv("data_in/H99_mitofates_26June2018.txt",
-                            comment="#")
+
+mitofates_H99 <- read_mitofates("data_in/H99_10p_up12dwn9_mitofates.txt") %>%
+    mutate(Gene=str_remove(Gene," Protein"))
+
 mitocounts_H99 <- 
     mitofates_H99 %>% 
     group_by(Pred_preseq) %>% 

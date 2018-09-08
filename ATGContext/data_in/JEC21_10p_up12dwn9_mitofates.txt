@@ -5890,76 +5890,75 @@ CNL04300 Protein	0.011	No mitochondrial presequence	55(MPP), 56(Icp55)	0.036	15-
 CNL04310 Protein	0.000	No mitochondrial presequence	6(MPP)	0.333	47-51	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04340 Protein	0.760	Possessing mitochondrial presequence	23(MPP), 24(Icp55)	0.174	20-24	13-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04350 Protein	0.000	No mitochondrial presequence	35(MPP)	-0.114	26-30	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04355 Protein	0.000	No mitochondrial presequence	No arginine in N-terminal	0.000		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04360 Protein	0.000	No mitochondrial presequence	39(MPP)	-0.154	93-97	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04370 Protein	0.000	No mitochondrial presequence	35(MPP)	-0.029	32-36	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04380 Protein	0.000	No mitochondrial presequence	42(MPP)	0.095		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04390 Protein	0.000	No mitochondrial presequence	11(MPP), 12(Icp55)	0.182		7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04390 Protein	0.011	No mitochondrial presequence	11(MPP), 12(Icp55)	0.182		7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04400 Protein	0.000	No mitochondrial presequence	83(MPP)	-0.072	80-84	17-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04410 Protein	0.000	No mitochondrial presequence	44(MPP)	0.114	41-45	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04410 Protein	0.016	No mitochondrial presequence	44(MPP)	0.114	41-45	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04420 Protein	0.000	No mitochondrial presequence	48(MPP)	-0.042	45-49,58-62	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04430 Protein	0.000	No mitochondrial presequence	41(MPP)	0.146		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04430 Protein	0.844	Possessing mitochondrial presequence	41(MPP)	0.146		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04440 Protein	0.000	No mitochondrial presequence	37(MPP)	0.054		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04450 Protein	0.000	No mitochondrial presequence	63(MPP), 64(Icp55)	0.000		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04460 Protein	0.000	No mitochondrial presequence	22(MPP)	0.045	38-42	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04470 Protein	0.000	No mitochondrial presequence	23(MPP)	0.217	64-68	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04480 Protein	0.000	No mitochondrial presequence	61(MPP)	0.131	53-57,63-67	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04460 Protein	0.008	No mitochondrial presequence	22(MPP)	0.045	38-42	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04470 Protein	0.998	Possessing mitochondrial presequence	23(MPP)	0.217	64-68	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04480 Protein	0.011	No mitochondrial presequence	61(MPP)	0.131	53-57,63-67	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04490 Protein	0.000	No mitochondrial presequence	36(MPP), 37(Icp55)	0.028	54-58,92-96	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04500 Protein	0.000	No mitochondrial presequence	54(MPP), 55(Icp55)	0.037	51-55	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04510 Protein	0.000	No mitochondrial presequence	18(MPP), 26(Oct1)	0.278		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04510 Protein	0.938	Possessing mitochondrial presequence	18(MPP), 26(Oct1)	0.278		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04520 Protein	0.000	No mitochondrial presequence	13(MPP)	0.154		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04530 Protein	0.000	No mitochondrial presequence	26(MPP)	0.077	20-24	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04540 Protein	0.000	No mitochondrial presequence	65(MPP)	0.108	74-78	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04550 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.079	80-84	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04560 Protein	0.000	No mitochondrial presequence	27(MPP)	0.111		14-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04570 Protein	0.000	No mitochondrial presequence	19(MPP)	0.000	47-51	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04580 Protein	0.000	No mitochondrial presequence	49(MPP)	0.082		5-18-high	5-10	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04590 Protein	0.000	No mitochondrial presequence	14(MPP)	0.000		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04580 Protein	0.049	No mitochondrial presequence	49(MPP)	0.082		5-18-high	5-10	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04590 Protein	0.025	No mitochondrial presequence	14(MPP)	0.000		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04600 Protein	0.000	No mitochondrial presequence	17(MPP)	0.000	32-36,66-70	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04610 Protein	0.000	No mitochondrial presequence	10(MPP)	0.000	70-74	16-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04620 Protein	0.000	No mitochondrial presequence	18(MPP), 26(Oct1)	0.167	15-19	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04630 Protein	0.000	No mitochondrial presequence	35(MPP)	0.086	3-7	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04640 Protein	0.000	No mitochondrial presequence	40(MPP)	0.000	6-10,37-41,44-48	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04620 Protein	0.570	Possessing mitochondrial presequence	18(MPP), 26(Oct1)	0.167	15-19	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04630 Protein	0.006	No mitochondrial presequence	35(MPP)	0.086	3-7	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04640 Protein	0.013	No mitochondrial presequence	40(MPP)	0.000	6-10,37-41,44-48	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04643 Protein	0.000	No mitochondrial presequence	7(MPP), 8(Icp55)	0.143	4-8	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	4-9	-	
-CNL04645 Protein	0.000	No mitochondrial presequence	53(MPP)	0.000	38-42	1-10-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
-CNL04647 Protein	0.000	No mitochondrial presequence	46(MPP)	-0.022	1-5	10-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04650 Protein	0.000	No mitochondrial presequence	25(MPP)	0.120	58-62	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04660 Protein	0.000	No mitochondrial presequence	39(MPP)	-0.026	10-14,48-52	6-15-low	-	-	-	-	-	-	-	-	-	-	-	9-14	10-15	-	
+CNL04645 Protein	0.025	No mitochondrial presequence	53(MPP)	0.000	38-42	1-10-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
+CNL04647 Protein	0.008	No mitochondrial presequence	46(MPP)	-0.022	1-5	10-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04650 Protein	0.024	No mitochondrial presequence	25(MPP)	0.120	58-62	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04660 Protein	0.008	No mitochondrial presequence	39(MPP)	-0.026	10-14,48-52	6-15-low	-	-	-	-	-	-	-	-	-	-	-	9-14	10-15	-	
 CNL04670 Protein	0.000	No mitochondrial presequence	25(MPP)	0.080		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04680 Protein	0.000	No mitochondrial presequence	53(MPP)	0.057		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04690 Protein	0.000	No mitochondrial presequence	41(MPP)	0.073		19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04700 Protein	0.000	No mitochondrial presequence	17(MPP)	0.118		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04700 Protein	0.009	No mitochondrial presequence	17(MPP)	0.118		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04710 Protein	0.000	No mitochondrial presequence	41(MPP)	0.122		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04720 Protein	0.000	No mitochondrial presequence	13(MPP)	0.308	92-96	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04730 Protein	0.000	No mitochondrial presequence	50(MPP), 58(Oct1)	0.160		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04740 Protein	0.000	No mitochondrial presequence	82(MPP)	0.110		9-18-high	-	-	-	-	-	24-29	-	-	-	23-28	-	-	-	-	
-CNL04750 Protein	0.000	No mitochondrial presequence	19(MPP)	0.158		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04760 Protein	0.000	No mitochondrial presequence	50(MPP)	0.000	12-16	9-18-low	-	-	-	-	-	-	-	-	-	-	-	11-16	-	-	
-CNL04765 Protein	0.000	No mitochondrial presequence	31(MPP)	0.065		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04720 Protein	0.491	Possessing mitochondrial presequence	13(MPP)	0.308	92-96	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04730 Protein	0.906	Possessing mitochondrial presequence	50(MPP), 58(Oct1)	0.160		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04740 Protein	0.902	Possessing mitochondrial presequence	82(MPP)	0.110		9-18-high	-	-	-	-	-	24-29	-	-	-	23-28	-	-	-	-	
+CNL04750 Protein	0.066	No mitochondrial presequence	19(MPP)	0.158		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04760 Protein	0.010	No mitochondrial presequence	50(MPP)	0.000	12-16	9-18-low	-	-	-	-	-	-	-	-	-	-	-	11-16	-	-	
+CNL04765 Protein	0.005	No mitochondrial presequence	31(MPP)	0.065		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04770 Protein	0.000	No mitochondrial presequence	54(MPP)	-0.130		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04780 Protein	0.000	No mitochondrial presequence	43(MPP)	-0.023		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04800 Protein	0.000	No mitochondrial presequence	34(MPP)	0.118	24-28,95-99	17-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04810 Protein	0.000	No mitochondrial presequence	29(MPP)	0.103	92-96	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04800 Protein	0.023	No mitochondrial presequence	34(MPP)	0.118	24-28,95-99	17-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04810 Protein	0.029	No mitochondrial presequence	29(MPP)	0.103	92-96	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04820 Protein	0.000	No mitochondrial presequence	27(MPP)	0.074	79-83	3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04830 Protein	0.000	No mitochondrial presequence	92(MPP), 93(Icp55)	0.065		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04830 Protein	0.015	No mitochondrial presequence	92(MPP), 93(Icp55)	0.065		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04840 Protein	0.000	No mitochondrial presequence	42(MPP)	-0.048		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04850 Protein	0.000	No mitochondrial presequence	31(MPP)	0.097	3-7,10-14,45-49,63-67	3-12-high	-	-	-	-	-	-	-	-	18-23	-	17-22	-	10-15	-	
-CNL04860 Protein	0.000	No mitochondrial presequence	87(MPP)	0.057		19-28-high	-	-	-	19-24	-	-	-	-	-	-	-	-	-	-	
+CNL04850 Protein	0.372	No mitochondrial presequence	31(MPP)	0.097	3-7,10-14,45-49,63-67	3-12-high	-	-	-	-	-	-	-	-	18-23	-	17-22	-	10-15	-	
+CNL04860 Protein	0.128	No mitochondrial presequence	87(MPP)	0.057		19-28-high	-	-	-	19-24	-	-	-	-	-	-	-	-	-	-	
 CNL04870 Protein	0.000	No mitochondrial presequence	25(MPP)	0.040	85-89	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04880 Protein	0.000	No mitochondrial presequence	94(MPP), 102(Oct1)	-0.053		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04885 Protein	0.000	No mitochondrial presequence	35(MPP), 36(Icp55)	0.171	78-82	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04890 Protein	0.000	No mitochondrial presequence	28(MPP), 36(Oct1)	0.179		3-12-high	-	-	-	-	-	4-9	-	-	-	-	-	-	-	3-8	
-CNL04900 Protein	0.000	No mitochondrial presequence	21(MPP), 29(Oct1)	0.143		5-14-low	20-25	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04910 Protein	0.000	No mitochondrial presequence	30(MPP)	0.033		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04915 Protein	0.000	No mitochondrial presequence	33(MPP)	0.091		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04885 Protein	0.004	No mitochondrial presequence	35(MPP), 36(Icp55)	0.171	78-82	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04890 Protein	0.969	Possessing mitochondrial presequence	28(MPP), 36(Oct1)	0.179		3-12-high	-	-	-	-	-	4-9	-	-	-	-	-	-	-	3-8	
+CNL04900 Protein	0.996	Possessing mitochondrial presequence	21(MPP), 29(Oct1)	0.143		5-14-low	20-25	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04910 Protein	0.003	No mitochondrial presequence	30(MPP)	0.033		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04915 Protein	0.038	No mitochondrial presequence	33(MPP)	0.091		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04920 Protein	0.000	No mitochondrial presequence	13(MPP)	-0.077	52-56	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04930 Protein	0.000	No mitochondrial presequence	49(MPP)	0.082		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04930 Protein	0.004	No mitochondrial presequence	49(MPP)	0.082		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04940 Protein	0.000	No mitochondrial presequence	15(MPP)	-0.067		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04950 Protein	0.000	No mitochondrial presequence	45(MPP)	0.022	15-19	17-27-high	-	-	-	16-21	-	-	-	-	-	-	-	-	-	-	
+CNL04950 Protein	0.012	No mitochondrial presequence	45(MPP)	0.022	15-19	17-27-high	-	-	-	16-21	-	-	-	-	-	-	-	-	-	-	
 CNL04960 Protein	0.000	No mitochondrial presequence	34(MPP)	0.000	32-36	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04970 Protein	0.000	No mitochondrial presequence	28(MPP)	-0.036	25-29,44-48	1-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL04980 Protein	0.000	No mitochondrial presequence	91(MPP)	-0.022	62-66,82-86	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL04990 Protein	0.000	No mitochondrial presequence	40(MPP)	0.100	37-41	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL04990 Protein	0.851	Possessing mitochondrial presequence	40(MPP)	0.100	37-41	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05000 Protein	0.000	No mitochondrial presequence	66(MPP)	-0.030	82-86	1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05010 Protein	0.000	No mitochondrial presequence	50(MPP)	-0.060		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05020 Protein	0.000	No mitochondrial presequence	15(MPP)	0.267	73-77	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5967,321 +5966,321 @@ CNL05030 Protein	0.000	No mitochondrial presequence	54(MPP)	-0.074	52-56	6-15-lo
 CNL05040 Protein	0.000	No mitochondrial presequence	83(MPP)	0.000	30-34,50-54	19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05050 Protein	0.000	No mitochondrial presequence	58(MPP)	-0.034	52-56,55-59	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05060 Protein	0.000	No mitochondrial presequence	71(MPP)	-0.056	75-79	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05070 Protein	0.000	No mitochondrial presequence	17(MPP)	0.235	7-11,78-82,85-89	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05070 Protein	0.787	Possessing mitochondrial presequence	17(MPP)	0.235	7-11,78-82,85-89	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05080 Protein	0.000	No mitochondrial presequence	66(MPP)	0.091		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05090 Protein	0.000	No mitochondrial presequence	45(MPP)	0.178		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05100 Protein	0.000	No mitochondrial presequence	83(MPP)	0.012	58-62,80-84	1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05110 Protein	0.000	No mitochondrial presequence	62(MPP)	0.000	15-19	17-26-high	-	-	-	-	15-20	-	18-23	-	-	-	-	-	-	-	
-CNL05120 Protein	0.000	No mitochondrial presequence	32(MPP)	0.062	24-28	1-10-high	-	-	-	1-6	-	-	-	-	-	-	-	-	24-29	-	
-CNL05130 Protein	0.000	No mitochondrial presequence	58(MPP)	-0.017	40-44,45-49,63-67	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05140 Protein	0.000	No mitochondrial presequence	24(MPP)	0.083		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05090 Protein	0.004	No mitochondrial presequence	45(MPP)	0.178		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05100 Protein	0.028	No mitochondrial presequence	83(MPP)	0.012	58-62,80-84	1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05110 Protein	0.046	No mitochondrial presequence	62(MPP)	0.000	15-19	17-26-high	-	-	-	-	15-20	-	18-23	-	-	-	-	-	-	-	
+CNL05120 Protein	0.014	No mitochondrial presequence	32(MPP)	0.062	24-28	1-10-high	-	-	-	1-6	-	-	-	-	-	-	-	-	24-29	-	
+CNL05130 Protein	0.004	No mitochondrial presequence	58(MPP)	-0.017	40-44,45-49,63-67	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05140 Protein	0.055	No mitochondrial presequence	24(MPP)	0.083		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05150 Protein	0.000	No mitochondrial presequence	23(MPP)	-0.261		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05155 Protein	0.000	No mitochondrial presequence	44(MPP), 45(Icp55)	0.136	36-40	3-12-high	-	9-14	-	11-16	-	7-12	-	-	-	6-11	-	-	-	-	
+CNL05155 Protein	0.981	Possessing mitochondrial presequence	44(MPP), 45(Icp55)	0.136	36-40	3-12-high	-	9-14	-	11-16	-	7-12	-	-	-	6-11	-	-	-	-	
 CNL05160 Protein	0.000	No mitochondrial presequence	74(MPP)	-0.162	71-75	13-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05170 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.079		18-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05180 Protein	0.000	No mitochondrial presequence	29(MPP)	-0.138	57-61	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05190 Protein	0.000	No mitochondrial presequence	18(MPP)	0.056	96-100	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05200 Protein	0.000	No mitochondrial presequence	30(MPP)	0.100		1-10-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
-CNL05210 Protein	0.000	No mitochondrial presequence	42(MPP)	-0.024	77-81,91-95	2-11-low	-	-	-	-	-	-	-	7-12	-	-	-	-	-	6-11	
+CNL05200 Protein	0.025	No mitochondrial presequence	30(MPP)	0.100		1-10-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
+CNL05210 Protein	0.012	No mitochondrial presequence	42(MPP)	-0.024	77-81,91-95	2-11-low	-	-	-	-	-	-	-	7-12	-	-	-	-	-	6-11	
 CNL05220 Protein	0.000	No mitochondrial presequence	15(MPP)	-0.067		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05240 Protein	0.000	No mitochondrial presequence	18(MPP)	0.167		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05250 Protein	0.000	No mitochondrial presequence	55(MPP)	0.091	59-63	11-20-high	-	-	-	-	-	-	12-17	-	-	-	-	-	-	11-16	
+CNL05250 Protein	0.113	No mitochondrial presequence	55(MPP)	0.091	59-63	11-20-high	-	-	-	-	-	-	12-17	-	-	-	-	-	-	11-16	
 CNL05260 Protein	0.000	No mitochondrial presequence	15(MPP)	0.067		19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05270 Protein	0.000	No mitochondrial presequence	13(MPP)	0.077		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05275 Protein	0.000	No mitochondrial presequence	24(MPP)	0.208		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05280 Protein	0.000	No mitochondrial presequence	19(MPP), 20(Icp55)	0.211	16-20,86-90	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05290 Protein	0.000	No mitochondrial presequence	19(MPP), 20(Icp55)	0.211	16-20	14-23-high	-	-	-	-	-	-	-	7-12	-	-	-	-	-	-	
+CNL05270 Protein	0.081	No mitochondrial presequence	13(MPP)	0.077		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05275 Protein	0.166	No mitochondrial presequence	24(MPP)	0.208		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05280 Protein	0.665	Possessing mitochondrial presequence	19(MPP), 20(Icp55)	0.211	16-20,86-90	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05290 Protein	0.988	Possessing mitochondrial presequence	19(MPP), 20(Icp55)	0.211	16-20	14-23-high	-	-	-	-	-	-	-	7-12	-	-	-	-	-	-	
 CNL05300 Protein	0.000	No mitochondrial presequence	39(MPP)	0.051		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05310 Protein	0.000	No mitochondrial presequence	24(MPP), 25(Icp55)	0.250	80-84	14-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05310 Protein	0.872	Possessing mitochondrial presequence	24(MPP), 25(Icp55)	0.250	80-84	14-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05320 Protein	0.000	No mitochondrial presequence	60(MPP)	-0.017		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05330 Protein	0.000	No mitochondrial presequence	67(MPP)	-0.045	64-68,82-86	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05340 Protein	0.000	No mitochondrial presequence	32(MPP)	0.031	35-39,79-83	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05350 Protein	0.000	No mitochondrial presequence	20(MPP)	0.100		11-20-low	-	3-8	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05340 Protein	0.019	No mitochondrial presequence	32(MPP)	0.031	35-39,79-83	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05350 Protein	0.009	No mitochondrial presequence	20(MPP)	0.100		11-20-low	-	3-8	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05360 Protein	0.000	No mitochondrial presequence	30(MPP)	0.000	22-26	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05370 Protein	0.000	No mitochondrial presequence	22(MPP)	0.227	48-52	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05390 Protein	0.000	No mitochondrial presequence	9(MPP)	0.111	65-69	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05370 Protein	0.721	Possessing mitochondrial presequence	22(MPP)	0.227	48-52	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05390 Protein	0.033	No mitochondrial presequence	9(MPP)	0.111	65-69	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05400 Protein	0.000	No mitochondrial presequence	82(MPP)	0.024		11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05410 Protein	0.000	No mitochondrial presequence	26(MPP)	0.038		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05440 Protein	0.000	No mitochondrial presequence	33(MPP)	0.000	57-61,91-95	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05410 Protein	0.018	No mitochondrial presequence	26(MPP)	0.038		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05440 Protein	0.012	No mitochondrial presequence	33(MPP)	0.000	57-61,91-95	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05445 Protein	0.000	No mitochondrial presequence	37(MPP)	0.162		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05450 Protein	0.000	No mitochondrial presequence	47(MPP)	-0.021		2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05460 Protein	0.000	No mitochondrial presequence	28(MPP)	-0.071	95-99	16-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05470 Protein	0.000	No mitochondrial presequence	53(MPP)	-0.057		3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05490 Protein	0.000	No mitochondrial presequence	18(MPP)	-0.056		7-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05495 Protein	0.000	No mitochondrial presequence	81(MPP), 82(Icp55)	0.012		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05500 Protein	0.000	No mitochondrial presequence	62(MPP)	0.032	63-67,92-96	14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05510 Protein	0.000	No mitochondrial presequence	22(MPP)	0.136		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05500 Protein	0.005	No mitochondrial presequence	62(MPP)	0.032	63-67,92-96	14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05510 Protein	0.133	No mitochondrial presequence	22(MPP)	0.136		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05520 Protein	0.000	No mitochondrial presequence	29(MPP)	0.000	9-13,26-30	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05530 Protein	0.000	No mitochondrial presequence	77(MPP)	-0.104	27-31,49-53	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05545 Protein	0.000	No mitochondrial presequence	49(MPP)	0.061	70-74	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05550 Protein	0.000	No mitochondrial presequence	18(MPP)	0.111		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05550 Protein	0.011	No mitochondrial presequence	18(MPP)	0.111		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05560 Protein	0.000	No mitochondrial presequence	33(MPP), 34(Icp55)	0.061		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05570 Protein	0.000	No mitochondrial presequence	9(MPP)	0.000	78-82	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05580 Protein	0.000	No mitochondrial presequence	62(MPP)	0.097	45-49	1-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05590 Protein	0.000	No mitochondrial presequence	10(MPP)	0.300	7-11,76-80,79-83,83-87	3-12-high	9-14	-	-	-	-	-	3-8	-	-	-	-	-	-	-	
-CNL05600 Protein	0.000	No mitochondrial presequence	56(MPP)	0.161	9-13,23-27	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05610 Protein	0.000	No mitochondrial presequence	16(MPP), 17(Icp55)	0.250	1-5,13-17,58-62	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05580 Protein	0.006	No mitochondrial presequence	62(MPP)	0.097	45-49	1-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05590 Protein	0.722	Possessing mitochondrial presequence	10(MPP)	0.300	7-11,76-80,79-83,83-87	3-12-high	9-14	-	-	-	-	-	3-8	-	-	-	-	-	-	-	
+CNL05600 Protein	1.000	Possessing mitochondrial presequence	56(MPP)	0.161	9-13,23-27	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05610 Protein	0.113	No mitochondrial presequence	16(MPP), 17(Icp55)	0.250	1-5,13-17,58-62	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05620 Protein	0.000	No mitochondrial presequence	21(MPP)	0.048	84-88	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05630 Protein	0.000	No mitochondrial presequence	35(MPP)	0.057	28-32	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05640 Protein	0.000	No mitochondrial presequence	26(MPP), 27(Icp55)	0.192	51-55,91-95	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05640 Protein	0.182	No mitochondrial presequence	26(MPP), 27(Icp55)	0.192	51-55,91-95	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05650 Protein	0.000	No mitochondrial presequence	40(MPP)	0.050	87-91	16-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05670 Protein	0.000	No mitochondrial presequence	19(MPP)	0.316	35-39,58-62	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05680 Protein	0.000	No mitochondrial presequence	12(MPP)	0.250	38-42	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05670 Protein	0.032	No mitochondrial presequence	19(MPP)	0.316	35-39,58-62	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05680 Protein	0.016	No mitochondrial presequence	12(MPP)	0.250	38-42	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05690 Protein	0.000	No mitochondrial presequence	61(MPP)	0.016		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05700 Protein	0.000	No mitochondrial presequence	29(MPP)	0.172	36-40	12-21-high	-	-	-	-	-	-	-	-	-	-	19-24	-	-	-	
-CNL05710 Protein	0.000	No mitochondrial presequence	72(MPP), 73(Icp55)	0.167	22-26	19-28-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
+CNL05700 Protein	0.075	No mitochondrial presequence	29(MPP)	0.172	36-40	12-21-high	-	-	-	-	-	-	-	-	-	-	19-24	-	-	-	
+CNL05710 Protein	0.897	Possessing mitochondrial presequence	72(MPP), 73(Icp55)	0.167	22-26	19-28-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
 CNL05720 Protein	0.000	No mitochondrial presequence	49(MPP)	0.061		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05735 Protein	0.000	No mitochondrial presequence	27(MPP)	0.148	52-56,84-88	11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05735 Protein	0.897	Possessing mitochondrial presequence	27(MPP)	0.148	52-56,84-88	11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05740 Protein	0.000	No mitochondrial presequence	57(MPP)	-0.053		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05750 Protein	0.000	No mitochondrial presequence	61(MPP)	-0.197		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05755 Protein	0.000	No mitochondrial presequence	58(MPP)	-0.103	6-10,55-59,94-98	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05760 Protein	0.000	No mitochondrial presequence	46(MPP), 54(Oct1)	0.130		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05770 Protein	0.000	No mitochondrial presequence	22(MPP)	0.182		5-14-high	-	-	-	-	-	-	19-24	-	-	-	-	-	-	18-23	
+CNL05760 Protein	0.494	Possessing mitochondrial presequence	46(MPP), 54(Oct1)	0.130		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05770 Protein	0.967	Possessing mitochondrial presequence	22(MPP)	0.182		5-14-high	-	-	-	-	-	-	19-24	-	-	-	-	-	-	18-23	
 CNL05780 Protein	0.000	No mitochondrial presequence	62(MPP)	0.016		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05790 Protein	0.000	No mitochondrial presequence	57(MPP)	0.018		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05800 Protein	0.000	No mitochondrial presequence	30(MPP)	0.000		2-11-high	-	-	1-6	-	-	-	-	-	-	-	-	-	-	-	
 CNL05810 Protein	0.000	No mitochondrial presequence	64(MPP)	0.000	1-5	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05820 Protein	0.000	No mitochondrial presequence	22(MPP)	0.273	46-50	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05820 Protein	0.997	Possessing mitochondrial presequence	22(MPP)	0.273	46-50	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05830 Protein	0.000	No mitochondrial presequence	21(MPP)	0.000	34-38	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05840 Protein	0.000	No mitochondrial presequence	81(MPP)	0.099		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05840 Protein	0.011	No mitochondrial presequence	81(MPP)	0.099		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05845 Protein	0.000	No mitochondrial presequence	79(MPP)	0.013		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05850 Protein	0.000	No mitochondrial presequence	52(MPP)	-0.096		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05860 Protein	0.000	No mitochondrial presequence	35(MPP)	0.200	18-22,32-36	16-25-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
+CNL05860 Protein	0.999	Possessing mitochondrial presequence	35(MPP)	0.200	18-22,32-36	16-25-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
 CNL05865 Protein	0.000	No mitochondrial presequence	31(MPP)	0.129		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05870 Protein	0.000	No mitochondrial presequence	57(MPP)	0.035		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05880 Protein	0.000	No mitochondrial presequence	22(MPP), 23(Icp55)	0.136		8-17-high	-	-	-	-	-	-	9-14	-	-	-	-	-	-	8-13	
+CNL05870 Protein	0.012	No mitochondrial presequence	57(MPP)	0.035		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05880 Protein	0.974	Possessing mitochondrial presequence	22(MPP), 23(Icp55)	0.136		8-17-high	-	-	-	-	-	-	9-14	-	-	-	-	-	-	8-13	
 CNL05890 Protein	0.000	No mitochondrial presequence	39(MPP)	-0.077		5-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05900 Protein	0.000	No mitochondrial presequence	14(MPP)	0.214	1-5,42-46	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05910 Protein	0.000	No mitochondrial presequence	59(MPP)	-0.034		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05900 Protein	0.072	No mitochondrial presequence	14(MPP)	0.214	1-5,42-46	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05910 Protein	0.004	No mitochondrial presequence	59(MPP)	-0.034		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05930 Protein	0.000	No mitochondrial presequence	58(MPP)	0.017		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05940 Protein	0.000	No mitochondrial presequence	85(MPP)	-0.012	38-42	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05950 Protein	0.000	No mitochondrial presequence	54(MPP)	-0.037	81-85	9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05960 Protein	0.000	No mitochondrial presequence	22(MPP)	0.045	79-83	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL05970 Protein	0.000	No mitochondrial presequence	38(MPP)	0.000	68-72,93-97	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05980 Protein	0.000	No mitochondrial presequence	85(MPP)	0.129		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL05990 Protein	0.000	No mitochondrial presequence	14(MPP)	0.000	68-72	9-18-high	-	-	-	-	-	11-16	-	-	-	10-15	-	-	-	-	
+CNL05980 Protein	0.015	No mitochondrial presequence	85(MPP)	0.129		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL05990 Protein	0.011	No mitochondrial presequence	14(MPP)	0.000	68-72	9-18-high	-	-	-	-	-	11-16	-	-	-	10-15	-	-	-	-	
 CNL06000 Protein	0.000	No mitochondrial presequence	9(MPP)	0.000		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06010 Protein	0.000	No mitochondrial presequence	19(MPP)	0.000	10-14,16-20,24-28	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06020 Protein	0.000	No mitochondrial presequence	14(MPP)	0.214	62-66	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06010 Protein	0.003	No mitochondrial presequence	19(MPP)	0.000	10-14,16-20,24-28	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06020 Protein	0.028	No mitochondrial presequence	14(MPP)	0.214	62-66	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06030 Protein	0.000	No mitochondrial presequence	6(MPP)	-0.500		13-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06040 Protein	0.000	No mitochondrial presequence	19(MPP), 20(Icp55)	-0.053	7-11,41-45	15-24-high	-	-	-	-	-	-	-	16-21	-	-	-	-	-	-	
-CNL06050 Protein	0.000	No mitochondrial presequence	17(MPP), 18(Icp55)	0.235		6-15-high	-	10-15	12-17	-	-	-	3-8	-	-	2-7	-	-	-	-	
+CNL06050 Protein	0.986	Possessing mitochondrial presequence	17(MPP), 18(Icp55)	0.235		6-15-high	-	10-15	12-17	-	-	-	3-8	-	-	2-7	-	-	-	-	
 CNL06060 Protein	0.000	No mitochondrial presequence	52(MPP)	-0.019		20-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06070 Protein	0.000	No mitochondrial presequence	33(MPP)	0.000		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06075 Protein	0.000	No mitochondrial presequence	80(MPP)	-0.050	1-5	8-17-low	3-8	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06080 Protein	0.000	No mitochondrial presequence	52(MPP)	0.058	64-68,86-90,89-93	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06090 Protein	0.000	No mitochondrial presequence	57(MPP), 65(Oct1)	0.140	11-15	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06075 Protein	0.006	No mitochondrial presequence	80(MPP)	-0.050	1-5	8-17-low	3-8	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06080 Protein	0.007	No mitochondrial presequence	52(MPP)	0.058	64-68,86-90,89-93	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06090 Protein	0.199	No mitochondrial presequence	57(MPP), 65(Oct1)	0.140	11-15	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06100 Protein	0.000	No mitochondrial presequence	47(MPP)	0.064	54-58,77-81	18-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06110 Protein	0.000	No mitochondrial presequence	60(MPP), 68(Oct1)	0.167	7-11,65-69	18-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06110 Protein	0.204	No mitochondrial presequence	60(MPP), 68(Oct1)	0.167	7-11,65-69	18-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06120 Protein	0.000	No mitochondrial presequence	53(MPP)	0.019		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06125 Protein	0.000	No mitochondrial presequence	29(MPP)	0.000		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06130 Protein	0.000	No mitochondrial presequence	50(MPP)	0.060		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06140 Protein	0.000	No mitochondrial presequence	44(MPP)	-0.023	8-12	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06140 Protein	0.007	No mitochondrial presequence	44(MPP)	-0.023	8-12	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06150 Protein	0.000	No mitochondrial presequence	12(MPP)	0.333		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06155 Protein	0.000	No mitochondrial presequence	21(MPP)	0.095		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06155 Protein	0.007	No mitochondrial presequence	21(MPP)	0.095		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06170 Protein	0.000	No mitochondrial presequence	79(MPP)	0.000	77-81	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06180 Protein	0.000	No mitochondrial presequence	20(MPP)	0.100		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06190 Protein	0.000	No mitochondrial presequence	9(MPP)	0.222	1-5,59-63,83-87	9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06200 Protein	0.000	No mitochondrial presequence	35(MPP)	0.000		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06210 Protein	0.000	No mitochondrial presequence	81(MPP)	-0.049		17-26-high	-	-	-	-	-	-	-	22-27	-	21-26	-	-	-	-	
-CNL06220 Protein	0.000	No mitochondrial presequence	52(MPP)	0.096		6-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06180 Protein	0.076	No mitochondrial presequence	20(MPP)	0.100		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06190 Protein	0.443	Possessing mitochondrial presequence	9(MPP)	0.222	1-5,59-63,83-87	9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06200 Protein	0.005	No mitochondrial presequence	35(MPP)	0.000		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06210 Protein	0.023	No mitochondrial presequence	81(MPP)	-0.049		17-26-high	-	-	-	-	-	-	-	22-27	-	21-26	-	-	-	-	
+CNL06220 Protein	0.003	No mitochondrial presequence	52(MPP)	0.096		6-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06230 Protein	0.000	No mitochondrial presequence	77(MPP)	0.039		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06240 Protein	0.000	No mitochondrial presequence	22(MPP)	0.000	20-24,38-42	1-10-low	-	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	
+CNL06240 Protein	0.013	No mitochondrial presequence	22(MPP)	0.000	20-24,38-42	1-10-low	-	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	
 CNL06250 Protein	0.000	No mitochondrial presequence	24(MPP)	0.375		3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06270 Protein	0.000	No mitochondrial presequence	30(MPP)	0.033	2-6,37-41	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06290 Protein	0.000	No mitochondrial presequence	6(MPP), 7(Icp55)	0.167	70-74,82-86	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06290 Protein	0.013	No mitochondrial presequence	6(MPP), 7(Icp55)	0.167	70-74,82-86	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06295 Protein	0.000	No mitochondrial presequence	43(MPP), 44(Icp55)	0.093	9-13,64-68	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06300 Protein	0.000	No mitochondrial presequence	42(MPP)	0.000	30-34	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06310 Protein	0.000	No mitochondrial presequence	8(MPP)	0.250	87-91	19-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06310 Protein	0.010	No mitochondrial presequence	8(MPP)	0.250	87-91	19-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06320 Protein	0.000	No mitochondrial presequence	93(MPP)	-0.054		2-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06330 Protein	0.000	No mitochondrial presequence	44(MPP)	-0.091	51-55	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06340 Protein	0.000	No mitochondrial presequence	51(MPP)	0.000		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06340 Protein	0.009	No mitochondrial presequence	51(MPP)	0.000		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06350 Protein	0.000	No mitochondrial presequence	37(MPP)	0.054		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06360 Protein	0.000	No mitochondrial presequence	34(MPP)	0.118	68-72	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06370 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.079	40-44	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06380 Protein	0.000	No mitochondrial presequence	42(MPP)	0.071	9-13,77-81	1-10-low	-	-	-	-	-	-	-	14-19	-	13-18	-	8-13	-	-	
+CNL06380 Protein	0.079	No mitochondrial presequence	42(MPP)	0.071	9-13,77-81	1-10-low	-	-	-	-	-	-	-	14-19	-	13-18	-	8-13	-	-	
 CNL06390 Protein	0.000	No mitochondrial presequence	48(MPP)	0.104		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06400 Protein	0.000	No mitochondrial presequence	50(MPP)	0.020		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06410 Protein	0.000	No mitochondrial presequence	81(MPP)	-0.111	11-15,78-82	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06415 Protein	0.000	No mitochondrial presequence	27(MPP), 28(Icp55)	-0.037	63-67,95-99	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06420 Protein	0.000	No mitochondrial presequence	43(MPP)	-0.047	40-44	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06430 Protein	0.000	No mitochondrial presequence	91(MPP)	0.000	78-82	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06430 Protein	0.046	No mitochondrial presequence	91(MPP)	0.000	78-82	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06440 Protein	0.000	No mitochondrial presequence	61(MPP)	0.049	32-36,45-49,74-78	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06460 Protein	0.000	No mitochondrial presequence	44(MPP)	0.068	6-10	6-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06460 Protein	0.007	No mitochondrial presequence	44(MPP)	0.068	6-10	6-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06470 Protein	0.000	No mitochondrial presequence	36(MPP)	-0.056		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06480 Protein	0.000	No mitochondrial presequence	7(MPP)	0.143	91-95	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06490 Protein	0.000	No mitochondrial presequence	34(MPP)	-0.059		5-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06500 Protein	0.000	No mitochondrial presequence	9(MPP)	0.333	91-95	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06510 Protein	0.000	No mitochondrial presequence	21(MPP)	0.000	14-18	14-23-high	-	-	-	-	-	-	-	-	-	17-22	-	-	-	-	
+CNL06500 Protein	0.010	No mitochondrial presequence	9(MPP)	0.333	91-95	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06510 Protein	0.008	No mitochondrial presequence	21(MPP)	0.000	14-18	14-23-high	-	-	-	-	-	-	-	-	-	17-22	-	-	-	-	
 CNL06520 Protein	0.000	No mitochondrial presequence	57(MPP), 58(Icp55)	0.053		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06530 Protein	0.000	No mitochondrial presequence	43(MPP)	-0.233		11-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06540 Protein	0.000	No mitochondrial presequence	11(MPP)	0.000	56-60	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06550 Protein	0.000	No mitochondrial presequence	25(MPP), 26(Icp55)	0.160	22-26,42-46	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06550 Protein	0.067	No mitochondrial presequence	25(MPP), 26(Icp55)	0.160	22-26,42-46	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06555 Protein	0.000	No mitochondrial presequence	51(MPP)	0.039		10-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06560 Protein	0.000	No mitochondrial presequence	19(MPP)	0.000		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06570 Protein	0.000	No mitochondrial presequence	84(MPP)	-0.048	11-15,28-32,51-55	20-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06580 Protein	0.000	No mitochondrial presequence	36(MPP)	0.083	51-55,63-67	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06580 Protein	0.036	No mitochondrial presequence	36(MPP)	0.083	51-55,63-67	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06590 Protein	0.000	No mitochondrial presequence	41(MPP)	-0.195		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06600 Protein	0.000	No mitochondrial presequence	22(MPP)	0.182	19-23	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06610 Protein	0.000	No mitochondrial presequence	7(MPP)	0.000		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06600 Protein	0.009	No mitochondrial presequence	22(MPP)	0.182	19-23	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06610 Protein	0.007	No mitochondrial presequence	7(MPP)	0.000		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06620 Protein	0.000	No mitochondrial presequence	21(MPP)	0.000		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06630 Protein	0.000	No mitochondrial presequence	80(MPP)	0.087	5-9,9-13,78-82	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06640 Protein	0.000	No mitochondrial presequence	43(MPP)	0.023	83-87,91-95	9-18-low	-	-	21-26	-	-	-	-	-	-	-	-	-	-	-	
-CNL06650 Protein	0.000	No mitochondrial presequence	53(MPP), 54(Icp55)	0.075	90-94	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06660 Protein	0.000	No mitochondrial presequence	59(MPP)	0.085	66-70,91-95	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06630 Protein	0.069	No mitochondrial presequence	80(MPP)	0.087	5-9,9-13,78-82	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06640 Protein	0.003	No mitochondrial presequence	43(MPP)	0.023	83-87,91-95	9-18-low	-	-	21-26	-	-	-	-	-	-	-	-	-	-	-	
+CNL06650 Protein	0.004	No mitochondrial presequence	53(MPP), 54(Icp55)	0.075	90-94	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06660 Protein	0.003	No mitochondrial presequence	59(MPP)	0.085	66-70,91-95	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06670 Protein	0.000	No mitochondrial presequence	34(MPP)	-0.059		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06680 Protein	0.000	No mitochondrial presequence	26(MPP)	0.038	28-32	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06690 Protein	0.000	No mitochondrial presequence	64(MPP)	0.000	58-62	11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06700 Protein	0.000	No mitochondrial presequence	21(MPP)	0.190	37-41	14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06680 Protein	0.004	No mitochondrial presequence	26(MPP)	0.038	28-32	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06690 Protein	0.003	No mitochondrial presequence	64(MPP)	0.000	58-62	11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06700 Protein	0.006	No mitochondrial presequence	21(MPP)	0.190	37-41	14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06720 Protein	0.000	No mitochondrial presequence	94(MPP)	-0.085		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06730 Protein	0.000	No mitochondrial presequence	32(MPP)	-0.031	79-83	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06740 Protein	0.000	No mitochondrial presequence	34(MPP)	0.000		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06750 Protein	0.000	No mitochondrial presequence	13(MPP), 21(Oct1)	0.154	43-47,80-84,93-97	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06760 Protein	0.000	No mitochondrial presequence	23(MPP)	0.217		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06770 Protein	0.000	No mitochondrial presequence	44(MPP)	0.136		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06740 Protein	0.005	No mitochondrial presequence	34(MPP)	0.000		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06750 Protein	0.075	No mitochondrial presequence	13(MPP), 21(Oct1)	0.154	43-47,80-84,93-97	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06760 Protein	0.045	No mitochondrial presequence	23(MPP)	0.217		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06770 Protein	0.005	No mitochondrial presequence	44(MPP)	0.136		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06780 Protein	0.000	No mitochondrial presequence	70(MPP)	-0.014		2-11-low	-	-	-	-	-	-	-	17-22	-	16-21	-	-	-	-	
 CNL06790 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.053	35-39,47-51,51-55	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06800 Protein	0.000	No mitochondrial presequence	64(MPP)	0.078		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06800 Protein	0.012	No mitochondrial presequence	64(MPP)	0.078		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNL06810 Protein	0.000	No mitochondrial presequence	20(MPP)	-0.250	76-80	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06820 Protein	0.000	No mitochondrial presequence	26(MPP)	0.192	92-96	19-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNL06830 Protein	0.000	No mitochondrial presequence	26(MPP)	0.192		19-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06820 Protein	0.023	No mitochondrial presequence	26(MPP)	0.192	92-96	19-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNL06830 Protein	0.180	No mitochondrial presequence	26(MPP)	0.192		19-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00010 Protein	0.000	No mitochondrial presequence	29(MPP)	-0.138		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00020 Protein	0.000	No mitochondrial presequence	30(MPP)	0.033		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00030 Protein	0.000	No mitochondrial presequence	41(MPP)	-0.049		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00040 Protein	0.000	No mitochondrial presequence	28(MPP)	0.036	68-72	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00050 Protein	0.000	No mitochondrial presequence	40(MPP)	0.100		16-27-high	25-30	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00060 Protein	0.000	No mitochondrial presequence	18(MPP)	0.167		3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00050 Protein	0.006	No mitochondrial presequence	40(MPP)	0.100		16-27-high	25-30	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00060 Protein	0.965	Possessing mitochondrial presequence	18(MPP)	0.167		3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00070 Protein	0.000	No mitochondrial presequence	71(MPP), 72(Icp55)	-0.042		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00080 Protein	0.000	No mitochondrial presequence	50(MPP), 58(Oct1)	0.140		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00080 Protein	0.146	No mitochondrial presequence	50(MPP), 58(Oct1)	0.140		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00090 Protein	0.000	No mitochondrial presequence	19(MPP)	0.053		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00100 Protein	0.000	No mitochondrial presequence	39(MPP), 40(Icp55)	0.026		7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00110 Protein	0.000	No mitochondrial presequence	45(MPP)	0.222	29-33	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00100 Protein	0.010	No mitochondrial presequence	39(MPP), 40(Icp55)	0.026		7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00110 Protein	0.473	Possessing mitochondrial presequence	45(MPP)	0.222	29-33	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00120 Protein	0.000	No mitochondrial presequence	10(MPP)	0.200		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00130 Protein	0.000	No mitochondrial presequence	55(MPP)	-0.018	45-49	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00140 Protein	0.000	No mitochondrial presequence	10(MPP)	0.200		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00140 Protein	0.015	No mitochondrial presequence	10(MPP)	0.200		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00150 Protein	0.000	No mitochondrial presequence	30(MPP)	-0.100		12-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00160 Protein	0.000	No mitochondrial presequence	12(MPP)	0.500	9-13	9-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00170 Protein	0.000	No mitochondrial presequence	41(MPP)	0.098	76-80	14-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00160 Protein	0.469	Possessing mitochondrial presequence	12(MPP)	0.500	9-13	9-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00170 Protein	0.058	No mitochondrial presequence	41(MPP)	0.098	76-80	14-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00180 Protein	0.000	No mitochondrial presequence	63(MPP)	-0.032	4-8	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00190 Protein	0.000	No mitochondrial presequence	34(MPP)	0.029		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00190 Protein	0.004	No mitochondrial presequence	34(MPP)	0.029		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00200 Protein	0.000	No mitochondrial presequence	23(MPP)	0.043		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00220 Protein	0.000	No mitochondrial presequence	27(MPP)	-0.074	36-40	16-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00230 Protein	0.000	No mitochondrial presequence	5(MPP)	0.600	28-32	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00240 Protein	0.000	No mitochondrial presequence	66(MPP)	0.015	8-12,63-67	3-12-low	-	-	-	-	-	-	-	-	-	-	-	7-12	-	-	
-CNM00250 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.026	13-17,17-21,67-71	13-22-high	-	-	-	-	-	-	-	-	-	-	-	16-21	13-18	-	
-CNM00260 Protein	0.000	No mitochondrial presequence	44(MPP)	0.136	58-62	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00270 Protein	0.000	No mitochondrial presequence	33(MPP)	0.061		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00290 Protein	0.000	No mitochondrial presequence	25(MPP)	0.040	34-38,88-92	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00300 Protein	0.000	No mitochondrial presequence	23(MPP)	0.000		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00230 Protein	0.003	No mitochondrial presequence	5(MPP)	0.600	28-32	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00240 Protein	0.006	No mitochondrial presequence	66(MPP)	0.015	8-12,63-67	3-12-low	-	-	-	-	-	-	-	-	-	-	-	7-12	-	-	
+CNM00250 Protein	0.312	No mitochondrial presequence	38(MPP)	-0.026	13-17,17-21,67-71	13-22-high	-	-	-	-	-	-	-	-	-	-	-	16-21	13-18	-	
+CNM00260 Protein	0.003	No mitochondrial presequence	44(MPP)	0.136	58-62	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00270 Protein	0.004	No mitochondrial presequence	33(MPP)	0.061		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00290 Protein	0.028	No mitochondrial presequence	25(MPP)	0.040	34-38,88-92	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00300 Protein	0.003	No mitochondrial presequence	23(MPP)	0.000		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00310 Protein	0.000	No mitochondrial presequence	84(MPP)	0.024		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00320 Protein	0.000	No mitochondrial presequence	7(MPP)	-0.429	57-61	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00330 Protein	0.000	No mitochondrial presequence	22(MPP)	0.182	35-39	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00340 Protein	0.000	No mitochondrial presequence	45(MPP)	0.111		19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00330 Protein	0.354	No mitochondrial presequence	22(MPP)	0.182	35-39	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00340 Protein	0.003	No mitochondrial presequence	45(MPP)	0.111		19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00350 Protein	0.000	No mitochondrial presequence	53(MPP)	-0.038		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00360 Protein	0.000	No mitochondrial presequence	43(MPP)	0.000	79-83	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00370 Protein	0.000	No mitochondrial presequence	42(MPP), 43(Icp55)	-0.024	78-82	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00380 Protein	0.000	No mitochondrial presequence	37(MPP)	0.000	15-19,88-92	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00390 Protein	0.000	No mitochondrial presequence	12(MPP), 20(Oct1)	0.417	4-8,91-95,95-99	1-10-high	11-16	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00400 Protein	0.000	No mitochondrial presequence	59(MPP)	0.102		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00410 Protein	0.000	No mitochondrial presequence	17(MPP)	0.118		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00420 Protein	0.000	No mitochondrial presequence	42(MPP)	0.071		11-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00430 Protein	0.000	No mitochondrial presequence	44(MPP)	0.114		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00440 Protein	0.000	No mitochondrial presequence	9(MPP)	0.222		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00450 Protein	0.000	No mitochondrial presequence	19(MPP)	0.000	71-75	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00460 Protein	0.000	No mitochondrial presequence	21(MPP)	0.143		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00390 Protein	0.999	Possessing mitochondrial presequence	12(MPP), 20(Oct1)	0.417	4-8,91-95,95-99	1-10-high	11-16	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00400 Protein	0.028	No mitochondrial presequence	59(MPP)	0.102		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00410 Protein	0.119	No mitochondrial presequence	17(MPP)	0.118		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00420 Protein	0.081	No mitochondrial presequence	42(MPP)	0.071		11-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00430 Protein	0.005	No mitochondrial presequence	44(MPP)	0.114		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00440 Protein	0.038	No mitochondrial presequence	9(MPP)	0.222		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00450 Protein	0.010	No mitochondrial presequence	19(MPP)	0.000	71-75	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00460 Protein	0.005	No mitochondrial presequence	21(MPP)	0.143		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00470 Protein	0.000	No mitochondrial presequence	32(MPP)	0.062		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00480 Protein	0.000	No mitochondrial presequence	53(MPP)	-0.019	29-33	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00490 Protein	0.000	No mitochondrial presequence	48(MPP)	0.062	61-65	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00490 Protein	0.029	No mitochondrial presequence	48(MPP)	0.062	61-65	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00580 Protein	0.000	No mitochondrial presequence	72(MPP)	-0.111		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00590 Protein	0.000	No mitochondrial presequence	41(MPP)	0.073	38-42	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00600 Protein	0.000	No mitochondrial presequence	42(MPP)	0.024	89-93	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00610 Protein	0.000	No mitochondrial presequence	35(MPP)	-0.057		14-23-low	-	-	-	-	-	-	-	14-19	-	-	-	-	-	-	
-CNM00620 Protein	0.000	No mitochondrial presequence	30(MPP)	0.033		13-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00630 Protein	0.000	No mitochondrial presequence	48(MPP)	0.042	49-53	10-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00610 Protein	0.007	No mitochondrial presequence	35(MPP)	-0.057		14-23-low	-	-	-	-	-	-	-	14-19	-	-	-	-	-	-	
+CNM00620 Protein	0.004	No mitochondrial presequence	30(MPP)	0.033		13-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00630 Protein	0.013	No mitochondrial presequence	48(MPP)	0.042	49-53	10-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00640 Protein	0.000	No mitochondrial presequence	41(MPP)	-0.122	38-42	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00650 Protein	0.000	No mitochondrial presequence	52(MPP)	0.077	7-11	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00660 Protein	0.000	No mitochondrial presequence	36(MPP)	0.111	52-56	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00670 Protein	0.000	No mitochondrial presequence	16(MPP)	0.125	90-94	14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00680 Protein	0.000	No mitochondrial presequence	52(MPP)	0.000	30-34,71-75	17-26-low	-	3-8	-	-	-	1-6	-	-	-	-	-	-	-	-	
+CNM00650 Protein	0.039	No mitochondrial presequence	52(MPP)	0.077	7-11	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00660 Protein	0.003	No mitochondrial presequence	36(MPP)	0.111	52-56	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00670 Protein	0.009	No mitochondrial presequence	16(MPP)	0.125	90-94	14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00680 Protein	0.011	No mitochondrial presequence	52(MPP)	0.000	30-34,71-75	17-26-low	-	3-8	-	-	-	1-6	-	-	-	-	-	-	-	-	
 CNM00690 Protein	0.000	No mitochondrial presequence	29(MPP)	-0.034		11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00700 Protein	0.000	No mitochondrial presequence	40(MPP)	-0.050	90-94	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00720 Protein	0.000	No mitochondrial presequence	68(MPP), 69(Icp55)	0.118	6-10,24-28	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00730 Protein	0.000	No mitochondrial presequence	13(MPP), 14(Icp55)	0.077	7-11,10-14,96-100	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00740 Protein	0.000	No mitochondrial presequence	23(MPP), 24(Icp55)	0.130	72-76	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00760 Protein	0.000	No mitochondrial presequence	54(MPP)	0.074		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00720 Protein	0.993	Possessing mitochondrial presequence	68(MPP), 69(Icp55)	0.118	6-10,24-28	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00730 Protein	0.007	No mitochondrial presequence	13(MPP), 14(Icp55)	0.077	7-11,10-14,96-100	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00740 Protein	0.033	No mitochondrial presequence	23(MPP), 24(Icp55)	0.130	72-76	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00760 Protein	0.009	No mitochondrial presequence	54(MPP)	0.074		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00770 Protein	0.000	No mitochondrial presequence	71(MPP)	-0.056	1-5,44-48,84-88,90-94	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00780 Protein	0.000	No mitochondrial presequence	44(MPP)	0.091	41-45,80-84	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00790 Protein	0.000	No mitochondrial presequence	31(MPP)	0.258		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00795 Protein	0.000	No mitochondrial presequence	21(MPP)	0.000	9-13,31-35,90-94	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00780 Protein	0.003	No mitochondrial presequence	44(MPP)	0.091	41-45,80-84	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00790 Protein	0.013	No mitochondrial presequence	31(MPP)	0.258		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00795 Protein	0.035	No mitochondrial presequence	21(MPP)	0.000	9-13,31-35,90-94	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00800 Protein	0.000	No mitochondrial presequence	13(MPP)	0.000		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00810 Protein	0.000	No mitochondrial presequence	7(MPP)	0.143		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00820 Protein	0.000	No mitochondrial presequence	80(MPP)	-0.037		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00830 Protein	0.000	No mitochondrial presequence	38(MPP)	0.079		19-28-high	-	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	
+CNM00830 Protein	0.091	No mitochondrial presequence	38(MPP)	0.079		19-28-high	-	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	
 CNM00840 Protein	0.000	No mitochondrial presequence	44(MPP)	-0.091	41-45	13-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00850 Protein	0.000	No mitochondrial presequence	20(MPP), 21(Icp55)	-0.050	18-22	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00850 Protein	0.005	No mitochondrial presequence	20(MPP), 21(Icp55)	-0.050	18-22	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00860 Protein	0.000	No mitochondrial presequence	45(MPP)	-0.044		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00870 Protein	0.000	No mitochondrial presequence	23(MPP), 24(Icp55)	0.174	77-81	17-27-low	-	-	-	-	-	-	20-25	-	-	-	-	-	-	19-24	
-CNM00880 Protein	0.000	No mitochondrial presequence	62(MPP)	-0.081	12-16,75-79,78-82	11-23-low	-	-	-	-	-	-	-	-	10-15	-	9-14	-	-	-	
+CNM00870 Protein	0.785	Possessing mitochondrial presequence	23(MPP), 24(Icp55)	0.174	77-81	17-27-low	-	-	-	-	-	-	20-25	-	-	-	-	-	-	19-24	
+CNM00880 Protein	0.010	No mitochondrial presequence	62(MPP)	-0.081	12-16,75-79,78-82	11-23-low	-	-	-	-	-	-	-	-	10-15	-	9-14	-	-	-	
 CNM00890 Protein	0.000	No mitochondrial presequence	48(MPP)	-0.083		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00900 Protein	0.000	No mitochondrial presequence	42(MPP)	0.095		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00910 Protein	0.000	No mitochondrial presequence	45(MPP)	0.022		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00900 Protein	0.003	No mitochondrial presequence	42(MPP)	0.095		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00910 Protein	0.003	No mitochondrial presequence	45(MPP)	0.022		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00920 Protein	0.000	No mitochondrial presequence	34(MPP)	-0.029		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM00930 Protein	0.000	No mitochondrial presequence	70(MPP)	0.143	43-47,46-50	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00940 Protein	0.000	No mitochondrial presequence	37(MPP)	0.189		12-21-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00950 Protein	0.000	No mitochondrial presequence	34(MPP)	0.118	37-41	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM00970 Protein	0.000	No mitochondrial presequence	43(MPP), 44(Icp55)	0.116		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	2-7	
-CNM00990 Protein	0.000	No mitochondrial presequence	31(MPP), 32(Icp55)	0.194		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01000 Protein	0.000	No mitochondrial presequence	45(MPP)	0.000		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01020 Protein	0.000	No mitochondrial presequence	36(MPP)	0.250		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01030 Protein	0.000	No mitochondrial presequence	43(MPP)	0.000	88-92	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00940 Protein	0.007	No mitochondrial presequence	37(MPP)	0.189		12-21-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00950 Protein	0.563	Possessing mitochondrial presequence	34(MPP)	0.118	37-41	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM00970 Protein	0.075	No mitochondrial presequence	43(MPP), 44(Icp55)	0.116		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	2-7	
+CNM00990 Protein	0.113	No mitochondrial presequence	31(MPP), 32(Icp55)	0.194		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01000 Protein	0.005	No mitochondrial presequence	45(MPP)	0.000		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01020 Protein	0.071	No mitochondrial presequence	36(MPP)	0.250		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01030 Protein	0.005	No mitochondrial presequence	43(MPP)	0.000	88-92	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01040 Protein	0.000	No mitochondrial presequence	48(MPP)	0.104		11-21-low	-	-	-	-	-	24-29	-	-	-	-	-	-	-	-	
-CNM01050 Protein	0.000	No mitochondrial presequence	52(MPP)	0.058	50-54	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01050 Protein	0.040	No mitochondrial presequence	52(MPP)	0.058	50-54	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01060 Protein	0.000	No mitochondrial presequence	53(MPP)	0.019		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01070 Protein	0.000	No mitochondrial presequence	40(MPP)	-0.150	30-34	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01080 Protein	0.000	No mitochondrial presequence	68(MPP)	0.059	85-89	9-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01090 Protein	0.000	No mitochondrial presequence	74(MPP)	0.054	91-95	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01080 Protein	0.008	No mitochondrial presequence	68(MPP)	0.059	85-89	9-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01090 Protein	0.004	No mitochondrial presequence	74(MPP)	0.054	91-95	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01100 Protein	0.000	No mitochondrial presequence	64(MPP)	0.078		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01110 Protein	0.000	No mitochondrial presequence	62(MPP)	-0.065		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01115 Protein	0.000	No mitochondrial presequence	72(MPP), 73(Icp55)	0.069		1-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01120 Protein	0.000	No mitochondrial presequence	28(MPP)	0.071	22-26	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01130 Protein	0.000	No mitochondrial presequence	68(MPP)	-0.015	65-69	14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01135 Protein	0.000	No mitochondrial presequence	38(MPP)	0.026		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01135 Protein	0.009	No mitochondrial presequence	38(MPP)	0.026		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01150 Protein	0.000	No mitochondrial presequence	32(MPP)	-0.094		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01160 Protein	0.000	No mitochondrial presequence	71(MPP)	0.028		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01170 Protein	0.000	No mitochondrial presequence	31(MPP), 32(Icp55)	0.226	74-78	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01170 Protein	0.999	Possessing mitochondrial presequence	31(MPP), 32(Icp55)	0.226	74-78	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01180 Protein	0.000	No mitochondrial presequence	58(MPP)	0.069	22-26	4-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01190 Protein	0.000	No mitochondrial presequence	31(MPP)	0.032		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01200 Protein	0.000	No mitochondrial presequence	37(MPP)	0.027		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01200 Protein	0.004	No mitochondrial presequence	37(MPP)	0.027		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01210 Protein	0.000	No mitochondrial presequence	68(MPP)	0.044	43-47	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01220 Protein	0.000	No mitochondrial presequence	28(MPP)	-0.036		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01230 Protein	0.000	No mitochondrial presequence	7(MPP)	0.143	66-70,70-74	3-12-high	-	-	-	-	-	-	4-9	-	-	-	-	-	-	3-8	
+CNM01230 Protein	0.009	No mitochondrial presequence	7(MPP)	0.143	66-70,70-74	3-12-high	-	-	-	-	-	-	4-9	-	-	-	-	-	-	3-8	
 CNM01240 Protein	0.000	No mitochondrial presequence	18(MPP)	0.000		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01250 Protein	0.000	No mitochondrial presequence	52(MPP)	-0.154		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01260 Protein	0.000	No mitochondrial presequence	41(MPP), 42(Icp55)	0.122	76-80	12-21-low	-	-	-	-	-	-	-	-	-	15-20	-	-	-	-	
-CNM01270 Protein	0.000	No mitochondrial presequence	49(MPP)	0.061	8-12	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01280 Protein	0.000	No mitochondrial presequence	48(MPP)	-0.062	58-62	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01260 Protein	0.487	Possessing mitochondrial presequence	41(MPP), 42(Icp55)	0.122	76-80	12-21-low	-	-	-	-	-	-	-	-	-	15-20	-	-	-	-	
+CNM01270 Protein	0.005	No mitochondrial presequence	49(MPP)	0.061	8-12	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01280 Protein	0.004	No mitochondrial presequence	48(MPP)	-0.062	58-62	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01290 Protein	0.000	No mitochondrial presequence	24(MPP)	0.000	92-96	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01300 Protein	0.000	No mitochondrial presequence	85(MPP)	0.047		12-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01310 Protein	0.000	No mitochondrial presequence	7(MPP)	0.143	93-97	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01320 Protein	0.000	No mitochondrial presequence	12(MPP)	-0.083	39-43	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01310 Protein	0.019	No mitochondrial presequence	7(MPP)	0.143	93-97	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01320 Protein	0.003	No mitochondrial presequence	12(MPP)	-0.083	39-43	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01330 Protein	0.000	No mitochondrial presequence	35(MPP)	-0.086		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01340 Protein	0.000	No mitochondrial presequence	34(MPP)	-0.059		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01350 Protein	0.000	No mitochondrial presequence	16(MPP)	0.000		17-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01360 Protein	0.000	No mitochondrial presequence	50(MPP)	0.020		10-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01370 Protein	0.000	No mitochondrial presequence	87(MPP)	-0.046	30-34,57-61,84-88	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01370 Protein	0.019	No mitochondrial presequence	87(MPP)	-0.046	30-34,57-61,84-88	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01380 Protein	0.000	No mitochondrial presequence	21(MPP)	0.095		10-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01390 Protein	0.000	No mitochondrial presequence	10(MPP)	0.300		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01400 Protein	0.000	No mitochondrial presequence	21(MPP), 22(Icp55)	0.190		17-26-low	-	-	-	-	-	-	18-23	-	-	-	-	-	-	17-22	
+CNM01400 Protein	0.867	Possessing mitochondrial presequence	21(MPP), 22(Icp55)	0.190		17-26-low	-	-	-	-	-	-	18-23	-	-	-	-	-	-	17-22	
 CNM01410 Protein	0.000	No mitochondrial presequence	14(MPP)	0.286		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01420 Protein	0.000	No mitochondrial presequence	34(MPP), 35(Icp55)	0.000	8-12,65-69,77-81	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01430 Protein	0.000	No mitochondrial presequence	50(MPP)	-0.020	7-11,67-71	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01440 Protein	0.000	No mitochondrial presequence	36(MPP)	-0.056	16-20,33-37	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01450 Protein	0.000	No mitochondrial presequence	13(MPP)	0.000		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	9-14	
+CNM01440 Protein	0.004	No mitochondrial presequence	36(MPP)	-0.056	16-20,33-37	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01450 Protein	0.005	No mitochondrial presequence	13(MPP)	0.000		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	9-14	
 CNM01460 Protein	0.000	No mitochondrial presequence	73(MPP)	-0.178	90-94	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01470 Protein	0.000	No mitochondrial presequence	30(MPP)	0.133	19-23	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01480 Protein	0.000	No mitochondrial presequence	58(MPP)	0.017	55-59	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01490 Protein	0.000	No mitochondrial presequence	10(MPP)	0.200	87-91	4-13-high	-	-	-	-	-	-	7-12	-	-	6-11	-	-	-	-	
-CNM01500 Protein	0.000	No mitochondrial presequence	38(MPP)	0.105	35-39	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01470 Protein	0.613	Possessing mitochondrial presequence	30(MPP)	0.133	19-23	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01480 Protein	0.003	No mitochondrial presequence	58(MPP)	0.017	55-59	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01490 Protein	0.659	Possessing mitochondrial presequence	10(MPP)	0.200	87-91	4-13-high	-	-	-	-	-	-	7-12	-	-	6-11	-	-	-	-	
+CNM01500 Protein	0.005	No mitochondrial presequence	38(MPP)	0.105	35-39	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01510 Protein	0.000	No mitochondrial presequence	65(MPP)	-0.031		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01520 Protein	0.000	No mitochondrial presequence	33(MPP)	-0.091	63-67	12-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01530 Protein	0.000	No mitochondrial presequence	49(MPP)	-0.122		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -6290,92 +6289,92 @@ CNM01550 Protein	0.000	No mitochondrial presequence	75(MPP)	-0.147		21-30-low	-	
 CNM01560 Protein	0.000	No mitochondrial presequence	83(MPP)	-0.036		7-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01570 Protein	0.000	No mitochondrial presequence	21(MPP), 22(Icp55)	0.048	70-74	17-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01580 Protein	0.000	No mitochondrial presequence	12(MPP)	-0.083		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01590 Protein	0.000	No mitochondrial presequence	41(MPP), 42(Icp55)	0.098	28-32	10-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01590 Protein	0.012	No mitochondrial presequence	41(MPP), 42(Icp55)	0.098	28-32	10-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01600 Protein	0.000	No mitochondrial presequence	52(MPP)	0.058		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01610 Protein	0.000	No mitochondrial presequence	15(MPP)	0.067		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01610 Protein	0.010	No mitochondrial presequence	15(MPP)	0.067		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01620 Protein	0.000	No mitochondrial presequence	54(MPP)	0.000		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01630 Protein	0.000	No mitochondrial presequence	7(MPP)	0.143	48-52	19-28-high	-	-	-	-	-	-	22-27	-	-	21-26	-	-	-	-	
+CNM01630 Protein	0.099	No mitochondrial presequence	7(MPP)	0.143	48-52	19-28-high	-	-	-	-	-	-	22-27	-	-	21-26	-	-	-	-	
 CNM01640 Protein	0.000	No mitochondrial presequence	32(MPP)	0.062		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	25-30	
 CNM01645 Protein	0.000	No mitochondrial presequence	45(MPP)	-0.044	35-39	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01650 Protein	0.000	No mitochondrial presequence	19(MPP), 20(Icp55)	0.158	67-71	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01650 Protein	0.024	No mitochondrial presequence	19(MPP), 20(Icp55)	0.158	67-71	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01660 Protein	0.000	No mitochondrial presequence	9(MPP)	0.111	49-53	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01670 Protein	0.000	No mitochondrial presequence	20(MPP)	-0.300	86-90	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	16-21	
-CNM01675 Protein	0.000	No mitochondrial presequence	58(MPP), 59(Icp55)	0.017	21-25,55-59,73-77	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01675 Protein	0.110	No mitochondrial presequence	58(MPP), 59(Icp55)	0.017	21-25,55-59,73-77	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01680 Protein	0.000	No mitochondrial presequence	38(MPP)	0.053		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01690 Protein	0.000	No mitochondrial presequence	39(MPP)	-0.051		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01700 Protein	0.000	No mitochondrial presequence	14(MPP)	0.214		7-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01700 Protein	0.004	No mitochondrial presequence	14(MPP)	0.214		7-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01710 Protein	0.000	No mitochondrial presequence	34(MPP), 35(Icp55)	0.029		2-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01720 Protein	0.000	No mitochondrial presequence	89(MPP)	0.011		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01730 Protein	0.000	No mitochondrial presequence	16(MPP)	0.062	20-24	17-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01740 Protein	0.000	No mitochondrial presequence	19(MPP)	0.158		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01730 Protein	0.005	No mitochondrial presequence	16(MPP)	0.062	20-24	17-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01740 Protein	0.943	Possessing mitochondrial presequence	19(MPP)	0.158		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01750 Protein	0.000	No mitochondrial presequence	18(MPP)	-0.167	4-8,90-94	16-27-low	-	-	-	-	-	-	-	-	-	-	-	-	4-9	-	
 CNM01760 Protein	0.000	No mitochondrial presequence	26(MPP), 27(Icp55)	-0.077	29-33,73-77	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01770 Protein	0.000	No mitochondrial presequence	15(MPP), 16(Icp55)	0.267	34-38,57-61	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01770 Protein	0.846	Possessing mitochondrial presequence	15(MPP), 16(Icp55)	0.267	34-38,57-61	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01780 Protein	0.000	No mitochondrial presequence	48(MPP)	-0.083	68-72	15-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01790 Protein	0.000	No mitochondrial presequence	45(MPP)	0.022	43-47	3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01800 Protein	0.000	No mitochondrial presequence	23(MPP)	0.043		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01810 Protein	0.000	No mitochondrial presequence	20(MPP)	0.200		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01800 Protein	0.016	No mitochondrial presequence	23(MPP)	0.043		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01810 Protein	0.985	Possessing mitochondrial presequence	20(MPP)	0.200		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01820 Protein	0.000	No mitochondrial presequence	58(MPP)	0.069		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01830 Protein	0.000	No mitochondrial presequence	71(MPP)	0.028		6-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01840 Protein	0.000	No mitochondrial presequence	53(MPP), 54(Icp55)	0.094		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01850 Protein	0.000	No mitochondrial presequence	93(MPP)	-0.172	20-24,43-47	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01860 Protein	0.000	No mitochondrial presequence	17(MPP)	0.176		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01870 Protein	0.000	No mitochondrial presequence	33(MPP)	-0.061	77-81	5-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01880 Protein	0.000	No mitochondrial presequence	34(MPP)	0.059		9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01860 Protein	0.228	No mitochondrial presequence	17(MPP)	0.176		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01870 Protein	0.003	No mitochondrial presequence	33(MPP)	-0.061	77-81	5-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01880 Protein	0.013	No mitochondrial presequence	34(MPP)	0.059		9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01890 Protein	0.000	No mitochondrial presequence	49(MPP)	0.020	93-97	3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01900 Protein	0.000	No mitochondrial presequence	93(MPP), 94(Icp55)	-0.022		2-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01910 Protein	0.000	No mitochondrial presequence	33(MPP), 34(Icp55)	0.152		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01920 Protein	0.000	No mitochondrial presequence	50(MPP)	0.020	51-55	1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01930 Protein	0.000	No mitochondrial presequence	18(MPP), 19(Icp55)	0.111		8-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01930 Protein	0.148	No mitochondrial presequence	18(MPP), 19(Icp55)	0.111		8-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01940 Protein	0.000	No mitochondrial presequence	18(MPP)	-0.111	62-66	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01950 Protein	0.000	No mitochondrial presequence	7(MPP)	0.429		11-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01960 Protein	0.000	No mitochondrial presequence	91(MPP)	-0.044		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01970 Protein	0.000	No mitochondrial presequence	30(MPP)	0.067		9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01970 Protein	0.005	No mitochondrial presequence	30(MPP)	0.067		9-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM01980 Protein	0.000	No mitochondrial presequence	51(MPP)	0.078		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM01990 Protein	0.000	No mitochondrial presequence	10(MPP), 11(Icp55)	0.300		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02000 Protein	0.000	No mitochondrial presequence	20(MPP)	0.000	17-21,34-38,60-64	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02010 Protein	0.000	No mitochondrial presequence	27(MPP)	0.074		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM01990 Protein	0.262	No mitochondrial presequence	10(MPP), 11(Icp55)	0.300		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02000 Protein	0.004	No mitochondrial presequence	20(MPP)	0.000	17-21,34-38,60-64	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02010 Protein	0.036	No mitochondrial presequence	27(MPP)	0.074		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02020 Protein	0.000	No mitochondrial presequence	41(MPP), 42(Icp55)	-0.024	51-55	1-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02030 Protein	0.000	No mitochondrial presequence	53(MPP)	-0.094		14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02040 Protein	0.000	No mitochondrial presequence	44(MPP), 45(Icp55)	0.091	75-79	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02050 Protein	0.000	No mitochondrial presequence	67(MPP)	0.000	80-84	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02060 Protein	0.000	No mitochondrial presequence	24(MPP)	0.167		2-11-high	-	-	-	-	-	-	2-7	-	-	1-6	-	-	-	-	
-CNM02070 Protein	0.000	No mitochondrial presequence	48(MPP)	0.062	68-72	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02090 Protein	0.000	No mitochondrial presequence	39(MPP)	0.026	81-85	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02100 Protein	0.000	No mitochondrial presequence	51(MPP)	0.059	9-13	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02105 Protein	0.000	No mitochondrial presequence	63(MPP)	0.159		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02060 Protein	0.998	Possessing mitochondrial presequence	24(MPP)	0.167		2-11-high	-	-	-	-	-	-	2-7	-	-	1-6	-	-	-	-	
+CNM02070 Protein	0.007	No mitochondrial presequence	48(MPP)	0.062	68-72	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02090 Protein	0.017	No mitochondrial presequence	39(MPP)	0.026	81-85	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02100 Protein	0.176	No mitochondrial presequence	51(MPP)	0.059	9-13	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02105 Protein	0.006	No mitochondrial presequence	63(MPP)	0.159		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02110 Protein	0.000	No mitochondrial presequence	32(MPP), 33(Icp55)	-0.062	83-87	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02120 Protein	0.000	No mitochondrial presequence	20(MPP)	0.100		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02130 Protein	0.000	No mitochondrial presequence	13(MPP)	-0.154		18-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02140 Protein	0.000	No mitochondrial presequence	20(MPP)	0.300	17-21,86-90	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02140 Protein	0.434	Possessing mitochondrial presequence	20(MPP)	0.300	17-21,86-90	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02150 Protein	0.000	No mitochondrial presequence	27(MPP)	0.000	34-38	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02160 Protein	0.000	No mitochondrial presequence	65(MPP)	0.015		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02170 Protein	0.000	No mitochondrial presequence	56(MPP)	-0.036		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02180 Protein	0.000	No mitochondrial presequence	20(MPP)	0.150	61-65,68-72	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02180 Protein	0.004	No mitochondrial presequence	20(MPP)	0.150	61-65,68-72	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02190 Protein	0.000	No mitochondrial presequence	12(MPP)	-0.083		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02200 Protein	0.000	No mitochondrial presequence	53(MPP)	-0.094		4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02230 Protein	0.000	No mitochondrial presequence	85(MPP)	-0.129	9-13,51-55,77-81	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02240 Protein	0.000	No mitochondrial presequence	18(MPP)	0.333		7-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02250 Protein	0.000	No mitochondrial presequence	39(MPP), 40(Icp55)	0.077		20-29-low	-	-	-	-	-	-	24-29	-	1-6	-	-	-	-	-	
+CNM02240 Protein	0.371	No mitochondrial presequence	18(MPP)	0.333		7-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02250 Protein	0.704	Possessing mitochondrial presequence	39(MPP), 40(Icp55)	0.077		20-29-low	-	-	-	-	-	-	24-29	-	1-6	-	-	-	-	-	
 CNM02260 Protein	0.000	No mitochondrial presequence	16(MPP)	-0.125		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02270 Protein	0.000	No mitochondrial presequence	14(MPP)	0.214	4-8	6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02270 Protein	0.500	Possessing mitochondrial presequence	14(MPP)	0.214	4-8	6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02280 Protein	0.000	No mitochondrial presequence	17(MPP)	0.059	45-49,86-90	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02290 Protein	0.000	No mitochondrial presequence	28(MPP)	0.250		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02290 Protein	0.009	No mitochondrial presequence	28(MPP)	0.250		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02300 Protein	0.000	No mitochondrial presequence	78(MPP)	-0.013		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02310 Protein	0.000	No mitochondrial presequence	79(MPP)	0.013	46-50	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02320 Protein	0.000	No mitochondrial presequence	21(MPP)	0.048	18-22,83-87	16-25-high	-	-	-	-	-	-	25-30	-	-	24-29	-	-	-	-	
-CNM02330 Protein	0.000	No mitochondrial presequence	72(MPP)	0.014	1-5,69-73	10-19-low	-	-	-	-	-	-	-	-	-	-	5-10	-	-	-	
-CNM02340 Protein	0.000	No mitochondrial presequence	20(MPP), 21(Icp55)	0.100	17-21,92-96	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	17-22	-	
-CNM02350 Protein	0.000	No mitochondrial presequence	10(MPP)	0.100		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02360 Protein	0.000	No mitochondrial presequence	34(MPP)	0.118	2-6,36-40,40-44	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02320 Protein	0.724	Possessing mitochondrial presequence	21(MPP)	0.048	18-22,83-87	16-25-high	-	-	-	-	-	-	25-30	-	-	24-29	-	-	-	-	
+CNM02330 Protein	0.181	No mitochondrial presequence	72(MPP)	0.014	1-5,69-73	10-19-low	-	-	-	-	-	-	-	-	-	-	5-10	-	-	-	
+CNM02340 Protein	0.071	No mitochondrial presequence	20(MPP), 21(Icp55)	0.100	17-21,92-96	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	17-22	-	
+CNM02350 Protein	0.006	No mitochondrial presequence	10(MPP)	0.100		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02360 Protein	0.031	No mitochondrial presequence	34(MPP)	0.118	2-6,36-40,40-44	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02370 Protein	0.000	No mitochondrial presequence	49(MPP)	-0.041		5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02380 Protein	0.000	No mitochondrial presequence	43(MPP)	-0.047	16-20	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02390 Protein	0.000	No mitochondrial presequence	42(MPP), 43(Icp55)	0.000	39-43	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02400 Protein	0.000	No mitochondrial presequence	21(MPP), 29(Oct1)	0.143	62-66	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02400 Protein	0.883	Possessing mitochondrial presequence	21(MPP), 29(Oct1)	0.143	62-66	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02410 Protein	0.000	No mitochondrial presequence	8(MPP), 9(Icp55)	0.250		15-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02420 Protein	0.000	No mitochondrial presequence	44(MPP)	-0.023	18-22	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02420 Protein	0.011	No mitochondrial presequence	44(MPP)	-0.023	18-22	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02430 Protein	0.000	No mitochondrial presequence	17(MPP)	0.000		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02450 Protein	0.000	No mitochondrial presequence	38(MPP)	0.000	10-14,21-25,68-72	6-15-high	-	-	-	-	-	-	-	-	-	-	-	9-14	-	-	
+CNM02450 Protein	0.004	No mitochondrial presequence	38(MPP)	0.000	10-14,21-25,68-72	6-15-high	-	-	-	-	-	-	-	-	-	-	-	9-14	-	-	
 CNM02460 Protein	0.000	No mitochondrial presequence	64(MPP)	0.016	56-60	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02470 Protein	0.000	No mitochondrial presequence	68(MPP)	-0.103		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02480 Protein	0.000	No mitochondrial presequence	71(MPP)	-0.113		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -6384,257 +6383,257 @@ CNM02510 Protein	0.000	No mitochondrial presequence	28(MPP)	0.000		8-17-low	-	-	
 CNM02520 Protein	0.000	No mitochondrial presequence	16(MPP)	0.125	1-5	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02530 Protein	0.000	No mitochondrial presequence	85(MPP)	0.118	51-55	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02540 Protein	0.000	No mitochondrial presequence	23(MPP)	-0.261		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02550 Protein	0.000	No mitochondrial presequence	11(MPP)	0.273		2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02555 Protein	0.000	No mitochondrial presequence	8(MPP)	0.250	5-9,16-20	1-10-high	-	-	-	17-22	-	-	-	-	-	-	-	-	-	-	
+CNM02550 Protein	0.073	No mitochondrial presequence	11(MPP)	0.273		2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02555 Protein	0.530	Possessing mitochondrial presequence	8(MPP)	0.250	5-9,16-20	1-10-high	-	-	-	17-22	-	-	-	-	-	-	-	-	-	-	
 CNM02560 Protein	0.000	No mitochondrial presequence	39(MPP)	0.000	33-37,36-40,51-55,59-63,69-73,86-90	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02570 Protein	0.000	No mitochondrial presequence	40(MPP)	0.000	3-7	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNM02580 Protein	0.000	No mitochondrial presequence	43(MPP), 51(Oct1)	0.163		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNM02580 Protein	0.565	Possessing mitochondrial presequence	43(MPP), 51(Oct1)	0.163		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02600 Protein	0.000	No mitochondrial presequence	78(MPP)	0.013	17-21,93-97	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNM02605 Protein	0.000	No mitochondrial presequence	30(MPP)	-0.233	71-75	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00020 Protein	0.000	No mitochondrial presequence	23(MPP)	0.000	36-40	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00030 Protein	0.000	No mitochondrial presequence	56(MPP)	-0.125		3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00040 Protein	0.000	No mitochondrial presequence	28(MPP)	0.071	58-62,68-72,72-76	1-10-low	-	-	-	-	-	-	-	-	-	-	22-27	-	-	-	
+CNN00040 Protein	0.087	No mitochondrial presequence	28(MPP)	0.071	58-62,68-72,72-76	1-10-low	-	-	-	-	-	-	-	-	-	-	22-27	-	-	-	
 CNN00050 Protein	0.000	No mitochondrial presequence	79(MPP)	-0.076		6-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00060 Protein	0.000	No mitochondrial presequence	32(MPP)	0.031		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00070 Protein	0.000	No mitochondrial presequence	75(MPP)	-0.093		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00080 Protein	0.000	No mitochondrial presequence	65(MPP)	-0.338	81-85	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00085 Protein	0.000	No mitochondrial presequence	17(MPP)	0.059		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00085 Protein	0.042	No mitochondrial presequence	17(MPP)	0.059		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00090 Protein	0.000	No mitochondrial presequence	51(MPP)	-0.098	3-7,19-23	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00100 Protein	0.000	No mitochondrial presequence	13(MPP)	0.000		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00120 Protein	0.000	No mitochondrial presequence	16(MPP)	0.000	61-65	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00130 Protein	0.000	No mitochondrial presequence	7(MPP)	0.000		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00140 Protein	0.000	No mitochondrial presequence	83(MPP)	-0.060	10-14,14-18,94-98	9-18-high	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	-	
+CNN00100 Protein	0.004	No mitochondrial presequence	13(MPP)	0.000		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00120 Protein	0.006	No mitochondrial presequence	16(MPP)	0.000	61-65	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00130 Protein	0.022	No mitochondrial presequence	7(MPP)	0.000		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00140 Protein	0.004	No mitochondrial presequence	83(MPP)	-0.060	10-14,14-18,94-98	9-18-high	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	-	
 CNN00150 Protein	0.000	No mitochondrial presequence	48(MPP)	-0.125	65-69,69-73	19-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00155 Protein	0.000	No mitochondrial presequence	33(MPP)	0.000		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00160 Protein	0.000	No mitochondrial presequence	49(MPP)	0.020	46-50	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00170 Protein	0.000	No mitochondrial presequence	57(MPP), 58(Icp55)	-0.070		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00170 Protein	0.004	No mitochondrial presequence	57(MPP), 58(Icp55)	-0.070		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00175 Protein	0.000	No mitochondrial presequence	21(MPP)	-0.095	35-39	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00180 Protein	0.000	No mitochondrial presequence	21(MPP)	0.048	33-37	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00180 Protein	0.020	No mitochondrial presequence	21(MPP)	0.048	33-37	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00190 Protein	0.000	No mitochondrial presequence	14(MPP)	0.143		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00200 Protein	0.000	No mitochondrial presequence	37(MPP)	-0.270		7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00210 Protein	0.000	No mitochondrial presequence	56(MPP)	0.179		4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00213 Protein	0.000	No mitochondrial presequence	28(MPP)	0.000	4-8	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00210 Protein	0.042	No mitochondrial presequence	56(MPP)	0.179		4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00213 Protein	0.147	No mitochondrial presequence	28(MPP)	0.000	4-8	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00215 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.026		7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00220 Protein	0.000	No mitochondrial presequence	12(MPP)	-0.167		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00230 Protein	0.000	No mitochondrial presequence	88(MPP)	-0.102		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00240 Protein	0.000	No mitochondrial presequence	43(MPP)	-0.093	67-71	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00260 Protein	0.000	No mitochondrial presequence	55(MPP)	-0.036		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00270 Protein	0.000	No mitochondrial presequence	27(MPP)	0.148		2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00260 Protein	0.004	No mitochondrial presequence	55(MPP)	-0.036		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00270 Protein	0.013	No mitochondrial presequence	27(MPP)	0.148		2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00290 Protein	0.000	No mitochondrial presequence	73(MPP)	-0.123	9-13	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00300 Protein	0.000	No mitochondrial presequence	83(MPP)	-0.024	80-84	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00310 Protein	0.000	No mitochondrial presequence	20(MPP)	0.000	55-59	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00310 Protein	0.007	No mitochondrial presequence	20(MPP)	0.000	55-59	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00320 Protein	0.000	No mitochondrial presequence	43(MPP)	-0.023		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00330 Protein	0.000	No mitochondrial presequence	24(MPP)	0.208		5-14-low	-	-	-	-	-	-	2-7,16-21	-	20-25	1-6	-	-	-	-	
-CNN00340 Protein	0.000	No mitochondrial presequence	23(MPP)	0.217		18-27-low	-	-	-	-	-	-	3-8,15-20	-	19-24	2-7	-	-	-	-	
+CNN00330 Protein	0.981	Possessing mitochondrial presequence	24(MPP)	0.208		5-14-low	-	-	-	-	-	-	2-7,16-21	-	20-25	1-6	-	-	-	-	
+CNN00340 Protein	0.990	Possessing mitochondrial presequence	23(MPP)	0.217		18-27-low	-	-	-	-	-	-	3-8,15-20	-	19-24	2-7	-	-	-	-	
 CNN00350 Protein	0.000	No mitochondrial presequence	67(MPP)	-0.045		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00360 Protein	0.000	No mitochondrial presequence	49(MPP)	0.041		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00370 Protein	0.000	No mitochondrial presequence	52(MPP)	-0.019	26-30	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00360 Protein	0.003	No mitochondrial presequence	49(MPP)	0.041		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00370 Protein	0.006	No mitochondrial presequence	52(MPP)	-0.019	26-30	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00380 Protein	0.000	No mitochondrial presequence	30(MPP)	-0.033	43-47,69-73,93-97	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00390 Protein	0.000	No mitochondrial presequence	14(MPP)	0.143	49-53,81-85	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00390 Protein	0.019	No mitochondrial presequence	14(MPP)	0.143	49-53,81-85	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00395 Protein	0.000	No mitochondrial presequence	70(MPP), 71(Icp55)	-0.057		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00400 Protein	0.000	No mitochondrial presequence	54(MPP)	0.130		6-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00400 Protein	0.370	No mitochondrial presequence	54(MPP)	0.130		6-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00410 Protein	0.000	No mitochondrial presequence	18(MPP)	0.000		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00420 Protein	0.000	No mitochondrial presequence	29(MPP)	0.069		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00430 Protein	0.000	No mitochondrial presequence	63(MPP), 64(Icp55)	0.063	81-85	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00420 Protein	0.032	No mitochondrial presequence	29(MPP)	0.069		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00430 Protein	0.011	No mitochondrial presequence	63(MPP), 64(Icp55)	0.063	81-85	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00440 Protein	0.000	No mitochondrial presequence	38(MPP)	0.026	29-33,38-42	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00450 Protein	0.000	No mitochondrial presequence	16(MPP)	0.062		18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00460 Protein	0.000	No mitochondrial presequence	34(MPP)	0.206	31-35,64-68	3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00470 Protein	0.000	No mitochondrial presequence	69(MPP)	0.029		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00460 Protein	0.998	Possessing mitochondrial presequence	34(MPP)	0.206	31-35,64-68	3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00470 Protein	0.003	No mitochondrial presequence	69(MPP)	0.029		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00480 Protein	0.000	No mitochondrial presequence	41(MPP)	0.049		16-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00490 Protein	0.000	No mitochondrial presequence	44(MPP)	0.000		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00495 Protein	0.000	No mitochondrial presequence	41(MPP)	0.049		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00495 Protein	0.003	No mitochondrial presequence	41(MPP)	0.049		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00500 Protein	0.000	No mitochondrial presequence	31(MPP)	0.065		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00510 Protein	0.000	No mitochondrial presequence	35(MPP), 36(Icp55)	0.000		18-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00520 Protein	0.000	No mitochondrial presequence	54(MPP)	0.148	2-6,17-21,48-52	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00520 Protein	0.014	No mitochondrial presequence	54(MPP)	0.148	2-6,17-21,48-52	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00530 Protein	0.000	No mitochondrial presequence	62(MPP)	-0.048		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00540 Protein	0.000	No mitochondrial presequence	11(MPP)	0.091		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00540 Protein	0.082	No mitochondrial presequence	11(MPP)	0.091		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00550 Protein	0.000	No mitochondrial presequence	78(MPP)	0.000	65-69	19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00560 Protein	0.000	No mitochondrial presequence	24(MPP)	0.125	6-10	8-21-low	-	-	-	-	-	-	-	2-7	20-25	1-6	-	-	-	-	
+CNN00560 Protein	0.661	Possessing mitochondrial presequence	24(MPP)	0.125	6-10	8-21-low	-	-	-	-	-	-	-	2-7	20-25	1-6	-	-	-	-	
 CNN00570 Protein	0.000	No mitochondrial presequence	41(MPP)	-0.220		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00580 Protein	0.000	No mitochondrial presequence	42(MPP)	-0.071	56-60	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00590 Protein	0.000	No mitochondrial presequence	23(MPP)	0.043	49-53,59-63	2-11-low	-	24-29	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00610 Protein	0.000	No mitochondrial presequence	30(MPP)	0.000		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00620 Protein	0.000	No mitochondrial presequence	57(MPP)	-0.088	3-7	12-22-low	-	-	-	-	-	-	12-17	-	-	11-16	-	-	-	-	
+CNN00590 Protein	0.005	No mitochondrial presequence	23(MPP)	0.043	49-53,59-63	2-11-low	-	24-29	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00610 Protein	0.019	No mitochondrial presequence	30(MPP)	0.000		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00620 Protein	0.003	No mitochondrial presequence	57(MPP)	-0.088	3-7	12-22-low	-	-	-	-	-	-	12-17	-	-	11-16	-	-	-	-	
 CNN00630 Protein	0.000	No mitochondrial presequence	22(MPP)	-0.091	78-82,87-91	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00640 Protein	0.000	No mitochondrial presequence	61(MPP)	-0.033	69-73	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00650 Protein	0.000	No mitochondrial presequence	22(MPP)	0.182		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00660 Protein	0.000	No mitochondrial presequence	36(MPP)	0.028		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00650 Protein	0.043	No mitochondrial presequence	22(MPP)	0.182		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00660 Protein	0.003	No mitochondrial presequence	36(MPP)	0.028		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00670 Protein	0.000	No mitochondrial presequence	77(MPP)	-0.039		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00680 Protein	0.000	No mitochondrial presequence	32(MPP)	-0.125	48-52,94-98	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00690 Protein	0.000	No mitochondrial presequence	55(MPP)	0.109		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00700 Protein	0.000	No mitochondrial presequence	15(MPP), 16(Icp55)	0.000		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00710 Protein	0.000	No mitochondrial presequence	34(MPP), 35(Icp55)	0.147	57-61	3-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00710 Protein	0.018	No mitochondrial presequence	34(MPP), 35(Icp55)	0.147	57-61	3-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00720 Protein	0.000	No mitochondrial presequence	46(MPP), 47(Icp55)	0.000	60-64	17-26-low	-	21-26	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00730 Protein	0.000	No mitochondrial presequence	33(MPP)	-0.030	66-70,78-82	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00740 Protein	0.000	No mitochondrial presequence	41(MPP), 42(Icp55)	0.000	50-54	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00750 Protein	0.000	No mitochondrial presequence	11(MPP)	0.091		21-30-low	-	-	-	-	-	-	8-13	-	-	7-12	-	-	-	-	
-CNN00755 Protein	0.000	No mitochondrial presequence	27(MPP)	0.037	2-6,87-91	1-10-high	-	-	-	-	-	-	-	-	-	-	-	1-6	-	-	
+CNN00750 Protein	0.323	No mitochondrial presequence	11(MPP)	0.091		21-30-low	-	-	-	-	-	-	8-13	-	-	7-12	-	-	-	-	
+CNN00755 Protein	0.012	No mitochondrial presequence	27(MPP)	0.037	2-6,87-91	1-10-high	-	-	-	-	-	-	-	-	-	-	-	1-6	-	-	
 CNN00760 Protein	0.000	No mitochondrial presequence	26(MPP)	0.038	2-6	2-11-high	-	-	-	-	-	-	-	-	-	-	-	1-6	-	-	
-CNN00765 Protein	0.000	No mitochondrial presequence	34(MPP)	0.029		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00765 Protein	0.006	No mitochondrial presequence	34(MPP)	0.029		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00770 Protein	0.000	No mitochondrial presequence	41(MPP)	-0.098	94-98	13-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00780 Protein	0.000	No mitochondrial presequence	88(MPP)	0.080	3-7	20-29-low	-	-	-	-	-	-	-	-	1-6	-	-	-	-	-	
-CNN00790 Protein	0.000	No mitochondrial presequence	14(MPP)	0.071		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00780 Protein	0.021	No mitochondrial presequence	88(MPP)	0.080	3-7	20-29-low	-	-	-	-	-	-	-	-	1-6	-	-	-	-	-	
+CNN00790 Protein	0.003	No mitochondrial presequence	14(MPP)	0.071		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00800 Protein	0.000	No mitochondrial presequence	40(MPP)	0.150	55-59,94-98	19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00810 Protein	0.000	No mitochondrial presequence	27(MPP)	0.148	45-49	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00810 Protein	0.008	No mitochondrial presequence	27(MPP)	0.148	45-49	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00820 Protein	0.000	No mitochondrial presequence	10(MPP)	0.000	83-87	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00823 Protein	0.000	No mitochondrial presequence	39(MPP)	0.051		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00825 Protein	0.000	No mitochondrial presequence	20(MPP), 21(Icp55)	-0.150	17-21,23-27,29-33,43-47	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00830 Protein	0.000	No mitochondrial presequence	38(MPP)	0.026	71-75	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00825 Protein	0.004	No mitochondrial presequence	20(MPP), 21(Icp55)	-0.150	17-21,23-27,29-33,43-47	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00830 Protein	0.004	No mitochondrial presequence	38(MPP)	0.026	71-75	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00840 Protein	0.000	No mitochondrial presequence	21(MPP)	0.143	51-55	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00845 Protein	0.000	No mitochondrial presequence	26(MPP)	0.231		19-28-high	-	-	10-15	-	-	-	-	-	-	-	-	-	-	-	
+CNN00845 Protein	0.908	Possessing mitochondrial presequence	26(MPP)	0.231		19-28-high	-	-	10-15	-	-	-	-	-	-	-	-	-	-	-	
 CNN00850 Protein	0.000	No mitochondrial presequence	24(MPP), 25(Icp55)	-0.083	55-59,95-99	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00860 Protein	0.000	No mitochondrial presequence	56(MPP)	-0.018		5-14-low	-	-	-	-	-	-	-	-	-	-	12-17	-	-	-	
 CNN00870 Protein	0.000	No mitochondrial presequence	28(MPP)	-0.107	25-29,79-83	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00890 Protein	0.000	No mitochondrial presequence	59(MPP)	0.017	13-17	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00910 Protein	0.000	No mitochondrial presequence	9(MPP)	0.222		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00920 Protein	0.000	No mitochondrial presequence	7(MPP)	0.143		11-20-high	6-11	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00930 Protein	0.000	No mitochondrial presequence	56(MPP)	0.000	15-19,53-57,71-75,80-84	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00910 Protein	0.008	No mitochondrial presequence	9(MPP)	0.222		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00920 Protein	0.372	No mitochondrial presequence	7(MPP)	0.143		11-20-high	6-11	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00930 Protein	0.004	No mitochondrial presequence	56(MPP)	0.000	15-19,53-57,71-75,80-84	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00940 Protein	0.000	No mitochondrial presequence	76(MPP)	-0.066	53-57	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN00950 Protein	0.000	No mitochondrial presequence	6(MPP)	0.500		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00960 Protein	0.000	No mitochondrial presequence	22(MPP)	0.091	12-16	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00970 Protein	0.000	No mitochondrial presequence	19(MPP)	0.211		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN00980 Protein	0.000	No mitochondrial presequence	38(MPP)	0.158	1-5,5-9,20-24	1-10-high	-	-	-	-	-	-	-	-	-	-	-	19-24	-	-	
-CNN00990 Protein	0.000	No mitochondrial presequence	22(MPP)	0.091	34-38,93-97	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01000 Protein	0.000	No mitochondrial presequence	10(MPP)	0.000	18-22	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01005 Protein	0.000	No mitochondrial presequence	42(MPP)	0.048	92-96	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01010 Protein	0.000	No mitochondrial presequence	38(MPP)	0.132		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01020 Protein	0.000	No mitochondrial presequence	17(MPP), 18(Icp55)	0.059		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00960 Protein	0.048	No mitochondrial presequence	22(MPP)	0.091	12-16	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00970 Protein	0.003	No mitochondrial presequence	19(MPP)	0.211		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN00980 Protein	0.995	Possessing mitochondrial presequence	38(MPP)	0.158	1-5,5-9,20-24	1-10-high	-	-	-	-	-	-	-	-	-	-	-	19-24	-	-	
+CNN00990 Protein	0.018	No mitochondrial presequence	22(MPP)	0.091	34-38,93-97	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01000 Protein	0.007	No mitochondrial presequence	10(MPP)	0.000	18-22	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01005 Protein	0.034	No mitochondrial presequence	42(MPP)	0.048	92-96	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01010 Protein	0.440	Possessing mitochondrial presequence	38(MPP)	0.132		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01020 Protein	0.004	No mitochondrial presequence	17(MPP), 18(Icp55)	0.059		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01030 Protein	0.000	No mitochondrial presequence	78(MPP)	0.013	75-79	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01040 Protein	0.000	No mitochondrial presequence	14(MPP)	0.071	38-42,58-62	8-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01050 Protein	0.000	No mitochondrial presequence	23(MPP)	0.174		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01050 Protein	0.065	No mitochondrial presequence	23(MPP)	0.174		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01060 Protein	0.000	No mitochondrial presequence	12(MPP)	0.083	9-13	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01070 Protein	0.000	No mitochondrial presequence	46(MPP)	0.022	43-47,93-97,96-100	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01075 Protein	0.000	No mitochondrial presequence	20(MPP), 21(Icp55)	-0.100		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01080 Protein	0.000	No mitochondrial presequence	7(MPP)	0.286		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01075 Protein	0.004	No mitochondrial presequence	20(MPP), 21(Icp55)	-0.100		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01080 Protein	0.005	No mitochondrial presequence	7(MPP)	0.286		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01090 Protein	0.000	No mitochondrial presequence	14(MPP)	0.071		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01100 Protein	0.000	No mitochondrial presequence	11(MPP)	0.182	4-8,46-50	4-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01120 Protein	0.000	No mitochondrial presequence	45(MPP)	-0.044	32-36	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01130 Protein	0.000	No mitochondrial presequence	28(MPP)	0.107	13-17,47-51,57-61,63-67	13-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01100 Protein	0.053	No mitochondrial presequence	11(MPP)	0.182	4-8,46-50	4-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01120 Protein	0.008	No mitochondrial presequence	45(MPP)	-0.044	32-36	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01130 Protein	0.606	Possessing mitochondrial presequence	28(MPP)	0.107	13-17,47-51,57-61,63-67	13-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01140 Protein	0.000	No mitochondrial presequence	43(MPP)	0.000	36-40	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01150 Protein	0.000	No mitochondrial presequence	24(MPP)	0.167		2-14-low	-	-	-	-	-	-	16-21	-	20-25	-	-	-	-	-	
-CNN01165 Protein	0.000	No mitochondrial presequence	54(MPP)	0.074	24-28	19-28-low	-	-	-	-	-	-	-	-	-	-	-	23-28	-	-	
-CNN01170 Protein	0.000	No mitochondrial presequence	53(MPP)	0.019		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01150 Protein	0.871	Possessing mitochondrial presequence	24(MPP)	0.167		2-14-low	-	-	-	-	-	-	16-21	-	20-25	-	-	-	-	-	
+CNN01165 Protein	0.017	No mitochondrial presequence	54(MPP)	0.074	24-28	19-28-low	-	-	-	-	-	-	-	-	-	-	-	23-28	-	-	
+CNN01170 Protein	0.039	No mitochondrial presequence	53(MPP)	0.019		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01175 Protein	0.000	No mitochondrial presequence	67(MPP)	-0.030	58-62	4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01180 Protein	0.000	No mitochondrial presequence	33(MPP)	0.030		20-29-high	-	-	-	-	-	-	23-28	-	-	-	-	-	-	22-27	
+CNN01180 Protein	0.032	No mitochondrial presequence	33(MPP)	0.030		20-29-high	-	-	-	-	-	-	23-28	-	-	-	-	-	-	22-27	
 CNN01190 Protein	0.000	No mitochondrial presequence	48(MPP)	0.000	38-42,50-54	1-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01195 Protein	0.000	No mitochondrial presequence	45(MPP)	0.067	46-50,68-72	9-18-high	-	-	-	-	-	-	-	-	-	12-17	-	-	-	-	
+CNN01195 Protein	0.272	No mitochondrial presequence	45(MPP)	0.067	46-50,68-72	9-18-high	-	-	-	-	-	-	-	-	-	12-17	-	-	-	-	
 CNN01200 Protein	0.000	No mitochondrial presequence	26(MPP)	0.077		16-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01210 Protein	0.000	No mitochondrial presequence	42(MPP)	0.000	39-43	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01220 Protein	0.000	No mitochondrial presequence	46(MPP)	0.130	1-5	1-10-high	-	-	-	-	1-6	-	-	-	-	-	-	-	-	-	
-CNN01250 Protein	0.000	No mitochondrial presequence	49(MPP)	0.061	64-68	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01220 Protein	0.095	No mitochondrial presequence	46(MPP)	0.130	1-5	1-10-high	-	-	-	-	1-6	-	-	-	-	-	-	-	-	-	
+CNN01250 Protein	0.066	No mitochondrial presequence	49(MPP)	0.061	64-68	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01260 Protein	0.000	No mitochondrial presequence	44(MPP)	-0.114	80-84	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01270 Protein	0.000	No mitochondrial presequence	18(MPP), 19(Icp55)	0.111	77-81	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01270 Protein	0.022	No mitochondrial presequence	18(MPP), 19(Icp55)	0.111	77-81	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01280 Protein	0.000	No mitochondrial presequence	89(MPP)	-0.169	58-62	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01290 Protein	0.000	No mitochondrial presequence	78(MPP)	0.026		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01300 Protein	0.000	No mitochondrial presequence	67(MPP)	-0.030		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01310 Protein	0.000	No mitochondrial presequence	73(MPP)	-0.151	81-85	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01320 Protein	0.000	No mitochondrial presequence	36(MPP), 37(Icp55)	0.167		1-10-high	-	-	-	-	-	-	4-9	-	-	-	-	-	-	3-8	
-CNN01330 Protein	0.000	No mitochondrial presequence	23(MPP)	0.217	45-49	4-15-high	-	-	-	-	-	11-16	-	-	-	-	-	-	-	-	
+CNN01320 Protein	0.982	Possessing mitochondrial presequence	36(MPP), 37(Icp55)	0.167		1-10-high	-	-	-	-	-	-	4-9	-	-	-	-	-	-	3-8	
+CNN01330 Protein	0.913	Possessing mitochondrial presequence	23(MPP)	0.217	45-49	4-15-high	-	-	-	-	-	11-16	-	-	-	-	-	-	-	-	
 CNN01340 Protein	0.000	No mitochondrial presequence	14(MPP)	0.071		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01345 Protein	0.000	No mitochondrial presequence	45(MPP)	0.022		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01350 Protein	0.000	No mitochondrial presequence	28(MPP)	0.214	73-77	13-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01360 Protein	0.000	No mitochondrial presequence	29(MPP)	0.103	12-16,30-34	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01350 Protein	0.223	No mitochondrial presequence	28(MPP)	0.214	73-77	13-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01360 Protein	0.054	No mitochondrial presequence	29(MPP)	0.103	12-16,30-34	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01370 Protein	0.000	No mitochondrial presequence	66(MPP), 67(Icp55)	0.182		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01385 Protein	0.000	No mitochondrial presequence	17(MPP)	0.412	43-47	5-17-high	-	-	-	-	-	-	-	-	4-9	-	3-8	-	-	-	
+CNN01385 Protein	0.847	Possessing mitochondrial presequence	17(MPP)	0.412	43-47	5-17-high	-	-	-	-	-	-	-	-	4-9	-	3-8	-	-	-	
 CNN01390 Protein	0.000	No mitochondrial presequence	37(MPP)	0.027	41-45	14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01400 Protein	0.000	No mitochondrial presequence	13(MPP)	0.154		18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01400 Protein	0.025	No mitochondrial presequence	13(MPP)	0.154		18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01410 Protein	0.000	No mitochondrial presequence	17(MPP)	0.000		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01420 Protein	0.000	No mitochondrial presequence	16(MPP)	0.250	1-5,16-20,35-39,60-64,84-88	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01430 Protein	0.000	No mitochondrial presequence	20(MPP)	0.200		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01420 Protein	0.052	No mitochondrial presequence	16(MPP)	0.250	1-5,16-20,35-39,60-64,84-88	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01430 Protein	0.028	No mitochondrial presequence	20(MPP)	0.200		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01440 Protein	0.000	No mitochondrial presequence	94(MPP)	-0.160		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01450 Protein	0.000	No mitochondrial presequence	66(MPP)	0.061		12-21-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01460 Protein	0.000	No mitochondrial presequence	25(MPP)	0.200	22-26,55-59	4-13-high	-	-	10-15	-	-	-	-	-	-	-	-	-	22-27	-	
+CNN01450 Protein	0.031	No mitochondrial presequence	66(MPP)	0.061		12-21-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01460 Protein	0.996	Possessing mitochondrial presequence	25(MPP)	0.200	22-26,55-59	4-13-high	-	-	10-15	-	-	-	-	-	-	-	-	-	22-27	-	
 CNN01470 Protein	0.000	No mitochondrial presequence	9(MPP)	0.000		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01475 Protein	0.000	No mitochondrial presequence	28(MPP)	0.036	26-30	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01475 Protein	0.010	No mitochondrial presequence	28(MPP)	0.036	26-30	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01480 Protein	0.000	No mitochondrial presequence	37(MPP)	0.027		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01490 Protein	0.000	No mitochondrial presequence	65(MPP)	0.108	62-66	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01500 Protein	0.000	No mitochondrial presequence	23(MPP)	-0.087		21-30-high	-	-	-	-	-	-	20-25	-	-	-	-	-	-	-	
 CNN01510 Protein	0.000	No mitochondrial presequence	45(MPP)	-0.044		12-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01520 Protein	0.000	No mitochondrial presequence	7(MPP)	0.286		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01530 Protein	0.000	No mitochondrial presequence	40(MPP)	0.100	37-41,84-88	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01540 Protein	0.000	No mitochondrial presequence	13(MPP)	0.231		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01550 Protein	0.000	No mitochondrial presequence	24(MPP), 32(Oct1)	0.250	2-6,62-66	1-13-high	23-28	-	-	-	-	-	-	-	-	-	-	1-6	-	-	
+CNN01530 Protein	0.024	No mitochondrial presequence	40(MPP)	0.100	37-41,84-88	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01540 Protein	0.004	No mitochondrial presequence	13(MPP)	0.231		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01550 Protein	1.000	Possessing mitochondrial presequence	24(MPP), 32(Oct1)	0.250	2-6,62-66	1-13-high	23-28	-	-	-	-	-	-	-	-	-	-	1-6	-	-	
 CNN01560 Protein	0.000	No mitochondrial presequence	72(MPP)	-0.028		11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01570 Protein	0.000	No mitochondrial presequence	44(MPP), 52(Oct1)	0.114	7-11,20-24	13-24-high	22-27	-	-	-	-	-	-	-	-	-	-	19-24	20-25	-	
-CNN01595 Protein	0.000	No mitochondrial presequence	56(MPP)	0.071		12-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01570 Protein	0.851	Possessing mitochondrial presequence	44(MPP), 52(Oct1)	0.114	7-11,20-24	13-24-high	22-27	-	-	-	-	-	-	-	-	-	-	19-24	20-25	-	
+CNN01595 Protein	0.023	No mitochondrial presequence	56(MPP)	0.071		12-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01600 Protein	0.000	No mitochondrial presequence	16(MPP)	0.125		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01610 Protein	0.000	No mitochondrial presequence	48(MPP)	0.042		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01620 Protein	0.000	No mitochondrial presequence	33(MPP)	0.121	30-34	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01620 Protein	0.004	No mitochondrial presequence	33(MPP)	0.121	30-34	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01630 Protein	0.000	No mitochondrial presequence	30(MPP)	0.000		10-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01635 Protein	0.000	No mitochondrial presequence	30(MPP)	0.000	78-82	15-26-low	-	-	-	-	-	-	22-27	-	-	-	-	-	-	21-26	
-CNN01640 Protein	0.000	No mitochondrial presequence	55(MPP)	0.055		10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01635 Protein	0.067	No mitochondrial presequence	30(MPP)	0.000	78-82	15-26-low	-	-	-	-	-	-	22-27	-	-	-	-	-	-	21-26	
+CNN01640 Protein	0.003	No mitochondrial presequence	55(MPP)	0.055		10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01650 Protein	0.000	No mitochondrial presequence	12(MPP)	0.250		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01660 Protein	0.000	No mitochondrial presequence	35(MPP)	0.143	17-21	15-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01660 Protein	0.928	Possessing mitochondrial presequence	35(MPP)	0.143	17-21	15-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01670 Protein	0.000	No mitochondrial presequence	38(MPP)	-0.132	95-99	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01680 Protein	0.000	No mitochondrial presequence	13(MPP)	0.308		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01690 Protein	0.000	No mitochondrial presequence	8(MPP)	0.125		9-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01700 Protein	0.000	No mitochondrial presequence	40(MPP)	0.075		10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01710 Protein	0.000	No mitochondrial presequence	31(MPP)	0.194		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01720 Protein	0.000	No mitochondrial presequence	66(MPP)	0.106	1-5,44-48,63-67,94-98	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01730 Protein	0.000	No mitochondrial presequence	10(MPP)	0.100	7-11,90-94	3-12-high	-	-	-	-	-	-	-	-	-	-	-	6-11	-	-	
+CNN01680 Protein	0.004	No mitochondrial presequence	13(MPP)	0.308		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01690 Protein	0.013	No mitochondrial presequence	8(MPP)	0.125		9-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01700 Protein	0.003	No mitochondrial presequence	40(MPP)	0.075		10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01710 Protein	0.868	Possessing mitochondrial presequence	31(MPP)	0.194		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01720 Protein	0.098	No mitochondrial presequence	66(MPP)	0.106	1-5,44-48,63-67,94-98	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01730 Protein	0.021	No mitochondrial presequence	10(MPP)	0.100	7-11,90-94	3-12-high	-	-	-	-	-	-	-	-	-	-	-	6-11	-	-	
 CNN01740 Protein	0.000	No mitochondrial presequence	46(MPP)	0.087	43-47	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01750 Protein	0.000	No mitochondrial presequence	22(MPP)	0.045	34-38,51-55	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01755 Protein	0.000	No mitochondrial presequence	88(MPP), 96(Oct1)	0.000	85-89	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01760 Protein	0.000	No mitochondrial presequence	45(MPP)	0.000		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01770 Protein	0.000	No mitochondrial presequence	39(MPP)	0.000		4-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01760 Protein	0.005	No mitochondrial presequence	45(MPP)	0.000		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01770 Protein	0.004	No mitochondrial presequence	39(MPP)	0.000		4-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01780 Protein	0.000	No mitochondrial presequence	4(MPP)	0.500		10-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01790 Protein	0.000	No mitochondrial presequence	20(MPP)	0.100		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01800 Protein	0.000	No mitochondrial presequence	18(MPP), 19(Icp55)	0.278	1-5	17-26-low	-	-	-	-	1-6	4-9	-	-	-	-	-	-	-	-	
+CNN01800 Protein	0.968	Possessing mitochondrial presequence	18(MPP), 19(Icp55)	0.278	1-5	17-26-low	-	-	-	-	1-6	4-9	-	-	-	-	-	-	-	-	
 CNN01810 Protein	0.000	No mitochondrial presequence	27(MPP)	-0.111		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01820 Protein	0.000	No mitochondrial presequence	75(MPP)	-0.027	12-16,72-76	4-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01820 Protein	0.004	No mitochondrial presequence	75(MPP)	-0.027	12-16,72-76	4-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01830 Protein	0.000	No mitochondrial presequence	56(MPP)	-0.125		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01840 Protein	0.000	No mitochondrial presequence	17(MPP)	-0.176		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01850 Protein	0.000	No mitochondrial presequence	14(MPP)	0.071	11-15	6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01860 Protein	0.000	No mitochondrial presequence	40(MPP)	0.175		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01850 Protein	0.045	No mitochondrial presequence	14(MPP)	0.071	11-15	6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01860 Protein	0.004	No mitochondrial presequence	40(MPP)	0.175		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01870 Protein	0.000	No mitochondrial presequence	45(MPP)	-0.067	6-10	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	6-11	-	
-CNN01875 Protein	0.000	No mitochondrial presequence	12(MPP), 20(Oct1)	-0.083	24-28	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01880 Protein	0.000	No mitochondrial presequence	46(MPP)	0.109	63-67	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01890 Protein	0.000	No mitochondrial presequence	40(MPP)	0.150	69-73,96-100	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01875 Protein	0.007	No mitochondrial presequence	12(MPP), 20(Oct1)	-0.083	24-28	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01880 Protein	0.013	No mitochondrial presequence	46(MPP)	0.109	63-67	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01890 Protein	0.044	No mitochondrial presequence	40(MPP)	0.150	69-73,96-100	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01900 Protein	0.000	No mitochondrial presequence	10(MPP)	-0.200	7-11,48-52,75-79	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01910 Protein	0.000	No mitochondrial presequence	44(MPP), 52(Oct1)	0.159	14-18,85-89	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01910 Protein	0.666	Possessing mitochondrial presequence	44(MPP), 52(Oct1)	0.159	14-18,85-89	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01920 Protein	0.000	No mitochondrial presequence	22(MPP)	0.000	78-82	16-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01930 Protein	0.000	No mitochondrial presequence	39(MPP)	0.128	1-5	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01930 Protein	0.054	No mitochondrial presequence	39(MPP)	0.128	1-5	1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01940 Protein	0.000	No mitochondrial presequence	20(MPP)	-0.400		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN01950 Protein	0.000	No mitochondrial presequence	75(MPP)	0.000		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN01960 Protein	0.000	No mitochondrial presequence	58(MPP), 59(Icp55)	0.017	13-17,72-76	4-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN01960 Protein	0.052	No mitochondrial presequence	58(MPP), 59(Icp55)	0.017	13-17,72-76	4-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02060 Protein	0.000	No mitochondrial presequence	15(MPP)	0.000	63-67	13-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02070 Protein	0.000	No mitochondrial presequence	45(MPP)	0.178		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02070 Protein	0.008	No mitochondrial presequence	45(MPP)	0.178		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02080 Protein	0.000	No mitochondrial presequence	72(MPP)	0.014		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02090 Protein	0.000	No mitochondrial presequence	33(MPP)	0.061		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02090 Protein	0.006	No mitochondrial presequence	33(MPP)	0.061		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02100 Protein	0.000	No mitochondrial presequence	92(MPP), 93(Icp55)	-0.152		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02110 Protein	0.000	No mitochondrial presequence	91(MPP)	-0.011		1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02115 Protein	0.000	No mitochondrial presequence	9(MPP)	0.111		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02120 Protein	0.000	No mitochondrial presequence	31(MPP)	0.226	8-12	17-26-low	-	-	-	-	-	-	-	15-20	-	-	-	-	-	14-19	
+CNN02110 Protein	0.006	No mitochondrial presequence	91(MPP)	-0.011		1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02115 Protein	0.036	No mitochondrial presequence	9(MPP)	0.111		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02120 Protein	0.210	No mitochondrial presequence	31(MPP)	0.226	8-12	17-26-low	-	-	-	-	-	-	-	15-20	-	-	-	-	-	14-19	
 CNN02130 Protein	0.000	No mitochondrial presequence	31(MPP)	-0.065	28-32,69-73	6-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02140 Protein	0.000	No mitochondrial presequence	90(MPP)	0.078	44-48	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02150 Protein	0.000	No mitochondrial presequence	47(MPP)	0.000	44-48,57-61,70-74	1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02160 Protein	0.000	No mitochondrial presequence	45(MPP)	-0.044		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02170 Protein	0.000	No mitochondrial presequence	10(MPP)	0.000		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02180 Protein	0.000	No mitochondrial presequence	31(MPP)	0.032		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02190 Protein	0.000	No mitochondrial presequence	32(MPP)	0.188	92-96,95-99	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02190 Protein	0.450	Possessing mitochondrial presequence	32(MPP)	0.188	92-96,95-99	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02200 Protein	0.000	No mitochondrial presequence	39(MPP)	0.128		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02220 Protein	0.000	No mitochondrial presequence	38(MPP)	0.000		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02230 Protein	0.000	No mitochondrial presequence	35(MPP)	0.057		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02240 Protein	0.000	No mitochondrial presequence	27(MPP)	0.185	54-58	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02240 Protein	0.155	No mitochondrial presequence	27(MPP)	0.185	54-58	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02250 Protein	0.000	No mitochondrial presequence	61(MPP)	-0.066	59-63	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02260 Protein	0.000	No mitochondrial presequence	38(MPP)	0.053	94-98	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02260 Protein	0.005	No mitochondrial presequence	38(MPP)	0.053	94-98	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02270 Protein	0.000	No mitochondrial presequence	18(MPP)	0.056		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02280 Protein	0.000	No mitochondrial presequence	19(MPP)	0.158	7-11	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02280 Protein	0.003	No mitochondrial presequence	19(MPP)	0.158	7-11	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02290 Protein	0.000	No mitochondrial presequence	23(MPP)	0.043		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02300 Protein	0.000	No mitochondrial presequence	35(MPP)	-0.029		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02310 Protein	0.000	No mitochondrial presequence	43(MPP)	0.047	49-53	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02310 Protein	0.003	No mitochondrial presequence	43(MPP)	0.047	49-53	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02315 Protein	0.000	No mitochondrial presequence	18(MPP)	-0.278		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02320 Protein	0.000	No mitochondrial presequence	90(MPP)	-0.044		16-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02330 Protein	0.000	No mitochondrial presequence	40(MPP)	-0.025		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02340 Protein	0.000	No mitochondrial presequence	32(MPP)	-0.031	30-34,53-57	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02360 Protein	0.000	No mitochondrial presequence	47(MPP)	0.106	25-29	5-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02370 Protein	0.000	No mitochondrial presequence	12(MPP)	0.167		16-25-high	-	-	-	-	-	18-23	-	-	-	-	-	-	-	-	
+CNN02360 Protein	0.003	No mitochondrial presequence	47(MPP)	0.106	25-29	5-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02370 Protein	0.166	No mitochondrial presequence	12(MPP)	0.167		16-25-high	-	-	-	-	-	18-23	-	-	-	-	-	-	-	-	
 CNN02390 Protein	0.000	No mitochondrial presequence	55(MPP)	-0.091		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	17-22	
-CNN02400 Protein	0.000	No mitochondrial presequence	16(MPP)	0.250		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02410 Protein	0.000	No mitochondrial presequence	17(MPP)	0.118	40-44	8-17-high	-	-	-	-	-	-	-	-	12-17	-	-	-	-	-	
+CNN02400 Protein	0.073	No mitochondrial presequence	16(MPP)	0.250		1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02410 Protein	0.185	No mitochondrial presequence	17(MPP)	0.118	40-44	8-17-high	-	-	-	-	-	-	-	-	12-17	-	-	-	-	-	
 CNN02413 Protein	0.000	No mitochondrial presequence	26(MPP)	-0.115	90-94	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02415 Protein	0.000	No mitochondrial presequence	43(MPP)	0.000	12-16,95-99	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02420 Protein	0.000	No mitochondrial presequence	25(MPP)	0.000		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02415 Protein	0.018	No mitochondrial presequence	43(MPP)	0.000	12-16,95-99	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02420 Protein	0.022	No mitochondrial presequence	25(MPP)	0.000		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CNN02440 Protein	0.000	No mitochondrial presequence	10(MPP)	-0.200		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02455 Protein	0.000	No mitochondrial presequence	12(MPP)	0.083		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CNN02460 Protein	0.000	No mitochondrial presequence	29(MPP)	0.103	26-30,30-34	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02455 Protein	0.005	No mitochondrial presequence	12(MPP)	0.083		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+CNN02460 Protein	0.053	No mitochondrial presequence	29(MPP)	0.103	26-30,30-34	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
