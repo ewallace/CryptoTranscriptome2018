@@ -1,0 +1,484 @@
+---
+title: "Start codon context for Saccharomyces cerevisiae"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 16 Aug 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This presents the renewed analysis of Saccharomyces start codon usage and context. This uses the S. cerevisiae S288C expression and translation estimates from David Weinberg et al 2017.
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/SacCerATGContext-",
+                      cache.path="cache/SacCerATGContext-")
+library(tidyverse)
+library(cowplot)
+library(ggrepel)
+library(ggseqlogo)
+library(Biostrings)
+
+theme_set(theme_cowplot(font_size=12) + 
+              theme(strip.background = element_blank()) )
+
+
+
+geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
+    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
+}
+
+scientific_10 <- function(x) {
+    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
+    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
+    xout <- gsub("{+", "{", xout,fixed=TRUE)
+    xout <- gsub("{0", "{", xout,fixed=TRUE)
+    xout <- paste(xout,"}",sep="")
+    return(parse(text=xout))
+}
+
+scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
+    breaks10 <- 10^omag
+    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
+}
+
+scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
+    breaks10 <- 10^omag
+    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
+}
+
+scale_loglog <- function(...) {
+    list(scale_x_log10nice(...),scale_y_log10nice(...))
+}
+
+round3 <- function(x) round(x,digits=3)
+
+logmean <- function(x) {
+    lx <- log(x)
+    exp( mean( lx[is.finite(lx)] ) )
+}
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+
+# Here we go
+
+## Expression: RNA abundance and ribosome-protected-fragments
+
+### Load expression data
+
+```{r load_ribosum_Sc,results="show"}
+
+ribosum_Sc <- read_tsv("data_in/ExpressionTranslation/Weinberg2016_SacCer_riboprofiling.txt") %>%
+    rename(Gene_name="Gene",Ribo="RPF")
+
+ribosum_Sc %>%
+    arrange(desc(RPF)) 
+
+hiTrans_Sc <- ribosum_Sc %>%
+    arrange(desc(RPF)) %>%
+    head(n=300) %>%
+    .$Gene
+
+enoughRNA_Sc <- ribosum_Sc %>%
+    arrange(desc(RNA)) %>%
+    head(n=3000) %>%
+    .$Gene
+```
+
+We also calculated hiTrans_Sc, the top 5% (330) translated genes by RPF TPM.
+
+### Ribosome occupancy mostly tracks RNA abundance
+
+```{r plot_TE_Sc,dependson="load_ribosum_Sc",fig.height=3.9,fig.width=4.1}
+TE_unusual_Sc <- 
+    ribosum_Sc %>%
+    filter( (RPF > 1.8e4) |
+                (RPF > 100 & RPF > RNA * 5 ) | 
+                (RNA > 150 & RPF < RNA / 10 ))
+
+
+ggplot(data=ribosum_Sc,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    geom_point(data=TE_unusual_Sc,aes(colour=Gene),size=1) + 
+    geom_text_repel(data=TE_unusual_Sc,aes(label=Gene,colour=Gene)) +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of aORF)",
+         y="Ribosome occupancy (TPM of aORF)") +
+    theme(legend.position="none")
+```
+
+## ATG Context
+
+### Load context data
+
+```{r load_context_Sc,results="show"}
+ctbl_big_Sc <- read_tsv("data_in/SacCer_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    select_at(1:19)
+ctbl_big_Sc
+```
+
+### Annotated ATGs have a Kozak consensus sequence
+
+```{r aATG_context_Sc,fig.width=4,fig.height=1}
+ggseqlogo(data=ctbl_big_Sc$aATG.context,namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Highly translated Annotated ATGs have a Kozak consensus sequence
+
+That's for hiTrans_Sc, the top 5% (330) translated genes by RPF TPM.
+
+```{r a_hi_context_Sc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Sc,Gene %in% hiTrans_Sc)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+
+
+### Downstream ATGs don't have a consensus
+
+First downstream ATG
+
+```{r d1_context_Sc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Sc,nchar(d1.context) ==24)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Downstream ATGs in frame and highly translated don't have a consensus
+
+Except for 3rd-codon-position bias.
+
+```{r d1_hi_frame0_context_Sc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Sc,
+                      nchar(d1.context) == 24,
+                      d1.frame==0,
+                      Gene %in% hiTrans_Sc)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+## Calculate Information content and scores of consensus motif
+
+### Calculate a wide and a narrow consensus sequence
+
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+
+```{r kozak_consensus_Sc,fig.width=4,fig.height=1}
+kozak_w_PFM_Sc <- filter(ctbl_big_Sc,Gene %in% hiTrans_Sc) %>%
+    .$aATG.context %>%
+    str_sub(start=4L,end=18L) %>%
+    str_to_upper() %>%
+    consensusMatrix() 
+
+kozak_w_PWM_Sc <- PWM(kozak_w_PFM_Sc)
+kozak_n_PWM_Sc <- kozak_w_PFM_Sc[,5:12] %>% PWM()
+```
+
+
+```{r write_PFM_Sc, dependson="calc_scores_Sc",results="show"}
+cat(
+    "# PFM_hiTrans_Sc.txt
+# Position Frequency Matrix for aATGs of 330 highest-translated genes from Sc
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+",
+file="data_out/PFM_hiTrans_Sc.txt")
+kozak_w_PFM_Sc %>%
+    as.tibble() %>%
+    write_tsv("data_out/PFM_hiTrans_Sc.txt",
+              append = TRUE,col_names=FALSE)
+```
+
+### Estimate the information content 
+
+Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
+
+```{r kozak_inf_Sc,fig.width=4,fig.height=1}
+entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
+    counts <- counts + pseudocount
+    ntot = sum(counts)
+    freqs = counts / sum(counts)
+    Hentropy = - sum( freqs * log2(freqs) ) 
+    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
+    information = log2(ssize) - Hentropy
+    return(information)
+}
+
+entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
+    apply(pfm,2,entropy1) %>% sum()
+}
+
+entropytot(kozak_w_PFM_Sc)
+# entropytot(kozak_w_PFM_Sc[,5:12])
+entropytot(kozak_w_PFM_Sc[,-(10:12)])
+entropytot(kozak_w_PFM_Sc[,5:9])
+```
+
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_Sc[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_Sc[,-(10:12)]) %>% round(2)`.
+
+### Calculate scores of aATG, dATG, uATG against Kozak consensus
+
+```{r calc_scores_Sc, dependson="kozak_consensus_Sc"}
+
+PWMscore <- function(seqs,pwm,startl) {
+    # calculate scores for a character vector seqs against
+    # pwm from given starting position
+    # after checking strings are non-missing and start with ACTG
+    vapply(str_sub(seqs,start=startl),
+           function(ss) {
+               if ( is.na(ss) ) {
+                   return(NA)
+               } else if ( str_detect(ss,"\\A[ACTG]") ) {
+                   return( PWMscoreStartingAt(pwm,ss) )
+               } else {
+                   return(NA) 
+               } 
+           } ,
+           FUN.VALUE = 0)
+}
+
+PWMscoren <- function(seqs,pwm=kozak_n_PWM_Sc,startl=8) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+PWMscorew <- function(seqs,pwm=kozak_w_PWM_Sc,startl=4) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+is.context <- function(x) str_detect(x,"context")
+
+scores_Sc <- 
+    ctbl_big_Sc %>%
+    transmute(Gene,
+              aATG.scorekn = PWMscoren(str_to_upper(aATG.context)),
+              d1.scorekn   = PWMscoren(d1.context),
+              u1.scorekn   = PWMscoren(u1.context),
+              # aATG.scorekw = PWMscorew(str_to_upper(aATG.context)),
+              # d1.scorekw   = PWMscorew(d1.context),
+              # u1.scorekw   = PWMscorew(u1.context),
+              NULL
+    ) %>%
+    mutate(d1vsan = d1.scorekn - aATG.scorekn,
+           u1vsan = u1.scorekn - aATG.scorekn,
+           # d1vsaw = d1.scorekw - aATG.scorekw,
+           # u1vsaw = u1.scorekw - aATG.scorekw,
+           NULL) 
+
+ribotbl_scoresenough_Sc <-
+    ribosum_Sc %>%
+    filter(Gene %in% enoughRNA_Sc) %>%
+    # left_join(ribotbl_Sc,by="Gene") %>% 
+    left_join(scores_Sc,by="Gene")
+
+```
+
+We calculate scores using Biostrings::PWMscoreStartingAt.
+
+The best description I could find of this method is: https://support.bioconductor.org/p/61520/
+
+It is just the sum of the matrix product of the PWM with the sequence.
+
+
+Write scores to file *scores_kozak_Sc.txt*.
+
+```{r write_scores_Sc, dependson="calc_scores_Sc",results="show"}
+scores_Sc
+cat(
+    "# scores_kozak_Sc.txt
+# Scores of ATG context against Kozak sequence, C. neoformans serotype D Sc
+# Kozak sequence derived from 330 highest-translated genes by RPF
+#
+# Gene: Sc systematic gene name
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# d1.scorekn: score of 1st downstream ATG agains narrow
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+#
+# Edward Wallace, June 2018
+",
+file="data_out/scores_kozak_Sc.txt")
+scores_Sc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/scores_kozak_Sc.txt",
+              append = TRUE,col_names=TRUE)
+```
+
+### Plot against narrow consensus (-5 to ATG)
+
+```{r plot_scores_n_Sc, dependson="calc_scores_Sc", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_Sc) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=u1.scorekn,colour="uATG"),
+                kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores_Sc,Gene %in% hiTrans_Sc),
+                 aes(x=aATG.scorekn,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak score, Sc") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+## Compare aATG and dATG context by gene
+
+### Most dATG scores are less than aATG scores
+
+```{r dvsaATG_scoresdens_Sc, dependson="calc_scores_Sc", fig.width=3.5,fig.height=1.8}
+
+ggplot(data=scores_Sc) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(aes(x=d1vsan,colour="narrow"),kernel="rectangular") +
+    # geom_density(aes(x=d1vsaw,colour="wide"),kernel="rectangular")  +
+    labs(x="difference in score, dATG vs aATG",
+         colour="context") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.position=c(0.8,0.8))
+```
+
+### For highly translated genes, most dATG scores are much less than aATG
+
+```{r dvsaATG_scoresn_Sc, dependson="calc_scores_Sc", fig.width=3.5,fig.height=3.5}
+highdiffn_dvsaATG_Sc <- scores_Sc %>%
+    arrange(desc(d1vsan)) %>%
+    head(n=330) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+ggplot(data=scores_Sc %>% filter(!is.na(d1.scorekn)),
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffn_dvsaATG_Sc,
+               colour="red",size=1) +
+    geom_point(data=scores_Sc %>% 
+                   filter(Gene %in% hiTrans_Sc),
+               colour="blue",size=1) +
+    geom_point(data=highdiffn_dvsaATG_Sc %>% 
+                   filter(Gene %in% hiTrans_Sc),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+Red: high dATG vs aATG **Kozak** score.
+Blue: highly translated.
+Purple: both.
+
+## Genes with unusual dATG vs aATG narrow score
+
+Those genes are in this list:
+
+```{r highdiffn_dvsaATG_Sc,dependson="dvsaATG_scoresn_Sc",results="show"}
+highdiffn_dvsaATG_Sc
+```
+
+* SRL2 / YLR082C unknown function, localized to nucleus and cytoplasm
+* HSF1 / YGL073W heat shock transcription factor 1, known to shuttle between nucleus and cytoplasm, weird reported mitochondrial localization
+* YER156C, unknown function,  localizes to the nucleus and cytoplasm in a large-scale study
+* INP1 / YMR204C, peripheral membrane protein of peroxisomes
+* CIN8 / YEL061C, kinesin motor protein involved in mitosis. Reported mitochondrial localization.
+* ERI1 / YPL096C-A, ER-associated Ras Inhibitor
+* GRX2 / YDR513W, Cytoplasmic/mitochondrial glutaredoxin, predicted mito localization sequence before 2nd in-frame ATG
+* YNR025C, Dubious open reading frame
+* PHO86 / YJL117W, ER-resident protein involved in packaging phosphate transporter Pho84 to vesicles
+* TPK1 / YJL164C, cAMP-dependent protein kinase catalytic subunit, localizes to nucleus and cytoplasm
+
+These genes are also highly translated:
+
+```{r highdiffn_dvsaATG_hiTrans_Sc,dependson="dvsaATG_scoresn_Sc",results="show"}
+highdiffn_dvsaATG_Sc %>% 
+                   filter(Gene %in% hiTrans_Sc) 
+```
+
+* HNT1 / YDL125C, Adenosine monophosphoramidase involved in nucleotide metabolism, localizes to nucleus and cytoplasm
+* SUI1 / YNL244C eIF1, enforces accurate ATG selection and has conserved poor start codon context.
+* RPL39 / YJL189W, Ribosomal protein L39
+
+There is no clear pattern in these.
+
+## Compare score difference to localization predictions
+
+We need to put the corresponding SacCer proteome through mitofates in order to run these analyses.
+
+### Load predictions from mitofates
+
+In input file *SacCer_mitofates_parsed.table.txt*.
+
+```{r load_mitofates_Sc}
+mitofates_Sc <- read_tsv("data_in/SacCer_mitofates_parsed.table.txt",
+                            comment="#")
+mitocounts_Sc <- 
+    mitofates_Sc %>% 
+    group_by(Pred_preseq) %>% 
+    count() 
+mitobreaks_Sc <- mitocounts_Sc %>%
+    mutate(label=paste0(Pred_preseq," (n = ",n,")")) %>%
+    .$label %>%
+    set_names(mitocounts_Sc$Pred_preseq)
+
+mitopredlist_Sc <- mitofates_Sc %>%
+    filter(Pred_preseq =="Yes") %>%
+    .$Gene
+```
+
+
+### SacCer Genes with high dATG vs aATG score are not enriched in mitochondrial presequences
+
+```{r dvsaATG_scoresdiffn_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=5,fig.height=1.8}
+
+ggplot(data=scores_Sc %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           left_join( mitofates_Sc %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(kernel="rectangular",bw=0.025) +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_Sc)  + 
+    labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### SacCer mito-localized genes also do not have a distinctive aATG context
+
+Although the +5 T is striking.
+
+```{r aATG_motif_mitofates_Sc, dependson=c("calc_scores_Sc","load_mitofates_Sc"), fig.width=4,fig.height=1}
+
+ggseqlogo(data=ctbl_big_Sc %>%
+              filter(Gene %in% mitopredlist_Sc) %>%
+              .$aATG.context,
+          namespace="TCAG")  + 
+    theme_nothing()
+
+```
+
+
+<a href="#top">Back to table of contents</a>
