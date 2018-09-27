@@ -1987,7 +1987,6 @@ YFL064C	tacaaaaataaaATGAAAGTTTCC	1	AGAACTGGTGCAATGAATAGGAAA	193	192	0	GTCATTTCCG
 YFL065C	gacagctctacgATGCGTACTTTC	1	CCATAAGGAAATATGGGTACAATT	74	73	1	TTGGCACCCCACATGTTTTTGTTA	97	96	0																																																																													
 YFL066C	catgaaatatacATGGCAGACACA	1	CCCCACCGGGCTATGGTAAGACGG	44	43	1	GCGACGTGAAATATGTGTCGTTTC	107	106	1																																																																													
 YFL067W	gtcggtgactggATGGAATCTATT	1	GTCCTGACGTTGATGCTGGCAGTG	98	97	1	GTCCTGACGTTGATGCTGGCAGTG	134	133	1																																																																													
-YFL068W	cctcaactgtcgATGATGCCTGCT	1	caactgtcgATGATGCCTGCTAAA	4	3	0	CCAGCGCTCGTCATGGAACGCAAA	59	58	1																																																																													
 YFR001W	AATTAAGGAAAGATGGCACCAAAG	45	ATCAACTAGCGAATGTTCCTCATC	139	94	1	TGGCTAGACTTTATGGTGCGAAGA	223	178	1																																																																													
 YFR002W	GAAGTAAACGATATGCTGGAGACG	14	ACAAAAAGTTGAATGAACTCTTGG	81	67	1	AAGTAAGCATTAATGAATTGAGAA	153	139	1																																																																													
 YFR003C	AAGTCTATAAGGATGAGTGGAAAT	48	AGTGGAAATCAAATGGCTATGGGA	63	15	0	AATCAAATGGCTATGGGATCAGAA	69	21	0																																																																													
