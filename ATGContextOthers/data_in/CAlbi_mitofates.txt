@@ -23,7 +23,6 @@ C1_00210C_A Protein	0.000	No mitochondrial presequence	23(MPP)	-0.087	44-48	18-2
 C1_00220W_A Protein	0.012	No mitochondrial presequence	89(MPP), 90(Icp55)	-0.045	86-90	2-11-high	-	-	-	-	-	-	2-7	-	-	1-6	-	-	-	-	
 C1_00230C_A Protein	0.000	No mitochondrial presequence	60(MPP)	-0.083		16-25-low	-	-	-	-	-	-	-	8-13	-	-	-	-	-	7-12	
 C1_00270W_A Protein	0.000	No mitochondrial presequence	28(MPP)	-0.036	83-87,87-91	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_00280C_A Protein	0.000	No mitochondrial presequence	31(MPP)	-0.097		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_00290W_A Protein	0.000	No mitochondrial presequence	12(MPP)	-0.250		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_00310W_A Protein	0.000	No mitochondrial presequence	29(MPP)	-0.069		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_00320W_A Protein	0.000	No mitochondrial presequence	15(MPP)	-0.067	22-26,94-98	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -157,7 +156,6 @@ C1_01650W_A Protein	0.005	No mitochondrial presequence	53(MPP)	-0.019	93-97	17-2
 C1_01670C_A Protein	0.000	No mitochondrial presequence	77(MPP)	-0.013		3-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_01680C_A Protein	0.668	Possessing mitochondrial presequence	12(MPP)	0.167	82-86	2-13-high	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
 C1_01690C_A Protein	0.973	Possessing mitochondrial presequence	17(MPP), 18(Icp55)	0.176		1-10-high	-	-	-	-	-	-	-	1-6	-	-	-	-	-	-	
-C1_01700W_A Protein	0.003	No mitochondrial presequence	29(MPP)	0.172		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_01710W_A Protein	0.000	No mitochondrial presequence	9(MPP)	0.000		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_01740W_A Protein	0.000	No mitochondrial presequence	77(MPP), 78(Icp55)	-0.026	45-49,67-71	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_01750W_A Protein	0.057	No mitochondrial presequence	30(MPP)	0.167		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -285,7 +283,6 @@ C1_03000W_A Protein	0.000	No mitochondrial presequence	53(MPP)	-0.189		7-16-low	
 C1_03010W_A Protein	0.000	No mitochondrial presequence	4(MPP)	-0.250	45-49	19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_03020C_A Protein	0.210	No mitochondrial presequence	36(MPP)	0.194	40-44,43-47,86-90	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_03030W_A Protein	0.006	No mitochondrial presequence	45(MPP)	0.133		3-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_03040W_A Protein	0.003	No mitochondrial presequence	79(MPP)	-0.038	4-8	1-10-high	-	-	-	-	4-9	-	-	-	-	-	-	-	-	-	
 C1_03050W_A Protein	0.008	No mitochondrial presequence	12(MPP)	0.083	74-78	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_03060C_A Protein	0.000	No mitochondrial presequence	61(MPP)	-0.082		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_03070C_A Protein	0.003	No mitochondrial presequence	35(MPP)	0.086		1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -461,7 +458,6 @@ C1_04810W_A Protein	0.000	No mitochondrial presequence	84(MPP), 85(Icp55)	0.119	
 C1_04820C_A Protein	0.031	No mitochondrial presequence	18(MPP), 26(Oct1)	0.167	10-14,46-50	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_04830W_A Protein	0.000	No mitochondrial presequence	52(MPP)	0.096	46-50,49-53,71-75	18-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_04840C_A Protein	0.024	No mitochondrial presequence	14(MPP), 15(Icp55)	0.357		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_04850C_A Protein	0.011	No mitochondrial presequence	8(MPP)	0.375	1-5	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_04860W_A Protein	0.000	No mitochondrial presequence	91(MPP)	-0.099	33-37	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_04870W_A Protein	0.000	No mitochondrial presequence	43(MPP)	0.000	1-5	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_04880C_A Protein	0.947	Possessing mitochondrial presequence	29(MPP)	0.207		10-19-high	-	-	-	-	-	-	-	1-6	-	-	-	-	-	-	
@@ -595,7 +591,6 @@ C1_06250W_A Protein	0.024	No mitochondrial presequence	45(MPP)	0.178		1-11-low	-
 C1_06260W_A Protein	0.000	No mitochondrial presequence	31(MPP)	0.032	28-32,43-47	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06270W_A Protein	0.021	No mitochondrial presequence	47(MPP), 48(Icp55)	-0.064	73-77	14-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06280C_A Protein	0.000	No mitochondrial presequence	39(MPP)	-0.026	2-6	1-10-high	-	-	-	-	-	-	-	-	-	-	-	1-6	2-7	-	
-C1_06290C_A Protein	0.004	No mitochondrial presequence	17(MPP)	0.000	18-22	11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06320W_A Protein	0.057	No mitochondrial presequence	27(MPP), 28(Icp55)	0.111	70-74,83-87	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06330W_A Protein	0.016	No mitochondrial presequence	42(MPP)	0.095		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06340W_A Protein	0.000	No mitochondrial presequence	38(MPP)	0.184		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -632,14 +627,12 @@ C1_06650W_A Protein	0.000	No mitochondrial presequence	86(MPP)	-0.035	90-94	19-2
 C1_06660W_A Protein	0.038	No mitochondrial presequence	12(MPP)	0.333		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06670W_A Protein	0.000	No mitochondrial presequence	13(MPP)	0.000	13-17,45-49,77-81	10-19-low	-	-	-	-	-	-	-	-	-	-	4-9	-	-	-	
 C1_06680W_A Protein	0.023	No mitochondrial presequence	42(MPP)	0.095		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_06690W_A Protein	0.000	No mitochondrial presequence	53(MPP)	-0.057		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06700W_A Protein	0.010	No mitochondrial presequence	22(MPP)	0.227	16-20	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06710W_A Protein	0.003	No mitochondrial presequence	49(MPP)	0.143		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06720C_A Protein	0.582	Possessing mitochondrial presequence	10(MPP)	0.300	21-25	16-25-high	-	-	-	-	-	-	-	1-6	-	-	-	-	-	-	
 C1_06730W_A Protein	0.000	No mitochondrial presequence	69(MPP), 70(Icp55)	-0.029		20-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06740C_A Protein	0.000	No mitochondrial presequence	66(MPP)	0.091		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06750W_A Protein	0.000	No mitochondrial presequence	46(MPP)	0.000		3-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_06760C_A Protein	0.351	No mitochondrial presequence	85(MPP)	0.106		5-14-low	-	-	-	-	-	-	-	-	-	-	1-6	-	-	-	
 C1_06770W_A Protein	0.126	No mitochondrial presequence	12(MPP)	0.500		15-24-low	-	-	-	-	-	-	-	-	-	-	1-6	-	-	-	
 C1_06780W_A Protein	0.000	No mitochondrial presequence	56(MPP)	-0.018	37-41	1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_06790C_A Protein	0.000	No mitochondrial presequence	45(MPP)	0.089	7-11,14-18,79-83	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -728,7 +721,6 @@ C1_07680W_A Protein	0.000	No mitochondrial presequence	49(MPP)	-0.082		16-25-low
 C1_07690C_A Protein	0.000	No mitochondrial presequence	57(MPP)	-0.018	9-13,25-29,42-46	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07700C_A Protein	0.033	No mitochondrial presequence	18(MPP)	0.111		8-18-high	-	-	-	-	-	-	-	-	-	-	13-18	-	-	-	
 C1_07710C_A Protein	0.000	No mitochondrial presequence	31(MPP)	-0.065		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_07770W_A Protein	0.000	No mitochondrial presequence	95(MPP)	0.053		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07780W_A Protein	0.440	Possessing mitochondrial presequence	20(MPP)	0.200	49-53,56-60	20-29-high	-	-	-	-	-	-	17-22	-	-	16-21	-	-	-	-	
 C1_07790C_A Protein	0.000	No mitochondrial presequence	66(MPP)	-0.197		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07800W_A Protein	0.882	Possessing mitochondrial presequence	21(MPP)	0.238		13-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -739,7 +731,6 @@ C1_07840W_A Protein	0.000	No mitochondrial presequence	5(MPP)	-0.200		14-23-low	
 C1_07850C_A Protein	0.000	No mitochondrial presequence	27(MPP), 28(Icp55)	-0.037	63-67	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07860W_A Protein	0.015	No mitochondrial presequence	6(MPP)	0.167	63-67	8-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07870C_A Protein	0.005	No mitochondrial presequence	42(MPP)	-0.095		3-14-low	-	-	-	-	-	-	-	10-15	-	9-14	-	-	-	-	
-C1_07880C_A Protein	0.000	No mitochondrial presequence	24(MPP)	0.042		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07890C_A Protein	0.010	No mitochondrial presequence	21(MPP)	0.048	18-22,27-31	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07900W_A Protein	0.000	No mitochondrial presequence	16(MPP)	0.062		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_07910C_A Protein	0.989	Possessing mitochondrial presequence	30(MPP)	0.167	1-5	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -849,7 +840,6 @@ C1_09000W_A Protein	0.027	No mitochondrial presequence	40(MPP)	0.175	21-25	13-22
 C1_09010W_A Protein	0.000	No mitochondrial presequence	13(MPP)	-0.231		8-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_09020W_A Protein	0.657	Possessing mitochondrial presequence	16(MPP), 24(Oct1)	0.188	92-96	1-10-low	15-20,23-28	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
 C1_09030C_A Protein	0.999	Possessing mitochondrial presequence	25(MPP)	0.160	6-10,36-40	2-12-high	-	-	-	-	-	-	-	2-7	-	1-6	-	-	6-11	-	
-C1_09040C_A Protein	0.016	No mitochondrial presequence	83(MPP)	0.108	69-73	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_09050W_A Protein	0.000	No mitochondrial presequence	32(MPP)	-0.406		9-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_09060C_A Protein	0.934	Possessing mitochondrial presequence	15(MPP)	0.200		8-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_09070W_A Protein	0.000	No mitochondrial presequence	52(MPP), 60(Oct1)	-0.038		4-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1001,11 +991,9 @@ C1_10550C_A Protein	0.071	No mitochondrial presequence	75(MPP), 76(Icp55)	0.027	
 C1_10560C_A Protein	0.000	No mitochondrial presequence	47(MPP)	0.000	31-35,45-49	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_10570C_A Protein	0.000	No mitochondrial presequence	49(MPP)	-0.020	33-37	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_10580C_A Protein	0.027	No mitochondrial presequence	54(MPP)	0.019		12-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_10600C_A Protein	0.006	No mitochondrial presequence	90(MPP)	0.011	23-27	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_10610W_A Protein	0.005	No mitochondrial presequence	15(MPP)	0.267		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_10620W_A Protein	0.000	No mitochondrial presequence	37(MPP)	0.000	30-34,80-84	21-30-low	-	-	-	-	-	-	-	-	-	25-30	-	-	-	-	
 C1_10630C_A Protein	0.000	No mitochondrial presequence	13(MPP)	-0.077		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_10640C_A Protein	0.004	No mitochondrial presequence	44(MPP)	-0.023		8-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_10650W_A Protein	0.050	No mitochondrial presequence	26(MPP)	0.038	11-15	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	11-16	-	
 C1_10660W_A Protein	0.000	No mitochondrial presequence	89(MPP)	-0.067		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	18-23	
 C1_10670C_A Protein	0.000	No mitochondrial presequence	60(MPP)	-0.050		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1219,7 +1207,6 @@ C1_12820C_A Protein	0.142	No mitochondrial presequence	7(MPP)	-0.286	8-12	6-15-h
 C1_12830C_A Protein	0.008	No mitochondrial presequence	42(MPP), 43(Icp55)	0.071		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_12840W_A Protein	0.000	No mitochondrial presequence	90(MPP)	-0.056	22-26	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_12850W_A Protein	0.000	No mitochondrial presequence	6(MPP), 7(Icp55)	0.333		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_12860C_A Protein	0.047	No mitochondrial presequence	31(MPP)	0.129		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_12870C_A Protein	0.000	No mitochondrial presequence	41(MPP)	-0.073	63-67	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_12880C_A Protein	0.228	No mitochondrial presequence	71(MPP), 72(Icp55)	0.042		1-13-low	-	-	-	-	-	-	-	-	-	-	22-27	-	-	-	
 C1_12890W_A Protein	0.000	No mitochondrial presequence	53(MPP)	0.000	15-19	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1250,7 +1237,6 @@ C1_13170C_A Protein	0.000	No mitochondrial presequence	10(MPP)	0.100		4-13-low	-
 C1_13180W_A Protein	0.000	No mitochondrial presequence	68(MPP)	0.029	81-85	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13190W_A Protein	0.035	No mitochondrial presequence	43(MPP)	0.070		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13200C_A Protein	0.000	No mitochondrial presequence	10(MPP)	0.200		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_13210C_A Protein	0.263	No mitochondrial presequence	24(MPP)	0.167		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13220C_A Protein	0.000	No mitochondrial presequence	9(MPP)	0.556	92-96	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13240W_A Protein	0.076	No mitochondrial presequence	22(MPP), 30(Oct1)	0.136		3-12-low	-	-	-	-	-	-	-	19-24	-	-	-	-	-	-	
 C1_13250W_A Protein	0.004	No mitochondrial presequence	23(MPP)	0.087		21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1264,7 +1250,6 @@ C1_13320C_A Protein	0.000	No mitochondrial presequence	80(MPP)	0.000	35-39	11-20
 C1_13330C_A Protein	0.000	No mitochondrial presequence	27(MPP)	-0.037	75-79	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13350W_A Protein	0.003	No mitochondrial presequence	38(MPP)	0.079		17-26-low	22-27	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13360C_A Protein	0.014	No mitochondrial presequence	58(MPP)	0.138	32-36,43-47,94-98	4-13-high	-	-	-	-	-	-	-	-	-	-	17-22	-	-	-	
-C1_13370W_A Protein	0.000	No mitochondrial presequence	11(MPP)	-0.091	52-56,73-77	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13380W_A Protein	0.024	No mitochondrial presequence	93(MPP)	0.065	8-12	5-14-low	-	-	-	-	-	-	-	-	-	-	-	7-12	8-13	-	
 C1_13390W_A Protein	0.012	No mitochondrial presequence	19(MPP)	0.000	19-23,62-66,86-90	17-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13400C_A Protein	0.000	No mitochondrial presequence	26(MPP)	-0.077	69-73	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1279,7 +1264,6 @@ C1_13480W_A Protein	0.003	No mitochondrial presequence	48(MPP)	-0.042	1-5,16-20,
 C1_13490C_A Protein	0.000	No mitochondrial presequence	75(MPP)	0.013	67-71	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13510C_A Protein	0.000	No mitochondrial presequence	62(MPP)	-0.016	20-24	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13520C_A Protein	0.000	No mitochondrial presequence	89(MPP)	0.022		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C1_13530W_A Protein	0.117	No mitochondrial presequence	58(MPP), 59(Icp55)	0.069	55-59,61-65	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13540W_A Protein	0.091	No mitochondrial presequence	79(MPP)	0.063	7-11,61-65,79-83	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13550C_A Protein	0.000	No mitochondrial presequence	56(MPP)	0.018		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C1_13560W_A Protein	0.000	No mitochondrial presequence	27(MPP)	-0.037	68-72	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1479,7 +1463,6 @@ C2_00950C_A Protein	0.004	No mitochondrial presequence	28(MPP), 29(Icp55)	0.036	
 C2_00960C_A Protein	0.016	No mitochondrial presequence	34(MPP)	0.088	60-64	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_00970C_A Protein	0.000	No mitochondrial presequence	45(MPP)	-0.089		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_00980W_A Protein	0.027	No mitochondrial presequence	38(MPP)	0.026	73-77	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_00990W_A Protein	0.376	No mitochondrial presequence	48(MPP)	0.125		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01000W_A Protein	0.000	No mitochondrial presequence	80(MPP)	-0.100		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01010W_A Protein	0.000	No mitochondrial presequence	89(MPP)	-0.034		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01020W_A Protein	0.000	No mitochondrial presequence	84(MPP)	-0.143		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1561,7 +1544,6 @@ C2_01840C_A Protein	0.000	No mitochondrial presequence	77(MPP)	0.000		21-30-low	
 C2_01850W_A Protein	0.000	No mitochondrial presequence	44(MPP), 45(Icp55)	0.000		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01860C_A Protein	0.000	No mitochondrial presequence	51(MPP), 59(Oct1)	-0.078		12-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01870C_A Protein	0.082	No mitochondrial presequence	31(MPP)	0.065	6-10,28-32,91-95	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_01880C_A Protein	0.016	No mitochondrial presequence	25(MPP)	0.240	27-31	1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01890W_A Protein	0.000	No mitochondrial presequence	78(MPP)	0.051		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01900C_A Protein	0.000	No mitochondrial presequence	66(MPP)	-0.288		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01910W_A Protein	0.021	No mitochondrial presequence	33(MPP)	0.061	25-29,30-34	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1569,7 +1551,6 @@ C2_01920C_A Protein	0.000	No mitochondrial presequence	5(MPP)	0.000	23-27	18-27-
 C2_01930C_A Protein	0.029	No mitochondrial presequence	42(MPP), 43(Icp55)	0.071		11-20-high	-	-	-	-	-	-	-	1-6	-	-	-	-	-	-	
 C2_01940C_A Protein	0.007	No mitochondrial presequence	18(MPP)	0.111	15-19	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01950C_A Protein	0.000	No mitochondrial presequence	47(MPP)	-0.021		11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_01960C_A Protein	0.023	No mitochondrial presequence	88(MPP)	0.011	21-25,73-77	17-27-high	-	-	-	-	21-26	-	-	-	-	-	-	-	-	-	
 C2_01970C_A Protein	0.008	No mitochondrial presequence	63(MPP), 64(Icp55)	0.063		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01980C_A Protein	0.003	No mitochondrial presequence	86(MPP)	-0.012	88-92	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_01990C_A Protein	0.000	No mitochondrial presequence	72(MPP)	-0.042		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1608,7 +1589,6 @@ C2_02320C_A Protein	0.928	Possessing mitochondrial presequence	17(MPP), 25(Oct1)
 C2_02330W_A Protein	0.275	No mitochondrial presequence	8(MPP)	0.125	77-81,86-90	10-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02340C_A Protein	0.058	No mitochondrial presequence	76(MPP), 77(Icp55)	0.013		2-11-high	-	-	-	-	-	-	-	7-12	18-23	-	-	-	-	-	
 C2_02350C_A Protein	0.003	No mitochondrial presequence	42(MPP)	-0.024		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_02360C_A Protein	0.000	No mitochondrial presequence	31(MPP)	-0.161		17-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02370C_A Protein	0.000	No mitochondrial presequence	19(MPP)	0.158		15-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02380W_A Protein	0.000	No mitochondrial presequence	57(MPP)	0.035	6-10	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02390W_A Protein	0.000	No mitochondrial presequence	66(MPP), 74(Oct1)	-0.045	63-67,80-84	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1636,9 +1616,7 @@ C2_02610C_A Protein	0.015	No mitochondrial presequence	15(MPP)	0.067		4-13-high	
 C2_02620W_A Protein	0.934	Possessing mitochondrial presequence	27(MPP), 28(Icp55)	0.148	5-9	1-10-high	-	-	-	-	5-10	-	-	-	-	-	-	-	-	-	
 C2_02630W_A Protein	0.045	No mitochondrial presequence	57(MPP)	-0.035	33-37,84-88,96-100	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02640C_A Protein	0.957	Possessing mitochondrial presequence	17(MPP)	0.235	2-6	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_02650C_A Protein	0.007	No mitochondrial presequence	41(MPP)	-0.024	85-89	7-16-low	-	-	-	-	-	-	-	10-15	-	9-14	-	-	-	-	
 C2_02660W_A Protein	0.000	No mitochondrial presequence	14(MPP), 15(Icp55)	0.143	41-45	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_02670C_A Protein	0.064	No mitochondrial presequence	27(MPP), 28(Icp55)	0.296	68-72	21-30-low	-	-	-	-	-	-	-	24-29	-	23-28	-	-	-	-	
 C2_02680W_A Protein	0.000	No mitochondrial presequence	6(MPP)	0.333	44-48,73-77	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02690W_A Protein	0.000	No mitochondrial presequence	43(MPP)	-0.047		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_02700C_A Protein	0.006	No mitochondrial presequence	12(MPP)	-0.083	79-83	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1802,7 +1780,6 @@ C2_04370W_A Protein	0.000	No mitochondrial presequence	17(MPP), 18(Icp55)	-0.176
 C2_04380C_A Protein	0.008	No mitochondrial presequence	62(MPP)	0.016		14-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04390W_A Protein	0.000	No mitochondrial presequence	49(MPP)	-0.082		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04400W_A Protein	0.011	No mitochondrial presequence	44(MPP)	-0.023		4-13-high	-	-	-	-	-	6-11	-	-	-	-	-	-	-	5-10	
-C2_04410W_A Protein	0.010	No mitochondrial presequence	16(MPP)	0.062	13-17,31-35	15-24-low	-	-	-	-	13-18	-	-	-	-	-	-	-	-	-	
 C2_04420W_A Protein	0.000	No mitochondrial presequence	83(MPP)	-0.012	31-35,45-49	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04430W_A Protein	0.000	No mitochondrial presequence	45(MPP)	-0.067	11-15,29-33	16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04440W_A Protein	0.008	No mitochondrial presequence	26(MPP)	-0.038		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1846,7 +1823,6 @@ C2_04830W_A Protein	0.000	No mitochondrial presequence	63(MPP)	-0.016	96-100	20-
 C2_04850C_A Protein	0.007	No mitochondrial presequence	10(MPP)	0.100	18-22	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04860W_A Protein	0.003	No mitochondrial presequence	48(MPP)	0.021	32-36,62-66	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04870C_A Protein	0.000	No mitochondrial presequence	77(MPP)	-0.169	61-65,94-98	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_04880C_A Protein	0.850	Possessing mitochondrial presequence	12(MPP), 13(Icp55)	0.250	32-36	5-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04910W_A Protein	0.000	No mitochondrial presequence	12(MPP)	-0.167		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04930C_A Protein	0.000	No mitochondrial presequence	17(MPP)	0.059		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_04940C_A Protein	0.000	No mitochondrial presequence	41(MPP)	0.024		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -1988,7 +1964,6 @@ C2_06390C_A Protein	0.000	No mitochondrial presequence	5(MPP)	-0.200	84-88	8-17-
 C2_06420C_A Protein	0.000	No mitochondrial presequence	39(MPP)	0.231		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06430C_A Protein	0.952	Possessing mitochondrial presequence	16(MPP)	0.250	75-79	1-12-high	-	-	-	-	-	-	-	-	-	-	10-15	-	-	-	
 C2_06440C_A Protein	0.766	Possessing mitochondrial presequence	19(MPP)	0.158	35-39	4-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_06450C_A Protein	0.059	No mitochondrial presequence	65(MPP)	0.123		14-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06460W_A Protein	0.000	No mitochondrial presequence	66(MPP)	0.015	60-64,76-80	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06470W_A Protein	0.004	No mitochondrial presequence	55(MPP), 56(Icp55)	-0.018	72-76	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06480W_A Protein	0.000	No mitochondrial presequence	56(MPP)	0.036		11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2001,7 +1976,6 @@ C2_06550W_A Protein	0.000	No mitochondrial presequence	49(MPP)	-0.082		12-21-low
 C2_06570C_A Protein	0.012	No mitochondrial presequence	51(MPP)	0.020	22-26,29-33,48-52,56-60	14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06590C_A Protein	0.000	No mitochondrial presequence	27(MPP)	-0.037	71-75	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06600W_A Protein	0.000	No mitochondrial presequence	70(MPP)	0.057		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_06610C_A Protein	0.000	No mitochondrial presequence	70(MPP)	0.014	38-42,77-81	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06620W_A Protein	0.000	No mitochondrial presequence	91(MPP)	-0.154	31-35	5-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06630C_A Protein	0.000	No mitochondrial presequence	11(MPP)	-0.091	41-45	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_06640C_A Protein	0.860	Possessing mitochondrial presequence	27(MPP)	0.222	91-95	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2161,7 +2135,6 @@ C2_08260W_A Protein	0.011	No mitochondrial presequence	76(MPP)	0.013		3-12-low	-
 C2_08270C_A Protein	0.000	No mitochondrial presequence	70(MPP)	0.043		17-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_08280W_A Protein	0.000	No mitochondrial presequence	11(MPP)	0.000	94-98	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_08290C_A Protein	0.000	No mitochondrial presequence	33(MPP)	0.091		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C2_08300C_A Protein	0.030	No mitochondrial presequence	44(MPP)	0.068	15-19	15-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_08310W_A Protein	0.000	No mitochondrial presequence	32(MPP)	-0.062		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_08320C_A Protein	0.007	No mitochondrial presequence	73(MPP)	0.082	70-74	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_08330W_A Protein	0.006	No mitochondrial presequence	8(MPP)	0.375		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2356,7 +2329,6 @@ C2_10290W_A Protein	0.000	No mitochondrial presequence	33(MPP)	0.000	57-61	20-29
 C2_10300C_A Protein	0.187	No mitochondrial presequence	17(MPP)	0.294		1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_10310C_A Protein	0.122	No mitochondrial presequence	53(MPP)	0.170		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_10320C_A Protein	0.038	No mitochondrial presequence	59(MPP), 60(Icp55)	0.102	56-60	1-14-high	-	-	-	-	-	1-6	-	-	-	-	-	-	-	-	
-C2_10330C_A Protein	0.000	No mitochondrial presequence	12(MPP), 13(Icp55)	0.083	66-70	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_10340W_A Protein	0.030	No mitochondrial presequence	68(MPP)	0.029		10-19-low	-	-	-	-	-	-	-	6-11	-	5-10	-	-	-	-	
 C2_10350C_A Protein	0.000	No mitochondrial presequence	28(MPP)	-0.036	40-44	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C2_10360C_A Protein	0.000	No mitochondrial presequence	20(MPP)	0.050	31-35	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2456,7 +2428,6 @@ C3_00540C_A Protein	0.641	Possessing mitochondrial presequence	44(MPP), 45(Icp55
 C3_00550C_A Protein	0.006	No mitochondrial presequence	35(MPP)	0.086		4-13-high	-	-	-	7-12	-	-	-	-	-	-	-	-	-	-	
 C3_00560C_A Protein	0.025	No mitochondrial presequence	40(MPP), 41(Icp55)	0.075	41-45,50-54,91-95	4-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_00570C_A Protein	0.000	No mitochondrial presequence	25(MPP)	-0.080		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_00580W_A Protein	0.114	No mitochondrial presequence	44(MPP)	-0.023	80-84	2-11-low	-	-	-	-	-	-	2-7	-	-	1-6	-	-	-	-	
 C3_00590W_A Protein	0.021	No mitochondrial presequence	49(MPP)	0.082		3-12-low	-	-	-	-	-	-	3-8	-	-	2-7	-	-	-	-	
 C3_00600W_A Protein	0.000	No mitochondrial presequence	13(MPP)	0.000	27-31	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_00610W_A Protein	0.000	No mitochondrial presequence	6(MPP)	-0.333	22-26,56-60	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2539,7 +2510,6 @@ C3_01400W_A Protein	0.006	No mitochondrial presequence	71(MPP)	-0.042	9-13,68-72
 C3_01410C_A Protein	0.999	Possessing mitochondrial presequence	28(MPP)	0.250	78-82	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01420C_A Protein	0.000	No mitochondrial presequence	5(MPP)	-0.200	83-87	13-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01430W_A Protein	0.003	No mitochondrial presequence	72(MPP)	0.139	16-20,90-94	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_01440C_A Protein	0.042	No mitochondrial presequence	45(MPP)	0.156	17-21	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01450C_A Protein	0.019	No mitochondrial presequence	23(MPP)	0.000		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01460C_A Protein	0.086	No mitochondrial presequence	23(MPP)	0.087		6-15-low	-	-	-	-	-	-	20-25	-	-	19-24	-	-	-	-	
 C3_01470W_A Protein	0.394	Possessing mitochondrial presequence	76(MPP)	0.118	5-9,74-78	1-10-high	-	-	-	-	-	-	-	-	-	-	-	4-9	-	-	
@@ -2553,7 +2523,6 @@ C3_01540W_A Protein	0.003	No mitochondrial presequence	37(MPP)	0.054	34-38	15-24
 C3_01550C_A Protein	0.000	No mitochondrial presequence	86(MPP)	-0.023		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01560W_A Protein	0.000	No mitochondrial presequence	33(MPP)	-0.030	20-24	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01570W_A Protein	0.000	No mitochondrial presequence	20(MPP)	-0.050	47-51,77-81	12-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_01580W_A Protein	0.000	No mitochondrial presequence	9(MPP)	0.000		7-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01590W_A Protein	0.007	No mitochondrial presequence	58(MPP)	-0.017	22-26,55-59,86-90	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01600W_A Protein	0.000	No mitochondrial presequence	51(MPP)	-0.078	79-83	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_01610W_A Protein	0.952	Possessing mitochondrial presequence	20(MPP)	0.250	64-68	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2631,7 +2600,6 @@ C3_02370C_A Protein	0.000	No mitochondrial presequence	79(MPP)	-0.127		21-30-low
 C3_02390W_A Protein	0.093	No mitochondrial presequence	22(MPP)	0.273		11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_02400C_A Protein	0.000	No mitochondrial presequence	21(MPP)	0.143		17-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_02410C_A Protein	0.000	No mitochondrial presequence	58(MPP)	-0.034	74-78	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_02420C_A Protein	0.052	No mitochondrial presequence	26(MPP)	0.115		18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_02430W_A Protein	0.062	No mitochondrial presequence	26(MPP)	0.231	24-28,55-59	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_02440C_A Protein	0.000	No mitochondrial presequence	92(MPP)	-0.076	24-28	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_02450W_A Protein	0.000	No mitochondrial presequence	8(MPP)	-0.250	90-94	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2790,7 +2758,6 @@ C3_04060C_A Protein	0.004	No mitochondrial presequence	24(MPP)	-0.042		14-23-low
 C3_04070C_A Protein	0.000	No mitochondrial presequence	39(MPP), 40(Icp55)	-0.128	40-44	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_04080W_A Protein	0.000	No mitochondrial presequence	71(MPP)	-0.493		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_04090W_A Protein	0.000	No mitochondrial presequence	61(MPP)	-0.049	75-79,94-98	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_04100W_A Protein	0.000	No mitochondrial presequence	89(MPP)	-0.045		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_04110C_A Protein	0.000	No mitochondrial presequence	52(MPP)	0.096	37-41,40-44	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_04120C_A Protein	0.000	No mitochondrial presequence	42(MPP)	0.000	30-34,49-53	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_04130W_A Protein	0.000	No mitochondrial presequence	49(MPP), 50(Icp55)	0.082	50-54	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -2915,7 +2882,6 @@ C3_05350C_A Protein	0.000	No mitochondrial presequence	85(MPP)	-0.012		2-11-low	
 C3_05360C_A Protein	0.000	No mitochondrial presequence	46(MPP)	0.065		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_05370C_A Protein	0.000	No mitochondrial presequence	80(MPP)	0.037	54-58,60-64,86-90	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_05380W_A Protein	0.000	No mitochondrial presequence	49(MPP)	-0.347	90-94	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_05390C_A Protein	0.003	No mitochondrial presequence	71(MPP)	0.000		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_05400C_A Protein	0.000	No mitochondrial presequence	17(MPP)	-0.118	14-18	13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_05410W_A Protein	0.003	No mitochondrial presequence	35(MPP)	0.086	32-36,42-46	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_05420W_A Protein	0.000	No mitochondrial presequence	30(MPP)	0.033		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3007,7 +2973,6 @@ C3_06320W_A Protein	0.000	No mitochondrial presequence	39(MPP)	0.077	1-5,75-79	1
 C3_06330W_A Protein	0.000	No mitochondrial presequence	89(MPP)	-0.011	59-63	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_06340W_A Protein	0.098	No mitochondrial presequence	11(MPP)	0.000	8-12,68-72,72-76	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_06350W_A Protein	0.003	No mitochondrial presequence	19(MPP)	-0.158		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C3_06360C_A Protein	0.008	No mitochondrial presequence	71(MPP)	0.028	86-90	10-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_06370C_A Protein	0.000	No mitochondrial presequence	39(MPP)	0.077	26-30	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_06380W_A Protein	0.000	No mitochondrial presequence	18(MPP)	0.111	56-60	7-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C3_06390W_A Protein	0.130	No mitochondrial presequence	54(MPP)	0.185	37-41,51-55,72-76	4-13-high	5-10	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3248,8 +3213,6 @@ C4_00850C_A Protein	0.000	No mitochondrial presequence	82(MPP)	0.037	83-87	18-27
 C4_00860C_A Protein	0.006	No mitochondrial presequence	86(MPP)	0.023		13-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_00880W_A Protein	0.000	No mitochondrial presequence	20(MPP)	0.100		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_00890W_A Protein	0.004	No mitochondrial presequence	27(MPP)	-0.037	21-25,86-90	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_00910C_A Protein	0.359	No mitochondrial presequence	15(MPP)	0.200	3-7,66-70,69-73	2-11-low	-	-	-	-	-	-	-	-	-	-	-	2-7	-	-	
-C4_00920C_A Protein	0.029	No mitochondrial presequence	82(MPP)	0.037		21-30-high	-	4-9	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_00940W_A Protein	0.000	No mitochondrial presequence	50(MPP)	-0.040		2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_00950C_A Protein	0.142	No mitochondrial presequence	87(MPP)	0.011		1-10-low	-	-	-	-	-	-	1-6	-	-	-	-	-	-	-	
 C4_00960W_A Protein	0.883	Possessing mitochondrial presequence	32(MPP), 33(Icp55)	0.219	5-9,93-97	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3301,7 +3264,6 @@ C4_01440W_A Protein	0.000	No mitochondrial presequence	38(MPP)	-0.026	21-25	16-2
 C4_01450W_A Protein	0.000	No mitochondrial presequence	11(MPP), 12(Icp55)	0.091		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_01460C_A Protein	0.064	No mitochondrial presequence	62(MPP)	0.081	8-12,24-28,43-47,87-91	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_01470W_A Protein	0.000	No mitochondrial presequence	67(MPP)	-0.030	61-65	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_01480C_A Protein	0.107	No mitochondrial presequence	28(MPP)	0.286		3-12-high	-	-	-	-	-	-	-	-	5-10	-	-	-	-	-	
 C4_01490W_A Protein	0.000	No mitochondrial presequence	64(MPP)	-0.359	1-5	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_01500W_A Protein	0.015	No mitochondrial presequence	29(MPP)	0.103	38-42	7-16-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_01510W_A Protein	0.016	No mitochondrial presequence	50(MPP)	0.120	8-12,29-33,82-86	3-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3422,7 +3384,6 @@ C4_02770C_A Protein	0.000	No mitochondrial presequence	59(MPP)	-0.034	27-31	18-2
 C4_02780W_A Protein	0.000	No mitochondrial presequence	35(MPP)	0.114	32-36,49-53,70-74,79-83	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_02790C_A Protein	0.000	No mitochondrial presequence	94(MPP)	-0.404		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_02800W_A Protein	0.036	No mitochondrial presequence	36(MPP)	0.222		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_02820W_A Protein	0.000	No mitochondrial presequence	78(MPP)	-0.115	20-24	14-23-low	-	-	-	-	-	-	-	-	-	-	-	19-24	20-25	-	
 C4_02830C_A Protein	0.086	No mitochondrial presequence	18(MPP)	0.444		10-19-high	-	-	-	-	-	1-6	-	-	-	-	-	-	-	-	
 C4_02840C_A Protein	0.000	No mitochondrial presequence	43(MPP)	0.047		16-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_02850W_A Protein	0.000	No mitochondrial presequence	89(MPP)	-0.022		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3446,7 +3407,6 @@ C4_03030C_A Protein	0.003	No mitochondrial presequence	48(MPP)	0.021		1-12-low	-
 C4_03040W_A Protein	0.020	No mitochondrial presequence	7(MPP), 8(Icp55)	0.143	10-14,41-45,46-50,57-61	18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03050C_A Protein	0.006	No mitochondrial presequence	16(MPP)	0.125	40-44,87-91	8-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03070W_A Protein	0.004	No mitochondrial presequence	23(MPP)	0.130		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_03080W_A Protein	0.038	No mitochondrial presequence	48(MPP)	0.062		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03090W_A Protein	0.000	No mitochondrial presequence	41(MPP)	-0.146	38-42	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03100W_A Protein	0.000	No mitochondrial presequence	35(MPP)	0.057	26-30	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03110W_A Protein	0.000	No mitochondrial presequence	42(MPP), 43(Icp55)	0.048	50-54	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3476,7 +3436,6 @@ C4_03380C_A Protein	0.000	No mitochondrial presequence	70(MPP)	-0.014		13-22-low
 C4_03390W_A Protein	0.011	No mitochondrial presequence	52(MPP)	-0.058	76-80,79-83	4-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03400W_A Protein	0.039	No mitochondrial presequence	23(MPP)	0.087		13-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03410W_A Protein	0.918	Possessing mitochondrial presequence	27(MPP), 35(Oct1)	0.185	24-28,95-99	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	24-29	-	
-C4_03420C_A Protein	0.324	No mitochondrial presequence	21(MPP)	0.095	19-23,22-26,50-54,53-57	12-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03430W_A Protein	0.000	No mitochondrial presequence	32(MPP), 33(Icp55)	0.031		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03440C_A Protein	0.000	No mitochondrial presequence	47(MPP), 48(Icp55)	0.064		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03450C_A Protein	0.011	No mitochondrial presequence	52(MPP)	0.000	72-76,82-86	4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3516,7 +3475,6 @@ C4_03830W_A Protein	0.000	No mitochondrial presequence	95(MPP)	-0.063	7-11,77-81
 C4_03840C_A Protein	0.000	No mitochondrial presequence	34(MPP)	0.029		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03850W_A Protein	0.000	No mitochondrial presequence	88(MPP)	0.034		14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03860C_A Protein	0.007	No mitochondrial presequence	10(MPP)	0.000	4-8	7-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_03870C_A Protein	0.005	No mitochondrial presequence	8(MPP)	0.500	63-67	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03880W_A Protein	0.000	No mitochondrial presequence	22(MPP)	0.091		15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03890W_A Protein	0.000	No mitochondrial presequence	24(MPP)	-0.042		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_03900C_A Protein	0.008	No mitochondrial presequence	39(MPP)	0.103		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3617,7 +3575,6 @@ C4_04900W_A Protein	0.000	No mitochondrial presequence	38(MPP)	0.184	83-87	6-16-
 C4_04910C_A Protein	0.004	No mitochondrial presequence	16(MPP)	0.000	52-56	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_04920W_A Protein	0.000	No mitochondrial presequence	72(MPP)	0.028	5-9,77-81	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_04930C_A Protein	0.000	No mitochondrial presequence	33(MPP)	-0.121	30-34	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_04940W_A Protein	0.022	No mitochondrial presequence	6(MPP)	0.667	20-24,87-91	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_04950W_A Protein	0.000	No mitochondrial presequence	62(MPP)	-0.097		2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_04970C_A Protein	0.000	No mitochondrial presequence	68(MPP), 69(Icp55)	0.044		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_04980W_A Protein	0.000	No mitochondrial presequence	21(MPP)	-0.048	19-23	9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3639,7 +3596,6 @@ C4_05130C_A Protein	0.395	Possessing mitochondrial presequence	13(MPP)	0.154	6-1
 C4_05140C_A Protein	0.003	No mitochondrial presequence	50(MPP)	-0.020		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05150W_A Protein	0.000	No mitochondrial presequence	53(MPP), 54(Icp55)	-0.057		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05160C_A Protein	0.004	No mitochondrial presequence	19(MPP)	-0.053	48-52	19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	6-11	
-C4_05170C_A Protein	0.033	No mitochondrial presequence	72(MPP)	0.125	69-73	11-20-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05180C_A Protein	0.000	No mitochondrial presequence	84(MPP)	0.036	50-54	12-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05190C_A Protein	0.000	No mitochondrial presequence	33(MPP)	0.000		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05200C_A Protein	0.000	No mitochondrial presequence	19(MPP)	0.105	78-82	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3650,11 +3606,9 @@ C4_05240C_A Protein	0.000	No mitochondrial presequence	11(MPP)	-0.091		21-30-low
 C4_05250W_A Protein	0.008	No mitochondrial presequence	10(MPP)	0.100	61-65	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05260W_A Protein	0.000	No mitochondrial presequence	10(MPP)	-0.100	61-65	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05270C_A Protein	0.000	No mitochondrial presequence	70(MPP)	-0.314		19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_05280W_A Protein	0.014	No mitochondrial presequence	28(MPP)	-0.071	76-80	2-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05290W_A Protein	0.015	No mitochondrial presequence	29(MPP)	0.310	53-57	12-23-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05300W_A Protein	0.000	No mitochondrial presequence	40(MPP)	-0.100	88-92	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05310W_A Protein	0.927	Possessing mitochondrial presequence	12(MPP)	0.250		20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_05320W_A Protein	0.005	No mitochondrial presequence	21(MPP)	0.095	96-100	10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05330C_A Protein	0.009	No mitochondrial presequence	89(MPP)	0.022	86-90	6-15-high	-	-	-	-	-	-	8-13	-	-	-	-	-	-	-	
 C4_05340W_A Protein	0.040	No mitochondrial presequence	26(MPP), 27(Icp55)	0.000		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_05350W_A Protein	0.028	No mitochondrial presequence	70(MPP)	-0.014		3-12-high	-	-	-	-	-	-	-	3-8	-	2-7	-	-	-	-	
@@ -3834,7 +3788,6 @@ C4_07220C_A Protein	0.000	No mitochondrial presequence	33(MPP)	-0.152	38-42	10-1
 C4_07230C_A Protein	0.125	No mitochondrial presequence	23(MPP)	0.000		5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_07240W_A Protein	0.000	No mitochondrial presequence	91(MPP), 92(Icp55)	-0.011	88-92	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C4_07250C_A Protein	0.012	No mitochondrial presequence	9(MPP)	0.000		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C4_07260W_A Protein	0.000	No mitochondrial presequence	77(MPP)	-0.260		14-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_00010W_A Protein	0.018	No mitochondrial presequence	9(MPP)	0.000		9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_00030W_A Protein	0.740	Possessing mitochondrial presequence	19(MPP)	0.211	1-5,63-67	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_00040C_A Protein	0.102	No mitochondrial presequence	27(MPP)	0.185	17-21	3-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -3939,7 +3892,6 @@ C5_01080C_A Protein	0.000	No mitochondrial presequence	36(MPP)	-0.167		9-19-low	
 C5_01090C_A Protein	0.019	No mitochondrial presequence	12(MPP)	0.167		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_01100C_A Protein	0.244	No mitochondrial presequence	14(MPP)	0.000	46-50	13-22-high	-	10-15	-	-	-	8-13	-	-	-	-	-	-	-	-	
 C5_01110W_A Protein	0.000	No mitochondrial presequence	20(MPP)	-0.100		16-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C5_01120W_A Protein	0.285	No mitochondrial presequence	66(MPP)	0.167	15-19,63-67	10-19-low	-	-	-	-	-	-	9-14	-	13-18	8-13	-	-	-	-	
 C5_01130W_A Protein	0.000	No mitochondrial presequence	79(MPP)	0.000		5-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_01140C_A Protein	0.985	Possessing mitochondrial presequence	32(MPP)	0.188		4-13-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_01170W_A Protein	0.000	No mitochondrial presequence	65(MPP)	-0.062	62-66	20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -4281,7 +4233,6 @@ C5_04680W_A Protein	0.000	No mitochondrial presequence	39(MPP)	0.051	32-36	19-28
 C5_04690C_A Protein	0.037	No mitochondrial presequence	70(MPP)	-0.057	21-25	3-12-high	-	-	-	-	-	-	-	-	-	-	-	20-25	-	-	
 C5_04700C_A Protein	0.000	No mitochondrial presequence	5(MPP)	-0.200	61-65	11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_04710W_A Protein	0.203	No mitochondrial presequence	10(MPP), 11(Icp55)	0.300	60-64	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C5_04720C_A Protein	0.000	No mitochondrial presequence	60(MPP)	0.033		1-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_04730C_A Protein	0.000	No mitochondrial presequence	33(MPP)	0.152		5-14-low	-	24-29	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_04740C_A Protein	0.000	No mitochondrial presequence	38(MPP), 39(Icp55)	0.026		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C5_04750C_A Protein	0.005	No mitochondrial presequence	26(MPP)	0.346		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -4415,7 +4366,6 @@ C6_00570C_A Protein	0.039	No mitochondrial presequence	16(MPP)	0.188	8-12,13-17	
 C6_00580W_A Protein	0.056	No mitochondrial presequence	30(MPP)	0.067	11-15	4-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_00590W_A Protein	0.000	No mitochondrial presequence	35(MPP)	-0.086		17-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_00600C_A Protein	0.004	No mitochondrial presequence	45(MPP), 46(Icp55)	0.044	51-55	1-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C6_00610C_A Protein	0.000	No mitochondrial presequence	67(MPP)	0.000	30-34	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_00620W_A Protein	0.000	No mitochondrial presequence	67(MPP)	-0.030	96-100	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_00630W_A Protein	0.000	No mitochondrial presequence	20(MPP)	-0.050	59-63,91-95	1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_00640C_A Protein	0.000	No mitochondrial presequence	8(MPP)	-0.125		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -4463,7 +4413,6 @@ C6_01050W_A Protein	0.988	Possessing mitochondrial presequence	18(MPP)	0.278	12-
 C6_01060C_A Protein	0.000	No mitochondrial presequence	23(MPP)	-0.130		17-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01070C_A Protein	0.000	No mitochondrial presequence	42(MPP)	0.071	91-95	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01080C_A Protein	0.000	No mitochondrial presequence	26(MPP)	0.115		8-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C6_01090C_A Protein	0.000	No mitochondrial presequence	43(MPP)	-0.023	76-80	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01100W_A Protein	0.012	No mitochondrial presequence	30(MPP)	0.067	3-7	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01110W_A Protein	0.000	No mitochondrial presequence	83(MPP)	-0.012		5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01120C_A Protein	0.127	No mitochondrial presequence	14(MPP)	0.143	21-25	20-29-high	-	-	-	-	-	-	25-30	-	-	24-29	-	-	-	-	
@@ -4501,11 +4450,9 @@ C6_01460C_A Protein	0.006	No mitochondrial presequence	45(MPP), 46(Icp55)	0.089	
 C6_01470W_A Protein	0.000	No mitochondrial presequence	12(MPP)	0.083	86-90	17-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01480W_A Protein	0.000	No mitochondrial presequence	80(MPP)	0.025		11-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01490C_A Protein	0.009	No mitochondrial presequence	28(MPP)	0.071		2-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C6_01500C_A Protein	0.129	No mitochondrial presequence	56(MPP)	0.143	12-16	5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01510W_A Protein	0.000	No mitochondrial presequence	43(MPP)	0.070		10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01520W_A Protein	0.017	No mitochondrial presequence	27(MPP)	0.037	24-28	3-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01530C_A Protein	0.000	No mitochondrial presequence	33(MPP)	0.152		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C6_01550C_A Protein	0.978	Possessing mitochondrial presequence	17(MPP), 25(Oct1)	0.294		7-22-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01560W_A Protein	0.000	No mitochondrial presequence	11(MPP), 12(Icp55)	0.091	55-59	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01570C_A Protein	0.013	No mitochondrial presequence	32(MPP), 33(Icp55)	0.156		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_01590W_A Protein	0.127	No mitochondrial presequence	19(MPP), 20(Icp55)	0.263	81-85	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -4670,7 +4617,6 @@ C6_03210C_A Protein	0.021	No mitochondrial presequence	12(MPP)	0.000	10-14	6-17-
 C6_03220W_A Protein	0.000	No mitochondrial presequence	84(MPP)	-0.083		10-19-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_03230W_A Protein	0.950	Possessing mitochondrial presequence	13(MPP), 21(Oct1)	0.154	46-50,70-74	1-10-low	12-17	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_03240W_A Protein	0.153	No mitochondrial presequence	37(MPP)	0.081	17-21,44-48,68-72,81-85	16-25-high	-	-	-	-	-	-	20-25	25-30	-	24-29	-	16-21	-	-	
-C6_03250W_A Protein	0.007	No mitochondrial presequence	54(MPP)	0.093	15-19,31-35	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_03260W_A Protein	0.003	No mitochondrial presequence	74(MPP)	0.068		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_03270C_A Protein	0.000	No mitochondrial presequence	79(MPP)	0.013		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_03280W_A Protein	0.000	No mitochondrial presequence	27(MPP), 35(Oct1)	-0.074		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -4759,7 +4705,6 @@ C6_04180W_A Protein	0.000	No mitochondrial presequence	68(MPP)	-0.059	73-77	6-15
 C6_04190C_A Protein	0.000	No mitochondrial presequence	43(MPP)	0.047		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_04200C_A Protein	0.006	No mitochondrial presequence	24(MPP)	0.000		6-15-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_04210C_A Protein	0.487	Possessing mitochondrial presequence	37(MPP), 38(Icp55)	0.189		15-24-low	-	4-9	6-11	-	-	2-7	-	-	-	1-6	-	-	-	-	
-C6_04220C_A Protein	0.442	Possessing mitochondrial presequence	30(MPP), 38(Oct1)	0.200		11-23-high	-	-	17-22	-	-	-	-	1-6	-	-	-	-	-	-	
 C6_04230W_A Protein	0.013	No mitochondrial presequence	56(MPP)	-0.125	20-24	16-26-high	22-27	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_04240W_A Protein	0.000	No mitochondrial presequence	9(MPP), 10(Icp55)	-0.333	68-72	16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_04250W_A Protein	0.000	No mitochondrial presequence	73(MPP)	-0.027	35-39	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -4799,7 +4744,6 @@ C6_04600W_A Protein	0.006	No mitochondrial presequence	88(MPP)	-0.080	85-89,93-9
 C6_04610C_A Protein	0.000	No mitochondrial presequence	33(MPP)	-0.121	30-34,40-44	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_04620C_A Protein	0.000	No mitochondrial presequence	36(MPP)	-0.111	58-62	19-28-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C6_04650W_A Protein	0.003	No mitochondrial presequence	27(MPP)	-0.185		17-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C7_00010C_A Protein	0.036	No mitochondrial presequence	8(MPP)	0.125	5-9,63-67	2-11-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_00020C_A Protein	0.009	No mitochondrial presequence	13(MPP)	0.231	6-10,47-51	18-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_00030W_A Protein	0.000	No mitochondrial presequence	14(MPP)	0.071		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_00040C_A Protein	0.000	No mitochondrial presequence	84(MPP)	-0.071	7-11,60-64,81-85	15-24-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5029,7 +4973,6 @@ C7_02370W_A Protein	0.008	No mitochondrial presequence	54(MPP)	0.111	13-17	8-17-
 C7_02380C_A Protein	0.004	No mitochondrial presequence	36(MPP)	0.000	51-55	15-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02390W_A Protein	0.000	No mitochondrial presequence	15(MPP)	0.000		16-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02420C_A Protein	0.128	No mitochondrial presequence	50(MPP)	0.140		19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C7_02430C_A Protein	0.000	No mitochondrial presequence	89(MPP)	-0.079	82-86,94-98	13-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02450W_A Protein	0.054	No mitochondrial presequence	30(MPP)	0.133	35-39	7-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02460C_A Protein	0.005	No mitochondrial presequence	62(MPP)	0.113		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02470C_A Protein	0.000	No mitochondrial presequence	61(MPP)	0.049		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5044,7 +4987,6 @@ C7_02550C_A Protein	0.000	No mitochondrial presequence	21(MPP)	-0.095		14-23-low
 C7_02560W_A Protein	0.007	No mitochondrial presequence	56(MPP)	0.018	33-37	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02570C_A Protein	0.000	No mitochondrial presequence	45(MPP)	-0.089		17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02600C_A Protein	0.017	No mitochondrial presequence	33(MPP)	0.061	33-37	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C7_02610C_A Protein	0.389	Possessing mitochondrial presequence	48(MPP)	0.125	12-16,18-22,46-50,94-98	7-16-high	-	7-12	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02630W_A Protein	0.000	No mitochondrial presequence	91(MPP)	0.022	31-35,73-77	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02640W_A Protein	0.004	No mitochondrial presequence	12(MPP)	0.083		7-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02650W_A Protein	0.660	Possessing mitochondrial presequence	10(MPP)	0.200		3-12-high	-	-	-	-	-	-	3-8,7-12	-	-	2-7	-	-	-	6-11	
@@ -5052,7 +4994,6 @@ C7_02660C_A Protein	0.010	No mitochondrial presequence	42(MPP)	0.000		15-24-low	
 C7_02670W_A Protein	0.000	No mitochondrial presequence	70(MPP)	-0.014		8-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02680W_A Protein	0.000	No mitochondrial presequence	58(MPP)	-0.310	55-59	4-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02690C_A Protein	0.009	No mitochondrial presequence	43(MPP), 44(Icp55)	0.093	26-30,31-35	5-14-low	-	-	-	-	-	-	-	-	-	-	-	25-30	-	-	
-C7_02750W_A Protein	0.000	No mitochondrial presequence	45(MPP)	0.044	67-71	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02760W_A Protein	0.000	No mitochondrial presequence	51(MPP)	-0.118		20-29-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02770W_A Protein	0.000	No mitochondrial presequence	90(MPP)	-0.056		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_02780W_A Protein	0.000	No mitochondrial presequence	12(MPP)	0.000		17-26-low	-	-	-	-	-	-	-	-	-	-	1-6	-	-	-	
@@ -5120,7 +5061,6 @@ C7_03420C_A Protein	0.000	No mitochondrial presequence	46(MPP), 54(Oct1)	-0.022	
 C7_03440W_A Protein	0.000	No mitochondrial presequence	17(MPP)	-0.118		13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_03450C_A Protein	0.000	No mitochondrial presequence	20(MPP)	-0.050	53-57,71-75,96-100	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_03460W_A Protein	0.000	No mitochondrial presequence	46(MPP)	-0.087	30-34,53-57,83-87,93-97	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-C7_03470W_A Protein	0.055	No mitochondrial presequence	44(MPP)	0.068		14-23-low	-	-	-	-	-	-	-	18-23	-	17-22	-	-	-	-	
 C7_03480W_A Protein	0.000	No mitochondrial presequence	55(MPP)	0.018		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_03490W_A Protein	0.000	No mitochondrial presequence	6(MPP)	0.333		7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 C7_03500W_A Protein	0.000	No mitochondrial presequence	20(MPP)	0.250		5-14-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5271,7 +5211,6 @@ CR_00650W_A Protein	0.005	No mitochondrial presequence	79(MPP)	0.000	1-5	1-13-hi
 CR_00660W_A Protein	0.032	No mitochondrial presequence	9(MPP)	0.000	40-44,59-63	19-29-low	-	-	-	-	-	-	-	-	-	-	10-15	-	-	-	
 CR_00670C_A Protein	0.003	No mitochondrial presequence	10(MPP)	0.300	93-97	9-18-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_00680W_A Protein	0.097	No mitochondrial presequence	24(MPP)	0.125	71-75,91-95	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_00690C_A Protein	0.004	No mitochondrial presequence	43(MPP)	0.000	40-44	8-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_00700W_A Protein	0.136	No mitochondrial presequence	16(MPP)	0.312	87-91,95-99	21-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_00710C_A Protein	0.021	No mitochondrial presequence	15(MPP)	0.200		8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_00720W_A Protein	0.177	No mitochondrial presequence	26(MPP)	0.038	56-60	1-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5381,7 +5320,6 @@ CR_01800C_A Protein	0.000	No mitochondrial presequence	40(MPP)	0.025	90-94,93-97
 CR_01810C_A Protein	0.026	No mitochondrial presequence	42(MPP)	0.048		16-25-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_01820W_A Protein	0.006	No mitochondrial presequence	26(MPP)	0.038		13-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_01830C_A Protein	0.000	No mitochondrial presequence	54(MPP)	-0.111	62-66	12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_01840W_A Protein	0.111	No mitochondrial presequence	5(MPP)	0.200		21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_01850C_A Protein	0.019	No mitochondrial presequence	46(MPP)	0.065	43-47	2-11-high	-	-	1-6	-	-	-	-	-	-	-	-	-	-	-	
 CR_01860W_A Protein	0.003	No mitochondrial presequence	34(MPP)	0.059	24-28	13-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_01870C_A Protein	0.093	No mitochondrial presequence	23(MPP)	0.043	2-6	1-10-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5474,7 +5412,6 @@ CR_02860W_A Protein	0.000	No mitochondrial presequence	11(MPP)	0.182		1-13-low	-
 CR_02870W_A Protein	0.792	Possessing mitochondrial presequence	13(MPP)	0.308	49-53,69-73	4-13-high	-	-	-	-	-	7-12	-	-	-	-	-	-	-	6-11	
 CR_02880W_A Protein	0.941	Possessing mitochondrial presequence	27(MPP)	0.259		18-27-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_02890C_A Protein	0.000	No mitochondrial presequence	48(MPP)	-0.021		11-22-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_02900W_A Protein	0.128	No mitochondrial presequence	22(MPP)	0.136	11-15,29-33	11-21-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_02910W_A Protein	0.000	No mitochondrial presequence	54(MPP)	0.056	38-42,42-46,73-77	1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_02920C_A Protein	0.000	No mitochondrial presequence	20(MPP)	-0.150		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_02930W_A Protein	0.000	No mitochondrial presequence	22(MPP)	0.000		3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5666,7 +5603,6 @@ CR_04820W_A Protein	0.000	No mitochondrial presequence	94(MPP), 95(Icp55)	-0.128
 CR_04830C_A Protein	0.000	No mitochondrial presequence	6(MPP)	0.000		4-13-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_04840C_A Protein	0.000	No mitochondrial presequence	31(MPP)	0.065	34-38	8-17-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_04850C_A Protein	0.006	No mitochondrial presequence	8(MPP)	0.000	79-83	5-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_04860C_A Protein	0.033	No mitochondrial presequence	26(MPP)	0.038	65-69,73-77	1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_04870C_A Protein	0.000	No mitochondrial presequence	83(MPP)	-0.024	67-71,86-90	17-26-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_04880W_A Protein	0.000	No mitochondrial presequence	80(MPP)	-0.062		19-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_04890W_A Protein	0.014	No mitochondrial presequence	41(MPP)	-0.098	75-79	21-30-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5703,8 +5639,6 @@ CR_05220C_A Protein	0.046	No mitochondrial presequence	63(MPP)	-0.016		1-10-high
 CR_05240C_A Protein	0.003	No mitochondrial presequence	53(MPP)	0.019	26-30,33-37,62-66	16-30-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_05250C_A Protein	0.000	No mitochondrial presequence	42(MPP)	-0.048		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_05260C_A Protein	0.000	No mitochondrial presequence	59(MPP)	0.051		1-11-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_05270W_A Protein	0.034	No mitochondrial presequence	22(MPP)	0.136	36-40,39-43	3-12-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_05280W_A Protein	0.099	No mitochondrial presequence	38(MPP)	0.158	84-88	15-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_05290W_A Protein	0.011	No mitochondrial presequence	45(MPP)	0.067	2-6	17-28-low	-	-	-	-	-	-	-	24-29	-	-	-	-	-	23-28	
 CR_05300C_A Protein	0.304	No mitochondrial presequence	16(MPP)	0.312		1-10-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_05310W_A Protein	0.444	Possessing mitochondrial presequence	35(MPP), 36(Icp55)	0.171	17-21,60-64,85-89,92-96	17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	17-22	-	
@@ -5909,7 +5843,6 @@ CR_07570W_A Protein	0.000	No mitochondrial presequence	12(MPP)	0.000	65-69	10-19
 CR_07580C_A Protein	0.000	No mitochondrial presequence	25(MPP)	0.040		11-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07590W_A Protein	0.000	No mitochondrial presequence	51(MPP)	0.020		5-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07600W_A Protein	0.000	No mitochondrial presequence	71(MPP)	0.056	54-58,94-98	7-16-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_07610C_A Protein	0.108	No mitochondrial presequence	80(MPP)	0.075	82-86	16-25-high	-	13-18	-	15-20	-	-	-	-	-	-	-	-	-	-	
 CR_07620W_A Protein	0.000	No mitochondrial presequence	22(MPP)	0.045	81-85	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07630C_A Protein	0.000	No mitochondrial presequence	30(MPP)	0.067		19-28-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07640C_A Protein	0.000	No mitochondrial presequence	13(MPP)	0.154		17-26-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -5936,7 +5869,6 @@ CR_07840C_A Protein	0.017	No mitochondrial presequence	23(MPP)	0.217		1-10-low	-
 CR_07850W_A Protein	0.000	No mitochondrial presequence	62(MPP)	-0.016	8-12	5-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07860C_A Protein	0.000	No mitochondrial presequence	43(MPP)	-0.116		8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07870W_A Protein	0.022	No mitochondrial presequence	37(MPP), 38(Icp55)	0.216	29-33	14-24-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
-CR_07890W_A Protein	0.000	No mitochondrial presequence	51(MPP)	0.000		8-20-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07900C_A Protein	0.005	No mitochondrial presequence	23(MPP)	0.043	28-32,31-35	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07910C_A Protein	0.000	No mitochondrial presequence	54(MPP)	-0.074	25-29,41-45	20-29-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_07920W_A Protein	0.000	No mitochondrial presequence	82(MPP)	0.000		9-18-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
@@ -6035,7 +5967,6 @@ CR_09010C_A Protein	0.042	No mitochondrial presequence	56(MPP)	-0.054	1-5,15-19	
 CR_09020C_A Protein	0.000	No mitochondrial presequence	15(MPP)	0.067		15-24-low	16-21	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_09030C_A Protein	0.000	No mitochondrial presequence	90(MPP)	-0.011		12-21-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_09040W_A Protein	0.004	No mitochondrial presequence	14(MPP)	0.071	11-15	17-26-low	-	-	-	-	-	-	-	-	9-14	-	-	-	-	-	
-CR_09050C_A Protein	0.047	No mitochondrial presequence	26(MPP)	0.115		7-16-high	-	-	-	-	-	-	-	-	-	-	5-10	-	-	-	
 CR_09060W_A Protein	0.381	No mitochondrial presequence	43(MPP)	0.163	1-5,31-35,83-87	6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_09070C_A Protein	0.018	No mitochondrial presequence	26(MPP)	0.115		2-12-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 CR_09090C_A Protein	0.000	No mitochondrial presequence	70(MPP)	0.014	19-23	18-27-high	-	-	-	-	-	-	-	-	-	-	-	-	-	-	

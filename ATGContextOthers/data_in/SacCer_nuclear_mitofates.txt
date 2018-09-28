@@ -118,7 +118,7 @@ YAR073W Protein	0.000	No mitochondrial presequence	65(MPP)	0.000		3-12-low	-	-	-
 YAR075W Protein	0.837	Possessing mitochondrial presequence	51(MPP)	0.059	7-11,11-15,95-99	3-15-high	-	-	-	-	-	-	-	-	-	2-7	-	10-15	-	-	
 YBL113C Protein	0.000	No mitochondrial presequence	21(MPP)	0.143	34-38,64-68	3-14-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 YBL113W-A Protein	0.500	Possessing mitochondrial presequence	13(MPP)	0.077	54-58,58-62	9-18-low	-	-	-	-	-	-	-	10-15	-	-	-	-	-	-	
-YBL112C Protein	0.007	No mitochondrial presequence	79(MPP)	0.038		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
+YBL112C Protein	0.006	No mitochondrial presequence	79(MPP)	0.038		6-15-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 YBL111C Protein	0.000	No mitochondrial presequence	45(MPP)	-0.022	54-58,71-75,84-88	14-23-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 YBL109W Protein	0.000	No mitochondrial presequence	78(MPP)	0.013		14-25-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
 YBL108C-A Protein	0.229	No mitochondrial presequence	13(MPP)	0.000	10-14	8-17-low	-	-	-	-	-	-	-	-	-	-	-	-	10-15	-	
