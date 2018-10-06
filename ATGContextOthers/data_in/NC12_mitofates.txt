@@ -1,3 +1,6 @@
+# Mitofates predictions for N. crassa NC12
+# EW 29 September 2018
+# Gene	Prob_preseq	Pred_preseq	CSite_enzyme	Net_charge	Pos_TOM20	Pos_afhelix	BHHPPP	BPHBHH	HBHHBb	HBHHbB	HHBHHB	HHBPHB	HHBPHH	HHBPHP	HHHBBH	HHHBPH	HHHHBB	HHPBHH	HPBHHP	PHHBPH
 Sequence ID	Probability of presequence	Prediction	Cleavage site (processing enzyme)	Net charge	Positions for TOM20 recognition motif (deliminated by comma)	Position of amphypathic alpha-helix	BHHPPP	BPHBHH	HBHHBb	HBHHbB	HHBHHB	HHBPHB	HHBPHH	HHBPHP	HHHBBH	HHHBPH	HHHHBB	HHPBHH	HPBHHP	PHHBPH
 NCU00003 Protein	0.000	No mitochondrial presequence	45(MPP)	0.022		1-10-low	-	-	-	-	-	-	-	1-6	-	-	-	-	-	16-21	
 NCU00004 Protein	0.000	No mitochondrial presequence	54(MPP)	0.111	85-89	10-19-low	-	-	-	-	-	-	-	-	-	-	-	-	-	-	
