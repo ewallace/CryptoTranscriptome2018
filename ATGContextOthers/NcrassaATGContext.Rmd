@@ -1,0 +1,599 @@
+---
+title: "Start codon context for Neurospora crassa"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 6 Oct 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This presents the analysis of Neurospora start codon usage and context. This uses the N. crassa translation estimates from Yu 2015.
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/NcrassaATGContext-",
+                      cache.path="cache/NcrassaATGContext-")
+library(tidyverse)
+library(cowplot)
+library(ggrepel)
+library(ggseqlogo)
+library(Biostrings)
+
+theme_set(theme_cowplot(font_size=12) + 
+              theme(strip.background = element_blank()) )
+
+
+
+geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
+    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
+}
+
+scientific_10 <- function(x) {
+    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
+    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
+    xout <- gsub("{+", "{", xout,fixed=TRUE)
+    xout <- gsub("{0", "{", xout,fixed=TRUE)
+    xout <- paste(xout,"}",sep="")
+    return(parse(text=xout))
+}
+
+scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
+    breaks10 <- 10^omag
+    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
+}
+
+scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
+    breaks10 <- 10^omag
+    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
+}
+
+scale_loglog <- function(...) {
+    list(scale_x_log10nice(...),scale_y_log10nice(...))
+}
+
+round3 <- function(x) round(x,digits=3)
+
+logmean <- function(x) {
+    lx <- log(x)
+    exp( mean( lx[is.finite(lx)] ) )
+}
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+
+# Here we go
+
+## Expression: RNA abundance and ribosome-protected-fragments
+
+### Load expression data
+
+```{r load_ribosum_Nc,results="show"}
+
+tpms_Nc_Yu <- read_tsv("data_in/ExpressionTranslation/NeurosporaYu2015_TPMs_collated.tsv") %>%
+    dplyr::rename(Gene=ORF)
+
+tpms_Nc_Iv <- read_tsv("data_in/ExpressionTranslation/Neurospora_Ivanov2017_TPMs_collated.tsv") %>%
+    dplyr::rename(Gene=ORF)
+
+ribosum_Nc_Yu <- tpms_Nc_Yu %>%
+    mutate(RPF=(WT+Opt)/2)
+
+ribosum_Nc_Iv <- tpms_Nc_Iv %>%
+    mutate(RPF=(WT1A+WT1B+WT2A+WT2B+HS1A+HS1B)/6)
+
+ribosum_Nc <- ribosum_Nc_Iv
+
+ribosum_Nc %>%
+    arrange(desc(RPF)) 
+
+hiTrans_Nc <- ribosum_Nc %>%
+    arrange(desc(RPF)) %>%
+    head(n=400) %>%
+    .$Gene
+
+midTrans_Nc <- ribosum_Nc %>%
+    arrange(desc(RPF)) %>%
+    head(n=2000) %>%
+    .$Gene
+
+# enoughRNA_Nc <- ribosum_Nc %>%
+#     arrange(desc(RNA)) %>%
+#     head(n=5000) %>%
+#     .$Gene
+```
+
+Reasonably, NCU01528 is GAPDH. NCU10042 is enolase-1. NCU02003 is elongation factor 1-alpha. NCU02193 is Pdc1. NCU01754 is Adh1.
+
+Weirdly high expression of thiazole/thiamine biosynthetic enzymes NCU06110/thi4, NCU09345/nmt1.
+
+NCU05495/ccg-16 is CVNH domain-containing protein. NCU08332/hex-1 is isworonin body major protein.
+
+Several hypothetical proteins (NCU16635/NCU04276). Wow. check footprint locations.
+
+#### Check replicability
+
+```{r scatter_ribo_Nc_Yu,dependson="load_ribosum_Nc",results="show",fig.width=4,fig.height=4,eval=FALSE}
+ggplot(data=tpms_Nc_Yu) + 
+    geom_point(aes(x=WT,y=Opt)) +
+    scale_loglog()
+```
+
+```{r scatter_ribo_Nc,dependson="load_ribosum_Nc",results="show",fig.width=8,fig.height=8}
+library(GGally)
+ggpairs(left_join(tpms_Nc_Yu,tpms_Nc_Iv) %>%
+            select(-Gene) %>%
+            log10()
+        )
+```
+
+### Ribosome occupancy mostly tracks RNA abundance
+
+```{r plot_TE_Nc,dependson="load_ribosum_Nc",fig.height=3.9,fig.width=4.1,eval=FALSE}
+TE_unusual_Nc <- 
+    ribosum_Nc %>%
+    filter( (RPF > 1.8e4) |
+                (RPF > 100 & RPF > RNA * 5 ) | 
+                (RNA > 150 & RPF < RNA / 10 ))
+
+
+ggplot(data=ribosum_Nc,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    geom_point(data=TE_unusual_Nc,aes(colour=Gene),size=1) + 
+    geom_text_repel(data=TE_unusual_Nc,aes(label=Gene,colour=Gene)) +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of aORF)",
+         y="Ribosome occupancy (TPM of aORF)") +
+    theme(legend.position="none")
+```
+
+## ATG Context
+
+### Load context data
+
+```{r load_context_Nc,results="show"}
+ctbl_big_Nc <- read_tsv("data_in/NC12_allATGcontext.table.txt",
+                        skip=1,
+                        col_names=c("gene","aATG.context","aATG.pos",
+                                    "d1.context","d1.posTSS","d1.posATG","d1.frame")
+                        ) %>% 
+    dplyr::rename(Gene=gene) %>%
+    filter(!is.na(aATG.context) ) %>%
+    mutate(aATG.context=toupper(aATG.context))
+ctbl_big_Nc
+```
+
+### Annotated ATGs have a Kozak consensus sequence
+
+```{r aATG_context_Nc,fig.width=4,fig.height=1}
+ggseqlogo(data=ctbl_big_Nc$aATG.context,namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Highly translated Annotated ATGs have a Kozak consensus sequence
+
+That's for hiTrans_Nc, the top 4% (400) translated genes by RPF TPM.
+
+```{r a_hi_context_Nc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Nc,Gene %in% hiTrans_Nc)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+
+
+### Downstream ATGs don't have a consensus
+
+First downstream ATG
+
+```{r d1_context_Nc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Nc,nchar(d1.context) ==24)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Downstream ATGs in frame and highly translated don't have a consensus
+
+Except for 3rd-codon-position bias.
+
+```{r d1_hi_frame0_context_Nc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Nc,
+                      nchar(d1.context) == 24,
+                      d1.frame==0,
+                      Gene %in% hiTrans_Nc)$d1.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+## Calculate Information content and scores of consensus motif
+
+### Calculate a wide and a narrow consensus sequence
+
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+
+```{r kozak_consensus_Nc,fig.width=4,fig.height=1}
+kozak_w_PFM_Nc <- filter(ctbl_big_Nc,Gene %in% hiTrans_Nc) %>%
+    .$aATG.context %>%
+    str_sub(start=4L,end=18L) %>%
+    str_to_upper() %>%
+    consensusMatrix() 
+
+kozak_w_PWM_Nc <- PWM(kozak_w_PFM_Nc)
+kozak_n_PWM_Nc <- kozak_w_PFM_Nc[,5:12] %>% PWM()
+```
+
+
+```{r write_PFM_Nc, dependson="calc_scores_Nc",results="show"}
+cat(
+    "# PFM_hiTrans_Nc.txt
+# Position Frequency Matrix for aATGs of 400 highest-translated genes from Sc
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+",
+file="data_out/PFM_hiTrans_Nc.txt")
+kozak_w_PFM_Nc %>%
+    as.tibble() %>%
+    write_tsv("data_out/PFM_hiTrans_Nc.txt",
+              append = TRUE,col_names=FALSE)
+```
+
+### Estimate the information content 
+
+Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
+
+```{r kozak_inf_Nc,fig.width=4,fig.height=1}
+entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
+    counts <- counts + pseudocount
+    ntot = sum(counts)
+    freqs = counts / sum(counts)
+    Hentropy = - sum( freqs * log2(freqs) ) 
+    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
+    information = log2(ssize) - Hentropy
+    return(information)
+}
+
+entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
+    apply(pfm,2,entropy1) %>% sum()
+}
+
+entropytot(kozak_w_PFM_Nc)
+# entropytot(kozak_w_PFM_Nc[,5:12])
+entropytot(kozak_w_PFM_Nc[,-(10:12)])
+entropytot(kozak_w_PFM_Nc[,5:9])
+```
+
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_Nc[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_Nc[,-(10:12)]) %>% round(2)`.
+
+### Calculate scores of aATG, dATG, uATG against Kozak consensus
+
+```{r calc_scores_Nc, dependson="kozak_consensus_Nc"}
+
+PWMscore <- function(seqs,pwm,startl) {
+    # calculate scores for a character vector seqs against
+    # pwm from given starting position
+    # after checking strings are non-missing and start with ACTG
+    vapply(str_sub(seqs,start=startl),
+           function(ss) {
+               if ( is.na(ss) ) {
+                   return(NA)
+               } else if ( str_detect(ss,"\\A[ACTG]") ) {
+                   return( PWMscoreStartingAt(pwm,ss) )
+               } else {
+                   return(NA) 
+               } 
+           } ,
+           FUN.VALUE = 0)
+}
+
+PWMscoren <- function(seqs,pwm=kozak_n_PWM_Nc,startl=8) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+PWMscorew <- function(seqs,pwm=kozak_w_PWM_Nc,startl=4) {
+    PWMscore(seqs,pwm,startl) 
+}
+
+is.context <- function(x) str_detect(x,"context")
+
+scores_Nc <- 
+    ctbl_big_Nc %>%
+    transmute(Gene,
+              aATG.scorekn = PWMscoren(str_to_upper(aATG.context)),
+              d1.scorekn   = PWMscoren(d1.context),
+              # u1.scorekn   = PWMscoren(u1.context),
+              # aATG.scorekw = PWMscorew(str_to_upper(aATG.context)),
+              # d1.scorekw   = PWMscorew(d1.context),
+              # u1.scorekw   = PWMscorew(u1.context),
+              NULL
+    ) %>%
+    mutate(d1vsan = d1.scorekn - aATG.scorekn,
+           # u1vsan = u1.scorekn - aATG.scorekn,
+           # d1vsaw = d1.scorekw - aATG.scorekw,
+           # u1vsaw = u1.scorekw - aATG.scorekw,
+           NULL) 
+
+# ribotbl_scoresenough_Nc <-
+#     ribosum_Nc %>%
+#     filter(Gene %in% enoughRNA_Nc) %>%
+#     # left_join(ribotbl_Nc,by="Gene") %>% 
+#     left_join(scores_Nc,by="Gene")
+
+```
+
+We calculate scores using Biostrings::PWMscoreStartingAt.
+
+The best description I could find of this method is: https://support.bioconductor.org/p/61520/
+
+It is just the sum of the matrix product of the PWM with the sequence.
+
+
+Write scores to file *scores_kozak_Nc.txt*.
+
+```{r write_scores_Nc, dependson="calc_scores_Nc",results="show"}
+scores_Nc
+cat(
+    "# scores_kozak_Nc.txt
+# Scores of ATG context against Kozak sequence, C. neoformans serotype D Sc
+# Kozak sequence derived from 400 highest-translated genes by RPF
+#
+# Gene: Sc systematic gene name
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# d1.scorekn: score of 1st downstream ATG against narrow
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+#
+# Edward Wallace, June 2018
+",
+file="data_out/scores_kozak_Nc.txt")
+scores_Nc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/scores_kozak_Nc.txt",
+              append = TRUE,col_names=TRUE)
+```
+
+### Plot against narrow consensus (-5 to ATG)
+
+```{r plot_scores_n_Nc, dependson="calc_scores_Nc", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_Nc) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(aes(x=u1.scorekn,colour="uATG"),
+    #             kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores_Nc,Gene %in% hiTrans_Nc),
+                 aes(x=aATG.scorekn,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 # "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak score, Sc") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+## Compare aATG and dATG context by gene
+
+### Most dATG scores are less than aATG scores
+
+```{r dvsaATG_scoresdens_Nc, dependson="calc_scores_Nc", fig.width=3.5,fig.height=1.8}
+
+ggplot(data=scores_Nc) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(aes(x=d1vsan,colour="narrow"),kernel="rectangular") +
+    # geom_density(aes(x=d1vsaw,colour="wide"),kernel="rectangular")  +
+    labs(x="difference in score, dATG vs aATG",
+         colour="context") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.position=c(0.8,0.8))
+```
+
+### For highly translated genes, most dATG scores are much less than aATG
+
+```{r dvsaATG_scoresn_Nc, dependson="calc_scores_Nc", fig.width=3.5,fig.height=3.5}
+highdiffn_dvsaATG_Nc <- scores_Nc %>%
+    arrange(desc(d1vsan)) %>%
+    head(n=400) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+ggplot(data=scores_Nc %>% filter(!is.na(d1.scorekn)),
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffn_dvsaATG_Nc,
+               colour="red",size=1) +
+    geom_point(data=scores_Nc %>% 
+                   filter(Gene %in% hiTrans_Nc),
+               colour="blue",size=1) +
+    geom_point(data=highdiffn_dvsaATG_Nc %>% 
+                   filter(Gene %in% hiTrans_Nc),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+Red: high dATG vs aATG **Kozak** score.
+Blue: highly translated.
+Purple: both.
+
+
+## Genes with unusual dATG vs aATG narrow score
+
+Those genes are in this list:
+
+```{r highdiffn_dvsaATG_Nc,dependson="dvsaATG_scoresn_Nc",results="show"}
+highdiffn_dvsaATG_Nc
+```
+
+* NCU05040, hypothetical conserved protein with GFA Glutathione-dependent formaldehyde-activating enzyme domain. JEC21 homolog is CNC03895
+* NCU02127 methylcrotonyl carboxylase-2, mcc-2
+* NCU05555, hypothetical protein
+* NCU07312, hypothetical protein sgr-24
+* NCU12086, hypothetical protein
+* NCU02616, WD-repeat containing protein slp1/cdc20
+* NCU01333, Delta(24(24(1)))-sterol reductase erg-4, ER localized in Scer
+* NCU03699, zinc finger transcription factor-13, znf-13
+* NCU05306, hypothetical protein, homolog of Scer DAN4, CNJ01800 and SPBC725.03 (pyridoxamine 5'-phosphate oxidase, cell wall mannoprotein)
+* NCU06558 D-amino-acid oxidase oxD, many Crypto homologs (CNAG_02532/CNAG_05802/CNAG_03562/) Sp dao1.
+
+
+Some of these are well translated:
+
+```{r highdiffn_dvsaATG_hiTrans_Nc,dependson="dvsaATG_scoresn_Nc",results="show"}
+highdiffn_dvsaATG_Nc %>%
+    left_join( ctbl_big_Nc %>% select(Gene, d1.frame,d1.posATG) ) %>% 
+    filter(Gene %in% hiTrans_Nc) 
+```
+
+* NCU00405 glycyl-tRNA synthetase 1
+* NCU01418 clock-controlled gene-6, ccg-6, SPI1 homolog
+* NCU09560 superoxide dismutase-3 sod-3
+* NCU01221 RPL16/crp-46, check annotation, suspect N-terminal isn't actually there as not homologous to RPL16 or structured.
+* NCU08502 RPS6/crp-14
+* NCU04510 aldose reductase gcy-3, Scer homologs YPR1/GCY1 (both cyto/nuc), GRE3, YJR096W 
+* NCU09331 HMF1, homolog of Scer HMF1 (cyto) / MMF1 (mito) *which have the same aATG/aATG architecture in S. pombe*
+* NCU00629 6-phosphofructokinase emp-3
+* NCU01981 translation factor SUI1/eIF1
+* NCU07408 po / RPP0
+
+
+
+
+## Compare score difference to localization predictions
+
+
+### Load predictions from mitofates
+
+In input file *NC12_mitofates.txt*.
+
+```{r load_mitofates_Nc}
+mitofates_Nc <- read_tsv("data_in/NC12_mitofates.txt",
+                            comment="#",skip=1,
+                         col_names=c("Gene","Prob_preseq","Pred_preseq","CSite_enzyme",
+"Net_charge","Pos_TOM20","Pos_afhelix",
+"BHHPPP","BPHBHH","HBHHBb","HBHHbB","HHBHHB","HHBPHB","HHBPHH",
+"HHBPHP","HHHBBH","HHHBPH","HHHHBB","HHPBHH","HPBHHP","PHHBPH")) %>%
+    mutate(Pred_preseq=factor(Pred_preseq,
+                              levels=c("No mitochondrial presequence",
+                                       "Possessing mitochondrial presequence"),
+                              labels=c("No","Yes")),
+           Gene = str_remove(Gene, " Protein"))
+mitocounts_Nc <- 
+    mitofates_Nc %>% 
+    group_by(Pred_preseq) %>% 
+    count() 
+mitobreaks_Nc <- mitocounts_Nc %>%
+    mutate(label=paste0(Pred_preseq," (n = ",n,")")) %>%
+    .$label %>%
+    set_names(mitocounts_Nc$Pred_preseq)
+
+mitopredlist_Nc <- mitofates_Nc %>%
+    filter(Pred_preseq =="Yes") %>%
+    .$Gene
+```
+
+
+### Sp Genes with high dATG vs aATG score *are* enriched in mitochondrial presequences
+
+```{r dvsaATG_scoresdiffn_mitofates_Nc, dependson=c("calc_scores_Nc","load_mitofates_Nc"), fig.width=5,fig.height=1.8}
+
+ggplot(data=scores_Nc %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           left_join( mitofates_Nc %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
+    geom_vline(xintercept=0,size=0.3) +
+    geom_density(kernel="rectangular",bw=0.025) +
+    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_Nc)  + 
+    labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### Sp mito-localized genes also do not have a distinctive aATG context
+
+Although the +5 T is striking.
+
+```{r aATG_motif_mitofates_Nc, dependson=c("calc_scores_Nc","load_mitofates_Nc"), fig.width=4,fig.height=1}
+
+ggseqlogo(data=ctbl_big_Nc %>%
+              filter(Gene %in% mitopredlist_Nc) %>%
+              .$aATG.context,
+          namespace="TCAG")  + 
+    theme_nothing()
+
+```
+
+## Genes with unusual dATG vs aATG narrow score AND predicted mito loc
+
+Those genes are in this list:
+
+```{r highdiffn_dvsaATG_mitopred_Nc,dependson="dvsaATG_scoresn_Nc",results="show"}
+highdiffn_dvsaATG_Nc %>%
+    left_join( ctbl_big_Nc %>% select(Gene, d1.frame,d1.posATG) ) %>%
+    left_join( ribosum_Nc ) %>%
+    filter(Gene %in% mitopredlist_Nc) %>%
+    print(n=26)
+```
+
+Most have in-frame ATG
+
+* NCU05040 again
+* NCU02127 again
+* NCU08568 adenine-19, ad-19, Scer homolog YSA1 is dual-localized.
+* NCU03605 amidohydrolase
+* NCU10044 hypothetical protein apn-1, AP endonuclease, Sc APN1 dula-localized mito/nuc.
+* NCU06615 hypothetical protein, CNAG_06355 homolog, bacterial homologs (YccU in E coli), CoA binding domain, likely mitochondrial.
+* NCU01307 hypothetical protein
+* NCU03859 MYG1 protein, homologous to mammalian MYG1/Gamm1 which is dual mito/nuc localized, and CNAG_06946 which has same structure.
+* NCU01784 pseudouridylate synthase 3 psu-3, tRNA-PUS, DEG1 homolog
+* NCU07528 tRNA-pseudouridine synthase-1, tpus-1 dual-loc conserved
+* NCU03054 hypothetical protein, paralog of NCU08606, ortholog of ACK1 (mito), SHC1 (?), DSF2 (bud tip)
+* NCU03793 hypothetical protein, CNAG_07308/CNA00310 homolog, aflatoxin biogenesis/HypA related.
+* NCU08195 ArgRS
+* NCU00405 GlyRS
+* NCU00742 glycerol-3-phosphate dehydrogenase glp-1, Scer homologs GPD1/GPD2 dual-localized.
+* NCU11195 D-isomer specific 2-hydroxyacid dehydrogenase
+* NCU00847 hypothetical protein, putative methyltransferase/methoxylase/GA4 desaturase family protein
+* NCU03696 nitroreductase, Scer HBN1 & FRM2 homolog, CNAG_02692 (mito) homolog.
+* NCU03339 Glutathione reductase gtr-1, GLR1 homolog Cytosolic and mitochondrial glutathione reductase.
+
+### Some more decently-translated ones
+
+```{r highdiffn_dvsaATG_mitopred_hiTrans_Nc,dependson="dvsaATG_scoresn_Nc",results="show"}
+highdiffn_dvsaATG_Nc %>%
+    left_join( ctbl_big_Nc %>% select(Gene, d1.frame,d1.posATG) ) %>%
+    left_join( ribosum_Nc ) %>%
+    filter(Gene %in% mitopredlist_Nc, Gene %in% midTrans_Nc) 
+```
+
+* NCU03749 pyruvate-1 pru-1, GLO2/GLO4 homolog
+* NCU06877 CRAL/TRIO domain-containing protein, CSR1 homolog dual-localized.
+* NCU06108 UPF0135, NIF3 homolog
+* NCU05805 Serine hydroxymethyltransferase cbs-2, SHM1 (mito) and SHM2 (cyto) homolog.
+* NCU01501 mitochondrial peptidyl-tRNA hydrolase Pth2
+* NCU03177 sco1, Scer homologs are mitochondrial, only 2 codons between ATGs.
+* NCU01965 ValRS
+* NCU09536 conserved hypothetical protein
+* NCU02701 dipeptidyl peptidase dpp-2, YOL057W homolog
+* NCU00936 succinate-3 suc-3; Cneo has homologs CNAG_01027 (mito) and CNAG_04467 (not); Scer has a single homolog UGA2, mostly cytoplasmic
+
+<a href="#top">Back to table of contents</a>
