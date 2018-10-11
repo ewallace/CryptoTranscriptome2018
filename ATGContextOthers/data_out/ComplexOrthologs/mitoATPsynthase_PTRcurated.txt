@@ -1,10 +1,10 @@
-# mitochondrial ATP synthase orthologs from core fungi of interest					
-"# Core factors only, no inhibitory factors"					
-# Edited from http://www.yeastgenome.org/Ê GO:0000276					
-# orthologs from PANTHER.db					
-# C. neo JEC21 mito. genome not in PANTHER.db					
-"# E. Wallace, 23 July 2018."					
-#					
+# mitochondrial ATP synthase orthologs from core fungi of interest
+# Core factors only, no inhibitory factors
+# Edited from http://www.yeastgenome.org/Ê GO:0000276
+# orthologs from PANTHER.db
+# C. neo JEC21 mito. genome not in PANTHER.db
+# E. Wallace, 23 July 2018.
+#
 FAMILY_ID	SUBUNIT	SPECIES	UNIPROT	ENTREZ	SYSTEMATIC
 PTHR36101:SF1	ATP8	YEAST	P00856	854600	Q0080
 PTHR36101:SF1	ATP8	SCHPO	P21536	1669531	SPMIT.09
