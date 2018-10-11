@@ -1,7 +1,7 @@
 ---
-title: "Select Orthodb complexes"
+title: "Select complexes across fungi by homology from known lists"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 16 July 2018
+date: 9 Oct 2018
 output:
   # html_notebook: default
   html_document:
@@ -10,7 +10,6 @@ output:
 ---
 
 # Summary
-
 
 We want to get a list of fungal orthologs for proteins in some complexes:
     * cytoplasmic ribosome
@@ -26,21 +25,23 @@ OrthoDB ran into several problems:
     * orthodb doesn't report consistent gene name sources. some are uniprot, some are not
     * biomaRt/ensemblfungi doesn't have uniprot annotations for N. crassa and C. neoformans
     * biomaRt/ensemblfungi doesn't have C. albicans at all
+    
+Thus I set the OrthoDB code to not be evaluated.
 
 PANTHER.db, however, worked to find least diverged orthologs. An earlier attempt with PANTHER from GO annotations hadn't worked as those are patchy in other fungi.
+
+Unfortunately the version of PANTHER.db I used (1.0.4, October 2018) did not have systematic gene ids for Candida albicans.
 
 ### Load Packages
 
 ```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
-knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
-                      results="show",
-                      fig.path="figure/SelectOrthoDBcx-",
-                      cache.path="cache/SelectOrthoDBcx-")
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=FALSE,
+                      results="show")
 library(tidyverse)
 library(Biostrings)
-library(biomaRt)
 library(PANTHER.db)
 
+library(biomaRt)
 ensemblscer <- 
     useMart(biomart = "fungi_mart",
             dataset = "scerevisiae_eg_gene",
@@ -50,7 +51,7 @@ ensemblscer <-
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
 ```
 
-# OrthoDB
+# OrthoDB - This was unreliable so code is unevaluated.
 
 ```{r orthodb_species}
 fungi_keep <- c(Scer="Saccharomyces cerevisiae S288c",
@@ -299,12 +300,14 @@ getSameFamily <- function(my_uid,org="CRYNJ",orgs=Pfungi,keytype="UNIPROT") {
 cytoribosome_Scer <- read_tsv("data_in/Complexes/Scer_cytoribosomalproteins.txt",
                               comment="#")
 
+# convert Scer names to uniprot names
 cytoribosome_Scer_uniprot <- 
-    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+    getBM(attributes = c("ensembl_gene_id","uniprotswissprot"),
           filters = 'ensembl_gene_id', 
           values = cytoribosome_Scer$orf, 
           mart = ensemblscer)
 
+# get fungal homologs
 cytoribosome_somefungi <- 
     cytoribosome_Scer_uniprot$uniprotswissprot %>%
     map_dfr(getSameFamily,org="YEAST") %>%
@@ -328,7 +331,7 @@ mitoribosome_Scer <- read_tsv("data_in/Complexes/Scer_mitoribosomalproteins.txt"
                               comment="#")
 
 mitoribosome_Scer_uniprot <- 
-    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+    getBM(attributes = c("ensembl_gene_id","uniprotswissprot"),
           filters = 'ensembl_gene_id', 
           values = mitoribosome_Scer$orf, 
           mart = ensemblscer)
@@ -355,7 +358,7 @@ mitoATPsynthase_Scer <- read_tsv("data_in/Complexes/Scer_mitoATPSynthase.txt",
                               comment="#")
 
 mitoATPsynthase_Scer_uniprot <- 
-    getBM(attributes = c("ensembl_gene_id","external_gene_name","uniprotswissprot"),
+    getBM(attributes = c("ensembl_gene_id","uniprotswissprot"),
           filters = 'ensembl_gene_id', 
           values = mitoATPsynthase_Scer$orf, 
           mart = ensemblscer)
