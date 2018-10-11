@@ -333,7 +333,7 @@ mitoribosome_Scer <- read_tsv("data_in/Complexes/Scer_mitoribosomalproteins.txt"
 mitoribosome_Scer_uniprot <- 
     getBM(attributes = c("ensembl_gene_id","uniprotswissprot"),
           filters = 'ensembl_gene_id', 
-          values = mitoribosome_Scer$orf, 
+          values = mitoribosome_Scer$GENE_ID, 
           mart = ensemblscer)
 
 mitoribosome_somefungi <- 
