@@ -20,50 +20,8 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
                       results="hide",
                       fig.path="figure/SacCerATGContext-",
                       cache.path="cache/SacCerATGContext-")
-library(tidyverse)
-library(cowplot)
-library(ggrepel)
-library(ggseqlogo)
-library(Biostrings)
-
-theme_set(theme_cowplot(font_size=12) + 
-              theme(strip.background = element_blank()) )
-
-
-
-geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
-    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
-}
-
-scientific_10 <- function(x) {
-    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
-    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
-    xout <- gsub("{+", "{", xout,fixed=TRUE)
-    xout <- gsub("{0", "{", xout,fixed=TRUE)
-    xout <- paste(xout,"}",sep="")
-    return(parse(text=xout))
-}
-
-scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_loglog <- function(...) {
-    list(scale_x_log10nice(...),scale_y_log10nice(...))
-}
-
-round3 <- function(x) round(x,digits=3)
-
-logmean <- function(x) {
-    lx <- log(x)
-    exp( mean( lx[is.finite(lx)] ) )
-}
+# load common functions
+source("../SharedScripts/sharedScripts.R")
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
 ```
 
@@ -123,17 +81,6 @@ ggplot(data=ribosum_Sc,aes(x=RNA,y=RPF)) +
 ### Load context data
 
 ```{r load_context_Sc,results="show"}
-read_ATGcontext_table <- function(file) {
-    read_tsv(file,comment="#",skip=1,
-             col_names=c("Gene","aATG.context","aATG.pos",
-                         "d1.context","d1.posTSS","d1.posATG","d1.frame",
-                         "d2.context","d2.posTSS","d2.posATG","d2.frame",
-                         "u1.context","u1.posTSS","u1.posATG","u1.frame",
-                         "u2.context","u2.posTSS","u2.posATG","u2.frame")
-    ) %>% 
-        filter(!is.na(aATG.context) ) %>%
-        mutate(aATG.context=toupper(aATG.context))
-}
 ctbl_big_Sc <- 
     read_ATGcontext_table("data_in/SacCer_allATGcontext.table.txt")
 
@@ -233,39 +180,6 @@ kozak_w_PFM_Sc %>%
 Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
 
 ```{r kozak_inf_Sc,dependson=c("kozak_consensus_Sc","cytoribo_context_Sc"),fig.width=4,fig.height=1,results="show"}
-infon1 <- function(counts,ssize=4,pseudocount=0.5) {
-    # calculate information content for one position
-    # as described in https://en.wikipedia.org/wiki/Sequence_logo
-    # counts: position frequency matrix
-    # ssize: alphabet size
-    # pseudocount: pseudocount to add to remove zeroes
-    
-    counts <- counts + pseudocount # add pseudocount
-    ntot = sum(counts)[1] # total number of sequences
-    freqs = counts / ntot # freqency
-    Hentropy = - sum( freqs * log2(freqs) ) # Shannon entropy 
-    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot ) # small-sample correction
-    information = log2(ssize) - Hentropy # information content
-    return(information)
-}
-
-infonall <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,infon1)
-}
-
-infontot <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,infon1) %>% sum()
-}
-
-infonfromseqs <- function(seqs,sstart=1L,send=-1L,ssize=4,pseudocount=0.5) {
-    seqs %>% 
-    str_sub(start=sstart,end=send) %>%
-    str_to_upper %>%
-    consensusMatrix %>%
-    infontot(ssize=ssize,pseudocount=pseudocount)
-}
-
-
 inf_content_narrow <- 
     tribble(
         ~Genes, ~ATG, ~Width, ~Infon,
@@ -303,8 +217,8 @@ inf_content_narrow <-
     )
 
 write_tsv(inf_content_narrow %>%
-              mutate_if(is.numeric,round,digits=3),
-          "inf_content_narrow_Sc.txt")
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_narrow_Sc.txt")
 inf_content_narrow
 ```
 
@@ -314,34 +228,6 @@ Information content in bits of highly-translated consensus (excluding 6 bits fro
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
 ```{r calc_scores_Sc, dependson="kozak_consensus_Sc"}
-
-PWMscore <- function(seqs,pwm,startl) {
-    # calculate scores for a character vector seqs against
-    # pwm from given starting position
-    # after checking strings are non-missing and start with ACTG
-    vapply(str_sub(seqs,start=startl),
-           function(ss) {
-               if ( is.na(ss) ) {
-                   return(NA)
-               } else if ( str_detect(ss,"\\A[ACTG]") ) {
-                   return( PWMscoreStartingAt(pwm,ss) )
-               } else {
-                   return(NA) 
-               } 
-           } ,
-           FUN.VALUE = 0)
-}
-
-PWMscoren <- function(seqs,pwm=kozak_n_PWM_Sc,startl=8) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-PWMscorew <- function(seqs,pwm=kozak_w_PWM_Sc,startl=4) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-is.context <- function(x) str_detect(x,"context")
-
 scores_Sc <- 
     ctbl_big_Sc %>%
     transmute(Gene,
