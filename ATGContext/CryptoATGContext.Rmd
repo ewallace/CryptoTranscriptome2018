@@ -1715,6 +1715,66 @@ highdiffn_dvsaATG_cc %>%
 
 
 
+### Genes with very different aATG scores, JEC21 vs H99
+
+Filtered for enough RNA (top 50%)
+
+```{r scores_straindiff,dependson="scores_cc",results="show",fig.width=3.5,fig.height=3.5}
+# scores_cc
+highdiffn_aATG_HvsJ_cc <- scores_cc  %>%
+    mutate(askndiff.HvsJ=aATG.scorekn.H99-aATG.scorekn.JEC21) %>%
+    filter(H99 %in% enoughRNA_H99,
+           JEC21 %in% enoughRNA_JEC21,
+           abs(askndiff.HvsJ) >= 0.1) 
+
+highdiffn_aATG_HvsJ_cc_nice <- highdiffn_aATG_HvsJ_cc  %>%	
+    transmute( H99, JEC21, # d1.frame,
+            a.skn.H99=round(aATG.scorekn.H99,5),
+            d.skn.H99=round(d1.scorekn.H99,5),
+            a.skn.JEC21=round(aATG.scorekn.JEC21,5),
+            d.skn.JEC21=round(d1.scorekn.JEC21,5),
+            askndiff.HvsJ) 
+
+highdiffn_aATG_HvsJ_cc_nice %>%
+    arrange(askndiff.HvsJ) %>%
+    select(-askndiff.HvsJ)
+
+highdiffn_aATG_HvsJ_cc_nice %>%
+    arrange(desc(askndiff.HvsJ))  %>%
+    select(-askndiff.HvsJ)
+
+ggplot(data=scores_cc,aes(x=aATG.scorekn.H99,y=aATG.scorekn.JEC21)) +
+    geom_diagline() +
+    geom_point()
+```
+
+Many of these have the expected structure where homologs differ only at the N-terminus. There appears to be a swap between a near-ATG start codon, and a poor-context ATG, between the species.
+
+Higher aATG score in JEC21:
+
+* CNAG_04147/CNI02850, putative RNA helicase RRP3 homolog
+* CNAG_06000/CNM00090, putative glycoprotein
+* CNAG_03486/CNG01060, peptidylprolyl isomerase, Scer has CPR2/CPR5 homolgs localized to ER and vacuole.
+* CNAG_06353/CNN00820, tRNA pseudouridine synthase, exciting, CNAG_06353 has weak mito loc seq, Scer has PUS1/PUS2 nuc/mito homologs.
+* CNAG_06446/CNN01710, mitochondrial splicing suppressor Mss51 homolog, clear mito preseq in *both*.
+* CNAG_01092/CND02180, hypothetical protein conserved in crypto, mito preseq in both
+* CNAG_01188/CND03130, ATGATG start in H99, not interesting
+* CNAG_05678/CNF02960, putative transmembrane protein involved in ammonia production.
+* CNAG_07645/CNE03115 Autophagy protein Atg12, H99 CNAG_07645 has non-homologous annotated N-terminal extension that seems improbably.
+
+Higher aATG score in H99:
+
+* CNAG_00529/CNA05110, sulfite transporter, Scer Ssu1 homolog.
+* CNAG_03410/CNG01740, upstream ATG in JEC21 close to TSS, prob not real
+* CNAG_04089/CNB05680, again upstream ATG in JEC21 close to TSS, prob not real. *Note that CNAG_03410/CNAG_04089 are paralogs*
+* CNAG_04751/CNJ01820, hypothetical protein conserved in tremellomycetes.
+* CNAG_02703/CNK01910, hypothetical protein conserved in tremellomycetes.
+* CNAG_03638/CNB01390, identical ATG context in fungidb, check.
+* CNAG_05504/CNH01580, Iah1, pattern unclear, JEC21 just has poor start codons.
+* CNAG_05692/CNF02820, sphinganine kinase, Scer YSR3/LCB2 homolog.
+* CNAG_07609/CNC03180, putative RNA helicase, weak start context in JEC21 predicts less protein in cell. Or most translation initiation is from much later ATG? DDX51/DBP6 homolog.
+
+These look like mostly misannotated in one strain, or not interesting. Is the upstream start codon in one strain actually used? Check for ribosome footprints and for other features (homology, mito localization seq). It would be nice to have an additional filter here.
 
 
 
