@@ -1,7 +1,7 @@
 ---
 title: "Start codon context for Saccharomyces cerevisiae"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 16 Aug 2018
+date: 12 Oct 2018
 output:
   # html_notebook: default
   html_document:
@@ -12,6 +12,8 @@ output:
 # Summary
 
 This presents the renewed analysis of Saccharomyces start codon usage and context. This uses the S. cerevisiae S288C expression and translation estimates from David Weinberg et al 2017.
+
+This was started in Aug 2018, updated through Oct 2018, and used as a template for the analyses in other fungi.
 
 ### Load Packages
 
@@ -231,19 +233,12 @@ Information content in bits of highly-translated consensus (excluding 6 bits fro
 scores_Sc <- 
     ctbl_big_Sc %>%
     transmute(Gene,
-              aATG.scorekn = PWMscoren(str_to_upper(aATG.context)),
-              d1.scorekn   = PWMscoren(d1.context),
-              u1.scorekn   = PWMscoren(u1.context),
-              # aATG.scorekw = PWMscorew(str_to_upper(aATG.context)),
-              # d1.scorekw   = PWMscorew(d1.context),
-              # u1.scorekw   = PWMscorew(u1.context),
-              NULL
+              aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM_Sc),
+              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_Sc),
+              u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_Sc)
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
-           u1vsan = u1.scorekn - aATG.scorekn,
-           # d1vsaw = d1.scorekw - aATG.scorekw,
-           # u1vsaw = u1.scorekw - aATG.scorekw,
-           NULL) 
+           u1vsan = u1.scorekn - aATG.scorekn) 
 
 ribotbl_scoresenough_Sc <-
     ribosum_Sc %>%
@@ -399,8 +394,8 @@ We need to put the corresponding SacCer proteome through mitofates in order to r
 In input file *SacCer_mitofates_parsed.table.txt*.
 
 ```{r load_mitofates_Sc}
-mitofates_Sc <- read_tsv("data_in/SacCer_mitofates_parsed.table.txt",
-                            comment="#")
+mitofates_Sc <- read_mitofates("data_in/SacCer_nuclear_mitofates.txt")
+
 mitocounts_Sc <- 
     mitofates_Sc %>% 
     group_by(Pred_preseq) %>% 

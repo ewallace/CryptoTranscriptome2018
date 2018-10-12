@@ -24,69 +24,8 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
                       results="hide",
                       fig.path="figure/CryptoATGContext-",
                       cache.path="cache/CryptoATGContext-")
-library(tidyverse)
-library(cowplot)
-library(ggrepel)
-library(ggseqlogo)
-library(Biostrings)
-
-theme_set(theme_cowplot(font_size=12) + 
-              theme(strip.background = element_blank()) )
-
-
-
-geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
-    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
-}
-
-scientific_10 <- function(x) {
-    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
-    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
-    xout <- gsub("{+", "{", xout,fixed=TRUE)
-    xout <- gsub("{0", "{", xout,fixed=TRUE)
-    xout <- paste(xout,"}",sep="")
-    return(parse(text=xout))
-}
-
-scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_loglog <- function(...) {
-    list(scale_x_log10nice(...),scale_y_log10nice(...))
-}
-
-round3 <- function(x) round(x,digits=3)
-
-logmean <- function(x) {
-    lx <- log(x)
-    exp( mean( lx[is.finite(lx)] ) )
-}
-
-read_mitofates <- function(mffile,              
-                           mitofates_colnames = 
-                               c("Gene", "Prob_preseq", "Pred_preseq", 
-                                 "CSite_enzyme", "Net_charge", "Pos_TOM20", "Pos_afhelix", 
-                                 "BHHPPP","BPHBHH", "HBHHBb", "HBHHbB", 
-                                 "HHBHHB", "HHBPHB", "HHBPHH", "HHBPHP",
-                                 "HHHBBH", "HHHBPH", "HHHHBB", "HHPBHH",
-                                 "HPBHHP", "PHHBPH","trail")
-) {
-    read_tsv(mffile,comment="#",skip=1,
-             col_names=mitofates_colnames) %>%
-        select(-trail) %>%
-        mutate(Pred_preseq=factor(Pred_preseq,
-                                  levels=c("No mitochondrial presequence",
-                                           "Possessing mitochondrial presequence"),
-                                  labels=c("No","Yes")))
-}
-
+# load common functions
+source("../SharedScripts/sharedScripts.R")
 
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
 ```
@@ -209,6 +148,18 @@ ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
     theme_nothing()
 ```
 
+### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
+
+```{r cytoribo_context_JEC21,dependson="load_context_JEC21",fig.width=4,fig.height=1}
+cytoribolist_JEC21 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+                        comment="#") %>%
+    filter(SPECIES=="CRYNJ") %>%
+    .$GENE_ID
+
+ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% cytoribolist_JEC21)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
 
 ### Upstream ATGs don't have a consensus
 
@@ -280,28 +231,50 @@ kozak_w_PFM_JEC21 %>%
 
 Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
 
-```{r kozak_inf_JEC21,fig.width=4,fig.height=1}
-entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
-    counts <- counts + pseudocount
-    ntot = sum(counts)
-    freqs = counts / sum(counts)
-    Hentropy = - sum( freqs * log2(freqs) ) 
-    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
-    information = log2(ssize) - Hentropy
-    return(information)
-}
+```{r kozak_inf_JEC21,dependson=c("kozak_consensus_JEC21","cytoribo_context_JEC21"),fig.width=4,fig.height=1,results="show"}
+inf_content_narrow <- 
+    tribble(
+        ~Genes, ~ATG, ~Width, ~Infon,
+        "All", "aATG", "narrow", 
+        ctbl_big_JEC21 %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "aATG", "narrow", 
+        ctbl_big_JEC21 %>%
+            filter(Gene %in% hiTrans_JEC21) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow", 
+        ctbl_big_JEC21 %>%
+            filter(Gene %in% cytoribolist_JEC21) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "All", "d1ATG", "narrow", 
+        ctbl_big_JEC21 %>%
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "d1ATG", "narrow", 
+        ctbl_big_JEC21 %>%
+            filter(Gene %in% hiTrans_JEC21) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow", 
+        ctbl_big_JEC21 %>%
+            filter(Gene %in% cytoribolist_JEC21) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L)
+    )
 
-entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,entropy1) %>% sum()
-}
-
-entropytot(kozak_w_PFM_JEC21)
-# entropytot(kozak_w_PFM_JEC21[,5:12])
-entropytot(kozak_w_PFM_JEC21[,-(10:12)])
-entropytot(kozak_w_PFM_JEC21[,5:9])
+write_tsv(inf_content_narrow %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_narrow_JEC21.txt")
+inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_JEC21[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_JEC21[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
@@ -859,6 +832,20 @@ ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
     theme_nothing()
 ```
 
+### Cytoplasmic Ribosome Annotated ATGs have a consensus sequence
+
+Ideally would fix this more nicely.
+
+```{r cytoribo_context_H99,dependson=c("load_context_H99","cytoribo_context_JEC21"),fig.width=4,fig.height=1}
+cytoribolist_H99 <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
+                       comment="#") %>%
+    filter(JEC21 %in% cytoribolist_JEC21) %>%
+    .$H99
+
+ggseqlogo(data=filter(ctbl_big_H99,Gene %in% cytoribolist_H99)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
 
 ### Upstream ATGs don't have a consensus
 
@@ -930,28 +917,50 @@ kozak_w_PFM_H99 %>%
 
 Using the sequence logo details on https://en.wikipedia.org/wiki/Sequence_logo
 
-```{r kozak_inf_H99,fig.width=4,fig.height=1}
-entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
-    counts <- counts + pseudocount
-    ntot = sum(counts)
-    freqs = counts / sum(counts)
-    Hentropy = - sum( freqs * log2(freqs) ) 
-    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
-    information = log2(ssize) - Hentropy
-    return(information)
-}
+```{r kozak_inf_H99,dependson=c("kozak_consensus_H99","cytoribo_context_H99"),fig.width=4,fig.height=1,results="show"}
+inf_content_narrow <- 
+    tribble(
+        ~Genes, ~ATG, ~Width, ~Infon,
+        "All", "aATG", "narrow", 
+        ctbl_big_H99 %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "aATG", "narrow", 
+        ctbl_big_H99 %>%
+            filter(Gene %in% hiTrans_H99) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow",
+        ctbl_big_H99 %>%
+            filter(Gene %in% cytoribolist_H99) %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "All", "d1ATG", "narrow", 
+        ctbl_big_H99 %>%
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "d1ATG", "narrow", 
+        ctbl_big_H99 %>%
+            filter(Gene %in% hiTrans_H99) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow",
+        ctbl_big_H99 %>%
+            filter(Gene %in% cytoribolist_H99) %>%
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L)
+    )
 
-entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,entropy1) %>% sum()
-}
-
-entropytot(kozak_w_PFM_H99)
-# entropytot(kozak_w_PFM_H99[,5:12])
-entropytot(kozak_w_PFM_H99[,-(10:12)])
-entropytot(kozak_w_PFM_H99[,5:9])
+write_tsv(inf_content_narrow %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_narrow_H99.txt")
+inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_H99[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_H99[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 

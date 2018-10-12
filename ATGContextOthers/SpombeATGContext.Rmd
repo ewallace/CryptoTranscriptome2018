@@ -1,7 +1,7 @@
 ---
 title: "Start codon context for Schizosaccharomyces pombe"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 6 Oct 2018
+date: 12 Oct 2018
 output:
   # html_notebook: default
   html_document:
@@ -20,50 +20,8 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
                       results="hide",
                       fig.path="figure/SpombeATGContext-",
                       cache.path="cache/SpombeATGContext-")
-library(tidyverse)
-library(cowplot)
-library(ggrepel)
-library(ggseqlogo)
-library(Biostrings)
-
-theme_set(theme_cowplot(font_size=12) + 
-              theme(strip.background = element_blank()) )
-
-
-
-geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
-    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
-}
-
-scientific_10 <- function(x) {
-    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
-    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
-    xout <- gsub("{+", "{", xout,fixed=TRUE)
-    xout <- gsub("{0", "{", xout,fixed=TRUE)
-    xout <- paste(xout,"}",sep="")
-    return(parse(text=xout))
-}
-
-scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_loglog <- function(...) {
-    list(scale_x_log10nice(...),scale_y_log10nice(...))
-}
-
-round3 <- function(x) round(x,digits=3)
-
-logmean <- function(x) {
-    lx <- log(x)
-    exp( mean( lx[is.finite(lx)] ) )
-}
+# load common functions
+source("../SharedScripts/sharedScripts.R")
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
 ```
 
@@ -138,14 +96,7 @@ ggplot(data=ribosum_Sp,aes(x=RNA,y=RPF)) +
 ### Load context data
 
 ```{r load_context_Sp,results="show"}
-ctbl_big_Sp <- read_tsv("data_in/SPombe_allATGcontext.table.txt",
-                        skip=1,
-                        col_names=c("gene","aATG.context","aATG.pos",
-                                    "d1.context","d1.posTSS","d1.posATG","d1.frame")
-                        ) %>% 
-    dplyr::rename(Gene=gene) %>%
-    filter(!is.na(aATG.context) ) %>%
-    mutate(aATG.context=toupper(aATG.context))
+ctbl_big_Sp <- read_ATGcontext_table("data_in/SPombe_allATGcontext.table.txt")
 ctbl_big_Sp
 ```
 
@@ -166,6 +117,17 @@ ggseqlogo(data=filter(ctbl_big_Sp,Gene %in% hiTrans_Sp)$aATG.context,
     theme_nothing()
 ```
 
+### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
+
+```{r cytoribo_context_Sp,dependson="load_context_Sc",fig.width=4,fig.height=1}
+cytoribolist_Sp <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+                        comment="#") %>%
+    filter(SPECIES=="SCHPO") %>%
+    .$GENE_ID
+ggseqlogo(data=filter(ctbl_big_Sp,Gene %in% cytoribolist_Sp)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
 
 
 ### Downstream ATGs don't have a consensus
@@ -209,7 +171,7 @@ kozak_n_PWM_Sp <- kozak_w_PFM_Sp[,5:12] %>% PWM()
 ```
 
 
-```{r write_PFM_Sp, dependson="calc_Spores_Sp",results="show"}
+```{r write_PFM_Sp, dependson="calc_scores_Sp",results="show"}
 cat(
     "# PFM_hiTrans_Sp.txt
 # Position Frequency Matrix for aATGs of 256 highest-translated genes from Sc
@@ -229,78 +191,67 @@ kozak_w_PFM_Sp %>%
 
 Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
 
-```{r kozak_inf_Sp,fig.width=4,fig.height=1}
-entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
-    counts <- counts + pseudocount
-    ntot = sum(counts)
-    freqs = counts / sum(counts)
-    Hentropy = - sum( freqs * log2(freqs) ) 
-    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
-    information = log2(ssize) - Hentropy
-    return(information)
-}
+```{r kozak_inf_Sp,dependson=c("kozak_consensus_Sp","cytoribo_context_Sp"),fig.width=4,fig.height=1,results="show"}
+inf_content_narrow <- 
+    tribble(
+        ~Genes, ~ATG, ~Width, ~Infon,
+        "All", "aATG", "narrow", 
+        ctbl_big_Sp %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "aATG", "narrow", 
+        ctbl_big_Sp %>%
+            filter(Gene %in% hiTrans_Sp) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow", 
+        ctbl_big_Sp %>%
+            filter(Gene %in% cytoribolist_Sp) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "All", "d1ATG", "narrow", 
+        ctbl_big_Sp %>%
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "d1ATG", "narrow", 
+        ctbl_big_Sp %>%
+            filter(Gene %in% hiTrans_Sp) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow", 
+        ctbl_big_Sp %>%
+            filter(Gene %in% cytoribolist_Sp) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L)
+    )
 
-entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,entropy1) %>% sum()
-}
-
-entropytot(kozak_w_PFM_Sp)
-# entropytot(kozak_w_PFM_Sp[,5:12])
-entropytot(kozak_w_PFM_Sp[,-(10:12)])
-entropytot(kozak_w_PFM_Sp[,5:9])
+write_tsv(inf_content_narrow %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_narrow_Sp.txt")
+inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_Sp[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_Sp[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Sp[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Sp[,-(10:12)]) %>% round(2)`.
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
-```{r calc_Spores_Sp, dependson="kozak_consensus_Sp"}
-
-PWMscore <- function(seqs,pwm,startl) {
-    # calculate scores for a character vector seqs against
-    # pwm from given starting position
-    # after checking strings are non-missing and start with ACTG
-    vapply(str_sub(seqs,start=startl),
-           function(ss) {
-               if ( is.na(ss) ) {
-                   return(NA)
-               } else if ( str_detect(ss,"\\A[ACTG]") ) {
-                   return( PWMscoreStartingAt(pwm,ss) )
-               } else {
-                   return(NA) 
-               } 
-           } ,
-           FUN.VALUE = 0)
-}
-
-PWMscoren <- function(seqs,pwm=kozak_n_PWM_Sp,startl=8) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-PWMscorew <- function(seqs,pwm=kozak_w_PWM_Sp,startl=4) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-is.context <- function(x) str_detect(x,"context")
-
+```{r calc_scores_Sp, dependson="kozak_consensus_Sp"}
 scores_Sp <- 
     ctbl_big_Sp %>%
     transmute(Gene,
-              aATG.scorekn = PWMscoren(str_to_upper(aATG.context)),
-              d1.scorekn   = PWMscoren(d1.context),
-              # u1.scorekn   = PWMscoren(u1.context),
-              # aATG.scorekw = PWMscorew(str_to_upper(aATG.context)),
-              # d1.scorekw   = PWMscorew(d1.context),
-              # u1.scorekw   = PWMscorew(u1.context),
+              aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM_Sp),
+              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_Sp),
+              # u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_Sp)
               NULL
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
            # u1vsan = u1.scorekn - aATG.scorekn,
-           # d1vsaw = d1.scorekw - aATG.scorekw,
-           # u1vsaw = u1.scorekw - aATG.scorekw,
            NULL) 
 
-# ribotbl_Sporesenough_Sp <-
+# ribotbl_scoresenough_Sp <-
 #     ribosum_Sp %>%
 #     filter(Gene %in% enoughRNA_Sp) %>%
 #     # left_join(ribotbl_Sp,by="Gene") %>% 
@@ -317,7 +268,7 @@ It is just the sum of the matrix product of the PWM with the sequence.
 
 Write scores to file *scores_kozak_Sp.txt*.
 
-```{r write_Spores_Sp, dependson="calc_Spores_Sp",results="show"}
+```{r write_scores_Sp, dependson="calc_scores_Sp",results="show"}
 scores_Sp
 cat(
     "# scores_kozak_Sp.txt
@@ -340,7 +291,7 @@ scores_Sp %>%
 
 ### Plot against narrow consensus (-5 to ATG)
 
-```{r plot_Spores_n_Sp, dependson="calc_Spores_Sp", fig.width=5,fig.height=1.8}
+```{r plot_scores_n_Sp, dependson="calc_scores_Sp", fig.width=5,fig.height=1.8}
 
 sbandwidthn = 0.025
 
@@ -368,7 +319,7 @@ ggplot(data=scores_Sp) +
 
 ### Most dATG scores are less than aATG scores
 
-```{r dvsaATG_Sporesdens_Sp, dependson="calc_Spores_Sp", fig.width=3.5,fig.height=1.8}
+```{r dvsaATG_scoresdens_Sp, dependson="calc_scores_Sp", fig.width=3.5,fig.height=1.8}
 
 ggplot(data=scores_Sp) +
     geom_vline(xintercept=0,size=0.3) +
@@ -383,7 +334,7 @@ ggplot(data=scores_Sp) +
 
 ### For highly translated genes, most dATG scores are much less than aATG
 
-```{r dvsaATG_Sporesn_Sp, dependson="calc_Spores_Sp", fig.width=3.5,fig.height=3.5}
+```{r dvsaATG_scoresn_Sp, dependson="calc_scores_Sp", fig.width=3.5,fig.height=3.5}
 highdiffn_dvsaATG_Sp <- scores_Sp %>%
     arrange(desc(d1vsan)) %>%
     head(n=256) %>%
@@ -418,7 +369,7 @@ R = `r with(scores_Sp, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs"))
 
 Those genes are in this list:
 
-```{r highdiffn_dvsaATG_Sp,dependson="dvsaATG_Sporesn_Sp",results="show"}
+```{r highdiffn_dvsaATG_Sp,dependson="dvsaATG_scoresn_Sp",results="show"}
 highdiffn_dvsaATG_Sp
 ```
 
@@ -432,7 +383,7 @@ highdiffn_dvsaATG_Sp
 
 Some of these are decently translated (top 25%)
 
-```{r highdiffn_dvsaATG_hiTrans_Sp,dependson="dvsaATG_Sporesn_Sp",results="show"}
+```{r highdiffn_dvsaATG_hiTrans_Sp,dependson="dvsaATG_scoresn_Sp",results="show"}
 highdiffn_dvsaATG_Sp %>% 
                    filter(Gene %in% midTrans_Sp) 
 ```
@@ -456,17 +407,8 @@ Several things involved in mRNA 3' end regulation. Otheriwse unclear. We should 
 In input file *SPombe_mitofates.txt*.
 
 ```{r load_mitofates_Sp}
-mitofates_Sp <- read_tsv("data_in/SPombe_mitofates.txt",
-                            comment="#",skip=1,
-                         col_names=c("Gene","Prob_preseq","Pred_preseq","CSite_enzyme",
-"Net_charge","Pos_TOM20","Pos_afhelix",
-"BHHPPP","BPHBHH","HBHHBb","HBHHbB","HHBHHB","HHBPHB","HHBPHH",
-"HHBPHP","HHHBBH","HHHBPH","HHHHBB","HHPBHH","HPBHHP","PHHBPH")) %>%
-    mutate(Pred_preseq=factor(Pred_preseq,
-                              levels=c("No mitochondrial presequence",
-                                       "Possessing mitochondrial presequence"),
-                              labels=c("No","Yes")),
-           Gene = str_remove(Gene, " Protein"))
+mitofates_Sp <- read_mitofates("data_in/SPombe_mitofates.txt")
+
 mitocounts_Sp <- 
     mitofates_Sp %>% 
     group_by(Pred_preseq) %>% 
@@ -484,7 +426,7 @@ mitopredlist_Sp <- mitofates_Sp %>%
 
 ### Sp Genes with high dATG vs aATG score *are* enriched in mitochondrial presequences
 
-```{r dvsaATG_Sporesdiffn_mitofates_Sp, dependson=c("calc_Spores_Sp","load_mitofates_Sp"), fig.width=5,fig.height=1.8}
+```{r dvsaATG_scoresdiffn_mitofates_Sp, dependson=c("calc_scores_Sp","load_mitofates_Sp"), fig.width=5,fig.height=1.8}
 
 ggplot(data=scores_Sp %>% 
            filter(!is.na(d1.scorekn)) %>%
@@ -505,7 +447,7 @@ ggplot(data=scores_Sp %>%
 
 Although the +5 T is striking.
 
-```{r aATG_motif_mitofates_Sp, dependson=c("calc_Spores_Sp","load_mitofates_Sp"), fig.width=4,fig.height=1}
+```{r aATG_motif_mitofates_Sp, dependson=c("calc_scores_Sp","load_mitofates_Sp"), fig.width=4,fig.height=1}
 
 ggseqlogo(data=ctbl_big_Sp %>%
               filter(Gene %in% mitopredlist_Sp) %>%
@@ -519,7 +461,7 @@ ggseqlogo(data=ctbl_big_Sp %>%
 
 Those genes are in this list:
 
-```{r highdiffn_dvsaATG_mitopred_Sp,dependson="dvsaATG_Sporesn_Sp",results="show"}
+```{r highdiffn_dvsaATG_mitopred_Sp,dependson="dvsaATG_scoresn_Sp",results="show"}
 highdiffn_dvsaATG_Sp %>%
     left_join( ctbl_big_Sp %>% select(Gene, d1.frame,d1.posATG) ) %>%
     left_join( ribosum_Sp ) %>%
@@ -556,7 +498,7 @@ Mostly the 2nd ATG is not in frame though. Restricting to frame gives only Rex2 
 
 ### less strong biases, but in frame dATG
 
-```{r highdiffn_dvsaATG_mitopred_inframe_Sp,dependson="dvsaATG_Sporesn_Sp",results="show"}
+```{r highdiffn_dvsaATG_mitopred_inframe_Sp,dependson="dvsaATG_scoresn_Sp",results="show"}
 scores_Sp %>%
     arrange(desc(d1vsan)) %>%
     select(Gene,aATG.scorekn,d1.scorekn) %>%

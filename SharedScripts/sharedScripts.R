@@ -62,6 +62,28 @@ read_ATGcontext_table <- function(file) {
         mutate(aATG.context=toupper(aATG.context))
 }
 
+## Read mitofates output
+
+read_mitofates <- function(mffile,              
+                           mitofates_colnames = 
+                               c("Gene", "Prob_preseq", "Pred_preseq", 
+                                 "CSite_enzyme", "Net_charge", "Pos_TOM20", "Pos_afhelix", 
+                                 "BHHPPP","BPHBHH", "HBHHBb", "HBHHbB", 
+                                 "HHBHHB", "HHBPHB", "HHBPHH", "HHBPHP",
+                                 "HHHBBH", "HHHBPH", "HHHHBB", "HHPBHH",
+                                 "HPBHHP", "PHHBPH","trail")
+) {
+    read_tsv(mffile,comment="#",skip=1,
+             col_names=mitofates_colnames) %>%
+        dplyr::select(-trail) %>%
+        mutate(Pred_preseq=factor(Pred_preseq,
+                                  levels=c("No mitochondrial presequence",
+                                           "Possessing mitochondrial presequence"),
+                                  labels=c("No","Yes")))  %>%
+        mutate(Gene = str_remove(Gene, " Protein"))
+}
+
+
 ## Information content functions
 
 infon1 <- function(counts,ssize=4,pseudocount=0.5) {
@@ -114,13 +136,14 @@ PWMscore <- function(seqs,pwm,startl) {
            FUN.VALUE = 0)
 }
 
-PWMscoren <- function(seqs,pwm=kozak_n_PWM_Sc,startl=8) {
+PWMscoren <- function(seqs,pwm=kozak_n_PWM,startl=8) {
     PWMscore(seqs,pwm,startl) 
 }
 
-PWMscorew <- function(seqs,pwm=kozak_w_PWM_Sc,startl=4) {
+PWMscorew <- function(seqs,pwm=kozak_w_PWM,startl=4) {
     PWMscore(seqs,pwm,startl) 
 }
 
 is.context <- function(x) str_detect(x,"context")
+
 

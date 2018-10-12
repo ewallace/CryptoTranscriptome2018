@@ -1,7 +1,7 @@
 ---
 title: "Start codon context for Neurospora crassa"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 6 Oct 2018
+date: 12 Oct 2018
 output:
   # html_notebook: default
   html_document:
@@ -20,50 +20,8 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
                       results="hide",
                       fig.path="figure/NcrassaATGContext-",
                       cache.path="cache/NcrassaATGContext-")
-library(tidyverse)
-library(cowplot)
-library(ggrepel)
-library(ggseqlogo)
-library(Biostrings)
-
-theme_set(theme_cowplot(font_size=12) + 
-              theme(strip.background = element_blank()) )
-
-
-
-geom_diagline <- function(linetype='solid',size=0.1,colour="grey20",...) {
-    geom_abline(slope=1,intercept=0,linetype=linetype,colour=colour)
-}
-
-scientific_10 <- function(x) {
-    xout <- gsub("1e", "10^{", format(x),fixed=TRUE)
-    xout <- gsub("{-0", "{-", xout,fixed=TRUE)
-    xout <- gsub("{+", "{", xout,fixed=TRUE)
-    xout <- gsub("{0", "{", xout,fixed=TRUE)
-    xout <- paste(xout,"}",sep="")
-    return(parse(text=xout))
-}
-
-scale_x_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_x_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_y_log10nice <- function(name=waiver(),omag=seq(-10,20),...) {
-    breaks10 <- 10^omag
-    scale_y_log10(name,breaks=breaks10,labels=scientific_10(breaks10),...)
-}
-
-scale_loglog <- function(...) {
-    list(scale_x_log10nice(...),scale_y_log10nice(...))
-}
-
-round3 <- function(x) round(x,digits=3)
-
-logmean <- function(x) {
-    lx <- log(x)
-    exp( mean( lx[is.finite(lx)] ) )
-}
+# load common functions
+source("../SharedScripts/sharedScripts.R")
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
 ```
 
@@ -161,14 +119,7 @@ ggplot(data=ribosum_Nc,aes(x=RNA,y=RPF)) +
 ### Load context data
 
 ```{r load_context_Nc,results="show"}
-ctbl_big_Nc <- read_tsv("data_in/NC12_allATGcontext.table.txt",
-                        skip=1,
-                        col_names=c("gene","aATG.context","aATG.pos",
-                                    "d1.context","d1.posTSS","d1.posATG","d1.frame")
-                        ) %>% 
-    dplyr::rename(Gene=gene) %>%
-    filter(!is.na(aATG.context) ) %>%
-    mutate(aATG.context=toupper(aATG.context))
+ctbl_big_Nc <- read_ATGcontext_table("data_in/NC12_allATGcontext.table.txt")
 ctbl_big_Nc
 ```
 
@@ -189,7 +140,17 @@ ggseqlogo(data=filter(ctbl_big_Nc,Gene %in% hiTrans_Nc)$aATG.context,
     theme_nothing()
 ```
 
+### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
+```{r cytoribo_context_Nc,dependson="load_context_Nc",fig.width=4,fig.height=1}
+cytoribolist_Nc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+                        comment="#") %>%
+    filter(SPECIES=="NEUCR") %>%
+    .$GENE_ID
+ggseqlogo(data=filter(ctbl_big_Nc,Gene %in% cytoribolist_Nc)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
 
 ### Downstream ATGs don't have a consensus
 
@@ -252,75 +213,63 @@ kozak_w_PFM_Nc %>%
 
 Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
 
-```{r kozak_inf_Nc,fig.width=4,fig.height=1}
-entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
-    counts <- counts + pseudocount
-    ntot = sum(counts)
-    freqs = counts / sum(counts)
-    Hentropy = - sum( freqs * log2(freqs) ) 
-    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
-    information = log2(ssize) - Hentropy
-    return(information)
-}
+```{r kozak_inf_Nc,dependson=c("kozak_consensus_Nc","cytoribo_context_Nc"),fig.width=4,fig.height=1,results="show"}
+inf_content_narrow <- 
+    tribble(
+        ~Genes, ~ATG, ~Width, ~Infon,
+        "All", "aATG", "narrow", 
+        ctbl_big_Nc %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "aATG", "narrow", 
+        ctbl_big_Nc %>%
+            filter(Gene %in% hiTrans_Nc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow", 
+        ctbl_big_Nc %>%
+            filter(Gene %in% cytoribolist_Nc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "All", "d1ATG", "narrow", 
+        ctbl_big_Nc %>%
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "d1ATG", "narrow", 
+        ctbl_big_Nc %>%
+            filter(Gene %in% hiTrans_Nc) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow", 
+        ctbl_big_Nc %>%
+            filter(Gene %in% cytoribolist_Nc) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L)
+    )
 
-entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,entropy1) %>% sum()
-}
-
-entropytot(kozak_w_PFM_Nc)
-# entropytot(kozak_w_PFM_Nc[,5:12])
-entropytot(kozak_w_PFM_Nc[,-(10:12)])
-entropytot(kozak_w_PFM_Nc[,5:9])
+write_tsv(inf_content_narrow %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_narrow_Nc.txt")
+inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_Nc[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_Nc[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Nc[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Nc[,-(10:12)]) %>% round(2)`.
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
 ```{r calc_scores_Nc, dependson="kozak_consensus_Nc"}
-
-PWMscore <- function(seqs,pwm,startl) {
-    # calculate scores for a character vector seqs against
-    # pwm from given starting position
-    # after checking strings are non-missing and start with ACTG
-    vapply(str_sub(seqs,start=startl),
-           function(ss) {
-               if ( is.na(ss) ) {
-                   return(NA)
-               } else if ( str_detect(ss,"\\A[ACTG]") ) {
-                   return( PWMscoreStartingAt(pwm,ss) )
-               } else {
-                   return(NA) 
-               } 
-           } ,
-           FUN.VALUE = 0)
-}
-
-PWMscoren <- function(seqs,pwm=kozak_n_PWM_Nc,startl=8) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-PWMscorew <- function(seqs,pwm=kozak_w_PWM_Nc,startl=4) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-is.context <- function(x) str_detect(x,"context")
-
 scores_Nc <- 
     ctbl_big_Nc %>%
     transmute(Gene,
-              aATG.scorekn = PWMscoren(str_to_upper(aATG.context)),
-              d1.scorekn   = PWMscoren(d1.context),
-              # u1.scorekn   = PWMscoren(u1.context),
-              # aATG.scorekw = PWMscorew(str_to_upper(aATG.context)),
-              # d1.scorekw   = PWMscorew(d1.context),
-              # u1.scorekw   = PWMscorew(u1.context),
-              NULL
+              aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM_Nc),
+              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_Nc),
+              # u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_Nc),
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
            # u1vsan = u1.scorekn - aATG.scorekn,
-           # d1vsaw = d1.scorekw - aATG.scorekw,
-           # u1vsaw = u1.scorekw - aATG.scorekw,
            NULL) 
 
 # ribotbl_scoresenough_Nc <-
@@ -486,17 +435,8 @@ highdiffn_dvsaATG_Nc %>%
 In input file *NC12_mitofates.txt*.
 
 ```{r load_mitofates_Nc}
-mitofates_Nc <- read_tsv("data_in/NC12_mitofates.txt",
-                            comment="#",skip=1,
-                         col_names=c("Gene","Prob_preseq","Pred_preseq","CSite_enzyme",
-"Net_charge","Pos_TOM20","Pos_afhelix",
-"BHHPPP","BPHBHH","HBHHBb","HBHHbB","HHBHHB","HHBPHB","HHBPHH",
-"HHBPHP","HHHBBH","HHHBPH","HHHHBB","HHPBHH","HPBHHP","PHHBPH")) %>%
-    mutate(Pred_preseq=factor(Pred_preseq,
-                              levels=c("No mitochondrial presequence",
-                                       "Possessing mitochondrial presequence"),
-                              labels=c("No","Yes")),
-           Gene = str_remove(Gene, " Protein"))
+mitofates_Nc <- read_mitofates("data_in/NC12_mitofates.txt")
+
 mitocounts_Nc <- 
     mitofates_Nc %>% 
     group_by(Pred_preseq) %>% 
