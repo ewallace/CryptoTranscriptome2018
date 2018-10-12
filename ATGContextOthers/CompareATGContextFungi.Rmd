@@ -1,0 +1,65 @@
+---
+title: "Comparisons between fungi, information content of ATG context"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 12 Oct 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This summarizes relationships of ATG context between fungi. It relies on data output generated from the files *SPECIESNAME*ATGContext.Rmd
+    
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CompareATGContext-",
+                      cache.path="cache/CompareATGContext-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+### Load data
+
+```{r load_data}
+
+infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+
+infon_tbl <- bind_rows(
+    read_tsv("data_out/inf_content_narrow_Sc.txt") %>% 
+        mutate(Organism="Sc"),
+    read_tsv("data_out/inf_content_narrow_Ca.txt") %>% 
+        mutate(Organism="Ca"), infon_Ca_zero,
+    read_tsv("data_out/inf_content_narrow_Nc.txt") %>% 
+        mutate(Organism="Nc"),
+    read_tsv("data_out/inf_content_narrow_Sp.txt") %>% 
+        mutate(Organism="Sp"),
+    read_tsv("../ATGContext/data_out/inf_content_narrow_H99.txt") %>% 
+        mutate(Organism="Cn"),
+    read_tsv("../ATGContext/data_out/inf_content_narrow_JEC21.txt") %>% 
+        mutate(Organism="Cd")
+) %>%
+    mutate(Genes=factor(Genes, levels=c("All","HiTrans","CytoRibo")),
+           Organism=factor(Organism,levels=c("Cn","Cd","Nc","Sp","Ca","Sc"))
+    )
+
+infon_tbl
+```
+
+```{r inf_content,fig.height=3,fig.width=4}
+ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
+       aes(x=Organism,y=Infon,fill=Genes)) +
+    geom_col(position="dodge") +
+    scale_fill_manual(values=c("All"="dodgerblue",
+                               "HiTrans"="darkblue",
+                               "CytoRibo"="purple")) +
+    labs(y="Information content\n-5:aATG (bits)")
+    
+```
+
