@@ -653,15 +653,20 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
 
 ### uATGs are associated with lower absolute translation
 
-```{r uATG_RPF_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+```{r uATG_RPF_JEC21, dependson="calc_scores_JEC21", fig.width=2.5,fig.height=3.5}
 uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
     dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
     dplyr::select(c("Gene",paste0("u",1:56,".posATG"))) %>%
-    gather(key="uATG",value="posaATG",-Gene) %>%
+    gather(key="uATG",value="posTSS",-Gene) %>%
     group_by(Gene) %>%
-    summarize(uATGCt = sum(!is.na(posaATG))) %>%
-    mutate(uATGCtC = replace(uATGCt,uATGCt>=4, "4+") %>%
-               factor(levels=c(0:3,"4+")) )
+    summarize(uATGCt = sum(!is.na(posTSS)),
+              uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
+              ) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")) )
 
 ribo_uct_JEC21 <- 
     ribosum_JEC21 %>%
@@ -675,12 +680,12 @@ ggplot(data=ribo_uct_JEC21,
     scale_y_log10nice("Ribosome occupancy (TPM of aORF)",
                       limits=c(1,10000),
                       oob=scales::squish) +
-    labs(x="number of uATGs")
+    labs(x="uATG count")
 ```
 
 ### uATGs are associated with lower translation efficiency
 
-```{r uATG_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=3.5,fig.height=3.5}
+```{r uATG_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=2.5,fig.height=3.5}
 
 ggplot(data=ribo_uct_JEC21,
        aes(x=uATGCtC,y=TE)) +
@@ -689,7 +694,21 @@ ggplot(data=ribo_uct_JEC21,
     scale_y_log10nice("TE of aORF",
                       limits=c(0.05,10),
                       oob=scales::squish) +
-    labs(x="number of uATGs")
+    labs(x="uATG count")
+```
+
+### uATGs at least 20nt from start site
+
+```{r uATGmin20_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=2.5,fig.height=3.5,results="show"}
+# ribo_uct_JEC21
+ggplot(data=ribo_uct_JEC21,
+       aes(x=uATGCtmin20C,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),
+                      oob=scales::squish) +
+    labs(x="uATG count >= 20nt from TSS")
 ```
 
 ### uATG vs aATG ribosome occupancy depends on the context
@@ -1321,12 +1340,17 @@ ggseqlogo(data=ctbl_big_H99 %>%
 ```{r uATG_RPF_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
 uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
     dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
     dplyr::select(c("Gene",paste0("u",1:55,".posATG"))) %>%
-    gather(key="uATG",value="posaATG",-Gene) %>%
+    gather(key="uATG",value="posTSS",-Gene) %>%
     group_by(Gene) %>%
-    summarize(uATGCt = sum(!is.na(posaATG))) %>%
-    mutate(uATGCtC = replace(uATGCt,uATGCt>=4, "4+") %>%
-               factor(levels=c(0:3,"4+")) )
+    summarize(uATGCt = sum(!is.na(posTSS)),
+              uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
+              ) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")) )
 
 ribo_uct_H99 <- 
     ribosum_H99 %>%
@@ -1340,7 +1364,7 @@ ggplot(data=ribo_uct_H99,
     scale_y_log10nice("Ribosome occupancy (TPM of aORF)",
                       limits=c(1,10000),
                       oob=scales::squish) +
-    labs(x="number of uATGs")
+    labs(x="uATG count")
 ```
 
 ### uATGs are associated with lower translation efficiency
@@ -1354,8 +1378,23 @@ ggplot(data=ribo_uct_H99,
     scale_y_log10nice("TE of aORF",
                       limits=c(0.05,10),
                       oob=scales::squish) +
-    labs(x="number of uATGs")
+    labs(x="uATG count")
 ```
+
+### uATGs at least 20nt from start site
+
+```{r uATGmin20_TE_H99, dependson="uATG_RPF_H99", fig.width=3.5,fig.height=3.5,results="show"}
+# ribo_uct_H99
+ggplot(data=ribo_uct_H99,
+       aes(x=uATGCtmin20C,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),
+                      oob=scales::squish) +
+    labs(x="uATG count >= 20nt from TSS")
+```
+
 
 ### uATG vs aATG ribosome occupancy depends on the context
 
