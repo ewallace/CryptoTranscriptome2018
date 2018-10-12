@@ -1,0 +1,7 @@
+Genes	ATG	Width	Infon
+All	aATG	narrow	1.661
+HiTrans	aATG	narrow	3.213
+CytoRibo	aATG	narrow	3.5
+All	d1ATG	narrow	0.343
+HiTrans	d1ATG	narrow	0.571
+CytoRibo	d1ATG	narrow	0.706
