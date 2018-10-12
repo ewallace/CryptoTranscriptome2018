@@ -520,6 +520,10 @@ ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
          y="dATG score, wide")
 ```
 
+#### Small negative correlation between dATG and aATG score
+
+R = `r with(scores_JEC21, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+
 ## Genes with unusual dATG vs aATG narrow score
 
 Those genes are in this list:
@@ -1155,6 +1159,10 @@ ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
     labs(x="aATG score, wide",
          y="dATG score, wide")
 ```
+
+#### Small negative correlation between dATG and aATG score
+
+R = `r with(scores_H99, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
 
 ## Genes with unusual dATG / aATG narrow score
 
@@ -1882,6 +1890,7 @@ ggplot(data=scores_kvsu_JEC21 %>%
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
+
 
 ### High utRS score is enriched in mito-localized genes
 

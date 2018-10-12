@@ -354,6 +354,10 @@ Red: high dATG vs aATG **Kozak** score.
 Blue: highly translated.
 Purple: both.
 
+### No correlation between dATG and aATG score
+
+R = `r with(scores_Sc, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+
 ## Genes with unusual dATG vs aATG narrow score
 
 Those genes are in this list:

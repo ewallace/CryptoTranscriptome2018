@@ -410,6 +410,9 @@ Blue: highly translated.
 
 (Purple: both. None of the red genes are highly translated.)
 
+### Small negative correlation between dATG and aATG score
+
+R = `r with(scores_Sp, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
 
 ## Genes with unusual dATG vs aATG narrow score
 
