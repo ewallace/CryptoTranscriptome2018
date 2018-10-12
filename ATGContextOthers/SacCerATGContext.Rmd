@@ -123,15 +123,26 @@ ggplot(data=ribosum_Sc,aes(x=RNA,y=RPF)) +
 ### Load context data
 
 ```{r load_context_Sc,results="show"}
-ctbl_big_Sc <- read_tsv("data_in/SacCer_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
-    select_at(1:19)
+read_ATGcontext_table <- function(file) {
+    read_tsv(file,comment="#",skip=1,
+             col_names=c("Gene","aATG.context","aATG.pos",
+                         "d1.context","d1.posTSS","d1.posATG","d1.frame",
+                         "d2.context","d2.posTSS","d2.posATG","d2.frame",
+                         "u1.context","u1.posTSS","u1.posATG","u1.frame",
+                         "u2.context","u2.posTSS","u2.posATG","u2.frame")
+    ) %>% 
+        filter(!is.na(aATG.context) ) %>%
+        mutate(aATG.context=toupper(aATG.context))
+}
+ctbl_big_Sc <- 
+    read_ATGcontext_table("data_in/SacCer_allATGcontext.table.txt")
+
 ctbl_big_Sc
 ```
 
 ### Annotated ATGs have a Kozak consensus sequence
 
-```{r aATG_context_Sc,fig.width=4,fig.height=1}
+```{r aATG_context_Sc,dependson="load_context_Sc",fig.width=4,fig.height=1}
 ggseqlogo(data=ctbl_big_Sc$aATG.context,namespace="TCAG") + 
     theme_nothing()
 ```
@@ -140,8 +151,20 @@ ggseqlogo(data=ctbl_big_Sc$aATG.context,namespace="TCAG") +
 
 That's for hiTrans_Sc, the top 5% (330) translated genes by RPF TPM.
 
-```{r a_hi_context_Sc,fig.width=4,fig.height=1}
+```{r a_hi_context_Sc,dependson=c("load_context_Sc","load_ribosum_Sc"),fig.width=4,fig.height=1}
 ggseqlogo(data=filter(ctbl_big_Sc,Gene %in% hiTrans_Sc)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
+
+```{r cytoribo_context_Sc,dependson="load_context_Sc",fig.width=4,fig.height=1}
+cytoribolist_Sc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+                        comment="#") %>%
+    filter(SPECIES=="YEAST") %>%
+    .$GENE_ID
+ggseqlogo(data=filter(ctbl_big_Sc,Gene %in% cytoribolist_Sc)$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
 ```
@@ -152,7 +175,7 @@ ggseqlogo(data=filter(ctbl_big_Sc,Gene %in% hiTrans_Sc)$aATG.context,
 
 First downstream ATG
 
-```{r d1_context_Sc,fig.width=4,fig.height=1}
+```{r d1_context_Sc,dependson="load_context_Sc",fig.width=4,fig.height=1}
 ggseqlogo(data=filter(ctbl_big_Sc,nchar(d1.context) ==24)$d1.context,
                       namespace="TCAG") + 
     theme_nothing()
@@ -162,7 +185,7 @@ ggseqlogo(data=filter(ctbl_big_Sc,nchar(d1.context) ==24)$d1.context,
 
 Except for 3rd-codon-position bias.
 
-```{r d1_hi_frame0_context_Sc,fig.width=4,fig.height=1}
+```{r d1_hi_frame0_context_Sc,dependson=c("load_context_Sc","load_ribosum_Sc"),fig.width=4,fig.height=1}
 ggseqlogo(data=filter(ctbl_big_Sc,
                       nchar(d1.context) == 24,
                       d1.frame==0,
@@ -177,7 +200,7 @@ ggseqlogo(data=filter(ctbl_big_Sc,
 
 Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
-```{r kozak_consensus_Sc,fig.width=4,fig.height=1}
+```{r kozak_consensus_Sc,dependson=c("load_context_Sc","load_ribosum_Sc"),fig.width=4,fig.height=1}
 kozak_w_PFM_Sc <- filter(ctbl_big_Sc,Gene %in% hiTrans_Sc) %>%
     .$aATG.context %>%
     str_sub(start=4L,end=18L) %>%
@@ -189,7 +212,7 @@ kozak_n_PWM_Sc <- kozak_w_PFM_Sc[,5:12] %>% PWM()
 ```
 
 
-```{r write_PFM_Sc, dependson="calc_scores_Sc",results="show"}
+```{r write_PFM_Sc,dependson="kozak_consensus_Sc",results="show"}
 cat(
     "# PFM_hiTrans_Sc.txt
 # Position Frequency Matrix for aATGs of 330 highest-translated genes from Sc
@@ -209,28 +232,84 @@ kozak_w_PFM_Sc %>%
 
 Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
 
-```{r kozak_inf_Sc,fig.width=4,fig.height=1}
-entropy1 <- function(counts,ssize=4,pseudocount=0.5) {
-    counts <- counts + pseudocount
-    ntot = sum(counts)
-    freqs = counts / sum(counts)
-    Hentropy = - sum( freqs * log2(freqs) ) 
-    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot )
-    information = log2(ssize) - Hentropy
+```{r kozak_inf_Sc,dependson=c("kozak_consensus_Sc","cytoribo_context_Sc"),fig.width=4,fig.height=1,results="show"}
+infon1 <- function(counts,ssize=4,pseudocount=0.5) {
+    # calculate information content for one position
+    # as described in https://en.wikipedia.org/wiki/Sequence_logo
+    # counts: position frequency matrix
+    # ssize: alphabet size
+    # pseudocount: pseudocount to add to remove zeroes
+    
+    counts <- counts + pseudocount # add pseudocount
+    ntot = sum(counts)[1] # total number of sequences
+    freqs = counts / ntot # freqency
+    Hentropy = - sum( freqs * log2(freqs) ) # Shannon entropy 
+    ecorrection = ( ssize - 1 ) / ( log(2) *  ntot ) # small-sample correction
+    information = log2(ssize) - Hentropy # information content
     return(information)
 }
 
-entropytot <- function(pfm,ssize=4,pseudocount=0.5) {
-    apply(pfm,2,entropy1) %>% sum()
+infonall <- function(pfm,ssize=4,pseudocount=0.5) {
+    apply(pfm,2,infon1)
 }
 
-entropytot(kozak_w_PFM_Sc)
-# entropytot(kozak_w_PFM_Sc[,5:12])
-entropytot(kozak_w_PFM_Sc[,-(10:12)])
-entropytot(kozak_w_PFM_Sc[,5:9])
+infontot <- function(pfm,ssize=4,pseudocount=0.5) {
+    apply(pfm,2,infon1) %>% sum()
+}
+
+infonfromseqs <- function(seqs,sstart=1L,send=-1L,ssize=4,pseudocount=0.5) {
+    seqs %>% 
+    str_sub(start=sstart,end=send) %>%
+    str_to_upper %>%
+    consensusMatrix %>%
+    infontot(ssize=ssize,pseudocount=pseudocount)
+}
+
+
+inf_content_narrow <- 
+    tribble(
+        ~Genes, ~ATG, ~Width, ~Infon,
+        "All", "aATG", "narrow", 
+        ctbl_big_Sc %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "aATG", "narrow", 
+        ctbl_big_Sc %>%
+            filter(Gene %in% hiTrans_Sc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow", 
+        ctbl_big_Sc %>%
+            filter(Gene %in% cytoribolist_Sc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "All", "d1ATG", "narrow", 
+        ctbl_big_Sc %>%
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "HiTrans", "d1ATG", "narrow", 
+        ctbl_big_Sc %>%
+            filter(Gene %in% hiTrans_Sc) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow", 
+        ctbl_big_Sc %>%
+            filter(Gene %in% cytoribolist_Sc) %>% 
+            .$d1.context %>%
+            na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L)
+    )
+
+write_tsv(inf_content_narrow %>%
+              mutate_if(is.numeric,round,digits=3),
+          "inf_content_narrow_Sc.txt")
+inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r entropytot(kozak_w_PFM_Sc[,5:9]) %>% round(2)`, of **wide** is `r entropytot(kozak_w_PFM_Sc[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Sc[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Sc[,-(10:12)]) %>% round(2)`.
+
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
