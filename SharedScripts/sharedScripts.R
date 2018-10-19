@@ -48,6 +48,84 @@ logmean <- function(x) {
     exp( mean( lx[is.finite(lx)] ) )
 }
 
+## string and codon functions
+str_dice <- function(string, width=1L) {
+    # Dice a character vector into pieces of fixed length.
+    # Useful for breaking a coding sequence of DNA into codons
+    starts <- seq(1, nchar(string), width)
+    str_sub(string, start = starts, end = starts+width-1)
+}
+
+
+trim_at_last_stop_codon <- function(codonseq, stopcods=c("TGA","TAG","TAA")) {
+    ncodons <- length(codonseq)
+    last_stop <- which(codonseq %in% stopcods) %>% max
+    if (!is.finite(last_stop)) {
+        return(codonseq) 
+    } else if (last_stop == ncodons) {
+        return("") 
+    } else if (last_stop < ncodons) {
+        return( codonseq[(last_stop+1):ncodons] )
+    }
+}
+
+trim_to_first_nrstart <- function(codonseq, 
+                               startcods=c("ATG",
+                                           "TTG","CTG","ACG",
+                                           "ATT","GTG","ATA")) {
+    ncodons <- length(codonseq)
+    first_start <- which(codonseq %in% startcods) %>% min
+    if (!is.finite(first_start)) {
+        return("") 
+    } else if (first_start >= 1) {
+        return( codonseq[first_start:ncodons] )
+    }
+}
+
+estimate_3prime_nrstart_CDS <- function(dseq,
+                                        stopcods=c("TGA","TAG","TAA"),
+                                        startcods=c("ATG",
+                                           "TTG","CTG","ACG",
+                                           "ATT","GTG","ATA"),
+                                        frameright=TRUE) {
+    if (frameright) {
+        # align frame to right/3' end
+        dslength <- nchar(dseq)
+        nonframe <- dslength %% 3
+        dseq <- str_sub(dseq,start=nonframe+1)
+    }
+    dseq %>%
+        str_dice(width=3L) %>% # dice into codons
+        trim_at_last_stop_codon(stopcods=stopcods) %>% # trim 5' end at last stop
+        trim_to_first_nrstart(startcods=startcods) %>% # trim 5' end from first start
+        paste0(collapse="") # paste into letters
+}
+
+# Test these functions
+# ORF <- "ATGTTTGGGTAG"
+# notORF <- "TGATAATAGAAACCCTTTGGGTAAATG"
+# nostop <- "ATGTTTGGGCTC"
+# stopstart <- "AAATAGAAAATTGAA"
+# startstop <- "ATGTAAAAA"
+# startstart <- "ATACCCACG"
+# startstopstart <- "ACGAAATGAAAATTGAAA"
+# badlength <- "ATGATGAT"
+# ORF %>% str_dice(width=3) %>% trim_at_last_stop_codon
+# notORF %>% str_dice(width=3) %>% trim_at_last_stop_codon
+# nostop %>% str_dice(width=3) %>% trim_at_last_stop_codon
+# ORF %>% str_dice(width=3) %>% trim_to_first_nrstart
+# notORF %>% str_dice(width=3) %>% trim_to_first_nrstart
+# nostop %>% str_dice(width=3) %>% trim_to_first_nrstart
+# stopstart %>% str_dice(width=3) %>% trim_to_first_nrstart
+# 
+# ORF %>% estimate_3prime_nrstart_CDS
+# notORF %>% estimate_3prime_nrstart_CDS
+# nostop %>% estimate_3prime_nrstart_CDS
+# stopstart %>% estimate_3prime_nrstart_CDS
+# startstop %>% estimate_3prime_nrstart_CDS
+# startstart %>% estimate_3prime_nrstart_CDS
+# startstopstart %>% estimate_3prime_nrstart_CDS
+
 ## ATG context functions
 
 read_ATGcontext_table <- function(file) {
