@@ -1,0 +1,52 @@
+---
+title: "Tidy ATG usage tables from Riboviz"
+author: "Edward Wallace"
+date: "23 Oct 2018"
+output: html_document
+---
+
+Tidies up the ATG context tables.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r fix_H99}
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+
+goodcolnames <- c("Gene_name",
+                  "Type","Sample",
+                  "Inct.narr","Inct.wide",
+                  "Nxct.narr","Nxct.wide",
+                  "Upct.narr","Upct.wide",
+                  "ORFct","UTR5Ct",
+                  "ORFlen","UTR5len")
+
+H99w <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.Riboviztablewide.txt")
+
+H99table <- 
+bind_rows(H99w[c(1, 1 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,13 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,25 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,37 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,49 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,61 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,73 + 1:12)] %>% setNames(goodcolnames),
+          H99w[c(1,85 + 1:12)] %>% setNames(goodcolnames) )
+
+write_tsv(H99table,"data_in/H99_10p_up12dwn9_RiboViz_ATG_table_tidy.txt")
+```
+
+```{r fix_JEC21}
+JEC21w <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.Riboviztablewide.txt")
+
+JEC21table <- 
+bind_rows(JEC21w[c(1, 1 + 1:12)] %>% setNames(goodcolnames),
+          JEC21w[c(1,13 + 1:12)] %>% setNames(goodcolnames),
+          JEC21w[c(1,25 + 1:12)] %>% setNames(goodcolnames),
+          JEC21w[c(1,37 + 1:12)] %>% setNames(goodcolnames))
+
+write_tsv(JEC21table,"data_in/JEC21_10p_up12dwn9_RiboViz_ATG_table_tidy.txt")
+```
+
