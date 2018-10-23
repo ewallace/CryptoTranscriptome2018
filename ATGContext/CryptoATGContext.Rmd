@@ -656,11 +656,35 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
 ### uATGs are associated with lower absolute translation
 
 ```{r uATG_RPF_JEC21, dependson="calc_scores_JEC21", fig.width=2.5,fig.height=3.5}
+.make_uATGfact <- function(Ct, Ctfar) {
+    if (Ct == 0) {
+        rfac <-  "0"
+    } else if (Ct == 1 & Ctfar == 0 ) {
+        rfac <- "1c"
+    } else if (Ct == 1 & Ctfar == 1) {
+        rfac <- "1f"
+    } else if (Ct >= 2 & Ctfar == 0 ) {
+        rfac <- "2+c"
+    } else if (Ct >=2 & Ctfar >= 1) {
+        rfac <- "2+f"
+    } else {
+        rfac <- NA
+    }
+    return(rfac)
+}
+
+make_uATGfact <- function(Ct,Ctfar) {
+    sapply(1:length(Ct), function(i) .make_uATGfact(Ct[i],Ctfar[i])) %>%
+        factor(levels=c("0","1c","1f","2+c","2+f"),
+               labels=c("0","1\nclose","1\nfar","2+\nclose","2+\nfar"))
+}
+
 uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
     dplyr::rename(Gene=gene) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
-    dplyr::select(c("Gene",paste0("u",1:56,".posATG"))) %>%
+    dplyr::select(c("Gene",paste0("u",1:56,".posTSS"))) %>%
     gather(key="uATG",value="posTSS",-Gene) %>%
+    mutate(posTSS=as.integer(posTSS)) %>%
     group_by(Gene) %>%
     summarize(uATGCt = sum(!is.na(posTSS)),
               uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
@@ -668,7 +692,9 @@ uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") 
     mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
                factor(levels=c(0:1,"2+")),
            uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
-               factor(levels=c(0:1,"2+")) )
+               factor(levels=c(0:1,"2+")),
+           uATGfac = make_uATGfact(uATGCt,uATGCtmin20)
+           )
 
 ribo_uct_JEC21 <- 
     ribosum_JEC21 %>%
@@ -694,24 +720,80 @@ ggplot(data=ribo_uct_JEC21,
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
     scale_y_log10nice("TE of aORF",
-                      limits=c(0.05,10),
+                      limits=c(0.05,10),expand=c(0,0),
                       oob=scales::squish) +
     labs(x="uATG count")
 ```
 
-### uATGs at least 20nt from start site
+### uATGs associated with lower translation efficiency are over 20nt from TSS
 
-```{r uATGmin20_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=2.5,fig.height=3.5,results="show"}
+```{r uATGmin20_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=3.5,fig.height=3.5,results="show"}
 # ribo_uct_JEC21
 ggplot(data=ribo_uct_JEC21,
-       aes(x=uATGCtmin20C,y=TE)) +
+       aes(x=uATGfac,y=TE)) +
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
     scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),expand=c(0,0),
+                      oob=scales::squish) +
+    labs(x="uATG count and position\nrelative to TSS")
+```
+
+### uATG score does not strongly affect TE
+
+We suspect that uATG is associated with lower TE if the uATG has
+* position at least 20nt downstream from TSS
+* higher score
+
+This figure shows that, for genes with only 1 uATG, this correlation is weak.
+
+```{r uATG_scoreTE_JEC21, dependson="uATG_RPF_JEC21", fig.width=4.5,fig.height=2.5,results="show"}
+
+ggplot(data=ribo_uct_JEC21 %>%
+    inner_join(scores_JEC21) %>%
+    filter(uATGCt == 1 ) %>%
+        left_join(ctbl_big_JEC21) %>%
+        mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500))),
+       aes(x=u1.scorekn,y=TE)) +
+    facet_wrap(~u1.posTSS20) + 
+    geom_point(colour="grey50",size=0.7) +
+    stat_smooth(method="lm") + 
+    scale_y_log10nice("TE of aORF",
                       limits=c(0.05,10),
                       oob=scales::squish) +
-    labs(x="uATG count >= 20nt from TSS")
+    labs(x="uATG score")
 ```
+
+### List of genes with low TE and uATGs far from TSS
+
+Check these for ribosome occupancy at uATG.
+
+```{r uATG_topTE_JEC21, dependson="uATG_RPF_JEC21", fig.width=4.5,fig.height=2.5,results="show"}
+
+ribo_uct_JEC21 %>%
+    filter(uATGfac %in% c("1\nfar","2+\nfar")) %>%
+    select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
+    arrange(TE) %>%
+    left_join(ctbl_big_JEC21 %>% 
+                  transmute(Gene,
+                            u1.cxtn=str_sub(u1.context,start=8L,end=15L),
+                            u2.cxtn=str_sub(u2.context,start=8L,end=15L))
+              )
+
+ribo_uct_JEC21 %>%
+    filter(Gene %in% c("CNM02470","CNH02210",
+                       "CNL04930","CNG00290","CNA07610",
+                       "CNF00330","CNG04240")
+           ) %>%
+    select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
+    left_join(ctbl_big_JEC21 %>% 
+                  transmute(Gene,
+                            u1.cxtn=str_sub(u1.context,start=8L,end=15L),
+                            u2.cxtn=str_sub(u2.context,start=8L,end=15L))
+              )
+
+```
+
 
 ### uATG vs aATG ribosome occupancy depends on the context
 
@@ -1344,11 +1426,35 @@ ggseqlogo(data=ctbl_big_H99 %>%
 ### uATGs are associated with lower absolute translation
 
 ```{r uATG_RPF_H99, dependson="calc_scores_H99",fig.width=2.5,fig.height=3.5}
+.make_uATGfact <- function(Ct, Ctfar) {
+    if (Ct == 0) {
+        rfac <-  "0"
+    } else if (Ct == 1 & Ctfar == 0 ) {
+        rfac <- "1c"
+    } else if (Ct == 1 & Ctfar == 1) {
+        rfac <- "1f"
+    } else if (Ct >= 2 & Ctfar == 0 ) {
+        rfac <- "2+c"
+    } else if (Ct >=2 & Ctfar >= 1) {
+        rfac <- "2+f"
+    } else {
+        rfac <- NA
+    }
+    return(rfac)
+}
+
+make_uATGfact <- function(Ct,Ctfar) {
+    sapply(1:length(Ct), function(i) .make_uATGfact(Ct[i],Ctfar[i])) %>%
+        factor(levels=c("0","1c","1f","2+c","2+f"),
+               labels=c("0","1\nclose","1\nfar","2+\nclose","2+\nfar"))
+}
+
 uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
     dplyr::rename(Gene=gene) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
-    dplyr::select(c("Gene",paste0("u",1:55,".posATG"))) %>%
+    dplyr::select(c("Gene",paste0("u",1:55,".posTSS"))) %>%
     gather(key="uATG",value="posTSS",-Gene) %>%
+    mutate(posTSS=as.integer(posTSS)) %>%
     group_by(Gene) %>%
     summarize(uATGCt = sum(!is.na(posTSS)),
               uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
@@ -1356,7 +1462,9 @@ uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>%
     mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
                factor(levels=c(0:1,"2+")),
            uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
-               factor(levels=c(0:1,"2+")) )
+               factor(levels=c(0:1,"2+")),
+           uATGfac = make_uATGfact(uATGCt,uATGCtmin20)
+           )
 
 ribo_uct_H99 <- 
     ribosum_H99 %>%
@@ -1382,25 +1490,53 @@ ggplot(data=ribo_uct_H99,
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
     scale_y_log10nice("TE of aORF",
-                      limits=c(0.05,10),
+                      limits=c(0.05,10),expand=c(0,0),
                       oob=scales::squish) +
     labs(x="uATG count")
 ```
 
-### uATGs at least 20nt from start site
+### uATGs associated with lower translation efficiency are over 20nt from TSS
 
-```{r uATGmin20_TE_H99, dependson="uATG_RPF_H99", fig.width=2.5,fig.height=3.5}
-# ribo_uct_H99
+```{r uATGmin20_TE_H99, dependson="uATG_RPF_H99", fig.width=3.5,fig.height=3.5,results="show"}
+# ribo_uct_JEC21
 ggplot(data=ribo_uct_H99,
-       aes(x=uATGCtmin20C,y=TE)) +
+       aes(x=uATGfac,y=TE)) +
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
     scale_y_log10nice("TE of aORF",
-                      limits=c(0.05,10),
+                      limits=c(0.05,10),expand=c(0,0),
                       oob=scales::squish) +
-    labs(x="uATG count >= 20nt from TSS")
+    labs(x="uATG count and position\nrelative to TSS")
 ```
 
+### List of genes with low TE and uATGs far from TSS
+
+Many of these (CNAG_03140, CNAG_07695, CNAG_06246) are strongly translationally repressed *and* have good context at the uATG.
+
+```{r uATG_lowestTE_H99, dependson="uATG_RPF_H99", fig.width=4.5,fig.height=2.5,results="show"}
+
+ribo_uct_H99 %>%
+    filter(uATGfac %in% c("1\nfar","2+\nfar")) %>%
+    select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
+    arrange(TE) %>%
+    left_join(ctbl_big_H99 %>% 
+                  transmute(Gene,
+                            u1.cxtn=str_sub(u1.context,start=8L,end=15L),
+                            u2.cxtn=str_sub(u2.context,start=8L,end=15L))
+              )
+
+ribo_uct_H99 %>%
+    filter(Gene %in% c("CNAG_06246","CNAG_05574",
+                       "CNAG_07813","CNAG_03578","CNAG_00784")
+           ) %>%
+    select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
+    left_join(ctbl_big_H99 %>% 
+                  transmute(Gene,
+                            u1.cxtn=str_sub(u1.context,start=8L,end=15L),
+                            u2.cxtn=str_sub(u2.context,start=8L,end=15L))
+              )
+
+```
 
 ### uATG vs aATG ribosome occupancy depends on the context
 
