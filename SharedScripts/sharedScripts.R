@@ -101,6 +101,20 @@ estimate_3prime_nrstart_CDS <- function(dseq,
         paste0(collapse="") # paste into letters
 }
 
+
+threeprime_nrstarts <- function(x,
+                                stopcods=c("TGA","TAG","TAA"),
+                                startcods=c("ATG",
+                                            "TTG","CTG","ACG",
+                                            "ATT","GTG","ATA")) {
+    as.character(x) %>%
+        vapply(estimate_3prime_nrstart_CDS,
+               stopcods=stopcods,startcods=startcods,
+               FUN.VALUE = "ATG") %>%
+        DNAStringSet %>%
+        setNames(names(x))
+}
+
 # Test these functions
 # ORF <- "ATGTTTGGGTAG"
 # notORF <- "TGATAATAGAAACCCTTTGGGTAAATG"
@@ -125,6 +139,38 @@ estimate_3prime_nrstart_CDS <- function(dseq,
 # startstop %>% estimate_3prime_nrstart_CDS
 # startstart %>% estimate_3prime_nrstart_CDS
 # startstopstart %>% estimate_3prime_nrstart_CDS
+
+expand_threeprime_nrstarts <- function(txinfile,CDSoutfile,protoutfile=NULL,
+                                       leftpad=120,rightpad=120,
+                                stopcods=c("TGA","TAG","TAA"),
+                                startcods=c("ATG",
+                                            "TTG","CTG","ACG",
+                                            "ATT","GTG","ATA")) {
+    
+    txin <- readDNAStringSet(txinfile)
+    fiveUTR <- subseq(txin,start=1,end=leftpad)
+    CDS <- subseq(txin,start=(leftpad+1),end=-(rightpad+1))
+    
+    nrstartfive <- as.character(fiveUTR) %>%
+        vapply(estimate_3prime_nrstart_CDS,
+               stopcods=stopcods,startcods=startcods,
+               FUN.VALUE = "ATG") %>%
+        DNAStringSet
+    
+    expanded_CDS <- xscat(nrstartfive,CDS) %>%
+        setNames(names(CDS)) 
+    
+    writeXStringSet(expanded_CDS,filepath = CDSoutfile)
+    
+    if (!is.null(protoutfile)) {
+    translate(expanded_CDS,if.fuzzy.codon = "X") %>%
+            writeXStringSet(filepath = protoutfile)
+    }
+    
+    return(expanded_CDS)
+}
+
+## Run mitofates from an R session, after trimming the strings appropriately.
 
 ## ATG context functions
 
