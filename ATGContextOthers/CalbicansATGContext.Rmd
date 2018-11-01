@@ -112,10 +112,10 @@ ggseqlogo(data=filter(ctbl_big_Ca,Gene %in% hiTrans_Ca)$aATG.context,
 
 Code not evaluated.
 
-```{r cytoribo_context_Ca,dependson="load_context_Ca",fig.width=4,fig.height=1,eval=FALSE}
-cytoribolist_Ca <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+```{r cytoribo_context_Ca,dependson="load_context_Ca",fig.width=4,fig.height=1}
+cytoribolist_Ca <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
-    filter(SPECIES=="YEAST") %>%
+    filter(SPECIES=="CANAL") %>%
     .$GENE_ID
 ggseqlogo(data=filter(ctbl_big_Ca,Gene %in% cytoribolist_Ca)$aATG.context,
                       namespace="TCAG") + 
@@ -197,11 +197,11 @@ inf_content_narrow <-
             filter(Gene %in% hiTrans_Ca) %>%
             .$aATG.context %>%
             infonfromseqs(sstart=8L,send=12L),
-        # "CytoRibo", "aATG", "narrow",
-        # ctbl_big_Ca %>%
-        #     filter(Gene %in% cytoribolist_Ca) %>% 
-        #     .$aATG.context %>%
-        #     infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow",
+        ctbl_big_Ca %>%
+            filter(Gene %in% cytoribolist_Ca) %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
         "All", "d1ATG", "narrow",
         ctbl_big_Ca %>%
             .$d1.context %>%
@@ -212,14 +212,13 @@ inf_content_narrow <-
             filter(Gene %in% hiTrans_Ca) %>% 
             .$d1.context %>%
             na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow",
+        ctbl_big_Ca %>%
+            filter(Gene %in% cytoribolist_Ca) %>%
+            .$d1.context %>%
+            na.omit() %>%
             infonfromseqs(sstart=8L,send=12L)
-        # ,
-        # "CytoRibo", "d1ATG", "narrow", 
-        # ctbl_big_Ca %>%
-        #     filter(Gene %in% cytoribolist_Ca) %>% 
-        #     .$d1.context %>%
-        #     na.omit() %>%
-        #     infonfromseqs(sstart=8L,send=12L)
     )
 
 write_tsv(inf_content_narrow %>%

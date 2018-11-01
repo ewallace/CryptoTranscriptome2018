@@ -153,7 +153,7 @@ ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
 ```{r cytoribo_context_JEC21,dependson="load_context_JEC21",fig.width=4,fig.height=1}
-cytoribolist_JEC21 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+cytoribolist_JEC21 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="CRYNJ") %>%
     .$GENE_ID
@@ -943,11 +943,16 @@ ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
 
 Ideally would fix this more nicely.
 
-```{r cytoribo_context_H99,dependson=c("load_context_H99","cytoribo_context_JEC21"),fig.width=4,fig.height=1}
-cytoribolist_H99 <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
-                       comment="#") %>%
-    filter(JEC21 %in% cytoribolist_JEC21) %>%
-    .$H99
+```{r cytoribo_context_H99,dependson="load_context_H99",fig.width=4,fig.height=1}
+# cytoribolist_H99 <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
+#                        comment="#") %>%
+#     filter(JEC21 %in% cytoribolist_JEC21) %>%
+#     .$H99
+
+cytoribolist_H99 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
+                        comment="#") %>%
+    filter(SPECIES=="CRYNH") %>%
+    .$GENE_ID
 
 ggseqlogo(data=filter(ctbl_big_H99,Gene %in% cytoribolist_H99)$aATG.context,
                       namespace="TCAG") + 
