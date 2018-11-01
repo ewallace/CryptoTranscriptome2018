@@ -143,7 +143,7 @@ ggseqlogo(data=filter(ctbl_big_Nc,Gene %in% hiTrans_Nc)$aATG.context,
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
 ```{r cytoribo_context_Nc,dependson="load_context_Nc",fig.width=4,fig.height=1}
-cytoribolist_Nc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+cytoribolist_Nc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="NEUCR") %>%
     .$GENE_ID

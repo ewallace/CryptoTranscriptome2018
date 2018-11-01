@@ -120,7 +120,7 @@ ggseqlogo(data=filter(ctbl_big_Sp,Gene %in% hiTrans_Sp)$aATG.context,
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
 ```{r cytoribo_context_Sp,dependson="load_context_Sc",fig.width=4,fig.height=1}
-cytoribolist_Sp <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+cytoribolist_Sp <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="SCHPO") %>%
     .$GENE_ID
