@@ -1,0 +1,226 @@
+---
+title: "Downstream ATG depletion for Cryptococcus neoformans"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 5 Nov 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This assesses the extent to which coding sequences are depleted in ATGs. This uses the best-transcript annotation and corresponding start codon position and sequence map made by Corinne Maufrais in June 2018.
+
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CryptodATGdepletion-",
+                      cache.path="cache/CryptodATGdepletion-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+```
+
+
+## Load CDS
+
+```{r load_cds}
+CDS <- readDNAStringSet("../CDSFasta/data_in/JEC21_10p_up12dwn9_CDS.fa")
+
+countCodonsAll <- function(sset) {
+    sset %>%
+        as.character %>%
+        lapply(str_dice,width=3L) %>%
+        unlist %>%
+        table
+}
+
+# debugonce(countCodonsAll)
+CDS %>% head %>% countCodonsAll
+
+tidyPos <- function(x,variable="x") {
+    tibble(1:length(x),x) %>%
+        set_names(c("Pos",variable))
+}
+
+countCodonsPos <- function(sset) {
+    sset %>%
+        as.character %>%
+        lapply(str_dice,width=3L) %>%
+        lapply(tidyPos,variable="Codon") %>%
+        bind_rows %>%
+        group_by(Pos) %>%
+        count(Codon) %>%
+        mutate(Codon=factor(Codon,levels=names(GENETIC_CODE)),
+            Freq=n/sum(n))
+}
+
+ccpos <- 
+    CDS %>% 
+    countCodonsPos %>%
+    ungroup
+
+# ggplot(data=ccpos %>% filter(Codon=="ATG"),aes(x=Pos,y=Freq)) + 
+#     geom_line() + 
+#     scale_x_continuous(limits=c(2,200)) + 
+#     expand_limits(y=0) + scale_y_continuous(limits=c(0,0.1),expand=c(0,0))
+
+sensecodons <- names(GENETIC_CODE) %>%
+    setdiff(c("TGA","TAA","TAG"))
+```
+
+### ATG Codons in-frame are depleted near start, but others are more depleted.
+
+This is smoothed to make it readable. 
+
+```{r plot_ATG_depletion,dependson="load_cds",fig.height=3,fig.width=5}
+ggplot(data=ccpos %>% filter(Codon %in% sensecodons),
+       aes(x=Pos,y=Freq)) + 
+    geom_smooth(aes(group=Codon),colour="grey50",
+                size=0.4,se=FALSE,span=0.1,method="loess") + 
+    geom_smooth(data=ccpos %>% filter(Codon == "ATG"),
+              colour="red",size=1.2,se=FALSE,span=0.1,method="loess") + 
+    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
+    expand_limits(y=0) + scale_y_continuous(expand=c(0,0))
+
+```
+
+### Other in-frame codons have very different depletion/enrichment
+
+```{r plot_ccposframe0,dependson="load_cds",fig.width=7,fig.height=10}
+ggplot(data=ccpos %>% filter(Codon %in% names(GENETIC_CODE)),
+       aes(x=Pos,y=Freq)) +
+    # geom_line(aes(group=Frame)) +
+    geom_smooth(colour="green4",
+                se=FALSE,span=0.1,method="loess") +
+    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
+    expand_limits(y=0) + scale_y_continuous(expand=c(0,0),
+                       breaks=c(0,0.02,0.04)) +
+    # scale_colour_brewer(palette="Set2") +
+    facet_wrap(~Codon,ncol=4) +
+    theme(legend.position="top", 
+          panel.border = element_rect(colour = "grey80",size = 0.5,
+                                      fill=NA,linetype=1) )
+```
+
+### What are the non-ATG codons depleted near start?
+
+GAA, GAT, GAG. Why?
+
+```{r altdepletion,dependson="load_cds"}
+ggplot(data=ccpos %>% 
+           filter(Codon %in% sensecodons,
+                  Pos %in% c(2,3,10,100)) %>%
+           mutate(Pos = factor(Pos)),
+       aes(x=Pos,y=Freq,colour=Codon,label=Codon)) + 
+    geom_text() + 
+    geom_line(aes(group=Codon),alpha=0.5) + 
+    scale_y_continuous(expand=c(0,0)) +
+    theme(legend.position="none")
+```
+
+### GAA, GAT, GAG, TGT, are more depleted near-start than ATG, and CTC is strange
+
+But not GAC. Why?
+
+```{r depletionextreme,dependson="load_cds"}
+ggplot(data=ccpos %>% 
+           filter(#Codon %in% sensecodons,
+               Codon %in% c("GAA","GAT","GAG","GAC","ATG","CTC","TGT"),
+                  # str_sub(Codon,end=2L) == "GA",
+                  Pos %in% c(2,3,10,100)) %>%
+           mutate(Pos = factor(Pos)),
+       aes(x=Pos,y=Freq,colour=Codon,label=Codon)) + 
+    geom_text() + 
+    geom_line(aes(group=Codon)) + 
+    scale_y_continuous(limits=c(0,0.05),expand=c(0,0)) +
+    theme(legend.position="none")
+```
+
+### TCN, GCC, CCC, are enriched near the start
+
+Mostly serine. Is that the N-end rule for degradation at work or a translation initiation phenomenon?
+
+```{r enrichmentextreme,dependson="load_cds"}
+ggplot(data=ccpos %>% 
+           filter(#Codon %in% sensecodons,
+               Codon %in% c("TCT","TCC","TCA","TCG",
+                            "GCC","CCC","ATG"),
+                  # str_sub(Codon,end=2L) == "GA",
+                  Pos %in% c(2,3,10,100)) %>%
+           mutate(Pos = factor(Pos)),
+       aes(x=Pos,y=Freq,colour=Codon,label=Codon)) + 
+    geom_text() + 
+    geom_line(aes(group=Codon)) + 
+    scale_y_continuous(limits=c(0,0.1),expand=c(0,0)) +
+    theme(legend.position="none")
+```
+
+
+### Does depletion differ depending on the frame?
+
+```{r ccposframe,dependson="load_cds",results="show"}
+ccposframe <- bind_rows(
+    CDS %>% 
+        subseq(start = 1) %>%
+        countCodonsPos %>%
+        mutate(Frame=0),
+        CDS %>% 
+        subseq(start = 2) %>%
+        countCodonsPos %>%
+        mutate(Frame=1),
+        CDS %>% 
+        subseq(start = 3) %>%
+        countCodonsPos %>%
+        mutate(Frame=2) ) %>%
+    ungroup %>%
+    mutate(Frame=factor(Frame))
+ccposframe
+```
+
+### Depletion of ATG codons is wildly different depending on frame
+
+This is *not* smoothed.
+
+```{r plot_ccposframe_ATG,dependson="ccposframe",fig.height=3,fig.width=5}
+ggplot(data=ccposframe %>% filter(Codon=="ATG"),
+       aes(x=Pos,y=Freq,colour=Frame)) +
+    geom_line(aes(group=Frame),size=0.7) + 
+    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
+    scale_y_continuous(limits=c(0,0.05),expand=c(0,0)) +
+    scale_colour_brewer(palette="Set2")
+```
+
+### Depletion/enrichment of many codons is wildly different depending on frame
+
+Also *not* smoothed.
+
+```{r plot_ccposframe_all,dependson="ccposframe",fig.width=7,fig.height=10}
+ggplot(data=ccposframe %>% filter(Codon %in% names(GENETIC_CODE)),
+       aes(x=Pos,y=Freq,colour=Frame)) +
+    geom_line(aes(group=Frame),size=0.5) +
+    # geom_smooth(aes(group=Frame),colour="grey50",
+    #             size=0.4,se=FALSE,span=0.1,method="loess") + 
+    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
+    scale_y_continuous(limits=c(0,0.05),expand=c(0,0),
+                       breaks=c(0,0.02,0.04)) +
+    scale_colour_brewer(palette="Set2") +
+    facet_wrap(~Codon,ncol=4) +
+    theme(legend.position="top", 
+          panel.border = element_rect(colour = "grey80",size = 0.5,
+                                      fill=NA,linetype=1) )
+```
+
+ATG and indeed NTG codons are strongly depleted in frame 2, consistent with TGN codons depleted in frame 0 due to avoiding premature termination or the rare amino acids Cysteine and Tryptophan.
+
+ATG and some other ATN codons are depleted in frame 1. Most codons NNG are depleted near the start in frame 1, as are many GNN in frame 0 (GAA, GAG, GAT, GGA,GGG,GGT). In fact G-rich codons seem to be depleted near-start relative to C-rich codons.
+
+There is so much data here it is difficult to judge.
+
+### Are good-context ATGs more depleted?
