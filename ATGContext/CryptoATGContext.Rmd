@@ -312,9 +312,11 @@ scores_JEC21 <-
     transmute(Gene,
               aATG.scorekn = PWMscoren(aATG.context),
               d1.scorekn   = PWMscoren(d1.context),
+              d2.scorekn   = PWMscoren(d2.context),
               u1.scorekn   = PWMscoren(u1.context),
               aATG.scorekw = PWMscorew(aATG.context),
               d1.scorekw   = PWMscorew(d1.context),
+              d2.scorekw   = PWMscorew(d2.context),
               u1.scorekw   = PWMscorew(u1.context)
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
@@ -387,6 +389,70 @@ ggplot(data=scores_JEC21) +
           legend.title=element_blank())
 ```
 
+### Narrow consensus comparing d1ATG to d2ATG score
+
+```{r plot_scores_nd1d2_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG1"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d2.scorekn,colour="dATG2"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(aes(x=u1.scorekn,colour="uATG"),
+    #              kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+                 aes(x=aATG.scorekn,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Narrow consensus d1ATG score by frame
+
+```{r plot_scores_nd1frame_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8,results="show"}
+
+sbandwidthn = 0.025
+
+ggplot(data=ctbl_big_JEC21 %>%
+           filter(nchar(d1.context) == 24) %>%
+           transmute(Gene,d1.frame=factor(d1.frame)) %>%
+           left_join(scores_JEC21) ) +
+    geom_density(aes(x=d1.scorekn,colour=d1.frame),
+                 kernel="rectangular",bw=sbandwidthn) +
+    labs(x="d1ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+#### Same again, segregated by expression (enoughRNA, top 50%)
+
+```{r plot_scores_nd1frame_top50_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=3.2,results="show"}
+
+ggplot(data=ctbl_big_JEC21 %>%
+           filter(nchar(d1.context) == 24) %>%
+           transmute(Gene,d1.frame=factor(d1.frame)) %>%
+           left_join(scores_JEC21) %>%
+           mutate(enoughRNA=Gene %in% enoughRNA_JEC21) 
+       ) +
+    geom_density(aes(x=d1.scorekn,colour=d1.frame),
+                 kernel="rectangular",bw=sbandwidthn) +
+    facet_wrap(~enoughRNA,ncol=1) + 
+    labs(x="d1ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
 ### Plot against wide consensus (-9 to +3 from ATG)
 
 ```{r plot_scores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
@@ -407,6 +473,33 @@ ggplot(data=scores_JEC21) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
+    labs(x="ATG Kozak score (wide), JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Wide consensus comparing d1ATG to d2ATG score
+
+```{r plot_scores_wd1d2_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekw,colour="dATG1"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d2.scorekw,colour="dATG2"),
+                 kernel="rectangular",bw=sbandwidthn) + 
+    geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
     labs(x="ATG Kozak score (wide), JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
@@ -648,6 +741,90 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
           namespace="TCAG")  + 
     theme_nothing()
 
+```
+
+
+
+### Mitofates and d1ATG/d2ATG narrow score
+
+```{r plot_scores_nd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21 %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           inner_join( mitofates_JEC21 %>% 
+                           select(Gene,Prob_preseq,Pred_preseq)
+           ),
+       aes(linetype=Pred_preseq)) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG1"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d2.scorekn,colour="dATG2"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(aes(x=u1.scorekn,colour="uATG"),
+    #              kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+    #              aes(x=aATG.scorekn,colour="aATG, top 5%"),
+    #              kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
+    scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
+                          labels=mitobreaks_JEC21)  + 
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+```{r plot_scores2_nd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8,results="show",eval=FALSE}
+
+sbandwidthn = 0.025
+
+melt_mito_scores_JEC21 <- 
+    scores_JEC21 %>% 
+    filter(!is.na(d1.scorekn)) %>%
+    inner_join( mitofates_JEC21 %>% 
+                    select(Gene,Prob_preseq,Pred_preseq)
+    ) %>%
+    select(Gene,Pred_preseq,
+           aATG=aATG.scorekn,dATG1=d1.scorekn,dATG2=d2.scorekn) %>%
+    gather(key="ATG",value="scorekn",aATG,dATG1,dATG2)
+
+
+# ggplot(data=melt_mito_scores_JEC21,
+#        aes(x=scorekn,linetype=Pred_preseq,colour=ATG)) +
+#     geom_density(kernel="rectangular",bw=sbandwidthn) +
+#     scale_colour_manual(values=c("aATG"="dodgerblue",
+#                                  "aATG, top 5%"="darkblue",
+#                                  #"uATG"="red",
+#                                  "dATG1"="green3",
+#                                  "dATG2"="green4") ) +
+#     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
+#                           labels=mitobreaks_JEC21)  + 
+#     labs(x="ATG Kozak score, JEC21") +
+#     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+#           axis.text.y=element_blank(),axis.title.y=element_blank(),
+#           legend.title=element_blank())
+
+ggplot(data=melt_mito_scores_JEC21,
+       aes(x=ATG,linetype=Pred_preseq,colour=ATG,y=scorekn)) +
+    geom_violin(kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
+    scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
+                          labels=mitobreaks_JEC21)  + 
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
 ```
 
 
