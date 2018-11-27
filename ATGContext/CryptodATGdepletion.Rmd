@@ -1,5 +1,5 @@
 ---
-title: "Downstream ATG depletion for Cryptococcus neoformans"
+title: "Downstream ATG depletion and other position-specific codon frequencies for Cryptococcus neoformans"
 author: Edward Wallace, ewjwallace@gmail.com
 date: 5 Nov 2018
 output:
@@ -11,7 +11,7 @@ output:
 
 # Summary
 
-This assesses the extent to which coding sequences are depleted in ATGs. This uses the best-transcript annotation and corresponding start codon position and sequence map made by Corinne Maufrais in June 2018.
+This assesses the extent to which coding sequences are depleted in ATGs. It extends to a more general analysis of codon frequencies dependent on position and frame, metagene-style. This uses the best-transcript annotation and corresponding start codon position and sequence map made by Corinne Maufrais in June 2018.
 
 
 ### Load Packages
@@ -49,13 +49,17 @@ tidyPos <- function(x,variable="x") {
         set_names(c("Pos",variable))
 }
 
-countCodonsPos <- function(sset) {
+groupThingPos <- function(sset,width=3L,variable="Codon") {
     sset %>%
         as.character %>%
-        lapply(str_dice,width=3L) %>%
-        lapply(tidyPos,variable="Codon") %>%
+        lapply(str_dice,width=width) %>%
+        lapply(tidyPos,variable=variable) %>%
         bind_rows %>%
-        group_by(Pos) %>%
+        group_by(Pos)
+}
+
+countCodonsPos <- function(sset,width=3L,variable="Codon") {
+    groupThingPos(sset,width=width,variable=variable) %>%
         count(Codon) %>%
         mutate(Codon=factor(Codon,levels=names(GENETIC_CODE)),
             Freq=n/sum(n))
@@ -86,8 +90,30 @@ ggplot(data=ccpos %>% filter(Codon %in% sensecodons),
                 size=0.4,se=FALSE,span=0.1,method="loess") + 
     geom_smooth(data=ccpos %>% filter(Codon == "ATG"),
               colour="red",size=1.2,se=FALSE,span=0.1,method="loess") + 
-    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
-    expand_limits(y=0) + scale_y_continuous(expand=c(0,0))
+    scale_x_continuous("Position",limits=c(2,400),expand=c(0,1)) + 
+    expand_limits(y=0) + 
+    scale_y_continuous("Codon Frequency In-Frame",expand=c(0,0))
+
+```
+
+```{r plot_ATGplus_depletion,dependson="load_cds",fig.height=3,fig.width=6}
+ggplot(data=ccpos %>% filter(Codon %in% sensecodons),
+       aes(x=Pos,y=Freq)) + 
+    geom_smooth(aes(group=Codon),colour="grey50",
+                size=0.4,se=FALSE,span=0.1,method="loess") + 
+    geom_smooth(data=ccpos %>% filter(Codon == "CCC"),
+                aes(colour="CCC"),size=0.9,se=FALSE,span=0.1,method="loess") + 
+    geom_smooth(data=ccpos %>% filter(Codon == "TGT"),
+                aes(colour="TGT"),size=0.9,se=FALSE,span=0.1,method="loess") + 
+    geom_smooth(data=ccpos %>% filter(Codon == "GAA"),
+                aes(colour="GAA"),size=0.9,se=FALSE,span=0.1,method="loess") +
+    geom_smooth(data=ccpos %>% filter(Codon == "ATG"),
+                aes(colour="ATG"),size=1.2,se=FALSE,span=0.1,method="loess") + 
+    scale_x_continuous("Position",limits=c(2,400),expand=c(0,1)) + 
+    expand_limits(y=0) + 
+    scale_y_continuous("Codon Frequency In-Frame",expand=c(0,0)) +
+    scale_colour_manual("Selected\nCodons",values=c(ATG="red",CCC="forestgreen",
+                                         TGT="purple1",GAA="purple4"))
 
 ```
 
@@ -99,8 +125,9 @@ ggplot(data=ccpos %>% filter(Codon %in% names(GENETIC_CODE)),
     # geom_line(aes(group=Frame)) +
     geom_smooth(colour="green4",
                 se=FALSE,span=0.1,method="loess") +
-    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
-    expand_limits(y=0) + scale_y_continuous(expand=c(0,0),
+    scale_x_continuous("Position",limits=c(2,400),expand=c(0,1)) + 
+    expand_limits(y=0) + 
+    scale_y_continuous("Codon Frequency In-Frame",expand=c(0,0),
                        breaks=c(0,0.02,0.04)) +
     # scale_colour_brewer(palette="Set2") +
     facet_wrap(~Codon,ncol=4) +
@@ -121,18 +148,18 @@ ggplot(data=ccpos %>%
        aes(x=Pos,y=Freq,colour=Codon,label=Codon)) + 
     geom_text() + 
     geom_line(aes(group=Codon),alpha=0.5) + 
-    scale_y_continuous(expand=c(0,0)) +
+    scale_y_continuous(limits=c(0,0.1),expand=c(0,0)) +
     theme(legend.position="none")
 ```
 
 ### GAA, GAT, GAG, TGT, are more depleted near-start than ATG, and CTC is strange
 
-But not GAC. Why?
+But not GAC. Why both E codons only one D codon?
 
 ```{r depletionextreme,dependson="load_cds"}
 ggplot(data=ccpos %>% 
            filter(#Codon %in% sensecodons,
-               Codon %in% c("GAA","GAT","GAG","GAC","ATG","CTC","TGT"),
+               Codon %in% c("GAA","GAT","GAG","GAC","ATG","CTC","TGT","GGT"),
                   # str_sub(Codon,end=2L) == "GA",
                   Pos %in% c(2,3,10,100)) %>%
            mutate(Pos = factor(Pos)),
@@ -186,14 +213,26 @@ ccposframe
 
 ### Depletion of ATG codons is wildly different depending on frame
 
-This is *not* smoothed.
+#### Not smoothed
 
 ```{r plot_ccposframe_ATG,dependson="ccposframe",fig.height=3,fig.width=5}
 ggplot(data=ccposframe %>% filter(Codon=="ATG"),
        aes(x=Pos,y=Freq,colour=Frame)) +
     geom_line(aes(group=Frame),size=0.7) + 
-    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
-    scale_y_continuous(limits=c(0,0.05),expand=c(0,0)) +
+    scale_x_continuous("Position",limits=c(2,400),expand=c(0,1)) + 
+    scale_y_continuous("ATG Frequency",limits=c(0,0.04),expand=c(0,0)) +
+    scale_colour_brewer(palette="Set2")
+```
+
+#### Smoothed
+
+```{r plot_ccposframe_smooth_ATG,dependson="ccposframe",fig.height=3,fig.width=5}
+ggplot(data=ccposframe %>% filter(Codon=="ATG"),
+       aes(x=Pos,y=Freq,colour=Frame)) +
+    geom_smooth(aes(group=Frame),size=0.9,
+                se=FALSE,span=0.05,method="loess") + 
+    scale_x_continuous("Position",limits=c(2,400),expand=c(0,1)) + 
+    scale_y_continuous("ATG Frequency",limits=c(0,0.04),expand=c(0,0)) +
     scale_colour_brewer(palette="Set2")
 ```
 
@@ -207,8 +246,8 @@ ggplot(data=ccposframe %>% filter(Codon %in% names(GENETIC_CODE)),
     geom_line(aes(group=Frame),size=0.5) +
     # geom_smooth(aes(group=Frame),colour="grey50",
     #             size=0.4,se=FALSE,span=0.1,method="loess") + 
-    scale_x_continuous(limits=c(2,400),expand=c(0,1)) + 
-    scale_y_continuous(limits=c(0,0.05),expand=c(0,0),
+    scale_x_continuous("Position",limits=c(2,400),expand=c(0,1)) + 
+    scale_y_continuous("Codon Frequency",limits=c(0,0.05),expand=c(0,0),
                        breaks=c(0,0.02,0.04)) +
     scale_colour_brewer(palette="Set2") +
     facet_wrap(~Codon,ncol=4) +
@@ -217,10 +256,68 @@ ggplot(data=ccposframe %>% filter(Codon %in% names(GENETIC_CODE)),
                                       fill=NA,linetype=1) )
 ```
 
-ATG and indeed NTG codons are strongly depleted in frame 2, consistent with TGN codons depleted in frame 0 due to avoiding premature termination or the rare amino acids Cysteine and Tryptophan.
+ATG and indeed NTG codons are strongly depleted in frame 2, consistent with TGN codons depleted in frame 0 due to avoiding premature termination and the rare amino acids Cysteine and Tryptophan.
 
 ATG and some other ATN codons are depleted in frame 1. Most codons NNG are depleted near the start in frame 1, as are many GNN in frame 0 (GAA, GAG, GAT, GGA,GGG,GGT). In fact G-rich codons seem to be depleted near-start relative to C-rich codons.
 
 There is so much data here it is difficult to judge.
 
+### Normalized in-frame to out-of-frame ratio, per Malabat et al.
+
+Malabat et al compare change of in-frame to out-frame depletion by
+
+For each codon:
+
+1. Taking a ratio of total in:out of frame counts for codons 500 to 1000.
+2. Taking a ratio of in:out of frame counts over 9-codon windows
+3. Normalizing the latter by the former in log2-space.
+4. Plot the smoothed normalized log2-ratios for each codon as function of position.
+5. Comparing this for genes with and without internal transcription start sites (iTSS).
+
+EW implemented this, using fixed-width 10-codon windows instead of the smoothed windows from Malabat et al.
+
+```{r Mframeratios,dependson="ccposframe",fig.height=3,fig.width=5,results="show"}
+ccnormratios <- ccposframe %>%
+    filter(Pos > 500, Pos <= 1000) %>%
+    select(-Pos) %>%
+    group_by(Codon) %>%
+    summarize(Frame0=sum(n*(Frame==0),na.rm=T),
+              Frame1=sum(n*(Frame==1),na.rm=T),
+              Frame2=sum(n*(Frame==2),na.rm=T),
+              pInFrame=Frame0/(Frame1+Frame2))
+
+ccbinratios <- ccposframe %>%
+    filter(Pos <= 500, Pos >= 2, Codon %in% sensecodons) %>%
+    mutate(PosCut = cut(Pos,breaks=seq(0,500,10),labels=seq(5,495,10))) %>%
+    group_by(Codon,PosCut) %>%
+    summarize(Frame0=sum(n*(Frame==0),na.rm=T),
+              Frame1=sum(n*(Frame==1),na.rm=T),
+              Frame2=sum(n*(Frame==2),na.rm=T),
+              pInFrame=Frame0/(Frame1+Frame2)) %>%
+    left_join( ccnormratios %>% select(Codon,pInNorm=pInFrame) ) %>%
+    mutate(InFrameNorm=pInFrame/pInNorm,
+           PosCut=PosCut %>% as.character %>% as.numeric  )
+
+ggplot(data=ccbinratios, aes(x=PosCut,y=InFrameNorm) ) +
+    geom_line(aes(group=Codon),colour="grey50",
+              size=0.4) + 
+    geom_line(data=ccbinratios %>% filter(Codon == "ATG"),
+              colour="red",size=1.2) +
+    scale_x_continuous(expand=c(0,1)) +
+    labs(x="Position, Codons from aATG", y="In:Out of frame\n normalized ratio")
+```
+
+
 ### Are good-context ATGs more depleted?
+
+We need to count ATGs with good vs bad context. Maybe just a -3 A would work to give initial picture? Plot levels of TNNATG, CNNATG, ANNATG, GNNATG?
+
+```{r ATGcontextbase,dependson="load_cds",results="show"}
+sixmerATGlevels <- 
+CDS %>%
+    head %>%
+    groupThingPos(width=6L,variable="sixmer") %>%
+    count(sixmer)
+sixmerATGlevels
+```
+
