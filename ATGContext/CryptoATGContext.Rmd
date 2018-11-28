@@ -590,7 +590,56 @@ ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
 
 #### Small negative correlation between dATG and aATG score
 
-R = `r with(scores_JEC21, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+Rnarrow = `r with(scores_JEC21, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`; 
+Rwide = `r with(scores_JEC21, cor(aATG.scorekw,d1.scorekw,use="pairwise.complete.obs")) %>% round3`
+
+#### There may be some trend but it is weak
+
+Boxplots show enough_RNA only.
+
+```{r dvsaATG_scoresn_boxplot_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+scores_JEC21_Cutn <- 
+    scores_JEC21 %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_JEC21) %>%
+    mutate(aATG.scorekn.cut=cut(aATG.scorekn,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekn.cutmid=aATG.scorekn.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_JEC21_Cutn,
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekn.cutmid,group=aATG.scorekn.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+```{r dvsaATG_scoresw_boxplot_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+scores_JEC21_Cutw <- 
+    scores_JEC21 %>% 
+    select(Gene,aATG.scorekw,d1.scorekw) %>%
+    filter(!is.na(d1.scorekw),Gene %in% enoughRNA_JEC21) %>%
+    mutate(aATG.scorekw.cut=cut(aATG.scorekw,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekw.cutmid=aATG.scorekw.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_JEC21_Cutw,
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
+
+
 
 ## Genes with unusual dATG vs aATG narrow score
 
@@ -743,7 +792,54 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
 
 ```
 
+#### Negative correlation of dATG and aATG score only for mitochondrial localization signal
 
+```{r dvsaATG_scoresn_mito_lmodel2_JEC21, dependson="calc_scores_JEC21", fig.width=6.2,fig.height=3.5}
+dvsATGmito_JEC21 <- 
+    scores_JEC21 %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    filter(!is.na(d1.scorekn)) %>%
+    inner_join( mitofates_JEC21 %>% 
+                    select(Gene,Prob_preseq,Pred_preseq) )
+
+library(lmodel2)
+library(broom)
+
+getMA <- function(databit, formula=d1.scorekn~aATG.scorekn) {
+    lm2fit  <- lmodel2(formula,databit)
+    data.frame(r.squared=glance(lm2fit)$r.squared[1],
+               intercept=tidy(lm2fit) %>%
+                   filter(method=="MA",term=="Intercept") %>%
+                   .$estimate %>% 
+                   .[1],
+               slope=tidy(lm2fit) %>%
+                   filter(method=="MA",term=="Slope") %>%
+                   .$estimate %>% 
+                   .[1]) 
+}
+
+dvsa_MA_summ_JEC21 <- dvsATGmito_JEC21 %>%
+    group_by(Pred_preseq) %>%
+    do(getMA(.)) %>%
+    mutate(Rlabel=paste0("R = -", round(sqrt(r.squared),digits=2)) )
+
+ggplot(data=dvsATGmito_JEC21,
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    facet_wrap(~Pred_preseq) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(method="lm",se=FALSE) + 
+    geom_abline(data=dvsa_MA_summ_JEC21,
+                aes(intercept=intercept,slope=slope),
+                colour="blue",size=1) + 
+    geom_text(data=dvsa_MA_summ_JEC21,
+              x=0.67,y=0.65,hjust=0,vjust=0,
+              aes(label=Rlabel),
+              colour="blue",size=5) + 
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow") +
+    panel_border()
+```
 
 ### Mitofates and d1ATG/d2ATG narrow score
 
