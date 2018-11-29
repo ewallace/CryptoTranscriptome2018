@@ -32,6 +32,7 @@ source("../SharedScripts/sharedScripts.R")
 
 ```{r load_cds}
 CDS <- readDNAStringSet("../CDSFasta/data_in/JEC21_10p_up12dwn9_CDS.fa")
+names(CDS) <- names(CDS) %>% str_sub(end=8L)
 
 countCodonsAll <- function(sset) {
     sset %>%
@@ -261,6 +262,71 @@ ATG and indeed NTG codons are strongly depleted in frame 2, consistent with TGN 
 ATG and some other ATN codons are depleted in frame 1. Most codons NNG are depleted near the start in frame 1, as are many GNN in frame 0 (GAA, GAG, GAT, GGA,GGG,GGT). In fact G-rich codons seem to be depleted near-start relative to C-rich codons.
 
 There is so much data here it is difficult to judge.
+
+
+### Does depletion ATG codons depend on aATG score?
+
+```{r ccposframe_ascore,dependson="load_cds",results="show"}
+scores_JEC21 <- 
+    read_tsv("data_out/scores_kozak_JEC21.txt",comment="#") %>%
+    select(Gene,aATG.scorekn)
+
+CDS_hiscore <- scores_JEC21 %>%
+    filter(aATG.scorekn >= 0.85) %>%
+    .$Gene %>%
+    intersect(names(CDS)) %>%
+    CDS[.]
+
+CDS_loscore <- scores_JEC21 %>%
+    filter(aATG.scorekn < 0.85) %>%
+    .$Gene %>%
+    intersect(names(CDS)) %>%
+    CDS[.]
+
+ccposframe_score <- bind_rows(
+    CDS_hiscore %>% 
+        subseq(start = 1) %>%
+        countCodonsPos %>%
+        mutate(Frame=0,ascore="hi"),
+    CDS_hiscore %>% 
+        subseq(start = 2) %>%
+        countCodonsPos %>%
+        mutate(Frame=1,ascore="hi"),
+    CDS_hiscore %>% 
+        subseq(start = 3) %>%
+        countCodonsPos %>%
+        mutate(Frame=2,ascore="hi"),
+    CDS_loscore %>% 
+        subseq(start = 1) %>%
+        countCodonsPos %>%
+        mutate(Frame=0,ascore="lo"),
+    CDS_loscore %>% 
+        subseq(start = 2) %>%
+        countCodonsPos %>%
+        mutate(Frame=1,ascore="lo"),
+    CDS_loscore %>% 
+        subseq(start = 3) %>%
+        countCodonsPos %>%
+        mutate(Frame=2,ascore="lo")) %>%
+    ungroup %>%
+    mutate(Frame=factor(Frame))
+ccposframe_score
+```
+
+
+
+#### Not really. Hi = narrow score at least 0.85
+
+```{r plot_ccposframe_ATG_ascore,dependson="ccposframe_ascore",fig.height=3,fig.width=5}
+ggplot(data=ccposframe_score %>% filter(Codon=="ATG"),
+       aes(x=Pos,y=Freq,colour=ascore)) +
+    geom_line(aes(group=ascore),size=0.7) + 
+    scale_x_continuous("Position",limits=c(2,100),expand=c(0,1)) + 
+    scale_y_continuous("ATG Frequency",limits=c(0,0.04),expand=c(0,0)) +
+    scale_colour_brewer(palette="Set1") +
+    facet_wrap(~Frame,ncol=3) +
+    panel_border()
+```
 
 ### Normalized in-frame to out-of-frame ratio, per Malabat et al.
 
