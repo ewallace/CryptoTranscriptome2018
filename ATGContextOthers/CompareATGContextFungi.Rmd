@@ -59,7 +59,8 @@ ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
     scale_fill_manual(values=c("All"="dodgerblue",
                                "HiTrans"="darkblue",
                                "CytoRibo"="purple")) +
-    labs(y="Information content\n-5:aATG (bits)")
+    scale_y_continuous("Information content\n-5:aATG (bits)",
+                       expand=c(0,0)) 
     
 ```
 

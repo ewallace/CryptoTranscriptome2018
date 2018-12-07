@@ -1,0 +1,10 @@
+# PFM_hiTrans_Hc.txt
+# Position Frequency Matrix for aATGs of 256 highest-translated genes from Sc
+# This is of the wide ATG context NNNNNNNNNATGNNN
+# Column is position, Row is nt count in order: ACGT.
+#
+# Edward Wallace, June 2018
+88	75	109	71	68	103	249	109	100	355	0	0	61	49	44
+102	147	123	88	135	193	21	132	176	0	0	0	63	191	84
+50	44	50	110	34	31	71	25	48	0	0	355	159	67	84
+115	89	73	86	118	28	14	89	31	0	355	0	72	48	143
