@@ -109,9 +109,20 @@ ggseqlogo(data=filter(ctbl_big_Hc,Gene %in% hiTrans_Hc)$aATG.context,
 ```{r cytoribo_context_Hc,dependson="load_context_Sc",fig.width=4,fig.height=1,eval=FALSE}
 cytoribolist_Hc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
-    filter(SPECIES=="SCHPO") %>%
+    filter(SPECIES=="HISTO") %>%
     .$GENE_ID
 ggseqlogo(data=filter(ctbl_big_Hc,Gene %in% cytoribolist_Hc)$aATG.context,
+                      namespace="TCAG") + 
+    theme_nothing()
+```
+
+
+### Upstream ATGs don't have a consensus
+
+First upstream ATG
+
+```{r u1_context_Hc,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big_Hc,nchar(u1.context) ==24)$u1.context,
                       namespace="TCAG") + 
     theme_nothing()
 ```
@@ -206,7 +217,7 @@ inf_content_narrow <-
             filter(Gene %in% hiTrans_Hc) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=8L,send=12L)
         # "CytoRibo", "d1ATG", "narrow", 
         # ctbl_big_Hc %>%
         #     filter(Gene %in% cytoribolist_Hc) %>% 
@@ -231,11 +242,11 @@ scores_Hc <-
     transmute(Gene,
               aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM_Hc),
               d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_Hc),
-              # u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_Hc)
+              u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_Hc),
               NULL
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
-           # u1vsan = u1.scorekn - aATG.scorekn,
+           u1vsan = u1.scorekn - aATG.scorekn,
            NULL) 
 
 # ribotbl_scoresenough_Hc <-
@@ -287,14 +298,14 @@ ggplot(data=scores_Hc) +
                  kernel="rectangular",bw=sbandwidthn) +
     geom_density(aes(x=d1.scorekn,colour="dATG"),
                  kernel="rectangular",bw=sbandwidthn) +
-    # geom_density(aes(x=u1.scorekn,colour="uATG"),
-    #             kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=u1.scorekn,colour="uATG"),
+                kernel="rectangular",bw=sbandwidthn) +
     geom_density(data=filter(scores_Hc,Gene %in% hiTrans_Hc),
                  aes(x=aATG.scorekn,colour="aATG, top 5%"),
                  kernel="rectangular",bw=sbandwidthn) +
     scale_colour_manual(values=c("aATG"="dodgerblue",
                                  "aATG, top 5%"="darkblue",
-                                 # "uATG"="red",
+                                 "uATG"="red",
                                  "dATG"="green3") ) +
     labs(x="ATG Kozak score, Sc") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
