@@ -57,7 +57,7 @@ str_dice <- function(string, width=1L) {
 }
 
 
-trim_at_last_stop_codon <- function(codonseq, stopcods=c("TGA","TAG","TAA")) {
+trim_at_last_stop_codon <- function(codonseq, stopcods=c("TGA","TAG","TAA"),re) {
     ncodons <- length(codonseq)
     last_stop <- which(codonseq %in% stopcods) %>% max
     if (!is.finite(last_stop)) {
@@ -145,7 +145,8 @@ expand_threeprime_nrstarts <- function(txinfile,CDSoutfile,protoutfile=NULL,
                                 stopcods=c("TGA","TAG","TAA"),
                                 startcods=c("ATG",
                                             "TTG","CTG","ACG",
-                                            "ATT","GTG","ATA")) {
+                                            "ATT","GTG","ATA"),
+                                trimstop = 1) {
     
     txin <- readDNAStringSet(txinfile)
     fiveUTR <- subseq(txin,start=1,end=leftpad)
@@ -158,12 +159,16 @@ expand_threeprime_nrstarts <- function(txinfile,CDSoutfile,protoutfile=NULL,
         DNAStringSet
     
     expanded_CDS <- xscat(nrstartfive,CDS) %>%
-        setNames(names(CDS)) 
+        setNames( names(CDS) %>% 
+                      str_extract(boundary("word") ) %>%
+                      paste("Ntermext") ) 
     
     writeXStringSet(expanded_CDS,filepath = CDSoutfile)
     
-    if (!is.null(protoutfile)) {
-    translate(expanded_CDS,if.fuzzy.codon = "X") %>%
+    if (!is.null(protoutfile)) { 
+        expanded_CDS %>%
+            translate(if.fuzzy.codon = "X") %>%
+            subseq(end= -(1+trimstop) ) %>%
             writeXStringSet(filepath = protoutfile)
     }
     

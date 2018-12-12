@@ -1,5 +1,5 @@
 ---
-title: "Near-AUG starts for C. neoformans"
+title: "Near-AUG starts for Fungi"
 author: Edward Wallace, ewjwallace@gmail.com
 date: 12 Oct 2018
 output:
@@ -12,7 +12,18 @@ output:
 # Summary
 
 
-Near-AUG near-cognate start codons
+Near-AUG near-cognate start codons.
+
+Algorithm is described in function `estimate_3prime_nrstart_CDS`.
+
+- take 120nt upstream from start, from files `*_CDS_with_120bputrs.fa`
+- trim 5' end at last in-frame stop codon to remove uORFs, with `trim_at_last_stop_codon`
+- trim 5' end to first near-AUG start, with `trim_to_first_nrstart`
+- output entire N-terminally extended CDS to file `*_protein_with_nrAUG_Ntermext.fa`
+
+We used as near-starts: ATG, TTG, CTG, ACG, ATT, GTG, ATA.
+
+Note we automatically translate near-ATGs according to the standard genetic code, not necessarily to `M`.
 
 
 ### Load Packages
