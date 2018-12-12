@@ -53,6 +53,11 @@ midTrans_Ca <- ribosum_Ca %>%
     head(n=3000) %>%
     .$Gene
 
+nonterribleTrans_Ca <- ribosum_Ca %>%
+    arrange(desc(RPF)) %>%
+    head(n=4500) %>%
+    .$Gene
+
 # enoughRNA_Ca <- ribosum_Ca %>%
 #     arrange(desc(RNA)) %>%
 #     head(n=5000) %>%
@@ -167,7 +172,7 @@ kozak_n_PWM_Ca <- kozak_w_PFM_Ca[,5:12] %>% PWM()
 ```{r write_PFM_Ca, dependson="calc_scores_Ca",results="show"}
 cat(
     "# PFM_hiTrans_Ca.txt
-# Position Frequency Matrix for aATGs of 400 highest-translated genes from Sc
+# Position Frequency Matrix for aATGs of 400 highest-translated genes from Ca
 # This is of the wide ATG context NNNNNNNNNATGNNN
 # Column is position, Row is nt count in order: ACGT.
 #
@@ -302,7 +307,7 @@ ggplot(data=scores_Ca) +
                                  "aATG, top 5%"="darkblue",
                                  # "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, Sc") +
+    labs(x="ATG Kozak score, Ca") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -374,6 +379,79 @@ highdiffn_dvsaATG_Ca %>%
     filter(Gene %in% hiTrans_Ca) 
 ```
 
+### dATG in frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNa levels here.
+
+Saved to *dvsaATG_highdiffn_inframe_Ca.txt*.
+
+```{r highdiffn_dvsaATG_inframe_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
+highdiffn_dvsaATG_enoughinframe_Ca <- 
+    highdiffn_dvsaATG_Ca %>%
+    left_join( ctbl_big_Ca %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% nonterribleTrans_Ca, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_Ca
+
+cat(
+    "# dvsaATG_highdiffn_inframe_Ca.txt
+# Genes with in-frame high-score dATGs
+# In C. albicans SC5314:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 75% by translation
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_Ca.txt")
+highdiffn_dvsaATG_enoughinframe_Ca %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_Ca.txt",append = TRUE,col_names=TRUE)
+```
+
+- C5_00840W_A, RNA transcription and export complex,  TEX1 / YNL253W ortholog
+
+See more below.
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of translation, out of frame. 
+
+Saved to *dvsaATG_highdiffn_outframe_Ca.txt*.
+
+```{r highdiffn_dvsaATG_outframe_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
+highdiffn_dvsaATG_enoughoutframe_Ca <- 
+    highdiffn_dvsaATG_Ca %>%
+    left_join( ctbl_big_Ca %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% nonterribleTrans_Ca, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_Ca
+
+cat(
+    "# dvsaATG_highdiffn_outframe_Ca.txt
+# Genes with in-frame high-score dATGs
+# In C. albicans SC5314:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 75% by translation
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_Ca.txt")
+highdiffn_dvsaATG_enoughoutframe_Ca %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_Ca.txt",append = TRUE,col_names=TRUE)
+```
 
 
 ## Compare score difference to localization predictions
@@ -451,7 +529,7 @@ Only some have in-frame ATG.
 * C2_06190W_A / ILV1Putative threonine dehydratase; regulated by *Gcn4* and Gcn2; induced by amino acid starvation (3-AT);
 
 
-### Some more decently-translated ones with in-frame aATG
+### Some more decently-translated ones with in-frame aATG and mito. loc
 
 ```{r highdiffn_dvsaATG_mitopred_hiTrans_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
 highdiffn_dvsaATG_Ca %>%

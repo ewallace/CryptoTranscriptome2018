@@ -649,6 +649,75 @@ Those genes are in this list:
 highdiffn_dvsaATG_JEC21
 ```
 
+
+### dATG in frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffn_inframe_JEC21.txt*.
+
+```{r highdiffn_dvsaATG_inframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
+highdiffn_dvsaATG_enoughinframe_JEC21 <- 
+    highdiffn_dvsaATG_JEC21 %>%
+    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_JEC21, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_JEC21
+
+cat(
+    "# dvsaATG_highdiffn_inframe_JEC21.txt
+# Genes with in-frame high-score dATGs
+# In C. deneoformans JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_JEC21.txt")
+highdiffn_dvsaATG_enoughinframe_JEC21 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_JEC21.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_JEC21.txt*.
+
+```{r highdiffn_dvsaATG_outframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
+highdiffn_dvsaATG_enoughoutframe_JEC21 <- 
+    highdiffn_dvsaATG_JEC21 %>%
+    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_JEC21, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_JEC21
+
+cat(
+    "# dvsaATG_highdiffn_outframe_JEC21.txt
+# Genes with in-frame high-score dATGs
+# In C. deneoformans JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_JEC21.txt")
+highdiffn_dvsaATG_enoughoutframe_JEC21 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_JEC21.txt",append = TRUE,col_names=TRUE)
+```
+
+
 ### dATG vs aATG ribosome occupancy depends on the context
 
 For top 3315 / 50% of genes by mean RNA TPM.
@@ -1612,6 +1681,75 @@ Those genes are in this list:
 ```{r highdiffn_dvsaATG_H99,dependson="dvsaATG_scoresn_H99",results="show"}
 highdiffn_dvsaATG_H99
 ```
+
+### dATG in frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in  frame. Saved to *dvsaATG_highdiffn_inframe_H99.txt*.
+
+```{r highdiffn_dvsaATG_inframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
+highdiffn_dvsaATG_enoughinframe_H99 <- 
+    highdiffn_dvsaATG_H99 %>%
+    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_H99, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_H99
+
+cat(
+    "# dvsaATG_highdiffn_inframe_H99.txt
+# Genes with in-frame high-score dATGs
+# In C. neoformans H99:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_H99.txt")
+highdiffn_dvsaATG_enoughinframe_H99 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_H99.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_H99.txt*.
+
+```{r highdiffn_dvsaATG_outframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
+highdiffn_dvsaATG_enoughoutframe_H99 <- 
+    highdiffn_dvsaATG_H99 %>%
+    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_H99, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_H99
+
+cat(
+    "# dvsaATG_highdiffn_outframe_H99.txt
+# Genes with in-frame high-score dATGs
+# In C. neoformans H99:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_H99.txt")
+highdiffn_dvsaATG_enoughoutframe_H99 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_H99.txt",append = TRUE,col_names=TRUE)
+```
+
+
 
 ### dATG vs aATG ribosome occupancy depends on the context
 

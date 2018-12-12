@@ -106,7 +106,7 @@ ggseqlogo(data=filter(ctbl_big_Hc,Gene %in% hiTrans_Hc)$aATG.context,
 
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
-```{r cytoribo_context_Hc,dependson="load_context_Sc",fig.width=4,fig.height=1,eval=FALSE}
+```{r cytoribo_context_Hc,dependson="load_context_Hc",fig.width=4,fig.height=1,eval=FALSE}
 cytoribolist_Hc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="HISTO") %>%
@@ -172,7 +172,7 @@ kozak_n_PWM_Hc <- kozak_w_PFM_Hc[,5:12] %>% PWM()
 ```{r write_PFM_Hc, dependson="calc_scores_Hc",results="show"}
 cat(
     "# PFM_hiTrans_Hc.txt
-# Position Frequency Matrix for aATGs of 256 highest-translated genes from Sc
+# Position Frequency Matrix for aATGs of 256 highest-translated genes from Hc
 # This is of the wide ATG context NNNNNNNNNATGNNN
 # Column is position, Row is nt count in order: ACGT.
 #
@@ -270,10 +270,10 @@ Write scores to file *scores_kozak_Hc.txt*.
 scores_Hc
 cat(
     "# scores_kozak_Hc.txt
-# Scores of ATG context against Kozak sequence, C. neoformans serotype D Sc
+# Scores of ATG context against Kozak sequence, H. capsulatum G217B
 # Kozak sequence derived from 256 highest-translated genes by RPF
 #
-# Gene: Sc systematic gene name
+# Gene: Hc systematic gene name
 # aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
 # d1.scorekn: score of 1st downstream ATG against narrow
 # xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
@@ -307,7 +307,7 @@ ggplot(data=scores_Hc) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, Sc") +
+    labs(x="ATG Kozak score, Hc") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -379,8 +379,76 @@ highdiffn_dvsaATG_Hc %>%
 ```
 
 
+### dATG in frame with ATG
 
-## Compare score difference to localization predictions - NOT DONE
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffn_inframe_Hc.txt*.
+
+```{r highdiffn_dvsaATG_inframe_Hc,dependson="dvsaATG_scoresn_Hc",results="show"}
+highdiffn_dvsaATG_enoughinframe_Hc <- 
+    highdiffn_dvsaATG_Hc %>%
+    left_join( ctbl_big_Hc %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_Hc, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_Hc
+
+cat(
+    "# dvsaATG_highdiffn_inframe_Hc.txt
+# Genes with in-frame high-score dATGs
+# In H. capsulatum G217B:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_Hc.txt")
+highdiffn_dvsaATG_enoughinframe_Hc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_Hc.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_Hc.txt*.
+
+
+```{r highdiffn_dvsaATG_outframe_Hc,dependson="dvsaATG_scoresn_Hc",results="show"}
+highdiffn_dvsaATG_enoughoutframe_Hc <- 
+    highdiffn_dvsaATG_Hc %>%
+    left_join( ctbl_big_Hc %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_Hc, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_Hc
+
+cat(
+    "# dvsaATG_highdiffn_outframe_Hc.txt
+# Genes with in-frame high-score dATGs
+# In H. capsulatum G217B:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_Hc.txt")
+highdiffn_dvsaATG_enoughoutframe_Hc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_Hc.txt",append = TRUE,col_names=TRUE)
+```
+
+
+## Compare score difference to localization predictions
 
 
 ### Load predictions from mitofates

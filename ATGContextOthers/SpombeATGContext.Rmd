@@ -54,6 +54,11 @@ midTrans_Sp <- ribosum_Sp %>%
     head(n=1280) %>%
     .$Gene
 
+nonterribleTrans_Sp <- ribosum_Sp %>%
+    arrange(desc(RPF)) %>%
+    head(n=3840) %>%
+    .$Gene
+
 # enoughRNA_Sp <- ribosum_Sp %>%
 #     arrange(desc(RNA)) %>%
 #     head(n=3000) %>%
@@ -119,7 +124,7 @@ ggseqlogo(data=filter(ctbl_big_Sp,Gene %in% hiTrans_Sp)$aATG.context,
 
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
-```{r cytoribo_context_Sp,dependson="load_context_Sc",fig.width=4,fig.height=1}
+```{r cytoribo_context_Sp,dependson="load_context_Sp",fig.width=4,fig.height=1}
 cytoribolist_Sp <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="SCHPO") %>%
@@ -174,7 +179,7 @@ kozak_n_PWM_Sp <- kozak_w_PFM_Sp[,5:12] %>% PWM()
 ```{r write_PFM_Sp, dependson="calc_scores_Sp",results="show"}
 cat(
     "# PFM_hiTrans_Sp.txt
-# Position Frequency Matrix for aATGs of 256 highest-translated genes from Sc
+# Position Frequency Matrix for aATGs of 256 highest-translated genes from Sp
 # This is of the wide ATG context NNNNNNNNNATGNNN
 # Column is position, Row is nt count in order: ACGT.
 #
@@ -272,10 +277,10 @@ Write scores to file *scores_kozak_Sp.txt*.
 scores_Sp
 cat(
     "# scores_kozak_Sp.txt
-# Scores of ATG context against Kozak sequence, C. neoformans serotype D Sc
+# Scores of ATG context against Kozak sequence, S. pombe 972h-
 # Kozak sequence derived from 256 highest-translated genes by RPF
 #
-# Gene: Sc systematic gene name
+# Gene: Sp systematic gene name
 # aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
 # d1.scorekn: score of 1st downstream ATG against narrow
 # xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
@@ -309,7 +314,7 @@ ggplot(data=scores_Sp) +
                                  "aATG, top 5%"="darkblue",
                                  # "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, Sc") +
+    labs(x="ATG Kozak score, Sp") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -398,6 +403,76 @@ highdiffn_dvsaATG_Sp %>%
 * SPBC3F6.04c U3 snoRNP protein Nop14
 
 Several things involved in mRNA 3' end regulation. Otheriwse unclear. We should check if those ATGs are actually used.
+
+
+### dATG in frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of translation, in frame. Saved to *dvsaATG_highdiffn_inframe_Sp.txt*.
+
+```{r highdiffn_dvsaATG_inframe_Sp,dependson="dvsaATG_scoresn_Sp",results="show"}
+highdiffn_dvsaATG_enoughinframe_Sp <- 
+    highdiffn_dvsaATG_Sp %>%
+    left_join( ctbl_big_Sp %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% nonterribleTrans_Sp, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_Sp
+
+cat(
+    "# dvsaATG_highdiffn_inframe_Sp.txt
+# Genes with in-frame high-score dATGs
+# In S. pombe 972h-:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 75% by RNA translation
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_Sp.txt")
+highdiffn_dvsaATG_enoughinframe_Sp %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_Sp.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of translation, out of frame. Saved to *dvsaATG_highdiffn_outframe_Sp.txt*.
+
+
+```{r highdiffn_dvsaATG_outframe_Sp,dependson="dvsaATG_scoresn_Sp",results="show"}
+highdiffn_dvsaATG_enoughoutframe_Sp <- 
+    highdiffn_dvsaATG_Sp %>%
+    left_join( ctbl_big_Sp %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% nonterribleTrans_Sp, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_Sp
+
+cat(
+    "# dvsaATG_highdiffn_outframe_Sp.txt
+# Genes with in-frame high-score dATGs
+# In S. pombe 972h-:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 75% by RNA translation
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_Sp.txt")
+highdiffn_dvsaATG_enoughoutframe_Sp %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_Sp.txt",append = TRUE,col_names=TRUE)
+```
+
 
 ## Compare score difference to localization predictions
 

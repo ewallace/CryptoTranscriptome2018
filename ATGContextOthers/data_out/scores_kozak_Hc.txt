@@ -1,8 +1,8 @@
 # scores_kozak_Hc.txt
-# Scores of ATG context against Kozak sequence, C. neoformans serotype D Sc
+# Scores of ATG context against Kozak sequence, H. capsulatum G217B
 # Kozak sequence derived from 256 highest-translated genes by RPF
 #
-# Gene: Sc systematic gene name
+# Gene: Hc systematic gene name
 # aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
 # d1.scorekn: score of 1st downstream ATG against narrow
 # xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
