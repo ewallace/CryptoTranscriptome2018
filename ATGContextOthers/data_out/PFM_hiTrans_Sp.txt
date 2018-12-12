@@ -1,5 +1,5 @@
 # PFM_hiTrans_Sp.txt
-# Position Frequency Matrix for aATGs of 256 highest-translated genes from Sc
+# Position Frequency Matrix for aATGs of 256 highest-translated genes from Sp
 # This is of the wide ATG context NNNNNNNNNATGNNN
 # Column is position, Row is nt count in order: ACGT.
 #

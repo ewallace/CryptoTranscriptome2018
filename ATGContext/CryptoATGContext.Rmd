@@ -153,7 +153,7 @@ ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
 ```{r cytoribo_context_JEC21,dependson="load_context_JEC21",fig.width=4,fig.height=1}
-cytoribolist_JEC21 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+cytoribolist_JEC21 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="CRYNJ") %>%
     .$GENE_ID
@@ -312,9 +312,11 @@ scores_JEC21 <-
     transmute(Gene,
               aATG.scorekn = PWMscoren(aATG.context),
               d1.scorekn   = PWMscoren(d1.context),
+              d2.scorekn   = PWMscoren(d2.context),
               u1.scorekn   = PWMscoren(u1.context),
               aATG.scorekw = PWMscorew(aATG.context),
               d1.scorekw   = PWMscorew(d1.context),
+              d2.scorekw   = PWMscorew(d2.context),
               u1.scorekw   = PWMscorew(u1.context)
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
@@ -387,6 +389,70 @@ ggplot(data=scores_JEC21) +
           legend.title=element_blank())
 ```
 
+### Narrow consensus comparing d1ATG to d2ATG score
+
+```{r plot_scores_nd1d2_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG1"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d2.scorekn,colour="dATG2"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(aes(x=u1.scorekn,colour="uATG"),
+    #              kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+                 aes(x=aATG.scorekn,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Narrow consensus d1ATG score by frame
+
+```{r plot_scores_nd1frame_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8,results="show"}
+
+sbandwidthn = 0.025
+
+ggplot(data=ctbl_big_JEC21 %>%
+           filter(nchar(d1.context) == 24) %>%
+           transmute(Gene,d1.frame=factor(d1.frame)) %>%
+           left_join(scores_JEC21) ) +
+    geom_density(aes(x=d1.scorekn,colour=d1.frame),
+                 kernel="rectangular",bw=sbandwidthn) +
+    labs(x="d1ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+#### Same again, segregated by expression (enoughRNA, top 50%)
+
+```{r plot_scores_nd1frame_top50_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=3.2,results="show"}
+
+ggplot(data=ctbl_big_JEC21 %>%
+           filter(nchar(d1.context) == 24) %>%
+           transmute(Gene,d1.frame=factor(d1.frame)) %>%
+           left_join(scores_JEC21) %>%
+           mutate(enoughRNA=Gene %in% enoughRNA_JEC21) 
+       ) +
+    geom_density(aes(x=d1.scorekn,colour=d1.frame),
+                 kernel="rectangular",bw=sbandwidthn) +
+    facet_wrap(~enoughRNA,ncol=1) + 
+    labs(x="d1ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
 ### Plot against wide consensus (-9 to +3 from ATG)
 
 ```{r plot_scores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
@@ -407,6 +473,33 @@ ggplot(data=scores_JEC21) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
+    labs(x="ATG Kozak score (wide), JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Wide consensus comparing d1ATG to d2ATG score
+
+```{r plot_scores_wd1d2_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekw,colour="dATG1"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d2.scorekw,colour="dATG2"),
+                 kernel="rectangular",bw=sbandwidthn) + 
+    geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
     labs(x="ATG Kozak score (wide), JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
@@ -497,7 +590,56 @@ ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
 
 #### Small negative correlation between dATG and aATG score
 
-R = `r with(scores_JEC21, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+Rnarrow = `r with(scores_JEC21, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`; 
+Rwide = `r with(scores_JEC21, cor(aATG.scorekw,d1.scorekw,use="pairwise.complete.obs")) %>% round3`
+
+#### There may be some trend but it is weak
+
+Boxplots show enough_RNA only.
+
+```{r dvsaATG_scoresn_boxplot_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+scores_JEC21_Cutn <- 
+    scores_JEC21 %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_JEC21) %>%
+    mutate(aATG.scorekn.cut=cut(aATG.scorekn,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekn.cutmid=aATG.scorekn.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_JEC21_Cutn,
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekn.cutmid,group=aATG.scorekn.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+```{r dvsaATG_scoresw_boxplot_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+scores_JEC21_Cutw <- 
+    scores_JEC21 %>% 
+    select(Gene,aATG.scorekw,d1.scorekw) %>%
+    filter(!is.na(d1.scorekw),Gene %in% enoughRNA_JEC21) %>%
+    mutate(aATG.scorekw.cut=cut(aATG.scorekw,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekw.cutmid=aATG.scorekw.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_JEC21_Cutw,
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
+
+
 
 ## Genes with unusual dATG vs aATG narrow score
 
@@ -506,6 +648,75 @@ Those genes are in this list:
 ```{r highdiffn_dvsaATG_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
 highdiffn_dvsaATG_JEC21
 ```
+
+
+### dATG in frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffn_inframe_JEC21.txt*.
+
+```{r highdiffn_dvsaATG_inframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
+highdiffn_dvsaATG_enoughinframe_JEC21 <- 
+    highdiffn_dvsaATG_JEC21 %>%
+    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_JEC21, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_JEC21
+
+cat(
+    "# dvsaATG_highdiffn_inframe_JEC21.txt
+# Genes with in-frame high-score dATGs
+# In C. deneoformans JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_JEC21.txt")
+highdiffn_dvsaATG_enoughinframe_JEC21 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_JEC21.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_JEC21.txt*.
+
+```{r highdiffn_dvsaATG_outframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
+highdiffn_dvsaATG_enoughoutframe_JEC21 <- 
+    highdiffn_dvsaATG_JEC21 %>%
+    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_JEC21, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_JEC21
+
+cat(
+    "# dvsaATG_highdiffn_outframe_JEC21.txt
+# Genes with in-frame high-score dATGs
+# In C. deneoformans JEC21:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_JEC21.txt")
+highdiffn_dvsaATG_enoughoutframe_JEC21 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_JEC21.txt",append = TRUE,col_names=TRUE)
+```
+
 
 ### dATG vs aATG ribosome occupancy depends on the context
 
@@ -648,6 +859,137 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
           namespace="TCAG")  + 
     theme_nothing()
 
+```
+
+#### Negative correlation of dATG and aATG score only for mitochondrial localization signal
+
+```{r dvsaATG_scoresn_mito_lmodel2_JEC21, dependson="calc_scores_JEC21", fig.width=6.2,fig.height=3.5}
+dvsATGmito_JEC21 <- 
+    scores_JEC21 %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    filter(!is.na(d1.scorekn)) %>%
+    inner_join( mitofates_JEC21 %>% 
+                    select(Gene,Prob_preseq,Pred_preseq) )
+
+library(lmodel2)
+library(broom)
+
+getMA <- function(databit, formula=d1.scorekn~aATG.scorekn) {
+    lm2fit  <- lmodel2(formula,databit)
+    data.frame(r.squared=glance(lm2fit)$r.squared[1],
+               intercept=tidy(lm2fit) %>%
+                   filter(method=="MA",term=="Intercept") %>%
+                   .$estimate %>% 
+                   .[1],
+               slope=tidy(lm2fit) %>%
+                   filter(method=="MA",term=="Slope") %>%
+                   .$estimate %>% 
+                   .[1]) 
+}
+
+dvsa_MA_summ_JEC21 <- dvsATGmito_JEC21 %>%
+    group_by(Pred_preseq) %>%
+    do(getMA(.)) %>%
+    mutate(Rlabel=paste0("R = -", round(sqrt(r.squared),digits=2)) )
+
+ggplot(data=dvsATGmito_JEC21,
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    facet_wrap(~Pred_preseq) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(method="lm",se=FALSE) + 
+    geom_abline(data=dvsa_MA_summ_JEC21,
+                aes(intercept=intercept,slope=slope),
+                colour="blue",size=1) + 
+    geom_text(data=dvsa_MA_summ_JEC21,
+              x=0.67,y=0.65,hjust=0,vjust=0,
+              aes(label=Rlabel),
+              colour="blue",size=5) + 
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow") +
+    panel_border()
+```
+
+### Mitofates and d1ATG/d2ATG narrow score
+
+```{r plot_scores_nd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores_JEC21 %>% 
+           filter(!is.na(d1.scorekn)) %>%
+           inner_join( mitofates_JEC21 %>% 
+                           select(Gene,Prob_preseq,Pred_preseq)
+           ),
+       aes(linetype=Pred_preseq)) +
+    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekn,colour="dATG1"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d2.scorekn,colour="dATG2"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(aes(x=u1.scorekn,colour="uATG"),
+    #              kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
+    #              aes(x=aATG.scorekn,colour="aATG, top 5%"),
+    #              kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
+    scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
+                          labels=mitobreaks_JEC21)  + 
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+```{r plot_scores2_nd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8,results="show",eval=FALSE}
+
+sbandwidthn = 0.025
+
+melt_mito_scores_JEC21 <- 
+    scores_JEC21 %>% 
+    filter(!is.na(d1.scorekn)) %>%
+    inner_join( mitofates_JEC21 %>% 
+                    select(Gene,Prob_preseq,Pred_preseq)
+    ) %>%
+    select(Gene,Pred_preseq,
+           aATG=aATG.scorekn,dATG1=d1.scorekn,dATG2=d2.scorekn) %>%
+    gather(key="ATG",value="scorekn",aATG,dATG1,dATG2)
+
+
+# ggplot(data=melt_mito_scores_JEC21,
+#        aes(x=scorekn,linetype=Pred_preseq,colour=ATG)) +
+#     geom_density(kernel="rectangular",bw=sbandwidthn) +
+#     scale_colour_manual(values=c("aATG"="dodgerblue",
+#                                  "aATG, top 5%"="darkblue",
+#                                  #"uATG"="red",
+#                                  "dATG1"="green3",
+#                                  "dATG2"="green4") ) +
+#     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
+#                           labels=mitobreaks_JEC21)  + 
+#     labs(x="ATG Kozak score, JEC21") +
+#     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+#           axis.text.y=element_blank(),axis.title.y=element_blank(),
+#           legend.title=element_blank())
+
+ggplot(data=melt_mito_scores_JEC21,
+       aes(x=ATG,linetype=Pred_preseq,colour=ATG,y=scorekn)) +
+    geom_violin(kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 #"uATG"="red",
+                                 "dATG1"="green3",
+                                 "dATG2"="green4") ) +
+    scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
+                          labels=mitobreaks_JEC21)  + 
+    labs(x="ATG Kozak score, JEC21") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
 ```
 
 
@@ -943,11 +1285,16 @@ ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
 
 Ideally would fix this more nicely.
 
-```{r cytoribo_context_H99,dependson=c("load_context_H99","cytoribo_context_JEC21"),fig.width=4,fig.height=1}
-cytoribolist_H99 <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
-                       comment="#") %>%
-    filter(JEC21 %in% cytoribolist_JEC21) %>%
-    .$H99
+```{r cytoribo_context_H99,dependson="load_context_H99",fig.width=4,fig.height=1}
+# cytoribolist_H99 <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
+#                        comment="#") %>%
+#     filter(JEC21 %in% cytoribolist_JEC21) %>%
+#     .$H99
+
+cytoribolist_H99 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
+                        comment="#") %>%
+    filter(SPECIES=="CRYNH") %>%
+    .$GENE_ID
 
 ggseqlogo(data=filter(ctbl_big_H99,Gene %in% cytoribolist_H99)$aATG.context,
                       namespace="TCAG") + 
@@ -1278,7 +1625,54 @@ ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
 
 #### Small negative correlation between dATG and aATG score
 
-R = `r with(scores_H99, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+Rnarrow = `r with(scores_H99, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`; 
+Rwide = `r with(scores_H99, cor(aATG.scorekw,d1.scorekw,use="pairwise.complete.obs")) %>% round3`
+
+#### There may be some trend but it is weak
+
+Boxplots show enough_RNA only.
+
+```{r dvsaATG_scoresn_boxplot_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
+scores_H99_Cutn <- 
+    scores_H99 %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_H99) %>%
+    mutate(aATG.scorekn.cut=cut(aATG.scorekn,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekn.cutmid=aATG.scorekn.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_H99_Cutn,
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekn.cutmid,group=aATG.scorekn.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
+```{r dvsaATG_scoresw_boxplot_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
+scores_H99_Cutw <- 
+    scores_H99 %>% 
+    select(Gene,aATG.scorekw,d1.scorekw) %>%
+    filter(!is.na(d1.scorekw),Gene %in% enoughRNA_H99) %>%
+    mutate(aATG.scorekw.cut=cut(aATG.scorekw,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekw.cutmid=aATG.scorekw.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_H99_Cutw,
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
 
 ## Genes with unusual dATG / aATG narrow score
 
@@ -1287,6 +1681,75 @@ Those genes are in this list:
 ```{r highdiffn_dvsaATG_H99,dependson="dvsaATG_scoresn_H99",results="show"}
 highdiffn_dvsaATG_H99
 ```
+
+### dATG in frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in  frame. Saved to *dvsaATG_highdiffn_inframe_H99.txt*.
+
+```{r highdiffn_dvsaATG_inframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
+highdiffn_dvsaATG_enoughinframe_H99 <- 
+    highdiffn_dvsaATG_H99 %>%
+    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_H99, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_H99
+
+cat(
+    "# dvsaATG_highdiffn_inframe_H99.txt
+# Genes with in-frame high-score dATGs
+# In C. neoformans H99:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_H99.txt")
+highdiffn_dvsaATG_enoughinframe_H99 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_H99.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_H99.txt*.
+
+```{r highdiffn_dvsaATG_outframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
+highdiffn_dvsaATG_enoughoutframe_H99 <- 
+    highdiffn_dvsaATG_H99 %>%
+    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_H99, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_H99
+
+cat(
+    "# dvsaATG_highdiffn_outframe_H99.txt
+# Genes with in-frame high-score dATGs
+# In C. neoformans H99:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_H99.txt")
+highdiffn_dvsaATG_enoughoutframe_H99 %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_H99.txt",append = TRUE,col_names=TRUE)
+```
+
+
 
 ### dATG vs aATG ribosome occupancy depends on the context
 

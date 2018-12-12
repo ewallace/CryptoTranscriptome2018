@@ -109,7 +109,7 @@ ggseqlogo(data=filter(ctbl_big_Sc,Gene %in% hiTrans_Sc)$aATG.context,
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
 ```{r cytoribo_context_Sc,dependson="load_context_Sc",fig.width=4,fig.height=1}
-cytoribolist_Sc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated4.txt",
+cytoribolist_Sc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="YEAST") %>%
     .$GENE_ID
@@ -326,7 +326,7 @@ ggplot(data=scores_Sc) +
 ```{r dvsaATG_scoresn_Sc, dependson="calc_scores_Sc", fig.width=3.5,fig.height=3.5}
 highdiffn_dvsaATG_Sc <- scores_Sc %>%
     arrange(desc(d1vsan)) %>%
-    head(n=330) %>%
+    head(n=300) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
 ggplot(data=scores_Sc %>% filter(!is.na(d1.scorekn)),
@@ -352,6 +352,32 @@ Purple: both.
 ### No correlation between dATG and aATG score
 
 R = `r with(scores_Sc, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+
+#### There may be some trend but it is weak
+
+Boxplots show enough_RNA only.
+
+```{r dvsaATG_scoresn_boxplot_Sc, dependson="calc_scores_Sc", fig.width=3.5,fig.height=3.5}
+scores_Sc_Cutn <- 
+    scores_Sc %>% 
+    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_Sc) %>%
+    mutate(aATG.scorekn.cut=cut(aATG.scorekn,
+                                breaks=seq(0.6,1.0,0.05),
+                                labels=seq(0.625,0.975,0.05)),
+           aATG.scorekn.cutmid=aATG.scorekn.cut %>% as.character %>% as.numeric)
+
+ggplot(data=scores_Sc_Cutn,
+       aes(x=aATG.scorekn,y=d1.scorekn)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(span=0.1,method="loess",se=FALSE) + 
+    geom_boxplot(aes(x=aATG.scorekn.cutmid,group=aATG.scorekn.cut),
+                 fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
+    labs(x="aATG score, narrow",
+         y="dATG score, narrow")
+```
+
 
 ## Genes with unusual dATG vs aATG narrow score
 
@@ -384,6 +410,91 @@ highdiffn_dvsaATG_Sc %>%
 * RPL39 / YJL189W, Ribosomal protein L39
 
 There is no clear pattern in these.
+
+
+### dATG in frame with ATG - CHECK against dual-localized papers!
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame.
+
+```{r highdiffn_dvsaATG_inframe_Sc,dependson="dvsaATG_scoresn_Sc",results="show"}
+highdiffn_dvsaATG_enoughinframe_Sc <- 
+    highdiffn_dvsaATG_Sc %>%
+    left_join( ctbl_big_Sc %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_Sc, d1.frame==0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughinframe_Sc
+
+cat(
+    "# dvsaATG_highdiffn_inframe_Sc.txt
+# Genes with in-frame high-score dATGs
+# In Saccharomyces cerevisiae:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_inframe_Sc.txt")
+highdiffn_dvsaATG_enoughinframe_Sc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_inframe_Sc.txt",append = TRUE,col_names=TRUE)
+```
+
+- YER156C, copper-regulated putative protein of unknown function, nuclear/cyto localization
+- GRX2 / YDR513W, glutaredoxin, dual-localized mito and cyto from in-frame start codons.
+- ERV1 / YGR029W, mitochondrial sulfhydryl oxidase
+- HNT1 / YDL125C, Adenosine 5'-monophosphoramidase, reported nuclear/cyto localization
+- STE23 / YLR389C, Metalloprotease, mitochondrial
+- YDR248C, Putative gluconokinase localized to cytoplasm and vacuole
+- VAS1 / YGR094W, Valyl tRNA synthase, localized to cytoplasm and mitochondria
+- ERB1 / YMR049C, Eukaryotic Ribosome Biogenesis protein, nucleolar.
+- SFP1 / YLR403W, transcription regulator of ribosomal biogenesis genes, nuclear/cyto localization
+- YNL247W, Cysteinyl-tRNA synthetase, localized to cytoplasm and mitochondria 
+
+
+### dATG out of frame with ATG
+
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame.
+
+```{r highdiffn_dvsaATG_outframe_Sc,dependson="dvsaATG_scoresn_Sc",results="show"}
+highdiffn_dvsaATG_enoughoutframe_Sc <- 
+    highdiffn_dvsaATG_Sc %>%
+    left_join( ctbl_big_Sc %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_Sc, d1.frame!=0) %>%
+    select(Gene,aATG.scorekn,d1.scorekn)
+
+highdiffn_dvsaATG_enoughoutframe_Sc
+
+cat(
+    "# dvsaATG_highdiffn_outframe_Sc.txt
+# Genes with in-frame high-score dATGs
+# In Saccharomyces cerevisiae:
+#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - in top 50% by RNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Dec 2018
+",
+file="data_out/dvsaATG_highdiffn_outframe_Sc.txt")
+highdiffn_dvsaATG_enoughoutframe_Sc %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffn_outframe_Sc.txt",append = TRUE,col_names=TRUE)
+```
+
+In addition:
+
+- PHB2 / YGR231C, inner mitochondrial membrane chaperone
+- NUP170 / YBL079W, Subunit of nuclear pore complex
+
 
 ## Compare score difference to localization predictions
 
