@@ -113,9 +113,9 @@ ggseqlogo(data=filter(ctbl_big_Ca,Gene %in% hiTrans_Ca)$aATG.context,
     theme_nothing()
 ```
 
-### Cytoplasmic Ribosome Annotated ATGs - not yet listed for C. albicans
+### Cytoplasmic Ribosome Annotated ATGs 
 
-Code not evaluated.
+
 
 ```{r cytoribo_context_Ca,dependson="load_context_Ca",fig.width=4,fig.height=1}
 cytoribolist_Ca <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
