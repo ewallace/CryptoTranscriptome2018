@@ -2411,13 +2411,13 @@ mitofates_cc %>%
 There seem to be more with mito-gain in H99. OR with alternative non-ATG starts in JEC21.
 
 - CNAG_07163, mito membrane insertase OXA1. JEC21 CNE02790 downstream non-ATG initiation?
-- CNAG_04443, hydrolase homolog. Duplicate orthologs in pombe and nidulans suggest dual-localization. H99 CNAG_04443 has ribosomes only from d1ATG, MJEC21 CNI01140 has ribosomes on uORF.
+- CNAG_04443, hydrolase homolog. Duplicate orthologs in pombe and nidulans suggest dual-localization. H99 CNAG_04443 has ribosomes only from d1ATG, JEC21 CNI01140 has ribosomes on uORF.
 - CNAG_02354, mito RPL2? JEC21 CNE01960 annotation questions as several in-frame ATGs. old aATG (new ext) has mito loc, H99 homology. 
 - CNAG_05511, ATPase, MSP1 (mitochondrial sorting protease) paralog. JEC21 CNH01640, again 5' annotation questions.
 - CNAG_04664, mito mRPL54. JEC21 CNJ00980, again 5' annotation questions, d1ATG looks like start codon.
 - CNAG_00427, mitochondial protein Phosphatase, PTC5 homolog. Difficult to tell 5' end details, but H99 5' end is longer. Many short insertions in H99 relative to JEC21. Also do get weak mito prediction from CNA04120 N-term ext.
 - CNAG_01522, mitochondrial phe-tRNA synthetase. JEC21 CNC06600, initiation downstream of original aATG, upstream of new aATG.
-- CNAG_07352, mito complex MICOS MIC26 homolog. JEC21 CNA03190, short 5'UTR, initiation downstream of annotated ATG, also alt 5'UTR intron.
+- CNAG_07352, mito complex MICOS MIC26 homolog. JEC21 CNA03190, short 5'UTR, initiation downstream of annotated ATG, also alt 5'UTR intron. However since N-term seqs are near-identical, probably CNA03190 misclassified by mitofates.
 - CNAG_05058, mito ribosome-associated GTPase MTG2 homolog. Looks like CNL05610 is misclassified by mitofates.
 - CNAG_01145, australin/borealin related chromosome passenger protein
 
