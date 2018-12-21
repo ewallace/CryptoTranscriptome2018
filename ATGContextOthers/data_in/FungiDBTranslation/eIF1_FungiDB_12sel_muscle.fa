@@ -1,0 +1,48 @@
+>CNB05380  | Cryptococcus neoformans var. neoformans JEC21 | suppressor of initiator codon mutations, putative | protein  | length=159
+MSTTVTQSKVDATTKKTKAPAATAGVENLGPAFDPFAPVNDLNDTPSIEKAVGSKN--DK
+IHIRLQQRNGRKTLTTVQGIPSKYNHSKILKAMKKEFACNGTVVKPEVDSGEEDSPAPVA
+KNHGDVLQLQGDQRVAAKQFLIDSGIVAQKEAKDLIVVHGY
+>CNAG_04054  | Cryptococcus neoformans var. grubii H99 | translation initiation factor SUI1 | protein  | length=159
+MSTTVTQSKVDATTKKTKAPAATAGVENLGPAFDPFAPVNDLNDTPSIEKAVGSKN--DK
+IHIRLQQRNGRKTLTTVQGIPSKYNHSKILKAMKKEFACNGTVVKPEVDSGEEDSPAPVA
+KNHGDVLQLQGDQRVAAKQFLIDSGIVAQKEAKDLIVVHGY
+>PGTG_01884  | Puccinia graminis f. sp. tritici CRL 75-36-700-3 | hypothetical protein | protein  | length=114
+-----------------------MSVQNL-TSRDPFADVGDD-QFTTTQPSTKAP---DY
+VHIRIQQRNGRKTLTTIQGLPSEYDPKKLLKAFKKDFACNGTLVPDE-------------
+-ELGQVIQLQGDQRTKVSLLLVDA----GI-PKATIKIHGF
+>UMAG_02665  | Ustilago maydis 521 | putative translation initiation factor eIF1 | protein  | length=119
+-----------------------MNIQNL-ASYDPFADLGDESKQDATSQATKKQQTQNY
+VHIRIQQRNGRKTLTTLQGLPKEYDQKKLLKAFKKEFACNGTIVDDE-------------
+-ELGQVIQLQGDQRQKVAAFIVQE----GITSKTEVKVHGF
+>NCU01981  | Neurospora crassa OR74A | translation factor SUI1 | protein  | length=117
+-----------------------MSIENL-KTYDPFAEADEEDSGQTKQTQ-------EY
+IHIRIQQRNGRKTLTTVQGIPKKFDAKKILKVVKKEFACNGTIIGDE------------D
+SKMGDVIQLQGDQRAKIKDFLTNKDEGLGL-DAKTIKVHGF
+>AGR95_083460  | Histoplasma capsulatum G217B | unspecified product | protein  | length=114
+-----------------------MSIENL-KTFDPFAEADED-TGDTKQSQ-------NY
+IHIRIQQRNGRKTLTTVQGLPKKFDQKKILKVIKKKFACNGTIVNDS-------------
+-EMGEVIQLQGDQRKDVQEFLVDKKEGLEL-DAKTIKVHGF
+>AN4742  | Aspergillus nidulans FGSC A4 | Ortholog(s) have ribosomal small subunit binding, translation initiation factor activity, translation initiation factor binding activity and role in formation of translation preinitiation complex, maintenance of translational fidelity | protein  | length=114
+-----------------------MSIENL-KTFDPFAEADED-TGETKQSQ-------NY
+IHIRIQQRNGRKTLTTVQGLPKKFDQKKILKVIKKKFACNGTIVNDT-------------
+-EMGEVIQLQGDQRKDVQEFLTDKKEGLEL-DAKTIKVHGF
+>Afu3g06260  | Aspergillus fumigatus Af293 | Ortholog(s) have ribosomal small subunit binding, translation initiation factor activity, translation initiation factor binding activity and role in formation of translation preinitiation complex, maintenance of translational fidelity | protein  | length=114
+-----------------------MSIENL-KTFDPFAEADED-TGETKQSQ-------NY
+IHIRIQQRNGRKTLTTVQGLPKKFDQKKILKVIKKKFACNGTIVNDS-------------
+-EMGEVIQLQGDQRKDVQEFLTDKKEGLEL-DAKTIKVHGF
+>SPBC23G7.05  | Schizosaccharomyces pombe 972h- | translation initiation factor eIF1  | protein  | length=109
+----------------------MSAIQNF-NTVDPFADTGDD----DAQPL-------NN
+IHIRIQQRNGRKTLTTVQGLPREFDQKRILRALKKDFACNGTIVKDD-------------
+-DLGEVIQLQGDQRIKVMEFLTQQ---LGL-QKKNIKIHGF
+>C5_04090C_A  | Candida albicans SC5314 | Putative translation initiation factor; flucytosine induced; genes encoding ribosomal subunits, translation factors, and tRNA synthetases are downregulated upon phagocytosis by murine macrophage | protein  | length=109
+----------------------MSTIQNL-NAFDPFADTGDS----EAQPT-------NY
+IHIRIQQRNGRKTLTTVQGVPNEYDLKKILKVLKKDFACNGNIVKDD-------------
+-ELGEVIQLQGDQRVKVSEFLTAQ---LQL-PKKNIKIHGF
+>YALI0_C07524g  | Yarrowia lipolytica CLIB122 | YALI0C07524p | protein  | length=110
+---------------------MSTSIENL-KSFDPFADTGDD----DTQPT-------NY
+IHIRIQQRNGRKTLTTVQGLPEEYDLKRILKVLKKDFACNGNIGKDE-------------
+-EHGEIIQLQGDQRDKIVDFLTAK---LQI-DKKTIKKHGF
+>YNL244C  | Saccharomyces cerevisiae S288c | translation initiation factor eIF1 | protein  | length=108
+-----------------------MSIENL-KSFDPFADTGDD----ETATS-------NY
+IHIRIQQRNGRKTLTTVQGVPEEYDLKRILKVLKKDFACNGNIVKDP-------------
+-EMGEIIQLQGDQRAKVCEFMISQ---LGL-QKKNIKIHGF
