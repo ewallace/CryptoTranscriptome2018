@@ -275,4 +275,101 @@ PWMscorew <- function(seqs,pwm=kozak_w_PWM,startl=4) {
 
 is.context <- function(x) str_detect(x,"context")
 
+#### Entropy and Mutual information functions
 
+entropy1dct <- function(counts,pseudocount=0) {
+    # calculate entropy from a distribution
+    # as described in https://en.wikipedia.org/wiki/Sequence_logo
+    # counts: 
+    # pseudocount: pseudocount to add to remove zeroes
+    
+    counts <- counts + pseudocount # add pseudocount
+    ntot = sum(counts) # total number of sequences
+    freqs = counts / ntot # freqency
+    Hentropy = - sum( freqs * log2(freqs) ) # Shannon entropy 
+    return(Hentropy)
+}
+
+# entropy1dct(10000)
+# entropy1dct(c(1,1,0,0),pseudocount=1e-5)
+# entropy1dct(c(1,1,1,1))
+
+entropy1d <- function(x,pseudocount=0) {
+    # calculate entropy from a set of observations
+    x %>%
+        table %>%
+        as.numeric %>%
+        entropy1dct(pseudocount = pseudocount)
+}
+
+# entropy1d(c("A","A","B","B"))
+# entropy1d(c("A"))
+
+jointent2str <- function(x,y,pseudocount=0) {
+    paste(x,y) %>% 
+        entropy1d(pseudocount = pseudocount)
+}
+
+# jointent2str("A","C")
+# jointent2str(c("A","A","B","B"),c("A","A","B","B"))
+# jointent2str(c("A","A","B","B"),c("A","B","A","B"))
+
+ent1pos_vect <- function(pos,xstrings,pseudocount=0) {
+    str_sub(xstrings,start=pos,end=pos) %>%
+        entropy1d(pseudocount = pseudocount)
+}
+
+ent1pos <- function(pos,xstrings,pseudocount=0) {
+    map_dbl(pos,ent1pos_vect,
+             xstrings=xstrings,pseudocount=pseudocount)
+}
+
+jointent2pos_vect <- function(pos1,pos2,xstrings,pseudocount=0) {
+    xstr1 <- str_sub(xstrings,start=pos1,end=pos1)
+    xstr2 <- str_sub(xstrings,start=pos2,end=pos2)
+    jointent2str(xstr1,xstr2,pseudocount = pseudocount)
+}
+
+jointent2pos <- function(pos1,pos2,xstrings,pseudocount=0) {
+    map2_dbl(pos1,pos2,jointent2pos_vect,
+             xstrings=xstrings,pseudocount=pseudocount)
+}
+
+mutinfostr <- function(xstrings) {
+    # Calculate joint entropy and mutual information
+    # between every pair of positions in same-length strings
+    nnchars <- xstrings %>%
+        nchar %>%
+        unique %>%
+        length
+    stopifnot(nnchars==1) # check strings are same length
+    
+    nc <- xstrings[1] %>% nchar
+    
+    singleent <- data.frame(pos=1:nc) %>%
+        mutate(Hent=ent1pos(pos,xstrings))
+    
+    crossing(pos1=1:nc,pos2=1:nc) %>%
+        mutate(Hjoint = jointent2pos(pos1,pos2,xstrings=xstrings) ) %>%
+        left_join( singleent %>% select(pos1=pos,H1=Hent)) %>%
+        left_join( singleent %>% select(pos2=pos,H2=Hent)) %>%
+        mutate(MI = H1 + H2 - Hjoint)
+}
+
+# mutinfostr(c("AA","BB"))
+# mutinfostr(c("AA","AB","BA","BB"))
+
+plot_mutinfo <- function(MIpos,
+                         posbreaks=c(1,10,13:15,24),
+                         poslabels=c("-12","-3","A","T","G","+12"),
+                         MIlimits=c(0,2),
+                         MIcolours=c("white","blue","darkblue"),
+                         MIvalues=c(0,0.125,1)) {
+    ggplot(data=MIpos,aes(x=pos1,y=pos2,fill=MI)) +
+        geom_tile() +
+        scale_y_reverse(breaks=posbreaks,labels=poslabels,expand=c(0,0)) +
+        scale_x_continuous(breaks=posbreaks,labels=poslabels,expand=c(0,0)) + 
+        scale_fill_gradientn(limits=MIlimits,colours=MIcolours,values=MIvalues) +
+        coord_equal() + 
+        theme(axis.line=element_blank(),axis.title=element_blank())
+}

@@ -1265,7 +1265,7 @@ ctbl_big_H99
 
 ### Annotated ATGs have a Kozak consensus sequence
 
-```{r aATG_context_H99,fig.width=4,fig.height=1}
+```{r aATG_context_H99,dependson="load_context_H99",fig.width=4,fig.height=1}
 ggseqlogo(data=ctbl_big_H99$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
@@ -1275,7 +1275,7 @@ ggseqlogo(data=ctbl_big_H99$aATG.context,
 
 That's for hiTrans_H99, the top 5% (330) translated genes by RPF TPM.
 
-```{r a_hi_context_H99,fig.width=4,fig.height=1}
+```{r a_hi_context_H99,dependson=c("load_context_H99","load_riboviz_H99"),fig.width=4,fig.height=1}
 ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
@@ -1340,7 +1340,7 @@ ggseqlogo(data=filter(ctbl_big_H99,
 
 Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
-```{r kozak_consensus_H99,fig.width=4,fig.height=1}
+```{r kozak_consensus_H99,dependson=c("load_context_H99","load_riboviz_H99"),fig.width=4,fig.height=1}
 kozak_w_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
     .$aATG.context %>%
     str_sub(start=4L,end=18L) %>%
@@ -1543,6 +1543,95 @@ ggplot(data=scores_H99) +
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
 ```
+
+## Mutual information of different positions around ATG
+
+### For all annotated genes
+
+```{r mutinf_H99,dependson=c("load_context_H99","load_riboviz_H99"),results="show",fig.height=4,fig.width=5}
+mutinf_H99 <- mutinfostr(ctbl_big_H99$aATG.context)
+# mutinf_H99
+
+plot_mutinfo(mutinf_H99)
+```
+
+### For highly translated genes
+
+```{r mutinf_hiTrans_H99,dependson=c("load_context_H99","load_riboviz_H99"),results="show",fig.height=4,fig.width=5}
+ctbl_big_H99 %>%
+    filter(Gene %in% hiTrans_H99) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+```
+
+
+### For cytoplasmic ribosomal proteins
+
+```{r mutinf_cytoribo_H99,dependson=c("load_context_H99","load_riboviz_H99"),results="show",fig.height=4,fig.width=5}
+ctbl_big_H99 %>%
+    filter(Gene %in% cytoribolist_H99) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+
+```
+
+This illustrates that the MI between pairs of nts is generally weak. Except for the nts sharing a codon in the +4 to +12 positions. And secondarily at the -6 to -4 positions.
+
+### What is the -5 correlation in hiTrans genes?
+
+```{r hiTrans_contextm5_H99,dependson="load_context_H99",fig.width=4,fig.height=3}
+
+seqlogoFilterGenePos <- function(datain=ctbl_big_H99,Genelist=hiTrans_H99,
+                                 pos=8L, nt="T") {
+    datafiltered <- filter(datain,
+                          Gene %in% Genelist,
+                          str_sub(aATG.context,start=pos,end=pos)==nt
+    )
+    ggseqlogo(data=datafiltered$aATG.context,
+    namespace="TCAG") + 
+        theme_nothing() +
+        annotate(geom="text",x=21,y=1.3,
+                 label=paste0("n = ", nrow(datafiltered)))
+}
+
+plot_grid(seqlogoFilterGenePos(Genelist=hiTrans_H99,pos=8L,nt="T"),
+          seqlogoFilterGenePos(Genelist=hiTrans_H99,pos=8L,nt="C"),
+          seqlogoFilterGenePos(Genelist=hiTrans_H99,pos=8L,nt="A"),
+          seqlogoFilterGenePos(Genelist=hiTrans_H99,pos=8L,nt="G"),
+    ncol=1
+)
+    
+```
+
+### What is the -5 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm5_H99,dependson="hiTrans_contextm5_H99",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=8L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=8L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=8L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=8L,nt="G"),
+    ncol=1
+)
+    
+```
+
+So there is a strong tendency to have a C at -5 if there is a T at -6.
+
+### What about the -4 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm4_H99,dependson="hiTrans_contextm5_H99",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=9L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=9L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=9L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_H99,pos=9L,nt="G"),
+    ncol=1
+)
+    
+```
+
+This is uninteresting because the counts are so low with no -4A. The -3A is even worse.
 
 ## Compare aATG and dATG context by gene
 
