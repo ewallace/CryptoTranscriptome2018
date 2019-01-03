@@ -506,6 +506,135 @@ ggplot(data=scores_JEC21) +
           legend.title=element_blank())
 ```
 
+## Mutual information of different positions around ATG
+
+### For all annotated genes
+
+```{r mutinf_JEC21,dependson=c("load_context_JEC21","load_riboviz_JEC21"),results="show",fig.height=4,fig.width=5}
+mutinf_JEC21 <- mutinfostr(ctbl_big_JEC21$aATG.context)
+# mutinf_JEC21
+
+plot_mutinfo(mutinf_JEC21)
+```
+
+### For highly translated genes
+
+```{r mutinf_hiTrans_JEC21,dependson=c("load_context_JEC21","load_riboviz_JEC21"),results="show",fig.height=4,fig.width=5}
+ctbl_big_JEC21 %>%
+    filter(Gene %in% hiTrans_JEC21) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+```
+
+
+### For cytoplasmic ribosomal proteins
+
+```{r mutinf_cytoribo_JEC21,dependson=c("load_context_JEC21","load_riboviz_JEC21"),results="show",fig.height=4,fig.width=5}
+ctbl_big_JEC21 %>%
+    filter(Gene %in% cytoribolist_JEC21) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+
+```
+
+This illustrates that the MI between pairs of nts is generally weak. Except for the nts sharing a codon in the +4 to +12 positions. And secondarily at the -6 to -4 positions.
+
+### What is the -5 correlation in hiTrans genes?
+
+```{r hiTrans_contextm5_JEC21,dependson="load_context_JEC21",fig.width=4,fig.height=3}
+
+seqlogoFilterGenePos <- function(datain=ctbl_big_JEC21,Genelist=hiTrans_JEC21,
+                                 pos=8L, nt="T") {
+    datafiltered <- filter(datain,
+                          Gene %in% Genelist,
+                          str_sub(aATG.context,start=pos,end=pos)==nt
+    )
+    ggseqlogo(data=datafiltered$aATG.context,
+    namespace="TCAG") + 
+        theme_nothing() +
+        annotate(geom="text",x=21,y=1,
+                 label=paste0("n = ", nrow(datafiltered)))
+}
+
+plot_grid(seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=8L,nt="T"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=8L,nt="C"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=8L,nt="A"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=8L,nt="G"),
+    ncol=1
+)
+    
+```
+
+### What is the -5 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm5_JEC21,dependson="hiTrans_contextm5_JEC21",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=8L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=8L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=8L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=8L,nt="G"),
+    ncol=1
+)
+    
+```
+
+So there is a strong tendency to have a C at -5 if there is a T at -6.
+
+### What about the -4 correlation in hiTrans genes?
+
+```{r hitrans_contextm4_JEC21,dependson="hiTrans_contextm5_JEC21",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=9L,nt="T"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=9L,nt="C"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=9L,nt="A"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=9L,nt="G"),
+    ncol=1
+)
+    
+```
+
+### What about the -4 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm4_JEC21,dependson="hiTrans_contextm5_JEC21",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=9L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=9L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=9L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=9L,nt="G"),
+    ncol=1
+)
+    
+```
+
+This is very interesting: essentially everything with a -4A has a -2A and -1A, but a -4C is more relaxed.
+
+
+### What about the -1 correlation in hiTrans genes?
+
+```{r hitrans_contextm1_JEC21,dependson="hiTrans_contextm5_JEC21",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=12L,nt="T"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=12L,nt="C"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=12L,nt="A"),
+          seqlogoFilterGenePos(Genelist=hiTrans_JEC21,pos=12L,nt="G"),
+    ncol=1
+)
+    
+```
+
+### What about the -1 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm1_JEC21,dependson="hiTrans_contextm5_JEC21",fig.width=4,fig.height=3}
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=12L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=12L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=12L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_JEC21,pos=12L,nt="G"),
+    ncol=1
+)
+    
+```
+
+This looks interesting and needs a better way of summarizing.
+
+
 ## Compare aATG and dATG context by gene
 
 ### Most dATG scores are less than aATG scores
