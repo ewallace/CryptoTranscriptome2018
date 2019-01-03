@@ -227,6 +227,34 @@ inf_content_narrow
 Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Sc[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Sc[,-(10:12)]) %>% round(2)`.
 
 
+### Estimate information content per base across start context
+
+
+```{r kozak_inf_perbase_Sc,dependson=c("kozak_consensus_Sc","cytoribo_context_Sc"),fig.width=6,fig.height=1.4,results="show"}
+inf_content_perbase_Sc <- 
+    tibble(i = 1:24, 
+           Pos = c(-12:-1, 1:12),
+        All = ctbl_big_Sc %>%
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        HiTrans = ctbl_big_Sc %>%
+            filter(Gene %in% hiTrans_Sc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        CytoRibo = ctbl_big_Sc %>%
+            filter(Gene %in% cytoribolist_Sc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all")
+    )
+
+write_tsv(inf_content_perbase_Sc %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_perbase_Sc.txt")
+# inf_content_perbase
+
+plot_inf_perbase(inf_content_perbase_Sc)
+```
+
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
 ```{r calc_scores_Sc, dependson="kozak_consensus_Sc"}
@@ -303,6 +331,70 @@ ggplot(data=scores_Sc) +
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
 ```
+
+
+## Mutual information of different positions around ATG
+
+### For all annotated genes
+
+```{r mutinf_Sc,dependson=c("load_context_Sc","load_riboviz_Sc"),results="show",fig.height=4,fig.width=5}
+mutinf_Sc <- mutinfostr(ctbl_big_Sc$aATG.context)
+# mutinf_Sc
+
+plot_mutinfo(mutinf_Sc)
+```
+
+### For highly translated genes
+
+```{r mutinf_hiTrans_Sc,dependson=c("load_context_Sc","load_riboviz_Sc"),results="show",fig.height=4,fig.width=5}
+ctbl_big_Sc %>%
+    filter(Gene %in% hiTrans_Sc) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+```
+
+
+### For cytoplasmic ribosomal proteins
+
+```{r mutinf_cytoribo_Sc,dependson=c("load_context_Sc","load_riboviz_Sc"),results="show",fig.height=4,fig.width=5}
+ctbl_big_Sc %>%
+    filter(Gene %in% cytoribolist_Sc) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+
+```
+
+
+### What is the -2 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm2_Sc,dependson="load_context_Sc",fig.width=4,fig.height=3}
+
+seqlogoFilterGenePos <- function(datain=ctbl_big_Sc,Genelist=hiTrans_Sc,
+                                 pos=8L, nt="T") {
+    datafiltered <- filter(datain,
+                          Gene %in% Genelist,
+                          str_sub(aATG.context,start=pos,end=pos)==nt
+    )
+    ggseqlogo(data=datafiltered$aATG.context,
+    namespace="TCAG") + 
+        theme_nothing() +
+        annotate(geom="text",x=21,y=1,
+                 label=paste0("n = ", nrow(datafiltered)))
+}
+
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_Sc,pos=11L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Sc,pos=11L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Sc,pos=11L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Sc,pos=11L,nt="G"),
+    ncol=1
+)
+    
+```
+
+There are definitely correlations there.
+
 
 ## Compare aATG and dATG context by gene
 

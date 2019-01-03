@@ -27,15 +27,15 @@ source("../SharedScripts/sharedScripts.R")
 
 ### Load data
 
-```{r load_data}
+```{r load_infon}
 
-infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+# infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
 
 infon_tbl <- bind_rows(
     read_tsv("data_out/inf_content_narrow_Sc.txt") %>% 
         mutate(Organism="Sc"),
     read_tsv("data_out/inf_content_narrow_Ca.txt") %>% 
-        mutate(Organism="Ca"), infon_Ca_zero,
+        mutate(Organism="Ca"),
     read_tsv("data_out/inf_content_narrow_Nc.txt") %>% 
         mutate(Organism="Nc"),
     read_tsv("data_out/inf_content_narrow_Sp.txt") %>% 
@@ -52,6 +52,8 @@ infon_tbl <- bind_rows(
 infon_tbl
 ```
 
+### Inf content narrow by organism and gene list
+
 ```{r inf_content,fig.height=3,fig.width=4}
 ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
        aes(x=Organism,y=Infon,fill=Genes)) +
@@ -64,7 +66,9 @@ ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
     
 ```
 
-```{r inf_content_by,fig.height=3,fig.width=4}
+### Inf content narrow by gene list and organism
+
+```{r inf_content_bygenes,fig.height=3,fig.width=4}
 ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
        aes(x=Genes,y=Infon,fill=Organism)) +
     geom_col(position="dodge") +
@@ -75,3 +79,47 @@ ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
     
 ```
 
+### Inf content per base
+
+
+```{r load_info_perbase}
+
+# infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+
+infon_perbase <- bind_rows(
+    read_tsv("data_out/inf_content_perbase_Sc.txt") %>% 
+        mutate(Organism="Sc"),
+    read_tsv("data_out/inf_content_perbase_Ca.txt") %>% 
+        mutate(Organism="Ca"),
+    read_tsv("data_out/inf_content_perbase_Nc.txt") %>% 
+        mutate(Organism="Nc"),
+    read_tsv("data_out/inf_content_perbase_Sp.txt") %>% 
+        mutate(Organism="Sp"),
+    read_tsv("../ATGContext/data_out/inf_content_perbase_H99.txt") %>% 
+        mutate(Organism="Cn"),
+    read_tsv("../ATGContext/data_out/inf_content_perbase_JEC21.txt") %>% 
+        mutate(Organism="Cd")
+) %>%
+    mutate(Organism=factor(Organism,levels=rev(c("Cn","Cd","Nc","Sp","Ca","Sc")))
+    )
+
+infon_perbase
+```
+
+
+```{r plot_inf_perbase,fig.height=4,fig.width=4}
+posbreaks <- c(1,10,13:15,24)
+poslabels <- c("-12","-3","A","T","G","+12")
+inf_limits <- c(0,2)
+
+ggplot(data=infon_perbase %>%
+           gather(key = "Genes",value="Infon",-i,-Pos,-Organism) %>%
+           mutate(Genes=factor(Genes, levels=c("All","HiTrans","CytoRibo")) ),
+       aes(x=i,y=Organism,fill=Infon) ) +
+    geom_tile() + 
+    scale_fill_gradient(low="white",high="darkblue",limits=inf_limits) + 
+    scale_x_continuous(breaks=posbreaks,labels=poslabels,expand=c(0,0)) + 
+    scale_y_discrete(expand=c(0,0)) + 
+    facet_wrap(~Genes,ncol=1,scales="free") + 
+    theme(axis.title=element_blank())
+```

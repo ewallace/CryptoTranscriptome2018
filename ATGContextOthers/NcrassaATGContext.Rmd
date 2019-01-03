@@ -263,6 +263,34 @@ inf_content_narrow
 
 Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Nc[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Nc[,-(10:12)]) %>% round(2)`.
 
+
+### Estimate information content per base across start context
+
+```{r kozak_inf_perbase_Nc,dependson=c("kozak_consensus_Nc","cytoribo_context_Nc"),fig.width=6,fig.height=1.4,results="show"}
+inf_content_perbase_Nc <- 
+    tibble(i = 1:24, 
+           Pos = c(-12:-1, 1:12),
+        All = ctbl_big_Nc %>%
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        HiTrans = ctbl_big_Nc %>%
+            filter(Gene %in% hiTrans_Nc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        CytoRibo = ctbl_big_Nc %>%
+            filter(Gene %in% cytoribolist_Nc) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all")
+    )
+
+write_tsv(inf_content_perbase_Nc %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_perbase_Nc.txt")
+# inf_content_perbase
+
+plot_inf_perbase(inf_content_perbase_Nc)
+```
+
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
 ```{r calc_scores_Nc, dependson="kozak_consensus_Nc"}
@@ -340,6 +368,100 @@ ggplot(data=scores_Nc) +
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
 ```
+
+
+## Mutual information of different positions around ATG
+
+### For all annotated genes
+
+```{r mutinf_Nc,dependson=c("load_context_Nc","load_riboviz_Nc"),results="show",fig.height=4,fig.width=5}
+mutinf_Nc <- mutinfostr(ctbl_big_Nc$aATG.context)
+# mutinf_Nc
+
+plot_mutinfo(mutinf_Nc)
+```
+
+### For highly translated genes
+
+```{r mutinf_hiTrans_Nc,dependson=c("load_context_Nc","load_riboviz_Nc"),results="show",fig.height=4,fig.width=5}
+ctbl_big_Nc %>%
+    filter(Gene %in% hiTrans_Nc) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+```
+
+
+### For cytoplasmic ribosomal proteins, strong correlation between adjacent bases
+
+This suggests the idea that an upstream CCG motif (see the logo) compensates for A's in the classic Kozak positions closer to the ATG.
+
+```{r mutinf_cytoribo_Nc,dependson=c("load_context_Nc","load_riboviz_Nc"),results="show",fig.height=4,fig.width=5}
+ctbl_big_Nc %>%
+    filter(Gene %in% cytoribolist_Nc) %>%
+    .$aATG.context %>%
+    mutinfostr %>%
+    plot_mutinfo
+
+```
+
+
+### What is the -2 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm2_Nc,dependson="load_context_Nc",fig.width=4,fig.height=3}
+
+seqlogoFilterGenePos <- function(datain=ctbl_big_Nc,Genelist=hiTrans_Nc,
+                                 pos=8L, nt="T") {
+    datafiltered <- filter(datain,
+                          Gene %in% Genelist,
+                          str_sub(aATG.context,start=pos,end=pos)==nt
+    )
+    ggseqlogo(data=datafiltered$aATG.context,
+    namespace="TCAG") + 
+        theme_nothing() +
+        annotate(geom="text",x=21,y=1,
+                 label=paste0("n = ", nrow(datafiltered)))
+}
+
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=11L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=11L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=11L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=11L,nt="G"),
+    ncol=1
+)
+    
+```
+
+There are definitely correlations there.
+
+
+### What is the -4 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm4_Nc,dependson="load_context_Nc",fig.width=4,fig.height=3}
+
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=9L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=9L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=9L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=9L,nt="G"),
+    ncol=1
+)
+    
+```
+
+
+### What is the -8 correlation in cyto ribo genes?
+
+```{r cytoribo_contextm8_Nc,dependson="load_context_Nc",fig.width=4,fig.height=3}
+
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=5L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=5L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=5L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist_Nc,pos=5L,nt="G"),
+    ncol=1
+)
+    
+```
+
 
 ## Compare aATG and dATG context by gene
 
