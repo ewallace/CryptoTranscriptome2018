@@ -231,7 +231,9 @@ kozak_w_PFM_JEC21 %>%
 
 ### Estimate the information content 
 
-Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
+Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo.
+
+This is equal to the total height of the letters in the sequence logo summed across multiple positions.
 
 ```{r kozak_inf_JEC21,dependson=c("kozak_consensus_JEC21","cytoribo_context_JEC21"),fig.width=4,fig.height=1,results="show"}
 inf_content_narrow <- 
@@ -278,7 +280,9 @@ inf_content_narrow
 
 Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_JEC21[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
 
-### Estimate information content per base across all letters
+### Estimate information content per base across start context
+
+This is equal to the total height of the letters in the sequence logo at each position. It could be useful in comparing the total information without getting overly distracted by the actual letters.
 
 ```{r kozak_inf_perbase_JEC21,dependson=c("kozak_consensus_JEC21","cytoribo_context_JEC21"),fig.width=6,fig.height=1.4,results="show"}
 inf_content_perbase_JEC21 <- 
@@ -302,8 +306,7 @@ write_tsv(inf_content_perbase_JEC21 %>%
           "data_out/inf_content_perbase_JEC21.txt")
 # inf_content_perbase
 
-plotheat_inf_perbase(inf_content_perbase_JEC21)
-
+plot_inf_perbase(inf_content_perbase_JEC21)
 ```
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
@@ -1573,7 +1576,7 @@ inf_content_narrow
 
 Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_H99[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
 
-### Estimate information content per base across all letters
+### Estimate information content per base across start context
 
 ```{r kozak_inf_perbase_H99,dependson=c("kozak_consensus_H99","cytoribo_context_H99"),fig.width=6,fig.height=1.4,results="show"}
 inf_content_perbase_H99 <- 
@@ -1597,8 +1600,7 @@ write_tsv(inf_content_perbase_H99 %>%
           "data_out/inf_content_perbase_H99.txt")
 # inf_content_perbase
 
-plotheat_inf_perbase(inf_content_perbase_H99)
-
+plot_inf_perbase(inf_content_perbase_H99)
 ```
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus

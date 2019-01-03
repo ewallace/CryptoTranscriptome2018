@@ -258,15 +258,23 @@ infonfromseqs <- function(seqs,sstart=1L,send=-1L,ssize=4,pseudocount=0.5,
     }
 }
 
-plotheat_inf_perbase <- function(inf_perbase,
+plot_inf_perbase <- function(inf_perbase,
                                          Keylevels=c("All","HiTrans","CytoRibo"),
+                                 posbreaks=c(1,10,13:15,24),
+                                 poslabels=c("-12","-3","A","T","G","+12"),
                                  inf_limits=c(0,2)) {
+    ## This plots the sum height of the letters in the sequence logo at each position.
+    ## It could be useful in comparing the sequence biases between consensuses
+    ## without getting overly distracted by the actual letters.
+    
     ggplot(data=inf_perbase %>% 
                gather(key=Key,value="Infon",-i,-Pos) %>%
                mutate(Key=factor(Key, levels=Keylevels )),
            aes(x=i,y=Key,fill=Infon) ) +
         geom_tile() + 
         scale_fill_gradient(low="white",high="darkblue",limits=inf_limits) + 
+        scale_x_continuous(breaks=posbreaks,labels=poslabels,expand=c(0,0)) + 
+        scale_y_discrete(expand=c(0,0)) + 
         theme(axis.title=element_blank())
 }
 
