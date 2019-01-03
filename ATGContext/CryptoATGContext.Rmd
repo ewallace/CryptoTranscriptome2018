@@ -278,6 +278,34 @@ inf_content_narrow
 
 Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_JEC21[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
 
+### Estimate information content per base across all letters
+
+```{r kozak_inf_perbase_JEC21,dependson=c("kozak_consensus_JEC21","cytoribo_context_JEC21"),fig.width=6,fig.height=1.4,results="show"}
+inf_content_perbase_JEC21 <- 
+    tibble(i = 1:24, 
+           Pos = c(-12:-1, 1:12),
+        All = ctbl_big_JEC21 %>%
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        HiTrans = ctbl_big_JEC21 %>%
+            filter(Gene %in% hiTrans_JEC21) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        CytoRibo = ctbl_big_JEC21 %>%
+            filter(Gene %in% cytoribolist_JEC21) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all")
+    )
+
+write_tsv(inf_content_perbase_JEC21 %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_perbase_JEC21.txt")
+# inf_content_perbase
+
+plotheat_inf_perbase(inf_content_perbase_JEC21)
+
+```
+
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
 ```{r calc_scores_JEC21, dependson="kozak_consensus_JEC21"}
@@ -1415,6 +1443,34 @@ inf_content_narrow
 ```
 
 Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_H99[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
+
+### Estimate information content per base across all letters
+
+```{r kozak_inf_perbase_H99,dependson=c("kozak_consensus_H99","cytoribo_context_H99"),fig.width=6,fig.height=1.4,results="show"}
+inf_content_perbase_H99 <- 
+    tibble(i = 1:24, 
+           Pos = c(-12:-1, 1:12),
+        All = ctbl_big_H99 %>%
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        HiTrans = ctbl_big_H99 %>%
+            filter(Gene %in% hiTrans_H99) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all"),
+        CytoRibo = ctbl_big_H99 %>%
+            filter(Gene %in% cytoribolist_H99) %>% 
+            .$aATG.context %>%
+            infonfromseqs(scope="all")
+    )
+
+write_tsv(inf_content_perbase_H99 %>%
+              mutate_if(is.numeric,round3),
+          "data_out/inf_content_perbase_H99.txt")
+# inf_content_perbase
+
+plotheat_inf_perbase(inf_content_perbase_H99)
+
+```
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
