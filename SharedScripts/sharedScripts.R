@@ -239,14 +239,36 @@ infontot <- function(pfm,ssize=4,pseudocount=0.5) {
     apply(pfm,2,infon1) %>% sum()
 }
 
-infonfromseqs <- function(seqs,sstart=1L,send=-1L,ssize=4,pseudocount=0.5) {
-    seqs %>% 
+infonfromseqs <- function(seqs,sstart=1L,send=-1L,ssize=4,pseudocount=0.5,
+                          scope=c("tot","all")) {
+    Cmat <- seqs %>% 
     str_sub(start=sstart,end=send) %>%
     str_to_upper %>%
-    consensusMatrix %>%
-    infontot(ssize=ssize,pseudocount=pseudocount)
+    consensusMatrix
+    if (scope == "tot") {
+        Cmat %>%
+            infontot(ssize=ssize,pseudocount=pseudocount) %>%
+            return()
+    } else     if (scope == "all") {
+        Cmat %>%
+            infonall(ssize=ssize,pseudocount=pseudocount) %>%
+            return()
+    } else {
+        warning("invalid scope option to infonfromseqs")
+    }
 }
 
+plotheat_inf_perbase <- function(inf_perbase,
+                                         Keylevels=c("All","HiTrans","CytoRibo"),
+                                 inf_limits=c(0,2)) {
+    ggplot(data=inf_perbase %>% 
+               gather(key=Key,value="Infon",-i,-Pos) %>%
+               mutate(Key=factor(Key, levels=Keylevels )),
+           aes(x=i,y=Key,fill=Infon) ) +
+        geom_tile() + 
+        scale_fill_gradient(low="white",high="darkblue",limits=inf_limits) + 
+        theme(axis.title=element_blank())
+}
 
 PWMscore <- function(seqs,pwm,startl) {
     # calculate scores for a character vector seqs against

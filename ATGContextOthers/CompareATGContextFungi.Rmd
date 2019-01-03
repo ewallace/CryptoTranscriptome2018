@@ -64,3 +64,14 @@ ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
     
 ```
 
+```{r inf_content_by,fig.height=3,fig.width=4}
+ggplot(data = infon_tbl %>% filter(ATG=="aATG"),
+       aes(x=Genes,y=Infon,fill=Organism)) +
+    geom_col(position="dodge") +
+    scale_fill_brewer(type = "qual",palette=2) +
+    scale_y_continuous("Information content\n-5:aATG (bits)",
+                       expand=c(0,0)) +
+    theme(panel.grid.major.y=element_line(colour="grey90"))
+    
+```
+
