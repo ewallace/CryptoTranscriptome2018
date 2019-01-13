@@ -313,42 +313,17 @@ plot_inf_perbase(inf_content_perbase_JEC21)
 
 ```{r calc_scores_JEC21, dependson="kozak_consensus_JEC21"}
 
-PWMscore <- function(seqs,pwm,startl) {
-    # calculate scores for a character vector seqs against
-    # pwm from given starting position
-    # after checking strings are non-missing and start with ACTG
-    vapply(str_sub(seqs,start=startl),
-           function(ss) {
-               if ( is.na(ss) ) {
-                   return(NA)
-               } else if ( str_detect(ss,"\\A[ACTG]") ) {
-                   return( PWMscoreStartingAt(pwm,ss) )
-               } else {
-                   return(NA) 
-               } 
-           } ,
-           FUN.VALUE = 0)
-}
-
-PWMscoren <- function(seqs,pwm=kozak_n_PWM_JEC21,startl=8) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-PWMscorew <- function(seqs,pwm=kozak_w_PWM_JEC21,startl=4) {
-    PWMscore(seqs,pwm,startl) 
-}
-
 scores_JEC21 <- 
     ctbl_big_JEC21 %>%
     transmute(Gene,
-              aATG.scorekn = PWMscoren(aATG.context),
-              d1.scorekn   = PWMscoren(d1.context),
-              d2.scorekn   = PWMscoren(d2.context),
-              u1.scorekn   = PWMscoren(u1.context),
-              aATG.scorekw = PWMscorew(aATG.context),
-              d1.scorekw   = PWMscorew(d1.context),
-              d2.scorekw   = PWMscorew(d2.context),
-              u1.scorekw   = PWMscorew(u1.context)
+              aATG.scorekn = PWMscoren(aATG.context,kozak_n_PWM_JEC21),
+              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_JEC21),
+              d2.scorekn   = PWMscoren(d2.context,kozak_n_PWM_JEC21),
+              u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_JEC21),
+              aATG.scorekw = PWMscorew(aATG.context,kozak_w_PWM_JEC21),
+              d1.scorekw   = PWMscorew(d1.context,kozak_w_PWM_JEC21),
+              d2.scorekw   = PWMscorew(d2.context,kozak_w_PWM_JEC21),
+              u1.scorekw   = PWMscorew(u1.context,kozak_w_PWM_JEC21)
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
            u1vsan = u1.scorekn - aATG.scorekn,
@@ -1607,40 +1582,15 @@ plot_inf_perbase(inf_content_perbase_H99)
 
 ```{r calc_scores_H99, dependson="kozak_consensus_H99"}
 
-PWMscore <- function(seqs,pwm,startl) {
-    # calculate scores for a character vector seqs against
-    # pwm from given starting position
-    # after checking strings are non-missing and start with ACTG
-    vapply(str_sub(seqs,start=startl),
-           function(ss) {
-               if ( is.na(ss) ) {
-                   return(NA)
-               } else if ( str_detect(ss,"\\A[ACTG]") ) {
-                   return( PWMscoreStartingAt(pwm,ss) )
-               } else {
-                   return(NA) 
-               } 
-           } ,
-           FUN.VALUE = 0)
-}
-
-PWMscoren <- function(seqs,pwm=kozak_n_PWM_H99,startl=8) {
-    PWMscore(seqs,pwm,startl) 
-}
-
-PWMscorew <- function(seqs,pwm=kozak_w_PWM_H99,startl=4) {
-    PWMscore(seqs,pwm,startl) 
-}
-
 scores_H99 <- 
     ctbl_big_H99 %>%
     transmute(Gene,
-              aATG.scorekn = PWMscoren(aATG.context),
-              d1.scorekn   = PWMscoren(d1.context),
-              u1.scorekn   = PWMscoren(u1.context),
-              aATG.scorekw = PWMscorew(aATG.context),
-              d1.scorekw   = PWMscorew(d1.context),
-              u1.scorekw   = PWMscorew(u1.context)
+              aATG.scorekn = PWMscoren(aATG.context,kozak_n_PWM_H99),
+              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_H99),
+              u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_H99),
+              aATG.scorekw = PWMscorew(aATG.context,kozak_w_PWM_H99),
+              d1.scorekw   = PWMscorew(d1.context,kozak_w_PWM_H99),
+              u1.scorekw   = PWMscorew(u1.context,kozak_w_PWM_H99)
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
            u1vsan = u1.scorekn - aATG.scorekn,
