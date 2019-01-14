@@ -205,11 +205,16 @@ Calculate motif score against the position weight matrix (pwm) for both **narrow
 ```{r kozak_consensus_JEC21,fig.width=4,fig.height=1}
 kozak_w_PFM_JEC21 <- filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21) %>%
     .$aATG.context %>%
-    str_sub(start=4L,end=18L) %>%
+    str_sub(start=3L,end=15L) %>%
     consensusMatrix() 
 
 kozak_w_PWM_JEC21 <- PWM(kozak_w_PFM_JEC21)
-kozak_n_PWM_JEC21 <- kozak_w_PFM_JEC21[,5:12] %>% PWM()
+
+kozak_n_PFM_JEC21 <- filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21) %>%
+    .$aATG.context %>%
+    str_sub(start=9L,end=15L) %>%
+    consensusMatrix() 
+kozak_n_PWM_JEC21 <- PWM(kozak_n_PFM_JEC21)
 ```
 
 
@@ -217,7 +222,7 @@ kozak_n_PWM_JEC21 <- kozak_w_PFM_JEC21[,5:12] %>% PWM()
 cat(
     "# PFM_hiTrans_JEC21.txt
 # Position Frequency Matrix for aATGs of 330 highest-translated genes from JEC21
-# This is of the wide ATG context NNNNNNNNNATGNNN
+# This is of the entire ATG context NNNNNNNNNNNNATGNNNNNNNNN
 # Column is position, Row is nt count in order: ACGT.
 #
 # Edward Wallace, June 2018
@@ -242,34 +247,34 @@ inf_content_narrow <-
         "All", "aATG", "narrow", 
         ctbl_big_JEC21 %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "aATG", "narrow", 
         ctbl_big_JEC21 %>%
             filter(Gene %in% hiTrans_JEC21) %>% 
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "CytoRibo", "aATG", "narrow", 
         ctbl_big_JEC21 %>%
             filter(Gene %in% cytoribolist_JEC21) %>% 
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "All", "d1ATG", "narrow", 
         ctbl_big_JEC21 %>%
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "d1ATG", "narrow", 
         ctbl_big_JEC21 %>%
             filter(Gene %in% hiTrans_JEC21) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "CytoRibo", "d1ATG", "narrow", 
         ctbl_big_JEC21 %>%
             filter(Gene %in% cytoribolist_JEC21) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L)
+            infonfromseqs(sstart=9L,send=12L)
     )
 
 write_tsv(inf_content_narrow %>%
@@ -278,7 +283,7 @@ write_tsv(inf_content_narrow %>%
 inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_JEC21[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_n_PFM_JEC21[,-(5:7)]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
 
 ### Estimate information content per base across start context
 
@@ -355,10 +360,10 @@ cat(
 # Kozak sequence derived from 330 highest-translated genes by RPF
 #
 # Gene: JEC21 systematic gene name
-# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNATG)
 # d1.scorekn: score of 1st downstream ATG agains narrow
 # u1.scorekn: score of 1st upstream ATG in 5' UTR against narrow
-# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNNATG)
 #
 # Edward Wallace, June 2018
 ",
@@ -389,7 +394,7 @@ ggplot(data=scores_JEC21) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, JEC21") +
+    labs(x="ATG narrow score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -418,7 +423,7 @@ ggplot(data=scores_JEC21) +
                                  #"uATG"="red",
                                  "dATG1"="green3",
                                  "dATG2"="green4") ) +
-    labs(x="ATG Kozak score, JEC21") +
+    labs(x="ATG narrow score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -436,7 +441,7 @@ ggplot(data=ctbl_big_JEC21 %>%
            left_join(scores_JEC21) ) +
     geom_density(aes(x=d1.scorekn,colour=d1.frame),
                  kernel="rectangular",bw=sbandwidthn) +
-    labs(x="d1ATG Kozak score, JEC21") +
+    labs(x="d1ATG narrow score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
@@ -454,7 +459,7 @@ ggplot(data=ctbl_big_JEC21 %>%
     geom_density(aes(x=d1.scorekn,colour=d1.frame),
                  kernel="rectangular",bw=sbandwidthn) +
     facet_wrap(~enoughRNA,ncol=1) + 
-    labs(x="d1ATG Kozak score, JEC21") +
+    labs(x="d1ATG narrow score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
@@ -479,7 +484,7 @@ ggplot(data=scores_JEC21) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score (wide), JEC21") +
+    labs(x="ATG wide score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -506,7 +511,7 @@ ggplot(data=scores_JEC21) +
                                  #"uATG"="red",
                                  "dATG1"="green3",
                                  "dATG2"="green4") ) +
-    labs(x="ATG Kozak score (wide), JEC21") +
+    labs(x="ATG wide score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -870,7 +875,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
-    labs(x="Kozak score, difference dATG - aATG",
+    labs(x="narrow score, difference dATG - aATG",
          y="Ribosome occupancy, ratio dATG / aATG") +
     facet_grid(Type ~ Sample) +
     panel_border()
@@ -895,7 +900,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,50),
                   oob=scales::squish) + 
-    labs(x="Kozak score,\ndifference dATG - aATG",
+    labs(x="Kozak narrow score,\ndifference dATG - aATG",
          y="Ribosome occupancy, ratio dATG / aATG") +
     facet_grid(Type ~ .) +
     panel_border()
@@ -977,7 +982,7 @@ ggplot(data=scores_JEC21 %>%
     geom_density(kernel="rectangular",bw=0.025) +
     scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_JEC21)  + 
-    labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
+    labs(x="narrow score, difference dATG - aATG", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
@@ -1075,7 +1080,7 @@ ggplot(data=scores_JEC21 %>%
                                  "dATG2"="green4") ) +
     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
                           labels=mitobreaks_JEC21)  + 
-    labs(x="ATG Kozak score, JEC21") +
+    labs(x="ATG narrow score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -1106,7 +1111,7 @@ melt_mito_scores_JEC21 <-
 #                                  "dATG2"="green4") ) +
 #     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
 #                           labels=mitobreaks_JEC21)  + 
-#     labs(x="ATG Kozak score, JEC21") +
+#     labs(x="ATG narrow score, JEC21") +
 #     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
 #           axis.text.y=element_blank(),axis.title.y=element_blank(),
 #           legend.title=element_blank())
@@ -1121,7 +1126,7 @@ ggplot(data=melt_mito_scores_JEC21,
                                  "dATG2"="green4") ) +
     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
                           labels=mitobreaks_JEC21)  + 
-    labs(x="ATG Kozak score, JEC21") +
+    labs(x="ATG narrow score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -1286,7 +1291,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                   limits=c(0.05,100),
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
-    labs(x="Kozak score, difference uATG - aATG",
+    labs(x="narrow score, difference uATG - aATG",
          y="Ribosome occupancy, ratio uATG / aATG") +
     panel_border()
 ```
@@ -1471,26 +1476,32 @@ ggseqlogo(data=filter(ctbl_big_H99,
 
 ## Calculate Information content and scores of consensus motif
 
+
 ### Calculate a wide and a narrow consensus sequence
 
 Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
-```{r kozak_consensus_H99,dependson=c("load_context_H99","load_riboviz_H99"),fig.width=4,fig.height=1}
+```{r kozak_consensus_H99,fig.width=4,fig.height=1}
 kozak_w_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
     .$aATG.context %>%
-    str_sub(start=4L,end=18L) %>%
+    str_sub(start=3L,end=15L) %>%
     consensusMatrix() 
 
 kozak_w_PWM_H99 <- PWM(kozak_w_PFM_H99)
-kozak_n_PWM_H99 <- kozak_w_PFM_H99[,5:12] %>% PWM()
+
+kozak_n_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
+    .$aATG.context %>%
+    str_sub(start=9L,end=15L) %>%
+    consensusMatrix() 
+kozak_n_PWM_H99 <- PWM(kozak_n_PFM_H99)
 ```
 
 
-```{r write_PFM_H99, dependson="calc_scores_H99",results="show"}
+```{r write_PFM_H99, dependson="kozak_consensus_H99",results="show"}
 cat(
     "# PFM_hiTrans_H99.txt
 # Position Frequency Matrix for aATGs of 330 highest-translated genes from H99
-# This is of the wide ATG context NNNNNNNNNATGNNN
+# This is of the entire ATG context NNNNNNNNNNNNATGNNNNNNNNN
 # Column is position, Row is nt count in order: ACGT.
 #
 # Edward Wallace, June 2018
@@ -1504,7 +1515,9 @@ kozak_w_PFM_H99 %>%
 
 ### Estimate the information content 
 
-Using the sequence logo details on https://en.wikipedia.org/wiki/Sequence_logo
+Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo.
+
+This is equal to the total height of the letters in the sequence logo summed across multiple positions.
 
 ```{r kozak_inf_H99,dependson=c("kozak_consensus_H99","cytoribo_context_H99"),fig.width=4,fig.height=1,results="show"}
 inf_content_narrow <- 
@@ -1513,34 +1526,34 @@ inf_content_narrow <-
         "All", "aATG", "narrow", 
         ctbl_big_H99 %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "aATG", "narrow", 
         ctbl_big_H99 %>%
             filter(Gene %in% hiTrans_H99) %>% 
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
-        "CytoRibo", "aATG", "narrow",
+            infonfromseqs(sstart=9L,send=12L),
+        "CytoRibo", "aATG", "narrow", 
         ctbl_big_H99 %>%
-            filter(Gene %in% cytoribolist_H99) %>%
+            filter(Gene %in% cytoribolist_H99) %>% 
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "All", "d1ATG", "narrow", 
         ctbl_big_H99 %>%
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "d1ATG", "narrow", 
         ctbl_big_H99 %>%
             filter(Gene %in% hiTrans_H99) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
-        "CytoRibo", "d1ATG", "narrow",
+            infonfromseqs(sstart=9L,send=12L),
+        "CytoRibo", "d1ATG", "narrow", 
         ctbl_big_H99 %>%
-            filter(Gene %in% cytoribolist_H99) %>%
+            filter(Gene %in% cytoribolist_H99) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L)
+            infonfromseqs(sstart=9L,send=12L)
     )
 
 write_tsv(inf_content_narrow %>%
@@ -1549,7 +1562,7 @@ write_tsv(inf_content_narrow %>%
 inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_H99[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_n_PFM_H99[,-(5:7)]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
 
 ### Estimate information content per base across start context
 
@@ -1615,12 +1628,12 @@ cat(
 # Kozak sequence derived from 330 highest-translated genes by RPF
 #
 # Gene: H99 systematic gene name
-# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNATG)
 # d1.scorekn: score of 1st downstream ATG agains narrow
 # u1.scorekn: score of 1st upstream ATG in 5' UTR against narrow
-# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNNATG)
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/scores_kozak_H99.txt")
 scores_H99 %>%
@@ -1649,7 +1662,7 @@ ggplot(data=scores_H99) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, H99") +
+    labs(x="ATG narrow score, H99") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -1675,7 +1688,7 @@ ggplot(data=scores_H99) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score (wide), H99") +
+    labs(x="ATG wide score, H99") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -1995,7 +2008,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
-    labs(x="Kozak score, difference dATG - aATG",
+    labs(x="narrow score, difference dATG - aATG",
          y="Ribosome occupancy, ratio dATG / aATG") +
     facet_grid(Type ~ Sample) +
     panel_border()
@@ -2088,7 +2101,7 @@ ggplot(data=scores_H99 %>%
     geom_density(kernel="rectangular",bw=0.025) +
     scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_H99)  + 
-    labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
+    labs(x="narrow score, difference dATG - aATG", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
@@ -2187,7 +2200,6 @@ ggplot(data=ribo_uct_H99,
 ### uATGs associated with lower translation efficiency are over 20nt from TSS
 
 ```{r uATGmin20_TE_H99, dependson="uATG_RPF_H99", fig.width=3.5,fig.height=3.5,results="show"}
-# ribo_uct_JEC21
 ggplot(data=ribo_uct_H99,
        aes(x=uATGfac,y=TE)) +
     geom_jitter(colour="grey50",size=0.7) +
@@ -2243,7 +2255,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                   limits=c(0.05,100),
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
-    labs(x="Kozak score, difference uATG - aATG",
+    labs(x="narrow score, difference uATG - aATG",
          y="Ribosome occupancy, ratio uATG / aATG") +
     panel_border()
 ```
@@ -2674,11 +2686,17 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
 utRS_w_PFM <- ctbl_big_JEC21 %>%
     filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
     .$aATG.context %>%
-    str_sub(start=4L,end=18L) %>%
+    str_sub(start=3L,end=15L) %>%
     consensusMatrix()
 
 utRS_w_PWM <- PWM(utRS_w_PFM)
-utRS_n_PWM <- utRS_w_PFM[,5:12] %>% PWM()
+
+utRS_w_PFM <- ctbl_big_JEC21 %>%
+    filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
+    .$aATG.context %>%
+    str_sub(start=9L,end=15L) %>%
+    consensusMatrix()
+utRS_n_PWM <- PWM(utRS_w_PFM)
 ```
 
 
@@ -2832,7 +2850,9 @@ scores_kvsu_JEC21 <-
     left_join(ctbl_big_JEC21 %>% 
                   transmute(Gene,
                             aATG.scoreun=PWMscoren(aATG.context,
-                                                pwm=utRS_n_PWM)
+                                                pwm=utRS_n_PWM),
+                            aATG.scoreuw=PWMscorew(aATG.context,
+                                                pwm=utRS_w_PWM),
                   ) )
 
 
@@ -2852,6 +2872,23 @@ ggplot(data=scores_kvsu_JEC21,
                colour="purple4",size=1.3) +
     labs(x="aATG Kozak score, narrow",
          y="aATG utRS score, narrow")
+
+ggplot(data=scores_kvsu_JEC21,
+       aes(x=aATG.scorekw,y=aATG.scoreuw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=scores_kvsu_JEC21 %>%
+                   filter(Gene %in% highdiffw_dvsaATG_JEC21$Gene),
+               colour="red",size=1) +
+    geom_point(data=scores_kvsu_JEC21 %>%
+                   filter(Gene %in% hiTrans_JEC21),
+               colour="blue",size=1) +
+    geom_point(data=scores_kvsu_JEC21 %>%
+                   filter(Gene %in% hiTrans_JEC21,
+                          Gene %in% highdiffw_dvsaATG_JEC21$Gene),
+               colour="purple4",size=1.3) +
+    labs(x="aATG Kozak score, wide",
+         y="aATG utRS score, wide")
 ```
 
 In JEC21 only.
@@ -2867,18 +2904,18 @@ Note that many points are overplotted at the same y-values because the score is 
 ggplot(data=scores_kvsu_JEC21 %>% 
            inner_join( mitofates_JEC21 %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
-                      ) ,     aes(x=aATG.scoreun-aATG.scorekn,colour=Pred_preseq)) +
+                      ) ,     aes(x=aATG.scoreuw-aATG.scorekw,colour=Pred_preseq)) +
     geom_vline(xintercept=0,size=0.3) +
     geom_density(kernel="rectangular",bw=0.025) +
         scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_JEC21)  +
-    labs(x="difference in aATG score, utRS vs Kozak", colour="Mito. pred") +
+    labs(x="difference in wide aATG score, utRS vs Kozak", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
 
 
-### High utRS score is enriched in mito-localized genes
+### High utRS score is slightly enriched in mito-localized genes
 
 Note we do not control for expression or any other potential factor affecting ATG context.
 
@@ -2889,11 +2926,11 @@ Note we do not control for expression or any other potential factor affecting AT
 ggplot(data=scores_kvsu_JEC21 %>% 
            inner_join( mitofates_JEC21 %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
-                      ) ,     aes(x=aATG.scoreun,colour=Pred_preseq)) +
+                      ) ,     aes(x=aATG.scoreuw,colour=Pred_preseq)) +
     geom_density(kernel="rectangular",bw=0.025) +
         scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_JEC21)  +
-    labs(x="utRS aATG score", colour="Mito. pred") +
+    labs(x="utRS aATG wide score", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
@@ -2906,17 +2943,19 @@ scores_kvsu_H99 <-
     left_join(ctbl_big_H99 %>% 
                   transmute(Gene,
                             aATG.scoreun=PWMscoren(aATG.context,
-                                                pwm=utRS_n_PWM)
+                                                pwm=utRS_n_PWM),
+                            aATG.scoreuw=PWMscoren(aATG.context,
+                                                pwm=utRS_w_PWM),
                   ) )
 
 ggplot(data=scores_kvsu_H99 %>% 
            inner_join( mitofates_H99 %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
-                      ) ,     aes(x=aATG.scoreun,colour=Pred_preseq)) +
+                      ) ,     aes(x=aATG.scoreuw,colour=Pred_preseq)) +
     geom_density(kernel="rectangular",bw=0.025) +
         scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_H99)  +
-    labs(x="utRS aATG score", colour="Mito. pred") +
+    labs(x="utRS aATG wide score", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```

@@ -295,11 +295,11 @@ PWMscore <- function(seqs,pwm,startl) {
            FUN.VALUE = 0)
 }
 
-PWMscoren <- function(seqs,pwm=kozak_n_PWM,startl=8) {
+PWMscoren <- function(seqs,pwm=kozak_n_PWM,startl=9) {
     PWMscore(seqs,pwm,startl) 
 }
 
-PWMscorew <- function(seqs,pwm=kozak_w_PWM,startl=4) {
+PWMscorew <- function(seqs,pwm=kozak_w_PWM,startl=3) {
     PWMscore(seqs,pwm,startl) 
 }
 

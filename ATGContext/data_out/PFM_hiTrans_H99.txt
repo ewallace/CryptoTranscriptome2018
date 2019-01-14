@@ -1,10 +1,10 @@
 # PFM_hiTrans_H99.txt
 # Position Frequency Matrix for aATGs of 330 highest-translated genes from H99
-# This is of the wide ATG context NNNNNNNNNATGNNN
+# This is of the entire ATG context NNNNNNNNNNNNATGNNNNNNNNN
 # Column is position, Row is nt count in order: ACGT.
 #
 # Edward Wallace, June 2018
-112	78	145	108	86	92	284	173	206	330	0	0	29	26	14
-90	127	87	63	110	197	11	125	89	0	0	0	52	217	157
-35	19	37	64	24	11	25	6	25	0	0	330	126	33	24
-93	106	61	95	110	30	10	26	10	0	330	0	123	54	135
+163	112	78	145	108	86	92	284	173	206	330	0	0
+80	90	127	87	63	110	197	11	125	89	0	0	0
+29	35	19	37	64	24	11	25	6	25	0	0	330
+58	93	106	61	95	110	30	10	26	10	0	330	0
