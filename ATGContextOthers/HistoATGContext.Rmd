@@ -13,6 +13,8 @@ output:
 
 This presents the analysis of Histoplasma capsulatum start codon usage and context. This uses the H H. capsulatum G217B translation estimates from Gilmore, Voorhies, Gebhart and Sil 2017.
 
+We decided that the 5'UTR annotations are so patchy that we don't want to pursue this data. Only about half the highly-translated genes have 5'UTRs in the annotation, and there are many contigs and plenty of missing genes including 6 ribosomal proteins.
+
 ### Load Packages
 
 ```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
@@ -104,16 +106,75 @@ ggseqlogo(data=filter(ctbl_big_Hc,Gene %in% hiTrans_Hc)$aATG.context,
     theme_nothing()
 ```
 
+#### Consensus is more visible on genes with 5'UTR annotation.
+
+```{r a_hi_context_split_Hc,dependson="load_context_Hc",fig.width=4,fig.height=1}
+nannotated = ctbl_big_Hc %>%
+              filter(aATG.pos > 1,Gene %in% hiTrans_Hc) %>%
+    nrow
+
+nmissing = ctbl_big_Hc %>%
+              filter(aATG.pos == 1,Gene %in% hiTrans_Hc) %>%
+    nrow
+
+ggseqlogo(data=ctbl_big_Hc %>%
+              filter(aATG.pos > 1,Gene %in% hiTrans_Hc) %>%
+              .$aATG.context,
+          namespace="TCAG") +
+    theme_nothing() +
+    annotate(geom="text",x=22,y=1.2,
+             label=paste("5' UTR\nannotated\nn =",nannotated))
+
+ggseqlogo(data=ctbl_big_Hc %>%
+              filter(aATG.pos==1,Gene %in% hiTrans_Hc) %>%
+              .$aATG.context,
+          namespace="TCAG") +
+    theme_nothing() +
+    annotate(geom="text",x=22,y=1.2,
+             label=paste("5' UTR\nmissing\nn =",nmissing))
+```
+
+
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
-```{r cytoribo_context_Hc,dependson="load_context_Hc",fig.width=4,fig.height=1,eval=FALSE}
-cytoribolist_Hc <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
+```{r cytoribo_context_Hc,dependson="load_context_Hc",fig.width=4,fig.height=1}
+cytoribolist_Hc <- read_tsv("data_in/Histo_CytoRiboList.txt",
                         comment="#") %>%
-    filter(SPECIES=="HISTO") %>%
-    .$GENE_ID
+    .$GENE_ID %>%
+    str_remove("_mrna")
+
 ggseqlogo(data=filter(ctbl_big_Hc,Gene %in% cytoribolist_Hc)$aATG.context,
-                      namespace="TCAG") + 
+                      namespace="TCAG") +
     theme_nothing()
+```
+
+#### Consensus is more visible on genes with 5'UTR annotation.
+
+
+```{r cytoribo_context_split_Hc,dependson="load_context_Hc",fig.width=4,fig.height=1}
+nannotated = ctbl_big_Hc %>%
+              filter(aATG.pos > 1,Gene %in% cytoribolist_Hc) %>%
+    nrow
+
+nmissing = ctbl_big_Hc %>%
+              filter(aATG.pos == 1,Gene %in% cytoribolist_Hc) %>%
+    nrow
+
+ggseqlogo(data=ctbl_big_Hc %>%
+              filter(aATG.pos > 1,Gene %in% cytoribolist_Hc) %>%
+              .$aATG.context,
+          namespace="TCAG") +
+    theme_nothing() +
+    annotate(geom="text",x=22,y=1.2,
+             label=paste("5' UTR\nannotated\nn =",nannotated))
+
+ggseqlogo(data=ctbl_big_Hc %>%
+              filter(aATG.pos==1,Gene %in% cytoribolist_Hc) %>%
+              .$aATG.context,
+          namespace="TCAG") +
+    theme_nothing() +
+    annotate(geom="text",x=22,y=1.2,
+             label=paste("5' UTR\nmissing\nn =",nmissing))
 ```
 
 
@@ -202,11 +263,11 @@ inf_content_narrow <-
             filter(Gene %in% hiTrans_Hc) %>% 
             .$aATG.context %>%
             infonfromseqs(sstart=8L,send=12L),
-        # "CytoRibo", "aATG", "narrow", 
-        # ctbl_big_Hc %>%
-        #     filter(Gene %in% cytoribolist_Hc) %>% 
-        #     .$aATG.context %>%
-        #     infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "aATG", "narrow",
+        ctbl_big_Hc %>%
+            filter(Gene %in% cytoribolist_Hc) %>%
+            .$aATG.context %>%
+            infonfromseqs(sstart=8L,send=12L),
         "All", "d1ATG", "narrow", 
         ctbl_big_Hc %>%
             .$d1.context %>%
@@ -217,13 +278,13 @@ inf_content_narrow <-
             filter(Gene %in% hiTrans_Hc) %>% 
             .$d1.context %>%
             na.omit() %>%
+            infonfromseqs(sstart=8L,send=12L),
+        "CytoRibo", "d1ATG", "narrow",
+        ctbl_big_Hc %>%
+            filter(Gene %in% cytoribolist_Hc) %>%
+            .$d1.context %>%
+            na.omit() %>%
             infonfromseqs(sstart=8L,send=12L)
-        # "CytoRibo", "d1ATG", "narrow", 
-        # ctbl_big_Hc %>%
-        #     filter(Gene %in% cytoribolist_Hc) %>% 
-        #     .$d1.context %>%
-        #     na.omit() %>%
-        #     infonfromseqs(sstart=8L,send=12L)
     )
 
 write_tsv(inf_content_narrow %>%
