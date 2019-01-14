@@ -15,7 +15,7 @@ This presents the renewed analysis of Cryptococcus neoformans start codon usage 
 
 It covers both JEC21 and H99 data. First several analyses on JEC21, then the same analyses on H99, then a joint analysis of signals conserved across both strains.
 
-We check consensus sequences for both "narrow" (NNNNNATG) and "wide" (NNNNNNNNNATGNNN) neighbourhoods of the start codon, and find essentially the same results with both, comparing annotated aATGs to downstream dATGs. Then for the following analyses we use the narrow score.
+We check consensus sequences for both "narrow" (-4 NNNNATG) and "wide" (-10 NNNNNNNNNNATG) neighbourhoods of the start codon, and find essentially the same results with both, comparing annotated aATGs to downstream dATGs. Then for the following analyses we use the narrow score.
 
 ### Load Packages
 
@@ -200,21 +200,16 @@ ggseqlogo(data=filter(ctbl_big_JEC21,
 
 ### Calculate a wide and a narrow consensus sequence
 
-Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-4 from ATG through to ATG) and **wide** (-10 from ATG to ATG) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
 ```{r kozak_consensus_JEC21,fig.width=4,fig.height=1}
-kozak_w_PFM_JEC21 <- filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21) %>%
+kozak_all_PFM_JEC21 <- filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21) %>%
     .$aATG.context %>%
-    str_sub(start=3L,end=15L) %>%
     consensusMatrix() 
 
-kozak_w_PWM_JEC21 <- PWM(kozak_w_PFM_JEC21)
+kozak_w_PWM_JEC21 <- PWM(kozak_all_PFM_JEC21[,3:15])
 
-kozak_n_PFM_JEC21 <- filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21) %>%
-    .$aATG.context %>%
-    str_sub(start=9L,end=15L) %>%
-    consensusMatrix() 
-kozak_n_PWM_JEC21 <- PWM(kozak_n_PFM_JEC21)
+kozak_n_PWM_JEC21 <- PWM(kozak_all_PFM_JEC21[,9:15])
 ```
 
 
@@ -228,7 +223,7 @@ cat(
 # Edward Wallace, June 2018
 ",
 file="data_out/PFM_hiTrans_JEC21.txt")
-kozak_w_PFM_JEC21 %>%
+kozak_all_PFM_JEC21 %>%
     as.tibble() %>%
     write_tsv("data_out/PFM_hiTrans_JEC21.txt",
               append = TRUE,col_names=FALSE)
@@ -283,7 +278,7 @@ write_tsv(inf_content_narrow %>%
 inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_n_PFM_JEC21[,-(5:7)]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_JEC21[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_all_PFM_JEC21[,9:12]) %>% round(2)`, of **wide** is `r infontot(kozak_all_PFM_JEC21[,3:12]) %>% round(2)`.
 
 ### Estimate information content per base across start context
 
@@ -1479,21 +1474,16 @@ ggseqlogo(data=filter(ctbl_big_H99,
 
 ### Calculate a wide and a narrow consensus sequence
 
-Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-4 from ATG through to ATG) and **wide** (-10 from ATG to ATG) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
 ```{r kozak_consensus_H99,fig.width=4,fig.height=1}
-kozak_w_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
+kozak_all_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
     .$aATG.context %>%
-    str_sub(start=3L,end=15L) %>%
     consensusMatrix() 
 
-kozak_w_PWM_H99 <- PWM(kozak_w_PFM_H99)
+kozak_w_PWM_H99 <- PWM(kozak_all_PFM_H99[,3:15])
 
-kozak_n_PFM_H99 <- filter(ctbl_big_H99,Gene %in% hiTrans_H99) %>%
-    .$aATG.context %>%
-    str_sub(start=9L,end=15L) %>%
-    consensusMatrix() 
-kozak_n_PWM_H99 <- PWM(kozak_n_PFM_H99)
+kozak_n_PWM_H99 <- PWM(kozak_all_PFM_H99[,9:15])
 ```
 
 
@@ -1507,7 +1497,7 @@ cat(
 # Edward Wallace, June 2018
 ",
 file="data_out/PFM_hiTrans_H99.txt")
-kozak_w_PFM_H99 %>%
+kozak_all_PFM_H99 %>%
     as.tibble() %>%
     write_tsv("data_out/PFM_hiTrans_H99.txt",
               append = TRUE,col_names=FALSE)
@@ -1562,7 +1552,7 @@ write_tsv(inf_content_narrow %>%
 inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_n_PFM_H99[,-(5:7)]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_H99[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_all_PFM_H99[,9:12]) %>% round(2)`, of **wide** is `r infontot(kozak_all_PFM_H99[,3:12]) %>% round(2)`.
 
 ### Estimate information content per base across start context
 
@@ -2500,7 +2490,7 @@ cat(
 # a.skn.xx: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d.skn.xx: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/dvsaATG_highdiffn_inframe_cc.txt")
 highdiffn_dvsaATG_cc %>%
@@ -2534,7 +2524,7 @@ cat(
 # a.skn.xx: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d.skn.xx: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/dvsaATG_highdiffn_outframe_cc.txt")
 highdiffn_dvsaATG_cc %>%
@@ -2683,20 +2673,14 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
           namespace="TCAG")  + 
     theme_nothing()
 
-utRS_w_PFM <- ctbl_big_JEC21 %>%
+utRS_all_PFM <- ctbl_big_JEC21 %>%
     filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
     .$aATG.context %>%
-    str_sub(start=3L,end=15L) %>%
     consensusMatrix()
 
-utRS_w_PWM <- PWM(utRS_w_PFM)
+utRS_w_PWM <- PWM(utRS_all_PFM[,3:15])
 
-utRS_w_PFM <- ctbl_big_JEC21 %>%
-    filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
-    .$aATG.context %>%
-    str_sub(start=9L,end=15L) %>%
-    consensusMatrix()
-utRS_n_PWM <- PWM(utRS_w_PFM)
+utRS_n_PWM <- PWM(utRS_all_PFM[,9:15])
 ```
 
 
@@ -2704,14 +2688,14 @@ utRS_n_PWM <- PWM(utRS_w_PFM)
 cat(
     "# PFM_utRS_cc.txt
 # Position Frequency Matrix for aATGs of 9 unusual tRNA synthetases
-# This is of the wide ATG context NNNNNNNNNATGNNN
+# This is of the wide ATG context NNNNNNNNNNATG
 # These nucleotides are very highly conserved between JEC21 and H99; JEC21 scores shown.
 # Column is position, Row is nt count in order: ACGT.
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/PFM_utRS_cc.txt")
-utRS_w_PFM %>%
+utRS_all_PFM[,3:12] %>%
     as.tibble() %>%
     write_tsv("data_out/PFM_utRS_cc.txt",
               append = TRUE,col_names=FALSE)
@@ -2775,15 +2759,15 @@ cat(
 #
 # H99: H99 systematic gene name
 # JEC21: JEC21 systematic gene name of ortholog
-# aATG.scorekn.xx: score of annotated ATG against narrow Kozak sequence (NNNNNATG), strain xx
+# aATG.scorekn.xx: score of annotated ATG against narrow Kozak sequence (NNNNATG), strain xx
 # d1.scorekn.xx: score of 1st downstream ATG against narrow Kozak sequence, strain xx
 # u1.scorekn.xx: score of 1st upstream ATG in 5' UTR against narrow Kozak sequence, strain xx
-# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNNATG), strain xx
-# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNNATG), strain xx
+# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNATG), strain xx
+# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNATG), strain xx
 # Prob_mito.xx: Probability of mitochondrial presequence from mitofates, strain xx
 # Pred_mito.xx: Prediction from mitofates, strain xx
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/scores_kozak_unusual_mito_cc.txt")
 scores_kozak_unusual_mito_cc %>%

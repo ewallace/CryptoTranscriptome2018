@@ -10,7 +10,7 @@
 # a.skn.xx: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d.skn.xx: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 H99	JEC21	a.skn.H99	d.skn.H99	a.skn.JEC21	d.skn.JEC21
 CNAG_00165	CNA01530	0.662	1	0.673	1
 CNAG_07776	CNI00670	0.688	1	0.698	1

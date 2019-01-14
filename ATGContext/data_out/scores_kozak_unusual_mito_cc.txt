@@ -5,15 +5,15 @@
 #
 # H99: H99 systematic gene name
 # JEC21: JEC21 systematic gene name of ortholog
-# aATG.scorekn.xx: score of annotated ATG against narrow Kozak sequence (NNNNNATG), strain xx
+# aATG.scorekn.xx: score of annotated ATG against narrow Kozak sequence (NNNNATG), strain xx
 # d1.scorekn.xx: score of 1st downstream ATG against narrow Kozak sequence, strain xx
 # u1.scorekn.xx: score of 1st upstream ATG in 5' UTR against narrow Kozak sequence, strain xx
-# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNNATG), strain xx
-# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNNATG), strain xx
+# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNATG), strain xx
+# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNATG), strain xx
 # Prob_mito.xx: Probability of mitochondrial presequence from mitofates, strain xx
 # Pred_mito.xx: Prediction from mitofates, strain xx
 #
-# Edward Wallace, June 2018
+# Edward Wallace, Jan 2019
 H99	JEC21	aATG.scorekn.H99	d1.scorekn.H99	u1.scorekn.H99	aATG.scorekn.JEC21	d1.scorekn.JEC21	u1.scorekn.JEC21	aATG.scoreUn.H99	aATG.scoreUn.JEC21	Prob_mito.H99	Pred_mito.H99	Prob_mito.JEC21	Pred_mito.JEC21
 CNAG_01397	CND05080	0.99	0.785	NA	0.989	0.781	0.802	0.611	0.611	0	No	0	No
 CNAG_07825	CNH03545	0.873	0.922	0.85	0.941	0.922	0.841	0.729	0.729	0	No	0	No
