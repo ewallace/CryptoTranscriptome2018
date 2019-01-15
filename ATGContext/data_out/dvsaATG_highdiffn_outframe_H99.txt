@@ -1,15 +1,15 @@
 # dvsaATG_highdiffn_outframe_H99.txt
 # Genes with in-frame high-score dATGs
-# In C. neoformans H99:
+# In C. deneoformans H99:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
 #   - in top 50% by RNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
-# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
-# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+# aATG.scorekn: annotated ATG score against narrow -4 Kozak consensus sequence
+# d1.scorekn: 1st downstream ATG score against narrow -4 Kozak consensus sequence
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 Gene	aATG.scorekn	d1.scorekn
 CNAG_06278	0.73	0.99
 CNAG_04264	0.721	0.978

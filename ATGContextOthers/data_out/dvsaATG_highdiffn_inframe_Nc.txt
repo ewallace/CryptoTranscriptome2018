@@ -9,7 +9,7 @@
 # aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence
 # d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 Gene	aATG.scorekn	d1.scorekn
 NCU02127	0.652	0.975
 NCU02596	0.683	0.992

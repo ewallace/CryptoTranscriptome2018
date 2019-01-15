@@ -4,7 +4,7 @@
 #
 # Gene: H99 systematic gene name
 # aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNATG)
-# d1.scorekn: score of 1st downstream ATG agains narrow
+# d1.scorekn: score of 1st downstream ATG against narrow
 # u1.scorekn: score of 1st upstream ATG in 5' UTR against narrow
 # xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNNATG)
 #

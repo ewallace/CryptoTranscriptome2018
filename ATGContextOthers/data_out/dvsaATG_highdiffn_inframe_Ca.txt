@@ -9,7 +9,7 @@
 # aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 Gene	aATG.scorekn	d1.scorekn
 C5_00840W_A	0.692	1
 C2_09260C_A	0.714	1

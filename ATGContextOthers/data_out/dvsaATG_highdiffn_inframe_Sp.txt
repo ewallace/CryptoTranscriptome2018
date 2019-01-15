@@ -6,10 +6,10 @@
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
-# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
-# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 Gene	aATG.scorekn	d1.scorekn
 SPBC9B6.11c	0.688	0.96
 SPAC12B10.01c	0.732	0.99
@@ -47,3 +47,11 @@ SPBP23A10.17	0.739	0.893
 SPAC144.17c	0.805	0.958
 SPAC3H1.10	0.688	0.835
 SPBC30D10.08	0.81	0.956
+SPBC543.10	0.713	0.852
+SPAC3H1.11	0.688	0.827
+SPAC26A3.11	0.771	0.91
+SPBC2G2.08	0.737	0.87
+SPAC4F8.05c	0.804	0.932
+SPBC660.11	0.763	0.892
+SPAC19G12.12	0.867	0.99
+SPBC25B2.07c	0.777	0.899

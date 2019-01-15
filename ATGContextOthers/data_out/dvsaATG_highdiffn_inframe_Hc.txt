@@ -6,8 +6,8 @@
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
-# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
-# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence
 #
 # Edward Wallace, Dec 2018
 Gene	aATG.scorekn	d1.scorekn
@@ -67,60 +67,24 @@ HISTO_AL.Contig317.eannot.1587.final_new	0.819	0.945
 HISTO_DF.Contig537.eannot.1394.final_new	0.766	0.89
 HISTO_DF.Contig537.eannot.1398.final_new	0.858	0.981
 HISTO_JG.Contig207.eannot.1399.final_new	0.858	0.981
-Gene	aATG.scorekn	d1.scorekn
-HISTO_ZY.Contig518.eannot.1158.final_new	0.769	1
-HISTO_JG.Contig206.eannot.1530.final_new	0.789	1
-HISTO_DU.Contig190.eannot.1260.final_new	0.742	0.95
-HISTO_DF.Contig537.eannot.1403.final_new	0.797	0.994
-HISTO_EA.Contig33.eannot.1524.final_new	0.804	0.994
-HISTO_BP.Contig459.eannot.1499.final_new	0.789	0.979
-HISTO_BP.Contig457.eannot.1663.final_new	0.793	0.979
-HISTO_GY.Contig460.eannot.1766.final_new	0.741	0.926
-HISTO_ZU.Contig65.eannot.2107.final_new	0.802	0.987
-HISTO_GY.Contig460-snap.130.final_new	0.798	0.979
-HISTO_DM.Contig933.eannot.1584.final_new	0.805	0.981
-HISTO_ZL.Contig1161b.fgenesh_plus.39.final_new	0.801	0.973
-HISTO_FE.Contig19.eannot.1726.final_new	0.83	1
-HISTO_DU.Contig204-snap.2.final_new	0.807	0.975
-HISTO_ZZ.Contig127c.Fgenesh_histo.116.final_new	0.836	1
-HISTO_JG.Contig206.eannot.1494.final_new	0.789	0.95
-HISTO_HS.Contig68.eannot.1977.final_new	0.818	0.979
-HISTO_ZL.Contig1161e-snap.18.final_new	0.815	0.975
-HISTO_ZL.Contig1161d.eannot.1418.final_new	0.776	0.936
-HISTO_BP.Contig457.eannot.1615.final_new	0.785	0.944
-HISTO_ZL.Contig658.eannot.1225.final_new	0.785	0.944
-HISTO_ZE.Contig149-snap.30.final_new	0.8	0.958
-HISTO_DA.Contig93.eannot.1949.final_new	0.779	0.937
-HISTO_AZ.Contig47.eannot.1598.final_new	0.823	0.979
-HISTO_LG.Contig392.eannot.1763.final_new	0.82	0.975
-HISTO_JG.Contig206.eannot.1522.final_new	0.769	0.924
-HISTO_DM.Contig933-snap.124.final_new	0.784	0.937
-HISTO_LF.Contig359.eannot.2154.final_new	0.821	0.975
-HISTO_ZY.Contig518.eannot.1183.final_new	0.826	0.979
-HISTO_ZL.Contig1161c.eannot.1514.final_new	0.758	0.911
-HISTO_ZL.Contig1158-snap.32.final_new	0.787	0.937
-HISTO_LF.Contig359.eannot.1926.final_new	0.825	0.975
-HISTO_LF.Contig359.eannot.2090.final_new	0.808	0.954
-HISTO_DF.Contig537.eannot.1334.final_new	0.798	0.942
-HISTO_ZU.Contig65.eannot.2055.final_new	0.832	0.975
-HISTO_LG.Contig392-snap.148.final_new	0.844	0.987
-HISTO_BP.Contig459.eannot.1486.final_new	0.766	0.909
-HISTO_GL.Contig233.eannot.1167.final_new	0.841	0.981
-HISTO_AL.Contig317-snap.27.final_new	0.826	0.966
-HISTO_JG.Contig206.eannot.1555.final_new	0.847	0.987
-HISTO_LG.Contig392-snap.125.final_new	0.808	0.945
-HISTO_ZT.Contig181.eannot.1585.final_new	0.838	0.973
-HISTO_ZL.Contig1161d.Fgenesh_histo.113.final_new	0.825	0.958
-HISTO_ZL.Contig1161a.Fgenesh_histo.55.final_new	0.854	0.987
-HISTO_LF.Contig359-snap.130.final_new	0.827	0.96
-HISTO_KF.Contig597.eannot.1395.final_new	0.855	0.987
-HISTO_ZT.Contig1089.Fgenesh_Aspergillus.180.final_new	0.783	0.914
-HISTO_ZY.Contig562f-snap.7.final_new	0.821	0.952
-HISTO_GX.Contig297.eannot.1521.final_new	0.828	0.957
-HISTO_ZE.Contig158.Fgenesh_Aspergillus.75.final_new	0.872	1
-HISTO_ZZ.Contig127c-snap.18.final_new	0.848	0.975
-HISTO_ZL.Contig1161d.eannot.1490.final_new	0.776	0.902
-HISTO_AL.Contig317.eannot.1587.final_new	0.819	0.945
-HISTO_DF.Contig537.eannot.1394.final_new	0.766	0.89
-HISTO_DF.Contig537.eannot.1398.final_new	0.858	0.981
-HISTO_JG.Contig207.eannot.1399.final_new	0.858	0.981
+HISTO_GL.Contig296.eannot.1413.final_new	0.834	0.954
+HISTO_BI.Contig285.eannot.1099.final_new	0.742	0.861
+HISTO_ZL.Contig658.eannot.1292.final_new	0.826	0.945
+HISTO_ZL.Contig1161d.eannot.1501.final_new	0.875	0.994
+HISTO_ZT.Contig1089.eannot.1648.final_new	0.84	0.958
+HISTO_DA.Contig93.eannot.2098.final_new	0.787	0.905
+HISTO_ZY.Contig518.eannot.1185.final_new	0.884	1
+HISTO_DF.Contig537.eannot.1325.final_new	0.872	0.987
+HISTO_GI.Contig382.eannot.1331.final_new	0.779	0.894
+HISTO_ZT.Contig1089.Fgenesh_histo.164.final_new	0.819	0.933
+HISTO_GL.Contig306.eannot.1084.final_new	0.83	0.944
+HISTO_ZL.Contig1131.eannot.2097.final_new	0.727	0.84
+HISTO_ZL.Contig1161d-snap.42.final_new	0.742	0.854
+HISTO_DM.Contig933.Fgenesh_histo.75.final_new	0.839	0.95
+HISTO_LF.Contig359-snap.221.final_new	0.787	0.897
+HISTO_ZT.Contig1128f.eannot.1131.final_new	0.784	0.894
+HISTO_ZZ.Contig127a.eannot.1388.final_new	0.84	0.95
+HISTO_ZL.Contig1131.Fgenesh_histo.273.final_new	0.814	0.924
+HISTO_ZE.Contig149-snap.15.final_new	0.787	0.896
+HISTO_GY.Contig460.Fgenesh_histo.133.final_new	0.806	0.914
+HISTO_ZU.Contig65.Fgenesh_Aspergillus.303.final_new	0.797	0.903

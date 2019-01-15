@@ -1,7 +1,7 @@
 ---
 title: "Start codon context for Candida Albicans"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 12 Oct 2018
+date: 16 Jan 2019
 output:
   # html_notebook: default
   html_document:
@@ -155,7 +155,7 @@ ggseqlogo(data=filter(ctbl_big,
 
 ### Calculate a wide and a narrow consensus sequence
 
-Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-4 from ATG through to ATG) and **wide** (-10 from ATG) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
 ```{r kozak_consensus,fig.width=4,fig.height=1}
 kozak_all_PFM <- filter(ctbl_big,Gene %in% hiTrans) %>%
@@ -168,7 +168,7 @@ kozak_n_PWM <- PWM(kozak_all_PFM[,9:15])
 ```
 
 
-```{r write_PFM, dependson="calc_scores",results="show"}
+```{r write_PFM, dependson="kozak_consensus",results="show"}
 cat(
     "# PFM_hiTrans_Ca.txt
 # Position Frequency Matrix for aATGs of 400 highest-translated genes from C. albicans SC5314
@@ -269,11 +269,16 @@ scores <-
     transmute(Gene,
               aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM),
               d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM),
-              # u1.scorekn   = PWMscoren(u1.context,,kozak_n_PWM)
+              # u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM)
+              aATG.scorekw = PWMscorew(str_to_upper(aATG.context),kozak_w_PWM),
+              d1.scorekw   = PWMscorew(d1.context,kozak_w_PWM),
+              # u1.scorekw   = PWMscorew(u1.context,kozak_w_PWM)
               NULL
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
            # u1vsan = u1.scorekn - aATG.scorekn,
+           d1vsaw = d1.scorekw - aATG.scorekw,
+           # u1vsaw = u1.scorekw - aATG.scorekw,
            NULL) 
 
 # ribotbl_scoresenough <-
@@ -314,7 +319,7 @@ scores %>%
               append = TRUE,col_names=TRUE)
 ```
 
-### Plot against narrow consensus (-5 to ATG)
+### Plot against narrow consensus (-4 to ATG)
 
 ```{r plot_scores_n, dependson="calc_scores", fig.width=5,fig.height=1.8}
 
@@ -450,7 +455,7 @@ ggplot(data=scores) +
           legend.position=c(0.8,0.8))
 ```
 
-### For highly translated genes, most dATG scores are much less than aATG
+### For highly translated genes, most dATG narrow scores are much less than aATG
 
 ```{r dvsaATG_scoresn, dependson="calc_scores", fig.width=3.5,fig.height=3.5}
 highdiffn_dvsaATG <- scores %>%
@@ -478,11 +483,46 @@ Red: high dATG vs aATG **Kozak** score.
 Blue: highly translated.
 Purple: both.
 
-### Small negative correlation between dATG and aATG score
+### Small negative correlation between dATG and aATG score narrow
 
 R = `r with(scores, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
 
-## Genes with unusual dATG vs aATG narrow score
+### For highly translated genes, most dATG wide scores are much less than aATG
+
+```{r dvsaATG_scoresw, dependson="calc_scores",fig.width=3.5,fig.height=3.5}
+highdiffw_dvsaATG <- scores %>%
+    arrange(desc(d1vsaw)) %>%
+    head(n=400) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+ggplot(data=scores %>% filter(!is.na(d1.scorekw)),
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffw_dvsaATG,
+               colour="red",size=1) +
+    geom_point(data=scores %>%
+                   filter(Gene %in% hiTrans),
+               colour="blue",size=1) +
+    geom_point(data=highdiffw_dvsaATG %>%
+                   filter(Gene %in% hiTrans),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
+
+Red: high dATG vs aATG **Kozak** score.
+Blue: highly translated.
+Purple: both.
+
+### Small negative correlation between dATG and aATG score wide
+
+R = `r with(scores, cor(aATG.scorekw,d1.scorekw,use="pairwise.complete.obs")) %>% round3`
+
+
+## Genes with unusual dATG vs aATG score
+
+### Genelist with unusual dATG vs aATG narrow score
 
 Those genes are in this list:
 
@@ -491,7 +531,7 @@ highdiffn_dvsaATG
 ```
 
 
-Some of these are well translated:
+### Of which, highly translated:
 
 ```{r highdiffn_dvsaATG_hiTrans,dependson="dvsaATG_scoresn",results="show"}
 highdiffn_dvsaATG %>%
@@ -499,11 +539,11 @@ highdiffn_dvsaATG %>%
     filter(Gene %in% hiTrans) 
 ```
 
-### dATG in frame with ATG
+### dATG in frame with ATG, narrow
 
-Files with high difference in narrow score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNa levels here.
+Files with high difference in narrow score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNA levels here.
 
-Saved to *dvsaATG_highdiffn_inframe.txt*.
+Saved to *dvsaATG_highdiffn_inframe_Ca.txt*.
 
 ```{r highdiffn_dvsaATG_inframe,dependson="dvsaATG_scoresn",results="show"}
 highdiffn_dvsaATG_enoughinframe <- 
@@ -526,7 +566,7 @@ cat(
 # aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/dvsaATG_highdiffn_inframe_Ca.txt")
 highdiffn_dvsaATG_enoughinframe %>%
@@ -538,7 +578,7 @@ highdiffn_dvsaATG_enoughinframe %>%
 
 See more below.
 
-### dATG out of frame with ATG
+### dATG out of frame with ATG, narrow
 
 Files with high difference in narrow score, filtered for reasonable amounts of translation, out of frame. 
 
@@ -565,12 +605,84 @@ cat(
 # aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/dvsaATG_highdiffn_outframe_Ca.txt")
 highdiffn_dvsaATG_enoughoutframe %>%
     mutate_if(is.numeric,round3) %>%
     write_tsv("data_out/dvsaATG_highdiffn_outframe_Ca.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG in frame with ATG, wide
+
+Files with high difference in wide score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNA levels here.
+
+Saved to *dvsaATG_highdiffw_inframe_Ca.txt*.
+
+```{r highdiffw_dvsaATG_inframe,dependson="dvsaATG_scoresw",results="show"}
+highdiffw_dvsaATG_enoughinframe <- 
+    highdiffw_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% nonterribleTrans, d1.frame==0) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+highdiffw_dvsaATG_enoughinframe
+
+cat(
+    "# dvsaATG_highdiffw_inframe_Ca.txt
+# Genes with in-frame high-score dATGs
+# In C. albicans SC5314:
+#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - in top 75% by translation
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekw: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekw: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Jan 2019
+",
+file="data_out/dvsaATG_highdiffw_inframe_Ca.txt")
+highdiffw_dvsaATG_enoughinframe %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffw_inframe_Ca.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG, wide
+
+Files with high difference in wide score, filtered for reasonable amounts of translation, out of frame. 
+
+Saved to *dvsaATG_highdiffw_outframe_Ca.txt*.
+
+```{r highdiffw_dvsaATG_outframe,dependson="dvsaATG_scoresw",results="show"}
+highdiffw_dvsaATG_enoughoutframe <- 
+    highdiffw_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% nonterribleTrans, d1.frame!=0) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+highdiffw_dvsaATG_enoughoutframe
+
+cat(
+    "# dvsaATG_highdiffw_outframe_Ca.txt
+# Genes with in-frame high-score dATGs
+# In C. albicans SC5314:
+#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - in top 75% by translation
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekw: annotated ATG score against wide Kozak consensus sequence
+# d1.scorekw: 1st downstream ATG score against wide Kozak consensus sequence
+#
+# Edward Wallace, Jan 2019
+",
+file="data_out/dvsaATG_highdiffw_outframe_Ca.txt")
+highdiffw_dvsaATG_enoughoutframe %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffw_outframe_Ca.txt",append = TRUE,col_names=TRUE)
 ```
 
 

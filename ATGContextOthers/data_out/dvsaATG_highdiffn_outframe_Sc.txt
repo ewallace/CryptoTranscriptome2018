@@ -1,15 +1,15 @@
 # dvsaATG_highdiffn_outframe_Sc.txt
 # Genes with in-frame high-score dATGs
-# In Saccharomyces cerevisiae:
+# In Saccharomyces cerevisiae S288C:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
 #   - in top 50% by RNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
-# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
-# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+# aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence
+# d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 Gene	aATG.scorekn	d1.scorekn
 YJL164C	0.755	0.976
 YGR231C	0.758	0.975
@@ -66,3 +66,22 @@ YDR011W	0.833	0.951
 YDR310C	0.755	0.872
 YIL022W	0.759	0.874
 YML086C	0.808	0.923
+YOR233W	0.856	0.969
+YHR152W	0.825	0.936
+YHL020C	0.825	0.935
+YKR030W	0.866	0.975
+YOL088C	0.827	0.936
+YPL084W	0.837	0.945
+YOR303W	0.869	0.976
+YLR108C	0.823	0.929
+YDR452W	0.786	0.892
+YDR117C	0.869	0.975
+YDL116W	0.869	0.975
+YPL244C	0.744	0.85
+YEL031W	0.824	0.929
+YDR204W	0.809	0.913
+YFR013W	0.752	0.857
+YJR131W	0.786	0.889
+YMR247C	0.847	0.951
+YNL101W	0.866	0.969
+YBR002C	0.804	0.906
