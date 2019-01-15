@@ -1,5 +1,5 @@
 # PFM_hiTrans_Ca.txt
-# Position Frequency Matrix for aATGs of 400 highest-translated genes from Ca
+# Position Frequency Matrix for aATGs of 400 highest-translated genes from C. albicans SC5314
 # This is of the wide ATG context NNNNNNNNNNNNATGNNNNNNNNN
 # Column is position, Row is nt count in order: ACGT.
 #

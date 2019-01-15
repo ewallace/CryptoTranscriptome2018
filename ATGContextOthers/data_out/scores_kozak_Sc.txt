@@ -1,5 +1,5 @@
 # scores_kozak_Sc.txt
-# Scores of ATG context against Kozak sequence, C. neoformans serotype D Sc
+# Scores of ATG context against Kozak sequence, Scerevisiae S288C
 # Kozak sequence derived from 330 highest-translated genes by RPF
 #
 # Gene: Sc systematic gene name
