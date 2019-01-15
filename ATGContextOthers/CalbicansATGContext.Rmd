@@ -158,14 +158,13 @@ ggseqlogo(data=filter(ctbl_big_Ca,
 Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
 ```{r kozak_consensus_Ca,fig.width=4,fig.height=1}
-kozak_w_PFM_Ca <- filter(ctbl_big_Ca,Gene %in% hiTrans_Ca) %>%
+kozak_all_PFM_Ca <- filter(ctbl_big_Ca,Gene %in% hiTrans_Ca) %>%
     .$aATG.context %>%
-    str_sub(start=4L,end=18L) %>%
     str_to_upper() %>%
     consensusMatrix() 
 
-kozak_w_PWM_Ca <- PWM(kozak_w_PFM_Ca)
-kozak_n_PWM_Ca <- kozak_w_PFM_Ca[,5:12] %>% PWM()
+kozak_w_PWM_Ca <- PWM(kozak_all_PFM_Ca[,3:15])
+kozak_n_PWM_Ca <- PWM(kozak_all_PFM_Ca[,9:15])
 ```
 
 
@@ -173,13 +172,13 @@ kozak_n_PWM_Ca <- kozak_w_PFM_Ca[,5:12] %>% PWM()
 cat(
     "# PFM_hiTrans_Ca.txt
 # Position Frequency Matrix for aATGs of 400 highest-translated genes from Ca
-# This is of the wide ATG context NNNNNNNNNATGNNN
+# This is of the wide ATG context NNNNNNNNNNNNATGNNNNNNNNN
 # Column is position, Row is nt count in order: ACGT.
 #
 # Edward Wallace, June 2018
 ",
 file="data_out/PFM_hiTrans_Ca.txt")
-kozak_w_PFM_Ca %>%
+kozak_all_PFM_Ca %>%
     as.tibble() %>%
     write_tsv("data_out/PFM_hiTrans_Ca.txt",
               append = TRUE,col_names=FALSE)
@@ -196,34 +195,34 @@ inf_content_narrow <-
         "All", "aATG", "narrow", 
         ctbl_big_Ca %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "aATG", "narrow", 
         ctbl_big_Ca %>%
             filter(Gene %in% hiTrans_Ca) %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "CytoRibo", "aATG", "narrow",
         ctbl_big_Ca %>%
             filter(Gene %in% cytoribolist_Ca) %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "All", "d1ATG", "narrow",
         ctbl_big_Ca %>%
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "d1ATG", "narrow", 
         ctbl_big_Ca %>%
             filter(Gene %in% hiTrans_Ca) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "CytoRibo", "d1ATG", "narrow",
         ctbl_big_Ca %>%
             filter(Gene %in% cytoribolist_Ca) %>%
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L)
+            infonfromseqs(sstart=9L,send=12L)
     )
 
 write_tsv(inf_content_narrow %>%
@@ -232,7 +231,7 @@ write_tsv(inf_content_narrow %>%
 inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Ca[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Ca[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_all_PFM_Ca[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_all_PFM_Ca[,-(10:12)]) %>% round(2)`.
 
 
 ### Estimate information content per base across start context
@@ -302,9 +301,9 @@ cat(
 # Kozak sequence derived from 400 highest-translated genes by RPF
 #
 # Gene: Ca systematic gene name
-# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNATG)
 # d1.scorekn: score of 1st downstream ATG against narrow
-# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNNATG)
 #
 # Edward Wallace, Oct 2018
 ",
