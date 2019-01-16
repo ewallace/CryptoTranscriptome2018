@@ -127,6 +127,13 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
     theme_nothing()
 ```
 
+### Almost all cytoribo genes are highly translated
+
+Venn diagram 
+
+```{r hitrans_cytoribo_venn,dependson=c("cytoribo_context","load_ribosum"),fig.width=2.1,fig.height=2}
+venn(hiTrans=hiTrans,cytoRibo=cytoribolist)
+```
 
 ### Downstream ATGs don't have a consensus
 

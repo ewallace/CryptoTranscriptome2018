@@ -9,7 +9,7 @@
 # aATG.scorekw: annotated ATG score against wide Kozak consensus sequence
 # d1.scorekw: 1st downstream ATG score against wide Kozak consensus sequence
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 Gene	aATG.scorekw	d1.scorekw
 HISTO_JG.Contig206.eannot.1530.final_new	0.758	0.985
 HISTO_BP.Contig459.eannot.1499.final_new	0.764	0.963

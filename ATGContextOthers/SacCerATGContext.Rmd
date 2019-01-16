@@ -118,7 +118,15 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
     theme_nothing()
 ```
 
+### Many cytoribo genes are highly translated (5% highest)
 
+Venn diagram.
+
+There are many duplicate cytoRibo genes in Sc.
+
+```{r hitrans_cytoribo_venn,dependson=c("cytoribo_context","load_ribosum"),fig.width=2.1,fig.height=2}
+venn(hiTrans=hiTrans,cytoRibo=cytoribolist)
+```
 
 ### Downstream ATGs don't have a consensus
 

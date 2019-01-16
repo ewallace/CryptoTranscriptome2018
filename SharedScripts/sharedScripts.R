@@ -6,6 +6,7 @@ library(cowplot)
 library(ggrepel)
 library(ggseqlogo)
 library(Biostrings)
+library(VennDiagram)
 
 ## Graphics settings & functions
 
@@ -402,4 +403,11 @@ plot_mutinfo <- function(MIpos,
         scale_fill_gradientn(limits=MIlimits,colours=MIcolours,values=MIvalues) +
         coord_equal() + 
         theme(axis.line=element_blank(),axis.title=element_blank())
+}
+
+#####
+## Venn diagram
+
+venn <- function(...) {
+    venn.diagram(x=list(...),filename=NULL,margin=0.1) %>% grid.draw
 }

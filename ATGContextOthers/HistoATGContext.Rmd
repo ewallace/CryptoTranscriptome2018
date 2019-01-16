@@ -53,6 +53,7 @@ ribosum %>%
 
 hiTrans <- ribosum %>%
     arrange(desc(RPF)) %>%
+    filter(!is.na(Gene)) %>%
     head(n=360) %>%
     .$Gene
 
@@ -140,6 +141,7 @@ ggseqlogo(data=ctbl_big %>%
 ```{r cytoribo_context,dependson="load_context",fig.width=4,fig.height=1}
 cytoribolist <- read_tsv("data_in/Histo_CytoRiboList.txt",
                         comment="#") %>%
+    filter(!is.na(GENE_ID)) %>%
     .$GENE_ID %>%
     str_remove("_mrna")
 
@@ -186,6 +188,14 @@ First upstream ATG
 ggseqlogo(data=filter(ctbl_big,nchar(u1.context) ==24)$u1.context,
                       namespace="TCAG") + 
     theme_nothing()
+```
+
+### Most cytoribo genes are highly translated
+
+Venn diagram 
+
+```{r hitrans_cytoribo_venn,dependson=c("cytoribo_context","load_ribosum"),fig.width=2.1,fig.height=2}
+venn(hiTrans=hiTrans,cytoRibo=cytoribolist)
 ```
 
 

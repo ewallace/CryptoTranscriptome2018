@@ -163,6 +163,14 @@ ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% cytoribolist_JEC21)$aATG.context,
     theme_nothing()
 ```
 
+### All cytoribo genes are highly translated
+
+Venn diagram 
+
+```{r hitrans_cytoribo_venn_JEC21,dependson=c("cytoribo_context_JEC21","load_riboviz_JEC21"),fig.width=2.1,fig.height=2}
+venn(hiTrans=hiTrans_JEC21,cytoRibo=cytoribolist_JEC21)
+```
+
 ### Upstream ATGs don't have a consensus
 
 First upstream ATG.
@@ -195,6 +203,7 @@ ggseqlogo(data=filter(ctbl_big_JEC21,
                       namespace="TCAG") + 
     theme_nothing()
 ```
+
 
 ## Calculate Information content and scores of consensus motif
 
@@ -1505,6 +1514,14 @@ ggseqlogo(data=filter(ctbl_big_H99,Gene %in% cytoribolist_H99)$aATG.context,
     theme_nothing()
 ```
 
+### All cytoribo genes are highly translated
+
+Venn diagram 
+
+```{r hitrans_cytoribo_venn_H99,dependson=c("cytoribo_context_H99","load_riboviz_H99"),fig.width=2.1,fig.height=2}
+venn(hiTrans=hiTrans_H99,cytoRibo=cytoribolist_H99)
+```
+
 ### Upstream ATGs don't have a consensus
 
 First upstream ATG.
@@ -1537,6 +1554,8 @@ ggseqlogo(data=filter(ctbl_big_H99,
                       namespace="TCAG") + 
     theme_nothing()
 ```
+
+
 
 ## Calculate Information content and scores of consensus motif
 
