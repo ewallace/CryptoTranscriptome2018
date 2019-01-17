@@ -378,7 +378,7 @@ scores_JEC21 %>%
               append = TRUE,col_names=TRUE)
 ```
 
-### Plot against narrow consensus (-5 to ATG)
+### Plot against narrow consensus (-4 to ATG)
 
 ```{r plot_scores_n_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
 
@@ -1720,7 +1720,7 @@ scores_H99 %>%
               append = TRUE,col_names=TRUE)
 ```
 
-### Plot against narrow consensus (-5 to ATG)
+### Plot against narrow consensus (-4 to ATG)
 
 ```{r plot_scores_n_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
 
