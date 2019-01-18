@@ -122,7 +122,7 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
 
 Venn diagram.
 
-There are many duplicate cytoRibo genes in Sc.
+There are many duplicate cytoRibo genes in Sc, and these were discarded from the ribosome profiling dataset.
 
 ```{r hitrans_cytoribo_venn,dependson=c("cytoribo_context","load_ribosum"),fig.width=2.1,fig.height=2}
 venn(hiTrans=hiTrans,cytoRibo=cytoribolist)
