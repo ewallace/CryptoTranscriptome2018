@@ -2792,7 +2792,29 @@ mitofates_cc %>%
     filter(Pred_preseq.H99=="No", Pred_preseq.JEC21=="Yes") %>%
     filter(H99 %in% enoughRNA_H99,JEC21 %in% enoughRNA_JEC21) %>%
     select(H99,JEC21,Prob_preseq.H99,Prob_preseq.JEC21) %>%
-    arrange(desc(Prob_preseq.JEC21)) 
+    arrange(desc(Prob_preseq.JEC21))
+
+cat(
+    "# mitopred_different_H99vsJEC21.txt
+# Genes with a DIFFERENT mitofates prediction in H99 and JEC21
+# Not otherwise filtered. Arranged by prob preseq in H99
+#
+# H99: H99 systematic gene name
+# JEC21: JEC21 systematic gene name of ortholog
+# Prob_preseq.xx: Probability of mitochondrial presequence from mitofates, strain xx
+#
+# Edward Wallace, Jan 2019
+",
+file="data_out/mitopred_different_H99vsJEC21.txt")
+
+mitofates_cc %>%
+    filter(Pred_preseq.H99 != Pred_preseq.JEC21) %>%
+    select(H99,JEC21,Prob_preseq.H99,Prob_preseq.JEC21) %>%
+    mutate_if(is.numeric,round3) %>%
+    arrange(desc(Prob_preseq.H99),Prob_preseq.JEC21) %>%
+    write_tsv("data_out/mitopred_different_H99vsJEC21.txt",
+              append = TRUE,col_names=TRUE)
+    
 ```
 
 There seem to be more with mito-gain in H99. OR with alternative non-ATG starts in JEC21.
