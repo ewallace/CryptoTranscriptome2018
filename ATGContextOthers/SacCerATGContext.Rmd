@@ -11,9 +11,9 @@ output:
 
 # Summary
 
-This presents the renewed analysis of Saccharomyces start codon usage and context. This uses the S. cerevisiae S288C expression and translation estimates from David Weinberg et al 2017.
+This presents the renewed analysis of Saccharomyces start codon usage and context. This uses the S. cerevisiae S288C expression estimates from Csardi et al 2015, and translation estimates from Geraschenko and Gladyshev 2014.
 
-This was started in Aug 2018, updated through Oct 2018, and used as a template for the analyses in other fungi.
+This document was started in Aug 2018, updated through Jan 2019, and used as a template for the analyses in other fungi.
 
 ### Load Packages
 
@@ -35,17 +35,37 @@ source("../SharedScripts/sharedScripts.R")
 ### Load expression data
 
 ```{r load_ribosum,results="show"}
+weinberg_riboprofiling <- read_tsv("data_in/ExpressionTranslation/Weinberg2016_SacCer_riboprofiling.txt") %>%
+    dplyr::select(Gene=Gene_name,RNA=RNA,RPF = Ribo)
 
-ribosum <- read_tsv("data_in/ExpressionTranslation/Weinberg2016_SacCer_riboprofiling.txt") %>%
-    rename(Gene_name="Gene",Ribo="RPF")
+gerasch_riboprofiling <- read_tsv("data_in/ExpressionTranslation/Geraschenko2014_SacCer_GSE59573_Expression_Table.txt",
+                    skip=3,
+                    col_names = c("Gene", "unstressed_noCHX", "unstressed_1_64x_CHX", "unstressed_1_16x_CHX", "unstressed_1_4x_CHX", "unstressed_1x_CHX", "unstressed_8x_CHX", "unstressed_100x_CHX_rep1", "unstressed_100x_CHX_rep2", "oxidative_noCHX", "oxidative_1_64x_CHX", "oxidative_1_16x_CHX", "oxidative_1_4x_CHX", "oxidative_1x_CHX", "oxidative_8x_CHX", "oxidative_100x_CHX_rep1", "oxidative_100x_CHX_rep2", "heatshock_noCHX", "heatshock_1x_CHX", "complete_SD_media", "SD_no_aminoacids", "SD_no_aminoacids_plus_His_Met_Leu", "edeine_noCHX", "aurin_noCHX") )
+
+csardi_mrna_prot <- read_tsv("data_in/ExpressionTranslation/scer-mrna-protein-absolute-estimate.txt",comment="#")
+
+ribosum <-  gerasch_riboprofiling %>%
+        transmute(GeneAlt=Gene,
+                  Gene = str_sub(Gene,end=7L),
+                  RPF=( unstressed_noCHX + unstressed_1_64x_CHX + unstressed_1_16x_CHX +  unstressed_1_4x_CHX + unstressed_1x_CHX ) / 5 ) %>%
+    left_join(  csardi_mrna_prot %>% select(Gene=orf,Gene2=gene,RNA=mrna,Prot=prot) )
 
 ribosum %>%
     arrange(desc(RPF)) 
 
-hiTrans <- ribosum %>%
+# Takes the first entry of each deduplicated gene
+hiTransFirst <- ribosum %>%
     arrange(desc(RPF)) %>%
     head(n=300) %>%
     .$Gene
+
+# Takes all entries of each deduplicated gene
+hiTrans <- ribosum %>%
+    arrange(desc(RPF)) %>%
+    .$GeneAlt %>%
+    str_split("_") %>%
+    unlist %>%
+    head(n=300)
 
 enoughRNA <- ribosum %>%
     arrange(desc(RNA)) %>%
@@ -57,19 +77,32 @@ We also calculated hiTrans, the top 5% (300) translated genes by RPF TPM.
 
 ### Ribosome occupancy mostly tracks RNA abundance
 
-```{r plot_TE,dependson="load_ribosum",fig.height=3.9,fig.width=4.1}
+```{r plot_TE_Weinberg,dependson="load_ribosum",fig.height=3.9,fig.width=4.1}
 TE_unusual <- 
-    ribosum %>%
+    weinberg_riboprofiling %>%
     filter( (RPF > 1.8e4) |
                 (RPF > 100 & RPF > RNA * 5 ) | 
                 (RNA > 150 & RPF < RNA / 10 ))
 
 
-ggplot(data=ribosum,aes(x=RNA,y=RPF)) +
+ggplot(data=weinberg_riboprofiling,aes(x=RNA,y=RPF)) +
     geom_diagline() +
     geom_point(size=.8,colour="grey50") +
     geom_point(data=TE_unusual,aes(colour=Gene),size=1) + 
     geom_text_repel(data=TE_unusual,aes(label=Gene,colour=Gene)) +
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of aORF)",
+         y="Ribosome occupancy (TPM of aORF)") +
+    theme(legend.position="none")
+```
+
+```{r plot_TE_geraschcsardi,dependson="load_ribosum",fig.height=3.9,fig.width=4.1}
+ggplot(data=ribosum,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.8,colour="grey50") +
+    geom_point(data=TE_unusual,aes(colour=Gene),size=1) + 
     scale_loglog(limits=c(1e-1,2e4),
                   oob=scales::squish,
                   expand=c(0.01,0.01)) +
@@ -122,7 +155,9 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
 
 Venn diagram.
 
-There are many duplicate cytoRibo genes in Sc, and these were discarded from the ribosome profiling dataset.
+There are many duplicate cytoRibo genes in Sc, and in the Geraschenko dataset these are both included
+
+Both duplicates were discarded from the Weinberg & Shah et al ribosome profiling dataset, which is why we stopped using it.
 
 ```{r hitrans_cytoribo_venn,dependson=c("cytoribo_context","load_ribosum"),fig.width=2.1,fig.height=2}
 venn(hiTrans=hiTrans,cytoRibo=cytoribolist)
@@ -342,7 +377,33 @@ ggplot(data=scores) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, Sc") +
+    labs(x="ATG Kozak narrow score, Sc") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+### Plot against wide consensus (-10 to ATG)
+
+```{r plot_scores_w, dependson="calc_scores", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekw,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=u1.scorekw,colour="uATG"),
+                kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores,Gene %in% hiTrans),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG Kozak wide score, Sc") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -563,7 +624,7 @@ highdiffn_dvsaATG_enoughinframe <-
     filter(Gene %in% enoughRNA, d1.frame==0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
-highdiffn_dvsaATG_enoughinframe
+highdiffn_dvsaATG_enoughinframe %>% print(n=15)
 
 cat(
     "# dvsaATG_highdiffn_inframe_Sc.txt
@@ -587,13 +648,18 @@ highdiffn_dvsaATG_enoughinframe %>%
 
 - YER156C, copper-regulated putative protein of unknown function, nuclear/cyto localization
 - GRX2 / YDR513W, glutaredoxin, dual-localized mito and cyto from in-frame start codons.
-- ERV1 / YGR029W, mitochondrial sulfhydryl oxidase
+- TRM5 / YHR070W, tRNAmethyltransferase, dual-localized mito and cyto from in-frame start codons
+- RSC2 / YLR357W, chromatin remodeler
+- VAS1 / YGR094W, Valyl tRNA synthase, localized to cytoplasm and mitochondria
+- UBP1 / YDL122W, Ubiquitin-specific protease, localizes to cytoplasm and ER
 - HNT1 / YDL125C, Adenosine 5'-monophosphoramidase, reported nuclear/cyto localization
+- SFP1 / YLR403W, transcription regulator of ribosomal biogenesis genes, nuclear/cyto localization
+- ERV1 / YGR029W, mitochondrial sulfhydryl oxidase
+- RVS167 / YDR388W, Calmodulin-binding actin-associated protein
 - STE23 / YLR389C, Metalloprotease, mitochondrial
 - YDR248C, Putative gluconokinase localized to cytoplasm and vacuole
-- VAS1 / YGR094W, Valyl tRNA synthase, localized to cytoplasm and mitochondria
 - ERB1 / YMR049C, Eukaryotic Ribosome Biogenesis protein, nucleolar.
-- SFP1 / YLR403W, transcription regulator of ribosomal biogenesis genes, nuclear/cyto localization
+
 - YNL247W, Cysteinyl-tRNA synthetase, localized to cytoplasm and mitochondria 
 
 
@@ -632,6 +698,7 @@ highdiffn_dvsaATG_enoughoutframe %>%
 
 In addition:
 
+- TPK1 / YJL164C, cAMP-dependent protein kinase catalytic subunit
 - PHB2 / YGR231C, inner mitochondrial membrane chaperone
 - NUP170 / YBL079W, Subunit of nuclear pore complex
 
