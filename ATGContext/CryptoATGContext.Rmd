@@ -15,7 +15,7 @@ This presents the renewed analysis of Cryptococcus neoformans start codon usage 
 
 It covers both JEC21 and H99 data. First several analyses on JEC21, then the same analyses on H99, then a joint analysis of signals conserved across both strains.
 
-We check consensus sequences for both "narrow" (-4 NNNNATG) and "wide" (-10 NNNNNNNNNNATG) neighbourhoods of the start codon, and find essentially the same results with both, comparing annotated aATGs to downstream dATGs. Then for the following analyses we use the narrow score.
+We check consensus sequences for both "narrow" (-4 NNNNATG) and "wide" (-10 NNNNNNNNNNATG) neighbourhoods of the start codon, and find essentially the same results with both, comparing annotated aATGs to downstream dATGs. Then for the following analyses we use mostly the wide score.
 
 ### Load Packages
 
@@ -1020,45 +1020,57 @@ mitopredlist_JEC21 <- mitofates_JEC21 %>%
     .$Gene
 ```
 
-```{r dvsaATG_scoresn_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=3.5,fig.height=3.5,eval=FALSE}
-# repeat plot coloured by mitochondrial localization; didn't work.
-
-ggplot(data=scores_JEC21 %>% 
-           filter(!is.na(d1.scorekn)) %>%
-           inner_join( mitofates_JEC21 %>% 
-                          select(Gene,Prob_preseq,Pred_preseq)
-                      ) %>%
-           arrange(Pred_preseq),
-       aes(x=aATG.scorekn,y=d1.scorekn,colour=Pred_preseq,shape=Pred_preseq)) +
-    geom_diagline() +
-    # geom_point(size=0.8) +
-    geom_density_2d() +
-    scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
-                        labels=mitobreaks_JEC21) + 
-    scale_shape_manual(values=c("Yes"=19,"No"=20)) + 
-    labs(x="aATG score, narrow",
-         y="dATG score, narrow") +
-    theme(legend.position="none")
-```
-
 ### Genes with high dATG vs aATG score are enriched in mitochondrial presequences
 
-```{r dvsaATG_scoresdiffn_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+```{r dvsaATG_scoresdiffw_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
 
 ggplot(data=scores_JEC21 %>% 
-           filter(!is.na(d1.scorekn)) %>%
+           filter(!is.na(d1.scorekw)) %>%
            inner_join( mitofates_JEC21 %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
                       ) ,
-       aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
+       aes(x=d1vsaw,colour=Pred_preseq)) +
     geom_vline(xintercept=0,size=0.3) +
     geom_density(kernel="rectangular",bw=0.025) +
     scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_JEC21)  + 
-    labs(x="narrow score, difference dATG - aATG", colour="Mito. pred") +
+    labs(x="wide score, difference dATG - aATG", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
+
+### There are spectacular correlations between d1 score, d1 frame, and localization
+
+```{r dvsaATG_scoresdiffbar_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"),fig.width=4.5,fig.height=4}
+# library(ggmosaic)
+ggplot(data=scores_JEC21 %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big_JEC21) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA_JEC21,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( mitofates_JEC21 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.framefac,fill=Pred_preseq)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_JEC21) +
+    labs(x="dATG frame", y="number of genes",fill="Mito. pred.") +
+    panel_border()
+```
+
 
 ### However, mito-localized genes do not have a distinctive aATG context
 
@@ -1079,7 +1091,7 @@ ggseqlogo(data=ctbl_big_JEC21 %>%
 ```{r dvsaATG_scoresn_mito_lmodel2_JEC21, dependson="calc_scores_JEC21", fig.width=6.2,fig.height=3.5}
 dvsATGmito_JEC21 <- 
     scores_JEC21 %>% 
-    select(Gene,aATG.scorekn,d1.scorekn) %>%
+    select(Gene,aATG.scorekn,d1.scorekn,aATG.scorekw,d1.scorekw) %>%
     filter(!is.na(d1.scorekn)) %>%
     inner_join( mitofates_JEC21 %>% 
                     select(Gene,Prob_preseq,Pred_preseq) )
@@ -1118,30 +1130,56 @@ ggplot(data=dvsATGmito_JEC21,
               x=0.67,y=0.65,hjust=0,vjust=0,
               aes(label=Rlabel),
               colour="blue",size=5) + 
-    labs(x="aATG score, narrow",
-         y="dATG score, narrow") +
+    labs(x="aATG narrow score",
+         y="dATG narrow score") +
     panel_border()
 ```
 
-### Mitofates and d1ATG/d2ATG narrow score
 
-```{r plot_scores_nd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
+```{r dvsaATG_scoresw_mito_lmodel2_JEC21, dependson="dvsaATG_scoresn_mito_lmodel2_JEC21", fig.width=6.2,fig.height=3.5}
+
+dvsa_MA_summw_JEC21 <- dvsATGmito_JEC21 %>%
+    group_by(Pred_preseq) %>%
+    do(getMA(., d1.scorekw~aATG.scorekw)) %>%
+    mutate(Rlabel=paste0("R = -", round(sqrt(r.squared),digits=2)) )
+
+ggplot(data=dvsATGmito_JEC21,
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    facet_wrap(~Pred_preseq) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    # geom_smooth(method="lm",se=FALSE) + 
+    geom_abline(data=dvsa_MA_summw_JEC21,
+                aes(intercept=intercept,slope=slope),
+                colour="blue",size=1) + 
+    geom_text(data=dvsa_MA_summw_JEC21,
+              x=0.6,y=0.56,hjust=0,vjust=0,
+              aes(label=Rlabel),
+              colour="blue",size=5) + 
+    labs(x="aATG wide score",
+         y="dATG wide score") +
+    panel_border()
+```
+
+### Mitofates and d1ATG/d2ATG wide score
+
+```{r plot_scores_wd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8}
 
 sbandwidthn = 0.025
 
 ggplot(data=scores_JEC21 %>% 
-           filter(!is.na(d1.scorekn)) %>%
+           filter(!is.na(d1.scorekw)) %>%
            inner_join( mitofates_JEC21 %>% 
                            select(Gene,Prob_preseq,Pred_preseq)
            ),
        aes(linetype=Pred_preseq)) +
-    geom_density(aes(x=aATG.scorekn,colour="aATG"),
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
                  kernel="rectangular",bw=sbandwidthn) +
-    geom_density(aes(x=d1.scorekn,colour="dATG1"),
+    geom_density(aes(x=d1.scorekw,colour="dATG1"),
                  kernel="rectangular",bw=sbandwidthn) +
-    geom_density(aes(x=d2.scorekn,colour="dATG2"),
+    geom_density(aes(x=d2.scorekw,colour="dATG2"),
                  kernel="rectangular",bw=sbandwidthn) +
-    # geom_density(aes(x=u1.scorekn,colour="uATG"),
+    # geom_density(aes(x=u1.scorekw,colour="uATG"),
     #              kernel="rectangular",bw=sbandwidthn) +
     # geom_density(data=filter(scores_JEC21,Gene %in% hiTrans_JEC21),
     #              aes(x=aATG.scorekn,colour="aATG, top 5%"),
@@ -1153,25 +1191,25 @@ ggplot(data=scores_JEC21 %>%
                                  "dATG2"="green4") ) +
     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
                           labels=mitobreaks_JEC21)  + 
-    labs(x="ATG narrow score, JEC21") +
+    labs(x="ATG wide score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
 ```
 
-```{r plot_scores2_nd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8,results="show",eval=FALSE}
+```{r plot_scores2_wd1d2_mitofates_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"), fig.width=5,fig.height=1.8,results="show",eval=FALSE}
 
 sbandwidthn = 0.025
 
 melt_mito_scores_JEC21 <- 
     scores_JEC21 %>% 
-    filter(!is.na(d1.scorekn)) %>%
+    filter(!is.na(d1.scorekw)) %>%
     inner_join( mitofates_JEC21 %>% 
                     select(Gene,Prob_preseq,Pred_preseq)
     ) %>%
     select(Gene,Pred_preseq,
-           aATG=aATG.scorekn,dATG1=d1.scorekn,dATG2=d2.scorekn) %>%
-    gather(key="ATG",value="scorekn",aATG,dATG1,dATG2)
+           aATG=aATG.scorekw,dATG1=d1.scorekw,dATG2=d2.scorekw) %>%
+    gather(key="ATG",value="scorekw",aATG,dATG1,dATG2)
 
 
 # ggplot(data=melt_mito_scores_JEC21,
@@ -1190,7 +1228,7 @@ melt_mito_scores_JEC21 <-
 #           legend.title=element_blank())
 
 ggplot(data=melt_mito_scores_JEC21,
-       aes(x=ATG,linetype=Pred_preseq,colour=ATG,y=scorekn)) +
+       aes(x=ATG,linetype=Pred_preseq,colour=ATG,y=scorekw)) +
     geom_violin(kernel="rectangular",bw=sbandwidthn) +
     scale_colour_manual(values=c("aATG"="dodgerblue",
                                  "aATG, top 5%"="darkblue",
@@ -1199,7 +1237,7 @@ ggplot(data=melt_mito_scores_JEC21,
                                  "dATG2"="green4") ) +
     scale_linetype_manual(values=c("Yes"="solid","No"="dashed"),
                           labels=mitobreaks_JEC21)  + 
-    labs(x="ATG narrow score, JEC21") +
+    labs(x="ATG wide score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -1359,14 +1397,14 @@ For top 3315 / 50% of genes by mean RNA TPM.
 ```{r uATG_aATG_occ_JEC21, dependson="calc_scores_JEC21", fig.width=4.5,fig.height=4}
 ggplot(data=ribotbl_scoresenough_JEC21 %>%
            mutate(Type=factor(Type,levels=c("RPF","RNA"))),
-       aes(x=u1vsan,y=Upct.wide / Inct.wide)) +
+       aes(x=u1vsaw,y=Upct.wide / Inct.wide)) +
     geom_point(size=0.5,colour="grey50") +
     stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
-    labs(x="narrow score, difference uATG - aATG",
+    labs(x="wide score, difference uATG - aATG",
          y="Ribosome occupancy, ratio uATG / aATG") +
     panel_border()
 ```
@@ -2153,20 +2191,20 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                               levels=c("RPF","RNA"),
                               labels=c("Ribosome","RNA")
                               )),
-       aes(x=d1vsan,y=Nxct.wide / Inct.wide)) +
+       aes(x=d1vsaw,y=Nxct.wide / Inct.wide)) +
     geom_point(size=0.5,colour="grey50") +
         stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
-    labs(x="narrow score, difference dATG - aATG",
+    labs(x="wide score, difference dATG - aATG",
          y="Ribosome occupancy, ratio dATG / aATG") +
     facet_grid(Type ~ Sample) +
     panel_border()
     
 ```
 
-### dATG vs aATG ribosome occupancy and score, geometric mean across reps
+### dATG vs aATG ribosome occupancy and wide score, geometric mean across reps
 
 ```{r dATG_aATGn_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
 
@@ -2191,7 +2229,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
     
 ```
 
-### dATG vs aATG ribosome occupancy and score, geometric mean across reps
+### dATG vs aATG ribosome occupancy and wide score, geometric mean across reps
 
 ```{r dATG_aATGw_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
 
@@ -2242,45 +2280,78 @@ mitopredlist_H99 <- mitofates_H99 %>%
     .$Gene
 ```
 
-```{r dvsaATG_scoresn_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=3.5,fig.height=3.5,eval=FALSE}
+```{r dvsaATG_scoresw_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=3.5,fig.height=3.5,eval=FALSE}
 # repeat plot coloured by mitochondrial localization; didn't work.
 
 ggplot(data=scores_H99 %>% 
-           filter(!is.na(d1.scorekn)) %>%
+           filter(!is.na(d1.scorek1)) %>%
            inner_join( mitofates_H99 %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
                       ) %>%
            arrange(Pred_preseq),
-       aes(x=aATG.scorekn,y=d1.scorekn,colour=Pred_preseq,shape=Pred_preseq)) +
+       aes(x=aATG.scorekw,y=d1.scorekw,colour=Pred_preseq,shape=Pred_preseq)) +
     geom_diagline() +
     # geom_point(size=0.8) +
     geom_density_2d() +
     scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_H99) + 
     scale_shape_manual(values=c("Yes"=19,"No"=20)) + 
-    labs(x="aATG score, narrow",
-         y="dATG score, narrow") +
+    labs(x="aATG wide score",
+         y="dATG wide score") +
     theme(legend.position="none")
 ```
 
 ### Genes with high dATG vs aATG score are enriched in mitochondrial presequences
 
-```{r dvsaATG_scoresdiffn_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=5,fig.height=1.8}
+```{r dvsaATG_scoresdiffw_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"), fig.width=5,fig.height=1.8}
 
 ggplot(data=scores_H99 %>% 
-           filter(!is.na(d1.scorekn)) %>%
+           filter(!is.na(d1.scorekw)) %>%
            inner_join( mitofates_H99 %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
                       ) ,
-       aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
+       aes(x=d1vsaw,colour=Pred_preseq)) +
     geom_vline(xintercept=0,size=0.3) +
     geom_density(kernel="rectangular",bw=0.025) +
     scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
                         labels=mitobreaks_H99)  + 
-    labs(x="narrow score, difference dATG - aATG", colour="Mito. pred") +
+    labs(x="wide score, difference dATG - aATG", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
+
+### There are spectacular correlations between d1 score, d1 frame, and localization
+
+```{r dvsaATG_scoresdiffbar_mitofates_H99, dependson=c("calc_scores_H99","load_mitofates_H99"),fig.width=4.5,fig.height=4}
+# library(ggmosaic)
+ggplot(data=scores_H99 %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big_H99) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA_H99,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( mitofates_H99 %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.framefac,fill=Pred_preseq)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks_H99) +
+    labs(x="dATG frame", y="number of genes",fill="Mito. pred.") +
+    panel_border()
+```
+
 
 ### However, mito-localized genes do not have a distinctive aATG context
 
