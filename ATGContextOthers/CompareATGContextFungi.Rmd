@@ -115,16 +115,16 @@ infon_perbase_g
 ```
 
 
-```{r plot_inf_perbase,dependson="load_info_perbase",fig.height=4,fig.width=4}
-posbreaks <- c(1,10,13:15,24)
-poslabels <- c("-12","-3","A","T","G","+12")
+```{r plot_inf_perbase,dependson="load_info_perbase",fig.height=4,fig.width=3.6}
+posbreaks <- c(3,9,13:15,21)
+poslabels <- c("-10","-4","A","T","G","+9")
 inf_limits <- c(0,2)
 
 ggplot(data=infon_perbase_g,
        aes(x=i,y=Organism,fill=Infon) ) +
     geom_tile() + 
     scale_fill_gradient(low="white",high="darkblue",limits=inf_limits) + 
-    scale_x_continuous(breaks=posbreaks,labels=poslabels,expand=c(0,0)) + 
+    scale_x_continuous(breaks=posbreaks,labels=poslabels,expand=c(0,0),limits=c(2.5,21.5)) + 
     scale_y_discrete(expand=c(0,0),limits=rev(Orglevels)) + 
     facet_wrap(~Genes,ncol=1,scales="free_y") + 
     theme(axis.title=element_blank())
