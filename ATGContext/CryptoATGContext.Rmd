@@ -664,7 +664,7 @@ ggplot(data=scores_JEC21) +
          colour="context") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
-          legend.position=c(0.8,0.8))
+          legend.position=c(0.7,0.8))
 ```
 
 ### Most u1ATG scores are less than aATG scores
@@ -679,7 +679,7 @@ ggplot(data=scores_JEC21) +
          colour="context") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
-          legend.position=c(0.8,0.8))
+          legend.position=c(0.7,0.8))
 ```
 
 ### For highly translated genes, most dATG scores are much less than aATG
@@ -1877,7 +1877,7 @@ ggplot(data=scores_H99) +
          colour="context") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
-          legend.position=c(0.8,0.8))
+          legend.position=c(0.7,0.8))
 ```
 
 ### Most u1ATG scores are less than aATG scores
@@ -1892,7 +1892,7 @@ ggplot(data=scores_H99) +
          colour="context") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
-          legend.position=c(0.8,0.8))
+          legend.position=c(0.7,0.8))
 ```
 
 ### For highly translated genes, most dATG scores are much less than aATG
