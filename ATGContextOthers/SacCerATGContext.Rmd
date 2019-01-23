@@ -377,10 +377,11 @@ ggplot(data=scores) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak narrow score, Sc") +
+    labs(x="ATG narrow Kozak score, Sc") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
+
 ```
 
 ### Plot against wide consensus (-10 to ATG)
@@ -403,7 +404,7 @@ ggplot(data=scores) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak wide score, Sc") +
+    labs(x="ATG wide Kozak score, Sc") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())

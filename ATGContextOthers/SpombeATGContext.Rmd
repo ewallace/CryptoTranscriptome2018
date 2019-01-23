@@ -358,11 +358,38 @@ ggplot(data=scores) +
                                  "aATG, top 5%"="darkblue",
                                  # "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, Sp") +
+    labs(x="ATG narrow Kozak score, Sp") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
 ```
+
+### Plot against wide consensus (-10 to ATG)
+
+```{r plot_scores_w, dependson="calc_scores", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekw,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=u1.scorekw,colour="uATG"),
+                kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores,Gene %in% hiTrans),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG wide Kozak score, Sp") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
 
 ## Mutual information of different positions around ATG
 

@@ -398,7 +398,7 @@ ggplot(data=scores_JEC21) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG narrow score, JEC21") +
+    labs(x="ATG narrow Kozak score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -468,7 +468,7 @@ ggplot(data=ctbl_big_JEC21 %>%
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
 
-### Plot against wide consensus (-9 to +3 from ATG)
+### Plot against wide consensus (-10 to ATG)
 
 ```{r plot_scores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
 
@@ -488,7 +488,7 @@ ggplot(data=scores_JEC21) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG wide score, JEC21") +
+    labs(x="ATG wide Kozak score, JEC21") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -1746,7 +1746,7 @@ ggplot(data=scores_H99) +
           legend.title=element_blank())
 ```
 
-### Plot against wide consensus (-9 to +3 from ATG)
+### Plot against wide consensus (-10 to ATG)
 
 ```{r plot_scores_w_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
 
@@ -1766,7 +1766,7 @@ ggplot(data=scores_H99) +
                                  "aATG, top 5%"="darkblue",
                                  "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG wide score, H99") +
+    labs(x="ATG wide Kozak score, H99") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
