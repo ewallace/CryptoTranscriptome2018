@@ -944,7 +944,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                               )),
        aes(x=d1vsan,y=Nxct.wide / Inct.wide)) +
     geom_point(size=0.5,colour="grey50") +
-        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
@@ -969,7 +969,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                               )),
        aes(x=d1vsaScore,y=d1vsaRibo)) +
     geom_point(size=0.5,colour="grey50") +
-        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,50),
                   oob=scales::squish) + 
@@ -1214,14 +1214,14 @@ ggplot(data=melt_mito_scores_JEC21,
 .make_uATGfact <- function(Ct, Ctfar) {
     if (Ct == 0) {
         rfac <-  "0"
-    } else if (Ct == 1 & Ctfar == 0 ) {
-        rfac <- "1c"
-    } else if (Ct == 1 & Ctfar == 1) {
-        rfac <- "1f"
-    } else if (Ct >= 2 & Ctfar == 0 ) {
-        rfac <- "2+c"
-    } else if (Ct >=2 & Ctfar >= 1) {
-        rfac <- "2+f"
+    } else if (Ct >= 1 & Ctfar == 0 ) {
+        rfac <- "1+c"
+    } else if (Ct >= 1 & Ctfar >= 1) {
+        rfac <- "1+f"
+    # } else if (Ct >= 2 & Ctfar == 0 ) {
+    #     rfac <- "2+c"
+    # } else if (Ct >=2 & Ctfar >= 1) {
+    #     rfac <- "2+f"
     } else {
         rfac <- NA
     }
@@ -1230,9 +1230,10 @@ ggplot(data=melt_mito_scores_JEC21,
 
 make_uATGfact <- function(Ct,Ctfar) {
     sapply(1:length(Ct), function(i) .make_uATGfact(Ct[i],Ctfar[i])) %>%
-        factor(levels=c("0","1c","1f","2+c","2+f"),
-               labels=c("0","1\nclose","1\nfar","2+\nclose","2+\nfar"))
+        factor(levels=c("0","1+c","1+f"),
+               labels=c("0","1+\nclose","1+\nfar"))
 }
+
 
 uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
     dplyr::rename(Gene=gene) %>%
@@ -1282,7 +1283,7 @@ ggplot(data=ribo_uct_JEC21,
 
 ### uATGs associated with lower translation efficiency are over 20nt from TSS
 
-```{r uATGmin20_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=3.5,fig.height=3.5,results="show"}
+```{r uATGmin20_TE_JEC21, dependson="uATG_RPF_JEC21", fig.width=2.5,fig.height=3.5,results="show"}
 # ribo_uct_JEC21
 ggplot(data=ribo_uct_JEC21,
        aes(x=uATGfac,y=TE)) +
@@ -1297,6 +1298,7 @@ ggplot(data=ribo_uct_JEC21,
 ### uATG score does not strongly affect TE
 
 We suspect that uATG is associated with lower TE if the uATG has
+
 * position at least 20nt downstream from TSS
 * higher score
 
@@ -1309,14 +1311,14 @@ ggplot(data=ribo_uct_JEC21 %>%
     filter(uATGCt == 1 ) %>%
         left_join(ctbl_big_JEC21) %>%
         mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500))),
-       aes(x=u1.scorekn,y=TE)) +
+       aes(x=u1.scorekw,y=TE)) +
     facet_wrap(~u1.posTSS20) + 
     geom_point(colour="grey50",size=0.7) +
     stat_smooth(method="lm") + 
     scale_y_log10nice("TE of aORF",
                       limits=c(0.05,10),
                       oob=scales::squish) +
-    labs(x="uATG score")
+    labs(x="uATG wide score")
 ```
 
 ### List of genes with low TE and uATGs far from TSS
@@ -1359,7 +1361,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
            mutate(Type=factor(Type,levels=c("RPF","RNA"))),
        aes(x=u1vsan,y=Upct.wide / Inct.wide)) +
     geom_point(size=0.5,colour="grey50") +
-    stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+    stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
@@ -2153,7 +2155,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                               )),
        aes(x=d1vsan,y=Nxct.wide / Inct.wide)) +
     geom_point(size=0.5,colour="grey50") +
-        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
@@ -2166,7 +2168,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
 
 ### dATG vs aATG ribosome occupancy and score, geometric mean across reps
 
-```{r dATG_aATG_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
+```{r dATG_aATGn_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
 
 ggplot(data=ribotbl_scoresenough_H99 %>%
            group_by(Gene,Type) %>%
@@ -2178,11 +2180,36 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                               )),
        aes(x=d1vsaScore,y=d1vsaRibo)) +
     geom_point(size=0.5,colour="grey50") +
-        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=1) + 
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,50),
                   oob=scales::squish) + 
-    labs(x="Kozak score,\ndifference dATG - aATG",
+    labs(x="Kozak narrow score,\ndifference dATG - aATG",
+         y="Ribosome occupancy, ratio dATG / aATG") +
+    facet_grid(Type ~ .) +
+    panel_border()
+    
+```
+
+### dATG vs aATG ribosome occupancy and score, geometric mean across reps
+
+```{r dATG_aATGw_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
+
+ggplot(data=ribotbl_scoresenough_H99 %>%
+           group_by(Gene,Type) %>%
+           summarize(d1vsaScore = median(d1vsaw),
+                     d1vsaRibo = logmean(Nxct.wide / Inct.wide)) %>%
+           mutate(Type=factor(Type,
+                              levels=c("RPF","RNA"),
+                              labels=c("Ribosome","RNA")
+                              )),
+       aes(x=d1vsaScore,y=d1vsaRibo)) +
+    geom_point(size=0.5,colour="grey50") +
+        stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,50),
+                  oob=scales::squish) + 
+    labs(x="Kozak wide score,\ndifference dATG - aATG",
          y="Ribosome occupancy, ratio dATG / aATG") +
     facet_grid(Type ~ .) +
     panel_border()
@@ -2280,14 +2307,14 @@ ggseqlogo(data=ctbl_big_H99 %>%
 .make_uATGfact <- function(Ct, Ctfar) {
     if (Ct == 0) {
         rfac <-  "0"
-    } else if (Ct == 1 & Ctfar == 0 ) {
-        rfac <- "1c"
-    } else if (Ct == 1 & Ctfar == 1) {
-        rfac <- "1f"
-    } else if (Ct >= 2 & Ctfar == 0 ) {
-        rfac <- "2+c"
-    } else if (Ct >=2 & Ctfar >= 1) {
-        rfac <- "2+f"
+    } else if (Ct >= 1 & Ctfar == 0 ) {
+        rfac <- "1+c"
+    } else if (Ct >= 1 & Ctfar >= 1) {
+        rfac <- "1+f"
+    # } else if (Ct >= 2 & Ctfar == 0 ) {
+    #     rfac <- "2+c"
+    # } else if (Ct >=2 & Ctfar >= 1) {
+    #     rfac <- "2+f"
     } else {
         rfac <- NA
     }
@@ -2296,8 +2323,8 @@ ggseqlogo(data=ctbl_big_H99 %>%
 
 make_uATGfact <- function(Ct,Ctfar) {
     sapply(1:length(Ct), function(i) .make_uATGfact(Ct[i],Ctfar[i])) %>%
-        factor(levels=c("0","1c","1f","2+c","2+f"),
-               labels=c("0","1\nclose","1\nfar","2+\nclose","2+\nfar"))
+        factor(levels=c("0","1+c","1+f"),
+               labels=c("0","1+\nclose","1+\nfar"))
 }
 
 uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
@@ -2348,7 +2375,7 @@ ggplot(data=ribo_uct_H99,
 
 ### uATGs associated with lower translation efficiency are over 20nt from TSS
 
-```{r uATGmin20_TE_H99, dependson="uATG_RPF_H99", fig.width=3.5,fig.height=3.5,results="show"}
+```{r uATGmin20_TE_H99, dependson="uATG_RPF_H99", fig.width=2.5,fig.height=3.5,results="show"}
 ggplot(data=ribo_uct_H99,
        aes(x=uATGfac,y=TE)) +
     geom_jitter(colour="grey50",size=0.7) +
@@ -2357,6 +2384,32 @@ ggplot(data=ribo_uct_H99,
                       limits=c(0.05,10),expand=c(0,0),
                       oob=scales::squish) +
     labs(x="uATG count and position\nrelative to TSS")
+```
+
+### uATG score does not strongly affect TE
+
+We suspect that uATG is associated with lower TE if the uATG has
+
+* position at least 20nt downstream from TSS
+* higher score
+
+This figure shows that, for genes with only 1 uATG, this correlation is weak.
+
+```{r uATG_scoreTE_H99, dependson="uATG_RPF_H99", fig.width=4.5,fig.height=2.5,results="show"}
+
+ggplot(data=ribo_uct_H99 %>%
+    inner_join(scores_H99) %>%
+    filter(uATGCt == 1 ) %>%
+        left_join(ctbl_big_H99) %>%
+        mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500))),
+       aes(x=u1.scorekw,y=TE)) +
+    facet_wrap(~u1.posTSS20) + 
+    geom_point(colour="grey50",size=0.7) +
+    stat_smooth(method="lm") + 
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.1,5),
+                      oob=scales::squish) +
+    labs(x="uATG wide score")
 ```
 
 ### List of genes with low TE and uATGs far from TSS
@@ -2399,7 +2452,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
        aes(x=u1vsan,y=Upct.wide / Inct.wide)) +
     geom_point(size=0.5,colour="grey50") +
     stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",
-                span=1) + 
+                span=0.8) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,100),
                   oob=scales::squish) + 
@@ -2408,6 +2461,28 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
          y="Ribosome occupancy, ratio uATG / aATG") +
     panel_border()
 ```
+
+### uATG vs aATG ribosome occupancy depends on the context
+
+For top 3315 / 50% of genes by mean RNA TPM.
+
+```{r uATG_aATGw_occ_H99, dependson="calc_scores_H99", fig.width=4.5,fig.height=4}
+ggplot(data=ribotbl_scoresenough_H99 %>%
+           filter(Sample %in% c("H99r1","H99r2")) %>%
+           mutate(Type=factor(Type,levels=c("RPF","RNA"))),
+       aes(x=u1vsaw,y=Upct.wide / Inct.wide)) +
+    geom_point(size=0.5,colour="grey50") +
+    stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",
+                span=0.8) + 
+    scale_y_log10(breaks=c(0.1,1,10),
+                  limits=c(0.05,100),
+                  oob=scales::squish) + 
+    facet_grid(Type ~ Sample) +
+    labs(x="wide score, difference uATG - aATG",
+         y="Ribosome occupancy, ratio uATG / aATG") +
+    panel_border()
+```
+
 
 <a href="#top">Back to table of contents</a>
 
