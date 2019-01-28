@@ -13,6 +13,8 @@ output:
 
 This presents the analysis of Neurospora start codon usage and context. This uses the N. crassa translation estimates from Ivanov 2017, strain FGSC 2489.
 
+For "enough RNA" we pick the top ~40% (4000) by RNA abundance, because the N. crassa genome is much larger (9722 genes) than the other fungi we are addressing.
+
 ### Load Packages
 
 ```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
@@ -34,14 +36,15 @@ source("../SharedScripts/sharedScripts.R")
 
 ```{r load_ribosum,results="show"}
 
-tpms_Yu <- read_tsv("data_in/ExpressionTranslation/NeurosporaYu2015_TPMs_collated.tsv") %>%
+tpms_Yu <- read_tsv("data_in/ExpressionTranslation/Neurospora_Yu2015_TPMs_collated.tsv") %>%
     dplyr::rename(Gene=ORF)
 
 tpms_Iv <- read_tsv("data_in/ExpressionTranslation/Neurospora_Ivanov2017_TPMs_collated.tsv") %>%
     dplyr::rename(Gene=ORF)
 
 ribosum_Yu <- tpms_Yu %>%
-    mutate(RPF=(WT+Opt)/2)
+    mutate(RPF=(WT+Opt)/2) %>%
+    dplyr::rename(RNA=WTRNA)
 
 ribosum_Iv <- tpms_Iv %>%
     mutate(RPF=(WT1A+WT1B+WT2A+WT2B+HS1A+HS1B)/6)
@@ -61,15 +64,15 @@ midTrans <- ribosum %>%
     head(n=2000) %>%
     .$Gene
 
-nonterribleTrans <- ribosum %>%
-    arrange(desc(RPF)) %>%
-    head(n=7500) %>%
-    .$Gene
-
 # nonterribleTrans <- ribosum %>%
-#     arrange(desc(RNA)) %>%
-#     head(n=5000) %>%
+#     arrange(desc(RPF)) %>%
+#     head(n=8000) %>%
 #     .$Gene
+
+enoughRNA <- ribosum_Yu %>%
+    arrange(desc(RNA)) %>%
+    head(n=4000) %>%
+    .$Gene
 ```
 
 Reasonably, NCU01528 is GAPDH. NCU10042 is enolase-1. NCU02003 is elongation factor 1-alpha. NCU02193 is Pdc1. NCU01754 is Adh1.
@@ -80,15 +83,38 @@ NCU05495/ccg-16 is CVNH domain-containing protein. NCU08332/hex-1 is isworonin b
 
 Several hypothetical proteins (NCU16635/NCU04276). Wow. check footprint locations.
 
-#### Check replicability
+#### Check RPFs vs RNA in Yu 2015
 
-```{r scatter_ribo_Yu,dependson="load_ribosum",results="show",fig.width=4,fig.height=4,eval=FALSE}
-ggplot(data=tpms_Yu) + 
-    geom_point(aes(x=WT,y=Opt)) +
-    scale_loglog()
+```{r scatter_ribo_Yu,dependson="load_ribosum",results="show",fig.width=3.9,fig.height=4.1}
+# ggplot(data=tpms_Yu) + 
+#     geom_point(aes(x=WT,y=Opt)) +
+#     scale_loglog()
+
+ggplot(data=tpms_Yu,aes(x=WTRNA,y=WT)) + 
+    geom_diagline() + 
+    geom_point(colour="grey50",size=0.8) +
+    geom_text_repel(aes(label=str_sub(Gene,start=4L)),
+                    data=tpms_Yu %>% 
+                        filter( (WTRNA > 1e3 & WT < WTRNA / 100) | WT > 1e4 ) 
+                    ) + 
+    scale_loglog() +
+    labs(x="WT RNA TPM", y="WT RPF TPM")
 ```
 
-```{r scatter_ribo,dependson="load_ribosum",results="show",fig.width=8,fig.height=8}
+Many genes have RNA << RPF.  They could be misannotated, or translationally repressed. E.G. NCU04987, NCU16627, NCU06322, NCU08491.
+
+The numbers for NCU04987 are so absurd that it is surely a misannotation of a ncRNA.  NCU16627 also looks very strange.
+
+```{r cache=FALSE}
+tpms_Yu %>%
+    filter(Gene %in% c("NCU06110","NCU01528","NCU09345","NCU02003",
+                       "NCU01187","NCU04987","NCU16627","NCU06322","NCU08491"))
+```
+
+
+#### Check replicability
+
+```{r scatter_ribo,dependson="load_ribosum",results="show",fig.width=10,fig.height=10}
 library(GGally)
 ggpairs(left_join(tpms_Yu,tpms_Iv) %>%
             select(-Gene) %>%
@@ -322,7 +348,7 @@ scores <-
 
 # ribotbl_scoresenough <-
 #     ribosum %>%
-#     filter(Gene %in% nonterribleTrans) %>%
+#     filter(Gene %in% enoughRNA) %>%
 #     # left_join(ribotbl,by="Gene") %>% 
 #     left_join(scores,by="Gene")
 
@@ -635,7 +661,7 @@ Files with high difference in narrow score, filtered for reasonable amounts of R
 highdiffn_dvsaATG_enoughinframe <- 
     highdiffn_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame==0) %>%
+    filter(Gene %in% enoughRNA, d1.frame==0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
 highdiffn_dvsaATG_enoughinframe
@@ -645,7 +671,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In N. crassa:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 75% by RNA translation
+#   - in top 40% by RNA abundance
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
@@ -670,7 +696,7 @@ Files with high difference in narrow score, filtered for reasonable amounts of R
 highdiffn_dvsaATG_enoughoutframe <- 
     highdiffn_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame!=0) %>%
+    filter(Gene %in% enoughRNA, d1.frame!=0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
 highdiffn_dvsaATG_enoughoutframe
@@ -680,7 +706,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In N. crassa:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 75% by RNA translation
+#   - in top 40% by RNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
@@ -698,13 +724,13 @@ highdiffn_dvsaATG_enoughoutframe %>%
 
 ### dATG in frame with ATG, wide
 
-Files with high difference in wide score, filtered for reasonable amounts of translation, in frame. Saved to *dvsaATG_highdiffw_inframe_Nc.txt*.
+Files with high difference in wide score, filtered for top 40% by RNA abundance, in frame. Saved to *dvsaATG_highdiffw_inframe_Nc.txt*.
 
 ```{r highdiffw_dvsaATG_inframe,dependson="dvsaATG_scoresn",results="show"}
 highdiffw_dvsaATG_enoughinframe <- 
     highdiffw_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame==0) %>%
+    filter(Gene %in% enoughRNA, d1.frame==0) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
 highdiffw_dvsaATG_enoughinframe
@@ -714,7 +740,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In N. crassa:
 #   - in top 5% by difference, aATG.scorekw - d1.scorekw
-#   - in top 75% by RNA translation
+#   - in top 40% by RNA abundance
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
@@ -732,14 +758,14 @@ highdiffw_dvsaATG_enoughinframe %>%
 
 ### dATG out of frame with ATG, wide
 
-Files with high difference in wide score, filtered for reasonable amounts of translation, out of frame. Saved to *dvsaATG_highdiffw_outframe_Nc.txt*.
+Files with high difference in wide score, filtered for top 40% by RNA abundance, out of frame. Saved to *dvsaATG_highdiffw_outframe_Nc.txt*.
 
 
 ```{r highdiffw_dvsaATG_outframe,dependson="dvsaATG_scoresn",results="show"}
 highdiffw_dvsaATG_enoughoutframe <- 
     highdiffw_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame!=0) %>%
+    filter(Gene %in% enoughRNA, d1.frame!=0) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
 highdiffw_dvsaATG_enoughoutframe
@@ -749,7 +775,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In N. crassa:
 #   - in top 5% by difference, aATG.scorekw - d1.scorekw
-#   - in top 75% by RNA translation
+#   - in top 40% by RNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
@@ -807,6 +833,38 @@ ggplot(data=scores %>%
     labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+### Spectacular correlations between d1 score, d1 frame, and localization
+
+```{r dvsaATG_scoresdiffbar_mitofates, dependson=c("calc_scores","load_mitofates"),fig.width=4.5,fig.height=4}
+
+ggplot(data=scores %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( mitofates %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.framefac,fill=Pred_preseq)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks) +
+    labs(x="dATG frame", y="number of genes",fill="Mito. pred.") +
+    panel_border()
 ```
 
 ### Nc mito-localized genes also do not have a distinctive aATG context

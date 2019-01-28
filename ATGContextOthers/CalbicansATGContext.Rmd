@@ -34,14 +34,17 @@ source("../SharedScripts/sharedScripts.R")
 
 ```{r load_ribosum,results="show"}
 
-tpms <- read_tsv("data_in/ExpressionTranslation/CalbicansNuzzey2014_tpms.tsv") %>%
-    dplyr::rename(Gene=ORF,RPF=tpm)
+tpms <- read_tsv("data_in/ExpressionTranslation/Calbicans_Muzzey2015_TPMs_collated.tsv") %>%
+    dplyr::rename(Gene=ORF) %>%
+    mutate(RPF = (WTA1 + WTA2 + 2 * WTB) / 4, 
+           RNA = ( WTARNA + WTBRNA ) / 2 )
 
 
 tpms %>%
     arrange(desc(RPF)) 
 
-ribosum <- tpms %>% select(Gene,RPF)
+ribosum <- tpms %>% 
+    select(Gene,RPF,RNA)
 
 hiTrans <- ribosum %>%
     arrange(desc(RPF)) %>%
@@ -53,20 +56,20 @@ midTrans <- ribosum %>%
     head(n=3000) %>%
     .$Gene
 
-nonterribleTrans <- ribosum %>%
-    arrange(desc(RPF)) %>%
-    head(n=4500) %>%
-    .$Gene
-
-# enoughRNA <- ribosum %>%
-#     arrange(desc(RNA)) %>%
-#     head(n=5000) %>%
+# nonterribleTrans <- ribosum %>%
+#     arrange(desc(RPF)) %>%
+#     head(n=4500) %>%
 #     .$Gene
+
+enoughRNA <- ribosum %>%
+    arrange(desc(RNA)) %>%
+    head(n=3000) %>%
+    .$Gene
 ```
 
 ### Ribosome occupancy mostly tracks RNA abundance
 
-```{r plot_TE,dependson="load_ribosum",fig.height=3.9,fig.width=4.1,eval=FALSE}
+```{r plot_TE,dependson="load_ribosum",fig.height=3.9,fig.width=4.1}
 TE_unusual <- 
     ribosum %>%
     filter( (RPF > 1.8e4) |
@@ -575,7 +578,7 @@ highdiffn_dvsaATG %>%
 
 ### dATG in frame with ATG, narrow
 
-Files with high difference in narrow score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNA levels here.
+Files with high difference in narrow score, filtered for top 50% by mRNA abundance, in frame.
 
 Saved to *dvsaATG_highdiffn_inframe_Ca.txt*.
 
@@ -583,7 +586,7 @@ Saved to *dvsaATG_highdiffn_inframe_Ca.txt*.
 highdiffn_dvsaATG_enoughinframe <- 
     highdiffn_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame==0) %>%
+    filter(Gene %in% enoughRNA, d1.frame==0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
 highdiffn_dvsaATG_enoughinframe
@@ -593,7 +596,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In C. albicans SC5314:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 75% by translation
+#   - in top 50% by mRNA abundance
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
@@ -614,7 +617,7 @@ See more below.
 
 ### dATG out of frame with ATG, narrow
 
-Files with high difference in narrow score, filtered for reasonable amounts of translation, out of frame. 
+Files with high difference in narrow score, filtered for top 50% by mRNA abundance, out of frame. 
 
 Saved to *dvsaATG_highdiffn_outframe_Ca.txt*.
 
@@ -622,7 +625,7 @@ Saved to *dvsaATG_highdiffn_outframe_Ca.txt*.
 highdiffn_dvsaATG_enoughoutframe <- 
     highdiffn_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame!=0) %>%
+    filter(Gene %in% enoughRNA, d1.frame!=0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
 highdiffn_dvsaATG_enoughoutframe
@@ -632,7 +635,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In C. albicans SC5314:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 75% by translation
+#   - in top 50% by mRNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
@@ -650,7 +653,7 @@ highdiffn_dvsaATG_enoughoutframe %>%
 
 ### dATG in frame with ATG, wide
 
-Files with high difference in wide score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNA levels here.
+Files with high difference in wide score, filtered for top 50% by mRNA abundance, in frame.
 
 Saved to *dvsaATG_highdiffw_inframe_Ca.txt*.
 
@@ -658,7 +661,7 @@ Saved to *dvsaATG_highdiffw_inframe_Ca.txt*.
 highdiffw_dvsaATG_enoughinframe <- 
     highdiffw_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame==0) %>%
+    filter(Gene %in% enoughRNA, d1.frame==0) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
 highdiffw_dvsaATG_enoughinframe
@@ -668,7 +671,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In C. albicans SC5314:
 #   - in top 5% by difference, aATG.scorekw - d1.scorekw
-#   - in top 75% by translation
+#   - in top 50% by mRNA abundance
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
@@ -686,7 +689,7 @@ highdiffw_dvsaATG_enoughinframe %>%
 
 ### dATG out of frame with ATG, wide
 
-Files with high difference in wide score, filtered for reasonable amounts of translation, out of frame. 
+Files with high difference in wide score, filtered for top 50% by mRNA abundance, out of frame. 
 
 Saved to *dvsaATG_highdiffw_outframe_Ca.txt*.
 
@@ -694,7 +697,7 @@ Saved to *dvsaATG_highdiffw_outframe_Ca.txt*.
 highdiffw_dvsaATG_enoughoutframe <- 
     highdiffw_dvsaATG %>%
     left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans, d1.frame!=0) %>%
+    filter(Gene %in% enoughRNA, d1.frame!=0) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
 highdiffw_dvsaATG_enoughoutframe
@@ -704,7 +707,7 @@ cat(
 # Genes with in-frame high-score dATGs
 # In C. albicans SC5314:
 #   - in top 5% by difference, aATG.scorekw - d1.scorekw
-#   - in top 75% by translation
+#   - in top 50% by mRNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
@@ -764,6 +767,39 @@ ggplot(data=scores %>%
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
 
+
+### Correlations between d1 score, d1 frame, and localization
+
+```{r dvsaATG_scoresdiffbar_mitofates, dependson=c("calc_scores","load_mitofates"),fig.width=4.5,fig.height=4}
+
+ggplot(data=scores %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( mitofates %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.framefac,fill=Pred_preseq)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks) +
+    labs(x="dATG frame", y="number of genes",fill="Mito. pred.") +
+    panel_border()
+```
+
 ### Ca mito-localized genes also do not have a distinctive aATG context
 
 Although the +5 T is striking.
@@ -821,7 +857,7 @@ highdiffn_dvsaATG %>%
 * C6_00390W_A tRNA-Serine synthetase, there is another paralog C3_02780W_A, homology to cyto SES1, and a mito DIA4 homolog.
 
 
-Several of these are conserved (ALA1, VAS1, PUS7, GLOs)!
+Several of these are conserved (ALA1, VAS1, PUS7, GLOs, GLR)!
 
 
 
