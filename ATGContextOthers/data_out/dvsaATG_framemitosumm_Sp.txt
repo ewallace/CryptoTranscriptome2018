@@ -1,0 +1,17 @@
+enoughR	d1vsaw0p1	d1.framefac	Pred_preseq	n
+Yes	d1lo	In	No	451
+Yes	d1lo	In	Yes	51
+Yes	d1lo	Out	No	1765
+Yes	d1lo	Out	Yes	132
+Yes	d1hi	In	No	26
+Yes	d1hi	In	Yes	4
+Yes	d1hi	Out	No	103
+Yes	d1hi	Out	Yes	12
+No	d1lo	In	No	403
+No	d1lo	In	Yes	34
+No	d1lo	Out	No	1770
+No	d1lo	Out	Yes	108
+No	d1hi	In	No	31
+No	d1hi	In	Yes	4
+No	d1hi	Out	No	171
+No	d1hi	Out	Yes	11

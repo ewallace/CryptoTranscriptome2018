@@ -411,3 +411,31 @@ plot_mutinfo <- function(MIpos,
 venn <- function(...) {
     venn.diagram(x=list(...),filename=NULL,margin=0.1) %>% grid.draw
 }
+
+
+######
+## Count dATG vs ATG score, d1 frame, mito pre, enough RNA
+calc_dvsaATG_framemitosumm <- function(scores=scores,
+                                       ctbl_big=ctbl_big,
+                                       enoughRNA=enoughRNA,
+                                       mitofates=mitofates) {
+    scores %>% 
+        filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+        left_join(ctbl_big) %>% 
+        mutate(d1vsaw0p1 = cut(d1vsaw,
+                               breaks=c(-0.5,0.1,0.5),
+                               labels=c("d1lo",
+                                        "d1hi")),
+               d1.framefac = factor(d1.frame==0,
+                                    levels=c(TRUE,FALSE),
+                                    labels=c("In","Out")),
+               enoughR = factor(Gene %in% enoughRNA,
+                                levels=c(TRUE,FALSE),
+                                labels=c("Yes","No"))
+        ) %>%
+        inner_join( mitofates %>% 
+                        select(Gene,Prob_preseq,Pred_preseq)
+        ) %>%
+        group_by(enoughR,d1vsaw0p1,d1.framefac,Pred_preseq) %>%
+        tally()
+}

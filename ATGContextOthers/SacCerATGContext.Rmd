@@ -851,6 +851,18 @@ ggplot(data=scores %>%
     panel_border()
 ```
 
+### Count dATG vs ATG score, d1 frame, mito pre, enough RNA
+
+```{r dvsaATG_framemitosumm, dependson=c("calc_scores","load_mitofates"),results="show",fig.width=2.5,fig.height=2}
+dvsaATG_framemitosumm <- 
+    calc_dvsaATG_framemitosumm(scores,ctbl_big,
+                               enoughRNA,mitofates)
+
+dvsaATG_framemitosumm
+
+write_tsv(dvsaATG_framemitosumm,
+          "data_out/dvsaATG_framemitosumm_Sc.txt")
+```
 
 ### SacCer mito-localized genes also do not have a distinctive aATG context
 

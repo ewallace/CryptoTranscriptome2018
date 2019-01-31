@@ -262,3 +262,68 @@ ggplot(data=infon_tblv4,aes(x=Genes,y=Infon,fill=Organism)) +
     # panel_border() + 
     theme(panel.grid.major.y=element_line(colour="grey90"))
 ```
+
+
+## Compare dATG vs aATG score, dATG frame, and mito localization
+
+For enoughRNA in each organism
+
+
+### Load data
+
+```{r load_dvsa,results="show"}
+Orglevels <- c("Cn","Cd","Nc","Sp","Ca","Sc")
+# infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+
+dvsa_tbl <- bind_rows(
+    read_tsv("data_out/dvsaATG_framemitosumm_Sc.txt") %>% 
+        mutate(Organism="Sc"),
+    read_tsv("data_out/dvsaATG_framemitosumm_Ca.txt") %>% 
+        mutate(Organism="Ca"),
+    read_tsv("data_out/dvsaATG_framemitosumm_Nc.txt") %>% 
+        mutate(Organism="Nc"),
+    read_tsv("data_out/dvsaATG_framemitosumm_Sp.txt") %>% 
+        mutate(Organism="Sp"),
+    read_tsv("../ATGContext/data_out/dvsaATG_framemitosumm_H99.txt") %>% 
+        mutate(Organism="Cn"),
+    read_tsv("../ATGContext/data_out/dvsaATG_framemitosumm_JEC21.txt") %>% 
+        mutate(Organism="Cd")
+) %>%
+    mutate(Organism=factor(Organism,levels=Orglevels) )
+
+dvsa_tbl
+```
+
+### Proportion of dATG vs ATG score, d1 frame, mito pre
+
+```{r dvsaATG_framemitosumm, dependson="load_dvsa",results="show",fig.width=4.5,fig.height=4}
+dvsaATG_framemitosummspread <-
+    dvsa_tbl %>%
+    unite(d1f_mito,d1.framefac,Pred_preseq) %>%
+    spread(key=d1f_mito,value=n) %>%
+    mutate(d1vsaw0p1=factor(d1vsaw0p1,
+                            levels=c("d1lo","d1hi"),
+                            labels=c("ATG score\nd < a + 0.1",
+                                     "ATG score\na + 0.1 < d")),
+           enoughR=factor(enoughR,
+                          levels=c("Yes","No"),
+                          labels=c("enough RNA","not enough"))
+    )
+
+ggplot(data=dvsaATG_framemitosummspread ) +
+    geom_col(aes(x=Organism,
+                 y=(In_No+In_Yes)/(In_No+In_Yes+Out_No+Out_Yes),
+                 fill="Yes") ) +
+    geom_col(aes(x=Organism,
+                 y=(In_No)/(In_No+In_Yes+Out_No+Out_Yes),
+                 fill="No") ) +
+    scale_fill_manual("Mito. pred.",values=c("Yes"="magenta","No"="grey50")) + 
+    scale_y_continuous(breaks=c(0,1/3,2/3,1),
+                       labels=c("0","1/3","2/3","1"),
+                       expand=c(0,0)) +
+    labs(y="dATG prop. in frame",x="dATG vs aATG score") +
+    # facet_wrap(~d1vsaw0p1) +
+    facet_grid(enoughR~d1vsaw0p1) +
+    panel_border() +
+    theme(panel.grid.major.y = element_line(colour="grey90"))
+```

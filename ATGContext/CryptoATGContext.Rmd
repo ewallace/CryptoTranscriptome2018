@@ -1071,6 +1071,33 @@ ggplot(data=scores_JEC21 %>%
     panel_border()
 ```
 
+### Count dATG vs ATG score, d1 frame, mito pre, enough RNA
+
+```{r dvsaATG_framemitosumm_JEC21, dependson=c("calc_scores_JEC21","load_mitofates_JEC21"),results="show",fig.width=2.5,fig.height=2}
+dvsaATG_framemitosumm_JEC21 <- 
+    calc_dvsaATG_framemitosumm(scores_JEC21,ctbl_big_JEC21,
+                               enoughRNA_JEC21,mitofates_JEC21)
+
+dvsaATG_framemitosumm_JEC21
+
+write_tsv(dvsaATG_framemitosumm_JEC21,
+          "data_out/dvsaATG_framemitosumm_JEC21.txt")
+
+# dvsaATG_framemitosummspread_JEC21 <- 
+#     dvsaATG_framemitosumm_JEC21 %>%
+#     unite(d1f_mito,d1.framefac,Pred_preseq) %>%
+#     spread(key=d1f_mito,value=n)
+# 
+# ggplot(data=dvsaATG_framemitosummspread_JEC21 %>% filter(enoughRNA=="Yes")) +
+#     geom_col(aes(x=d1vsaw0p1, 
+#                  y=(In_No+In_Yes)/(In_No+In_Yes+Out_No+Out_Yes)),
+#              fill="grey50") +
+#     geom_col(aes(x=d1vsaw0p1, 
+#                  y=(In_Yes)/(In_No+In_Yes+Out_No+Out_Yes)),
+#              fill="magenta") +
+#     scale_y_continuous(expand=c(0,0)) +
+#     labs(y="dATG prop. in frame",x="dATG vs aATG score")
+```
 
 ### However, mito-localized genes do not have a distinctive aATG context
 
@@ -2352,6 +2379,18 @@ ggplot(data=scores_H99 %>%
     panel_border()
 ```
 
+### Count dATG vs ATG score, d1 frame, mito pre, enough RNA
+
+```{r dvsaATG_framemitosumm_H99, dependson=c("calc_scores_H99","load_mitofates_H99"),results="show",fig.width=2.5,fig.height=2}
+dvsaATG_framemitosumm_H99 <- 
+    calc_dvsaATG_framemitosumm(scores_H99,ctbl_big_H99,
+                               enoughRNA_H99,mitofates_H99)
+
+dvsaATG_framemitosumm_H99
+
+write_tsv(dvsaATG_framemitosumm_H99,
+          "data_out/dvsaATG_framemitosumm_H99.txt")
+```
 
 ### However, mito-localized genes do not have a distinctive aATG context
 
