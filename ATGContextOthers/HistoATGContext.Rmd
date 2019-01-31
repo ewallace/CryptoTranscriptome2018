@@ -697,6 +697,52 @@ ggplot(data=scores %>%
           axis.text.y=element_blank(),axis.title.y=element_blank())
 ```
 
+
+### Correlations between d1 score, d1 frame, and localization
+
+```{r dvsaATG_scoresdiffbar_mitofates, dependson=c("calc_scores","load_mitofates"),fig.width=4.5,fig.height=4}
+
+ggplot(data=scores %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( mitofates %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.framefac,fill=Pred_preseq)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks) +
+    labs(x="dATG frame", y="number of genes",fill="Mito. pred.") +
+    panel_border()
+```
+
+### Count dATG vs ATG score, d1 frame, mito pre, enough RNA
+
+```{r dvsaATG_framemitosumm, dependson=c("calc_scores","load_mitofates"),results="show",fig.width=2.5,fig.height=2}
+dvsaATG_framemitosumm <- 
+    calc_dvsaATG_framemitosumm(scores,ctbl_big,
+                               enoughRNA,mitofates)
+
+dvsaATG_framemitosumm
+
+write_tsv(dvsaATG_framemitosumm,
+          "data_out/dvsaATG_framemitosumm_Hc.txt") 
+```
+
 ### Hc mito-localized genes also do not have a distinctive aATG context
 
 ```{r aATG_motif_mitofates, dependson=c("calc_scores","load_mitofates"), fig.width=4,fig.height=1}
