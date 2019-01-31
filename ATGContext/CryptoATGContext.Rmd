@@ -998,7 +998,7 @@ ggplot(data=ctbl_bigger_JEC21 %>%
 
 ### Load predictions from mitofates
 
-In input file *JEC21_mitofates_26June2018.txt*.
+In input file *JEC21_mitofates.txt*.
 
 ```{r load_mitofates_JEC21}
 
@@ -2271,7 +2271,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
 
 ### Load predictions from mitofates
 
-In input file *H99_mitofates_26June2018.txt*.
+In input file *H99_mitofates.txt*.
 
 ```{r load_mitofates_H99}
 
@@ -2391,6 +2391,159 @@ ggseqlogo(data=ctbl_big_H99 %>%
 
 ```
 
+
+## Alternative Localization predictions from DeepLoc 1.0
+
+### Load predictions from DeepLoc
+
+In input file *H99_DeepLoc.txt*.
+
+```{r load_deeploc_H99}
+deeploc_H99 <- read_tsv("data_in/H99_DeepLoc.txt") 
+
+deepcounts_H99 <- 
+    deeploc_H99 %>% 
+    group_by(Localization) %>% 
+    count() 
+
+dmitopredlist_H99 <- deeploc_H99 %>%
+    filter(Localization =="Mitochondrion") %>%
+    .$Gene
+```
+
+### Compare mitofates and DeepLoc mitochondrial predictions
+
+```{r mitopreds_venn_H99,dependson=c("load_mitofates_H99","load_deeploc_H99"),fig.width=2.4,fig.height=2}
+venn(mitof=mitopredlist_H99,deepl=dmitopredlist_H99)
+```
+
+### Compare mitofates and DeepLoc plastid predictions
+
+```{r mitoplastid_venn_H99,dependson=c("load_mitofates_H99","load_deeploc_H99"),fig.width=2.4,fig.height=2}
+venn(mitof=mitopredlist_H99,
+     plastid=deeploc_H99 %>%
+    filter(Localization =="Plastid") %>%
+    .$Gene)
+```
+
+### There are correlations between d1 score, d1 frame, and DeepLoc predictions
+
+```{r dvsaATG_scoresdiffbar_deeploc_H99, dependson=c("calc_scores_H99","load_deeploc_H99"),fig.width=5,fig.height=4}
+# library(ggmosaic)
+ggplot(data=scores_H99 %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big_H99) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA_H99,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( deeploc_H99 %>% 
+                          select(Gene,Localization)
+                      ) ,
+       aes(x=d1.framefac,fill=Localization)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    # scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+    #                     labels=mitobreaks_H99) +
+    labs(x="dATG frame", y="number of genes",fill="DeepLoc pred.") +
+    panel_border()
+```
+
+
+## Signal peptides predicted by SignalP
+
+
+### Load predictions
+
+In input file *H99_SignalP.txt*.
+
+```{r load_signalp_H99,results="show"}
+signalp_H99 <- read_tsv("data_in/H99_SignalP.txt",comment="#",skip=1,
+                        col_names=c("Gene","Cmax","Cpos","Ymax","Ypos",
+                                    "Smax","Spos","Smean","C","SignalP",
+                                    "Dmaxcut","Networks"),
+                        col_types=c("cninininncnc"))
+
+# signalp_JEC21 <- read_tsv("data_in/JEC21_SignalP.txt",comment="#") 
+
+signalpcounts_H99 <- 
+    signalp_H99 %>% 
+    group_by(SignalP) %>% 
+    count() 
+
+signalplist_H99 <- signalp_H99 %>%
+    filter(SignalP =="Y") %>%
+    .$Gene
+
+scores_H99 %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big_H99) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA_H99,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( signalp_H99 %>% 
+                          select(Gene,SignalP)
+                      )  %>%
+    group_by(enoughRNA,d1vsawfac,d1.framefac,SignalP) %>%
+    tally
+```
+
+### Compare SignalP and DeepLoc plastid predictions
+
+```{r signalpdeeploc_venn_H99,dependson=c("load_mitofates_H99","load_deeploc_H99"),fig.width=2.4,fig.height=2,eval=FALSE}
+venn(mitof=mitopredlist_H99,
+     plastid=deeploc_H99 %>%
+    filter(Localization =="Plastid") %>%
+    .$Gene)
+```
+
+### There are correlations between d1 score, d1 frame, and SignalP predictions
+
+```{r dvsaATG_scoresdiffbar_signalp_H99, dependson=c("calc_scores_H99","load_signalp_H99"),fig.width=5,fig.height=4}
+# library(ggmosaic)
+ggplot(data=scores_H99 %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big_H99) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA_H99,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( signalp_H99 %>% 
+                          select(Gene,SignalP)
+                      ) ,
+       aes(x=d1.framefac,fill=SignalP)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Y"="blue","N"="grey70")) +
+    labs(x="dATG frame", y="number of genes",fill="SignalP pred.") +
+    panel_border()
+```
 
 
 
