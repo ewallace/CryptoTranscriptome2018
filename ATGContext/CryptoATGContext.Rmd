@@ -2744,7 +2744,7 @@ From 2016 Paper.
 
 ```{r H99_vs_JEC21, dependson=c("load_riboviz_JEC21","load_riboviz_H99"), results="show"}
 # Load list of orthologs in H99 vs JEC21
-H99JEC21cc <- read_tsv("data_in/H99_JEC21_orthologs_TableS4_SciRep2016.txt",
+H99JEC21cc <- read_tsv("data_in/H99_JEC21_orthologs_Feb2018.txt",
                        comment="#") 
 
 H99JEC21cc
@@ -2763,12 +2763,67 @@ ribosum_cc <- join_H99_JEC21(ribosum_H99,ribosum_JEC21)
 
 ## Conservation of gene expression
 
+### RPF vs RNA with same colours
+
+```{r dependson="H99_vs_JEC21",fig.width=3.6,fig.height=3.5}
+genelist_TE_H99 <- c("CNAG_06125","CNAG_06246","CNAG_07695","CNAG_07813","CNAG_03140",
+                     #"CNAG_04378","CNAG_06870","CNAG_06816","CNAG_00262","CNAG_00750",
+                     NULL )
+
+TE_unusual_cc <- ribosum_cc %>%
+    filter(H99 %in% genelist_TE_H99) %>%
+    mutate(GeneFac = factor(H99,levels=genelist_TE_H99),
+           Geneshort.H99 = str_sub(H99,start=7L),
+           Geneshort.JEC21 = str_sub(JEC21,start=3L))
+
+set.seed(42)
+ggplot(data=ribosum_H99,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.5,colour="grey50") +
+    geom_point(data=TE_unusual_cc,
+               aes(x=RNA.H99,y=RPF.H99,colour=GeneFac),size=1) + 
+    geom_text_repel(data=TE_unusual_cc,
+                    nudge_x = 0.2 - 0.4 * (TE_unusual_cc$H99=="CNAG_06125"),
+                    point.padding=0.2,force=0.4,
+                    aes(x=RNA.H99,y=RPF.H99,
+                        label=Geneshort.H99,colour=GeneFac)) +
+    scale_color_brewer(type="qual",palette=2) + 
+    scale_loglog(limits=c(1e-1,2e4),
+                  oob=scales::squish,
+                  expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of mORF)",
+         y="Ribosome occupancy (TPM of mORF)") +
+    theme(legend.position="none") +
+    panel_border()
+
+set.seed(42)
+ggplot(data=ribosum_JEC21,aes(x=RNA,y=RPF)) +
+    geom_diagline() +
+    geom_point(size=.5,colour="grey50") +
+    geom_point(data=TE_unusual_cc,
+               aes(x=RNA.JEC21,y=RPF.JEC21,colour=GeneFac),size=1) + 
+    geom_text_repel(data=TE_unusual_cc,
+                    nudge_x = 0.2 - 0.4 * (TE_unusual_cc$H99=="CNAG_06125"),
+                    point.padding=0.2, force=0.4,
+                    aes(x=RNA.JEC21,y=RPF.JEC21,
+                        label=Geneshort.JEC21,colour=GeneFac)) +
+    scale_color_brewer(type="qual",palette=2) + 
+    scale_loglog(limits=c(1e-1,2e4),
+                 oob=scales::squish,
+                 expand=c(0.01,0.01)) +
+    labs(x="RNA abundance (TPM of mORF)",
+         y="Ribosome occupancy (TPM of mORF)") +
+    theme(legend.position="none") +
+    panel_border()
+```
+
+
 ### RNA Abundance
 
 ```{r plot_RNA_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
 ggplot(data=ribosum_cc,aes(x=RNA.H99,y=RNA.JEC21)) +
     geom_diagline() +
-    geom_point(size=.8,colour="grey50") +
+    geom_point(size=.5,colour="grey50") +
     scale_loglog(limits=c(1e-1,2e4),
                   oob=scales::squish,
                   expand=c(0.01,0.01))
@@ -2779,7 +2834,7 @@ ggplot(data=ribosum_cc,aes(x=RNA.H99,y=RNA.JEC21)) +
 ```{r plot_RPF_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
 ggplot(data=ribosum_cc,aes(x=RPF.H99,y=RPF.JEC21)) +
     geom_diagline() +
-    geom_point(size=.8,colour="grey50") +
+    geom_point(size=.5,colour="grey50") +
     scale_loglog(limits=c(1e-1,2e4),
                   oob=scales::squish,
                   expand=c(0.01,0.01))
@@ -2790,7 +2845,7 @@ ggplot(data=ribosum_cc,aes(x=RPF.H99,y=RPF.JEC21)) +
 ```{r plot_TE_cc,dependson="H99_vs_JEC21",fig.height=3.9,fig.width=4.1}
 ggplot(data=ribosum_cc,aes(x=TE.H99,y=TE.JEC21)) +
     geom_diagline() +
-    geom_point(size=.8,colour="grey50") +
+    geom_point(size=.5,colour="grey50") +
     scale_loglog(limits=c(0.05,20),
                   oob=scales::squish,
                   expand=c(0.01,0.01))
@@ -2804,10 +2859,16 @@ ggplot(data=ribosum_cc %>%
                   JEC21 %in% enoughRNA_JEC21),
        aes(x=TE.H99,y=TE.JEC21)) +
     geom_diagline() +
-    geom_point(size=.8,colour="grey50") +
+    geom_point(size=.5,colour="grey50") +
+    geom_point(data=TE_unusual_cc,
+               aes(colour=GeneFac),size=1) + 
+    geom_text_repel(data=TE_unusual_cc,
+                    aes(label=Geneshort.H99,colour=GeneFac)) +
+    scale_color_brewer(type="qual",palette=2) + 
     scale_loglog(limits=c(0.05,20),
                  oob=scales::squish,
-                 expand=c(0.01,0.01))
+                 expand=c(0.01,0.01)) +
+    theme(legend.position="none")
 ```
 
 ## Genes with high translation
