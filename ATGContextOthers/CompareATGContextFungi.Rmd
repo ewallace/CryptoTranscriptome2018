@@ -307,7 +307,7 @@ dvsaATG_framemitosummspread <-
                                      "ATG score\na + 0.1 < d")),
            enoughR=factor(enoughR,
                           levels=c("Yes","No"),
-                          labels=c("enough RNA","not enough"))
+                          labels=c("high RNA","low RNA")),
     )
 
 ggplot(data=dvsaATG_framemitosummspread ) +
@@ -317,11 +317,12 @@ ggplot(data=dvsaATG_framemitosummspread ) +
     geom_col(aes(x=Organism,
                  y=(In_No)/(In_No+In_Yes+Out_No+Out_Yes),
                  fill="No") ) +
-    scale_fill_manual("Mito. pred.",values=c("Yes"="magenta","No"="grey50")) + 
+    scale_fill_manual("Mito. pred.",breaks=c("Yes","No"),
+                      values=c("Yes"="magenta","No"="grey50")) + 
     scale_y_continuous(breaks=c(0,1/3,2/3,1),
                        labels=c("0","1/3","2/3","1"),
                        expand=c(0,0)) +
-    labs(y="dATG prop. in frame",x="dATG vs aATG score") +
+    labs(y="dATG prop. in frame",x="Organism") +
     # facet_wrap(~d1vsaw0p1) +
     facet_grid(enoughR~d1vsaw0p1) +
     panel_border() +
