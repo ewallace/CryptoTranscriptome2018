@@ -1,0 +1,76 @@
+---
+title: "UTR lengths in Cryptococcus neoformans"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 13 Feb 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+Analyze UTR length for Cryptococcus neoformans and deneoformans.
+
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CryptoUTRLength-",
+                      cache.path="cache/CryptoUTRLength-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+```
+
+
+# JEC21 first
+
+```{r load_context_JEC21,results="show"}
+ctbl_big_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>% 
+    dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
+    select_at(1:19)
+ctbl_big_JEC21
+```
+
+```{r fiveUTRlength_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5}
+ggplot(data=ctbl_big_JEC21, aes(x=aATG.pos)) +
+    geom_histogram(binwidth=10) + 
+    scale_y_continuous(expand=c(0,0)) +
+    scale_x_continuous("5'UTR length (nt)", 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+```
+
+```{r threeUTRlength_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5,eval=FALSE}
+ggplot(data=ctbl_big_JEC21, aes(x=aATG.pos)) +
+    geom_histogram(binwidth=10) + 
+    scale_y_continuous(expand=c(0,0)) +
+    scale_x_continuous("3'UTR length (nt)", 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+```
+
+
+# H99 second
+
+```{r load_context_H99,results="show"}
+ctbl_big_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>% 
+    dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
+    select_at(1:19)
+ctbl_big_H99
+```
+
+```{r fiveUTRlength_H99,dependson="load_context_H99",fig.width=3, fig.height=1.5}
+ggplot(data=ctbl_big_H99, aes(x=aATG.pos)) +
+    geom_histogram(binwidth=10) + 
+    scale_y_continuous(expand=c(0,0)) +
+    scale_x_continuous("5'UTR length (nt)", 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+```
+
