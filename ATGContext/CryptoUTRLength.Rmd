@@ -30,13 +30,6 @@ source("../SharedScripts/sharedScripts.R")
 # JEC21 first
 
 ```{r load_context_JEC21,results="show"}
-ctbl_big_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
-    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>% 
-    dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
-    select_at(1:19)
-ctbl_big_JEC21
-
 FiveUTRs_JEC21 <- readDNAtidy("../CDSFasta/data_in/JEC21_10p_up12dwn9_5UTRs.fa") %>%
     mutate(Gene = str_sub(Name,end=8L))
 
@@ -45,8 +38,16 @@ ThreeUTRs_JEC21 <- readDNAtidy("../CDSFasta/data_in/JEC21_10p_up12dwn9_3UTRs.fa"
 ```
 
 
-```{r check_5UTRlength_JEC21,fig.height=4,fig.width=4}
+```{r check_5UTRlength_JEC21,fig.height=4,fig.width=4,eval=FALSE}
+ctbl_big_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>% 
+    dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
+    select_at(1:19)
+ctbl_big_JEC21
+
 check5 <- left_join(FiveUTRs_JEC21,ctbl_big_JEC21,by="Gene")
+
 ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) + 
     geom_diagline() + 
     geom_point() +
@@ -89,7 +90,9 @@ ggplot(data = FiveUTRs_JEC21 %>%
     geom_histogram(binwidth=1) +
     scale_y_continuous(expand=c(0,0))  +
     scale_x_continuous("uAUG count, JEC21", 
-                       limits=c(0,20),expand=c(0.01,0.01),oob=scales::squish) 
+                       limits=c(-0.5,10.5),breaks=c(0,1,2,5,10),
+                       labels=c("0","1","2","5","10+"),
+                       expand=c(0.01,0.01),oob=scales::squish) 
 ```
 
 # H99 second
@@ -109,7 +112,7 @@ ThreeUTRs_H99 <- readDNAtidy("../CDSFasta/data_in/H99_10p_up12dwn9_3UTRs.fa") %>
     mutate(Gene = str_sub(Name,end=10L))
 ```
 
-```{r check_5UTRlength_H99,fig.height=4,fig.width=4}
+```{r check_5UTRlength_H99,fig.height=4,fig.width=4,eval=FALSE}
 check5 <- left_join(FiveUTRs_H99,ctbl_big_H99,by="Gene")
 ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) + 
     geom_diagline() + 
@@ -152,7 +155,9 @@ ggplot(data = FiveUTRs_H99 %>%
     geom_histogram(binwidth=1) +
     scale_y_continuous(expand=c(0,0))  +
     scale_x_continuous("uAUG count, H99", 
-                       limits=c(0,20),expand=c(0.01,0.01),oob=scales::squish) 
+                       limits=c(-0.5,10.5),breaks=c(0,1,2,5,10),
+                       labels=c("0","1","2","5","10+"),
+                       expand=c(0.01,0.01),oob=scales::squish) 
 ```
 
 
