@@ -176,6 +176,15 @@ expand_threeprime_nrstarts <- function(txinfile,CDSoutfile,protoutfile=NULL,
     return(expanded_CDS)
 }
 
+## Read a DNA fasta file into a tidy tibbl
+
+readDNAtidy <- function(filepath,...) {
+    sset <- readDNAStringSet(filepath,...)
+    tibble(Name=names(sset),
+           Width=width(sset),
+           Seq=as.character(sset))
+}
+
 ## Run mitofates from an R session, after trimming the strings appropriately.
 
 ## ATG context functions

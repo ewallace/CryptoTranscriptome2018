@@ -36,24 +36,61 @@ ctbl_big_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt")
     dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
     select_at(1:19)
 ctbl_big_JEC21
+
+FiveUTRs_JEC21 <- readDNAtidy("../CDSFasta/data_in/JEC21_10p_up12dwn9_5UTRs.fa") %>%
+    mutate(Gene = str_sub(Name,end=8L))
+
+ThreeUTRs_JEC21 <- readDNAtidy("../CDSFasta/data_in/JEC21_10p_up12dwn9_3UTRs.fa") %>%
+    mutate(Gene = str_sub(Name,end=8L))
 ```
 
+
+```{r check_5UTRlength_JEC21,fig.height=4,fig.width=4}
+check5 <- left_join(FiveUTRs_JEC21,ctbl_big_JEC21,by="Gene")
+ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) + 
+    geom_diagline() + 
+    geom_point() +
+    geom_text_repel(data = check5 %>% filter(Width > aATG.pos + 50),
+                    aes(label=str_sub(Gene,start=3L))) +
+    scale_loglog() +
+    labs(x="5UTRs.fa", y="allATGcontext.table.txt", title="JEC21 5' UTR length")
+```
+
+
+
 ```{r fiveUTRlength_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5}
-ggplot(data=ctbl_big_JEC21, aes(x=aATG.pos)) +
+# ggplot(data=ctbl_big_JEC21, aes(x=aATG.pos)) +
+#     geom_histogram(binwidth=10) + 
+#     scale_y_continuous(expand=c(0,0)) +
+#     scale_x_continuous("5'UTR length (nt)", 
+#                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish)
+
+ggplot(data=FiveUTRs_JEC21, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
     scale_y_continuous(expand=c(0,0)) +
     scale_x_continuous("5'UTR length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
 ```
 
-```{r threeUTRlength_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5,eval=FALSE}
-ggplot(data=ctbl_big_JEC21, aes(x=aATG.pos)) +
+```{r threeUTRlength_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5}
+ggplot(data=ThreeUTRs_JEC21, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
     scale_y_continuous(expand=c(0,0)) +
     scale_x_continuous("3'UTR length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
 ```
 
+### uATG count
+
+```{r uATGcount_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5}
+ggplot(data = FiveUTRs_JEC21 %>%
+    mutate(n_uATG = str_count(Seq,"ATG")),
+    aes(x=n_uATG)) +
+    geom_histogram(binwidth=1) +
+    scale_y_continuous(expand=c(0,0))  +
+    scale_x_continuous("uAUG count, JEC21", 
+                       limits=c(0,20),expand=c(0.01,0.01),oob=scales::squish) 
+```
 
 # H99 second
 
@@ -64,13 +101,110 @@ ctbl_big_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>%
     dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
     select_at(1:19)
 ctbl_big_H99
+
+FiveUTRs_H99 <- readDNAtidy("../CDSFasta/data_in/H99_10p_up12dwn9_5UTRs.fa") %>%
+    mutate(Gene = str_sub(Name,end=10L))
+
+ThreeUTRs_H99 <- readDNAtidy("../CDSFasta/data_in/H99_10p_up12dwn9_3UTRs.fa") %>%
+    mutate(Gene = str_sub(Name,end=10L))
 ```
 
+```{r check_5UTRlength_H99,fig.height=4,fig.width=4}
+check5 <- left_join(FiveUTRs_H99,ctbl_big_H99,by="Gene")
+ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) + 
+    geom_diagline() + 
+    geom_point() +
+    geom_text_repel(data = check5 %>% filter(Width > aATG.pos + 50),
+                    aes(label=str_sub(Gene,start=7L))) +
+    scale_loglog() +
+    labs(x="5UTRs.fa", y="allATGcontext.table.txt", title="H99 5'UTR length")
+```
+
+
 ```{r fiveUTRlength_H99,dependson="load_context_H99",fig.width=3, fig.height=1.5}
-ggplot(data=ctbl_big_H99, aes(x=aATG.pos)) +
+# ggplot(data=ctbl_big_H99, aes(x=aATG.pos)) +
+#     geom_histogram(binwidth=10) + 
+#     scale_y_continuous(expand=c(0,0)) +
+#     scale_x_continuous("5'UTR length (nt)", 
+#                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish)
+
+ggplot(data=FiveUTRs_H99, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
     scale_y_continuous(expand=c(0,0)) +
     scale_x_continuous("5'UTR length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
 ```
+
+```{r threeUTRlength_H99,dependson="load_context_H99",fig.width=3, fig.height=1.5}
+ggplot(data=ThreeUTRs_H99, aes(x=Width)) +
+    geom_histogram(binwidth=10) + 
+    scale_y_continuous(expand=c(0,0)) +
+    scale_x_continuous("3'UTR length (nt)", 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+```
+
+### uATG count
+
+```{r uATGcount_H99,dependson="load_context_H99",fig.width=3, fig.height=1.5}
+ggplot(data = FiveUTRs_H99 %>%
+    mutate(n_uATG = str_count(Seq,"ATG")),
+    aes(x=n_uATG)) +
+    geom_histogram(binwidth=1) +
+    scale_y_continuous(expand=c(0,0))  +
+    scale_x_continuous("uAUG count, H99", 
+                       limits=c(0,20),expand=c(0.01,0.01),oob=scales::squish) 
+```
+
+
+## Compare H99 and JEC21
+
+```{r H99_vs_JEC21, dependson=c("load_context_JEC21","load_context_H99"), results="show"}
+# Load list of orthologs in H99 vs JEC21
+H99JEC21cc <- read_tsv("data_in/H99_JEC21_orthologs_Feb2018.txt",
+                       comment="#") 
+
+join_H99_JEC21 <- function(tblH99,tblJEC21,concordance=H99JEC21cc) {
+    # join tables of H99 with JEC21 results by orthologs
+    concordance %>%
+        left_join( tblH99 %>% dplyr::rename(H99=Gene),by="H99") %>% 
+        left_join( tblJEC21 %>% dplyr::rename(JEC21=Gene),by="JEC21",
+                   suffix = c(".H99", ".JEC21"))
+}
+
+# conservation of ribosome/RNA abundance summaries
+FiveUTRs_cc <- join_H99_JEC21(FiveUTRs_H99,FiveUTRs_JEC21)
+ThreeUTRs_cc <- join_H99_JEC21(ThreeUTRs_H99,ThreeUTRs_JEC21)
+```
+
+```{r FiveUTRLength_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=3,fig.height=2.9}
+corr_FiveUTR <- 
+    with(FiveUTRs_cc,
+         cor(log10(Width.H99 + 1),log10(Width.JEC21 + 1),
+             use = "pairwise.complete.obs") )
+
+ggplot(data=FiveUTRs_cc,aes(x=Width.H99,y=Width.JEC21)) +
+    geom_diagline() + 
+    geom_point(colour="grey50",size=0.7) + 
+    annotate(geom="text",x=4,y=5000,label=paste0("R = ",signif(corr_FiveUTR,2))) + 
+    scale_loglog() +
+    coord_equal() + 
+    labs(x="H99 5' UTR length", y="JEC21 5' UTR length")
+```
+
+```{r ThreeUTRLength_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=3,fig.height=2.9}
+corr_ThreeUTR <- 
+    with(ThreeUTRs_cc,
+         cor(log10(Width.H99 + 1),log10(Width.JEC21 + 1),
+             use = "pairwise.complete.obs") )
+
+ggplot(data=ThreeUTRs_cc,aes(x=Width.H99,y=Width.JEC21)) +
+    geom_diagline() + 
+    geom_point(colour="grey50",size=0.7) + 
+    annotate(geom="text",x=10,y=5000,label=paste0("R = ",signif(corr_ThreeUTR,2))) + 
+    scale_loglog() +
+    coord_equal() + 
+    labs(x="H99 3' UTR length", y="JEC21 3' UTR length")
+```
+
+
 
