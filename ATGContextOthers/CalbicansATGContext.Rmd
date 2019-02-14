@@ -1,7 +1,7 @@
 ---
 title: "Start codon context for Candida Albicans"
 author: Edward Wallace, ewjwallace@gmail.com
-date: 12 Oct 2018
+date: 16 Jan 2019
 output:
   # html_notebook: default
   html_document:
@@ -32,53 +32,56 @@ source("../SharedScripts/sharedScripts.R")
 
 ### Load expression data
 
-```{r load_ribosum_Ca,results="show"}
+```{r load_ribosum,results="show"}
 
-tpms_Ca <- read_tsv("data_in/ExpressionTranslation/CalbicansNuzzey2014_tpms.tsv") %>%
-    dplyr::rename(Gene=ORF,RPF=tpm)
+tpms <- read_tsv("data_in/ExpressionTranslation/Calbicans_Muzzey2015_TPMs_collated.tsv") %>%
+    dplyr::rename(Gene=ORF) %>%
+    mutate(RPF = (WTA1 + WTA2 + 2 * WTB) / 4, 
+           RNA = ( WTARNA + WTBRNA ) / 2 )
 
 
-tpms_Ca %>%
+tpms %>%
     arrange(desc(RPF)) 
 
-ribosum_Ca <- tpms_Ca %>% select(Gene,RPF)
+ribosum <- tpms %>% 
+    select(Gene,RPF,RNA)
 
-hiTrans_Ca <- ribosum_Ca %>%
+hiTrans <- ribosum %>%
     arrange(desc(RPF)) %>%
     head(n=300) %>%
     .$Gene
 
-midTrans_Ca <- ribosum_Ca %>%
+midTrans <- ribosum %>%
     arrange(desc(RPF)) %>%
     head(n=3000) %>%
     .$Gene
 
-nonterribleTrans_Ca <- ribosum_Ca %>%
-    arrange(desc(RPF)) %>%
-    head(n=4500) %>%
-    .$Gene
-
-# enoughRNA_Ca <- ribosum_Ca %>%
-#     arrange(desc(RNA)) %>%
-#     head(n=5000) %>%
+# nonterribleTrans <- ribosum %>%
+#     arrange(desc(RPF)) %>%
+#     head(n=4500) %>%
 #     .$Gene
+
+enoughRNA <- ribosum %>%
+    arrange(desc(RNA)) %>%
+    head(n=3000) %>%
+    .$Gene
 ```
 
 ### Ribosome occupancy mostly tracks RNA abundance
 
-```{r plot_TE_Ca,dependson="load_ribosum_Ca",fig.height=3.9,fig.width=4.1,eval=FALSE}
-TE_unusual_Ca <- 
-    ribosum_Ca %>%
+```{r plot_TE,dependson="load_ribosum",fig.height=3.9,fig.width=4.1}
+TE_unusual <- 
+    ribosum %>%
     filter( (RPF > 1.8e4) |
                 (RPF > 100 & RPF > RNA * 5 ) | 
                 (RNA > 150 & RPF < RNA / 10 ))
 
 
-ggplot(data=ribosum_Ca,aes(x=RNA,y=RPF)) +
+ggplot(data=ribosum,aes(x=RNA,y=RPF)) +
     geom_diagline() +
     geom_point(size=.8,colour="grey50") +
-    geom_point(data=TE_unusual_Ca,aes(colour=Gene),size=1) + 
-    geom_text_repel(data=TE_unusual_Ca,aes(label=Gene,colour=Gene)) +
+    geom_point(data=TE_unusual,aes(colour=Gene),size=1) + 
+    geom_text_repel(data=TE_unusual,aes(label=Gene,colour=Gene)) +
     scale_loglog(limits=c(1e-1,2e4),
                   oob=scales::squish,
                   expand=c(0.01,0.01)) +
@@ -91,24 +94,24 @@ ggplot(data=ribosum_Ca,aes(x=RNA,y=RPF)) +
 
 ### Load context data
 
-```{r load_context_Ca,results="show"}
-ctbl_big_Ca <- read_ATGcontext_table("data_in/CAlbi_allATGcontext.table.txt")
-ctbl_big_Ca
+```{r load_context,results="show"}
+ctbl_big <- read_ATGcontext_table("data_in/CAlbi_allATGcontext.table.txt")
+ctbl_big
 ```
 
 ### Annotated ATGs have a Kozak consensus sequence
 
-```{r aATG_context_Ca,fig.width=4,fig.height=1}
-ggseqlogo(data=ctbl_big_Ca$aATG.context,namespace="TCAG") + 
+```{r aATG_context,fig.width=4,fig.height=1}
+ggseqlogo(data=ctbl_big$aATG.context,namespace="TCAG") + 
     theme_nothing()
 ```
 
 ### Highly translated Annotated ATGs have a Kozak consensus sequence
 
-That's for hiTrans_Ca, the top 4% (400) translated genes by RPF TPM.
+That's for hiTrans, the top 4% (400) translated genes by RPF TPM.
 
-```{r a_hi_context_Ca,fig.width=4,fig.height=1}
-ggseqlogo(data=filter(ctbl_big_Ca,Gene %in% hiTrans_Ca)$aATG.context,
+```{r a_hi_context,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big,Gene %in% hiTrans)$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
 ```
@@ -117,23 +120,30 @@ ggseqlogo(data=filter(ctbl_big_Ca,Gene %in% hiTrans_Ca)$aATG.context,
 
 
 
-```{r cytoribo_context_Ca,dependson="load_context_Ca",fig.width=4,fig.height=1}
-cytoribolist_Ca <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
+```{r cytoribo_context,dependson="load_context",fig.width=4,fig.height=1}
+cytoribolist <- read_tsv("data_out/ComplexOrthologs/cytoribosome_PTRcurated6.txt",
                         comment="#") %>%
     filter(SPECIES=="CANAL") %>%
     .$GENE_ID
-ggseqlogo(data=filter(ctbl_big_Ca,Gene %in% cytoribolist_Ca)$aATG.context,
+ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
 ```
 
+### Almost all cytoribo genes are highly translated
+
+Venn diagram 
+
+```{r hitrans_cytoribo_venn,dependson=c("cytoribo_context","load_ribosum"),fig.width=2.1,fig.height=2}
+venn(hiTrans=hiTrans,cytoRibo=cytoribolist)
+```
 
 ### Downstream ATGs don't have a consensus
 
 First downstream ATG
 
-```{r d1_context_Ca,fig.width=4,fig.height=1}
-ggseqlogo(data=filter(ctbl_big_Ca,nchar(d1.context) ==24)$d1.context,
+```{r d1_context,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big,nchar(d1.context) ==24)$d1.context,
                       namespace="TCAG") + 
     theme_nothing()
 ```
@@ -142,11 +152,11 @@ ggseqlogo(data=filter(ctbl_big_Ca,nchar(d1.context) ==24)$d1.context,
 
 Except for 3rd-codon-position bias.
 
-```{r d1_hi_frame0_context_Ca,fig.width=4,fig.height=1}
-ggseqlogo(data=filter(ctbl_big_Ca,
+```{r d1_hi_frame0_context,fig.width=4,fig.height=1}
+ggseqlogo(data=filter(ctbl_big,
                       nchar(d1.context) == 24,
                       d1.frame==0,
-                      Gene %in% hiTrans_Ca)$d1.context,
+                      Gene %in% hiTrans)$d1.context,
                       namespace="TCAG") + 
     theme_nothing()
 ```
@@ -155,31 +165,30 @@ ggseqlogo(data=filter(ctbl_big_Ca,
 
 ### Calculate a wide and a narrow consensus sequence
 
-Calculate motif score against the position weight matrix (pwm) for both **narrow** (-5 from ATG through to ATG) and **wide** (-9 from ATG to +3) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
+Calculate motif score against the position weight matrix (pwm) for both **narrow** (-4 from ATG through to ATG) and **wide** (-10 from ATG) kozak consensus motif. These motifs are taken from the top 5% highly translated genes.
 
-```{r kozak_consensus_Ca,fig.width=4,fig.height=1}
-kozak_w_PFM_Ca <- filter(ctbl_big_Ca,Gene %in% hiTrans_Ca) %>%
+```{r kozak_consensus,fig.width=4,fig.height=1}
+kozak_all_PFM <- filter(ctbl_big,Gene %in% hiTrans) %>%
     .$aATG.context %>%
-    str_sub(start=4L,end=18L) %>%
     str_to_upper() %>%
     consensusMatrix() 
 
-kozak_w_PWM_Ca <- PWM(kozak_w_PFM_Ca)
-kozak_n_PWM_Ca <- kozak_w_PFM_Ca[,5:12] %>% PWM()
+kozak_w_PWM <- PWM(kozak_all_PFM[,3:15])
+kozak_n_PWM <- PWM(kozak_all_PFM[,9:15])
 ```
 
 
-```{r write_PFM_Ca, dependson="calc_scores_Ca",results="show"}
+```{r write_PFM, dependson="kozak_consensus",results="show"}
 cat(
     "# PFM_hiTrans_Ca.txt
-# Position Frequency Matrix for aATGs of 400 highest-translated genes from Ca
-# This is of the wide ATG context NNNNNNNNNATGNNN
+# Position Frequency Matrix for aATGs of 400 highest-translated genes from C. albicans SC5314
+# This is of the wide ATG context NNNNNNNNNNNNATGNNNNNNNNN
 # Column is position, Row is nt count in order: ACGT.
 #
 # Edward Wallace, June 2018
 ",
 file="data_out/PFM_hiTrans_Ca.txt")
-kozak_w_PFM_Ca %>%
+kozak_all_PFM %>%
     as.tibble() %>%
     write_tsv("data_out/PFM_hiTrans_Ca.txt",
               append = TRUE,col_names=FALSE)
@@ -189,41 +198,41 @@ kozak_w_PFM_Ca %>%
 
 Using the sequence logo, details on https://en.wikipedia.org/wiki/Sequence_logo
 
-```{r kozak_inf_Ca,dependson=c("kozak_consensus_Ca","cytoribo_context_Ca"),fig.width=4,fig.height=1,results="show"}
+```{r kozak_inf,dependson=c("kozak_consensus","cytoribo_context"),fig.width=4,fig.height=1,results="show"}
 inf_content_narrow <- 
     tribble(
         ~Genes, ~ATG, ~Width, ~Infon,
         "All", "aATG", "narrow", 
-        ctbl_big_Ca %>%
+        ctbl_big %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "aATG", "narrow", 
-        ctbl_big_Ca %>%
-            filter(Gene %in% hiTrans_Ca) %>%
+        ctbl_big %>%
+            filter(Gene %in% hiTrans) %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "CytoRibo", "aATG", "narrow",
-        ctbl_big_Ca %>%
-            filter(Gene %in% cytoribolist_Ca) %>%
+        ctbl_big %>%
+            filter(Gene %in% cytoribolist) %>%
             .$aATG.context %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "All", "d1ATG", "narrow",
-        ctbl_big_Ca %>%
+        ctbl_big %>%
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "HiTrans", "d1ATG", "narrow", 
-        ctbl_big_Ca %>%
-            filter(Gene %in% hiTrans_Ca) %>% 
+        ctbl_big %>%
+            filter(Gene %in% hiTrans) %>% 
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L),
+            infonfromseqs(sstart=9L,send=12L),
         "CytoRibo", "d1ATG", "narrow",
-        ctbl_big_Ca %>%
-            filter(Gene %in% cytoribolist_Ca) %>%
+        ctbl_big %>%
+            filter(Gene %in% cytoribolist) %>%
             .$d1.context %>%
             na.omit() %>%
-            infonfromseqs(sstart=8L,send=12L)
+            infonfromseqs(sstart=9L,send=12L)
     )
 
 write_tsv(inf_content_narrow %>%
@@ -232,56 +241,61 @@ write_tsv(inf_content_narrow %>%
 inf_content_narrow
 ```
 
-Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_w_PFM_Ca[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_w_PFM_Ca[,-(10:12)]) %>% round(2)`.
+Information content in bits of highly-translated consensus (excluding 6 bits from ATG), **narrow** is `r infontot(kozak_all_PFM[,5:9]) %>% round(2)`, of **wide** is `r infontot(kozak_all_PFM[,-(10:12)]) %>% round(2)`.
 
 
 ### Estimate information content per base across start context
 
-```{r kozak_inf_perbase_Ca,dependson=c("kozak_consensus_Ca","cytoribo_context_Ca"),fig.width=6,fig.height=1.4,results="show"}
-inf_content_perbase_Ca <- 
+```{r kozak_inf_perbase,dependson=c("kozak_consensus","cytoribo_context"),fig.width=6,fig.height=1.4,results="show"}
+inf_content_perbase <- 
     tibble(i = 1:24, 
            Pos = c(-12:-1, 1:12),
-        All = ctbl_big_Ca %>%
+        All = ctbl_big %>%
             .$aATG.context %>%
             infonfromseqs(scope="all"),
-        HiTrans = ctbl_big_Ca %>%
-            filter(Gene %in% hiTrans_Ca) %>% 
+        HiTrans = ctbl_big %>%
+            filter(Gene %in% hiTrans) %>% 
             .$aATG.context %>%
             infonfromseqs(scope="all"),
-        CytoRibo = ctbl_big_Ca %>%
-            filter(Gene %in% cytoribolist_Ca) %>% 
+        CytoRibo = ctbl_big %>%
+            filter(Gene %in% cytoribolist) %>% 
             .$aATG.context %>%
             infonfromseqs(scope="all")
     )
 
-write_tsv(inf_content_perbase_Ca %>%
+write_tsv(inf_content_perbase %>%
               mutate_if(is.numeric,round3),
           "data_out/inf_content_perbase_Ca.txt")
 # inf_content_perbase
 
-plot_inf_perbase(inf_content_perbase_Ca)
+plot_inf_perbase(inf_content_perbase)
 ```
 
 ### Calculate scores of aATG, dATG, uATG against Kozak consensus
 
-```{r calc_scores_Ca, dependson="kozak_consensus_Ca"}
-scores_Ca <- 
-    ctbl_big_Ca %>%
+```{r calc_scores, dependson="kozak_consensus"}
+scores <- 
+    ctbl_big %>%
     transmute(Gene,
-              aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM_Ca),
-              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_Ca),
-              # u1.scorekn   = PWMscoren(u1.context,,kozak_n_PWM_Ca)
+              aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM),
+              d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM),
+              # u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM)
+              aATG.scorekw = PWMscorew(str_to_upper(aATG.context),kozak_w_PWM),
+              d1.scorekw   = PWMscorew(d1.context,kozak_w_PWM),
+              # u1.scorekw   = PWMscorew(u1.context,kozak_w_PWM)
               NULL
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
            # u1vsan = u1.scorekn - aATG.scorekn,
+           d1vsaw = d1.scorekw - aATG.scorekw,
+           # u1vsaw = u1.scorekw - aATG.scorekw,
            NULL) 
 
-# ribotbl_scoresenough_Ca <-
-#     ribosum_Ca %>%
-#     filter(Gene %in% enoughRNA_Ca) %>%
-#     # left_join(ribotbl_Ca,by="Gene") %>% 
-#     left_join(scores_Ca,by="Gene")
+# ribotbl_scoresenough <-
+#     ribosum %>%
+#     filter(Gene %in% enoughRNA) %>%
+#     # left_join(ribotbl,by="Gene") %>% 
+#     left_join(scores,by="Gene")
 
 ```
 
@@ -294,48 +308,75 @@ It is just the sum of the matrix product of the PWM with the sequence.
 
 Write scores to file *scores_kozak_Ca.txt*.
 
-```{r write_scores_Ca, dependson="calc_scores_Ca",results="show"}
-scores_Ca
+```{r write_scores, dependson="calc_scores",results="show"}
+scores
 cat(
     "# scores_kozak_Ca.txt
 # Scores of ATG context against Kozak sequence, Candida albicans
 # Kozak sequence derived from 400 highest-translated genes by RPF
 #
 # Gene: Ca systematic gene name
-# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNNATG)
+# aATG.scorekn: score of annotated ATG against narrow Kozak sequence (NNNNATG)
 # d1.scorekn: score of 1st downstream ATG against narrow
-# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNATGNNN)
+# xx.scorekw: analogous scores against wide Kozak sequence (NNNNNNNNNNATG)
 #
 # Edward Wallace, Oct 2018
 ",
 file="data_out/scores_kozak_Ca.txt")
-scores_Ca %>%
+scores %>%
     mutate_if(is.numeric,round3) %>%
     write_tsv("data_out/scores_kozak_Ca.txt",
               append = TRUE,col_names=TRUE)
 ```
 
-### Plot against narrow consensus (-5 to ATG)
+### Plot against narrow consensus (-4 to ATG)
 
-```{r plot_scores_n_Ca, dependson="calc_scores_Ca", fig.width=5,fig.height=1.8}
+```{r plot_scores_n, dependson="calc_scores", fig.width=5,fig.height=1.8}
 
 sbandwidthn = 0.025
 
-ggplot(data=scores_Ca) +
+ggplot(data=scores) +
     geom_density(aes(x=aATG.scorekn,colour="aATG"),
                  kernel="rectangular",bw=sbandwidthn) +
     geom_density(aes(x=d1.scorekn,colour="dATG"),
                  kernel="rectangular",bw=sbandwidthn) +
     # geom_density(aes(x=u1.scorekn,colour="uATG"),
     #             kernel="rectangular",bw=sbandwidthn) +
-    geom_density(data=filter(scores_Ca,Gene %in% hiTrans_Ca),
+    geom_density(data=filter(scores,Gene %in% hiTrans),
                  aes(x=aATG.scorekn,colour="aATG, top 5%"),
                  kernel="rectangular",bw=sbandwidthn) +
     scale_colour_manual(values=c("aATG"="dodgerblue",
                                  "aATG, top 5%"="darkblue",
                                  # "uATG"="red",
                                  "dATG"="green3") ) +
-    labs(x="ATG Kozak score, Ca") +
+    labs(x="ATG narrow Kozak score, Ca") +
+    theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.y=element_blank(),axis.title.y=element_blank(),
+          legend.title=element_blank())
+```
+
+
+### Plot against wide consensus (-10 to ATG)
+
+```{r plot_scores_w, dependson="calc_scores", fig.width=5,fig.height=1.8}
+
+sbandwidthn = 0.025
+
+ggplot(data=scores) +
+    geom_density(aes(x=aATG.scorekw,colour="aATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    geom_density(aes(x=d1.scorekw,colour="dATG"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    # geom_density(aes(x=u1.scorekw,colour="uATG"),
+    #             kernel="rectangular",bw=sbandwidthn) +
+    geom_density(data=filter(scores,Gene %in% hiTrans),
+                 aes(x=aATG.scorekw,colour="aATG, top 5%"),
+                 kernel="rectangular",bw=sbandwidthn) +
+    scale_colour_manual(values=c("aATG"="dodgerblue",
+                                 "aATG, top 5%"="darkblue",
+                                 "uATG"="red",
+                                 "dATG"="green3") ) +
+    labs(x="ATG wide Kozak score, Ca") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank(),
           legend.title=element_blank())
@@ -346,18 +387,18 @@ ggplot(data=scores_Ca) +
 
 ### For all annotated genes
 
-```{r mutinf_Ca,dependson=c("load_context_Ca","load_riboviz_Ca"),results="show",fig.height=4,fig.width=5}
-mutinf_Ca <- mutinfostr(ctbl_big_Ca$aATG.context)
-# mutinf_Ca
+```{r mutinf,dependson=c("load_context","load_riboviz"),results="show",fig.height=4,fig.width=5}
+mutinf <- mutinfostr(ctbl_big$aATG.context)
+# mutinf
 
-plot_mutinfo(mutinf_Ca)
+plot_mutinfo(mutinf)
 ```
 
 ### For highly translated genes
 
-```{r mutinf_hiTrans_Ca,dependson=c("load_context_Ca","load_riboviz_Ca"),results="show",fig.height=4,fig.width=5}
-ctbl_big_Ca %>%
-    filter(Gene %in% hiTrans_Ca) %>%
+```{r mutinf_hiTrans,dependson=c("load_context","load_riboviz"),results="show",fig.height=4,fig.width=5}
+ctbl_big %>%
+    filter(Gene %in% hiTrans) %>%
     .$aATG.context %>%
     mutinfostr %>%
     plot_mutinfo
@@ -366,9 +407,9 @@ ctbl_big_Ca %>%
 
 ### For cytoplasmic ribosomal proteins
 
-```{r mutinf_cytoribo_Ca,dependson=c("load_context_Ca","load_riboviz_Ca"),results="show",fig.height=4,fig.width=5}
-ctbl_big_Ca %>%
-    filter(Gene %in% cytoribolist_Ca) %>%
+```{r mutinf_cytoribo,dependson=c("load_context","load_riboviz"),results="show",fig.height=4,fig.width=5}
+ctbl_big %>%
+    filter(Gene %in% cytoribolist) %>%
     .$aATG.context %>%
     mutinfostr %>%
     plot_mutinfo
@@ -378,9 +419,9 @@ ctbl_big_Ca %>%
 
 ### What is the -2 correlation in cyto ribo genes?
 
-```{r cytoribo_contextm2_Ca,dependson="load_context_Ca",fig.width=4,fig.height=3}
+```{r cytoribo_contextm2,dependson="load_context",fig.width=4,fig.height=3}
 
-seqlogoFilterGenePos <- function(datain=ctbl_big_Ca,Genelist=hiTrans_Ca,
+seqlogoFilterGenePos <- function(datain=ctbl_big,Genelist=hiTrans,
                                  pos=8L, nt="T") {
     datafiltered <- filter(datain,
                           Gene %in% Genelist,
@@ -393,10 +434,10 @@ seqlogoFilterGenePos <- function(datain=ctbl_big_Ca,Genelist=hiTrans_Ca,
                  label=paste0("n = ", nrow(datafiltered)))
 }
 
-plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=11L,nt="T"),
-          seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=11L,nt="C"),
-          seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=11L,nt="A"),
-          seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=11L,nt="G"),
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist,pos=11L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist,pos=11L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist,pos=11L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist,pos=11L,nt="G"),
     ncol=1
 )
     
@@ -407,9 +448,9 @@ There are definitely correlations there.
 
 ### What about the -4 correlation in cyto ribo genes?
 
-```{r cytoribo_contextm4_Ca,dependson="load_context_Ca",fig.width=4,fig.height=3}
+```{r cytoribo_contextm4,dependson="load_context",fig.width=4,fig.height=3}
 
-seqlogoFilterGenePos <- function(datain=ctbl_big_Ca,Genelist=hiTrans_Ca,
+seqlogoFilterGenePos <- function(datain=ctbl_big,Genelist=hiTrans,
                                  pos=8L, nt="T") {
     datafiltered <- filter(datain,
                           Gene %in% Genelist,
@@ -422,10 +463,10 @@ seqlogoFilterGenePos <- function(datain=ctbl_big_Ca,Genelist=hiTrans_Ca,
                  label=paste0("n = ", nrow(datafiltered)))
 }
 
-plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=9L,nt="T"),
-          seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=9L,nt="C"),
-          seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=9L,nt="A"),
-          seqlogoFilterGenePos(Genelist=cytoribolist_Ca,pos=9L,nt="G"),
+plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist,pos=9L,nt="T"),
+          seqlogoFilterGenePos(Genelist=cytoribolist,pos=9L,nt="C"),
+          seqlogoFilterGenePos(Genelist=cytoribolist,pos=9L,nt="A"),
+          seqlogoFilterGenePos(Genelist=cytoribolist,pos=9L,nt="G"),
     ncol=1
 )
     
@@ -438,9 +479,9 @@ Weaker there.
 
 ### Most dATG scores are less than aATG scores
 
-```{r dvsaATG_scoresdens_Ca, dependson="calc_scores_Ca", fig.width=3.5,fig.height=1.8}
+```{r dvsaATG_scoresdens, dependson="calc_scores", fig.width=3.5,fig.height=1.8}
 
-ggplot(data=scores_Ca) +
+ggplot(data=scores) +
     geom_vline(xintercept=0,size=0.3) +
     geom_density(aes(x=d1vsan,colour="narrow"),kernel="rectangular") +
     # geom_density(aes(x=d1vsaw,colour="wide"),kernel="rectangular")  +
@@ -451,25 +492,25 @@ ggplot(data=scores_Ca) +
           legend.position=c(0.8,0.8))
 ```
 
-### For highly translated genes, most dATG scores are much less than aATG
+### For highly translated genes, most dATG narrow scores are much less than aATG
 
-```{r dvsaATG_scoresn_Ca, dependson="calc_scores_Ca", fig.width=3.5,fig.height=3.5}
-highdiffn_dvsaATG_Ca <- scores_Ca %>%
+```{r dvsaATG_scoresn, dependson="calc_scores", fig.width=3.5,fig.height=3.5}
+highdiffn_dvsaATG <- scores %>%
     arrange(desc(d1vsan)) %>%
     head(n=400) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
-ggplot(data=scores_Ca %>% filter(!is.na(d1.scorekn)),
+ggplot(data=scores %>% filter(!is.na(d1.scorekn)),
        aes(x=aATG.scorekn,y=d1.scorekn)) +
     geom_diagline() +
     geom_point(size=0.5,colour="grey50") +
-    geom_point(data=highdiffn_dvsaATG_Ca,
+    geom_point(data=highdiffn_dvsaATG,
                colour="red",size=1) +
-    geom_point(data=scores_Ca %>% 
-                   filter(Gene %in% hiTrans_Ca),
+    geom_point(data=scores %>% 
+                   filter(Gene %in% hiTrans),
                colour="blue",size=1) +
-    geom_point(data=highdiffn_dvsaATG_Ca %>% 
-                   filter(Gene %in% hiTrans_Ca),
+    geom_point(data=highdiffn_dvsaATG %>% 
+                   filter(Gene %in% hiTrans),
                colour="purple4",size=1.3) +
     labs(x="aATG score, narrow",
          y="dATG score, narrow")
@@ -479,58 +520,93 @@ Red: high dATG vs aATG **Kozak** score.
 Blue: highly translated.
 Purple: both.
 
-### Small negative correlation between dATG and aATG score
+### Small negative correlation between dATG and aATG score narrow
 
-R = `r with(scores_Ca, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
+R = `r with(scores, cor(aATG.scorekn,d1.scorekn,use="pairwise.complete.obs")) %>% round3`
 
-## Genes with unusual dATG vs aATG narrow score
+### For highly translated genes, most dATG wide scores are much less than aATG
+
+```{r dvsaATG_scoresw, dependson="calc_scores",fig.width=3.5,fig.height=3.5}
+highdiffw_dvsaATG <- scores %>%
+    arrange(desc(d1vsaw)) %>%
+    head(n=400) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+ggplot(data=scores %>% filter(!is.na(d1.scorekw)),
+       aes(x=aATG.scorekw,y=d1.scorekw)) +
+    geom_diagline() +
+    geom_point(size=0.5,colour="grey50") +
+    geom_point(data=highdiffw_dvsaATG,
+               colour="red",size=1) +
+    geom_point(data=scores %>%
+                   filter(Gene %in% hiTrans),
+               colour="blue",size=1) +
+    geom_point(data=highdiffw_dvsaATG %>%
+                   filter(Gene %in% hiTrans),
+               colour="purple4",size=1.3) +
+    labs(x="aATG score, wide",
+         y="dATG score, wide")
+```
+
+Red: high dATG vs aATG **Kozak** score.
+Blue: highly translated.
+Purple: both.
+
+### Small negative correlation between dATG and aATG score wide
+
+R = `r with(scores, cor(aATG.scorekw,d1.scorekw,use="pairwise.complete.obs")) %>% round3`
+
+
+## Genes with unusual dATG vs aATG score
+
+### Genelist with unusual dATG vs aATG narrow score
 
 Those genes are in this list:
 
-```{r highdiffn_dvsaATG_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
-highdiffn_dvsaATG_Ca
+```{r highdiffn_dvsaATG,dependson="dvsaATG_scoresn",results="show"}
+highdiffn_dvsaATG
 ```
 
 
-Some of these are well translated:
+### Of which, highly translated:
 
-```{r highdiffn_dvsaATG_hiTrans_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
-highdiffn_dvsaATG_Ca %>%
-    left_join( ctbl_big_Ca %>% select(Gene, d1.frame,d1.posATG) ) %>% 
-    filter(Gene %in% hiTrans_Ca) 
+```{r highdiffn_dvsaATG_hiTrans,dependson="dvsaATG_scoresn",results="show"}
+highdiffn_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene, d1.frame,d1.posATG) ) %>% 
+    filter(Gene %in% hiTrans) 
 ```
 
-### dATG in frame with ATG
+### dATG in frame with ATG, narrow
 
-Files with high difference in narrow score, filtered for reasonable amounts of translation, in frame. We did **not** filter for top 50% of RNA because we did not directly quantify RNa levels here.
+Files with high difference in narrow score, filtered for top 50% by mRNA abundance, in frame.
 
 Saved to *dvsaATG_highdiffn_inframe_Ca.txt*.
 
-```{r highdiffn_dvsaATG_inframe_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
-highdiffn_dvsaATG_enoughinframe_Ca <- 
-    highdiffn_dvsaATG_Ca %>%
-    left_join( ctbl_big_Ca %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans_Ca, d1.frame==0) %>%
+```{r highdiffn_dvsaATG_inframe,dependson="dvsaATG_scoresn",results="show"}
+highdiffn_dvsaATG_enoughinframe <- 
+    highdiffn_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA, d1.frame==0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
-highdiffn_dvsaATG_enoughinframe_Ca
+highdiffn_dvsaATG_enoughinframe
 
 cat(
     "# dvsaATG_highdiffn_inframe_Ca.txt
 # Genes with in-frame high-score dATGs
 # In C. albicans SC5314:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 75% by translation
+#   - in top 50% by mRNA abundance
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
 # aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/dvsaATG_highdiffn_inframe_Ca.txt")
-highdiffn_dvsaATG_enoughinframe_Ca %>%
+highdiffn_dvsaATG_enoughinframe %>%
     mutate_if(is.numeric,round3) %>%
     write_tsv("data_out/dvsaATG_highdiffn_inframe_Ca.txt",append = TRUE,col_names=TRUE)
 ```
@@ -539,39 +615,111 @@ highdiffn_dvsaATG_enoughinframe_Ca %>%
 
 See more below.
 
-### dATG out of frame with ATG
+### dATG out of frame with ATG, narrow
 
-Files with high difference in narrow score, filtered for reasonable amounts of translation, out of frame. 
+Files with high difference in narrow score, filtered for top 50% by mRNA abundance, out of frame. 
 
 Saved to *dvsaATG_highdiffn_outframe_Ca.txt*.
 
-```{r highdiffn_dvsaATG_outframe_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
-highdiffn_dvsaATG_enoughoutframe_Ca <- 
-    highdiffn_dvsaATG_Ca %>%
-    left_join( ctbl_big_Ca %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% nonterribleTrans_Ca, d1.frame!=0) %>%
+```{r highdiffn_dvsaATG_outframe,dependson="dvsaATG_scoresn",results="show"}
+highdiffn_dvsaATG_enoughoutframe <- 
+    highdiffn_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA, d1.frame!=0) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
-highdiffn_dvsaATG_enoughoutframe_Ca
+highdiffn_dvsaATG_enoughoutframe
 
 cat(
     "# dvsaATG_highdiffn_outframe_Ca.txt
 # Genes with in-frame high-score dATGs
 # In C. albicans SC5314:
 #   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 75% by translation
+#   - in top 50% by mRNA abundance
 #   - dATG is out-of-frame with aATG
 #
 # Gene: systematic gene name
 # aATG.scorekn: annotated ATG score against narrow Kozak consensus sequence, strain xx
 # d1.scorekn: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Dec 2018
+# Edward Wallace, Jan 2019
 ",
 file="data_out/dvsaATG_highdiffn_outframe_Ca.txt")
-highdiffn_dvsaATG_enoughoutframe_Ca %>%
+highdiffn_dvsaATG_enoughoutframe %>%
     mutate_if(is.numeric,round3) %>%
     write_tsv("data_out/dvsaATG_highdiffn_outframe_Ca.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG in frame with ATG, wide
+
+Files with high difference in wide score, filtered for top 50% by mRNA abundance, in frame.
+
+Saved to *dvsaATG_highdiffw_inframe_Ca.txt*.
+
+```{r highdiffw_dvsaATG_inframe,dependson="dvsaATG_scoresw",results="show"}
+highdiffw_dvsaATG_enoughinframe <- 
+    highdiffw_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA, d1.frame==0) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+highdiffw_dvsaATG_enoughinframe
+
+cat(
+    "# dvsaATG_highdiffw_inframe_Ca.txt
+# Genes with in-frame high-score dATGs
+# In C. albicans SC5314:
+#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - in top 50% by mRNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekw: annotated ATG score against narrow Kozak consensus sequence, strain xx
+# d1.scorekw: 1st downstream ATG score against narrow Kozak consensus sequence, strain xx
+#
+# Edward Wallace, Jan 2019
+",
+file="data_out/dvsaATG_highdiffw_inframe_Ca.txt")
+highdiffw_dvsaATG_enoughinframe %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffw_inframe_Ca.txt",append = TRUE,col_names=TRUE)
+```
+
+
+### dATG out of frame with ATG, wide
+
+Files with high difference in wide score, filtered for top 50% by mRNA abundance, out of frame. 
+
+Saved to *dvsaATG_highdiffw_outframe_Ca.txt*.
+
+```{r highdiffw_dvsaATG_outframe,dependson="dvsaATG_scoresw",results="show"}
+highdiffw_dvsaATG_enoughoutframe <- 
+    highdiffw_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA, d1.frame!=0) %>%
+    select(Gene,aATG.scorekw,d1.scorekw)
+
+highdiffw_dvsaATG_enoughoutframe
+
+cat(
+    "# dvsaATG_highdiffw_outframe_Ca.txt
+# Genes with in-frame high-score dATGs
+# In C. albicans SC5314:
+#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - in top 50% by mRNA abundance
+#   - dATG is out-of-frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekw: annotated ATG score against wide Kozak consensus sequence
+# d1.scorekw: 1st downstream ATG score against wide Kozak consensus sequence
+#
+# Edward Wallace, Jan 2019
+",
+file="data_out/dvsaATG_highdiffw_outframe_Ca.txt")
+highdiffw_dvsaATG_enoughoutframe %>%
+    mutate_if(is.numeric,round3) %>%
+    write_tsv("data_out/dvsaATG_highdiffw_outframe_Ca.txt",append = TRUE,col_names=TRUE)
 ```
 
 
@@ -582,19 +730,19 @@ highdiffn_dvsaATG_enoughoutframe_Ca %>%
 
 In input file *CAlbi_mitofates.txt*.
 
-```{r load_mitofates_Ca}
-mitofates_Ca <- read_mitofates("data_in/Calbi_mitofates.txt")
+```{r load_mitofates}
+mitofates <- read_mitofates("data_in/Calbi_mitofates.txt")
 
-mitocounts_Ca <- 
-    mitofates_Ca %>% 
+mitocounts <- 
+    mitofates %>% 
     group_by(Pred_preseq) %>% 
     count() 
-mitobreaks_Ca <- mitocounts_Ca %>%
+mitobreaks <- mitocounts %>%
     mutate(label=paste0(Pred_preseq," (n = ",n,")")) %>%
     .$label %>%
-    set_names(mitocounts_Ca$Pred_preseq)
+    set_names(mitocounts$Pred_preseq)
 
-mitopredlist_Ca <- mitofates_Ca %>%
+mitopredlist <- mitofates %>%
     filter(Pred_preseq =="Yes") %>%
     .$Gene
 ```
@@ -602,31 +750,77 @@ mitopredlist_Ca <- mitofates_Ca %>%
 
 ### Ca Genes with high dATG vs aATG score might be enriched in mitochondrial presequences?
 
-```{r dvsaATG_scoresdiffn_mitofates_Ca, dependson=c("calc_scores_Ca","load_mitofates_Ca"), fig.width=5,fig.height=1.8}
+```{r dvsaATG_scoresdiffn_mitofates, dependson=c("calc_scores","load_mitofates"), fig.width=5,fig.height=1.8}
 
-ggplot(data=scores_Ca %>% 
+ggplot(data=scores %>% 
            filter(!is.na(d1.scorekn)) %>%
-           left_join( mitofates_Ca %>% 
+           left_join( mitofates %>% 
                           select(Gene,Prob_preseq,Pred_preseq)
                       ) ,
        aes(x=d1.scorekn-aATG.scorekn,colour=Pred_preseq)) +
     geom_vline(xintercept=0,size=0.3) +
     geom_density(kernel="rectangular",bw=0.025) +
     scale_colour_manual(values=c("Yes"="magenta","No"="grey50"),
-                        labels=mitobreaks_Ca)  + 
+                        labels=mitobreaks)  + 
     labs(x="Kozak score, difference dATG - aATG", colour="Mito. pred") +
     theme(axis.line.y=element_blank(),axis.ticks.y=element_blank(),
           axis.text.y=element_blank(),axis.title.y=element_blank())
+```
+
+
+### Correlations between d1 score, d1 frame, and localization
+
+```{r dvsaATG_scoresdiffbar_mitofates, dependson=c("calc_scores","load_mitofates"),fig.width=4.5,fig.height=4}
+
+ggplot(data=scores %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("ATG score\nd < a + 0.1",
+                                           "ATG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  ) %>%
+           inner_join( mitofates %>% 
+                          select(Gene,Prob_preseq,Pred_preseq)
+                      ) ,
+       aes(x=d1.framefac,fill=Pred_preseq)) +
+    geom_bar() +
+    scale_y_continuous(expand=c(0,0)) + 
+    facet_wrap(~ enoughRNA + d1vsawfac,ncol=2,scales="free") + 
+    # facet_grid(enoughRNA ~ d1vsawfac,scales="free") + 
+    scale_fill_manual(values=c("Yes"="magenta","No"="grey50"),
+                        labels=mitobreaks) +
+    labs(x="dATG frame", y="number of genes",fill="Mito. pred.") +
+    panel_border()
+```
+
+### Count dATG vs ATG score, d1 frame, mito pre, enough RNA
+
+```{r dvsaATG_framemitosumm, dependson=c("calc_scores","load_mitofates"),results="show",fig.width=2.5,fig.height=2}
+dvsaATG_framemitosumm <- 
+    calc_dvsaATG_framemitosumm(scores,ctbl_big,
+                               enoughRNA,mitofates)
+
+dvsaATG_framemitosumm
+
+write_tsv(dvsaATG_framemitosumm,
+          "data_out/dvsaATG_framemitosumm_Ca.txt")
 ```
 
 ### Ca mito-localized genes also do not have a distinctive aATG context
 
 Although the +5 T is striking.
 
-```{r aATG_motif_mitofates_Ca, dependson=c("calc_scores_Ca","load_mitofates_Ca"), fig.width=4,fig.height=1}
+```{r aATG_motif_mitofates, dependson=c("calc_scores","load_mitofates"), fig.width=4,fig.height=1}
 
-ggseqlogo(data=ctbl_big_Ca %>%
-              filter(Gene %in% mitopredlist_Ca) %>%
+ggseqlogo(data=ctbl_big %>%
+              filter(Gene %in% mitopredlist) %>%
               .$aATG.context,
           namespace="TCAG")  + 
     theme_nothing()
@@ -637,11 +831,11 @@ ggseqlogo(data=ctbl_big_Ca %>%
 
 Those genes are in this list:
 
-```{r highdiffn_dvsaATG_mitopred_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
-highdiffn_dvsaATG_Ca %>%
-    left_join( ctbl_big_Ca %>% select(Gene, d1.frame,d1.posATG) ) %>%
-    left_join( ribosum_Ca ) %>%
-    filter(Gene %in% mitopredlist_Ca) %>%
+```{r highdiffn_dvsaATG_mitopred,dependson="dvsaATG_scoresn",results="show"}
+highdiffn_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene, d1.frame,d1.posATG) ) %>%
+    left_join( ribosum ) %>%
+    filter(Gene %in% mitopredlist) %>%
     print(n=26)
 ```
 
@@ -652,11 +846,11 @@ Only some have in-frame ATG.
 
 ### Some more decently-translated ones with in-frame aATG and mito. loc
 
-```{r highdiffn_dvsaATG_mitopred_hiTrans_Ca,dependson="dvsaATG_scoresn_Ca",results="show"}
-highdiffn_dvsaATG_Ca %>%
-    left_join( ctbl_big_Ca %>% select(Gene, d1.frame,d1.posATG) ) %>%
-    left_join( ribosum_Ca ) %>%
-    filter(Gene %in% mitopredlist_Ca, Gene %in% midTrans_Ca, d1.frame==0) 
+```{r highdiffn_dvsaATG_mitopred_hiTrans,dependson="dvsaATG_scoresn",results="show"}
+highdiffn_dvsaATG %>%
+    left_join( ctbl_big %>% select(Gene, d1.frame,d1.posATG) ) %>%
+    left_join( ribosum ) %>%
+    filter(Gene %in% mitopredlist, Gene %in% midTrans, d1.frame==0) 
 ```
 
 * C2_09260C_A GLO2 hydroxyacylglutathione hydrolase, Scer has GLO2 (cyto) and GLO4 (mito) paralogs
@@ -676,7 +870,7 @@ highdiffn_dvsaATG_Ca %>%
 * C6_00390W_A tRNA-Serine synthetase, there is another paralog C3_02780W_A, homology to cyto SES1, and a mito DIA4 homolog.
 
 
-Several of these are conserved (ALA1, VAS1, PUS7, GLOs)!
+Several of these are conserved (ALA1, VAS1, PUS7, GLOs, GLR)!
 
 
 

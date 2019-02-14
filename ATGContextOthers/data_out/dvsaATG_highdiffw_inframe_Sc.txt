@@ -1,0 +1,52 @@
+# dvsaATG_highdiffw_inframe_Sc.txt
+# Genes with in-frame high-score dATGs
+# In S. cerevisiae S288C:
+#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekw: annotated ATG score against wide Kozak consensus sequence
+# d1.scorekw: 1st downstream ATG score against wide Kozak consensus sequence
+#
+# Edward Wallace, Jan 2019
+Gene	aATG.scorekw	d1.scorekw
+YER156C	0.767	0.966
+YBL057C	0.72	0.901
+YDR513W	0.736	0.913
+YLR357W	0.669	0.838
+YIL064W	0.68	0.847
+YDL125C	0.799	0.967
+YNL247W	0.727	0.894
+YGR029W	0.77	0.932
+YHR070W	0.688	0.842
+YDR248C	0.71	0.861
+YAL013W	0.72	0.863
+YLR403W	0.756	0.899
+YAL059W	0.734	0.877
+YLR351C	0.745	0.886
+YKR074W	0.71	0.849
+YLR389C	0.696	0.835
+YDR388W	0.777	0.915
+YJL076W	0.651	0.789
+YPL015C	0.687	0.824
+YDL070W	0.694	0.828
+YGR260W	0.775	0.908
+YER002W	0.811	0.936
+YHR113W	0.695	0.82
+YFL001W	0.683	0.807
+YPL246C	0.682	0.805
+YNL045W	0.729	0.852
+YMR049C	0.737	0.855
+YOL082W	0.698	0.814
+YGR283C	0.814	0.93
+YDR115W	0.756	0.869
+YOR116C	0.736	0.847
+YGR094W	0.735	0.844
+YMR241W	0.801	0.909
+YGL056C	0.741	0.847
+YGR157W	0.732	0.838
+YLR071C	0.706	0.811
+YDR046C	0.764	0.867
+YBR187W	0.751	0.853
+YER168C	0.664	0.766

@@ -1,0 +1,43 @@
+# dvsaATG_highdiffw_inframe_Sp.txt
+# Genes with in-frame high-score dATGs
+# In S. pombe 972h-:
+#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - in top 50% by RNA abundance
+#   - dATG is in frame with aATG
+#
+# Gene: systematic gene name
+# aATG.scorekw: annotated ATG score against wide Kozak consensus sequence
+# d1.scorekw: 1st downstream ATG score against wide Kozak consensus sequence
+#
+# Edward Wallace, Jan 2019
+Gene	aATG.scorekw	d1.scorekw
+SPAC12B10.01c	0.729	0.978
+SPBC9B6.11c	0.681	0.928
+SPAC1565.08	0.69	0.907
+SPAC3F10.05c	0.715	0.929
+SPBC1198.08	0.699	0.91
+SPAC3G6.04	0.75	0.958
+SPBC428.01c	0.706	0.912
+SPBC11C11.05	0.714	0.902
+SPBC146.12	0.654	0.841
+SPAC57A7.12	0.74	0.901
+SPBC2G2.12	0.688	0.848
+SPAC6C3.04	0.735	0.895
+SPBC543.10	0.714	0.868
+SPBC2G2.08	0.695	0.848
+SPBC660.11	0.714	0.865
+SPCC1902.01	0.768	0.916
+SPBP35G2.14	0.694	0.839
+SPCC1494.05c	0.784	0.927
+SPAC3H1.05	0.749	0.891
+SPBC18E5.12c	0.794	0.927
+SPCC1672.02c	0.754	0.887
+SPAC824.08	0.712	0.835
+SPAC4G9.11c	0.731	0.848
+SPAC4F8.05c	0.773	0.886
+SPCC24B10.05	0.795	0.906
+SPBC21B10.03c	0.747	0.858
+SPCC550.14	0.784	0.895
+SPAC26A3.11	0.752	0.86
+SPBC106.15	0.727	0.833
+SPBP8B7.05c	0.833	0.937

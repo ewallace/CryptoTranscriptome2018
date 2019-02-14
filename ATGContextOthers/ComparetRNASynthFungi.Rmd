@@ -1,0 +1,111 @@
+---
+title: "Comparisons between fungi, tRNA synthetase start codon context"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 12 Oct 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This summarizes relationships of tRNA synthetase localizations and start codons between 6 favourite fungi.
+    
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/ComparetRNASynthContext-",
+                      cache.path="cache/ComparetRNASynthContext-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+### Load data
+
+```{r load_tRS}
+Orglevels <- c("Cn","Cd","Nc","Sp","Ca","Sc")
+AAlevelsalph <- c("Ala","Arg","Asn","Asp","Cys","Glu","Gln","Gly","His","Iso",
+                  "Leu","Lys","Met","Phe","Pro","Ser","Thr","Trp","Tyr","Val")
+
+AAlevelsloc <- c("Ala","Cys","Gly","His","Val",
+                 "Arg","Leu","Lys","Pro","Thr","Trp",
+                 "Asn","Asp","Glu","Iso",
+                  "Met","Phe","Ser","Tyr",
+                 "Gln")
+# infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+
+Loclevels <- c("Cyto","DualAUG","DualNCC","Mito")
+
+scale_colour_loctype <- list(
+    scale_colour_manual("Localization",
+                        values=c("Cyto"="blue",
+                                 "Mito"="goldenrod",
+                                 "DualAUG"="magenta",
+                                 "DualNCC"="darkmagenta")),
+    scale_shape_manual("Localization",
+                       values=c("Cyto"=15,
+                                "Mito"=18,
+                                "DualAUG"=7,
+                                "DualNCC"=7)),
+    scale_size_manual("Localization",
+                      values=c("Cyto"=2,
+                               "Mito"=2.5,
+                               "DualAUG"=2.1,
+                               "DualNCC"=2.1)) )
+
+tRSall <- read_tsv("data_in/tRNASynthLists/tRNAsynthetases7fungi.txt") %>%
+    filter(Organism != "Hc") %>%
+    mutate(Organism=factor(Organism,levels=Orglevels),
+           Type=factor(Type,levels=Loclevels))
+
+```
+
+
+
+```{r tRSfigurestart,dependson="load_tRS",eval=FALSE}
+## Coloured by Mito pred
+ggplot(data=tRSall %>% mutate(AA=factor(AA,levels=rev(AAlevelsalph))),
+       aes(x=Organism,y=AA,colour=Mito.aATG,group=Mito.aATG)) +
+    geom_point(position=position_dodge(width=0.5),size=2) +
+    theme_bw()
+
+```
+
+## Cryptococcus has more dual-localized tRNA synthetases than other fungi
+
+And there is plasticity over which use AUGs and which use near-cognate.
+
+```{r tRSfigureloc,dependson="load_tRS",fig.width=4,fig.height=4}
+# ggplot(data=tRSall %>% mutate(AA=factor(AA,levels=rev(AAlevelsloc))),
+#        aes(x=Organism,y=AA,colour=Type,shape=Type,size=Type,
+#            group=str_sub(Type,end=4L))) +
+#     annotate(geom="vline",xintercept=2.5,size=0.5) + 
+#     geom_point(position=position_dodge(width=0.75)) +
+#     scale_colour_loctype +
+#     theme_bw() +
+#     # scale_x_discrete(minor_breaks=seq(0.5,5.5,1)) + 
+#     theme(axis.title.y = element_blank(),
+#           panel.grid.major = element_blank())
+
+ggplot(data=tRSall %>% mutate(AA=factor(AA,levels=rev(AAlevelsloc))),
+       aes(x=0,y=AA,colour=Type,shape=Type,size=Type,
+           group=str_sub(Type,end=4L))) +
+    # annotate(geom="vline",xintercept=2.5,size=0.5) + 
+    geom_point(position=position_dodge(width=0.75)) +
+    scale_colour_loctype +
+    facet_wrap(~Organism,ncol=6,scales="free_x") + 
+    theme_cowplot(font_size = 12) + 
+    theme(strip.background=element_rect(fill=NA,colour="black"),
+          strip.text.y=element_text(angle=180),
+          axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+          axis.title=element_blank(),axis.line=element_blank()) +
+    panel_border()
+
+```
+
+
