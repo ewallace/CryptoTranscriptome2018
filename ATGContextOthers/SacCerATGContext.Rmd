@@ -36,7 +36,8 @@ source("../SharedScripts/sharedScripts.R")
 
 ```{r load_ribosum,results="show"}
 weinberg_riboprofiling <- read_tsv("data_in/ExpressionTranslation/Weinberg2016_SacCer_riboprofiling.txt") %>%
-    dplyr::select(Gene=Gene_name,RNA=RNA,RPF = Ribo)
+    dplyr::select(Gene=Gene_name,RNA=RNA,RPF = Ribo) %>%
+    mutate(TE = RPF/RNA)
 
 gerasch_riboprofiling <- read_tsv("data_in/ExpressionTranslation/Geraschenko2014_SacCer_GSE59573_Expression_Table.txt",
                     skip=3,
@@ -48,7 +49,8 @@ ribosum <-  gerasch_riboprofiling %>%
         transmute(GeneAlt=Gene,
                   Gene = str_sub(Gene,end=7L),
                   RPF=( unstressed_noCHX + unstressed_1_64x_CHX + unstressed_1_16x_CHX +  unstressed_1_4x_CHX + unstressed_1x_CHX ) / 5 ) %>%
-    left_join(  csardi_mrna_prot %>% select(Gene=orf,Gene2=gene,RNA=mrna,Prot=prot) )
+    left_join(  csardi_mrna_prot %>% select(Gene=orf,Gene2=gene,RNA=mrna,Prot=prot) ) %>%
+    mutate(TE = RPF/RNA)
 
 ribosum %>%
     arrange(desc(RPF)) 
@@ -472,6 +474,100 @@ plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist,pos=11L,nt="T"),
 ```
 
 There are definitely correlations there.
+
+
+## uATGs inhibit translation of the main ORF
+
+### uATGs are barely associated with lower absolute translation
+
+Here we use the Weinberg ribosome profiling data, which throws out duplicated genes.
+
+```{r uATG_RPF, dependson="calc_scores", fig.width=2.5,fig.height=3.5}
+uATG_ct <- read_tsv("data_in/SacCer_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
+    dplyr::select(c("Gene",paste0("u",1:19,".posTSS"))) %>%
+    gather(key="uATG",value="posTSS",-Gene) %>%
+    mutate(posTSS=as.integer(posTSS)) %>%
+    group_by(Gene) %>%
+    summarize(uATGCt = sum(!is.na(posTSS)),
+              uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
+              ) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGfac = make_uATGfact(uATGCt,uATGCtmin20)
+           )
+
+ribo_uct <- 
+    weinberg_riboprofiling %>%
+    filter(Gene %in% enoughRNA) %>%
+    inner_join(uATG_ct)
+
+ggplot(data=ribo_uct,
+       aes(x=uATGCtC,y=RPF)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("Ribosome occupancy (TPM of aORF)",
+                      limits=c(1,10000),
+                      oob=scales::squish) +
+    labs(x="uATG count")
+```
+
+### uATGs are barely associated with lower translation efficiency
+
+```{r uATG_TE, dependson="uATG_RPF", fig.width=2.5,fig.height=3.5}
+
+ggplot(data=ribo_uct,
+       aes(x=uATGCtC,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),expand=c(0,0),
+                      oob=scales::squish) +
+    labs(x="uATG count")
+```
+
+### uATGs weakly associated with lower translation efficiency might be over 20nt from TSS
+
+```{r uATGmin20_TE, dependson="uATG_RPF", fig.width=2.5,fig.height=3.5,results="show"}
+# ribo_uct
+ggplot(data=ribo_uct,
+       aes(x=uATGfac,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),expand=c(0,0),
+                      oob=scales::squish) +
+    labs(x="uATG count and position\nrelative to TSS")
+```
+
+### uATG score does not affect TE
+
+We suspect that uATG is associated with lower TE if the uATG has
+
+* position at least 20nt downstream from TSS
+* higher score
+
+This figure shows that, *for genes with only 1 uATG*, this correlation is weak and opposite to expected.
+
+```{r uATG_scoreTE, dependson="uATG_RPF", fig.width=4.5,fig.height=2.5,results="show"}
+
+ggplot(data=ribo_uct %>%
+    inner_join(scores) %>%
+    filter(uATGCt == 1) %>%
+        left_join(ctbl_big) %>%
+        mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,5000))),
+       aes(x=u1.scorekw,y=TE)) +
+    facet_wrap(~u1.posTSS20) + 
+    geom_point(colour="grey50",size=0.7) +
+    stat_smooth(method="lm") + 
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),
+                      oob=scales::squish) +
+    labs(x="uATG wide score")
+```
 
 
 ## Compare aATG and dATG context by gene

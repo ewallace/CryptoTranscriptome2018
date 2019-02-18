@@ -448,3 +448,32 @@ calc_dvsaATG_framemitosumm <- function(scores=scores,
         group_by(enoughR,d1vsaw0p1,d1.framefac,Pred_preseq) %>%
         tally()
 }
+
+
+######
+## Count uATGs
+
+.make_uATGfact <- function(Ct, Ctfar) {
+    # factor-style count close and far
+    if (Ct == 0) {
+        rfac <-  "0"
+    } else if (Ct >= 1 & Ctfar == 0 ) {
+        rfac <- "1+c"
+    } else if (Ct >= 1 & Ctfar >= 1) {
+        rfac <- "1+f"
+    # } else if (Ct >= 2 & Ctfar == 0 ) {
+    #     rfac <- "2+c"
+    # } else if (Ct >=2 & Ctfar >= 1) {
+    #     rfac <- "2+f"
+    } else {
+        rfac <- NA
+    }
+    return(rfac)
+}
+
+make_uATGfact <- function(Ct,Ctfar) {
+    sapply(1:length(Ct), function(i) .make_uATGfact(Ct[i],Ctfar[i])) %>%
+        factor(levels=c("0","1+c","1+f"),
+               labels=c("0","1+\nclose","1+\nfar"))
+}
+
