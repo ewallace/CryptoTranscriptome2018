@@ -6,8 +6,8 @@
 #   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
-# aATG.scorekn: annotated ATG score against narrow -4 Kozak consensus sequence
-# d1.scorekn: 1st downstream ATG score against narrow -4 Kozak consensus sequence
+# aATG.scorekn: annotated AUG score against narrow -4 Kozak consensus sequence
+# d1.scorekn: 1st downstream AUG score against narrow -4 Kozak consensus sequence
 #
 # Edward Wallace, Jan 2019
 Gene	aATG.scorekn	d1.scorekn

@@ -157,7 +157,8 @@ ggplot(data=FiveUTRs_H99, aes(x=Width)) +
              x=650,y=350,size=4) +
     scale_y_continuous("gene ct.",expand=c(0,0)) +
     scale_x_continuous("TL length (nt)", 
-                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) +
+   theme(axis.title.y = element_text(hjust=0))
 fiveUTRlength_H99
 ```
 
@@ -174,7 +175,8 @@ threeUTRlength_H99 <-
              x=650,y=300,size=4) +
     scale_y_continuous("gene ct.",expand=c(0,0)) +
     scale_x_continuous("3'UTR length (nt)", 
-                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish)  +
+   theme(axis.title.y = element_text(hjust=0))
 threeUTRlength_H99
 ```
 
@@ -190,7 +192,8 @@ uATGcount_H99 <-
     scale_x_continuous("uAUG count", 
                        limits=c(-0.5,10.5),breaks=c(0,1,2,5,10),
                        labels=c("0","1","2","5","10+"),
-                       expand=c(0.01,0.01),oob=scales::squish)
+                       expand=c(0.01,0.01),oob=scales::squish) +
+   theme(axis.title.y = element_text(hjust=0))
 uATGcount_H99
 ```
 
@@ -263,13 +266,21 @@ nAUG_cc_summ <-
     count(n_uATG.H99,n_uATG.JEC21)
 # nAUG_cc_summ
 uAUGct_H99vsJEC21 <- 
-    ggplot(data=nAUG_cc_summ,aes(x=n_uATG.H99,y=n_uATG.JEC21,size=n)) +
-    geom_point(colour="grey50") +
-    scale_size_area("no. of\ngenes",breaks=c(1,100,1000)) + 
-    # annotate(geom="text",x=1,y=10,label=paste0("R = ",signif(corr_nAUG,2))) +
+    ggplot(data=nAUG_cc_summ,aes(x=n_uATG.H99,y=n_uATG.JEC21)) +
+    # geom_point(aes(size=n),colour="grey50") +
+    # scale_size_area("no. of\ngenes",breaks=c(1,100,1000)) + 
+    geom_tile(aes(fill=n)) +
+    scale_fill_gradient(low = "white",high="darkblue",trans="sqrt",
+                        lim=c(0,2000),oob=scales::squish,
+                        breaks=c(0,100,500,1000,2000)) +
+    annotate(geom="text",x=0,y=10,label=paste0("R = ",signif(corr_nAUG,2)),hjust=0) +
     coord_equal(xlim=c(0,10),ylim=c(0,10)) + 
-    labs(x="H99 uAUG ct.", y="JEC21 uAUG ct.")  +
-    theme(legend.position="none")
+    scale_x_continuous(breaks=c(0,5,10)) + scale_y_continuous(breaks=c(0,5,10)) +
+    labs(x="H99 uAUG ct.", y="JEC21 uAUG ct.",fill="gene ct.") +
+    theme(legend.text=element_text(angle=-45,hjust=0),
+          legend.key.height=unit(0.5,"lines"),legend.position="top",
+          legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"),
+          legend.box.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))
 uAUGct_H99vsJEC21
 ```
 

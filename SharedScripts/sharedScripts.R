@@ -421,6 +421,176 @@ venn <- function(...) {
     venn.diagram(x=list(...),filename=NULL,margin=0.1) %>% grid.draw
 }
 
+######
+## 
+scale_colour_AUG <- function(...) {
+        scale_colour_manual("AUG type",
+                            values=c("annotated"="dodgerblue",
+                                     "ann'd, hiTrans"="darkblue",
+                                     "upstream 1"="red",
+                                     "downstream 1"="green3",
+                                     "downstream 2"="green4"),...) 
+}
+
+themebits_dens <- list(scale_y_continuous("Density of genes",
+                                          expand = c(0.01,0.005)),
+                       theme(axis.line.y=element_blank(),
+                             axis.ticks.y=element_blank(),
+                             axis.text.y=element_blank(),
+                             axis.title.y=element_blank(),
+                             legend.title=element_blank()) ) 
+
+themebits_ecdf <- list(scale_y_continuous("Prop. of genes",
+                                          limits=c(0,1),breaks=seq(0,1,0.25),
+                                          labels=c(0,"",0.5,"",1),
+                                          expand = c(0.005,0.005)),
+                       theme(panel.grid.major.y = 
+                                 element_line(colour="grey50",
+                                              linetype="solid",size=0.1),
+                             axis.title.y = element_text(hjust=0)) )
+
+scale_x_AUGscore <- function(xlab,...) {
+            scale_x_continuous(name=xlab,
+                           limits=c(0.55,1),
+                           expand = c(0.01,0.01),
+                           ...) 
+}
+
+plot_4ATGscoresw_dens <- function(scores,hiTrans=NULL,xlab="wide Kozak score",
+                                  kernel="rectangular",sbw=0.025,
+                                  u1=TRUE,d2=FALSE) {
+    swplot <- 
+        ggplot(data=scores) +
+        geom_density(aes(x=aATG.scorekw,colour="annotated"),
+                     kernel=kernel,bw=sbw,size=0.7) +
+        geom_density(aes(x=d1.scorekw,colour="downstream 1"),
+                     kernel=kernel,bw=sbw,size=0.7) +
+        scale_colour_AUG() +
+        scale_x_AUGscore(xlab) +
+        themebits_dens
+    if ( u1 & ("u1.scorekw" %in% colnames(scores)) )  {
+        swplot <- swplot + 
+            geom_density(aes(x=u1.scorekw,colour="upstream 1"),
+                         kernel=kernel,bw=sbw,size=0.7)  
+    }
+    if (!is.null(hiTrans)) {
+        swplot <- swplot + 
+            geom_density(data=filter(scores,Gene %in% hiTrans),
+                         aes(x=aATG.scorekw,colour="ann'd, hiTrans"),
+                         kernel=kernel,bw=sbw,size=0.7)
+    }
+    if ( d2 )  {
+        swplot <- swplot + 
+            geom_density(aes(x=d2.scorekw,colour="downstream 2"),
+                         kernel=kernel,bw=sbw,size=0.7)  
+    }
+    return(swplot)
+}
+
+plot_4ATGscoresw_ecdf <- function(scores,hiTrans=NULL,xlab="AUG wide Kozak score",
+                                  u1=TRUE,d2=FALSE) {
+    swplot <- 
+        ggplot(data=scores) +
+        stat_ecdf(aes(x=aATG.scorekw,colour="annotated"),size=0.7) +
+        stat_ecdf(aes(x=d1.scorekw,colour="downstream 1"),size=0.7) +
+        scale_colour_AUG() +
+        scale_x_AUGscore(xlab) + 
+        themebits_ecdf
+    if ( u1 & ("u1.scorekw" %in% colnames(scores)) )  {
+        swplot <- swplot + 
+            stat_ecdf(aes(x=u1.scorekw,colour="upstream 1"),size=0.7)  
+    }
+    if (!is.null(hiTrans)) {
+        swplot <- swplot + 
+            stat_ecdf(data=filter(scores,Gene %in% hiTrans),
+                      aes(x=aATG.scorekw,colour="ann'd, hiTrans"),
+                      size=0.7)
+    }
+    if ( d2 )  {
+        swplot <- swplot + 
+            stat_ecdf(aes(x=d2.scorekw,colour="downstream 2"),
+                      size=0.7)  
+    }
+    return(swplot)
+}
+
+plot_ATGdiffs_dens <- function(scores,
+                               xlab="Kozak score diff. uAUG - aAUG",
+                                  difftype=c("upstream","downstream"),
+                               wide=TRUE, narrow=TRUE,
+                               kernel="rectangular",sbw=0.025) {
+    sdplot <- 
+    ggplot(data=scores) +
+        geom_vline(xintercept=0,size=0.3) +
+        labs(x=xlab,colour="context") +
+        themebits_dens + 
+        theme(#legend.position=c(0.7,0.8)
+            ) 
+    if(difftype=="downstream") {
+        if (narrow) {
+            sdplot <- sdplot + 
+                geom_density(aes(x=d1vsan,colour="narrow"),
+                         kernel=kernel,bw=sbw,size=0.7)
+        }
+        if (wide) {
+            sdplot <- sdplot + 
+                geom_density(aes(x=d1vsaw,colour="wide"),
+                         kernel=kernel,bw=sbw,size=0.7)
+        }
+    }
+    if(difftype=="upstream") {
+        if (narrow) {
+            sdplot <- sdplot + 
+                geom_density(aes(x=u1vsan,colour="narrow"),
+                         kernel=kernel,bw=sbw,size=0.7)
+        }
+        if (wide) {
+            sdplot <- sdplot + 
+                geom_density(aes(x=u1vsaw,colour="wide"),
+                         kernel=kernel,bw=sbw,size=0.7)
+        }
+    }
+    return(sdplot)
+}
+
+plot_ATGdiffs_ecdf <- function(scores,
+                               xlab="Kozak score diff. uAUG - aAUG",
+                               difftype=c("upstream","downstream"),
+                               wide=TRUE, narrow=TRUE) {
+    sdplot <- 
+    ggplot(data=scores) +
+        geom_vline(xintercept=0,size=0.3,colour="grey50") +
+        labs(x=xlab,colour="AUG context") +
+        themebits_ecdf + 
+        theme(#legend.position=c(0.7,0.3),
+              # legend.title=element_blank(),
+              legend.background = element_rect(fill="white")) 
+    if(difftype=="downstream") {
+        if (narrow) {
+            sdplot <- sdplot + 
+                stat_ecdf(aes(x=d1vsan,colour="narrow"),
+                             size=0.7)
+        }
+        if (wide) {
+            sdplot <- sdplot + 
+                stat_ecdf(aes(x=d1vsaw,colour="wide"),
+                             size=0.7)
+        }
+    }
+    if(difftype=="upstream") {
+        if (narrow) {
+            sdplot <- sdplot + 
+                stat_ecdf(aes(x=u1vsan,colour="narrow"),
+                             size=0.7)
+        }
+        if (wide) {
+            sdplot <- sdplot + 
+                stat_ecdf(aes(x=u1vsaw,colour="wide"),
+                             size=0.7)
+        }
+    }
+    return(sdplot)
+}
 
 ######
 ## Count dATG vs ATG score, d1 frame, mito pre, enough RNA
