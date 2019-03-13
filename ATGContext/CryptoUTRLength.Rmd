@@ -54,7 +54,7 @@ ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) +
     geom_text_repel(data = check5 %>% filter(Width > aATG.pos + 50),
                     aes(label=str_sub(Gene,start=3L))) +
     scale_loglog() +
-    labs(x="5UTRs.fa", y="allATGcontext.table.txt", title="JEC21 5' UTR length")
+    labs(x="5UTRs.fa", y="allATGcontext.table.txt", title="JEC21 TL length")
 ```
 
 
@@ -63,19 +63,33 @@ ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) +
 # ggplot(data=ctbl_big_JEC21, aes(x=aATG.pos)) +
 #     geom_histogram(binwidth=10) + 
 #     scale_y_continuous(expand=c(0,0)) +
-#     scale_x_continuous("5'UTR length (nt)", 
+#     scale_x_continuous("TL length (nt)", 
 #                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish)
 
 ggplot(data=FiveUTRs_JEC21, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
-    scale_y_continuous(expand=c(0,0)) +
-    scale_x_continuous("5'UTR length (nt)", 
+    geom_vline(colour="blue",aes(xintercept=mean(Width,na.rm=TRUE))) +
+    geom_vline(colour="red",aes(xintercept=median(Width,na.rm=TRUE))) +
+    annotate(colour="red",geom="text",
+             label=paste0("median = ", 
+                          median(FiveUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
+                          "nt"),
+             x=650,y=350,size=4) +
+    scale_y_continuous("gene ct.",expand=c(0,0)) +
+    scale_x_continuous("TL length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
 ```
 
 ```{r threeUTRlength_JEC21,dependson="load_context_JEC21",fig.width=3, fig.height=1.5}
 ggplot(data=ThreeUTRs_JEC21, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
+    geom_vline(colour="blue",aes(xintercept=mean(Width,na.rm=TRUE))) +
+    geom_vline(colour="red",aes(xintercept=median(Width,na.rm=TRUE))) +
+    annotate(colour="red",geom="text",
+             label=paste0("median = ", 
+                          median(ThreeUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
+                          "nt"),
+             x=650,y=300,size=4) +
     scale_y_continuous(expand=c(0,0)) +
     scale_x_continuous("3'UTR length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
@@ -88,8 +102,8 @@ ggplot(data = FiveUTRs_JEC21 %>%
     mutate(n_uATG = str_count(Seq,"ATG")),
     aes(x=n_uATG)) +
     geom_histogram(binwidth=1) +
-    scale_y_continuous(expand=c(0,0))  +
-    scale_x_continuous("uAUG count, JEC21", 
+    scale_y_continuous("gene ct.",expand=c(0,0))  +
+    scale_x_continuous("uAUG count", 
                        limits=c(-0.5,10.5),breaks=c(0,1,2,5,10),
                        labels=c("0","1","2","5","10+"),
                        expand=c(0.01,0.01),oob=scales::squish) 
@@ -120,7 +134,7 @@ ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) +
     geom_text_repel(data = check5 %>% filter(Width > aATG.pos + 50),
                     aes(label=str_sub(Gene,start=7L))) +
     scale_loglog() +
-    labs(x="5UTRs.fa", y="allATGcontext.table.txt", title="H99 5'UTR length")
+    labs(x="5UTRs.fa", y="allATGcontext.table.txt", title="H99 TL length")
 ```
 
 
@@ -128,36 +142,59 @@ ggplot(data=check5,aes(x=Width,y=aATG.pos-1)) +
 # ggplot(data=ctbl_big_H99, aes(x=aATG.pos)) +
 #     geom_histogram(binwidth=10) + 
 #     scale_y_continuous(expand=c(0,0)) +
-#     scale_x_continuous("5'UTR length (nt)", 
+#     scale_x_continuous("TL length (nt)", 
 #                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish)
 
+fiveUTRlength_H99 <- 
 ggplot(data=FiveUTRs_H99, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
-    scale_y_continuous(expand=c(0,0)) +
-    scale_x_continuous("5'UTR length (nt)", 
-                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+    geom_vline(colour="blue",aes(xintercept=mean(Width,na.rm=TRUE))) +
+    geom_vline(colour="red",aes(xintercept=median(Width,na.rm=TRUE))) +
+    annotate(colour="red",geom="text",
+             label=paste0("median = ", 
+                          median(FiveUTRs_H99$Width,na.rm=TRUE) %>% round, 
+                          "nt"),
+             x=650,y=350,size=4) +
+    scale_y_continuous("gene ct.",expand=c(0,0)) +
+    scale_x_continuous("TL length (nt)", 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) +
+   theme(axis.title.y = element_text(hjust=0))
+fiveUTRlength_H99
 ```
 
 ```{r threeUTRlength_H99,dependson="load_context_H99",fig.width=3, fig.height=1.5}
-ggplot(data=ThreeUTRs_H99, aes(x=Width)) +
+threeUTRlength_H99 <- 
+    ggplot(data=ThreeUTRs_H99, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
-    scale_y_continuous(expand=c(0,0)) +
+    geom_vline(colour="blue",aes(xintercept=mean(Width,na.rm=TRUE))) +
+    geom_vline(colour="red",aes(xintercept=median(Width,na.rm=TRUE))) +
+    annotate(colour="red",geom="text",
+             label=paste0("median = ", 
+                          median(ThreeUTRs_H99$Width,na.rm=TRUE) %>% round, 
+                          "nt"),
+             x=650,y=300,size=4) +
+    scale_y_continuous("gene ct.",expand=c(0,0)) +
     scale_x_continuous("3'UTR length (nt)", 
-                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
+                       limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish)  +
+   theme(axis.title.y = element_text(hjust=0))
+threeUTRlength_H99
 ```
 
 ### uATG count
 
 ```{r uATGcount_H99,dependson="load_context_H99",fig.width=3, fig.height=1.5}
-ggplot(data = FiveUTRs_H99 %>%
+uATGcount_H99 <- 
+    ggplot(data = FiveUTRs_H99 %>%
     mutate(n_uATG = str_count(Seq,"ATG")),
     aes(x=n_uATG)) +
     geom_histogram(binwidth=1) +
-    scale_y_continuous(expand=c(0,0))  +
-    scale_x_continuous("uAUG count, H99", 
+    scale_y_continuous("gene ct.\ ",expand=c(0,0))  +
+    scale_x_continuous("uAUG count", 
                        limits=c(-0.5,10.5),breaks=c(0,1,2,5,10),
                        labels=c("0","1","2","5","10+"),
-                       expand=c(0.01,0.01),oob=scales::squish) 
+                       expand=c(0.01,0.01),oob=scales::squish) +
+   theme(axis.title.y = element_text(hjust=0))
+uATGcount_H99
 ```
 
 
@@ -177,39 +214,87 @@ join_H99_JEC21 <- function(tblH99,tblJEC21,concordance=H99JEC21cc) {
 }
 
 # conservation of ribosome/RNA abundance summaries
-FiveUTRs_cc <- join_H99_JEC21(FiveUTRs_H99,FiveUTRs_JEC21)
+FiveUTRs_cc <- join_H99_JEC21(FiveUTRs_H99 %>%
+                                  mutate(n_uATG = str_count(Seq,"ATG") ),
+                              FiveUTRs_JEC21 %>%
+                                  mutate(n_uATG = str_count(Seq,"ATG") )
+                              )
 ThreeUTRs_cc <- join_H99_JEC21(ThreeUTRs_H99,ThreeUTRs_JEC21)
 ```
 
-```{r FiveUTRLength_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=3,fig.height=2.9}
+```{r FiveUTRLength_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=3.1,fig.height=2.9}
 corr_FiveUTR <- 
     with(FiveUTRs_cc,
          cor(log10(Width.H99 + 1),log10(Width.JEC21 + 1),
              use = "pairwise.complete.obs") )
 
+FiveUTRLength_H99vsJEC21 <- 
 ggplot(data=FiveUTRs_cc,aes(x=Width.H99,y=Width.JEC21)) +
     geom_diagline() + 
-    geom_point(colour="grey50",size=0.7) + 
+    geom_point(colour="grey50",size=0.5) + 
     annotate(geom="text",x=4,y=5000,label=paste0("R = ",signif(corr_FiveUTR,2))) + 
     scale_loglog() +
     coord_equal() + 
-    labs(x="H99 5' UTR length", y="JEC21 5' UTR length")
+    labs(x="H99 TL length", y="JEC21 TL length")
+FiveUTRLength_H99vsJEC21
 ```
 
-```{r ThreeUTRLength_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=3,fig.height=2.9}
+```{r ThreeUTRLength_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=3.1,fig.height=2.9}
 corr_ThreeUTR <- 
     with(ThreeUTRs_cc,
          cor(log10(Width.H99 + 1),log10(Width.JEC21 + 1),
              use = "pairwise.complete.obs") )
 
+ThreeUTRLength_H99vsJEC21 <- 
 ggplot(data=ThreeUTRs_cc,aes(x=Width.H99,y=Width.JEC21)) +
     geom_diagline() + 
-    geom_point(colour="grey50",size=0.7) + 
-    annotate(geom="text",x=10,y=5000,label=paste0("R = ",signif(corr_ThreeUTR,2))) + 
+    geom_point(colour="grey50",size=0.5) + 
+    annotate(geom="text",x=15,y=5000,label=paste0("R = ",signif(corr_ThreeUTR,2))) + 
     scale_loglog() +
     coord_equal() + 
     labs(x="H99 3' UTR length", y="JEC21 3' UTR length")
+ThreeUTRLength_H99vsJEC21
 ```
 
+```{r uAUGct_H99vsJEC21,dependson=c("H99_vs_JEC21"),fig.width=4,fig.height=2.9}
+corr_nAUG <- 
+    with(FiveUTRs_cc,
+         cor(n_uATG.H99,n_uATG.JEC21,
+             use = "pairwise.complete.obs") )
+nAUG_cc_summ <-
+    FiveUTRs_cc %>%
+    count(n_uATG.H99,n_uATG.JEC21)
+# nAUG_cc_summ
+uAUGct_H99vsJEC21 <- 
+    ggplot(data=nAUG_cc_summ,aes(x=n_uATG.H99,y=n_uATG.JEC21)) +
+    # geom_point(aes(size=n),colour="grey50") +
+    # scale_size_area("no. of\ngenes",breaks=c(1,100,1000)) + 
+    geom_tile(aes(fill=n)) +
+    scale_fill_gradient(low = "white",high="darkblue",trans="sqrt",
+                        lim=c(0,2000),oob=scales::squish,
+                        breaks=c(0,100,500,1000,2000)) +
+    annotate(geom="text",x=0,y=10,label=paste0("R = ",signif(corr_nAUG,2)),hjust=0) +
+    coord_equal(xlim=c(0,10),ylim=c(0,10)) + 
+    scale_x_continuous(breaks=c(0,5,10)) + scale_y_continuous(breaks=c(0,5,10)) +
+    labs(x="H99 uAUG ct.", y="JEC21 uAUG ct.",fill="gene ct.") +
+    theme(legend.text=element_text(angle=-45,hjust=0),
+          legend.key.height=unit(0.5,"lines"),legend.position="top",
+          legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"),
+          legend.box.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))
+uAUGct_H99vsJEC21
+```
+
+## Composite figure 1
+
+```{r composite_fig1,cache=FALSE,fig.width=7.5,fig.height=4}
+plot_grid(fiveUTRlength_H99,
+          uATGcount_H99,
+          threeUTRlength_H99,
+          FiveUTRLength_H99vsJEC21,
+          uAUGct_H99vsJEC21,
+          ThreeUTRLength_H99vsJEC21,
+          ncol=3,rel_heights = c(0.5,1),
+          labels=LETTERS[2:7])
+```
 
 

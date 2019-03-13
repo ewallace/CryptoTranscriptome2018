@@ -92,6 +92,7 @@ And there is plasticity over which use AUGs and which use near-cognate.
 #     theme(axis.title.y = element_blank(),
 #           panel.grid.major = element_blank())
 
+tRS_figureloc <- 
 ggplot(data=tRSall %>% mutate(AA=factor(AA,levels=rev(AAlevelsloc))),
        aes(x=0,y=AA,colour=Type,shape=Type,size=Type,
            group=str_sub(Type,end=4L))) +
@@ -105,7 +106,10 @@ ggplot(data=tRSall %>% mutate(AA=factor(AA,levels=rev(AAlevelsloc))),
           axis.text.x=element_blank(), axis.ticks.x=element_blank(),
           axis.title=element_blank(),axis.line=element_blank()) +
     panel_border()
-
+tRS_figureloc
 ```
 
+```{r tRSfigureloc_svg,dependson="tRSfigureloc",fig.width=4,fig.height=4,dev="svg"}
+tRS_figureloc
+```
 

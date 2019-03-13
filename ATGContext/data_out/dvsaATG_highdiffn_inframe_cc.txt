@@ -7,8 +7,8 @@
 #
 # H99: H99 systematic gene name
 # JEC21: JEC21 systematic gene name of ortholog
-# a.skn.xx: annotated ATG score against narrow -4 Kozak consensus sequence, strain xx
-# d.skn.xx: 1st downstream ATG score against narrow -4 Kozak consensus sequence, strain xx
+# a.skn.xx: annotated AUG score against narrow -4 Kozak consensus sequence, strain xx
+# d.skn.xx: 1st downstream AUG score against narrow -4 Kozak consensus sequence, strain xx
 #
 # Edward Wallace, Jan 2019
 H99	JEC21	a.skn.H99	d.skn.H99	a.skn.JEC21	d.skn.JEC21

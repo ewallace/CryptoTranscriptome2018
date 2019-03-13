@@ -11,7 +11,7 @@ output:
 
 # Summary
 
-This presents the analysis of Neurospora start codon usage and context. This uses the N. crassa translation estimates from Ivanov 2017, strain FGSC 2489.
+This presents the analysis of Neurospora start codon usage and context. This uses the N. crassa translation estimates from Ivanov 2017, strain FGSC 2489. RNA data and TE estimates are from Yu 2015, same strain.
 
 For "enough RNA" we pick the top ~40% (4000) by RNA abundance, because the N. crassa genome is much larger (9722 genes) than the other fungi we are addressing.
 
@@ -333,16 +333,16 @@ scores <-
     transmute(Gene,
               aATG.scorekn = PWMscoren(str_to_upper(aATG.context),kozak_n_PWM),
               d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM),
-              # u1.scorekn   = PWMscoren(u1.context,,kozak_n_PWM),
+              u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM),
               aATG.scorekw = PWMscorew(str_to_upper(aATG.context),kozak_w_PWM),
               d1.scorekw   = PWMscorew(d1.context,kozak_w_PWM),
-              # u1.scorekw   = PWMscorew(u1.context,,kozak_w_PWM),
+              u1.scorekw   = PWMscorew(u1.context,kozak_w_PWM),
               NULL
     ) %>%
     mutate(d1vsan = d1.scorekn - aATG.scorekn,
-           # u1vsan = u1.scorekn - aATG.scorekn,
+           u1vsan = u1.scorekn - aATG.scorekn,
            d1vsaw = d1.scorekw - aATG.scorekw,
-           # u1vsaw = u1.scorekw - aATG.scorekw,
+           u1vsaw = u1.scorekw - aATG.scorekw,
            NULL) 
 
 
@@ -528,6 +528,105 @@ plot_grid(seqlogoFilterGenePos(Genelist=cytoribolist,pos=5L,nt="T"),
     ncol=1
 )
     
+```
+
+
+## uATGs inhibit translation of the main ORF
+
+### uATGs are associated with slightly lower absolute translation
+
+This is a very weak effect.
+
+```{r uATG_RPF, dependson="calc_scores", fig.width=2.5,fig.height=3.5}
+uATG_ct <- read_tsv("data_in/NC12_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
+    dplyr::select(c("Gene",paste0("u",1:56,".posTSS"))) %>%
+    gather(key="uATG",value="posTSS",-Gene) %>%
+    mutate(posTSS=as.integer(posTSS)) %>%
+    group_by(Gene) %>%
+    summarize(uATGCt = sum(!is.na(posTSS)),
+              uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
+              ) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGfac = make_uATGfact(uATGCt,uATGCtmin20)
+           )
+
+ribo_uct <- 
+    ribosum %>%
+    left_join( ribosum_Yu %>% 
+                   mutate(TE = RPF / RNA) %>%
+                   select(Gene,TE) ) %>%
+    filter(Gene %in% enoughRNA) %>%
+    inner_join(uATG_ct)
+
+ggplot(data=ribo_uct,
+       aes(x=uATGCtC,y=RPF)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("Ribosome occupancy (TPM of aORF)",
+                      limits=c(1,10000),
+                      oob=scales::squish) +
+    labs(x="uATG count")
+```
+
+### uATGs are not associated with lower translation efficiency
+
+But TE is from single-replicate data Yu 2015 so it may be difficult to draw conclusions.
+
+```{r uATG_TE, dependson="uATG_RPF", fig.width=2.5,fig.height=3.5}
+
+ggplot(data=ribo_uct,
+       aes(x=uATGCtC,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),expand=c(0,0),
+                      oob=scales::squish) +
+    labs(x="uATG count")
+```
+
+### uATGs association with translation efficiency does not vary with 20nt from TSS
+
+```{r uATGmin20_TE, dependson="uATG_RPF", fig.width=2.5,fig.height=3.5,results="show"}
+# ribo_uct
+ggplot(data=ribo_uct,
+       aes(x=uATGfac,y=TE)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),expand=c(0,0),
+                      oob=scales::squish) +
+    labs(x="uATG count and position\nrelative to TSS")
+```
+
+### uATG score weakly affects TE
+
+We suspect that uATG is associated with lower TE if the uATG has
+
+* position at least 20nt downstream from TSS
+* higher score
+
+This figure shows that, *for genes with only 1 uATG*, this correlation is weak but as expected. We would expect a stronger effect for genes with multiple uATGs of higher score. If we could model more aspects of translational efficiency we might find a stronger link.
+
+```{r uATG_scoreTE, dependson="uATG_RPF", fig.width=4.5,fig.height=2.5,results="show"}
+
+ggplot(data=ribo_uct %>%
+    inner_join(scores) %>%
+    filter(uATGCt == 1) %>%
+        left_join(ctbl_big) %>%
+        mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,2000))),
+       aes(x=u1.scorekw,y=TE)) +
+    facet_wrap(~u1.posTSS20) + 
+    geom_point(colour="grey50",size=0.7) +
+    stat_smooth(method="lm") + 
+    scale_y_log10nice("TE of aORF",
+                      limits=c(0.05,10),
+                      oob=scales::squish) +
+    labs(x="uATG wide score")
 ```
 
 
