@@ -149,16 +149,25 @@ ggseqlogo(data=ctbl_big_JEC21$aATG.context,namespace="TCAG") +
 That's for hiTrans_JEC21, the top 5% (330) translated genes by RPF TPM.
 
 ```{r a_hi_context_JEC21,fig.width=4,fig.height=1}
-aAUG_hi_context_JEC21 <- 
+aAUG_hi_context_JEC21_bare <- 
     ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
               namespace="TCAG") + 
-    theme_nothing() +
+    theme_nothing()
+aAUG_hi_context_JEC21_bare
+
+aAUG_hi_context_JEC21 <- aAUG_hi_context_JEC21_bare  +
     expand_limits(y=-1.1) + 
     annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
     annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
     annotate(geom="segment",x=3.5,xend=15.5,y=-0.65,yend=-0.65,size=1,colour="grey50") +
     annotate(geom="text",label="wide",x=9,y=-0.65,size=4, vjust=1.15,colour="grey50") 
-aAUG_hi_context_JEC21
+```
+
+```{r a_hi_context_svg_JEC21,fig.width=4,fig.height=1,dev="svg"}
+ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
+              namespace="TCAG") + 
+    theme_nothing() +
+    annotate(geom="text",label="Cd",x=12,y=2,size=4, vjust=1,colour="grey30")
 ```
 
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
@@ -675,12 +684,13 @@ highdiffn_dvsaATG_JEC21 <- scores_JEC21 %>%
     head(n=330) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
-ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
+ggplot(data=scores_JEC21 %>% 
+                    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_JEC21),
        aes(x=aATG.scorekn,y=d1.scorekn)) +
     geom_diagline() +
     geom_point(size=0.5,colour="grey50") +
     geom_point(data=highdiffn_dvsaATG_JEC21,
-               colour="red",size=1) +
+               aes(colour="d1AUG"),size=1) +
     geom_point(data=scores_JEC21 %>% 
                    filter(Gene %in% hiTrans_JEC21),
                colour="blue",size=1) +
@@ -688,33 +698,41 @@ ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
                    filter(Gene %in% hiTrans_JEC21),
                colour="purple4",size=1.3) +
     labs(x="aAUG score, narrow",
-         y="dAUG score, narrow")
+         y="d1AUG score, narrow")
 ```
 
 Red: high dATG vs aATG **Kozak** score.
 Blue: highly translated.
 Purple: both.
 
-```{r dvsaATG_scoresw_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
+```{r dvsaATG_scoresw_JEC21, dependson="calc_scores_JEC21", fig.width=4.5,fig.height=3.5}
 highdiffw_dvsaATG_JEC21 <- scores_JEC21 %>%
     arrange(desc(d1vsaw)) %>%
     head(n=330) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
-ggplot(data=scores_JEC21 %>% filter(!is.na(d1.scorekn)),
+ggplot(data=scores_JEC21 %>% 
+                    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_JEC21),
        aes(x=aATG.scorekw,y=d1.scorekw)) +
     geom_diagline() +
-    geom_point(size=0.5,colour="grey50") +
+    geom_point(aes(size="other",colour="other")) +
     geom_point(data=highdiffw_dvsaATG_JEC21,
-               colour="red",size=1) +
+               aes(size="d1AUG hi",colour="d1AUG hi")) +
     geom_point(data=scores_JEC21 %>% 
                    filter(Gene %in% hiTrans_JEC21),
-               colour="blue",size=1) +
+               aes(size="hiTrans",colour="hiTrans")) +
     geom_point(data=highdiffw_dvsaATG_JEC21 %>% 
                    filter(Gene %in% hiTrans_JEC21),
                colour="purple4",size=1.3) +
-    labs(x="aAUG score, wide",
-         y="dAUG score, wide")
+    scale_size_manual("Gene",breaks=c("hiTrans","d1AUG hi","other"),
+                      values=c("other"=0.5,"hiTrans"=1,"d1AUG hi"=1)) + 
+    scale_colour_manual("Gene",breaks=c("hiTrans","d1AUG hi","other"),
+                        values=c("other"="grey50","hiTrans"="blue","d1AUG hi"="red")) +
+    stat_smooth(method="gam",formula=y~s(x,k=4),size=0.7,
+                colour="green3",fill="green3") + 
+    coord_equal() + 
+    labs(x="aAUG wide Kozak score",
+         y="d1AUG wide Kozak score")
 ```
 
 #### Small negative correlation between dATG and aAUG score
@@ -744,7 +762,7 @@ ggplot(data=scores_JEC21_Cutn,
     # geom_boxplot(aes(x=aATG.scorekn.cutmid,group=aATG.scorekn.cut),
     #              fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
     labs(x="aAUG score, narrow",
-         y="dAUG score, narrow")
+         y="d1AUG score, narrow")
 ```
 
 ```{r dvsaATG_scoresw_boxplot_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=3.5}
@@ -764,8 +782,8 @@ ggplot(data=scores_JEC21_Cutw,
     stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
     # geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
     #              fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
-    labs(x="aAUG score, wide",
-         y="dAUG score, wide")
+    labs(x="aAUG wide Kozak score",
+         y="d1AUG wide Kozak score")
 ```
 
 
@@ -1441,7 +1459,9 @@ uATG_aATGwsumm_occ_JEC21 <-
     # stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     # stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
     stat_smooth(method="lm",fill="blue") + 
-    scale_x_continuous(expand=c(0.005,0.005)) + 
+    scale_x_continuous(expand=c(0.005,0.005),
+                       breaks=c(-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4),
+                       labels=c(-0.4,"",-0.2,"",0,"",0.2,"",0.4)) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.02,50),
                   oob=scales::squish) + 
@@ -1990,13 +2010,16 @@ uvsaATG_cumscores_H99
 
 ### For highly translated genes, most dAUG scores are much less than aATG
 
+Filtered for enough RNA!
+
 ```{r dvsaATG_scoresn_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
 highdiffn_dvsaATG_H99 <- scores_H99 %>%
     arrange(desc(d1vsan)) %>%
     head(n=330) %>%
     select(Gene,aATG.scorekn,d1.scorekn)
 
-ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
+ggplot(data=scores_H99 %>% 
+                    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_H99),
        aes(x=aATG.scorekn,y=d1.scorekn)) +
     geom_diagline() +
     geom_point(size=0.5,colour="grey50") +
@@ -2009,30 +2032,41 @@ ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
                    filter(Gene %in% hiTrans_H99),
                colour="purple4",size=1.3) +
     labs(x="aAUG score, narrow",
-         y="dAUG score, narrow")
+         y="d1AUG score, narrow")
 ```
 
 
-```{r dvsaATG_scoresw_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
+
+```{r dvsaATG_scoresw_H99, dependson="calc_scores_H99", fig.width=4.5,fig.height=3.5}
 highdiffw_dvsaATG_H99 <- scores_H99 %>%
     arrange(desc(d1vsaw)) %>%
     head(n=330) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
-ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
+dvsaATG_scoresw_H99 <- 
+ggplot(data=scores_H99 %>% 
+                    filter(!is.na(d1.scorekn),Gene %in% enoughRNA_H99),
        aes(x=aATG.scorekw,y=d1.scorekw)) +
     geom_diagline() +
-    geom_point(size=0.5,colour="grey50") +
+    geom_point(aes(size="other",colour="other")) +
     geom_point(data=highdiffw_dvsaATG_H99,
-               colour="red",size=1) +
+               aes(size="d1AUG hi",colour="d1AUG hi")) +
     geom_point(data=scores_H99 %>% 
                    filter(Gene %in% hiTrans_H99),
-               colour="blue",size=1) +
+               aes(size="hiTrans",colour="hiTrans")) +
     geom_point(data=highdiffw_dvsaATG_H99 %>% 
                    filter(Gene %in% hiTrans_H99),
                colour="purple4",size=1.3) +
-    labs(x="aAUG score",
-         y="d1AUG score")
+    scale_size_manual("Gene",breaks=c("hiTrans","d1AUG hi","other"),
+                      values=c("other"=0.5,"hiTrans"=1,"d1AUG hi"=1)) + 
+    scale_colour_manual("Gene",breaks=c("hiTrans","d1AUG hi","other"),
+                        values=c("other"="grey50","hiTrans"="blue","d1AUG hi"="red")) +
+    stat_smooth(method="gam",formula=y~s(x,k=4),size=0.7,
+                colour="green3",fill="green3") + 
+    coord_equal() + 
+    labs(x="aAUG wide Kozak score",
+         y="d1AUG wide Kozak score")
+dvsaATG_scoresw_H99
 ```
 
 ```{r dvsaATG_scoresw_plain_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
@@ -2084,7 +2118,7 @@ ggplot(data=scores_H99_Cutn,
     # geom_boxplot(aes(x=aATG.scorekn.cutmid,group=aATG.scorekn.cut),
     #              fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
     labs(x="aAUG score, narrow",
-         y="dAUG score, narrow")
+         y="d1AUG score, narrow")
 ```
 
 ```{r dvsaATG_scoresw_boxplot_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
@@ -2105,8 +2139,8 @@ ggplot(data=scores_H99_Cutw,
     # stat_smooth(method="lm",colour="red",fill="red") + 
     # geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
     #              fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
-    labs(x="aAUG score, wide",
-         y="dAUG score, wide")
+    labs(x="aAUG wide Kozak score",
+         y="d1AUG wide Kozak score")
 ```
 
 ## Genes with unusual dATG vs aAUG score
@@ -2285,54 +2319,59 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
 
 ### dATG vs aATG ribosome occupancy and narrow score, geometric mean across reps
 
-```{r dATG_aATGn_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
+```{r dATG_aATGn_occ_summ_H99, dependson="calc_scores_H99", fig.width=4,fig.height=2.5}
 
 ggplot(data=ribotbl_scoresenough_H99 %>%
            group_by(Gene,Type) %>%
            summarize(d1vsaScore = median(d1vsan),
-                     d1vsaRibo = logmean(Nxct.wide / Inct.wide)) %>%
-           mutate(Type=factor(Type,
-                              levels=c("RPF","RNA"),
-                              labels=c("Ribosome","RNA")
-                              )),
+                     d1vsaRibo = logmean(Nxct.wide / Inct.wide)) 
+       # %>%
+       #     mutate(Type=factor(Type,
+       #                        levels=c("RPF","RNA"),
+       #                        labels=c("Ribosome","RNA")
+       #                        ))
+       ,
        aes(x=d1vsaScore,y=d1vsaRibo)) +
     geom_point(size=0.5,colour="grey50") +
     # stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
-    stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
+    stat_smooth(method="gam",formula=y~s(x,k=4),colour="green3",fill="green3") + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,50),
                   oob=scales::squish) + 
-    labs(x="Kozak narrow score,\ndifference dATG - aATG",
-         y="Ribosome occupancy, ratio dATG / aATG") +
-    facet_grid(Type ~ .) +
+    labs(x="Kozak narrow score diff. d1AUG - aAUG",
+         y="Ribosome occupancy\nratio d1AUG : aAUG") +
+    facet_wrap(~Type,ncol=2) +
     panel_border()
     
 ```
 
 ### dATG vs aATG ribosome occupancy and wide score, geometric mean across reps
 
-```{r dATG_aATGw_occ_summ_H99, dependson="calc_scores_H99", fig.width=3,fig.height=4.4}
+```{r dATG_aATGw_occ_summ_H99, dependson="calc_scores_H99", fig.width=4,fig.height=2.5}
 
+dATG_aATGw_occ_summ_H99 <- 
 ggplot(data=ribotbl_scoresenough_H99 %>%
            group_by(Gene,Type) %>%
            summarize(d1vsaScore = median(d1vsaw),
-                     d1vsaRibo = logmean(Nxct.wide / Inct.wide)) %>%
-           mutate(Type=factor(Type,
-                              levels=c("RPF","RNA"),
-                              labels=c("Ribosome","RNA")
-                              )),
+                     d1vsaRibo = logmean(Nxct.wide / Inct.wide))
+       # %>%
+       #     mutate(Type=factor(Type,
+       #                        levels=c("RPF","RNA"),
+       #                        labels=c("Ribosome","RNA")
+       #                        ))
+       ,
        aes(x=d1vsaScore,y=d1vsaRibo)) +
     geom_point(size=0.5,colour="grey50") +
     # stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
-    stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
+    stat_smooth(method="gam",formula=y~s(x,k=4),colour="blue",fill="blue") + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,50),
                   oob=scales::squish) + 
-    labs(x="Kozak wide score,\ndifference dATG - aATG",
-         y="Ribosome occupancy, ratio dATG / aATG") +
-    facet_grid(Type ~ .) +
+    labs(x="Kozak wide score diff. d1AUG - aAUG",
+         y="Ribosome occupancy\nratio d1AUG : aAUG") +
+     facet_wrap(~Type,ncol=2) +
     panel_border()
-    
+dATG_aATGw_occ_summ_H99
 ```
 
 
@@ -3772,3 +3811,13 @@ plot_grid(left_col,right_col,ncol=2,rel_widths = c(1.2,1))
 
 ```
 
+
+### Figure 6 top: score and AUG/dAUG usage in H99
+
+```{r fig6top_dAUGscore_H99,dependson=c("dvsaATG_scoresw_H99","dATG_aATGw_occ_summ_H99"),fig.width=7.5,fig.height=2.5}
+
+plot_grid(dvsaATG_scoresw_H99,dATG_aATGw_occ_summ_H99,
+          ncol=2,rel_heights = c(2.8,4.7),
+          labels=c("A","B"),align="h")
+
+```

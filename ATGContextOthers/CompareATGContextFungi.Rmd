@@ -120,14 +120,21 @@ posbreaks <- c(3,9,13:15,21)
 poslabels <- c("-10","-4","A","T","G","+9")
 inf_limits <- c(0,2)
 
-ggplot(data=infon_perbase_g,
+ggplot(data=infon_perbase_g %>%
+           mutate(Genes=factor(Genes,
+                               levels=c("All","HiTrans","CytoRibo"),
+                               labels=c("All Annotated",
+                                        "Highly Translated",
+                                        "Cyto. Ribosomal Proteins")
+                               )),
        aes(x=i,y=Organism,fill=Infon) ) +
     geom_tile() + 
     scale_fill_gradient(low="white",high="darkblue",limits=inf_limits) + 
     scale_x_continuous(breaks=posbreaks,labels=poslabels,expand=c(0,0),limits=c(2.5,21.5)) + 
     scale_y_discrete(expand=c(0,0),limits=rev(Orglevels)) + 
     facet_wrap(~Genes,ncol=1,scales="free_y") + 
-    theme(axis.title=element_blank())
+    theme(axis.title=element_blank()) +
+    labs(fill="Info'n\ncontent\n(bits)")
 ```
 
 ## Inf content recomputed from inf content per base
@@ -308,20 +315,21 @@ dvsa_tbl %>% filter(Organism=="Nc",d1.framefac=="In",d1vsaw0p1=="d1hi"#,enoughR=
 
 ### Proportion of dAUG vs AUG score, d1 frame, mito pre
 
-```{r dvsaATG_framemitosumm, dependson="load_dvsa",results="show",fig.width=4.5,fig.height=4}
+```{r dvsaATG_framemitosumm, dependson="load_dvsa",results="show",fig.width=4.5,fig.height=3}
 dvsaATG_framemitosummspread <-
     dvsa_tbl %>%
     unite(d1f_mito,d1.framefac,Pred_preseq) %>%
     spread(key=d1f_mito,value=n) %>%
     mutate(d1vsaw0p1=factor(d1vsaw0p1,
                             levels=c("d1lo","d1hi"),
-                            labels=c("AUG score\nd < a + 0.1",
-                                     "AUG score\na + 0.1 < d")),
+                            labels=c("d1AUG low",
+                                     "d1AUG high")),
            enoughR=factor(enoughR,
                           levels=c("Yes","No"),
                           labels=c("high RNA","low RNA")),
     )
 
+dvsaATG_framemitosumm <- 
 ggplot(data=dvsaATG_framemitosummspread ) +
     geom_col(aes(x=Organism,
                  y=(In_No+In_Yes)/(In_No+In_Yes+Out_No+Out_Yes),
@@ -334,26 +342,19 @@ ggplot(data=dvsaATG_framemitosummspread ) +
     scale_y_continuous(breaks=c(0,1/3,2/3,1),
                        labels=c("0","1/3","2/3","1"),
                        expand=c(0,0)) +
+    expand_limits(y=0.7) + 
     labs(y="dAUG prop. in frame",x="Organism") +
     # facet_wrap(~d1vsaw0p1) +
     facet_grid(enoughR~d1vsaw0p1) +
     panel_border() +
     theme(panel.grid.major.y = element_line(colour="grey90"))
+
+plot_grid(dvsaATG_framemitosumm,labels="C")
 ```
 
-```{r dvsaATG_framemitosumm_enough, dependson="load_dvsa",results="show",fig.width=4.5,fig.height=3}
-dvsaATG_framemitosummspreade <-
-    dvsa_tbl %>%
-    unite(d1f_mito,d1.framefac,Pred_preseq) %>%
-    spread(key=d1f_mito,value=n) %>%
-    mutate(d1vsaw0p1=factor(d1vsaw0p1,
-                            levels=c("d1lo","d1hi"),
-                            labels=c("d1AUG low",
-                                     "d1AUG high"))
-    )
-
-ggplot(data=dvsaATG_framemitosummspreade %>%
-           filter(enoughR=="Yes") ) +
+```{r dvsaATG_framemitosumm_enough, dependson="dvsaATG_framemitosumm",results="show",fig.width=4.5,fig.height=3}
+ggplot(data=dvsaATG_framemitosummspread %>%
+           filter(enoughR=="high RNA") ) +
     geom_col(aes(x=Organism,
                  y=(In_No+In_Yes)/(In_No+In_Yes+Out_No+Out_Yes),
                  fill="Yes") ) +
