@@ -1,0 +1,300 @@
+---
+title: "Upf1-associated targets in Cryptococcus deneoformans"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 22 Mar 2019
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+Analysis of the DESeq2 results for Upf1 vs WT of Cryptococcus deneoformans JEC21.
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CryptoUpf1DiffExp-",
+                      cache.path="cache/CryptoUpf1DiffExp-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+```
+
+## Load data
+
+```{r load_data}
+diffexp <- read_tsv("../DiffExp/upf1E30vsWT.complete.txt") %>%
+    rename(Id="Gene") %>%
+    mutate(difffac = case_when(log2FoldChange > 1 & padj < 0.01 ~ "up",
+                               log2FoldChange < -1 & padj < 0.01 ~ "down",
+                               TRUE ~ "other") )
+
+uATG_ct <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
+    dplyr::rename(Gene=gene) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
+    dplyr::select(c("Gene",paste0("u",1:56,".posTSS"))) %>%
+    gather(key="uATG",value="posTSS",-Gene) %>%
+    mutate(posTSS=as.integer(posTSS)) %>%
+    group_by(Gene) %>%
+    summarize(uATGCt = sum(!is.na(posTSS)),
+              uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
+              ) %>%
+    mutate(uATGCtC = replace(uATGCt,uATGCt>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGCtmin20C = replace(uATGCtmin20,uATGCtmin20>=2, "2+") %>%
+               factor(levels=c(0:1,"2+")),
+           uATGfac = make_uATGfact(uATGCt,uATGCtmin20)
+           )
+
+udiff <- diffexp %>%
+    select(Gene,WT,upf1E30,log2FoldChange,pvalue,padj) %>%
+    inner_join(uATG_ct)
+```
+
+### Plot densities of read counts
+
+```{r raw_density,dependson="load_data",fig.width=4,fig.height=2}
+ggplot(data=diffexp) + 
+    geom_density(aes(x=WT,colour="WT"),kernel="rectangular") + 
+    geom_density(aes(x=upf1E30,colour="upf1"),kernel="rectangular") + 
+    labs(colour="sample") + 
+    scale_x_log10nice() +
+    scale_y_continuous(expand=c(0,0))
+```
+
+### Volcano plot of differential gene expression
+
+```{r volcano,dependson="load_data",fig.width=4,fig.height=2.5}
+volcano_diff <-
+ggplot(data=diffexp,
+       aes(x=log2FoldChange,y=-log10(pvalue),
+           colour=difffac)) + 
+    geom_vline(xintercept=0,size=0.3,colour="grey50") +
+    geom_point(size=0.7) +
+    scale_color_manual(values=c("other"="grey50","down"="darkred","up"="darkblue")) + 
+    scale_y_continuous(expand=c(0.01,0.01)) +
+    scale_x_continuous("Log2 fold change, Δupf1",
+                      limits=c(-6.1,6.1),expand=c(0,0),breaks=c(-6,-3,-2,-1,0,1,2,3,6),
+                      oob=scales::squish) +
+    coord_cartesian(clip="off") + 
+    theme(legend.position="none") +
+    annotate(geom="text",label=paste0("n=",sum(diffexp$difffac=="up")),
+             x=3.5,y=50,hjust=0,colour="darkblue",size=5) +
+    annotate(geom="text",label=paste0("n=",sum(diffexp$difffac=="down")),
+             x=-3.5,y=50,hjust=1,colour="darkred",size=5)
+
+volcano_diff
+```
+
+### Genes up in WT vs upf1 (this is not meant to be the interesting bit)
+
+```{r upWT,dependson="load_data",results="show"}
+diffexp %>%
+    arrange(log2FoldChange) %>%
+    select(Gene,WT,upf1E30,log2FoldChange,pvalue)
+```
+
+CNC02960 is upf1, the deleted gene. Others don't make sense.
+
+#### with minimal expression filter 
+
+```{r upWTfilt,dependson="load_data",results="show"}
+diffexp %>%
+    filter(upf1E30>5000) %>%
+    arrange(log2FoldChange) %>%
+    select(Gene,WT,upf1E30,log2FoldChange,pvalue)
+```
+
+Several genes that expressed more highly in the presence of upf1 are expressed evne more highly (or at least escpae the general repression) in stationary phase cells. This suggests that some upf1-linked mechanism might repress them in fast growth and is turned off in stat phase, e.g. missing co-factor.
+
+* CNJ03160/CNAG_04891, JEC21 homolog repressed by heat, H99 homolog has low expression in YPD, way up in RPMI. Doesn't make sense. 
+* CNG00370/CNAG_03566 maybe interesting, has a uORF (but wrong direction), up in stat and RPMI/macrophages
+* CNG04220/CNAG_03143 HSP12, also up in stat & RPMI
+* CNG04230/CNAG_03142, unknown, divergent w/ HSP12, also up in stat & RPMI
+* CNA05600/CNAG_00575, catalase CAT3, also up in stat & RPMI
+* CNE04080/CNAG_02129, unknown, repressed by heat, up in stat phase & RPMI
+* CND01230/CNAG_00995, Msc1 homolog, up in stat phase
+* CNC00310/CNAG_03058, Hmp1, repressed by heat in exp phase, up in stat phase & RPMI
+* CNI02990/CNAG_04163, unknown mucin/flocculin, repressed by heat in exp phase
+* CNC05950/CNAG_02986 YSA1 ADP-ribose diphosphatase, repressed by heat in exp. phase
+
+### Genes down in WT vs upf1 (NMDcandidates)
+
+```{r downWT,dependson="load_data",results="show"}
+diffexp %>%
+    arrange(desc(log2FoldChange)) %>%
+    select(Gene,WT,upf1E30,log2FoldChange,pvalue)
+```
+
+* CNC01660/CNAG_01653 CIG1, H99 high expression in macrophages, otherwise low.
+* CNH03500/CNAG_05278 is unkown prot, no proteomics, barely detected except in upf1KO. Maybe an unstable tx?
+* CNC06440/CNAG_01539 inositol-3-phosphate synthase INO1, clear uORF w/occupancy 
+
+
+These make little sense collectively
+
+#### with minimal expression filter 
+
+```{r downWTfilt,dependson="load_data",results="show"}
+diffexp %>%
+    filter(WT>5000) %>%
+    arrange(desc(log2FoldChange)) %>%
+    select(Gene,WT,upf1E30,log2FoldChange,pvalue)
+```
+
+Of the top *7/10* have clear uORFs with ribosomal occupancy. This is a very clear link.
+
+* CNF00330/CNAG_07695 is the putative GABA transporter with crazy 5' structure including uORF!
+* CNG04240/CNAG_03140 is the putative sugar transporter with six uORFs!
+* CNA04360/CNAG_00456 identified spore protein isp6, no uORF
+* CND01050/CNAG_00976 carbamoyl-phosphate synthase, uORF w/occupancy
+* CNM00970/CNAG_06090 clearly uORF w/occupancy
+* CNC02150/CNAG_01709 translation factor eIF5, uORF w/occupancy
+* CNC01160/CNAG_01603 hypothetical protein, uORF w/ ridiculous occupancy
+* CNC03630/CNAG_02738 maybe 2-dehydropantoate 2-reductase, no uORF
+* CNJ00080/CNAG_07865 ferroxidase Fet3/5, uORF w/occupancy
+* CND01910/CNAG_01060 SR-like RNA-binding protein homologous to splicing regulators, intron near 5' end of ORF partially retained with in-frame stop codon (CNAG_00260 & CNAG_00399 also homologs)
+
+
+### Output gene lists
+
+Genes_up_deltaUpf1_vs_JEC21.txt
+
+Genes_down_deltaUpf1_vs_JEC21.txt
+
+```{r write_genelists,dependson="load_data"}
+diffexp %>% 
+    filter(difffac=="up") %>% 
+    arrange(desc(log2FoldChange)) %>%
+    .$Gene %>%
+    write_lines("data_out/Upf1/Genes_up_deltaUpf1_vs_JEC21.txt")
+
+diffexp %>% 
+    filter(difffac=="down") %>% 
+    arrange(log2FoldChange) %>%
+    .$Gene %>%
+    write_lines("data_out/Upf1/Genes_down_deltaUpf1_vs_JEC21.txt")
+```
+
+I also used PANTHERdb to do GO analysis on these lists. The results were mostly not interesting.
+
+Except, Genes_down_deltaUpf1_vs_JEC21 was 2.3x enriched for genes wich MF Oxidoreductase activity (GO:0016491). This includes alternative oxidase, many dehydrogenases, etc. That looks interesting. These genes in pantherGeneList_deltaUpf1_up_oxidoreductase_GO0016491.txt
+
+## Connect Diff Exp to uAUG count
+
+
+### Volcano plot of differential gene expression
+
+```{r volcano_uATG,dependson="load_data",fig.width=6,fig.height=4}
+ggplot(data=udiff,
+       aes(x=log2FoldChange,y=-log10(pvalue),
+           colour=uATGCtC,size=uATGCtC)) + 
+    geom_point() +
+    geom_vline(xintercept=0,size=0.3,colour="grey50") +
+    scale_size_manual("uAUG count",values=c(0.4,0.55,0.7)) + 
+    scale_color_manual("uAUG count",values=c("grey50","blue","darkblue")) + 
+    coord_cartesian(clip="off") + 
+    scale_x_continuous("Log2 fold change, Δupf1",
+                      limits=c(-5,5),expand=c(0.02,0.02),
+                      oob=scales::squish)
+```
+
+### Fold Change vs uATG count
+
+```{r uATG_ct_box, dependson="load_data", fig.width=2.5,fig.height=3.5}
+ggplot(data=udiff,
+       aes(x=uATGCtC,y=log2FoldChange)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_continuous("Log2 fold change, Δupf1",
+                      limits=c(-5,5),expand=c(0.02,0.02),
+                      oob=scales::squish) +
+    labs(x="uAUG count")
+```
+
+```{r uATG_ct_cum, dependson="load_data", fig.width=4,fig.height=1.8}
+fc_uCt <- 
+    ggplot(data=udiff,
+       aes(x=log2FoldChange,colour=uATGCtC)) +
+    geom_vline(xintercept=0,size=0.3,colour="grey50") +
+    stat_ecdf(size=0.7) +
+    scale_x_continuous("Log2 fold change, Δupf1",
+                      limits=c(-3.1,3.1),expand=c(0,0),
+                      oob=scales::squish) +
+    scale_color_manual("uAUG count",values=c("grey50","blue","darkblue")) + 
+    themebits_ecdf
+fc_uCt
+```
+
+### Fold Change vs uATG count and position
+
+```{r uATG_ctmin20_box, dependson="load_data", fig.width=2.5,fig.height=3.5}
+ggplot(data=udiff,
+       aes(x=uATGfac,y=log2FoldChange)) +
+    geom_jitter(colour="grey50",size=0.7) +
+    geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
+    scale_y_continuous("Log2 fold change, Δupf1",
+                      limits=c(-3,3),expand=c(0.02,0.02),
+                      oob=scales::squish) +
+    labs(x="uAUG count")
+```
+
+```{r uATG_ctmin20_cum, dependson="load_data", fig.width=4,fig.height=1.8}
+fc_vs_umin20 <- 
+    ggplot(data=udiff,
+       aes(x=log2FoldChange,colour=uATGfac)) +
+    geom_vline(xintercept=0,size=0.3,colour="grey50") +
+    stat_ecdf(size=0.7) +
+    scale_x_continuous("Log2 fold change, Δupf1",
+                      limits=c(-3.1,3.1),expand=c(0,0),
+                      oob=scales::squish) +
+    scale_color_manual("uAUG count",
+                       values=c("grey50","blue","darkblue"),
+                       labels=c("0","1+ close","1+ far")) + 
+    themebits_ecdf
+fc_vs_umin20
+```
+
+### Fold Change vs uATG count and score
+
+```{r load_scores,dependson="load_data", fig.width=4,fig.height=1.8}
+scores  <- read_tsv("data_out/scores_kozak_JEC21.txt",comment="#")
+
+udiffsc1 <- inner_join(
+    udiff %>%
+        filter(uATGCt==1),
+    scores %>%
+        select(Gene,a.scorekw=aATG.scorekw,u1.scorekw) ) %>%
+    mutate(u1.skwcut = cut(u1.scorekw,breaks = c(0.5,0.7,0.8,0.9,1.0)))
+
+fc_vs_u1score <- 
+ggplot(data=udiffsc1,
+       aes(x=log2FoldChange,colour=u1.skwcut)) +
+    geom_vline(xintercept=0,size=0.3,colour="grey50") +
+    stat_ecdf(size=0.7) +
+    scale_x_continuous("Log2 fold change, Δupf1",
+                      limits=c(-3.1,3.1),expand=c(0,0),
+                      oob=scales::squish) +
+    # scale_color_brewer("uAUG score\n(count = 1)",
+    #                    type="seq") +
+    scale_color_manual("u1AUG wide\nKozak score",
+                       labels=c("0.5 to 0.7","0.7 to 0.8","0.8 to 0.9","0.9 to 1"),
+                       values=colorRampPalette(c("cadetblue1","darkblue"))(4)) +
+    themebits_ecdf
+
+fc_vs_u1score
+```
+
+## Composite figure
+
+```{r plot_comp,dependson=c("volcano","uATG_ct_cum","uATG_ctmin20_cum","load_scores"),fig.height=7.9,fig.width=4}
+plot_grid(volcano_diff,fc_uCt,fc_vs_umin20,fc_vs_u1score,
+          labels=LETTERS[1:4],label_y=c(1,1.1,1.1,1.1),
+          ncol=1,rel_heights = c(2.5,1.8,1.8,1.8))
+```
+
+
