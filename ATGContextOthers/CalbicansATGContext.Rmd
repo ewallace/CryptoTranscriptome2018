@@ -116,6 +116,16 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% hiTrans)$aATG.context,
     theme_nothing()
 ```
 
+
+```{r a_hi_context_svg,fig.width=3,fig.height=0.8,dev="svg"}
+ggseqlogo(data=filter(ctbl_big,Gene %in% hiTrans)$aATG.context,
+              namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="C. albicans",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
+```
+
 ### Cytoplasmic Ribosome Annotated ATGs 
 
 

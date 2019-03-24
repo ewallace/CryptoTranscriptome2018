@@ -163,11 +163,13 @@ aAUG_hi_context_JEC21 <- aAUG_hi_context_JEC21_bare  +
     annotate(geom="text",label="wide",x=9,y=-0.65,size=4, vjust=1.15,colour="grey50") 
 ```
 
-```{r a_hi_context_svg_JEC21,fig.width=4,fig.height=1,dev="svg"}
+```{r a_hi_context_svg_JEC21,fig.width=3,fig.height=0.8,dev="svg"}
 ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% hiTrans_JEC21)$aATG.context,
               namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
     theme_nothing() +
-    annotate(geom="text",label="Cd",x=12,y=2,size=4, vjust=1,colour="grey30")
+    annotate(geom="text",label="C. deneoformans",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
 ```
 
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
@@ -1886,6 +1888,23 @@ plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="wide Kozak score, H99",
 
 ```
 
+### Count unusual scores
+
+```{r count_unusual_scores_w_H99, dependson="calc_scores_H99",results="show",fig.width=5,fig.height=1.8}
+scores_H99 %>%
+    ungroup() %>%
+    summarize_if(str_detect(names(scores_H99),"scorekw"),median,na.rm=TRUE)
+
+scores_H99 %>%
+    ungroup() %>%
+    filter(Gene %in% hiTrans_H99) %>%
+    summarize_if(str_detect(names(scores_H99),"scorekw"),median,na.rm=TRUE)
+
+scores_H99 %>%
+    count(dvsmeda=d1.scorekw>0.856,dvsmedhiTrans=d1.scorekw>0.926)
+
+```
+
 ## Mutual information of different positions around ATG
 
 ### For all annotated genes
@@ -2761,19 +2780,20 @@ Many of these (CNAG_03140, CNAG_07695, CNAG_06246) are strongly translationally 
 
 ```{r uATG_lowestTE_H99, dependson="uATG_RPF_H99", fig.width=4.5,fig.height=2.5,results="show"}
 
-ribo_uct_H99 %>%
-    filter(uATGfac %in% c("1\nfar","2+\nfar")) %>%
-    select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
-    arrange(TE) %>%
-    left_join(ctbl_big_H99 %>% 
-                  transmute(Gene,
-                            u1.cxtn=str_sub(u1.context,start=8L,end=15L),
-                            u2.cxtn=str_sub(u2.context,start=8L,end=15L))
-              )
+# ribo_uct_H99 %>%
+#     filter(uATGfac %in% c("1\nfar","2+\nfar")) %>%
+#     select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
+#     arrange(TE) %>%
+#     left_join(ctbl_big_H99 %>% 
+#                   transmute(Gene,
+#                             u1.cxtn=str_sub(u1.context,start=8L,end=15L),
+#                             u2.cxtn=str_sub(u2.context,start=8L,end=15L))
+#               )
 
 ribo_uct_H99 %>%
-    filter(Gene %in% c("CNAG_06246","CNAG_05574",
-                       "CNAG_07813","CNAG_03578","CNAG_00784")
+    filter(Gene %in% c("CNAG_06246","CNAG_05574","CNAG_03140",
+                       "CNAG_07813","CNAG_07695","CNAG_01709",
+                       "CNAG_03578","CNAG_00784")
            ) %>%
     select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
     left_join(ctbl_big_H99 %>% 
@@ -2782,6 +2802,25 @@ ribo_uct_H99 %>%
                             u2.cxtn=str_sub(u2.context,start=8L,end=15L))
               )
 
+
+ctbl_big_H99 %>%
+    filter(Gene %in% c("CNAG_06246","CNAG_05574","CNAG_03140",
+                       "CNAG_07813","CNAG_07695","CNAG_01709",
+                       "CNAG_03578","CNAG_00784")
+           ) %>%
+    transmute(Gene,
+              # aATG.scorekn = PWMscoren(aATG.context,kozak_n_PWM_JEC21),
+              # d1.scorekn   = PWMscoren(d1.context,kozak_n_PWM_JEC21),
+              # d2.scorekn   = PWMscoren(d2.context,kozak_n_PWM_JEC21),
+              # u1.scorekn   = PWMscoren(u1.context,kozak_n_PWM_JEC21),
+              asw = PWMscorew(aATG.context,kozak_w_PWM_JEC21),
+              # d1.scorekw   = PWMscorew(d1.context,kozak_w_PWM_JEC21),
+              # d2.scorekw   = PWMscorew(d2.context,kozak_w_PWM_JEC21),
+              u1sw   = PWMscorew(u1.context,kozak_w_PWM_JEC21),
+              u2sw   = PWMscorew(u2.context,kozak_w_PWM_JEC21),
+    )
+    # ) %>%
+    # select(Gene,u1sw=u1.scorekw,u2sw=u2.scorekw, asw=aATG.scorekw)
 ```
 
 ### uATG vs aATG ribosome occupancy depends on the context, narrow

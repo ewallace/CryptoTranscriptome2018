@@ -171,6 +171,15 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% hiTrans)$aATG.context,
     theme_nothing()
 ```
 
+```{r a_hi_context_svg,fig.width=3,fig.height=0.8,dev="svg"}
+ggseqlogo(data=filter(ctbl_big,Gene %in% hiTrans)$aATG.context,
+              namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="N. crassa",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
+```
+
 ### Cytoplasmic Ribosome Annotated ATGs have a Kozak consensus sequence
 
 ```{r cytoribo_context,dependson="load_context",fig.width=4,fig.height=1}
@@ -578,30 +587,41 @@ ggplot(data=ribo_uct,
 But TE is from single-replicate data Yu 2015 so it may be difficult to draw conclusions.
 
 ```{r uATG_TE, dependson="uATG_RPF", fig.width=2.5,fig.height=3.5}
-
+uATG_TE <- 
 ggplot(data=ribo_uct,
        aes(x=uATGCtC,y=TE)) +
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
     scale_y_log10nice("TE of aORF",
-                      limits=c(0.05,10),expand=c(0,0),
+                      limits=c(0.05,20),expand=c(0,0),
                       oob=scales::squish) +
     labs(x="uATG count")
+uATG_TE
 ```
 
-### uATGs association with translation efficiency does not vary with 20nt from TSS
+### uATGs weakly associated with lower translation efficiency might be over 20nt from TSS
 
 ```{r uATGmin20_TE, dependson="uATG_RPF", fig.width=2.5,fig.height=3.5,results="show"}
 # ribo_uct
+uATGmin20_TE <- 
 ggplot(data=ribo_uct,
        aes(x=uATGfac,y=TE)) +
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
     scale_y_log10nice("TE of aORF",
-                      limits=c(0.05,10),expand=c(0,0),
+                      limits=c(0.05,20),expand=c(0,0),
                       oob=scales::squish) +
     labs(x="uATG count and position\nrelative to TSS")
+uATGmin20_TE
 ```
+
+```{r uATG_TE_comp,dependson=c("uATG_TE","uATGmin20_TE"),fig.width=2.5,fig.height=6}
+plot_grid(uATG_TE + 
+              labs(title="N.crassa") + 
+              theme(plot.title = element_text(face = "italic")),
+          uATGmin20_TE,ncol=1,align="v",labels=c("A","B"))
+```
+
 
 ### uATG score weakly affects TE
 

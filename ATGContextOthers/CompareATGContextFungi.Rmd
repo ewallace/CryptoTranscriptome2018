@@ -115,7 +115,7 @@ infon_perbase_g
 ```
 
 
-```{r plot_inf_perbase,dependson="load_info_perbase",fig.height=4,fig.width=3.6}
+```{r plot_inf_perbase,dependson="load_info_perbase",fig.height=4,fig.width=3.6,dev="pdf"}
 posbreaks <- c(3,9,13:15,21)
 poslabels <- c("-10","-4","A","T","G","+9")
 inf_limits <- c(0,2)
