@@ -72,12 +72,12 @@ ggplot(data=diffexp) +
 volcano_diff <-
 ggplot(data=diffexp,
        aes(x=log2FoldChange,y=-log10(pvalue),
-           colour=difffac)) + 
+           color=difffac)) + 
     geom_vline(xintercept=0,size=0.3,colour="grey50") +
     geom_point(size=0.7) +
     scale_color_manual(values=c("other"="grey50","down"="darkred","up"="darkblue")) + 
     scale_y_continuous(expand=c(0.01,0.01)) +
-    scale_x_continuous("Log2 fold change, Δupf1",
+    scale_x_continuous("Log2 fold change, upf1Δ",
                       limits=c(-6.1,6.1),expand=c(0,0),breaks=c(-6,-3,-2,-1,0,1,2,3,6),
                       oob=scales::squish) +
     coord_cartesian(clip="off") + 
@@ -88,6 +88,7 @@ ggplot(data=diffexp,
              x=-3.5,y=50,hjust=1,colour="darkred",size=5)
 
 volcano_diff
+
 ```
 
 ### Genes up in WT vs upf1 (this is not meant to be the interesting bit)
@@ -159,6 +160,43 @@ Of the top *7/10* have clear uORFs with ribosomal occupancy. This is a very clea
 * CNJ00080/CNAG_07865 ferroxidase Fet3/5, uORF w/occupancy
 * CND01910/CNAG_01060 SR-like RNA-binding protein homologous to splicing regulators, intron near 5' end of ORF partially retained with in-frame stop codon (CNAG_00260 & CNAG_00399 also homologs)
 
+#### Other genes of interest
+
+```{r volcano_select,dependson="load_data",fig.width=4,fig.height=2.5,results="show"}
+
+library(ggnewscale)
+
+genelist_u <- c("CNM01300", "CNM02470", "CNF00330", "CNG04240", "CNL04930")
+# volcano_diff <-
+diffexp_u <- 
+    diffexp %>%
+    filter(Gene %in% genelist_u) %>%
+    mutate(Geneshort = str_sub(Gene,start=3L),
+           GeneFac = factor(Gene,levels=genelist_u))
+
+ggplot(data=diffexp,
+       aes(x=log2FoldChange,y=-log10(pvalue))) + 
+    geom_vline(xintercept=0,size=0.3,colour="grey50") +
+    geom_point(size=0.3,colour="grey50") +
+    scale_y_continuous(expand=c(0.01,0.01)) +
+    scale_x_continuous("Log2 fold change, upf1Δ",
+                      limits=c(-6.1,6.1),expand=c(0,0),breaks=c(-6,-3,-2,-1,0,1,2,3,6),
+                      oob=scales::squish) +
+    coord_cartesian(clip="off") + 
+    theme(legend.position="none") +
+    geom_point(data=diffexp_u,size=1,
+                    aes(label=Geneshort,color=GeneFac)) + 
+    geom_text_repel(data=diffexp_u,
+                    point.padding=0.2,force=0.4,
+                    aes(label=Geneshort,color=GeneFac)) +
+    scale_color_brewer(type="qual",palette=2)
+
+diffexp %>%
+    filter(Gene %in% c(genelist_u,"CNB05380")) %>%
+    arrange(desc(log2FoldChange)) %>%
+    select(Gene,WT,upf1E30,log2FoldChange,pvalue)
+```
+
 
 ### Output gene lists
 
@@ -198,7 +236,7 @@ ggplot(data=udiff,
     scale_size_manual("uAUG count",values=c(0.4,0.55,0.7)) + 
     scale_color_manual("uAUG count",values=c("grey50","blue","darkblue")) + 
     coord_cartesian(clip="off") + 
-    scale_x_continuous("Log2 fold change, Δupf1",
+    scale_x_continuous("Log2 fold change, upf1Δ",
                       limits=c(-5,5),expand=c(0.02,0.02),
                       oob=scales::squish)
 ```
@@ -210,7 +248,7 @@ ggplot(data=udiff,
        aes(x=uATGCtC,y=log2FoldChange)) +
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
-    scale_y_continuous("Log2 fold change, Δupf1",
+    scale_y_continuous("Log2 fold change, upf1Δ",
                       limits=c(-5,5),expand=c(0.02,0.02),
                       oob=scales::squish) +
     labs(x="uAUG count")
@@ -222,7 +260,7 @@ fc_uCt <-
        aes(x=log2FoldChange,colour=uATGCtC)) +
     geom_vline(xintercept=0,size=0.3,colour="grey50") +
     stat_ecdf(size=0.7) +
-    scale_x_continuous("Log2 fold change, Δupf1",
+    scale_x_continuous("Log2 fold change, upf1Δ",
                       limits=c(-3.1,3.1),expand=c(0,0),
                       oob=scales::squish) +
     scale_color_manual("uAUG count",values=c("grey50","blue","darkblue")) + 
@@ -237,7 +275,7 @@ ggplot(data=udiff,
        aes(x=uATGfac,y=log2FoldChange)) +
     geom_jitter(colour="grey50",size=0.7) +
     geom_boxplot(colour="blue",outlier.colour=NA,fill=NA,size=0.75) +
-    scale_y_continuous("Log2 fold change, Δupf1",
+    scale_y_continuous("Log2 fold change, upf1Δ",
                       limits=c(-3,3),expand=c(0.02,0.02),
                       oob=scales::squish) +
     labs(x="uAUG count")
@@ -249,7 +287,7 @@ fc_vs_umin20 <-
        aes(x=log2FoldChange,colour=uATGfac)) +
     geom_vline(xintercept=0,size=0.3,colour="grey50") +
     stat_ecdf(size=0.7) +
-    scale_x_continuous("Log2 fold change, Δupf1",
+    scale_x_continuous("Log2 fold change, upf1Δ",
                       limits=c(-3.1,3.1),expand=c(0,0),
                       oob=scales::squish) +
     scale_color_manual("uAUG count",
@@ -276,7 +314,7 @@ ggplot(data=udiffsc1,
        aes(x=log2FoldChange,colour=u1.skwcut)) +
     geom_vline(xintercept=0,size=0.3,colour="grey50") +
     stat_ecdf(size=0.7) +
-    scale_x_continuous("Log2 fold change, Δupf1",
+    scale_x_continuous("Log2 fold change, upf1Δ",
                       limits=c(-3.1,3.1),expand=c(0,0),
                       oob=scales::squish) +
     # scale_color_brewer("uAUG score\n(count = 1)",
