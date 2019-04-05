@@ -295,7 +295,7 @@ uAUGct_H99vsJEC21 <-
     theme(legend.text=element_text(angle=-45,hjust=0),
           legend.key.height=unit(0.5,"lines"),legend.position="top",
           legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"),
-          legend.box.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))
+          legend.box.margin = margin(t = 0, r = 2, b = 0, l = 0, unit = "pt"))
 uAUGct_H99vsJEC21
 ```
 
@@ -303,13 +303,13 @@ uAUGct_H99vsJEC21
 
 ```{r composite_fig1,cache=FALSE,fig.width=7.5,fig.height=4}
 plot_grid(fiveUTRlength_H99,
-          uATGcount_H99,
           threeUTRlength_H99,
+          uATGcount_H99,
           FiveUTRLength_H99vsJEC21,
-          uAUGct_H99vsJEC21,
           ThreeUTRLength_H99vsJEC21,
+          uAUGct_H99vsJEC21,
           ncol=3,rel_heights = c(0.5,1),
-          labels=LETTERS[2:7])
+          labels=c("B","C","F","D","E","G"))
 ```
 
 
