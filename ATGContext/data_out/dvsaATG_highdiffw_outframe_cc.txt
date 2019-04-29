@@ -10,7 +10,7 @@
 # a.skw.xx: annotated AUG score against wide -10 Kozak consensus sequence, strain xx
 # d.skw.xx: 1st downstream AUG score against wide -10 Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Jan 2019
+# Edward Wallace, Apr 2019
 H99	JEC21	a.skw.H99	d.skw.H99	a.skw.JEC21	d.skw.JEC21
 CNAG_06278	CNN00160	0.693	0.931	0.721	0.93
 CNAG_03370	CNG02120	0.738	0.941	0.77	0.945

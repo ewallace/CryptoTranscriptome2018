@@ -3046,7 +3046,7 @@ cat(
 # a.skw.xx: annotated AUG score against wide -10 Kozak consensus sequence, strain xx
 # d.skw.xx: 1st downstream AUG score against wide -10 Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Jan 2019
+# Edward Wallace, Apr 2019
 ",
 file="data_out/dvsaATG_highdiffw_inframe_cc.txt")
 highdiffw_dvsaATG_cc %>%
@@ -3080,7 +3080,7 @@ cat(
 # a.skw.xx: annotated AUG score against wide -10 Kozak consensus sequence, strain xx
 # d.skw.xx: 1st downstream AUG score against wide -10 Kozak consensus sequence, strain xx
 #
-# Edward Wallace, Jan 2019
+# Edward Wallace, Apr 2019
 ",
 file="data_out/dvsaATG_highdiffw_outframe_cc.txt")
 highdiffw_dvsaATG_cc %>%
@@ -3240,11 +3240,36 @@ There seem to be more with mito-gain in H99. OR with alternative non-ATG starts 
 
 ### Non-canonical aATG motif from the 9 tRNA synthetases with poor Kozak score and in-frame high-score dATG
 
-```{r utRS_motif,dependson="scores_cc",fig.width=4,fig.height=1,results="show"}
+```{r utRS_seq,dependson="scores_cc",fig.width=4,fig.height=1,results="show"}
 unusual_tRNAsynth_JEC21 <-
     c("CNI03160","CNB05640","CNB00480","CNF02520","CNF00730",
       "CNJ00430","CNB01880","CNC06400","CNB00900")
+utRS_contexts_cc <- 
+    ctbl_cc  %>%
+    filter(JEC21 %in% unusual_tRNAsynth_JEC21) %>%
+    transmute(H99,JEC21,
+              aATG.context.H99 = str_sub(aATG.context.H99,start=3L,end=15L),
+              aATG.context.JEC21 = str_sub(aATG.context.JEC21,start=3L,end=15L),
+              d1.context.H99 = str_sub(d1.context.H99,start=3L,end=15L),
+              d1.context.JEC21 = str_sub(d1.context.JEC21,start=3L,end=15L)) 
 
+utRS_contexts_cc
+
+cat(
+    "# dualAUG_aaRS_contexts_cc.txt
+# Sequence contexts aATGs of 9 dualAUG tRNA synthetases
+# This is of the wide ATG context NNNNNNNNNNATG
+# In both H99 and JEC21
+#
+# Edward Wallace, Apr 2019
+",
+file="data_out/dualAUG_aaRS_contexts_cc.txt")
+utRS_contexts_cc %>%
+    write_tsv("data_out/dualAUG_aaRS_contexts_cc.txt",
+              append = TRUE,col_names=TRUE)
+```
+
+```{r utRS_motif,dependson=c("utRS_seq","scores_cc"),fig.width=4,fig.height=1,results="show"}
 ggseqlogo(data=ctbl_big_JEC21 %>%
               filter(Gene %in% unusual_tRNAsynth_JEC21) %>%
               .$aATG.context,
@@ -3270,7 +3295,7 @@ cat(
 # These nucleotides are very highly conserved between JEC21 and H99; JEC21 scores shown.
 # Column is position, Row is nt count in order: ACGT.
 #
-# Edward Wallace, Jan 2019
+# Edward Wallace, Apr 2019
 ",
 file="data_out/PFM_utRS_cc.txt")
 utRS_all_PFM[,3:12] %>%
