@@ -246,7 +246,6 @@ ggplot(data = infon_tblv,
 
 ### Inf -4 to -1 AND -10 to -5, compared
 
-Might need redoing so uses a colour not an alpha/transparency for higher bars. 
 
 ```{r inf_content_bygenesm4ANDm10to5,dependson="load_info_perbase",results="show",fig.height=3,fig.width=4}
 infon_tblv10 <- infon_perbase_g %>% 
@@ -259,11 +258,12 @@ infon_tblv4 <- infon_perbase_g %>%
     group_by(Organism,Genes) %>%
     summarize(Infon=sum(Infon))
 
-
-ggplot(data=infon_tblv4,aes(x=Genes,y=Infon,fill=Organism)) +
-    geom_col(data=infon_tblv10,position="dodge",alpha=0.4) +
+ggplot(data=infon_tblv10,aes(x=Genes,y=Infon,fill=Organism)) +
     geom_col(position="dodge") +
+    geom_col(position="dodge",aes(colour="-10:-1",group=Organism),fill=NA) +
+    geom_col(data=infon_tblv4,position="dodge",aes(colour="-4:-1",group=Organism),fill=NA) +
     scale_fill_brewer(type = "qual",palette=2) +
+    scale_colour_manual("Kozak width",values=c("-4:-1"="black","-10:-1"="grey40")) + 
     scale_y_continuous("Information content (bits)",
                        expand=c(0,0),breaks=0:6) +
     # panel_border() + 

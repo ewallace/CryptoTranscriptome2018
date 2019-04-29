@@ -166,7 +166,7 @@ Of the top *7/10* have clear uORFs with ribosomal occupancy. This is a very clea
 
 library(ggnewscale)
 
-genelist_u <- c("CNM01300", "CNM02470", "CNF00330", "CNG04240", "CNL04930")
+genelist_u <- c("CNM01300", "CNM02470", "CNF00330", "CNG04240", "CNL04930","CND01050")
 # volcano_diff <-
 diffexp_u <- 
     diffexp %>%
