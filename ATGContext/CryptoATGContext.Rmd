@@ -157,10 +157,10 @@ aAUG_hi_context_JEC21_bare
 
 aAUG_hi_context_JEC21 <- aAUG_hi_context_JEC21_bare  +
     expand_limits(y=-1.1) + 
-    annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
-    annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
-    annotate(geom="segment",x=3.5,xend=15.5,y=-0.65,yend=-0.65,size=1,colour="grey50") +
-    annotate(geom="text",label="wide",x=9,y=-0.65,size=4, vjust=1.15,colour="grey50") 
+    # annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
+    # annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
+    annotate(geom="segment",x=2.5,xend=15.5,y=-0.2,yend=-0.2,size=1,colour="grey50") # +
+    #annotate(geom="text",label="wide",x=9,y=-0.2,size=4, vjust=1.15,colour="grey50") 
 ```
 
 ```{r a_hi_context_svg_JEC21,fig.width=3,fig.height=0.8,dev="svg"}
@@ -494,13 +494,13 @@ ggplot(data=ctbl_big_JEC21 %>%
 
 ```{r plot_scores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
 
-plot_4ATGscoresw_dens(scores_JEC21,hiTrans_JEC21,xlab="wide Kozak score, JEC21")
+plot_4ATGscoresw_dens(scores_JEC21,hiTrans_JEC21,xlab="Kozak score")
 
 ```
 
 ```{r plot_cumscores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
 plot_cumscores_w_JEC21 <- 
-    plot_4ATGscoresw_ecdf(scores_JEC21,hiTrans_JEC21,xlab="wide Kozak score, JEC21")
+    plot_4ATGscoresw_ecdf(scores_JEC21,hiTrans_JEC21,xlab="Kozak score")
 plot_cumscores_w_JEC21
 
 ```
@@ -511,7 +511,7 @@ plot_cumscores_w_JEC21
 # plot_4ATGscoresw_dens(scores_JEC21,hiTrans_JEC21,xlab="wide Kozak score, JEC21",
 #                       u1=FALSE,d2=TRUE)
 
-plot_4ATGscoresw_ecdf(scores_JEC21,hiTrans_JEC21,xlab="wide Kozak score, JEC21",
+plot_4ATGscoresw_ecdf(scores_JEC21,hiTrans_JEC21,xlab="Kozak score",
                       u1=FALSE,d2=TRUE)
 
 ```
@@ -652,12 +652,12 @@ This looks interesting and needs a better way of summarizing.
 ```{r dvsaATG_scoresdens_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=1.8}
 
 plot_ATGdiffs_dens(scores_JEC21,
-                   xlab="Kozak score diff. d1AUG - aAUG",
+                   xlab=expression(paste("Kozak score diff. ", d[1],"AUG - aAUG")),
                    difftype="downstream")
 
 dvsaATG_cumscores_JEC21 <- 
     plot_ATGdiffs_ecdf(scores_JEC21,
-                       xlab="Kozak score diff. d1AUG - aAUG",
+                       xlab=expression(paste("Kozak score diff. ", d[1],"AUG - aAUG")),
                        difftype="downstream")
 
 dvsaATG_cumscores_JEC21
@@ -668,13 +668,15 @@ dvsaATG_cumscores_JEC21
 ```{r uvsaATG_scoresdens_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=1.8}
 
 plot_ATGdiffs_dens(scores_JEC21,
-                   xlab="Kozak score diff. u1AUG - aAUG",
+                   xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
                    difftype="upstream")
 
 uvsaATG_cumscores_JEC21 <- 
 plot_ATGdiffs_ecdf(scores_JEC21,
-                   xlab="Kozak score diff. u1AUG - aAUG",
-                   difftype="upstream")
+                   xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
+                   difftype="upstream") +
+    scale_colour_hue(breaks=c("narrow","wide"),
+                     labels=c("narrow (-4)","wide (-10)"))
 uvsaATG_cumscores_JEC21
 ```
 
@@ -710,7 +712,8 @@ Purple: both.
 ```{r dvsaATG_scoresw_JEC21, dependson="calc_scores_JEC21", fig.width=4.5,fig.height=3.5}
 highdiffw_dvsaATG_JEC21 <- scores_JEC21 %>%
     arrange(desc(d1vsaw)) %>%
-    head(n=330) %>%
+    filter(d1.scorekw - aATG.scorekw > 0.1) %>%
+    # head(n=330) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
 ggplot(data=scores_JEC21 %>% 
@@ -733,8 +736,8 @@ ggplot(data=scores_JEC21 %>%
     stat_smooth(method="gam",formula=y~s(x,k=4),size=0.7,
                 colour="green3",fill="green3") + 
     coord_equal() + 
-    labs(x="aAUG wide Kozak score",
-         y="d1AUG wide Kozak score")
+    labs(x="aAUG Kozak score",
+         y=expression(paste(d[1],"AUG Kozak score")))
 ```
 
 #### Small negative correlation between dATG and aAUG score
@@ -784,8 +787,8 @@ ggplot(data=scores_JEC21_Cutw,
     stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
     # geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
     #              fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
-    labs(x="aAUG wide Kozak score",
-         y="d1AUG wide Kozak score")
+    labs(x="aAUG Kozak score",
+         y=expression(paste(d[1],"AUG Kozak score")))
 ```
 
 
@@ -799,140 +802,41 @@ highdiffn_dvsaATG_JEC21
 ```
 
 
-### dATG in frame with ATG, narrow
+## Genes with unusual dATG vs aAUG wide score
 
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffn_inframe_JEC21.txt*.
+Saved to file *dvsaATG_highdiffw_enoughRNA_JEC21.txt*.
 
-```{r highdiffn_dvsaATG_inframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
-highdiffn_dvsaATG_enoughinframe_JEC21 <- 
-    highdiffn_dvsaATG_JEC21 %>%
-    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_JEC21, d1.frame==0) %>%
-    select(Gene,aATG.scorekn,d1.scorekn)
-
-highdiffn_dvsaATG_enoughinframe_JEC21
-
-cat(
-    "# dvsaATG_highdiffn_inframe_JEC21.txt
-# Genes with in-frame high-score dATGs
-# In C. deneoformans JEC21:
-#   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 50% by RNA abundance
-#   - dATG is in frame with aATG
-#
-# Gene: systematic gene name
-# aATG.scorekn: annotated AUG score against narrow -4 Kozak consensus sequence
-# d1.scorekn: 1st downstream AUG score against narrow -4 Kozak consensus sequence
-#
-# Edward Wallace, Jan 2019
-",
-file="data_out/dvsaATG_highdiffn_inframe_JEC21.txt")
-highdiffn_dvsaATG_enoughinframe_JEC21 %>%
-    mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffn_inframe_JEC21.txt",append = TRUE,col_names=TRUE)
-```
-
-
-### dATG out of frame with ATG, narrow
-
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_JEC21.txt*.
-
-```{r highdiffn_dvsaATG_outframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
-highdiffn_dvsaATG_enoughoutframe_JEC21 <- 
-    highdiffn_dvsaATG_JEC21 %>%
-    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_JEC21, d1.frame!=0) %>%
-    select(Gene,aATG.scorekn,d1.scorekn)
-
-highdiffn_dvsaATG_enoughoutframe_JEC21
-
-cat(
-    "# dvsaATG_highdiffn_outframe_JEC21.txt
-# Genes with in-frame high-score dATGs
-# In C. deneoformans JEC21:
-#   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 50% by RNA abundance
-#   - dATG is out-of-frame with aATG
-#
-# Gene: systematic gene name
-# aATG.scorekn: annotated AUG score against narrow -4 Kozak consensus sequence
-# d1.scorekn: 1st downstream AUG score against narrow -4 Kozak consensus sequence
-#
-# Edward Wallace, Jan 2019
-",
-file="data_out/dvsaATG_highdiffn_outframe_JEC21.txt")
-highdiffn_dvsaATG_enoughoutframe_JEC21 %>%
-    mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffn_outframe_JEC21.txt",append = TRUE,col_names=TRUE)
-```
-
-
-
-### dATG in frame with ATG, wide
-
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffw_inframe_JEC21.txt*.
-
-```{r highdiffw_dvsaATG_inframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
-highdiffw_dvsaATG_enoughinframe_JEC21 <- 
+```{r highdiffw_dvsaATG_enoughRNA_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
+highdiffw_dvsaATG_enoughRNA_JEC21 <- 
     highdiffw_dvsaATG_JEC21 %>%
-    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_JEC21, d1.frame==0) %>%
-    select(Gene,aATG.scorekw,d1.scorekw)
+    left_join( ctbl_big_JEC21 %>% select(Gene,d1.posATG,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_JEC21) %>%
+    mutate(d1.frame = (d1.frame == 0) %>% 
+               factor(levels=c(TRUE,FALSE),labels=c("In","Out") ) ) %>%
+    select(Gene,aATG.scorekw,d1.scorekw,d1.posATG,d1.frame)
 
-highdiffw_dvsaATG_enoughinframe_JEC21
+highdiffw_dvsaATG_enoughRNA_JEC21
+
 
 cat(
-    "# dvsaATG_highdiffw_inframe_JEC21.txt
+    "# dvsaATG_highdiffw_enoughRNA_JEC21.txt
 # Genes with in-frame high-score dATGs
 # In C. deneoformans JEC21:
-#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+#   - difference, aATG.scorekw - d1.scorekw > 0.1
 #   - in top 50% by RNA abundance
-#   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
 # aATG.scorekw: annotated AUG score against wide -10 Kozak consensus sequence
 # d1.scorekw: 1st downstream AUG score against wide -10 Kozak consensus sequence
+# d1.posATG: position (in nt) of 1st downstream AUG compared to annotated AUG.
+# d1.frame: downstream AUG is In or Out of reading frame with annotated.
 #
-# Edward Wallace, Jan 2019
+# Edward Wallace, Apr 2019
 ",
-file="data_out/dvsaATG_highdiffw_inframe_JEC21.txt")
-highdiffw_dvsaATG_enoughinframe_JEC21 %>%
+file="data_out/dvsaATG_highdiffw_enoughRNA_JEC21.txt")
+highdiffw_dvsaATG_enoughRNA_JEC21 %>%
     mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffw_inframe_JEC21.txt",append = TRUE,col_names=TRUE)
-```
-
-
-### dATG out of frame with ATG, wide
-
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffw_outframe_JEC21.txt*.
-
-```{r highdiffw_dvsaATG_outframe_JEC21,dependson="dvsaATG_scoresn_JEC21",results="show"}
-highdiffw_dvsaATG_enoughoutframe_JEC21 <- 
-    highdiffw_dvsaATG_JEC21 %>%
-    left_join( ctbl_big_JEC21 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_JEC21, d1.frame!=0) %>%
-    select(Gene,aATG.scorekw,d1.scorekw)
-
-highdiffw_dvsaATG_enoughoutframe_JEC21
-
-cat(
-    "# dvsaATG_highdiffw_outframe_JEC21.txt
-# Genes with in-frame high-score dATGs
-# In C. deneoformans JEC21:
-#   - in top 5% by difference, aATG.scorekw - d1.scorekw
-#   - in top 50% by RNA abundance
-#   - dATG is out-of-frame with aATG
-#
-# Gene: systematic gene name
-# aATG.scorekw: annotated AUG score against wide -10 Kozak consensus sequence
-# d1.scorekw: 1st downstream AUG score against wide -10 Kozak consensus sequence
-#
-# Edward Wallace, Jan 2019
-",
-file="data_out/dvsaATG_highdiffw_outframe_JEC21.txt")
-highdiffw_dvsaATG_enoughoutframe_JEC21 %>%
-    mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffw_outframe_JEC21.txt",append = TRUE,col_names=TRUE)
+    write_tsv("data_out/dvsaATG_highdiffw_enoughRNA_JEC21.txt",append = TRUE,col_names=TRUE)
 ```
 
 
@@ -955,7 +859,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                   limits=c(0.05,100),
                   oob=scales::squish) + 
     labs(x="Kozak narrow score, difference dATG - aATG",
-         y="Ribosome occupancy, ratio dATG / aATG") +
+         y="Occupancy ratio dATG / aATG") +
     facet_grid(Type ~ Sample) +
     panel_border()
     
@@ -981,7 +885,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                   limits=c(0.05,50),
                   oob=scales::squish) + 
     labs(x="Kozak wide score,\ndifference dATG - aATG",
-         y="Ribosome occupancy, ratio dATG / aATG") +
+         y="Occupancy ratio dATG / aATG") +
     facet_grid(Type ~ .) +
     panel_border()
     
@@ -1358,7 +1262,7 @@ ggplot(data=ribo_uct_JEC21 %>%
     scale_y_log10nice("TE of aORF",
                       limits=c(0.05,10),
                       oob=scales::squish) +
-    labs(x="uATG wide score")
+    labs(x="uAUG Kozak score")
 uATG_scoreTE_JEC21
 ```
 
@@ -1410,7 +1314,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
     labs(x="narrow score, difference u1AUG - aAUG",
-         y="Ribosome occupancy, ratio u1AUG / aAUG") +
+         y="Occupancy ratio u1AUG / aAUG") +
     panel_border()
 ```
 
@@ -1431,7 +1335,7 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
     labs(x="wide score, difference u1AUG - aAUG",
-         y="Ribosome occupancy, ratio u1AUG / aAUG") +
+         y="Occupancy ratio u1AUG / aAUG") +
     panel_border()
 ```
 
@@ -1469,8 +1373,8 @@ uATG_aATGwsumm_occ_JEC21 <-
                   oob=scales::squish) + 
     # facet_grid(Type ~ .) +
     facet_wrap(~Type,ncol=2) + 
-    labs(x="wide score diff. u1AUG - aAUG",
-         y="occupancy ratio \n u1AUG : aAUG") +
+    labs(x="Kozak score diff. uAUG - aAUG",
+         y="Occupancy ratio \n uAUG : aAUG") +
     panel_border()
 
 uATG_aATGwsumm_occ_JEC21
@@ -1602,10 +1506,10 @@ aAUG_hi_context_H99 <-
               namespace="TCAG") + 
     theme_nothing() +
     expand_limits(y=-1.1) + 
-    annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
-    annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
-    annotate(geom="segment",x=3.5,xend=15.5,y=-0.65,yend=-0.65,size=1,colour="grey50") +
-    annotate(geom="text",label="wide",x=9,y=-0.65,size=4, vjust=1.15,colour="grey50") 
+    # annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
+    # annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
+    annotate(geom="segment",x=2.5,xend=15.5,y=-0.2,yend=-0.2,size=1,colour="grey50") # +
+    # annotate(geom="text",label="wide",x=9,y=-0.1,size=4, vjust=1.15,colour="grey50") 
 aAUG_hi_context_H99
 ```
 
@@ -1868,13 +1772,13 @@ ggplot(data=scores_H99) +
 
 ```{r plot_scores_w_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
 
-plot_4ATGscoresw_dens(scores_H99,hiTrans_H99,xlab="wide Kozak score, H99")
+plot_4ATGscoresw_dens(scores_H99,hiTrans_H99,xlab="Kozak score")
 
 ```
 
 ```{r plot_cumscores_w_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
 plot_cumscores_w_H99 <- 
-    plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="wide Kozak score, H99")
+    plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="Kozak score")
 plot_cumscores_w_H99
 
 ```
@@ -1883,7 +1787,7 @@ plot_cumscores_w_H99
 
 ```{r plot_scores_wd1d2_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
 
-plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="wide Kozak score, H99",
+plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="Kozak score",
                       u1=FALSE,d2=TRUE)
 
 ```
@@ -2001,12 +1905,12 @@ This is uninteresting because the counts are so low with no -4A. The -3A is even
 ```{r dvsaATG_scoresdens_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=1.8}
 
 plot_ATGdiffs_dens(scores_H99,
-                   xlab="Kozak score diff. d1AUG - aAUG",
+                   xlab=expression(paste("Kozak score diff. ", d[1],"AUG - aAUG")),
                    difftype="downstream")
 
 dvsaATG_cumscores_H99 <- 
     plot_ATGdiffs_ecdf(scores_H99,
-                       xlab="Kozak score diff. d1AUG - aAUG",
+                       xlab=expression(paste("Kozak score diff. ", d[1],"AUG - aAUG")),
                        difftype="downstream")
 
 dvsaATG_cumscores_H99
@@ -2017,13 +1921,17 @@ dvsaATG_cumscores_H99
 ```{r uvsaATG_scoresdens_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=1.8}
 
 plot_ATGdiffs_dens(scores_H99,
-                   xlab="Kozak score diff. u1AUG - aAUG",
-                   difftype="upstream")
+                   xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
+                   difftype="upstream") +
+    scale_colour_hue(breaks=c("narrow","wide"),
+                     labels=c("narrow (-4)","wide (-10)"))
 
 uvsaATG_cumscores_H99 <- 
 plot_ATGdiffs_ecdf(scores_H99,
-                   xlab="Kozak score diff. u1AUG - aAUG",
-                   difftype="upstream")
+                   xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
+                   difftype="upstream") +
+    scale_colour_hue(breaks=c("narrow","wide"),
+                     labels=c("narrow (-4)","wide (-10)"))
 uvsaATG_cumscores_H99
 ```
 
@@ -2059,7 +1967,7 @@ ggplot(data=scores_H99 %>%
 ```{r dvsaATG_scoresw_H99, dependson="calc_scores_H99", fig.width=4.5,fig.height=3.5}
 highdiffw_dvsaATG_H99 <- scores_H99 %>%
     arrange(desc(d1vsaw)) %>%
-    head(n=330) %>%
+    filter(d1.scorekw - aATG.scorekw > 0.1) %>%
     select(Gene,aATG.scorekw,d1.scorekw)
 
 dvsaATG_scoresw_H99 <- 
@@ -2083,32 +1991,11 @@ ggplot(data=scores_H99 %>%
     stat_smooth(method="gam",formula=y~s(x,k=4),size=0.7,
                 colour="green3",fill="green3") + 
     coord_equal() + 
-    labs(x="aAUG wide Kozak score",
-         y="d1AUG wide Kozak score")
+    labs(x="aAUG Kozak score",
+         y=expression(paste(d[1],"AUG Kozak score")))
 dvsaATG_scoresw_H99
 ```
 
-```{r dvsaATG_scoresw_plain_H99, dependson="calc_scores_H99", fig.width=3.5,fig.height=3.5}
-highdiffw_dvsaATG_H99 <- scores_H99 %>%
-    arrange(desc(d1vsaw)) %>%
-    head(n=330) %>%
-    select(Gene,aATG.scorekw,d1.scorekw)
-
-ggplot(data=scores_H99 %>% filter(!is.na(d1.scorekn)),
-       aes(x=aATG.scorekw,y=d1.scorekw)) +
-    geom_diagline() +
-    geom_point(size=0.5,colour="grey50") +
-    # geom_point(data=highdiffw_dvsaATG_H99,
-    #            colour="red",size=1) +
-    # geom_point(data=scores_H99 %>% 
-    #                filter(Gene %in% hiTrans_H99),
-    #            colour="blue",size=1) +
-    # geom_point(data=highdiffw_dvsaATG_H99 %>% 
-    #                filter(Gene %in% hiTrans_H99),
-    #            colour="purple4",size=1.3) +
-    labs(x="aAUG score",
-         y="d1AUG score")
-```
 
 #### Small negative correlation between dATG and aAUG score
 
@@ -2158,8 +2045,8 @@ ggplot(data=scores_H99_Cutw,
     # stat_smooth(method="lm",colour="red",fill="red") + 
     # geom_boxplot(aes(x=aATG.scorekw.cutmid,group=aATG.scorekw.cut),
     #              fill=NA,colour="blue",size=0.7,outlier.shape=NA) +
-    labs(x="aAUG wide Kozak score",
-         y="d1AUG wide Kozak score")
+    labs(x="aAUG Kozak score",
+         y=expression(paste(d[1],"AUG Kozak score")))
 ```
 
 ## Genes with unusual dATG vs aAUG score
@@ -2171,143 +2058,42 @@ highdiffn_dvsaATG_H99
 ```
 
 
-### dATG in frame with ATG, narrow
+### dATG vs ATG, wide
 
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffn_inframe_H99.txt*.
+Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffw_enoughRNA_H99.txt*.
 
-```{r highdiffn_dvsaATG_inframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
-highdiffn_dvsaATG_enoughinframe_H99 <- 
-    highdiffn_dvsaATG_H99 %>%
-    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_H99, d1.frame==0) %>%
-    select(Gene,aATG.scorekn,d1.scorekn)
-
-highdiffn_dvsaATG_enoughinframe_H99
-
-cat(
-    "# dvsaATG_highdiffn_inframe_H99.txt
-# Genes with in-frame high-score dATGs
-# In C. deneoformans H99:
-#   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 50% by RNA abundance
-#   - dATG is in frame with aATG
-#
-# Gene: systematic gene name
-# aATG.scorekn: annotated AUG score against narrow -4 Kozak consensus sequence
-# d1.scorekn: 1st downstream AUG score against narrow -4 Kozak consensus sequence
-#
-# Edward Wallace, Jan 2019
-",
-file="data_out/dvsaATG_highdiffn_inframe_H99.txt")
-highdiffn_dvsaATG_enoughinframe_H99 %>%
-    mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffn_inframe_H99.txt",append = TRUE,col_names=TRUE)
-```
-
-
-### dATG out of frame with ATG, narrow
-
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffn_outframe_H99.txt*.
-
-```{r highdiffn_dvsaATG_outframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
-highdiffn_dvsaATG_enoughoutframe_H99 <- 
-    highdiffn_dvsaATG_H99 %>%
-    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_H99, d1.frame!=0) %>%
-    select(Gene,aATG.scorekn,d1.scorekn)
-
-highdiffn_dvsaATG_enoughoutframe_H99
-
-cat(
-    "# dvsaATG_highdiffn_outframe_H99.txt
-# Genes with in-frame high-score dATGs
-# In C. deneoformans H99:
-#   - in top 5% by difference, aATG.scorekn - d1.scorekn
-#   - in top 50% by RNA abundance
-#   - dATG is out-of-frame with aATG
-#
-# Gene: systematic gene name
-# aATG.scorekn: annotated AUG score against narrow -4 Kozak consensus sequence
-# d1.scorekn: 1st downstream AUG score against narrow -4 Kozak consensus sequence
-#
-# Edward Wallace, Jan 2019
-",
-file="data_out/dvsaATG_highdiffn_outframe_H99.txt")
-highdiffn_dvsaATG_enoughoutframe_H99 %>%
-    mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffn_outframe_H99.txt",append = TRUE,col_names=TRUE)
-```
-
-
-
-### dATG in frame with ATG, wide
-
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, in frame. Saved to *dvsaATG_highdiffw_inframe_H99.txt*.
-
-```{r highdiffw_dvsaATG_inframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
-highdiffw_dvsaATG_enoughinframe_H99 <- 
+```{r highdiffw_dvsaATG_enoughRNA_H99,dependson="dvsaATG_scoresn_H99",results="show"}
+highdiffw_dvsaATG_enoughRNA_H99 <- 
     highdiffw_dvsaATG_H99 %>%
-    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_H99, d1.frame==0) %>%
-    select(Gene,aATG.scorekw,d1.scorekw)
+    left_join( ctbl_big_H99 %>% select(Gene,d1.posATG,d1.frame) ) %>%
+    filter(Gene %in% enoughRNA_H99) %>%
+    mutate(d1.frame = (d1.frame == 0) %>% 
+               factor(levels=c(TRUE,FALSE),labels=c("In","Out") ) ) %>%
+    select(Gene,aATG.scorekw,d1.scorekw,d1.posATG,d1.frame)
 
-highdiffw_dvsaATG_enoughinframe_H99
+highdiffw_dvsaATG_enoughRNA_H99
+
 
 cat(
-    "# dvsaATG_highdiffw_inframe_H99.txt
+    "# dvsaATG_highdiffw_enoughRNA_H99.txt
 # Genes with in-frame high-score dATGs
-# In C. deneoformans H99:
-#   - in top 5% by difference, aATG.scorekw - d1.scorekw
+# In C. neoformans H99:
+#   - difference, aATG.scorekw - d1.scorekw > 0.1
 #   - in top 50% by RNA abundance
-#   - dATG is in frame with aATG
 #
 # Gene: systematic gene name
 # aATG.scorekw: annotated AUG score against wide -10 Kozak consensus sequence
 # d1.scorekw: 1st downstream AUG score against wide -10 Kozak consensus sequence
+# d1.posATG: position (in nt) of 1st downstream AUG compared to annotated AUG.
+# d1.frame: downstream AUG is In or Out of reading frame with annotated.
 #
-# Edward Wallace, Jan 2019
+# Edward Wallace, Apr 2019
 ",
-file="data_out/dvsaATG_highdiffw_inframe_H99.txt")
-highdiffw_dvsaATG_enoughinframe_H99 %>%
+file="data_out/dvsaATG_highdiffw_enoughRNA_H99.txt")
+highdiffw_dvsaATG_enoughRNA_H99 %>%
     mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffw_inframe_H99.txt",append = TRUE,col_names=TRUE)
+    write_tsv("data_out/dvsaATG_highdiffw_enoughRNA_H99.txt",append = TRUE,col_names=TRUE)
 ```
-
-
-### dATG out of frame with ATG, wide
-
-Files with high difference in narrow score, filtered for reasonable amounts of RNA, out of frame. Saved to *dvsaATG_highdiffw_outframe_H99.txt*.
-
-```{r highdiffw_dvsaATG_outframe_H99,dependson="dvsaATG_scoresn_H99",results="show"}
-highdiffw_dvsaATG_enoughoutframe_H99 <- 
-    highdiffw_dvsaATG_H99 %>%
-    left_join( ctbl_big_H99 %>% select(Gene,d1.frame) ) %>%
-    filter(Gene %in% enoughRNA_H99, d1.frame!=0) %>%
-    select(Gene,aATG.scorekw,d1.scorekw)
-
-highdiffw_dvsaATG_enoughoutframe_H99
-
-cat(
-    "# dvsaATG_highdiffw_outframe_H99.txt
-# Genes with in-frame high-score dATGs
-# In C. deneoformans H99:
-#   - in top 5% by difference, aATG.scorekw - d1.scorekw
-#   - in top 50% by RNA abundance
-#   - dATG is out-of-frame with aATG
-#
-# Gene: systematic gene name
-# aATG.scorekw: annotated AUG score against wide -10 Kozak consensus sequence
-# d1.scorekw: 1st downstream AUG score against wide -10 Kozak consensus sequence
-#
-# Edward Wallace, Jan 2019
-",
-file="data_out/dvsaATG_highdiffw_outframe_H99.txt")
-highdiffw_dvsaATG_enoughoutframe_H99 %>%
-    mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffw_outframe_H99.txt",append = TRUE,col_names=TRUE)
-```
-
-
 
 
 ### dATG vs aATG ribosome occupancy depends on the context
@@ -2330,7 +2116,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                   limits=c(0.05,100),
                   oob=scales::squish) + 
     labs(x="wide score, difference dATG - aATG",
-         y="Ribosome occupancy, ratio dATG / aATG") +
+         y="Occupancy ratio dATG / aATG") +
     facet_grid(Type ~ Sample) +
     panel_border()
     
@@ -2358,7 +2144,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                   limits=c(0.05,50),
                   oob=scales::squish) + 
     labs(x="Kozak narrow score diff. d1AUG - aAUG",
-         y="Ribosome occupancy\nratio d1AUG : aAUG") +
+         y=expression(atop("Occupancy ratio",paste(d[1],"AUG : aAUG")))) +
     facet_wrap(~Type,ncol=2) +
     panel_border()
     
@@ -2386,8 +2172,8 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.05,50),
                   oob=scales::squish) + 
-    labs(x="Kozak wide score diff. d1AUG - aAUG",
-         y="Ribosome occupancy\nratio d1AUG : aAUG") +
+    labs(x=expression(paste("Kozak score diff. ", d[1],"AUG - aAUG")),
+         y=expression(atop("Occupancy ratio",paste(d[1],"AUG : aAUG")))) +
      facet_wrap(~Type,ncol=2) +
     panel_border()
 dATG_aATGw_occ_summ_H99
@@ -2502,6 +2288,49 @@ dvsaATG_framemitosumm_H99
 
 write_tsv(dvsaATG_framemitosumm_H99,
           "data_out/dvsaATG_framemitosumm_H99.txt")
+```
+
+### Length for d1AUGs
+
+```{r dvsaATG_scoresdiffpos_H99, dependson=c("calc_scores_H99","load_mitofates_H99"),fig.width=5,fig.height=2,results="show"}
+# library(ggmosaic)
+dvsabit_H99 <- scores_H99 %>% 
+           filter(!is.na(d1.scorekn), !is.na(d1vsaw)) %>%
+           left_join(ctbl_big_H99) %>% 
+           mutate(d1vsawfac = cut(d1vsaw,
+                                  breaks=c(-0.5,0.1,0.5),
+                                  labels=c("AUG score\nd < a + 0.1",
+                                           "AUG score\na + 0.1 < d")),
+                  d1.framefac = factor(d1.frame==0,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("In","Out")),
+                  enoughRNA = factor(Gene %in% enoughRNA_H99,
+                                       levels=c(TRUE,FALSE),
+                                       labels=c("enough RNA","not enough"))
+                  )
+dvsabit_H99 %>%  
+    group_by(enoughRNA,d1vsawfac) %>%
+    summarize(n=n(),
+              d1pos.med=median(d1.posATG),d1pos.mean=mean(d1.posATG),
+              d2pos.med=median(d2.posATG,na.rm=TRUE),d2pos.mean=mean(d2.posATG,na.rm=TRUE))
+
+dvsabit_H99 %>%  
+    group_by(enoughRNA,d1vsawfac,d1.framefac) %>%
+    summarize(n=n(),
+              d1pos.med=median(d1.posATG),d1pos.mean=mean(d1.posATG),
+              d2pos.med=median(d2.posATG,na.rm=TRUE),d2pos.mean=mean(d2.posATG,na.rm=TRUE))
+
+ggplot(data=dvsabit_H99,
+       aes(x=d1.posATG,colour=d1vsawfac,linetype=enoughRNA)) +
+    stat_ecdf() +
+    themebits_ecdf +
+    scale_x_continuous(limits=c(0,400),expand=c(0.01,0.01),oob=scales::squish)
+
+# ggplot(data=dvsabit_H99,
+#        aes(x=d2.posATG,colour=d1vsawfac,linetype=enoughRNA)) +
+#     stat_ecdf() +
+#     themebits_ecdf +
+#     scale_x_continuous(limits=c(0,400),expand=c(0.01,0.01),oob=scales::squish)
 ```
 
 ### However, mito-localized genes do not have a distinctive aATG context
@@ -2769,7 +2598,7 @@ ggplot(data=ribo_uct_H99 %>%
                   limits=c(0.1,5),
                   breaks=c(0.1,0.2,0.5,1,2,5),
                   oob=scales::squish) +
-    labs(x="uAUG wide score") +
+    labs(x="uAUG Kozak score") +
     panel_border()
 uATG_scoreTE_H99
 ```
@@ -2841,7 +2670,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
     labs(x="narrow score, difference u1AUG - aAUG",
-         y="Ribosome occupancy, ratio u1AUG / aAUG") +
+         y="Occupancy ratio u1AUG / aAUG") +
     panel_border()
 ```
 
@@ -2862,7 +2691,7 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
                   oob=scales::squish) + 
     facet_grid(Type ~ Sample) +
     labs(x="wide score, difference u1AUG - aAUG",
-         y="Ribosome occupancy, ratio u1AUG / aAUG") +
+         y="Occupancy ratio u1AUG / aAUG") +
     panel_border()
 ```
 
@@ -2898,8 +2727,8 @@ uATG_aATGwsumm_occ_H99 <-
                   oob=scales::squish) + 
     # facet_grid(Type ~ .) +
     facet_wrap(~Type,ncol=2) + 
-    labs(x="wide score diff. u1AUG - aAUG",
-         y="occupancy ratio \n u1AUG : aAUG") +
+    labs(x="Kozak score diff. uAUG - aAUG",
+         y="Occupancy ratio\n uAUG : aAUG") +
     panel_border()
 
 uATG_aATGwsumm_occ_H99
@@ -3155,9 +2984,9 @@ ribosum_cc  %>%
 
 ## Genes with dAUG score high relative to aAUG score
 
-We take transcripts where the overall gene expression (RNA abundance in top 50%), the difference in score (dATG > aATG in top 5%), and the dATG frame are all conserved between H99 and JEC21.
+We take transcripts where the overall gene expression (RNA abundance in top 50%), the difference in score (dATG > aATG in top 5%), and the dATG frame are *all* conserved between H99 and JEC21.
 
-```{r scores_cc,dependson=c("H99_vs_JEC21","dvsaATG_scoresn_H99","dvsaATG_scoresn_JEC21"),results="show"}
+```{r scores_cc,dependson=c("H99_vs_JEC21","dvsaATG_scoresw_H99","dvsaATG_scoresw_JEC21"),results="show"}
 ctbl_cc <- join_H99_JEC21(ctbl_big_H99,ctbl_big_JEC21) # conservation of seqs
 scores_cc <- join_H99_JEC21(scores_H99,scores_JEC21) # conservation of scores
 
@@ -3167,93 +2996,98 @@ d1frame_cc <- ctbl_cc %>% # conservation of d1.ATG frame
     select( H99, JEC21, d1.frame=d1.frame.H99) 
 
 # conservation of high dATG vs aAUG score
-highdiffn_dvsaATG_cc <- scores_cc  %>%
+highdiffw_dvsaATG_cc <- scores_cc  %>%
     filter(H99 %in% enoughRNA_H99,
            JEC21 %in% enoughRNA_JEC21,
-           H99 %in% highdiffn_dvsaATG_H99$Gene,
-           JEC21 %in% highdiffn_dvsaATG_JEC21$Gene) %>%
-    arrange(aATG.scorekn.H99 - d1.scorekn.H99 +
-                aATG.scorekn.JEC21 - d1.scorekn.JEC21) %>%
-    inner_join(d1frame_cc %>% select(H99, d1.frame) ) 
+           H99 %in% highdiffw_dvsaATG_H99$Gene,
+           JEC21 %in% highdiffw_dvsaATG_JEC21$Gene) %>%
+    arrange(aATG.scorekw.H99 - d1.scorekw.H99 +
+                aATG.scorekw.JEC21 - d1.scorekw.JEC21) %>%
+    inner_join(d1frame_cc %>% select(H99, d1.frame) ) %>%	
+    select( H99, JEC21, d1.frame,
+            a.skw.H99=aATG.scorekw.H99,
+            d.skw.H99=d1.scorekw.H99,
+            a.skw.JEC21=aATG.scorekw.JEC21,
+            d.skw.JEC21=d1.scorekw.JEC21) 
 # I had to split this instead of piping through with %>%
-# because otherwise I was getting an error with object aATG.scorekn.H99 not found
+# because otherwise I was getting an error with object aATG.scorekw.H99 not found
 # This makes no sense to me (EW).
-highdiffn_dvsaATG_cc <- 
-    highdiffn_dvsaATG_cc %>%	
-    transmute( H99, JEC21, d1.frame,
-            a.skn.H99=round(aATG.scorekn.H99,5),
-            d.skn.H99=round(d1.scorekn.H99,5),
-            a.skn.JEC21=round(aATG.scorekn.JEC21,5),
-            d.skn.JEC21=round(d1.scorekn.JEC21,5)) 
+# highdiffw_dvsaATG_cc <- 
+#     highdiffw_dvsaATG_cc %>%	
+#     select( H99, JEC21, d1.frame,
+#             a.skw.H99=aATG.scorekw.H99,
+#             d.skw.H99=d1.scorekw.H99,
+#             a.skw.JEC21=aATG.scorekw.JEC21,
+#             d.skw.JEC21=d1.scorekw.JEC21) 
 ```
 
 
 ### dATG in frame with ATG
 
-Saved to file *dvsaATG_highdiffn_inframe_cc.txt*.
+Saved to file *dvsaATG_highdiffw_inframe_cc.txt*.
 
-```{r dvsaATG_highdiffn_inframe_cc,dependson="scores_cc",results="show"}
+```{r dvsaATG_highdiffw_inframe_cc,dependson="scores_cc",results="show"}
 # print top hits in frame
-highdiffn_dvsaATG_cc %>%
+highdiffw_dvsaATG_cc %>%
     filter(d1.frame == 0) %>%
     select(-d1.frame) %>%
     print(n=20)
 
 cat(
-    "# dvsaATG_highdiffn_inframe_cc.txt
+    "# dvsaATG_highdiffw_inframe_cc.txt
 # Genes with conserved in-frame high-score dATGs
 # In both H99 and JEC21:
-#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - aATG.scorekw - d1.scorekw < 0.1 (big difference)
 #   - in top 50% by RNA abundance
-#   - dATG is in frame with aATG
+#   - dATG is IN frame with aATG
 #
 # H99: H99 systematic gene name
 # JEC21: JEC21 systematic gene name of ortholog
-# a.skn.xx: annotated AUG score against narrow -4 Kozak consensus sequence, strain xx
-# d.skn.xx: 1st downstream AUG score against narrow -4 Kozak consensus sequence, strain xx
+# a.skw.xx: annotated AUG score against wide -10 Kozak consensus sequence, strain xx
+# d.skw.xx: 1st downstream AUG score against wide -10 Kozak consensus sequence, strain xx
 #
 # Edward Wallace, Jan 2019
 ",
-file="data_out/dvsaATG_highdiffn_inframe_cc.txt")
-highdiffn_dvsaATG_cc %>%
+file="data_out/dvsaATG_highdiffw_inframe_cc.txt")
+highdiffw_dvsaATG_cc %>%
     filter(d1.frame == 0) %>%
     select(-d1.frame) %>%
     mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffn_inframe_cc.txt",append = TRUE,col_names=TRUE)
+    write_tsv("data_out/dvsaATG_highdiffw_inframe_cc.txt",append = TRUE,col_names=TRUE)
 ```
 
 ### dATG out of frame
 
-Saved to file *dvsaATG_highdiffn_outframe_cc.txt*.
+Saved to file *dvsaATG_highdiffw_outframe_cc.txt*.
 
-```{r dvsaATG_highdiffn_outframe_cc,dependson="scores_cc",results="show"}
+```{r dvsaATG_highdiffw_outframe_cc,dependson="scores_cc",results="show"}
 # print top hits in frame
-highdiffn_dvsaATG_cc %>%
+highdiffw_dvsaATG_cc %>%
     filter(d1.frame != 0) %>%
     select(-d1.frame) %>%
     print(n=20)
 
 cat(
-    "# dvsaATG_highdiffn_outframe_cc.txt
+    "# dvsaATG_highdiffw_outframe_cc.txt
 # Genes with conserved out-of-frame high-score dATGs
 # In both H99 and JEC21:
-#   - in top 5% by difference, aATG.scorekn - d1.scorekn
+#   - aATG.scorekw - d1.scorekw < 0.1 (big difference)
 #   - in top 50% by RNA abundance
-#   - dATG is out of frame with aATG
+#   - dATG is OUT of frame with aATG
 #
 # H99: H99 systematic gene name
 # JEC21: JEC21 systematic gene name of ortholog
-# a.skn.xx: annotated AUG score against narrow -4 Kozak consensus sequence, strain xx
-# d.skn.xx: 1st downstream AUG score against narrow -4 Kozak consensus sequence, strain xx
+# a.skw.xx: annotated AUG score against wide -10 Kozak consensus sequence, strain xx
+# d.skw.xx: 1st downstream AUG score against wide -10 Kozak consensus sequence, strain xx
 #
 # Edward Wallace, Jan 2019
 ",
-file="data_out/dvsaATG_highdiffn_outframe_cc.txt")
-highdiffn_dvsaATG_cc %>%
+file="data_out/dvsaATG_highdiffw_outframe_cc.txt")
+highdiffw_dvsaATG_cc %>%
     filter(d1.frame != 0) %>%
     select(-d1.frame) %>%
     mutate_if(is.numeric,round3) %>%
-    write_tsv("data_out/dvsaATG_highdiffn_outframe_cc.txt",append = TRUE,col_names=TRUE)
+    write_tsv("data_out/dvsaATG_highdiffw_outframe_cc.txt",append = TRUE,col_names=TRUE)
 ```
 
 * CNN00160 two-component-like sensor kinase TCO7 
@@ -3276,29 +3110,29 @@ Filtered for enough RNA (top 50%)
 
 ```{r scores_straindiff,dependson="scores_cc",results="show",fig.width=3.5,fig.height=3.5}
 # scores_cc
-highdiffn_aATG_HvsJ_cc <- scores_cc  %>%
-    mutate(askndiff.HvsJ=aATG.scorekn.H99-aATG.scorekn.JEC21) %>%
+highdiffw_aATG_HvsJ_cc <- scores_cc  %>%
+    mutate(askwdiff.HvsJ=aATG.scorekw.H99-aATG.scorekw.JEC21) %>%
     filter(H99 %in% enoughRNA_H99,
            JEC21 %in% enoughRNA_JEC21,
-           abs(askndiff.HvsJ) >= 0.1) 
+           abs(askwdiff.HvsJ) >= 0.1) 
 
-highdiffn_aATG_HvsJ_cc_nice <- highdiffn_aATG_HvsJ_cc  %>%	
+highdiffw_aATG_HvsJ_cc_nice <- highdiffw_aATG_HvsJ_cc  %>%	
     transmute( H99, JEC21, # d1.frame,
-            a.skn.H99=round(aATG.scorekn.H99,5),
-            d.skn.H99=round(d1.scorekn.H99,5),
-            a.skn.JEC21=round(aATG.scorekn.JEC21,5),
-            d.skn.JEC21=round(d1.scorekn.JEC21,5),
-            askndiff.HvsJ) 
+            a.skw.H99=round(aATG.scorekw.H99,5),
+            d.skw.H99=round(d1.scorekw.H99,5),
+            a.skw.JEC21=round(aATG.scorekw.JEC21,5),
+            d.skw.JEC21=round(d1.scorekw.JEC21,5),
+            askwdiff.HvsJ) 
 
-highdiffn_aATG_HvsJ_cc_nice %>%
-    arrange(askndiff.HvsJ) %>%
-    select(-askndiff.HvsJ)
+highdiffw_aATG_HvsJ_cc_nice %>%
+    arrange(askwdiff.HvsJ) %>%
+    select(-askwdiff.HvsJ)
 
-highdiffn_aATG_HvsJ_cc_nice %>%
-    arrange(desc(askndiff.HvsJ))  %>%
-    select(-askndiff.HvsJ)
+highdiffw_aATG_HvsJ_cc_nice %>%
+    arrange(desc(askwdiff.HvsJ))  %>%
+    select(-askwdiff.HvsJ)
 
-ggplot(data=scores_cc,aes(x=aATG.scorekn.H99,y=aATG.scorekn.JEC21)) +
+ggplot(data=scores_cc,aes(x=aATG.scorekw.H99,y=aATG.scorekw.JEC21)) +
     geom_diagline() +
     geom_point()
 ```
@@ -3464,14 +3298,14 @@ Output to file *scores_kozak_unusual_mito_cc.txt*.
 utRS_scores_JEC21 <- 
     ctbl_big_JEC21 %>% 
     transmute(Gene,
-              aATG.scoreUn=PWMscoren(aATG.context,
-                                     pwm=utRS_n_PWM)) 
+              aATG.scoreUw=PWMscorew(aATG.context,
+                                     pwm=utRS_w_PWM)) 
 # utRS_scores_JEC21
 utRS_scores_H99 <- 
     ctbl_big_H99 %>% 
     transmute(Gene,
-              aATG.scoreUn=PWMscoren(aATG.context,
-                                     pwm=utRS_n_PWM))
+              aATG.scoreUw=PWMscorew(aATG.context,
+                                     pwm=utRS_w_PWM))
 
 utRS_scores_cc <- join_H99_JEC21(utRS_scores_H99,utRS_scores_JEC21)
 
@@ -3488,8 +3322,8 @@ mitopred_cc <- join_H99_JEC21(mitofates_H99 %>%
 scores_kozak_unusual_mito_cc <- 
 scores_cc %>%
     select(H99,JEC21,
-           aATG.scorekn.H99,d1.scorekn.H99,u1.scorekn.H99,
-           aATG.scorekn.JEC21,d1.scorekn.JEC21,u1.scorekn.JEC21
+           aATG.scorekw.H99,d1.scorekw.H99,u1.scorekw.H99,
+           aATG.scorekw.JEC21,d1.scorekw.JEC21,u1.scorekw.JEC21
            ) %>%
     left_join(utRS_scores_cc) %>%
     left_join(mitopred_cc)
@@ -3503,11 +3337,11 @@ cat(
 #
 # H99: H99 systematic gene name
 # JEC21: JEC21 systematic gene name of ortholog
-# aATG.scorekn.xx: score of annotated ATG against narrow Kozak sequence (NNNNATG), strain xx
-# d1.scorekn.xx: score of 1st downstream ATG against narrow Kozak sequence, strain xx
-# u1.scorekn.xx: score of 1st upstream ATG in 5' UTR against narrow Kozak sequence, strain xx
-# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNATG), strain xx
-# aATG.scoreUn.xx: score of annotated ATG against narrow Unusual tRNA Synthetase sequence (NNNNATG), strain xx
+# aATG.scorekw.xx: score of annotated ATG against wide Kozak sequence (NNNNNNNNNNATG), strain xx
+# d1.scorekw.xx: score of 1st downstream ATG against wide Kozak sequence, strain xx
+# u1.scorekw.xx: score of 1st upstream ATG in 5' UTR against wide Kozak sequence, strain xx
+# aATG.scoreUw.xx: score of annotated ATG against wide Unusual tRNA Synthetase sequence (NNNNATG), strain xx
+# aATG.scoreUw.xx: score of annotated ATG against wide Unusual tRNA Synthetase sequence (NNNNATG), strain xx
 # Prob_mito.xx: Probability of mitochondrial presequence from mitofates, strain xx
 # Pred_mito.xx: Prediction from mitofates, strain xx
 #
@@ -3525,18 +3359,18 @@ scores_kozak_unusual_mito_cc %>%
 
 ```{r utRS_hiscores,dependson=c("utRS_motif","calc_scores_JEC21"),results="show"}
 
-highdiffn_dvsaATG_cc %>%
+highdiffw_dvsaATG_cc %>%
     filter(d1.frame == 0) %>%
     select(Gene=JEC21,
-           a.scorekn=a.skn.JEC21,d.scorekn=d.skn.JEC21) %>%
+           a.scorekw=a.skw.JEC21,d.scorekw=d.skw.JEC21) %>%
     left_join(ctbl_big_JEC21 %>% 
                   transmute(Gene,
-                            a.scoreUn=PWMscoren(aATG.context,
-                                                pwm=utRS_n_PWM),
+                            a.scoreUw=PWMscorew(aATG.context,
+                                                pwm=utRS_w_PWM),
                             aATG.context) 
               ) %>%
     left_join(mitofates_JEC21 %>% select(Gene,Prob_preseq)) %>%
-    filter(a.scoreUn > 0.9)
+    filter(a.scoreUw > 0.9)
 
 ```
 
@@ -3589,14 +3423,14 @@ ggplot(data=scores_kvsu_JEC21,
     geom_diagline() +
     geom_point(size=0.5,colour="grey50") +
     geom_point(data=scores_kvsu_JEC21 %>%
-                   filter(Gene %in% highdiffn_dvsaATG_JEC21$Gene),
+                   filter(Gene %in% highdiffw_dvsaATG_JEC21$Gene),
                colour="red",size=1) +
     geom_point(data=scores_kvsu_JEC21 %>%
                    filter(Gene %in% hiTrans_JEC21),
                colour="blue",size=1) +
     geom_point(data=scores_kvsu_JEC21 %>%
                    filter(Gene %in% hiTrans_JEC21,
-                          Gene %in% highdiffn_dvsaATG_JEC21$Gene),
+                          Gene %in% highdiffw_dvsaATG_JEC21$Gene),
                colour="purple4",size=1.3) +
     labs(x="aATG Kozak score, narrow",
          y="aATG utRS score, narrow")
@@ -3693,7 +3527,7 @@ ggplot(data=scores_kvsu_H99 %>%
 For example, CNM01290, Leucine-tRNA synthetase, was on a previous version of this list. It has good kozak score at aATG and conserved out-of-frame dATG.
 
 ```{r tRS_other,eval=FALSE}
-highdiffn_dvsaATG_cc %>% filter(JEC21 %in% unusual_tRNAsynth_JEC21)
+highdiffw_dvsaATG_cc %>% filter(JEC21 %in% unusual_tRNAsynth_JEC21)
 scores_JEC21 %>% 
     filter(Gene %in% unusual_tRNAsynth_JEC21) %>% 
     select(Gene,aATG.scorekn,d1.scorekn) %>%
@@ -3804,7 +3638,7 @@ Enriched CCs, no sig. results.
 
 ```{r fig2top_TE_uAUG_H99,dependson=c("uATG_TE_H99","uATGmin20_TE_H99","H99_vs_JEC21"),fig.width=7.5,fig.height=3.4}
 plot_grid(plot_ribosum_TE_H99,uATG_TE_H99,uATGmin20_TE_H99,
-          ncol=3,rel_widths = c(3.7,1.9,1.9),labels=c("A","B","C"),align="h")
+          ncol=3,rel_widths = c(3.7,1.9,1.9),labels=c("A","E","F"),align="h")
 ```
 
 ### Supp fig2: TE and uAUG usage in JEC21
@@ -3812,7 +3646,7 @@ plot_grid(plot_ribosum_TE_H99,uATG_TE_H99,uATGmin20_TE_H99,
 
 ```{r fig2top_TE_uAUG_JEC21,dependson=c("uATG_TE_JEC21","uATGmin20_TE_JEC21","JEC21_vs_JEC21"),fig.width=7.5,fig.height=3.4}
 plot_grid(plot_ribosum_TE_JEC21,uATG_TE_JEC21,uATGmin20_TE_JEC21,
-          ncol=3,rel_widths = c(3.7,1.9,1.9),labels=c("A","B","C"),align="h")
+          ncol=3,rel_widths = c(3.7,1.9,1.9),labels=c("A","E","F"),align="h")
 ```
 
 ### Figure 3 panels: score and AUG/uAUG usage in H99
@@ -3829,7 +3663,6 @@ right_col <-
           ncol=1,labels=c("D","E"),align="v")
 
 plot_grid(left_col,right_col,ncol=2,rel_widths = c(1.2,1))
-
 ```
 
 ### Figure S3 panels: score and AUG/uAUG usage in JEC21
@@ -3847,7 +3680,6 @@ right_col <-
           ncol=1,labels=c("D","E"),align="v")
 
 plot_grid(left_col,right_col,ncol=2,rel_widths = c(1.2,1))
-
 ```
 
 
@@ -3858,5 +3690,4 @@ plot_grid(left_col,right_col,ncol=2,rel_widths = c(1.2,1))
 plot_grid(dvsaATG_scoresw_H99,dATG_aATGw_occ_summ_H99,
           ncol=2,rel_heights = c(2.8,4.7),
           labels=c("A","B"),align="h")
-
 ```
