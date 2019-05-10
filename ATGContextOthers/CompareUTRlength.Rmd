@@ -1,0 +1,126 @@
+---
+title: "Comparisons between fungi, Transcript Leaders"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 12 Oct 2018
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This summarizes translcript leader/ 5'UTR lengths in different fungi. 
+    
+### Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CompareUTRlength-",
+                      cache.path="cache/CompareUTRlength-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+### Load data
+
+```{r load_infon}
+Orglevels <- c("Cn","Cd","Nc","Sp","Ca","Sc")
+# infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+UTRcolnames <- c("Gene","aATG.pos","Length")
+
+# UTRmess <- readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2)
+UTRlengths <- bind_rows(
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2,col_names=UTRcolnames,
+                       range = "A3:C6620") %>% 
+        mutate(Organism="Cn"),
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2,col_names=UTRcolnames,
+                       range = "E3:G6680") %>% 
+        mutate(Organism="Cd"),
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2,col_names=UTRcolnames,
+                       range = "I3:K2837") %>% 
+        mutate(Organism="Sc"),
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2,col_names=UTRcolnames,
+                       range = "M3:O7653") %>% 
+        mutate(Organism="Nc"),
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2,col_names=UTRcolnames,
+                       range = "Q3:S4651") %>% 
+        mutate(Organism="Sp")
+) %>%
+    transmute(Gene,
+              Length,
+           Organism=factor(Organism,levels=Orglevels)
+    )
+
+UTRlengths
+```
+
+```{r plot_UTR_lengths,fig.height=3.5, fig.width=3.5}
+
+# ggplot(data=UTRlengths,aes(x=Organism,y=Length)) + 
+#     geom_violin(aes(colour=Organism)) +
+#     scale_color_brewer(type = "qual",palette=3,drop=FALSE) +
+#     scale_y_log10nice("TL length",expand=c(0.01,0.01))
+
+plot_UTR_lengths <- 
+ggplot(data=UTRlengths,aes(x=Organism,y=Length)) + 
+    geom_point(position="jitter",colour="grey50",size=0.015) + 
+    geom_boxplot(aes(colour=Organism),fill="NA",outlier.colour = "NA",size=0.8) +
+    scale_y_log10("TL length",expand=c(0.01,0.01),
+                  breaks=c(1,10,100,1000),
+                  labels=c(1,10,100,1000) %>% as.character,
+                  oob=scales::squish,
+                  limits=c(4,4000)) +
+    scale_color_brewer(type = "qual",palette=3,drop=FALSE)
+plot_UTR_lengths
+# ggplot(data=UTRlengths,aes(x=Organism,y=Length)) + 
+#     geom_beeswarm() +
+#     scale_y_log10nice()
+```
+
+```{r load_UTRsumm,fig.height=3.5, fig.width=3.5}
+UTRsumm <- 
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=1,
+                       range = "A10:F14",
+                       col_names=c("Organism","NuAUGs","NuAUGTLs","NTLs","PropuAUGTLs","uAUGdens")) %>% 
+    mutate(Organism = factor(Organism,levels=c("C. neoformans","C. deneoformans","N. crassa","S. pombe","C. albicans","S. cerevisiae"),
+                             labels=c("Cn","Cd","Nc","Sp","Ca","Sc")),
+           Prop2=NuAUGTLs/NTLs)
+
+plot_uTL_prop <- 
+ggplot(data=UTRsumm,aes(x=Organism,y=Prop2,fill=Organism)) + 
+    geom_col() +
+    scale_y_continuous("Proportion of TLs\ncontaining uAUGs",expand=c(0,0),limits=c(0,1)) +
+    scale_fill_brewer(type = "qual",palette=3,drop=FALSE) +
+    theme(panel.grid.major.y=element_line(colour="grey50",size=0.2))
+plot_uTL_prop
+
+plot_uTL_dens <- 
+ggplot(data=UTRsumm,aes(x=Organism,y=uAUGdens,fill=Organism)) + 
+    geom_col() +
+    scale_y_continuous("uAUG density in TLs",expand=c(0,0),limits=c(0,1/64),
+                       breaks=c(0,1/128,1/64),labels=c("0","1/128","1/64")) +
+    scale_fill_brewer(type = "qual",palette=3,drop=FALSE) +
+    theme(panel.grid.major.y=element_line(colour="grey50",size=0.2))
+
+plot_uTL_dens
+```
+
+## Composite plot
+
+```{r plot_comp,dependson=c("plot_UTR_lengths","load_UTRsumm"),fig.width=7.5,fig.height=2.5,dev="svg"}
+plot_grid(plot_UTR_lengths + theme(legend.position="none"),
+          plot_uTL_prop + theme(legend.position="none"),
+          plot_uTL_dens + theme(legend.position="none"),
+          # get_legend(plot_uTL_dens),
+          rel_widths = c(1.2,1,0.99),
+          labels=c("C","D","E"),
+          align = 'vh',
+          nrow=1)
+
+```
+
+
