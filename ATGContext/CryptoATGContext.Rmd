@@ -185,6 +185,15 @@ ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% cytoribolist_JEC21)$aATG.context,
     theme_nothing()
 ```
 
+```{r cytoribo_context_JEC21_svg,dependson="cytoribo_context",fig.width=3,fig.height=0.55,dev="svg"}
+ggseqlogo(data=filter(ctbl_big_JEC21,Gene %in% cytoribolist_JEC21)$aATG.context,
+              namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="C. deneoformans",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
+```
+
 ### All cytoribo genes are highly translated
 
 Venn diagram 
@@ -1531,6 +1540,15 @@ cytoribolist_H99 <- read_tsv("../ATGContextOthers/data_out/ComplexOrthologs/cyto
 ggseqlogo(data=filter(ctbl_big_H99,Gene %in% cytoribolist_H99)$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
+```
+
+```{r cytoribo_context_H99_svg,dependson="cytoribo_context",fig.width=3,fig.height=0.55,dev="svg"}
+ggseqlogo(data=filter(ctbl_big_H99,Gene %in% cytoribolist_H99)$aATG.context,
+              namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="C. neoformans",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
 ```
 
 ### All cytoribo genes are highly translated

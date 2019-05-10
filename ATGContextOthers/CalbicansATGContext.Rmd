@@ -140,6 +140,15 @@ ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
     theme_nothing()
 ```
 
+```{r cytoribo_context_svg,dependson="cytoribo_context",fig.width=3,fig.height=0.55,dev="svg"}
+ggseqlogo(data=filter(ctbl_big,Gene %in% cytoribolist)$aATG.context,
+              namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="C. albicans",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
+```
+
 ### Almost all cytoribo genes are highly translated
 
 Venn diagram 
