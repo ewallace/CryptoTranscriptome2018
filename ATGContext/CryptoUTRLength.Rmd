@@ -70,16 +70,16 @@ ggplot(data=FiveUTRs_JEC21, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
     geom_vline(colour="blue",aes(xintercept=mean(Width,na.rm=TRUE))) +
     geom_vline(colour="red",aes(xintercept=median(Width,na.rm=TRUE))) +
-    annotate(colour="red",geom="text",
+    annotate(colour="red",geom="text",hjust=1,
              label=paste0("median = ", 
                           median(FiveUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
                           "nt"),
-             x=650,y=350,size=4) +
-    annotate(colour="red",geom="text",
-             label=paste0("median = ", 
-                          median(FiveUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
+             x=1000,y=350,size=4) +
+    annotate(colour="blue",geom="text",hjust=1,
+             label=paste0("mean = ", 
+                          mean(FiveUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
                           "nt"),
-             x=650,y=350,size=4) +
+             x=1000,y=225,size=4) +
     scale_y_continuous("gene ct.",expand=c(0,0)) +
     scale_x_continuous("TL length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 
@@ -90,11 +90,16 @@ ggplot(data=ThreeUTRs_JEC21, aes(x=Width)) +
     geom_histogram(binwidth=10) + 
     geom_vline(colour="blue",aes(xintercept=mean(Width,na.rm=TRUE))) +
     geom_vline(colour="red",aes(xintercept=median(Width,na.rm=TRUE))) +
-    annotate(colour="red",geom="text",
+    annotate(colour="red",geom="text",hjust=1,
              label=paste0("median = ", 
                           median(ThreeUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
                           "nt"),
-             x=650,y=300,size=4) +
+             x=1000,y=300,size=4) +
+    annotate(colour="blue",geom="text",hjust=1,
+             label=paste0("mean = ", 
+                          mean(ThreeUTRs_JEC21$Width,na.rm=TRUE) %>% round, 
+                          "nt"),
+             x=1000,y=200,size=4) +
     scale_y_continuous(expand=c(0,0)) +
     scale_x_continuous("3'UTR length (nt)", 
                        limits=c(0,1000),expand=c(0.03,0.03),oob=scales::squish) 

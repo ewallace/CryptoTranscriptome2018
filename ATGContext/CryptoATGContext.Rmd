@@ -129,11 +129,18 @@ ggplot(data=ribosum_JEC21,aes(x=RNA,y=RPF)) +
 ### Load context data
 
 ```{r load_context_JEC21,results="show"}
+keepcols_ctbl <- c("Gene", "aATG.context", "aATG.pos",
+                    "d1.context", "d1.posTSS", "d1.posATG", "d1.frame",
+                    "d2.context", "d2.posTSS", "d2.posATG", "d2.frame",
+                    "u1.context", "u1.posTSS", "u1.posATG", "u1.frame",
+                    "u2.context", "u2.posTSS", "u2.posATG", "u2.frame")
+
 ctbl_big_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
+    dplyr::rename(tx=gene) %>%
+    dplyr::mutate(Gene=str_remove(tx,".t0[0-9]")) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>% 
     dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
-    select_at(1:19)
+    select(keepcols_ctbl)
 ctbl_big_JEC21
 ```
 
@@ -1182,7 +1189,8 @@ ggplot(data=melt_mito_scores_JEC21,
 
 ```{r uATG_RPF_JEC21, dependson="calc_scores_JEC21", fig.width=2.5,fig.height=3.5}
 uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
+    dplyr::rename(tx=gene) %>%
+    dplyr::mutate(Gene=str_remove(tx,".t0[0-9]")) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
     dplyr::select(c("Gene",paste0("u",1:56,".posTSS"))) %>%
     gather(key="uATG",value="posTSS",-Gene) %>%
@@ -1489,11 +1497,12 @@ plot_TE_H99
 
 ```{r load_context_H99,results="show"}
 ctbl_big_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
+    dplyr::rename(tx=gene) %>%
+    dplyr::mutate(Gene=str_remove(tx,".t0[0-9]")) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>% 
     dplyr::mutate_if(str_detect(colnames(.),pattern="context"),toupper) %>%
-    filter(!is.na(aATG.context)) %>%
-    select_at(1:19)
+    select(keepcols_ctbl) %>%
+    filter(Gene != "CNAG_03851") # this has a bad ATG annotation
 ctbl_big_H99
 ```
 
@@ -1503,6 +1512,15 @@ ctbl_big_H99
 ggseqlogo(data=ctbl_big_H99$aATG.context,
                       namespace="TCAG") + 
     theme_nothing()
+```
+
+```{r aATG_context_H99_svg,dependson="cytoribo_context",fig.width=3,fig.height=0.55,dev="svg"}
+ggseqlogo(data=ctbl_big_H99$aATG.context,
+                      namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="Cn all aATGs",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
 ```
 
 ### Highly translated Annotated ATGs have a Kozak consensus sequence
@@ -1519,6 +1537,17 @@ aAUG_hi_context_H99 <-
     # annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
     annotate(geom="segment",x=2.5,xend=15.5,y=-0.2,yend=-0.2,size=1,colour="grey50") # +
     # annotate(geom="text",label="wide",x=9,y=-0.1,size=4, vjust=1.15,colour="grey50") 
+aAUG_hi_context_H99
+```
+
+```{r a_hi_context_H99_svg,dependson=c("load_context_H99","load_riboviz_H99"),fig.width=4,fig.height=1,dev="svg"}
+aAUG_hi_context_H99 <- 
+    ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
+              namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="Cn top 5% aATGs",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
 aAUG_hi_context_H99
 ```
 
@@ -1577,6 +1606,15 @@ First downstream ATG
 ggseqlogo(data=filter(ctbl_big_H99,nchar(d1.context) ==24)$d1.context,
                       namespace="TCAG") + 
     theme_nothing()
+```
+
+```{r d1_context_H99_svg,dependson="cytoribo_context",fig.width=3,fig.height=0.55,dev="svg"}
+ggseqlogo(data=filter(ctbl_big_H99,nchar(d1.context) ==24)$d1.context,
+                      namespace="TCAG") + 
+    xlim(c(2.5,21.5)) + 
+    theme_nothing() +
+    annotate(geom="text",label="Cn first dATGs",
+             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
 ```
 
 ### Downstream ATGs in frame and highly translated don't have a consensus
@@ -1794,7 +1832,7 @@ plot_4ATGscoresw_dens(scores_H99,hiTrans_H99,xlab="Kozak score")
 
 ```
 
-```{r plot_cumscores_w_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
+```{r plot_cumscores_w_H99, dependson="calc_scores_H99", dev="pdf",fig.width=5,fig.height=1.8}
 plot_cumscores_w_H99 <- 
     plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="Kozak score")
 plot_cumscores_w_H99
@@ -2527,7 +2565,8 @@ ggplot(data=scores_H99 %>%
 
 ```{r uATG_RPF_H99, dependson="calc_scores_H99",fig.width=2.5,fig.height=3.5}
 uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
+    dplyr::rename(tx=gene) %>%
+    dplyr::mutate(Gene=str_remove(tx,".t0[0-9]")) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
     dplyr::select(c("Gene",paste0("u",1:55,".posTSS"))) %>%
     gather(key="uATG",value="posTSS",-Gene) %>%
