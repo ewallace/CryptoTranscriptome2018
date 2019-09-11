@@ -42,3 +42,7 @@ vignettes/*.pdf
 # logfiles created by VennDiagram
 .log
 /*/.log
+
+# FungiDBTranslation containing multiple sequence alignments
+ATGContextOthers/data_in/FungiDBTranslation
+ATGContextOthers/data_out/OrthoDBOrthologs
