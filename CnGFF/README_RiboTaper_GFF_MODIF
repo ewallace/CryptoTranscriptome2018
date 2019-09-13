@@ -1,0 +1,3 @@
+python ~/Developpements2/gjanbon/src/gff_rewrite_ribotaper.py -i JEC21.10p.aATGcorrected.2018-12-03.gff3     -o JEC21.10p.aATGcorrected.2018-12-03.RiboTaper.gff3 
+
+python ~/Developpements2/gjanbon/src/gff_rewrite_ribotaper.py -i H99.10p.aATGcorrected.2018-12-03.gff3       -o H99.10p.aATGcorrected.2018-12-03.RiboTaper.gff3 -G
