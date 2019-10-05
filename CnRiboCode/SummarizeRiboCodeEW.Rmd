@@ -1,0 +1,268 @@
+---
+title: "ORF finding in Cryptococcus with RiboCode"
+author: "Edward Wallace"
+date: "04/10/2019"
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(qvalue)
+library(cowplot)
+library(RColorBrewer)
+theme_set(theme_cowplot() + theme(strip.background=element_blank()))
+
+start_codon_levels <- c("ATG","TTG", "CTG", "ACG", "ATT", "GTG", "ATA", "AAG", "AGG")
+startcod_colours <- colorRampPalette(brewer.pal(8,"Set1"))(9)
+# setwd("~/Repos/CryptoTranscriptome2018/CnRiboCode/")
+```
+
+```{r pval_count}
+count_less_than <- function(thresh,p) {
+    sum( p < thresh )
+}
+
+cumcount_less_than <- function(p,threshseq) {
+    tibble(pthresh=threshseq,cumcounts=sapply(threshseq,count_less_than,p=p))
+}
+
+# cumcount_less_than(1:10,4:5)
+
+```
+
+
+# Summary
+
+This document searches for translated ORFs in *Cryptococcus* using [RiboCode](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gky179) applied to Madhani lab ribosome profiling data, [GSE133125](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133125).
+
+This analysis shows that translated ORFs overwhelmingly start with ATG codons, not near-cognates.
+
+## How we ran it
+
+RiboCode installed from [github](https://github.com/xryanglab/RiboCode), commit hash `c7628eb`. 
+
+Config files for H99: `config_test_RiboCode_H99_P12_Oct2019.txt`.
+```{}
+H99r1 H99r1Aligned.toTranscriptome.out.bam yes 28,29 12,12
+H99r2 H99r2Aligned.toTranscriptome.out.bam yes 28,29 12,12
+```
+
+and JEC21: `config_test_RiboCode_JEC21_P12_Oct2019.txt`.
+```{}
+JEC21 JEC21Aligned.toTranscriptome.out.bam yes 28,29 12,12
+JdAGO1 JdAGO1Aligned.toTranscriptome.out.bam yes 28,29 12,12
+```
+
+```{bash eval=FALSE,echo=TRUE}
+
+STAR --runThreadN 16 --runMode genomeGenerate \
+    --genomeDir /homes/ewallac2/RibosomeProfiling_Madhani/genome_files/EW_H99_STARindex \
+    --genomeFastaFiles /homes/ewallac2/RibosomeProfiling_Madhani/genome_files/EW_H99/cryptococcus_neoformans_var._grubii_h99__cna3__3_supercontigs_n.fasta \
+    --sjdbGTFfile /homes/ewallac2/CryptoTranscriptome2018/CnGFF/H99.10p.aATGcorrected.longestmRNA.2019-05-15.RiboCode.gff3
+
+
+prepare_transcripts -g /homes/ewallac2/CryptoTranscriptome2018/CnGFF/H99.10p.aATGcorrected.longestmRNA.2019-05-15.RiboCode.gff3 \
+    -f /homes/ewallac2/RibosomeProfiling_Madhani/genome_files/EW_H99/cryptococcus_neoformans_var._grubii_h99__cna3__3_supercontigs_n.fasta \
+    -o RiboCode_H99_longestRNA_2019-05-15
+
+STAR --outFilterType BySJout --runThreadN 16 --outFilterMismatchNmax 2 \
+    --genomeDir /homes/ewallac2/RibosomeProfiling_Madhani/genome_files/EW_H99_STARindex \
+    --readFilesIn /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_H99_CnGff_Oct2018/tmp/H99r1_nonrRNA.fq  \
+    --outFileNamePrefix H99r1 \
+    --outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM GeneCounts \
+    --outFilterMultimapNmax 1 --outFilterMatchNmin 16 --alignEndsType EndToEnd
+
+RiboCode -a RiboCode_H99_longestRNA_2019-05-15 -c config_test_RiboCode_H99_P12_Oct2019.txt -l no -g -o RiboCode_H99_P12_Oct2019_altstarts -m 10 -p 0.1 -A ACG,TTG,CTG,GTG,ATT    
+
+prepare_transcripts -g /homes/ewallac2/CryptoTranscriptome2018/CnGFF/JEC21.10p.aATGcorrected.longestmRNA.2018-12-03.RiboCode.gff3 \
+    -f /homes/ewallac2/RibosomeProfiling_Madhani/genome_files/EW_JEC21/JEC21_genome_chr.fa \
+    -o RiboCode_JEC21_longestRNA_2018-12-03
+
+RiboCode -a RiboCode_JEC21_longestRNA_2018-12-03 -c config_test_RiboCode_JEC21_P12_Oct2019.txt -l no -g -o RiboCode_JEC21_P12_Oct2019_allnearcogm5 -m 5 -p 0.1 -A TTG,CTG,ACG,ATT,GTG,ATA,AAG,AGG    
+
+```
+
+
+# H99
+
+```{r load_H99}
+RiboCodeTable_H99 <- read_tsv("RiboCode_H99_P12_Oct2019_allnearcogm5.txt") %>%
+    select(-ORF_type,-transcript_type,-gene_type,-gene_name,
+           -annotated_tstart,-annotated_tstop,
+           -annotated_gstart,-annotated_gstop) %>%
+    mutate(start_codon = factor(start_codon,levels=start_codon_levels)) %>%
+    mutate(qval_combined=qvalue(pval_combined,pi0 = 1)$qvalues)
+
+RiboCodeTable_H99
+```
+
+## Near-cognate codons, all p < 0.1
+
+```{r countorf_bystartcodon_H99,dependson="load_H99",fig.height=3,fig.width=5}
+ggplot(data=RiboCodeTable_H99, aes(x=start_codon)) +
+    geom_bar()
+
+ggplot(data=RiboCodeTable_H99, aes(x=start_codon, y=pval_combined)) +
+    geom_violin(adjust=0.1,kernel="rectangular")
+
+ggplot(data=RiboCodeTable_H99, aes(x=start_codon, y=pval_combined)) +
+    geom_violin(scale="count",adjust=0.1,kernel="rectangular") +
+    coord_cartesian(ylim=c(0,0.01))
+```
+
+## Multiple hypothesis testing adjustment, 1% FDR
+
+```{r countorf_qval1_bystartcodon_H99,dependson="load_H99",fig.height=3,fig.width=5}
+ggplot(data=RiboCodeTable_H99 %>% filter(qval_combined <= 0.01), aes(x=start_codon)) +
+    geom_bar()
+
+ggplot(data=RiboCodeTable_H99 %>% filter(qval_combined <= 0.01), aes(x=start_codon, y=pval_combined)) +
+    geom_violin(adjust=0.1,kernel="rectangular")
+
+orflength_FDR1_H99 <- 
+ggplot(data=RiboCodeTable_H99 %>% filter(qval_combined <= 0.01), aes(x=start_codon,colour=start_codon)) +
+    #geom_violin(aes(y=ORF_length),adjust=0.1,kernel="rectangular",scale="count",width=2) +
+    geom_boxplot(aes(y=ORF_length/3),varwidth=TRUE) +
+    coord_cartesian(ylim=c(0,1000)) +
+    scale_y_continuous(expand=c(0,0)) + 
+    scale_colour_manual(values=startcod_colours) +
+    labs(x="Start codon", y="ORF length (aa)") +
+    theme(panel.grid.major.y = element_line(colour="grey80"),
+          legend.position="none")
+orflength_FDR1_H99
+```
+
+## Count by p-value
+
+```{r cum_pvalue_H99,dependson="load_H99",fig.height=3,fig.width=5}
+cum_pvalue_H99 <- 
+ggplot(data = RiboCodeTable_H99 %>% 
+    group_by(start_codon) %>%
+    do(cumcount_less_than(.$pval_combined,threshseq = 10^seq(-19,-1,0.1)) ),
+    aes(colour=start_codon,x=pthresh,y=cumcounts)) +
+    geom_line(size=0.7) + 
+    scale_x_log10(breaks=10^seq(-20,-2,2),
+                  labels=seq(-20,-2,2),
+                  expand=c(0,0)) + 
+    scale_y_log10() +
+    scale_colour_manual(values=startcod_colours) + 
+    labs(x="log10(p-value)",
+         y="cumulative ORF count",colour="Start codon") +
+    theme(panel.grid.major=element_line(colour="grey80"))
+cum_pvalue_H99
+```
+
+## Retrieve top-scoring ORFs for each start codon
+
+```{r topscores_bystartcodon_H99,dependson="load_H99",fig.height=3,fig.width=5}
+RiboCodeTable_H99 %>% 
+    group_by(start_codon) %>%
+    arrange(pval_combined) %>%
+    do(head(.,n=2)) %>%
+    select(gene_id,start_codon,ORF_length,ORF_tstart,ORF_tstop,pval_combined)
+```
+
+
+# JEC21
+
+```{r load_JEC21}
+RiboCodeTable_JEC21 <- read_tsv("RiboCode_JEC21_P12_Oct2019_allnearcogm5.txt") %>%
+    select(-ORF_type,-transcript_type,-gene_type,-gene_name,
+           -annotated_tstart,-annotated_tstop,
+           -annotated_gstart,-annotated_gstop) %>%
+    mutate(start_codon = start_codon %>% 
+               toupper %>%
+               factor(levels=start_codon_levels)
+           ) %>%
+    mutate(qval_combined=qvalue(pval_combined,pi0 = 1)$qvalues)
+
+RiboCodeTable_JEC21
+```
+
+## Near-cognate codons, all p < 0.1
+
+```{r countorf_bystartcodon_JEC21,dependson="load_JEC21",fig.height=3,fig.width=5}
+ggplot(data=RiboCodeTable_JEC21, aes(x=start_codon)) +
+    geom_bar()
+
+ggplot(data=RiboCodeTable_JEC21, aes(x=start_codon, y=pval_combined)) +
+    geom_violin(adjust=0.1,kernel="rectangular")
+
+ggplot(data=RiboCodeTable_JEC21, aes(x=start_codon, y=pval_combined)) +
+    geom_violin(scale="count",adjust=0.1,kernel="rectangular") +
+    coord_cartesian(ylim=c(0,0.01))
+```
+
+## Multiple hypothesis testing adjustment, 1% FDR
+
+```{r countorf_qval1_bystartcodon_JEC21,dependson="load_JEC21",fig.height=3,fig.width=5}
+ggplot(data=RiboCodeTable_JEC21 %>% filter(qval_combined <= 0.01), aes(x=start_codon)) +
+    geom_bar()
+
+ggplot(data=RiboCodeTable_JEC21 %>% filter(qval_combined <= 0.01), aes(x=start_codon, y=pval_combined)) +
+    geom_violin(adjust=0.1,kernel="rectangular")
+
+orflength_FDR1_JEC21 <- 
+ggplot(data=RiboCodeTable_JEC21 %>% filter(qval_combined <= 0.01), aes(x=start_codon,colour=start_codon)) +
+    #geom_violin(aes(y=ORF_length),adjust=0.1,kernel="rectangular",scale="count",width=2) +
+    geom_boxplot(aes(y=ORF_length/3),varwidth=TRUE) +
+    coord_cartesian(ylim=c(0,1000)) +
+    scale_y_continuous(expand=c(0,0)) + 
+    scale_colour_manual(values=startcod_colours) +
+    labs(x="Start codon", y="ORF length (aa)") +
+    theme(panel.grid.major.y = element_line(colour="grey80"),
+          legend.position="none")
+orflength_FDR1_JEC21
+```
+
+## Count by p-value
+
+```{r cum_pvalue_JEC21,dependson="load_JEC21",fig.height=3,fig.width=5}
+cum_pvalue_JEC21 <- 
+ggplot(data = RiboCodeTable_JEC21 %>% 
+    group_by(start_codon) %>%
+    do(cumcount_less_than(.$pval_combined,threshseq = 10^seq(-19,-1,0.1)) ),
+    aes(colour=start_codon,x=pthresh,y=cumcounts)) +
+    geom_line(size=0.7) + 
+    scale_x_log10(breaks=10^seq(-20,-2,2),
+                  labels=seq(-20,-2,2),
+                  expand=c(0,0)) + 
+    scale_y_log10() +
+    scale_colour_manual(values=startcod_colours) + 
+    labs(x="log10(p-value)",
+         y="cumulative ORF count",colour="Start codon") +
+    theme(panel.grid.major=element_line(colour="grey80"))
+cum_pvalue_JEC21
+```
+
+## Retrieve top-scoring ORFs for each start codon
+
+```{r topscores_bystartcodon_JEC21,dependson="load_JEC21",fig.height=3,fig.width=5}
+RiboCodeTable_JEC21 %>% 
+    group_by(start_codon) %>%
+    arrange(pval_combined) %>%
+    do(head(.,n=2)) %>%
+    select(gene_id,start_codon,ORF_length,ORF_tstart,ORF_tstop,pval_combined)
+```
+
+# Composite: Translated ORFs overwhelmingly start with ATG codons.
+
+We assessed translation of de novo predicted ORFs on mRNAs, by RiboCode (Xiao 2018), which tests the 3nt-periodicity of ribosome-protected fragments with a modified Wilcoxon signed-rank test. We used a P-site offset of 12nt from 28nt and 29nt fragments only, and a minimum ORF length of 5 amino acids. 
+A, P-value of translation frame for ORFs overwhelmingly favours annotated ATG-start ORFs in *C. neoformans* H99.
+B, ORFs called at 1% FDR (Storey 2019), only ATG-start ORFs are long and common, in *C. neoformans* H99; here the width of the boxplot is 
+C,D, Same for *C. deneoformans* JEC21.
+
+```{r figure_denovoORFs,fig.width=9,fig.height=6}
+plot_grid(cum_pvalue_H99, orflength_FDR1_H99,
+          cum_pvalue_JEC21,orflength_FDR1_JEC21,
+          ncol=2,labels=LETTERS[1:4])
+ggsave(filename = "figure_denovoORFs_RiboCode.png",
+       width=9,height=6)
+```
+
+
