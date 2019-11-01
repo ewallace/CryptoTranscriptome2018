@@ -32,6 +32,7 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
 source("../SharedScripts/sharedScripts.R")
 
 # setwd("~/Repos/CryptoTranscriptome2018/ATGContext/")
+
 ```
 
 
@@ -509,16 +510,13 @@ ggplot(data=ctbl_big_JEC21 %>%
 ### Plot against wide consensus (-10 to ATG)
 
 ```{r plot_scores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
-
 plot_4ATGscoresw_dens(scores_JEC21,hiTrans_JEC21,xlab="Kozak score")
-
 ```
 
 ```{r plot_cumscores_w_JEC21, dependson="calc_scores_JEC21", fig.width=5,fig.height=1.8}
 plot_cumscores_w_JEC21 <- 
     plot_4ATGscoresw_ecdf(scores_JEC21,hiTrans_JEC21,xlab="Kozak score")
 plot_cumscores_w_JEC21
-
 ```
 
 ### Wide consensus comparing d1ATG to d2AUG score
@@ -682,17 +680,16 @@ dvsaATG_cumscores_JEC21
 ### Most u1AUG scores are less than aAUG scores
 
 ```{r uvsaATG_scoresdens_JEC21, dependson="calc_scores_JEC21", fig.width=3.5,fig.height=1.8}
-
 plot_ATGdiffs_dens(scores_JEC21,
                    xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
                    difftype="upstream")
 
 uvsaATG_cumscores_JEC21 <- 
-plot_ATGdiffs_ecdf(scores_JEC21,
-                   xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
-                   difftype="upstream") +
-    scale_colour_hue(breaks=c("narrow","wide"),
-                     labels=c("narrow (-4)","wide (-10)"))
+  plot_ATGdiffs_ecdf(scores_JEC21,
+                     xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
+                     difftype="upstream") +
+  scale_colour_hue(breaks=c("narrow","wide"),
+                   labels=c("narrow (-4)","wide (-10)"))
 uvsaATG_cumscores_JEC21
 ```
 
@@ -1263,23 +1260,50 @@ This figure shows that, for genes with only 1 uATG, this correlation is weak.
 
 ```{r uATG_scoreTE_JEC21, dependson="uATG_RPF_JEC21", fig.width=4.5,fig.height=2.5,results="show"}
 
+uATG_scoreTE_JEC21_data <- 
+  ribo_uct_JEC21 %>%
+  inner_join(scores_JEC21) %>%
+  filter(uATGCt == 1 ) %>%
+  left_join(ctbl_big_JEC21) %>%
+  mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500)) %>%
+           factor(levels=c("(0,20]","(20,500]"),
+                  labels=c("uAUG ≤ 20nt","uAUG > 20nt"))
+  )
+
+summarystats_uATG_scoreTE_JEC21 <-
+  uATG_scoreTE_JEC21_data %>%
+  ungroup() %>%
+  mutate(log10_TE=log10(TE)) %>%
+  select(u1.posTSS20,u1.scorekw,log10_TE) %>%
+  nest(-u1.posTSS20) %>%
+  mutate(
+    fit = map(data, ~ lm( log10_TE ~ u1.scorekw, data = .x) ),
+    glanced = map(fit, glance)
+  ) %>%
+  select(-data,-fit) %>%
+  unnest() %>%
+  mutate(R=sqrt(r.squared)) %>%
+  select(u1.posTSS20,R,r.squared,p.value) %>%
+  mutate(R2label=paste("R^2 ==", signif(r.squared,2)),
+         plabel =paste("p ==", signif(p.value,2))
+  )
+summarystats_uATG_scoreTE_JEC21
+  
 uATG_scoreTE_JEC21 <- 
-ggplot(data=ribo_uct_JEC21 %>%
-    inner_join(scores_JEC21) %>%
-    filter(uATGCt == 1 ) %>%
-        left_join(ctbl_big_JEC21) %>%
-        mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500)) %>%
-                   factor(levels=c("(0,20]","(20,500]"),
-                          labels=c("uAUG ≤ 20nt","uAUG > 20nt"))
-               ),
+ggplot(data=uATG_scoreTE_JEC21_data,
        aes(x=u1.scorekw,y=TE)) +
     facet_wrap(~u1.posTSS20) + 
     geom_point(colour="grey50",size=0.7) +
     stat_smooth(method="lm",fill="blue") + 
-    scale_y_log10nice("TE of aORF",
-                      limits=c(0.05,10),
-                      oob=scales::squish) +
-    labs(x="uAUG Kozak score")
+  geom_label(data=summarystats_uATG_scoreTE_JEC21,aes(label=R2label),
+             x=0.6,y=log10(5.5),hjust=0,vjust=1,colour="blue",parse=TRUE,
+             alpha=0.5) +
+    scale_y_log10("TE of aORF",
+                  limits=c(0.1,5),
+                  breaks=c(0.1,0.2,0.5,1,2,5),
+                  oob=scales::squish) +
+    labs(x="uAUG Kozak score") +
+    panel_border()
 uATG_scoreTE_JEC21
 ```
 
@@ -1289,15 +1313,15 @@ Check these for ribosome occupancy at uATG.
 
 ```{r uATG_topTE_JEC21, dependson="uATG_RPF_JEC21", fig.width=4.5,fig.height=2.5,results="show"}
 
-ribo_uct_JEC21 %>%
-    filter(uATGfac %in% c("1\nfar","2+\nfar")) %>%
-    select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
-    arrange(TE) %>%
-    left_join(ctbl_big_JEC21 %>% 
-                  transmute(Gene,
-                            u1.cxtn=str_sub(u1.context,start=8L,end=15L),
-                            u2.cxtn=str_sub(u2.context,start=8L,end=15L))
-              )
+# ribo_uct_JEC21 %>%
+#     filter(uATGfac %in% c("1\nfar","2+\nfar")) %>%
+#     select(Gene,RNA,RPF,TE,uATGCt,uATGCtmin20) %>%
+#     arrange(TE) %>%
+#     left_join(ctbl_big_JEC21 %>% 
+#                   transmute(Gene,
+#                             u1.cxtn=str_sub(u1.context,start=8L,end=15L),
+#                             u2.cxtn=str_sub(u2.context,start=8L,end=15L))
+#               )
 
 ribo_uct_JEC21 %>%
     filter(Gene %in% c("CNM02470","CNH02210",
@@ -1360,41 +1384,75 @@ ggplot(data=ribotbl_scoresenough_JEC21 %>%
 
 For top 3315 / 50% of genes by mean RNA TPM, with only a single uATG, summarized by gene, median across 4 samples.
 
-```{r uATG_aATGwsumm_occ_JEC21, dependson="calc_scores_JEC21", fig.width=4.5,fig.height=2.5}
+```{r uATG_aATGwsumm_occ_JEC21, dependson="calc_scores_JEC21",results="show", fig.width=4.5,fig.height=2.5}
+
+ribotbl_UIratio_JEC21 <- 
+  ribotbl_scoresenough_JEC21 %>%
+  # mutate(Type=factor(Type,levels=c("RPF","RNA"))) %>%
+  group_by(Sample,Type) %>%
+  mutate(Upct.widenorm = Upct.wide / median(Inct.wide),
+         Inct.widenorm = Inct.wide / median(Inct.wide),
+         UIratio.widenorm = Upct.widenorm / Inct.widenorm) %>%
+  ungroup() %>%
+  group_by(Gene,Type,u1vsaw) %>%
+  summarize(UIratio.widenorm = median(UIratio.widenorm,na.rm=TRUE),
+            Upct.widenorm = median(Upct.widenorm,na.rm=TRUE),
+            Inct.widenorm = median(Inct.widenorm,na.rm=TRUE) ) %>%
+  filter( Gene %in% ( 
+    uATG_ct_JEC21 %>%
+      filter(uATGCt == 1 ) %>%
+      .$Gene ) )
+
+summarystats_UIratio_JEC21 <- 
+  ribotbl_UIratio_JEC21 %>%
+  ungroup() %>%
+  filter(UIratio.widenorm > 0, is.finite(UIratio.widenorm)) %>%
+  mutate(log10_UIratio.widenorm = log10(UIratio.widenorm) ) %>%
+  select(Type,Gene,log10_UIratio.widenorm,u1vsaw) %>%
+  nest(-Type) %>%
+  mutate(
+    fit = map(data, ~ lm( log10_UIratio.widenorm ~ u1vsaw, data = .x) ),
+    glanced = map(fit, glance)
+  ) %>%
+  select(-data,-fit) %>%
+  unnest() %>%
+  mutate(R=sqrt(r.squared)) %>%
+  select(Type,R,r.squared,p.value) %>%
+  mutate(R2label=paste("R^2 ==", signif(r.squared,2)),
+         plabel =paste("p ==", signif(p.value,2))
+         )
+
+summarystats_UIratio_JEC21
+
+options(scipen=-1)
+
 uATG_aATGwsumm_occ_JEC21 <- 
-    ggplot(data=ribotbl_scoresenough_JEC21 %>%
-           # mutate(Type=factor(Type,levels=c("RPF","RNA"))) %>%
-           group_by(Sample,Type) %>%
-           mutate(Upct.widenorm = Upct.wide / median(Inct.wide),
-                  Inct.widenorm = Inct.wide / median(Inct.wide),
-                  UIratio.widenorm = Upct.widenorm / Inct.widenorm) %>%
-           ungroup() %>%
-           group_by(Gene,Type,u1vsaw) %>%
-           summarize(UIratio.widenorm = median(UIratio.widenorm,na.rm=TRUE),
-                     Upct.widenorm = median(Upct.widenorm,na.rm=TRUE),
-                     Inct.widenorm = median(Inct.widenorm,na.rm=TRUE) ) %>%
-           filter( Gene %in% ( 
-               uATG_ct_JEC21 %>%
-                   filter(uATGCt == 1 ) %>%
-                   .$Gene ) ),
+    ggplot(data=ribotbl_UIratio_JEC21,
        aes(x=u1vsaw,y=UIratio.widenorm)) +
     geom_point(size=0.5,colour="grey50") +
     # stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     # stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
     stat_smooth(method="lm",fill="blue") + 
-    scale_x_continuous(expand=c(0.005,0.005),
-                       breaks=c(-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4),
-                       labels=c(-0.4,"",-0.2,"",0,"",0.2,"",0.4)) + 
+    geom_label(data=summarystats_UIratio_JEC21,aes(label=R2label),
+              x=-0.33,y=log10(15),hjust=0,vjust=0,colour="blue",parse=TRUE,
+              alpha=0.5) +
+    geom_label(data=summarystats_UIratio_JEC21,aes(label=plabel),
+              x=-0.33,y=log10(15),hjust=0,vjust=1,colour="blue",parse=TRUE,
+              alpha=0.5) +
+    scale_x_continuous(expand=c(0.005,0.002),
+                       breaks=c(-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4),
+                       labels=c("",-0.2,"",0,"",0.2,"",0.4)) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.02,50),
                   oob=scales::squish) + 
     # facet_grid(Type ~ .) +
     facet_wrap(~Type,ncol=2) + 
     labs(x="Kozak score diff. uAUG - aAUG",
-         y="Occupancy ratio \n uAUG : aAUG") +
+         y="Occupancy ratio\n uAUG : aAUG") +
     panel_border()
 
 uATG_aATGwsumm_occ_JEC21
+
 ```
 
 
@@ -1538,17 +1596,16 @@ aAUG_hi_context_H99 <-
     annotate(geom="segment",x=2.5,xend=15.5,y=-0.2,yend=-0.2,size=1,colour="grey50") # +
     # annotate(geom="text",label="wide",x=9,y=-0.1,size=4, vjust=1.15,colour="grey50") 
 aAUG_hi_context_H99
+
 ```
 
 ```{r a_hi_context_H99_svg,dependson=c("load_context_H99","load_riboviz_H99"),fig.width=4,fig.height=1,dev="svg"}
-aAUG_hi_context_H99 <- 
-    ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
-              namespace="TCAG") + 
-    xlim(c(2.5,21.5)) + 
-    theme_nothing() +
-    annotate(geom="text",label="Cn top 5% aATGs",
-             x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
-aAUG_hi_context_H99
+ggseqlogo(data=filter(ctbl_big_H99,Gene %in% hiTrans_H99)$aATG.context,
+          namespace="TCAG") + 
+  xlim(c(2.5,21.5)) + 
+  theme_nothing() +
+  annotate(geom="text",label="Cn top 5% aATGs",
+           x=2.5,y=2,size=4,vjust=1,hjust=0,family="Arial",fontface = "italic")
 ```
 
 ### Cytoplasmic Ribosome Annotated ATGs have a consensus sequence
@@ -1827,16 +1884,13 @@ ggplot(data=scores_H99) +
 
 
 ```{r plot_scores_w_H99, dependson="calc_scores_H99", fig.width=5,fig.height=1.8}
-
 plot_4ATGscoresw_dens(scores_H99,hiTrans_H99,xlab="Kozak score")
-
 ```
 
 ```{r plot_cumscores_w_H99, dependson="calc_scores_H99", dev="pdf",fig.width=5,fig.height=1.8}
 plot_cumscores_w_H99 <- 
     plot_4ATGscoresw_ecdf(scores_H99,hiTrans_H99,xlab="Kozak score")
 plot_cumscores_w_H99
-
 ```
 
 ### Wide consensus comparing d1ATG to d2AUG score
@@ -1983,11 +2037,11 @@ plot_ATGdiffs_dens(scores_H99,
                      labels=c("narrow (-4)","wide (-10)"))
 
 uvsaATG_cumscores_H99 <- 
-plot_ATGdiffs_ecdf(scores_H99,
-                   xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
-                   difftype="upstream") +
-    scale_colour_hue(breaks=c("narrow","wide"),
-                     labels=c("narrow (-4)","wide (-10)"))
+  plot_ATGdiffs_ecdf(scores_H99,
+                     xlab=expression(paste("Kozak score diff. ", u[1],"AUG - aAUG")),
+                     difftype="upstream") +
+  scale_colour_hue(breaks=c("narrow","wide"),
+                   labels=c("narrow (-4)","wide (-10)"))
 uvsaATG_cumscores_H99
 ```
 
@@ -2208,7 +2262,17 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
 
 ### dATG vs aATG ribosome occupancy and wide score, geometric mean across reps
 
-```{r dATG_aATGw_occ_summ_H99, dependson="calc_scores_H99", fig.width=4,fig.height=2.5}
+```{r dATG_aATGw_occ_summ_H99, dependson="calc_scores_H99",results="show", fig.width=4,fig.height=2.5}
+
+ribotbl_scoresenough_H99 %>%
+  group_by(Gene,Type) %>%
+  summarize(d1vsaScore = median(d1vsaw),
+            d1vsaRibo = logmean(Nxct.wide / Inct.wide)) %>%
+  mutate(d1vsaScut = cut(d1vsaScore,breaks=c(-1,0,1) ) ) %>%
+  group_by(Type,d1vsaScut) %>%
+  filter(d1vsaRibo > 0, is.finite(d1vsaRibo)) %>%
+  summarize(R=cor(d1vsaScore,log10(d1vsaRibo),use="pairwise.complete.obs"))
+
 
 dATG_aATGw_occ_summ_H99 <- 
 ggplot(data=ribotbl_scoresenough_H99 %>%
@@ -2638,19 +2702,44 @@ This figure shows that, for genes with only 1 uATG, this correlation is weak.
 
 ```{r uATG_scoreTE_H99, dependson="uATG_RPF_H99", fig.width=4.5,fig.height=2.5,results="show"}
 
+uATG_scoreTE_H99_data <- 
+  ribo_uct_H99 %>%
+  inner_join(scores_H99) %>%
+  filter(uATGCt == 1 ) %>%
+  left_join(ctbl_big_H99) %>%
+  mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500)) %>%
+           factor(levels=c("(0,20]","(20,500]"),
+                  labels=c("uAUG ≤ 20nt","uAUG > 20nt"))
+  )
+
+summarystats_uATG_scoreTE_H99 <-
+  uATG_scoreTE_H99_data %>%
+  ungroup() %>%
+  mutate(log10_TE=log10(TE)) %>%
+  select(u1.posTSS20,u1.scorekw,log10_TE) %>%
+  nest(-u1.posTSS20) %>%
+  mutate(
+    fit = map(data, ~ lm( log10_TE ~ u1.scorekw, data = .x) ),
+    glanced = map(fit, glance)
+  ) %>%
+  select(-data,-fit) %>%
+  unnest() %>%
+  mutate(R=sqrt(r.squared)) %>%
+  select(u1.posTSS20,R,r.squared,p.value) %>%
+  mutate(R2label=paste("R^2 ==", signif(r.squared,2)),
+         plabel =paste("p ==", signif(p.value,2))
+  )
+summarystats_uATG_scoreTE_H99
+  
 uATG_scoreTE_H99 <- 
-ggplot(data=ribo_uct_H99 %>%
-    inner_join(scores_H99) %>%
-    filter(uATGCt == 1 ) %>%
-        left_join(ctbl_big_H99) %>%
-        mutate(u1.posTSS20 =  cut(u1.posTSS,breaks=c(0,20,500)) %>%
-                   factor(levels=c("(0,20]","(20,500]"),
-                          labels=c("uAUG ≤ 20nt","uAUG > 20nt"))
-               ),
+ggplot(data=uATG_scoreTE_H99_data,
        aes(x=u1.scorekw,y=TE)) +
     facet_wrap(~u1.posTSS20) + 
     geom_point(colour="grey50",size=0.7) +
     stat_smooth(method="lm",fill="blue") + 
+  geom_label(data=summarystats_uATG_scoreTE_H99,aes(label=R2label),
+             x=0.55,y=log10(5.5),hjust=0,vjust=1,colour="blue",parse=TRUE,
+             alpha=0.5) +
     scale_y_log10("TE of aORF",
                   limits=c(0.1,5),
                   breaks=c(0.1,0.2,0.5,1,2,5),
@@ -2756,29 +2845,63 @@ ggplot(data=ribotbl_scoresenough_H99 %>%
 
 For top 3315 / 50% of genes by mean RNA TPM, with only a single uATG, summarized by gene, median across 4 samples.
 
-```{r uATG_aATGwsumm_occ_H99, dependson="calc_scores_H99", fig.width=4.5,fig.height=2.5}
+```{r uATG_aATGwsumm_occ_H99, dependson="calc_scores_H99",results="show", fig.width=4.5,fig.height=2.5}
+
+ribotbl_UIratio_H99 <- 
+  ribotbl_scoresenough_H99 %>%
+  # mutate(Type=factor(Type,levels=c("RPF","RNA"))) %>%
+  group_by(Sample,Type) %>%
+  mutate(Upct.widenorm = Upct.wide / median(Inct.wide),
+         Inct.widenorm = Inct.wide / median(Inct.wide),
+         UIratio.widenorm = Upct.widenorm / Inct.widenorm) %>%
+  ungroup() %>%
+  group_by(Gene,Type,u1vsaw) %>%
+  summarize(UIratio.widenorm = median(UIratio.widenorm,na.rm=TRUE),
+            Upct.widenorm = median(Upct.widenorm,na.rm=TRUE),
+            Inct.widenorm = median(Inct.widenorm,na.rm=TRUE) ) %>%
+  filter( Gene %in% ( 
+    uATG_ct_H99 %>%
+      filter(uATGCt == 1 ) %>%
+      .$Gene ) )
+
+options(scipen=-1)
+
+summarystats_UIratio_H99 <- 
+  ribotbl_UIratio_H99 %>%
+  ungroup() %>%
+  filter(UIratio.widenorm > 0, is.finite(UIratio.widenorm)) %>%
+  mutate(log10_UIratio.widenorm = log10(UIratio.widenorm) ) %>%
+  select(Type,Gene,log10_UIratio.widenorm,u1vsaw) %>%
+  nest(-Type) %>%
+  mutate(
+    fit = map(data, ~ lm( log10_UIratio.widenorm ~ u1vsaw, data = .x) ),
+    glanced = map(fit, glance)
+  ) %>%
+  select(-data,-fit) %>%
+  unnest() %>%
+  mutate(R=sqrt(r.squared)) %>%
+  select(Type,R,r.squared,p.value) %>%
+  mutate(R2label=paste("R^2 ==", signif(r.squared,2)),
+         plabel =paste("p ==", signif(p.value,2))
+         )
+summarystats_UIratio_H99
+
 uATG_aATGwsumm_occ_H99 <- 
-    ggplot(data=ribotbl_scoresenough_H99 %>%
-           # mutate(Type=factor(Type,levels=c("RPF","RNA"))) %>%
-           group_by(Sample,Type) %>%
-           mutate(Upct.widenorm = Upct.wide / median(Inct.wide),
-                  Inct.widenorm = Inct.wide / median(Inct.wide),
-                  UIratio.widenorm = Upct.widenorm / Inct.widenorm) %>%
-           ungroup() %>%
-           group_by(Gene,Type,u1vsaw) %>%
-           summarize(UIratio.widenorm = median(UIratio.widenorm,na.rm=TRUE),
-                     Upct.widenorm = median(Upct.widenorm,na.rm=TRUE),
-                     Inct.widenorm = median(Inct.widenorm,na.rm=TRUE) ) %>%
-           filter( Gene %in% ( 
-               uATG_ct_H99 %>%
-                   filter(uATGCt == 1 ) %>%
-                   .$Gene ) ),
+    ggplot(data=ribotbl_UIratio_H99,
        aes(x=u1vsaw,y=UIratio.widenorm)) +
     geom_point(size=0.5,colour="grey50") +
     # stat_smooth(method="loess",se=TRUE,colour="blue",fill="blue",span=0.8) + 
     # stat_smooth(method="gam",formula=y~s(x,k=4),fill="blue") + 
     stat_smooth(method="lm",fill="blue") + 
-    scale_x_continuous(expand=c(0.005,0.005)) + 
+    geom_label(data=summarystats_UIratio_H99,aes(label=R2label),
+              x=-0.39,y=log10(15),hjust=0,vjust=0,colour="blue",parse=TRUE,
+              alpha=0.5) +
+    geom_label(data=summarystats_UIratio_H99,aes(label=plabel),
+              x=-0.39,y=log10(15),hjust=0,vjust=1,colour="blue",parse=TRUE,
+              alpha=0.5) +
+    scale_x_continuous(expand=c(0.005,0.001),
+                       breaks=c(-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4),
+                       labels=c("",-0.2,"",0,"",0.2,"",0.4)) + 
     scale_y_log10(breaks=c(0.1,1,10),
                   limits=c(0.02,50),
                   oob=scales::squish) + 
@@ -3734,6 +3857,7 @@ plot_grid(plot_ribosum_TE_JEC21,uATG_TE_JEC21,uATGmin20_TE_JEC21,
 ### Figure 3 panels: score and AUG/uAUG usage in H99
 
 ```{r fig3_AUGscore_H99,dependson=c("a_hi_context_H99","plot_cumscores_w_H99","uvsaATG_scoresdens_H99","uATG_scoreTE_H99","uATG_aATGwsumm_occ_H99"),fig.width=7.5,fig.height=4.5}
+options(scipen=-1)
 left_col <- 
     plot_grid(aAUG_hi_context_H99,plot_cumscores_w_H99,uvsaATG_cumscores_H99,
           ncol=1,rel_heights = c(1,2,2),
@@ -3751,6 +3875,7 @@ plot_grid(left_col,right_col,ncol=2,rel_widths = c(1.2,1))
 
 
 ```{r fig3_AUGscore_JEC21,dependson=c("a_hi_context_JEC21","plot_cumscores_w_JEC21","uvsaATG_scoresdens_JEC21","uATG_scoreTE_JEC21","uATG_aATGwsumm_occ_JEC21"),fig.width=7.5,fig.height=4.5}
+options(scipen=-1)
 left_col <- 
     plot_grid(aAUG_hi_context_JEC21,plot_cumscores_w_JEC21,uvsaATG_cumscores_JEC21,
           ncol=1,rel_heights = c(1,2,2),

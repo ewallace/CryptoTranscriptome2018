@@ -3,6 +3,7 @@
 
 library(tidyverse)
 library(cowplot)
+library(broom)
 library(ggrepel)
 library(ggseqlogo)
 library(Biostrings)
