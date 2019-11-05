@@ -34,7 +34,8 @@ diffexp <- read_tsv("../DiffExp/upf1E30vsWT.complete.txt") %>%
                                TRUE ~ "other") )
 
 uATG_ct <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") %>% 
-    dplyr::rename(Gene=gene) %>%
+    # dplyr::rename(Gene=gene) %>%
+    dplyr::mutate(Gene=str_remove(gene,".t0[0-9]")) %>%
     dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
     dplyr::select(c("Gene",paste0("u",1:56,".posTSS"))) %>%
     gather(key="uATG",value="posTSS",-Gene) %>%
@@ -66,7 +67,9 @@ ggplot(data=diffexp) +
     scale_y_continuous(expand=c(0,0))
 ```
 
-### Volcano plot of differential gene expression
+# Differential gene expression
+
+## Volcano plot of differential gene expression
 
 ```{r volcano,dependson="load_data",fig.width=4,fig.height=2.5}
 volcano_diff <-
@@ -91,7 +94,7 @@ volcano_diff
 
 ```
 
-### Genes up in WT vs upf1 (this is not meant to be the interesting bit)
+## Genes up in WT vs upf1 (this is not meant to be the interesting bit)
 
 ```{r upWT,dependson="load_data",results="show"}
 diffexp %>%
@@ -101,7 +104,7 @@ diffexp %>%
 
 CNC02960 is upf1, the deleted gene. Others don't make sense.
 
-#### with minimal expression filter 
+### with minimal expression filter 
 
 ```{r upWTfilt,dependson="load_data",results="show"}
 diffexp %>%
@@ -123,7 +126,7 @@ Several genes that expressed more highly in the presence of upf1 are expressed e
 * CNI02990/CNAG_04163, unknown mucin/flocculin, repressed by heat in exp phase
 * CNC05950/CNAG_02986 YSA1 ADP-ribose diphosphatase, repressed by heat in exp. phase
 
-### Genes down in WT vs upf1 (NMDcandidates)
+## Genes down in WT vs upf1 (NMDcandidates)
 
 ```{r downWT,dependson="load_data",results="show"}
 diffexp %>%
@@ -138,7 +141,7 @@ diffexp %>%
 
 These make little sense collectively
 
-#### with minimal expression filter 
+### with minimal expression filter 
 
 ```{r downWTfilt,dependson="load_data",results="show"}
 diffexp %>%
@@ -160,7 +163,7 @@ Of the top *7/10* have clear uORFs with ribosomal occupancy. This is a very clea
 * CNJ00080/CNAG_07865 ferroxidase Fet3/5, uORF w/occupancy
 * CND01910/CNAG_01060 SR-like RNA-binding protein homologous to splicing regulators, intron near 5' end of ORF partially retained with in-frame stop codon (CNAG_00260 & CNAG_00399 also homologs)
 
-#### Other genes of interest
+### Other genes of interest
 
 ```{r volcano_select,dependson="load_data",fig.width=4,fig.height=2.5,results="show"}
 
@@ -198,7 +201,7 @@ diffexp %>%
 ```
 
 
-### Output gene lists
+## Output gene lists
 
 Genes_up_deltaUpf1_vs_JEC21.txt
 
@@ -222,10 +225,10 @@ I also used PANTHERdb to do GO analysis on these lists. The results were mostly 
 
 Except, Genes_down_deltaUpf1_vs_JEC21 was 2.3x enriched for genes wich MF Oxidoreductase activity (GO:0016491). This includes alternative oxidase, many dehydrogenases, etc. That looks interesting. These genes in pantherGeneList_deltaUpf1_up_oxidoreductase_GO0016491.txt
 
-## Connect Diff Exp to uAUG count
+# Connect Diff Exp to uAUG count
 
 
-### Volcano plot of differential gene expression
+## Volcano plot of differential gene expression
 
 ```{r volcano_uATG,dependson="load_data",fig.width=6,fig.height=4}
 ggplot(data=udiff,
@@ -241,7 +244,7 @@ ggplot(data=udiff,
                       oob=scales::squish)
 ```
 
-### Fold Change vs uATG count
+## Fold Change vs uATG count
 
 ```{r uATG_ct_box, dependson="load_data", fig.width=2.5,fig.height=3.5}
 ggplot(data=udiff,
@@ -253,6 +256,8 @@ ggplot(data=udiff,
                       oob=scales::squish) +
     labs(x="uAUG count")
 ```
+
+## Fold Change vs uATG count, ecdf
 
 ```{r uATG_ct_cum, dependson="load_data", fig.width=4,fig.height=1.8}
 fc_uCt <- 
@@ -268,7 +273,24 @@ fc_uCt <-
 fc_uCt
 ```
 
-### Fold Change vs uATG count and position
+## Fold Change vs uATG count, KS test
+
+```{r uATG_ct_kstest, dependson="load_data", fig.width=4,fig.height=1.8, results="show"}
+# udiff
+ks.test(x = udiff %>% filter(uATGCtC=="0") %>% .$log2FoldChange,
+        y = udiff %>% filter(uATGCtC=="1") %>% .$log2FoldChange,
+        alternative = "greater")
+
+ks.test(x = udiff %>% filter(uATGCtC=="1") %>% .$log2FoldChange,
+        y = udiff %>% filter(uATGCtC=="2+") %>% .$log2FoldChange,
+        alternative = "greater")
+
+ks.test(x = udiff %>% filter(uATGCtC=="0") %>% .$log2FoldChange,
+        y = udiff %>% filter(uATGCtC=="2+") %>% .$log2FoldChange,
+        alternative = "greater")
+```
+
+## Fold Change vs uATG count and position
 
 ```{r uATG_ctmin20_box, dependson="load_data", fig.width=2.5,fig.height=3.5}
 ggplot(data=udiff,
@@ -297,13 +319,27 @@ fc_vs_umin20 <-
 fc_vs_umin20
 ```
 
-### Fold Change vs uATG count and score
+```{r uATG_ctmin20_kstest, dependson="load_data", fig.width=4,fig.height=1.8, results="show"}
+# udiff %>%
+#   select(Gene,log2FoldChange,uATGfac)
+
+ks.test(x = udiff %>% filter(uATGfac=="0") %>% .$log2FoldChange,
+        y = udiff %>% filter(uATGfac=="1+\nclose") %>% .$log2FoldChange,
+        alternative = "greater")
+
+ks.test(x = udiff %>% filter(uATGfac=="0") %>% .$log2FoldChange,
+        y = udiff %>% filter(uATGfac=="1+\nfar") %>% .$log2FoldChange,
+        alternative = "greater")
+```
+
+## Fold Change vs uATG count and score
 
 ```{r load_scores,dependson="load_data", fig.width=4,fig.height=1.8}
 scores  <- read_tsv("data_out/scores_kozak_JEC21.txt",comment="#")
 
 udiffsc1 <- inner_join(
     udiff %>%
+        select(Gene,log2FoldChange,uATGCt) %>%
         filter(uATGCt==1),
     scores %>%
         select(Gene,a.scorekw=aATG.scorekw,u1.scorekw) ) %>%
@@ -327,7 +363,18 @@ ggplot(data=udiffsc1,
 fc_vs_u1score
 ```
 
-## Composite figure
+```{r uATG_score_kstest, dependson="load_scores", fig.width=4,fig.height=1.8, results="show"}
+# udiffsc1
+ks.test(x = udiffsc1 %>% filter(u1.scorekw < 0.7) %>% .$log2FoldChange,
+        y = udiffsc1 %>% filter(u1.scorekw > 0.9) %>% .$log2FoldChange,
+        alternative = "greater")
+
+ks.test(x = udiffsc1 %>% filter(u1.scorekw < 0.8) %>% .$log2FoldChange,
+        y = udiffsc1 %>% filter(u1.scorekw > 0.8) %>% .$log2FoldChange,
+        alternative = "greater")
+```
+
+# Composite figure
 
 ```{r plot_comp,dependson=c("volcano","uATG_ct_cum","uATG_ctmin20_cum","load_scores"),fig.height=7.9,fig.width=4}
 plot_grid(volcano_diff,fc_uCt,fc_vs_umin20,fc_vs_u1score,
