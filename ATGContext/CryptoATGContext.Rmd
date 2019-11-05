@@ -1206,7 +1206,10 @@ uATG_ct_JEC21 <- read_tsv("data_in/JEC21_10p_up12dwn9_allATGcontext.table.txt") 
 ribo_uct_JEC21 <- 
     ribosum_JEC21 %>%
     filter(Gene %in% enoughRNA_JEC21) %>%
-    left_join(uATG_ct_JEC21)
+    left_join(uATG_ct_JEC21) %>%
+    left_join(ctbl_big_JEC21 %>% 
+                select(Gene,aATG.pos)
+              )
 
 ggplot(data=ribo_uct_JEC21,
        aes(x=uATGCtC,y=RPF)) +
@@ -1231,6 +1234,22 @@ ggplot(data=ribo_uct_JEC21,
                       limits=c(0.05,10),expand=c(0,0),
                       oob=scales::squish) +
     labs(x="uAUG count")
+```
+
+```{r uATG_TE_lm_JEC21, dependson="uATG_RPF_JEC21", results="show",fig.width=2.5,fig.height=3.5}
+
+# ribo_uct_JEC21
+
+lm( log10(TE) ~ uATGCtC,data=ribo_uct_JEC21) %>% summary
+
+lm( log10(TE) ~ uATGCt, data=ribo_uct_JEC21) %>% summary
+
+lm( log10(TE) ~ aATG.pos, data=ribo_uct_JEC21) %>% summary
+
+lm( log10(TE) ~ uATGCtC + aATG.pos, data=ribo_uct_JEC21) %>% summary
+
+lm( log10(TE) ~ uATGCt + aATG.pos, data=ribo_uct_JEC21) %>% summary
+
 ```
 
 ### uATGs associated with lower translation efficiency are over 20nt from TSS
@@ -2649,7 +2668,10 @@ uATG_ct_H99 <- read_tsv("data_in/H99_10p_up12dwn9_allATGcontext.table.txt") %>%
 ribo_uct_H99 <- 
     ribosum_H99 %>%
     filter(Gene %in% enoughRNA_H99) %>%
-    left_join(uATG_ct_H99)
+    left_join(uATG_ct_H99) %>%
+    left_join(ctbl_big_H99 %>% 
+                select(Gene,aATG.pos)
+              )
 
 ggplot(data=ribo_uct_H99,
        aes(x=uATGCtC,y=RPF)) +
@@ -2674,6 +2696,22 @@ ggplot(data=ribo_uct_H99,
                       oob=scales::squish) +
     labs(x="uAUG count")
 uATG_TE_H99
+```
+
+```{r uATG_TE_lm_H99, dependson="uATG_RPF_H99", results="show",fig.width=2.5,fig.height=3.5}
+
+# ribo_uct_H99
+
+lm( log10(TE) ~ uATGCtC,data=ribo_uct_H99) %>% summary
+
+lm( log10(TE) ~ uATGCt, data=ribo_uct_H99) %>% summary
+
+lm( log10(TE) ~ aATG.pos, data=ribo_uct_H99) %>% summary
+
+lm( log10(TE) ~ uATGCtC + aATG.pos, data=ribo_uct_H99) %>% summary
+
+lm( log10(TE) ~ uATGCt + aATG.pos, data=ribo_uct_H99) %>% summary
+
 ```
 
 ### uATGs associated with lower translation efficiency are over 20nt from TSS
