@@ -1,0 +1,149 @@
+---
+title: "Comparisons between Saccharomyces, Transcript Leaders"
+author: Edward Wallace, ewjwallace@gmail.com
+date: 5 Nov 2019
+output:
+  # html_notebook: default
+  html_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Summary
+
+This summarizes transcript leader/5'UTR lengths in different (annotations of) Saccharomyces species, from yeast genome (YG) and otherwise from Spealman et al 2019 (SM).
+
+We need to add uAUG counts.
+    
+## Load Packages
+
+```{r setup,message=FALSE,echo=FALSE,cache=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,echo=FALSE,cache=TRUE,
+                      results="hide",
+                      fig.path="figure/CompareUTRlengthSac-",
+                      cache.path="cache/CompareUTRlengthSac-")
+# load common functions
+source("../SharedScripts/sharedScripts.R")
+# setwd("~/Repos/CryptoTranscriptome2018/ATGContextOthers/")
+```
+
+## Load data
+
+```{r load_data,results="show"}
+Orglevels <- c("bay","cer_YG","cer_SM","kud","par")
+# infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
+UTRcolnames <- c("Gene","aATG.pos","Length")
+
+read_ATGcontext_table <- function(file,org) {
+  read_tsv(file = file,
+           comment = "#",
+           skip=1,
+           col_names <- c("Gene", "aATG.context", "Length", 
+                          "d1.context", "d1.posTSS", "d1.posATG", "d1.frame", 
+                          "d2.context", "d2.posTSS", "d2.posATG", "d2.frame", 
+                          "u1.context", "u1.posTSS", "u1.posATG", "u1.frame", 
+                          "u2.context", "u2.posTSS", "u2.posATG", "u2.frame" ),
+           col_types=c("cciciiiciiiciiiciii")) %>%
+    dplyr::mutate(Gene=str_remove(Gene,".t0[0-9]")) %>%
+    mutate(Organism=org)
+}
+
+read_uATGct <- function(file,org) {
+  read_tsv(file = file,
+           comment = "#") %>%
+    dplyr::mutate(Gene=str_remove(gene,".t0[0-9]")) %>%
+    dplyr::rename_all(str_replace,pattern="-ATG",replacement="") %>%
+    dplyr::select(c("Gene",paste0("u",1:50,".posTSS"))) %>%
+    gather(key="uATG",value="posTSS",-Gene) %>%
+    mutate(posTSS=as.integer(posTSS)) %>%
+    group_by(Gene) %>%
+    summarize(uATGCt = sum(!is.na(posTSS)),
+              uATGCtmin20 = sum(posTSS >= 20,na.rm=TRUE)
+              ) %>%
+    mutate(Organism=org)
+}
+
+read_uATGct("data_in/SacBayanus_allATGcontext.table.txt","bay")
+
+# UTRmess <- readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2)
+UTRlengths <- bind_rows(
+read_ATGcontext_table("data_in/SacBayanus_allATGcontext.table.txt","bay"),
+read_ATGcontext_table("data_in/SacCer_allATGcontext.table.txt","cer_YG"),
+read_ATGcontext_table("data_in/SacCerSpeal_allATGcontext.table.txt","cer_SM"),
+read_ATGcontext_table("data_in/SacKudria_allATGcontext.table.txt","kud"),
+read_ATGcontext_table("data_in/SacParadoxus_allATGcontext.table.txt","par")
+) %>%
+    mutate(Organism=factor(Organism,levels=Orglevels) )
+
+UTRlengths
+```
+
+## Only 2-3000 UTRs are annotated in each set
+
+```{r count_UTR_annot,dependson="load_data",results="show"}
+UTRlengths %>%
+  group_by(Organism) %>%
+  summarize(Nlong = sum(Length > 1, na.rm = TRUE), 
+            Ntmeas = sum(!is.na(Length)),
+            Ntot = length(Length))
+```
+
+# Plot UTR length distributions for different species
+
+```{r plot_UTR_lengths,fig.height=3.5, fig.width=3.5}
+
+# ggplot(data=UTRlengths,aes(x=Organism,y=Length)) + 
+#     geom_violin(aes(colour=Organism)) +
+#     scale_color_brewer(type = "qual",palette=1,drop=FALSE) +
+#     scale_y_log10nice("TL length",expand=c(0.01,0.01))
+
+plot_UTR_lengths <- 
+ggplot(data=UTRlengths %>% filter(Length > 1),aes(x=Organism,y=Length)) + 
+    geom_point(position="jitter",colour="grey50",size=0.015) + 
+    geom_boxplot(aes(colour=Organism),fill="NA",outlier.colour = "NA",size=0.8) +
+    scale_y_log10("TL length",expand=c(0.01,0.01),
+                  breaks=c(1,10,100,1000),
+                  labels=c(1,10,100,1000) %>% as.character,
+                  oob=scales::squish) +
+    scale_color_brewer(type = "qual",palette=1,drop=FALSE) + 
+    theme(axis.text.x = element_text(angle=45,vjust=1,hjust=1))
+plot_UTR_lengths
+# ggplot(data=UTRlengths,aes(x=Organism,y=Length)) + 
+#     geom_beeswarm() +
+#     scale_y_log10nice()
+```
+
+
+# Plot uAUG distributions for different species - NOT DONE
+
+```{r load_UTRsumm,dependson="load_data",fig.height=3.5, fig.width=3.5, eval=FALSE}
+UTRsumm <- 
+    readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=1,
+                       range = "A10:F14",
+                       col_names=c("Organism","NuAUGs","NuAUGTLs","NTLs","PropuAUGTLs","uAUGdens")) %>% 
+    mutate(Organism = factor(Organism,levels=c("C. neoformans","C. deneoformans","N. crassa","S. pombe","C. albicans","S. cerevisiae"),
+                             labels=c("Cn","Cd","Nc","Sp","Ca","Sc")),
+           Prop2=NuAUGTLs/NTLs)
+
+plot_uTL_prop <- 
+ggplot(data=UTRsumm,aes(x=Organism,y=Prop2,fill=Organism)) + 
+    geom_col() +
+    scale_y_continuous("Proportion of TLs\ncontaining uAUGs",expand=c(0,0),limits=c(0,1)) +
+    scale_fill_brewer(type = "qual",palette=1,drop=FALSE) +
+    theme(panel.grid.major.y=element_line(colour="grey50",size=0.2))
+plot_uTL_prop
+
+plot_uTL_dens <- 
+ggplot(data=UTRsumm,aes(x=Organism,y=uAUGdens,fill=Organism)) + 
+    geom_col() +
+    scale_y_continuous("uAUG density in TLs",expand=c(0,0),limits=c(0,1/64),
+                       breaks=c(0,1/128,1/64),labels=c("0","1/128","1/64")) +
+    scale_fill_brewer(type = "qual",palette=1,drop=FALSE) +
+    theme(panel.grid.major.y=element_line(colour="grey50",size=0.2))
+
+plot_uTL_dens
+```
+
+
+
+
