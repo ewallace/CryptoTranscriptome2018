@@ -167,7 +167,8 @@ aAUG_hi_context_JEC21 <- aAUG_hi_context_JEC21_bare  +
     expand_limits(y=-1.1) + 
     # annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
     # annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
-    annotate(geom="segment",x=2.5,xend=15.5,y=-0.2,yend=-0.2,size=1,colour="grey50") # +
+    annotate(geom="segment",x=2.5,xend=15.5,y=-0.1,yend=-0.1,size=0.8,colour="grey50") +
+    annotate(geom="text",label="+1",x=13,y=-0.2,hjust=0.5,vjust=1.2,colour="black")  # +
     #annotate(geom="text",label="wide",x=9,y=-0.2,size=4, vjust=1.15,colour="grey50") 
 ```
 
@@ -1612,7 +1613,8 @@ aAUG_hi_context_H99 <-
     expand_limits(y=-1.1) + 
     # annotate(geom="segment",x=8.5,xend=15.5,y=-0.1,yend=-0.1,size=1,colour="grey30") +
     # annotate(geom="text",label="narrow",x=12,y=-0.1,size=4, vjust=1,colour="grey30") +
-    annotate(geom="segment",x=2.5,xend=15.5,y=-0.2,yend=-0.2,size=1,colour="grey50") # +
+    annotate(geom="segment",x=2.5,xend=15.5,y=-0.1,yend=-0.1,size=0.8,colour="grey50") +
+    annotate(geom="text",label="+1",x=13,y=-0.2,hjust=0.5,vjust=1.2,colour="black") # +
     # annotate(geom="text",label="wide",x=9,y=-0.1,size=4, vjust=1.15,colour="grey50") 
 aAUG_hi_context_H99
 
