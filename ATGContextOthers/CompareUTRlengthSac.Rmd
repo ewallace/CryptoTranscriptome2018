@@ -13,11 +13,12 @@ output:
 
 This summarizes transcript leader/5'UTR lengths in different (annotations of) Saccharomyces species, from yeast genome (YG) and otherwise from Spealman et al 2019 (SM).
 
-* *bay* - S. bayanus, Spealman et al annotations
+
 * *cer_YG* - S. cerevisiae, Yeast genome (SGD) annotations
 * *cer_SM* - S. cerevisiae, Spealman et al annotations
 * *kud* - S. kudriavzevii, Spealman et al annotations
 * *par* - S. paradoxus, Spealman et al annotations
+* *uva* - S. bayanus var uvarum, Spealman et al annotations
     
 ## Load Packages
 
@@ -34,7 +35,7 @@ source("../SharedScripts/sharedScripts.R")
 ## Load data
 
 ```{r load_data,results="show"}
-Orglevels <- c("bay","cer_YG","cer_SM","kud","par")
+Orglevels <- c("cer_YG","cer_SM","kud","par","uva")
 # infon_Ca_zero <- tibble(Genes="CytoRibo",ATG="aATG",Infon=NA,Organism="Ca")
 UTRcolnames <- c("Gene","aATG.pos","Length")
 
@@ -68,11 +69,11 @@ read_uATGct <- function(file,org) {
 }
 
 UTRcts <- bind_rows(
-read_uATGct("data_in/SacBayanus_allATGcontext.table.txt","bay"),
 read_uATGct("data_in/SacCer_allATGcontext.table.txt","cer_YG"),
 read_uATGct("data_in/SacCerSpeal_allATGcontext.table.txt","cer_SM"),
 read_uATGct("data_in/SacKudria_allATGcontext.table.txt","kud"),
-read_uATGct("data_in/SacParadoxus_allATGcontext.table.txt","par")
+read_uATGct("data_in/SacParadoxus_allATGcontext.table.txt","par"),
+read_uATGct("data_in/SacBayanus_allATGcontext.table.txt","uva")
 ) %>%
     mutate(Organism=factor(Organism,levels=Orglevels) )
 
@@ -80,11 +81,11 @@ read_uATGct("data_in/SacParadoxus_allATGcontext.table.txt","par")
 
 # UTRmess <- readxl::read_excel("data_in/taille des UTRs.xlsx",sheet=2)
 UTRlengths <- bind_rows(
-read_ATGcontext_table("data_in/SacBayanus_allATGcontext.table.txt","bay"),
 read_ATGcontext_table("data_in/SacCer_allATGcontext.table.txt","cer_YG"),
 read_ATGcontext_table("data_in/SacCerSpeal_allATGcontext.table.txt","cer_SM"),
 read_ATGcontext_table("data_in/SacKudria_allATGcontext.table.txt","kud"),
-read_ATGcontext_table("data_in/SacParadoxus_allATGcontext.table.txt","par")
+read_ATGcontext_table("data_in/SacParadoxus_allATGcontext.table.txt","par"),
+read_ATGcontext_table("data_in/SacBayanus_allATGcontext.table.txt","uva")
 ) %>%
     mutate(Organism=factor(Organism,levels=Orglevels) ) %>%
   right_join(UTRcts)
@@ -110,7 +111,7 @@ UTRsumm
 
 # Plot UTR length distributions for different species
 
-```{r plot_UTR_lengths,fig.height=3.5, fig.width=3.5}
+```{r plot_UTR_lengths,dependson="load_data",fig.height=3.5, fig.width=3.5}
 
 # ggplot(data=UTRlengths,aes(x=Organism,y=Length)) + 
 #     geom_violin(aes(colour=Organism)) +
@@ -134,13 +135,29 @@ plot_UTR_lengths
 #     scale_y_log10nice()
 ```
 
+```{r summarize_UTR_lengths,dependson="load_data",results=TRUE}
+
+quantile_tidy <- function(x, probs=c(0.05,0.25,0.5,0.75,0.95)) {
+  quantile(x, probs) %>%
+    enframe %>%
+    list
+}
+
+UTRlengths %>%
+  filter(Length > 1) %>%
+  group_by(Organism) %>%
+  summarize(Length=quantile_tidy(Length)) %>%
+  unnest %>%
+  spread(key=name,value=value) 
+```
+
+
 
 # Plot uAUG distributions for different species
 
 Proportion of TLs containing uAUGs only includes the TLs with non-zero length, i.e. treating the others as missing data.
 
 ```{r plot_uATG_prop,dependson="load_data",fig.height=3.5, fig.width=3.5}
-
 
 plot_uTL_prop <- 
 ggplot(data=UTRsumm,
@@ -164,6 +181,20 @@ ggplot(data=UTRsumm,aes(x=Organism,y=uAUGtot/Lengthtot,fill=Organism)) +
 plot_uTL_dens
 ```
 
+# Supplementary figure: Saccharomyces sensu stricto species have short AUG-poor transcript leaders
 
+We compared transcript leader length (A), proportion of transcript leaders containing uAUGs (B), and density of uAUGs in transcript leaders (C) between annotations of *Saccharomyces* yeasts. Annotations are abbreviated as: cer_YG, *S. cerevisiae* S288C from the saccharomyces genome database (Cherry et al 2013); cer_SM, *S. cerevisiae* S288C from Spealman et al. (2018); kud, *S. kudriavzevii* FM1340, par, *S. paradoxus* CBS432, uva, *S. bayanus *var. *uvarum* JRY9191, the latter 3 also from Spealman et al. Note that all annotations show a similar median leader length of 48-60 nucleotides.
+
+
+```{r plot_comp,dependson=c("plot_UTR_lengths","plot_uATG_prop"),fig.width=7.5,fig.height=3.5,dev="svg"}
+plot_grid(plot_UTR_lengths + theme(legend.position="none"),
+          plot_uTL_prop + theme(legend.position="none"),
+          plot_uTL_dens + theme(legend.position="none"),
+          # get_legend(plot_uTL_dens),
+          rel_widths = c(1.2,1,0.99),
+          labels=c("A","B","C"),
+          align = 'vh',
+          nrow=1)
+```
 
 
