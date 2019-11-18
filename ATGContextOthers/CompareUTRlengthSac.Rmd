@@ -137,8 +137,8 @@ plot_UTR_lengths
 
 ```{r summarize_UTR_lengths,dependson="load_data",results=TRUE}
 
-quantile_tidy <- function(x, probs=c(0.05,0.25,0.5,0.75,0.95)) {
-  quantile(x, probs) %>%
+quantile_tidy <- function(x, probs=c(0.05,0.25,0.5,0.75,0.95),...) {
+  quantile(x, probs,...) %>%
     enframe %>%
     list
 }
@@ -150,6 +150,30 @@ UTRlengths %>%
   unnest %>%
   spread(key=name,value=value) 
 ```
+
+# Check UTR length distributions for Arribere et al
+
+Transcript Leader length calls in nt from Arribere and Gilbert 2013 (GSM1120728/GSM1120729).
+
+```{r read_Arribere,fig.height=3.5,fig.width=3.5,results=TRUE}
+UTRlen_ScerArr <- full_join(
+  read_tsv("data_in/SacCerArribereetal/GSM1120728_TLSeqBio1_LengthCalls.txt",col_names=c("Gene","Rep1")),
+    read_tsv("data_in/SacCerArribereetal/GSM1120729_TLSeqBio2_LengthCalls.txt",col_names=c("Gene","Rep2"))
+)
+
+ggplot(data=UTRlen_ScerArr,aes(x=Rep1,y=Rep2)) +
+  geom_diagline() + 
+  geom_point(size=0.5) +
+  scale_loglog(expand=c(0.01,0.01))
+
+UTRlen_ScerArr %>% 
+  gather("Rep","Length",-Gene) %>%
+  group_by(Rep) %>%
+  summarize(Length=quantile_tidy(Length,na.rm=TRUE)) %>%
+  unnest %>%
+  spread(key=name,value=value) 
+```
+
 
 
 
