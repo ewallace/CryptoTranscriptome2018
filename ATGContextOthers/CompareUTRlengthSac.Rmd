@@ -158,16 +158,21 @@ UTRlengths %>%
 
 Transcript Leader length calls in nt from Arribere and Gilbert 2013 (GSM1120728/GSM1120729). Scatter plot to compare replicates, and percentiles of replicates.
 
-```{r read_Arribere,fig.height=3.5,fig.width=3.5,results=TRUE}
+```{r read_Arribere,fig.height=3.5,fig.width=4.5,results=TRUE}
 UTRlen_ScerArr <- full_join(
   read_tsv("data_in/SacCerArribereetal/GSM1120728_TLSeqBio1_LengthCalls.txt",col_names=c("Gene","Rep1")),
     read_tsv("data_in/SacCerArribereetal/GSM1120729_TLSeqBio2_LengthCalls.txt",col_names=c("Gene","Rep2"))
 )
 
-ggplot(data=UTRlen_ScerArr,aes(x=Rep1,y=Rep2)) +
-  geom_diagline() + 
-  geom_point(size=0.5) +
-  scale_loglog(expand=c(0.01,0.01))
+ggplot(data=UTRlen_ScerArr %>%
+         group_by(Rep1,Rep2) %>%
+         count(),
+       aes(x=Rep1,y=Rep2)) +
+  geom_diagline(colour="grey50") + 
+  geom_point(aes(size=n)) +
+  scale_loglog(expand=c(0.01,0.01)) + 
+  scale_size_area(max_size = 3) +
+  coord_equal()
 
 UTRlen_ScerArr %>% 
   gather("Rep","Length",-Gene) %>%
@@ -214,7 +219,7 @@ plot_uTL_dens
 We compared transcript leader length (A), proportion of transcript leaders containing uAUGs (B), and density of uAUGs in transcript leaders (C) between annotations of *Saccharomyces* yeasts. Annotations are abbreviated as: cer_YG, *S. cerevisiae* S288C from the saccharomyces genome database (Cherry et al 2013); cer_SM, *S. cerevisiae* S288C from Spealman et al. (2018); kud, *S. kudriavzevii* FM1340, par, *S. paradoxus* CBS432, uva, *S. bayanus *var. *uvarum* JRY9191, the latter 3 also from Spealman et al. Note that all annotations show a similar median leader length of 48-60 nucleotides.
 
 
-```{r plot_comp,dependson=c("plot_UTR_lengths","plot_uATG_prop"),fig.width=7.5,fig.height=3.5,dev="svg"}
+```{r plot_comp,dependson=c("plot_UTR_lengths","plot_uATG_prop"),fig.width=7.5,fig.height=3.5}
 plot_grid(plot_UTR_lengths + theme(legend.position="none"),
           plot_uTL_prop + theme(legend.position="none"),
           plot_uTL_dens + theme(legend.position="none"),
